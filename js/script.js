@@ -51,15 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load all sections and setup menu after they're loaded
   async function initializePage() {
     try {
-      // Load all sections concurrently
+      // Load all sections concurrently with proper paths
       await Promise.all([
-        loadSection('header.html', 'header-placeholder'),
-        loadSection('hero.html', 'hero-placeholder'),
-        loadSection('services.html', 'services-placeholder'),
-        loadSection('process.html', 'process-placeholder'),
-        loadSection('testimonials.html', 'testimonials-placeholder'),
-        loadSection('cta.html', 'cta-placeholder'),
-        loadSection('footer.html', 'footer-placeholder')
+        loadSection('/header.html', 'header-placeholder'),
+        loadSection('/hero.html', 'hero-placeholder'),
+        loadSection('/services.html', 'services-placeholder'),
+        loadSection('/process.html', 'process-placeholder'),
+        loadSection('/testimonials.html', 'testimonials-placeholder'),
+        loadSection('/cta.html', 'cta-placeholder'),
+        loadSection('/footer.html', 'footer-placeholder')
       ]);
 
       // Setup Mobile Toggle Menu after all content is loaded
