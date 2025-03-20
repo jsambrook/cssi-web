@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
+    // Mobile Menu Code (Leave this as is)
     menuToggle.addEventListener('click', function() {
         navLinks.classList.toggle('active');
 
@@ -25,4 +26,28 @@ document.addEventListener('DOMContentLoaded', function() {
             spans[2].style.transform = '';
         });
     });
+
+    // Function to fetch and insert HTML content
+    async function loadSection(url, placeholderId) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Failed to load ${url}: ${response.status}`);
+            }
+            const html = await response.text();
+            document.getElementById(placeholderId).innerHTML = html;
+        } catch (error) {
+            console.error(error);
+            document.getElementById(placeholderId).innerHTML = "<p>Failed to load section.</p>"; // Placeholder for error message
+        }
+    }
+
+    // Load sections
+    loadSection('header.html', 'header-placeholder');
+    loadSection('hero.html', 'hero-placeholder');
+    loadSection('services.html', 'services-placeholder');
+    loadSection('process.html', 'process-placeholder');
+    loadSection('testimonials.html', 'testimonials-placeholder');
+    loadSection('cta.html', 'cta-placeholder');
+    loadSection('footer.html', 'footer-placeholder');
 });
