@@ -48,15 +48,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Load sections
-  loadSection('header.html', 'header-placeholder');
-  loadSection('hero.html', 'hero-placeholder');
-  loadSection('services.html', 'services-placeholder');
-  loadSection('process.html', 'process-placeholder');
-  loadSection('testimonials.html', 'testimonials-placeholder');
-  loadSection('cta.html', 'cta-placeholder');
-  loadSection('footer.html', 'footer-placeholder');
+  // Load all sections and setup menu after they're loaded
+  async function initializePage() {
+    try {
+      // Load all sections concurrently
+      await Promise.all([
+        loadSection('header.html', 'header-placeholder'),
+        loadSection('hero.html', 'hero-placeholder'),
+        loadSection('services.html', 'services-placeholder'),
+        loadSection('process.html', 'process-placeholder'),
+        loadSection('testimonials.html', 'testimonials-placeholder'),
+        loadSection('cta.html', 'cta-placeholder'),
+        loadSection('footer.html', 'footer-placeholder')
+      ]);
 
-  // Setup Mobile Toggle Menu only after content is loaded
-  setupMobileToggleMenu();
+      // Setup Mobile Toggle Menu after all content is loaded
+      setupMobileToggleMenu();
+    } catch (error) {
+      console.error('Failed to initialize page:', error);
+    }
+  }
+
+  // Start the initialization process
+  initializePage();
 });
