@@ -33,6 +33,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  async function initializePage() {
+    try {
+      await Promise.all([
+        loadSection('/header.html', 'header-placeholder'),
+        loadSection('/hero.html', 'hero-placeholder'),
+        loadSection('/footer.html', 'footer-placeholder')
+      ]);
+      // Setup Mobile Toggle Menu after all content is loaded
+      setupMobileToggleMenu();
+    } catch (error) {
+      console.error('Failed to initialize page:', error);
+    }
+  }
+
   // Function to fetch and insert HTML content
   async function loadSection(url, placeholderId) {
     try {
@@ -45,27 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } catch (error) {
       console.error(error);
       document.getElementById(placeholderId).innerHTML = "<p>Failed to load section.</p>"; // Placeholder for error message
-    }
-  }
-
-  // Load all sections and setup menu after they're loaded
-  async function initializePage() {
-    try {
-      // Load all sections concurrently with proper paths
-      await Promise.all([
-        loadSection('/header.html', 'header-placeholder'),
-        loadSection('/hero.html', 'hero-placeholder'),
-        loadSection('/services.html', 'services-placeholder'),
-        loadSection('/process.html', 'process-placeholder'),
-        loadSection('/testimonials.html', 'testimonials-placeholder'),
-        loadSection('/cta.html', 'cta-placeholder'),
-        loadSection('/footer.html', 'footer-placeholder')
-      ]);
-
-      // Setup Mobile Toggle Menu after all content is loaded
-      setupMobileToggleMenu();
-    } catch (error) {
-      console.error('Failed to initialize page:', error);
     }
   }
 
