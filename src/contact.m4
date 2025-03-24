@@ -1,0 +1,146 @@
+m4_define(`PAGE_TITLE', `Contact Us - Common Sense Systems')m4_dnl
+m4_include(`src/includes/head.m4')m4_dnl
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span>Common Sense Systems, Inc.</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#process">Our Process</a></li>
+                    <li><a href="index.html#testimonials">Success Stories</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Get in Touch</h1>
+                    <p>Choose how you'd like to connect with us. Talk to our AI assistant for immediate help, or schedule a personal meeting with John to discuss your business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options Section -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                        </svg>
+                    </div>
+                    <h3>Talk to Our AI Assistant</h3>
+                    <p>Get immediate answers to your questions about our services, process, and how we can help your business. See our widget in the lower right corner our pages.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>Schedule a Meeting with John</h3>
+                    <p>Book a one-on-one consultation to discuss your business needs and explore how we can help you achieve your goals.</p>
+                    <a href="https://calendly.com/john-sambrook/60-minute-meeting" target="_blank" class="btn">Book Meeting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-company">
+                    <h3>Common Sense</h3>
+                    <p>We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/ai-integration.html">AI Integration</a></li>
+                        <li><a href="services/process-automation.html">Process Automation</a></li>
+                        <li><a href="services/revenue-improvement.html">Revenue Improvement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@common-sense.com">contact@common-sense.com</a></li>
+                        <li><a href="tel:+12066597951">main: (206) 659-7951</a></li>
+                        <li><a href="tel:+14255019074">john: (425) 501-9074</a></li>
+                        <li><a href="https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034">11227 NE 128 ST, Unit I-102</a></li>
+                        <li><a href="https://maps.google.com/?q=Kirkland,+WA+98034">Kirkland, WA 98034</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1996-2025 Common Sense Systems, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <elevenlabs-convai agent-id="XRQKG0KZygCOvX9xpVv2"></elevenlabs-convai>
+	<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+
+                // Animate hamburger to X
+                const spans = menuToggle.querySelectorAll('span');
+                spans[0].style.transform = spans[0].style.transform === 'rotate(45deg) translate(5px, 5px)' ? '' : 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = spans[1].style.opacity === '0' ? '1' : '0';
+                spans[2].style.transform = spans[2].style.transform === 'rotate(-45deg) translate(7px, -6px)' ? '' : 'rotate(-45deg) translate(7px, -6px)';
+            });
+
+            // Close menu when clicking on a link
+            const links = navLinks.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+
+                    // Reset hamburger
+                    const spans = menuToggle.querySelectorAll('span');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
