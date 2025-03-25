@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Sitemap: https://common-sense.com/sitemap.xml
+
+# Disallow crawling of certain file types
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.gif$
+Disallow: /*.ico$
+Disallow: /*.svg$
