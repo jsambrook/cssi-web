@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAGE_TITLE</title>
+    <meta name="description" content="Common Sense Systems helps businesses streamline operations with process automation & AI solutions. Expert consulting since 1996. Schedule a free consultation!">
 
     <!-- Favicon Support -->
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />

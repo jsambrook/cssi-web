@@ -72,9 +72,9 @@ m4_include(`src/includes/head.m4')m4_dnl
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services/ai-integration.html">AI Integration</a></li>
-                        <li><a href="services/process-automation.html">Process Automation</a></li>
-                        <li><a href="services/revenue-improvement.html">Revenue Improvement</a></li>
+                        <li><a href="ai-integration.html">AI Integration</a></li>
+                        <li><a href="process-automation.html">Process Automation</a></li>
+                        <li><a href="revenue-improvement.html">Revenue Improvement</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">

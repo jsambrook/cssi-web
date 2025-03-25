@@ -25,3 +25,13 @@ clean:
 
 # Target to rebuild everything from scratch
 rebuild: clean all
+
+# Help target
+help:
+	@echo "Available targets:"
+	@echo "  all       - Build all HTML files (default)"
+	@echo "  clean     - Remove all generated HTML files"
+	@echo "  rebuild   - Clean and rebuild all files"
+	@echo "  help      - Show this help message"
+
+.PHONY: all clean rebuild help
