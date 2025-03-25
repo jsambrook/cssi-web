@@ -59,7 +59,8 @@ m4_include(`src/includes/head.m4')m4_dnl
                 <div class="service-card">
                     <div class="service-icon">BPA</div>
                     <h3>Business Process Automation</h3>
-                    <p>Streamline workflows and reduce manual tasks with custom automation solutions.</p>
+                    <!-- <p>Streamline workflows and reduce manual tasks with custom automation solutions.</p> -->
+                    <p>Reclaim your workday with custom automation solutions that eliminate tedious tasks and simplify complex processes.</p>
                     <a href="process-automation.html" class="btn secondary">Learn More</a>
                 </div>
                 <div class="service-card">
