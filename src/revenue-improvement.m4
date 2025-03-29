@@ -175,9 +175,9 @@ m4_include(`src/includes/head.m4')m4_dnl
                 <div class="footer-links">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="../about.html">About Us</a></li>
-                        <li><a href="../team.html">Team</a></li>
-                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="payments.html">Payments</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
