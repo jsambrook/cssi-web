@@ -212,8 +212,38 @@
                 <h2>Voice Agents</h2>
                 <p>Select a voice agent to interact with. Each agent runs inside its own iframe to ensure isolation from the main DOM.</p>
             </div>
+
             <div class="voice-agent-container">
-                <iframe id="voiceAgentIframe" src="va-1.html" width="100%" frameborder="0"></iframe>
+              <h2>The Japanese Acupuncture Voice Agent</h2>
+
+              <p>Here we have a voice agent which has been trained on Japanese acupuncture. It is quite knowledgeable and can speak on many topics. please try it out and feel free to explore.</p>
+
+              <iframe id="voiceAgentIframe" src="va-1.html" width="100%" height="130" frameborder="0"></iframe>
+              <style>
+                #voiceAgentIframe {
+                  border: none;
+                  box-shadow: none;
+                  background: white;
+                  margin-top: 15px;
+                }
+
+                .voice-agent-container {
+                  max-width: 800px;
+                  padding: 20px;
+                  font-family: Arial, sans-serif;
+                }
+
+                .voice-agent-container h2 {
+                  color: #333;
+                  margin-bottom: 15px;
+                }
+
+                .voice-agent-container p {
+                  line-height: 1.5;
+                  margin-bottom: 15px;
+                  color: #555;
+                }
+              </style>
             </div>
         </div>
     </section>
