@@ -32,3 +32,5 @@ m4_dnl Define a macro for starting a new year section
 m4_define(`BLOG_YEAR_SECTION', `
     <h2>$1</h2>
 ')m4_dnl
+ADD_BLOG_POST(`2023', `12', `enhancing-client-communication-for-accountants-with-ai-assistants', `Enhancing Client Communication for Accountants with AI Assistants', `December 05, 2023')
+ADD_BLOG_POST(`2025', `04', `ai-assistants-acupuncturists-client-bookings', `How AI Assistants Help Acupuncturists Manage Client Bookings', `April 25, 2025')
