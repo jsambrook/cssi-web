@@ -1,0 +1,455 @@
+<knowledge_base>
+  <!-- SECTION 1: ABOUT COMMON SENSE SYSTEMS -->
+  <section name="about_common_sense_systems">
+    <core_mission>
+      <item>Common Sense Systems partners with leaders of small businesses and organizations who are focused on achieving significantly better results and finding greater satisfaction in their work.</item>
+      <item>Our primary goal is to help these leaders improve their systems (businesses, organizations) in a sustainable, meaningful way.</item>
+      <item>We focus on delivering measurable improvements that impact the bottom line and/or the leader's sense of fulfillment and ease in running their operation.</item>
+      <item>A fundamental principle guiding all interactions and engagements is "Win-Win or No Deal." We believe that mutually beneficial solutions are always possible through collaboration and focus, and we only proceed if the arrangement clearly benefits both the client and Common Sense Systems.</item>
+    </core_mission>
+
+    <founder_background>
+      <item>Founded by John Sambrook.</item>
+      <item>John brings over 30 years of high-tech experience, including deep expertise in software engineering (especially embedded systems for life-saving medical devices like ultrasound and defibrillators), systematic process improvement, and practical business management.</item>
+      <item>He has studied and applied proven business improvement methodologies for decades.</item>
+      <item>For the past several years, he has integrated Artificial Intelligence (AI) as a powerful tool to enhance process improvements and create new solutions.</item>
+      <item>His background combines strong technical depth with a practical, results-oriented business focus.</item>
+    </founder_background>
+
+    <target_audience>
+      <item>Leaders (owners, managers, key decision-makers) of small businesses and organizations.</item>
+      <item>Typically organizations with up to approximately 100 employees.</item>
+      <item>Can also work effectively within specific departments of larger companies.</item>
+      <item>Ideal clients are focused on making real improvements to their systems and are potentially interested in a collaborative, long-term partnership.</item>
+      <item>Clients need to be receptive to a systematic approach to identifying and resolving core issues.</item>
+    </target_audience>
+
+    <core_methodology>
+      <item>Our approach is based on systematic process improvement.</item>
+      <item>We identify the core factors currently limiting your organization's success (often referred to as bottlenecks or constraints).</item>
+      <item>We then focus efforts on improving the flow of work through these critical points to maximize overall system performance and results.</item>
+      <item>This involves analyzing current processes, identifying root causes of problems, and designing practical, targeted solutions.</item>
+      <item>It's a focused approach – concentrating on the few critical changes that will yield the biggest improvements, rather than trying to fix everything at once.</item>
+    </core_methodology>
+
+    <use_of_ai>
+      <item>We view AI as a powerful and practical tool to enhance process improvements and create effective solutions for both our clients and our own operations.</item>
+      <item>AI is not used for its own sake, but where it can deliver tangible benefits like:
+        <benefit>Automating customer interactions (24/7 support, lead qualification via voice/chat agents).</benefit>
+        <benefit>Streamlining repetitive internal tasks (process automation).</benefit>
+        <benefit>Improving lead generation and qualification.</benefit>
+        <benefit>Providing data insights to support better decision-making.</benefit>
+      </item>
+      <item>Our deep technical background ensures AI is implemented intelligently and effectively.</item>
+    </use_of_ai>
+
+    <partnership_approach>
+      <item>We aim to build long-term, collaborative relationships with our clients (often 1-4 years or more).</item>
+      <item>We act as trusted partners, providing ongoing guidance and support, grounded in the "Win-Win or No Deal" philosophy.</item>
+      <item>The focus is on continuous improvement, not just one-off projects (though specific projects are undertaken).</item>
+      <item>Our success is tied directly to our clients' success.</item>
+    </partnership_approach>
+
+    <guarantee>
+      <item>Our work is backed by a straightforward, risk-free guarantee.</item>
+      <item>Before starting any paid engagement, we work with the client to define specific, measurable results or benefits that the project or partnership aims to achieve.</item>
+      <item>If those agreed-upon results are not delivered, the client does not pay for that phase of the work.</item>
+      <item>This ensures alignment and focus on delivering tangible value.</item>
+    </guarantee>
+
+    <capital_of_time>
+      <item>We believe that time is the most valuable and irreplaceable capital available to any business leader.</item>
+      <item>Unlike financial capital, time cannot be borrowed, saved, or replaced once spent.</item>
+      <item>Every business has multiple forms of capital to manage: financial, human, technological, and temporal.</item>
+      <item>Our systematic approach recognizes that inefficient processes waste not just money but also the finite time resources of key personnel.</item>
+      <item>Identifying and addressing constraints often yields a double return: improved financial outcomes and reclaimed time for leaders and teams.</item>
+      <item>We help leaders invest their time capital where it generates the highest return for their organization.</item>
+      <item>Effective business improvement requires smart allocation of all forms of capital, with time receiving special attention.</item>
+      <item>By systematically addressing constraints, we help ensure that both financial investments and time investments flow to areas with the greatest impact.</item>
+      <item>Our solutions are designed to create compounding returns on both financial and time capital over the long term.</item>
+    </capital_of_time>
+  </section>
+
+  <!-- SECTION 2: SERVICES -->
+  <section name="services">
+    <consulting_subscription>
+      <description>A core offering for leaders seeking ongoing, systematic improvement. It's structured as a long-term partnership focused on achieving sustainable results and satisfaction.</description>
+      <process>Involves regular (typically weekly) meetings with John Sambrook to identify the primary constraint limiting the organization's performance, develop action plans to address it, and ensure follow-through. Uses proven systematic methods to improve flow and overall effectiveness.</process>
+      <benefits>Provides continuous expert guidance, maintains focus on the most critical improvement areas, builds internal capability, leads to sustained improvements in results (financial or satisfaction), fosters a proactive approach to business management.</benefits>
+      <target_client>Leaders focused on continuous improvement who value a long-term collaborative relationship.</target_client>
+      <model>Typically a monthly subscription fee (details in Pricing section).</model>
+    </consulting_subscription>
+
+    <ai_agents>
+      <description>We design, build, and implement practical AI-powered voice and chat agents for websites and other customer interaction points. Developing effective AI agents for our clients is a key service offering.</description>
+      <functionality>These agents can handle tasks like answering frequently asked questions, providing product/service information, qualifying leads, scheduling appointments or callbacks, and guiding users through processes. They operate 24/7.</functionality>
+      <benefits>Dramatically improves customer responsiveness (minutes vs. hours/days), frees up human staff from repetitive inquiries, ensures consistent messaging, qualifies leads efficiently even outside business hours, provides detailed interaction data.</benefits>
+      <technology>Leverages platforms like 11Labs for realistic voice interaction, integrated with relevant knowledge bases (like this one) and business systems.</technology>
+    </ai_agents>
+
+    <business_process_automation>
+      <description>We identify and automate repetitive, time-consuming business tasks using appropriate software and AI tools.</description>
+      <focus>Streamlining workflows, reducing manual effort, minimizing errors, and increasing overall operational efficiency.</focus>
+      <examples>Automating customer onboarding steps, data entry, report generation, internal communication triggers, etc.</examples>
+      <benefits>Saves significant time for staff, reduces operational costs, improves accuracy and consistency, allows teams to focus on higher-value activities.</benefits>
+    </business_process_automation>
+
+    <ai_lead_generation>
+      <description>We create systems that leverage AI tools to identify, attract, and qualify potential customers more effectively.</description>
+      <process>Involves analyzing data to understand ideal customer profiles, using AI to find prospects matching those profiles, deploying targeted content/messaging, and using AI tools to automate initial engagement and qualification.</process>
+      <benefits>Generates a more consistent flow of qualified leads, improves marketing ROI, shortens the sales cycle, allows sales teams to focus on high-potential prospects.</benefits>
+    </ai_lead_generation>
+
+    <uro_development>
+      <description>A strategic service focused on helping businesses craft a unique and compelling market offer that significantly differentiates them from competitors. Also known as a "Mafia Offer."</description>
+      <goal>To allow businesses to compete on value rather than price, escape "race to the bottom" dynamics, and attract their ideal customers. Crucial for market differentiation.</goal>
+      <process>Involves deep analysis of the market, customer needs, competitor offerings, and the client's unique operational capabilities. Leverages systematic thinking processes and AI-enhanced analysis to design the offer and ensure the operational ability to deliver it consistently.</process>
+      <benefits>Creates a strong competitive advantage, increases market share, improves profitability, builds customer loyalty, makes the business the preferred choice.</benefits>
+      <target_client>Business leaders savvy enough to understand the strategic importance of differentiation beyond price.</target_client>
+    </uro_development>
+
+    <coaching>
+      <description>Provides personalized guidance and mentorship for individuals and small teams within client organizations.</description>
+      <focus>Enhancing skills related to process improvement, systematic thinking, adopting new technologies (like AI), and improving overall work practices. Includes both technical and "soft" skills development.</focus>
+      <context>Often delivered as part of the Consulting/Subscription Partnership but can be a distinct component depending on client needs.</context>
+      <benefits>Builds internal capabilities, supports change adoption, improves team performance and collaboration, empowers individuals to contribute more effectively.</benefits>
+    </coaching>
+  </section>
+
+  <!-- SECTION 3: ENGAGEMENT PROCESS -->
+  <section name="engagement_process">
+    <initial_contact>
+      <item>Potential clients typically first encounter Common Sense Systems through the website (common-sense.com), referrals, or networking.</item>
+      <item>The website provides information via pages, blog posts, and the AI voice/chat agent.</item>
+    </initial_contact>
+
+    <role_of_ai_agent>
+      <item>The AI agent serves as an initial point of contact on the website, available 24/7.</item>
+      <item>Primary Goals: Qualify Leads, Inform accurately, Filter non-serious inquiries politely, Capture contact information from qualified leads for follow-up scheduling.</item>
+      <item>Interaction Style: Curious, factual, helpful, professional, trustworthy, aligned with the consultancy's persona.</item>
+    </role_of_ai_agent>
+
+    <consultation_calls>
+      <item>Purpose: An introductory, no-obligation web meeting (typically 1 hour) between the potential client and John Sambrook. Often, one call is sufficient, but sometimes multiple exploratory conversations may occur to ensure a thorough understanding and confirm mutual fit before proposing any formal engagement.</item>
+      <item>Process: John shares information about Common Sense Systems' approach, learns about the prospect's business/organization, their challenges, and their goals. It's a relaxed, conversational discovery process guided by the "Win-Win or No Deal" principle.</item>
+      <item>Outcome: To determine if there is a good mutual fit and a basis for potentially working together. There is zero sales pressure.</item>
+    </consultation_calls>
+
+    <proposal_agreement>
+      <item>If mutual interest exists, Common Sense Systems may propose a specific engagement.</item>
+      <item>Defining Measurable Results: A critical step before any paid work begins is collaboratively defining the specific, measurable results or benefits the engagement aims to achieve. This forms the basis for the guarantee.</item>
+      <item>Agreement: A clear, straightforward agreement is established outlining the scope, defined results, fee structure, and guarantee terms.</item>
+      <item>Flexibility / No Long-Term Lock-in: Agreements, especially for ongoing subscriptions, are designed for flexibility. Clients are typically engaged on a month-to-month basis and are free to discontinue if they feel they are no longer receiving sufficient value. We aim to earn continued business through results, not contracts.</item>
+    </proposal_agreement>
+
+    <engagement_kickoff>
+      <item>Once an agreement is in place, the engagement begins, following the agreed-upon plan.</item>
+      <item>Focus remains on collaboration, systematic improvement, and achieving the defined results.</item>
+    </engagement_kickoff>
+  </section>
+
+  <!-- SECTION 4: PRICING & FEES -->
+  <section name="pricing_fees">
+    <guarantee>
+      <item>All fee structures are subject to the results-based guarantee: If agreed-upon measurable results are not achieved, the client does not pay for that phase of work.</item>
+    </guarantee>
+
+    <subscription_model>
+      <item>The primary model for ongoing consulting partnerships.</item>
+      <item>Monthly fee typically ranging from $500 - $2000, depending on organization size, complexity, and value delivered.</item>
+      <item>Covers regular meetings (usually weekly) and ongoing support.</item>
+      <item>Operates on a month-to-month basis, cancellable by the client if value is not perceived.</item>
+    </subscription_model>
+
+    <incentive_component>
+      <item>Engagements can optionally include an incentive structure directly aligning Common Sense Systems' success with the client's.</item>
+      <item>Example: A structure where the client keeps 80% of the measured improvement in a key metric (e.g., monthly net income increase), and Common Sense Systems receives 20% of that improvement as a performance-based fee. Specifics are tailored per engagement.</item>
+    </incentive_component>
+
+    <project_based_work>
+      <item>Specific, well-defined projects (e.g., developing a custom AI agent, implementing a specific automation, URO development phase) may be undertaken on a fixed-fee basis.</item>
+      <item>Fixed fees are always tied to delivering agreed-upon results under the guarantee.</item>
+    </project_based_work>
+  </section>
+
+  <!-- SECTION 5: CONTACT & BUSINESS DETAILS -->
+  <section name="contact_details">
+    <company_name>
+      <item>Full Legal Name: Common Sense Systems, Inc.</item>
+      <item>Often referred to as "Common Sense" for brevity in messaging.</item>
+    </company_name>
+
+    <founder>
+      <item>John Sambrook, President and Owner.</item>
+    </founder>
+
+    <office_locations>
+      <location name="Main Office (Kirkland)">11227 NE 128 ST, Unit I102, Kirkland, WA 98034.</location>
+      <location name="Woodinville Office">18315 147th CT NE, Woodinville, WA 98072.</location>
+    </office_locations>
+
+    <contact_methods>
+      <method name="General Email">contact@common-sense.com</method>
+      <method name="Main Telephone">(206) 659-7951</method>
+      <method name="Direct Telephone (John Sambrook)">(425) 501-9074 (Note: Primarily for internal reference or scheduled calls, not initial lead contact)</method>
+      <method name="Website Contact Form">Available on common-sense.com/contact/</method>
+      <method name="AI Agent">Capable of taking contact info for follow-up.</method>
+    </contact_methods>
+
+    <hours_operation>
+      <item>Normal business hours are Monday through Friday, 7:00 AM to 6:00 PM Pacific Time.</item>
+      <item>(Agent Note: The AI agent is available 24/7 for inquiries).</item>
+    </hours_operation>
+  </section>
+
+  <!-- SECTION 6: STRATEGIC REFERRALS -->
+  <section name="strategic_referrals">
+    <referral_partner name="rami_goldratt">
+      <partner_name>Rami Goldratt</partner_name>
+      <company_name>Goldratt Group</company_name>
+      <website>goldrattgroup.com</website>
+      <contact_info>
+        <email>info@goldrattgroup.com</email>
+        <contact_form>goldrattgroup.com/contact/</contact_form>
+      </contact_info>
+
+      <core_expertise>
+        <item>Theory of Constraints (TOC) implementation and consulting</item>
+        <item>Holistic business systems optimization</item>
+        <item>Constraint identification and management</item>
+        <item>Operational excellence and flow improvement</item>
+        <item>Sales and marketing applications of Theory of Constraints</item>
+        <item>Strategic growth planning using TOC principles</item>
+      </core_expertise>
+
+      <service_offerings>
+        <offering name="toc_consulting">
+          <description>Comprehensive consulting services that systematically identify and remove constraints to achieve sustainable growth through the application of Theory of Constraints principles.</description>
+          <ideal_for>Organizations seeking significant performance improvement by identifying and addressing core system constraints.</ideal_for>
+        </offering>
+
+        <offering name="obstacles_to_flow_program">
+          <description>A structured workshop program that helps organizations identify and overcome bottlenecks, bringing growth and stability while enhancing harmony across all aspects of the organization.</description>
+          <ideal_for>Manufacturing, supply chain, or project-based organizations looking to enhance productivity and streamline operations.</ideal_for>
+        </offering>
+
+        <offering name="drum_buffer_rope_implementation">
+          <description>Implementation of the TOC production scheduling methodology designed to maximize throughput by properly managing the system's constraint and protecting it with time buffers.</description>
+          <ideal_for>Manufacturing operations facing bottlenecks, inventory challenges, or delivery reliability issues.</ideal_for>
+        </offering>
+
+        <offering name="critical_chain_project_management">
+          <description>Implementation of TOC-based project management methodology that focuses on resource constraints and buffer management to significantly improve project delivery times.</description>
+          <ideal_for>Organizations managing complex or multiple projects that face deadline challenges or resource constraints.</ideal_for>
+        </offering>
+
+        <offering name="holistic_business_transformation">
+          <description>End-to-end business transformation services that apply TOC principles across all business functions to create sustainable competitive advantage.</description>
+          <ideal_for>Organizations seeking comprehensive performance improvement in operations, supply chain, sales, and strategy.</ideal_for>
+        </offering>
+      </service_offerings>
+
+      <referral_criteria>
+        <when_to_refer>
+          <item>When a client is struggling with operational bottlenecks that limit overall system performance</item>
+          <item>When a client needs to improve on-time delivery without increasing costs</item>
+          <item>When a client wants to reduce inventory while simultaneously improving service levels</item>
+          <item>When a client faces challenges managing complex or multiple projects</item>
+          <item>When a client is interested in applying systems thinking to strategic growth challenges</item>
+          <item>When a client explicitly mentions interest in Theory of Constraints</item>
+        </when_to_refer>
+
+        <when_not_to_refer>
+          <item>When the client is looking primarily for digital transformation or technology implementation without addressing underlying system constraints</item>
+          <item>When the client is focused solely on cost-cutting rather than throughput improvement</item>
+          <item>When the client has an immediate need for AI implementation without addressing operational fundamentals</item>
+        </when_not_to_refer>
+      </referral_criteria>
+
+      <value_alignment>
+        <item>Like Common Sense Systems, Goldratt Group focuses on systematic improvement and identifying root causes of problems</item>
+        <item>Both organizations emphasize measurable, tangible results rather than theoretical approaches</item>
+        <item>Both share a philosophy of focusing on key leverage points rather than trying to fix everything at once</item>
+        <item>Goldratt's focus on operational excellence and constraint management complements our AI implementation expertise</item>
+        <item>Both organizations value building long-term client relationships based on delivering real value</item>
+      </value_alignment>
+
+      <referral_process>
+        <item>When identifying a potential fit for Goldratt Group's services, mention: "Based on what you're describing about your operational challenges, I'd like to suggest our strategic partner Rami Goldratt at Goldratt Group, who specializes in Theory of Constraints implementation to address exactly these types of bottlenecks."</item>
+        <item>Briefly describe how Theory of Constraints methodology could help address their specific operational challenges</item>
+        <item>Offer to provide Rami Goldratt's contact information or to have John mention the referral when following up</item>
+        <item>Add a note in the call summary that a referral to Goldratt Group was made</item>
+        <item>Example call summary note: "Discussed operational constraints in manufacturing process; recommended consultation with our strategic partner Rami Goldratt at Goldratt Group for Theory of Constraints implementation."</item>
+      </referral_process>
+
+      <background_information>
+        <item>Rami Goldratt is the CEO of Goldratt Group and son of Dr. Eliyahu Goldratt, who invented the Theory of Constraints (TOC) and authored the bestselling business novel "The Goal"</item>
+        <item>Goldratt Group was founded by Dr. Eliyahu Goldratt as his global consultancy, operating in major continents with the world's largest roster of seasoned TOC consultants</item>
+        <item>Rami Goldratt has been involved in consulting engagements with retail, automotive, textile, chemical, and service industries worldwide</item>
+        <item>He is considered one of the most influential leaders in the TOC body of knowledge, particularly in Sales and Marketing applications</item>
+        <item>The Goldratt Group's methodology has helped numerous organizations achieve significant improvements in productivity, delivery times, inventory management, and service levels</item>
+      </background_information>
+    </referral_partner>
+  </section>
+
+  <section name="strategic_referrals">
+    <referral_partner name="alan_barnard">
+      <partner_name>Dr. Alan Barnard</partner_name>
+      <company_name>Goldratt Research Labs</company_name>
+      <website>goldrattresearchlabs.com</website>
+      <contact_info>
+        <email>info@goldrattresearchlabs.com</email>
+        <contact_form>dralanbarnard.com/contact/</contact_form>
+      </contact_info>
+
+      <core_expertise>
+        <item>Theory of Constraints (TOC) implementation and consulting</item>
+        <item>Decision science and decision-making methodologies</item>
+        <item>Business systems optimization and constraint management</item>
+        <item>Advanced simulation and analytics for business improvement</item>
+        <item>Supply chain optimization and management</item>
+      </core_expertise>
+
+      <service_offerings>
+        <offering name="theory_of_constraints_consulting">
+          <description>Expert consulting services applying TOC principles to identify and address the primary constraints limiting an organization's performance, focusing on systematic improvement.</description>
+          <ideal_for>Organizations seeking significant performance improvement by identifying and managing their constraints.</ideal_for>
+        </offering>
+
+        <offering name="harmony_decision_maker">
+          <description>An application designed to help managers and individuals make better, faster decisions using the 5-step ProConCloud process, preventing common decision mistakes.</description>
+          <ideal_for>Leaders struggling with complex decision-making or organizations with consistent decision-making challenges.</ideal_for>
+        </offering>
+
+        <offering name="harmony_change_maker">
+          <description>Tool for management teams to achieve focus and fast feedback needed to succeed with organizational change initiatives.</description>
+          <ideal_for>Organizations implementing significant changes or struggling with change management.</ideal_for>
+        </offering>
+
+        <offering name="harmony_change_simulators">
+          <description>Advanced simulation tools that help managers quantify the likely impact of process or policy changes before implementation.</description>
+          <ideal_for>Organizations making strategic operational decisions who want to test impacts before implementation.</ideal_for>
+        </offering>
+
+        <offering name="supply_chain_optimization">
+          <description>Specialized services for designing, validating, and implementing Theory of Constraints-based solutions for complex supply chains.</description>
+          <ideal_for>Manufacturing, distribution, or retail businesses experiencing supply chain challenges.</ideal_for>
+        </offering>
+      </service_offerings>
+
+      <referral_criteria>
+        <when_to_refer>
+          <item>When a client is experiencing persistent bottlenecks or constraints in their business processes</item>
+          <item>When a client needs to make significant strategic decisions with complex implications</item>
+          <item>When an organization struggles with implementing change successfully</item>
+          <item>When improved decision-making is needed at leadership levels</item>
+          <item>When a company needs to optimize their supply chain or operations</item>
+          <item>When a client mentions interest in Theory of Constraints concepts</item>
+        </when_to_refer>
+
+        <when_not_to_refer>
+          <item>When the client needs primarily tactical AI implementation without strategic process improvement</item>
+          <item>When the client is looking for industry-specific expertise outside of operational excellence</item>
+          <item>When the client is not ready for organizational change or process improvement</item>
+        </when_not_to_refer>
+      </referral_criteria>
+
+      <value_alignment>
+        <item>Like Common Sense Systems, Goldratt Research Labs focuses on systematic process improvement</item>
+        <item>Both organizations help clients achieve significantly better results with existing resources</item>
+        <item>Both prioritize practical, measurable improvements rather than theoretical approaches</item>
+        <item>Complementary expertise: Common Sense Systems' AI implementation works well with GRL's process optimization</item>
+        <item>Both organizations value long-term partnership approaches rather than one-off interventions</item>
+      </value_alignment>
+
+      <referral_process>
+        <item>When identifying a potential fit for Dr. Barnard's services, mention: "Based on the process challenges you're describing, you might benefit from Theory of Constraints expertise that complements our AI solutions."</item>
+        <item>Briefly describe how Theory of Constraints could help address their specific bottlenecks</item>
+        <item>Offer to provide Dr. Barnard's contact information or to have John mention the referral when following up</item>
+        <item>Add a note in the call summary that a referral to Goldratt Research Labs was made</item>
+        <item>Example call summary note: "Discussed client's operational constraints; recommended consultation with our strategic partner Dr. Alan Barnard at Goldratt Research Labs for Theory of Constraints implementation."</item>
+      </referral_process>
+
+      <background_information>
+        <item>Dr. Alan Barnard is a leading Decision Scientist and Theory of Constraints expert who co-founded Goldratt Research Labs in 2008 with Dr. Eli Goldratt (creator of Theory of Constraints)</item>
+        <item>GRL works with organizations through joint-research partnerships to help them overcome constraints and achieve more with fewer resources</item>
+        <item>Their client portfolio includes Fortune 500 companies like Microsoft, as well as government agencies and NGOs</item>
+        <item>Dr. Barnard brings over 25 years of experience applying TOC principles to complex organizational challenges</item>
+        <item>The company's work has delivered documented significant improvements in operational and financial performance for its clients</item>
+      </background_information>
+    </referral_partner>
+  </section>
+
+  <section name="strategic_referrals">
+    <referral_partner name="jess_dewell">
+      <partner_name>Jess Dewell</partner_name>
+      <company_name>Red Direction</company_name>
+      <website>reddirection.com</website>
+      <contact_info>
+        <phone>206-659-6067</phone>
+        <contact_form>reddirection.com/contact-us/</contact_form>
+      </contact_info>
+
+      <core_expertise>
+        <item>Business strategy and operations overlap</item>
+        <item>Strategic planning and business growth</item>
+        <item>Leadership team development</item>
+        <item>Business decision-making frameworks</item>
+        <item>Helping businesses adapt to change and uncertainty</item>
+      </core_expertise>
+
+      <service_offerings>
+        <offering name="driving_solutions_strategic_intensive">
+          <description>An intensive program focusing on 3 key areas necessary to create achievable goals from business initiatives. Helps clients fully talk through ideas for completeness and improve decision-making.</description>
+          <ideal_for>Business leaders needing to align strategy with operations and create practical action plans.</ideal_for>
+        </offering>
+
+        <offering name="growth_plan_offsite">
+          <description>A structured offsite planning session that helps leadership teams develop robust growth strategies with clear implementation paths.</description>
+          <ideal_for>Companies seeking to break through growth plateaus or needing to realign their strategic direction.</ideal_for>
+        </offering>
+
+        <offering name="business_base_camp_consultation">
+          <description>Initial consultation designed to identify core business challenges and opportunities, creating a foundation for strategic improvement.</description>
+          <ideal_for>Businesses interested in exploring how strategic guidance might benefit their specific situation.</ideal_for>
+        </offering>
+
+        <offering name="fast_track_your_business">
+          <description>An on-demand and just-in-time program to accelerate business growth with frameworks and practical tools.</description>
+          <ideal_for>Business owners who need flexible, accessible resources to support ongoing growth efforts.</ideal_for>
+        </offering>
+      </service_offerings>
+
+      <referral_criteria>
+        <when_to_refer>
+          <item>When a client needs strategic business guidance beyond tactical AI implementation</item>
+          <item>When the client is facing challenges with business direction, decision-making, or growth barriers</item>
+          <item>When a client needs help creating actionable strategic plans that connect to daily operations</item>
+          <item>When organizational leadership needs development or alignment</item>
+          <item>When a business is struggling with adapting to change or navigating uncertainty</item>
+        </when_to_refer>
+
+        <when_not_to_refer>
+          <item>When the client needs primarily technical AI implementation without strategic guidance</item>
+          <item>When the client is seeking specific tactical solutions rather than strategic planning</item>
+          <item>When the client needs services focused on areas outside business strategy and operations</item>
+        </when_not_to_refer>
+      </referral_criteria>
+
+      <value_alignment>
+        <item>Like Common Sense Systems, Red Direction emphasizes practical, results-oriented approaches</item>
+        <item>Jess focuses on creating sustainable improvements and driving measurable business outcomes</item>
+        <item>Shares a philosophy of partnership and collaboration with clients rather than one-off transactions</item>
+        <item>Complements our services by providing strategic guidance while we offer technical AI implementation</item>
+      </value_alignment>
+
+      <referral_process>
+        <item>When identifying a potential fit for Jess's services, mention: "Based on what you're describing, you might benefit from strategic business guidance that complements our technical AI solutions."</item>
+        <item>Briefly describe relevant services from Red Direction that align with their needs</item>
+        <item>Offer to provide Jess's contact information or to have John mention the referral when following up</item>
+        <item>Add a note in the call summary that a referral to Red Direction was made</item>
+        <item>Example call summary note: "Discussed prospect's challenges with business growth strategy; recommended consultation with our strategic partner Jess Dewell at Red Direction for complementary services."</item>
+      </referral_process>
+    </referral_partner>
+  </section>
+</knowledge_base>

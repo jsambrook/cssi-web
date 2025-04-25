@@ -7,20 +7,22 @@ Reads a JSON definition of a blog article and generates:
 2. An update to src/includes/blog_posts.m4
 3. A graphics prompt text file
 
+Run from inside the src/bin directory. All paths are resolved relative to src/.
+
 Usage:
-    python generate_blog_post.py --input path/to/article.json --repo-root /path/to/your/website
+    ./generate_blog_post.py --input ../blog/drafts/article.json
 """
 
 import json
 import os
 import argparse
+from pathlib import Path
 from datetime import datetime
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate blog post files from JSON input")
-    parser.add_argument('--input', required=True, help='Path to the input JSON file')
-    parser.add_argument('--repo-root', required=True, help='Root path of the website repo')
+    parser.add_argument('--input', required=True, help='Path to the input JSON file (relative to script)')
     return parser.parse_args()
 
 
@@ -53,7 +55,7 @@ BLOG_POST_LAYOUT(
 
 
 def write_m4_file(m4_path, m4_content):
-    os.makedirs(os.path.dirname(m4_path), exist_ok=True)
+    m4_path.parent.mkdir(parents=True, exist_ok=True)
     with open(m4_path, 'w') as f:
         f.write(m4_content)
 
@@ -71,7 +73,7 @@ def update_blog_index(blog_index_path, metadata):
 
 
 def write_graphics_prompt(graphics, image_prompt_path):
-    os.makedirs(os.path.dirname(image_prompt_path), exist_ok=True)
+    image_prompt_path.parent.mkdir(parents=True, exist_ok=True)
     with open(image_prompt_path, 'w') as f:
         f.write(f"Title: {graphics['title']}\n\n")
         f.write(f"Description:\n{graphics['description']}\n\n")
@@ -80,8 +82,11 @@ def write_graphics_prompt(graphics, image_prompt_path):
 
 def main():
     args = parse_args()
+    script_dir = Path(__file__).resolve().parent
+    root_dir = script_dir.parent
 
-    with open(args.input, 'r') as f:
+    input_path = (script_dir / args.input).resolve()
+    with open(input_path, 'r') as f:
         data = json.load(f)
 
     metadata = data['metadata']
@@ -92,10 +97,9 @@ def main():
     month = metadata['month']
     slug = metadata['slug']
 
-    repo_root = args.repo_root
-    m4_path = os.path.join(repo_root, 'src', 'blog', year, month, f"{slug}.m4")
-    blog_index_path = os.path.join(repo_root, 'src', 'includes', 'blog_posts.m4')
-    image_prompt_path = os.path.join(repo_root, 'assets', 'img', 'blog', year, month, f"{slug}-image.txt")
+    m4_path = root_dir / 'blog' / year / month / f"{slug}.m4"
+    blog_index_path = root_dir / 'includes' / 'blog_posts.m4'
+    image_prompt_path = root_dir / 'assets' / 'img' / 'blog' / year / month / f"{slug}-image.txt"
 
     m4_content = generate_m4_content(metadata, content)
     write_m4_file(m4_path, m4_content)
@@ -104,9 +108,9 @@ def main():
     if graphics:
         write_graphics_prompt(graphics, image_prompt_path)
 
-    print(f"Blog post generated at: {m4_path}")
-    print(f"Graphics prompt saved to: {image_prompt_path}")
-    print(f"Blog index updated at: {blog_index_path}")
+    print(f"✅ Blog post generated at: {m4_path}")
+    print(f"✅ Graphics prompt saved to: {image_prompt_path}")
+    print(f"✅ Blog index updated at: {blog_index_path}")
 
 
 if __name__ == '__main__':
