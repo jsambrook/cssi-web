@@ -3,14 +3,12 @@
 generate_blog_post.py
 
 Reads a JSON definition of a blog article and generates:
-1. A .m4 file with the post content formatted for M4 macros
-2. An update to src/includes/blog_posts.m4
+1. A standalone .html file for the blog post
+2. Updates src/blog/blog_index.json
 3. A graphics prompt text file
 
-Run from inside the src/bin directory. All paths are resolved relative to src/.
-
 Usage:
-    ./generate_blog_post.py --input ../blog/drafts/article.json
+    ./generate_blog_post.py --input path/to/article.json
 """
 
 import json
@@ -21,55 +19,70 @@ from datetime import datetime
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate blog post files from JSON input")
+    parser = argparse.ArgumentParser(description="Generate blog post HTML from JSON input")
     parser.add_argument('--input', required=True, help='Path to the input JSON file (relative to script)')
     return parser.parse_args()
 
 
-def sanitize_html(html: str) -> str:
-    """Escape backticks and wrap in correct M4 format if needed"""
-    return html.replace("`", "&#96;")
-
-
-def generate_m4_content(metadata, content):
+def generate_html_content(metadata, content):
+    """Generate full HTML page for a blog post."""
     title = metadata['title']
     date_str = datetime.strptime(metadata['date'], '%Y-%m-%d').strftime('%B %d, %Y')
     tags = ', '.join(metadata['tags'])
-    intro = sanitize_html(content['introduction'])
-    body = sanitize_html(content['body'])
-    conclusion = sanitize_html(content['conclusion'])
+    introduction = content['introduction']
+    body = content['body']
+    conclusion = content['conclusion']
 
-    return f"""m4_include(`src/includes/blog_macros.m4')m4_dnl
-BLOG_POST_LAYOUT(
-    `{title}',
-    `{date_str}',
-    `{tags}',
-    `
-    {intro}
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{title}</title>
+  <meta name="description" content="{title}">
+  <meta name="keywords" content="{tags}">
+  <meta name="author" content="{metadata['author']}">
+</head>
+<body>
+  <article>
+    <h1>{title}</h1>
+    <p><em>Published on {date_str}</em></p>
+    {introduction}
     {body}
     {conclusion}
-    ',
-    ``,
-    ``)m4_dnl
+  </article>
+</body>
+</html>
 """
+    return html
 
 
-def write_m4_file(m4_path, m4_content):
-    m4_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(m4_path, 'w') as f:
-        f.write(m4_content)
+def write_html_file(html_path, html_content):
+    html_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(html_path, 'w') as f:
+        f.write(html_content)
 
 
-def update_blog_index(blog_index_path, metadata):
-    title = metadata['title']
-    year = metadata['year']
-    month = metadata['month']
-    slug = metadata['slug']
-    date_str = datetime.strptime(metadata['date'], '%Y-%m-%d').strftime('%B %d, %Y')
-    entry = f"ADD_BLOG_POST(`{year}', `{month}', `{slug}', `{title}', `{date_str}')\n"
+def update_blog_index_json(blog_index_path, metadata):
+    """Append a blog entry into blog_index.json safely."""
+    post_entry = {
+        "title": metadata['title'],
+        "slug": metadata['slug'],
+        "date": metadata['date'],
+        "year": metadata['year'],
+        "month": metadata['month']
+    }
 
-    with open(blog_index_path, 'a') as f:
-        f.write(entry)
+    blog_index_path.parent.mkdir(parents=True, exist_ok=True)
+    if blog_index_path.exists():
+        with open(blog_index_path, 'r') as f:
+            index_data = json.load(f)
+    else:
+        index_data = {"posts": []}
+
+    index_data["posts"].append(post_entry)
+
+    with open(blog_index_path, 'w') as f:
+        json.dump(index_data, f, indent=2)
 
 
 def write_graphics_prompt(graphics, image_prompt_path):
@@ -97,20 +110,21 @@ def main():
     month = metadata['month']
     slug = metadata['slug']
 
-    m4_path = root_dir / 'blog' / year / month / f"{slug}.m4"
-    blog_index_path = root_dir / 'includes' / 'blog_posts.m4'
+    html_content = generate_html_content(metadata, content)
+
+    html_path = root_dir / 'blog' / year / month / f"{slug}.html"
+    blog_index_path = root_dir / 'blog' / 'blog_index.json'
     image_prompt_path = root_dir / 'assets' / 'img' / 'blog' / year / month / f"{slug}-image.txt"
 
-    m4_content = generate_m4_content(metadata, content)
-    write_m4_file(m4_path, m4_content)
-    update_blog_index(blog_index_path, metadata)
+    write_html_file(html_path, html_content)
+    update_blog_index_json(blog_index_path, metadata)
 
     if graphics:
         write_graphics_prompt(graphics, image_prompt_path)
 
-    print(f"✅ Blog post generated at: {m4_path}")
+    print(f"✅ Blog HTML generated at: {html_path}")
     print(f"✅ Graphics prompt saved to: {image_prompt_path}")
-    print(f"✅ Blog index updated at: {blog_index_path}")
+    print(f"✅ Blog index metadata updated at: {blog_index_path}")
 
 
 if __name__ == '__main__':

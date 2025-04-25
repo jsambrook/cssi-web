@@ -7,6 +7,8 @@ of a full blog article and image prompt, using company context from a TXT file.
 
 Today's real date is used consistently across metadata, filenames, and prompt content.
 
+Also saves a .current_blog.json file pointing to the generated JSON file.
+
 Usage:
     ./generate_blog_json.py --description "How AI assistants help accountants manage client communication"
 """
@@ -148,6 +150,12 @@ def main():
         json.dump(blog_json, f, indent=2)
 
     print(f"✅ Blog JSON saved to: {output_file}")
+
+    # Save pointer to current blog JSON
+    pointer_file = output_dir / '.current_blog.json'
+    with open(pointer_file, 'w') as f:
+        f.write(f"{output_file.name}\n")
+    print(f"🧭 Pointer file updated at: {pointer_file}")
 
 
 if __name__ == '__main__':

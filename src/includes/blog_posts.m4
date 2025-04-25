@@ -34,3 +34,4 @@ m4_define(`BLOG_YEAR_SECTION', `
 ')m4_dnl
 ADD_BLOG_POST(`2023', `12', `enhancing-client-communication-for-accountants-with-ai-assistants', `Enhancing Client Communication for Accountants with AI Assistants', `December 05, 2023')
 ADD_BLOG_POST(`2025', `04', `ai-assistants-acupuncturists-client-bookings', `How AI Assistants Help Acupuncturists Manage Client Bookings', `April 25, 2025')
+  <li><a href="/blog/2025/04/ai-assistants-architects.html">How AI Assistants Help Architects Grow Their Practice</a> - April 25, 2025</li>
