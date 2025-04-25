@@ -3,6 +3,8 @@
 generate_blog_index.py
 
 Reads src/blog/blog_index.json and generates blog/index.html with a list of all blog posts.
+
+Ensures correct paths no matter where the script is run from.
 """
 
 import json
@@ -13,11 +15,15 @@ def main():
     script_dir = Path(__file__).resolve().parent
     root_dir = script_dir.parent
 
+    # Detect if we're inside src/bin and adjust root_dir if needed
+    if (root_dir / 'src').exists():
+        root_dir = root_dir.parent
+
     blog_index_json = root_dir / 'src' / 'blog' / 'blog_index.json'
     output_html = root_dir / 'blog' / 'index.html'
 
     if not blog_index_json.exists():
-        print("❌ blog_index.json not found. Cannot generate blog index.")
+        print(f"❌ {blog_index_json} not found. Cannot generate blog index.")
         return
 
     with open(blog_index_json, 'r') as f:
