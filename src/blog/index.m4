@@ -18,6 +18,15 @@ m4_include(`src/includes/blog_posts.m4')m4_dnl
         </section>
     </main>
 
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's discuss how our process automation and AI solutions can help you achieve your business goals.</p>
+            <a href="/contact.html" class="btn">Schedule a Consultation</a>
+        </div>
+    </section>
+
     m4_include(`src/includes/footer.m4')m4_dnl
     m4_include(`src/includes/mobile.m4')m4_dnl
 </body>
