@@ -104,18 +104,18 @@
 
 </head>
 <body>
-    <!-- Header -->
+    
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">
+                <a href="/index.html" class="logo">
                     <span>Common Sense Systems, Inc.</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#testimonials">Success Stories</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/index.html" class="active">Home</a></li>
+                    <li><a href="/index.html#services" m4_ifelse(home, `services', `class="active"')>Services</a></li>
+                    <li><a href="/blog/index.html" >Blog</a></li>
+                    <li><a href="/contact.html" >Contact</a></li>
                 </ul>
                 <div class="menu-toggle">
                     <span></span>
@@ -125,6 +125,7 @@
             </nav>
         </div>
     </header>
+
 
     <!-- Hero Section -->
     <section class="hero">

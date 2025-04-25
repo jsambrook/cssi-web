@@ -1,27 +1,8 @@
 m4_define(`PAGE_TITLE', `Common Sense - Process Automation & AI Agency')m4_dnl
 m4_include(`src/includes/head.m4')m4_dnl
+m4_include(`src/includes/navigation.m4')m4_dnl
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <span>Common Sense Systems, Inc.</span>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#testimonials">Success Stories</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    MAIN_NAVIGATION(`home')
 
     <!-- Hero Section -->
     <section class="hero">
