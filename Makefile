@@ -44,6 +44,7 @@ help:
 	@echo "  blog-today   - Generate today's blog post using OpenAI (default)"  # requires DESCRIPTION
 	@echo "  blog-claude  - Generate today's blog post using Claude"  # requires DESCRIPTION
 	@echo "  blog-index   - Regenerate blog/index.html from metadata"
+	@echo "  blog-reset   - Reset blog system to pristine/empty state (⚠️ DESTRUCTIVE)"
 	@echo "  prune-drafts - Prune old files from the drafts directory"
 	@echo "  help         - Show this help message"
 
@@ -54,7 +55,7 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today blog-claude blog-index prune-drafts clean pages rebuild help
+.PHONY: blog-today blog-claude blog-index blog-reset prune-drafts clean pages rebuild help
 
 # Prune the drafts folder
 prune-drafts:
@@ -93,3 +94,24 @@ endif
 blog-index:
 	cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog index rebuilt!"
+
+# Reset the blog system to a pristine, empty state
+blog-reset:
+	@echo "🛑 WARNING: This will delete ALL blog posts, drafts, and related files!"
+	@echo "    This action cannot be undone. Are you sure? (Type 'yes' to proceed)"
+	@read -r confirmation; \
+	if [ "$$confirmation" = "yes" ]; then \
+		echo "🗑️  Deleting all blog HTML files..."; \
+		rm -rf $(BUILD_DIR)/blog/20*; \
+		echo "🗑️  Removing all blog drafts..."; \
+		rm -rf $(BLOG_SRC_DIR)/drafts/*.json; \
+		echo "🗑️  Deleting blog images and prompts..."; \
+		rm -rf $(SRC_DIR)/assets/img/blog/20*; \
+		echo "🗑️  Resetting blog index..."; \
+		echo '{"posts":[]}' > $(BLOG_SRC_DIR)/blog_index.json; \
+		echo "🔄 Regenerating empty blog index..."; \
+		cd src/bin && ./generate_blog_index.py; \
+		echo "✅ Blog system has been reset to a pristine state."; \
+	else \
+		echo "❌ Reset cancelled."; \
+	fi
