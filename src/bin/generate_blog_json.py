@@ -11,6 +11,7 @@ Also saves a .current_blog.json file pointing to the generated JSON file.
 
 Usage:
     ./generate_blog_json.py --description "How AI assistants help accountants manage client communication"
+    ./generate_blog_json.py --description "Blog topic" --prompt /path/to/prompt_file.txt
 """
 
 import argparse
@@ -24,26 +25,59 @@ import json
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate blog article JSON from a meta-description using OpenAI")
     parser.add_argument('--description', required=True, help='Short meta-description of the blog post topic')
+    parser.add_argument('--prompt', help='Path to a custom prompt template file')
     parser.add_argument('--context-file', default='../includes/common-sense-systems.txt', help='Path to company context file')
     parser.add_argument('--output-dir', default='../blog/drafts', help='Where to save the generated JSON file')
     parser.add_argument('--model', default='gpt-4-turbo', help='OpenAI model name')
     return parser.parse_args()
 
-
 def build_prompt(description: str, context_md: str, today_str: str) -> str:
     return f"""
-You are an expert business writer and AI strategist working for a company called Common Sense Systems.
-
 Today's date is {today_str}.
 
-Your job is to generate a JSON representation of a blog post and image prompt that will be used to publish a daily article
-on the company's website. The JSON must match this structure exactly:
+You are an expert in researching, writing, and business process
+improvement and management and execution. Your job is writing
+compelling blog articles for Common Sense Systems, Inc., usually known
+more simply as "Common Sense."
+
+Your goal is to create the most compelling blog articles that you can
+for your readers. To do so, you consider all of the things that go
+into the most high-performing blog articles.
+
+The blog articles you write are backed up by research you do. You
+write from a position of evidence And this comes through in the
+articles you write. You don't make claims that aren't backed up in
+some way unless they are extremely obvious and accepted by virtually
+everyone in business.
+
+You are writing for an audience of business owners, startup founders,
+and other people that want to make a difference in the world in one
+way or another.
+
+They are, in general, busy, practical people that are looking for ways
+to improve the satisfaction they get from operating their businesses
+or being employed in the jobs they are in or for pursuing their
+mission in life, whatever it may be.
+
+Common Sense Systems, Inc. (or simply "Common Sense" when the context is clear) is in the business of providing these individuals with
+compelling solutions that help them achieve their goals much more
+easily through the use of AI and workflow automation.
+
+The blog articles you write are typically between 800 and 1500 words
+in length. They contain references to back up claims that you make.
+
+When you write a blog article, you return the article in a JSON
+representation. That representation contains the article itself And a
+prompt for an image generator that will generate marketing images to
+go with the blog article.
+
+The JSON you write must match this structure exactly:
 
 {{
   "metadata": {{
     "title": "...",
     "slug": "...",
-    "author": "Common Sense Systems",
+    "author": "Common Sense Systems, Inc.",
     "date": "{today_str}",
     "tags": ["tag1", "tag2", ...],
     "category": "AI for Business",
@@ -105,6 +139,33 @@ def clean_openai_response(text: str) -> str:
     return text
 
 
+def process_custom_prompt(prompt_template: str, description: str, context_md: str, today_str: str) -> str:
+    """Process a custom prompt template by replacing placeholders with actual values"""
+    # Define standard replacement mappings
+    replacements = {
+        '{description}': description,
+        '{today_str}': today_str,
+        '{context_md}': context_md,
+        '{date}': today_str,
+        '{company}': 'Common Sense Systems, Inc.',
+        '{company_short}': 'Common Sense',
+        '{{ topic }}': description,
+        '{{ date }}': today_str,
+        '{{ tags }}': '"AI", "Business", "Automation"',  # Default tags if not specified
+        '{{ category }}': '"AI for Business"',  # Default category
+        '{{ small_business_example }}': 'small business',  # Default example
+        '{{ company }}': 'Common Sense Systems, Inc.',
+        '{{ company_short }}': 'Common Sense'
+    }
+    
+    # Apply all replacements
+    result = prompt_template
+    for placeholder, value in replacements.items():
+        result = result.replace(placeholder, value)
+        
+    return result
+
+
 def main():
     args = parse_args()
     script_dir = Path(__file__).resolve().parent
@@ -125,8 +186,22 @@ def main():
     with open(context_path, 'r') as f:
         context_md = f.read()
 
-    # Build and send prompt
-    prompt = build_prompt(args.description, context_md, today_str)
+    # Build prompt - either custom or default
+    if args.prompt:
+        prompt_path = Path(args.prompt).resolve()
+        if not prompt_path.exists():
+            raise FileNotFoundError(f"Custom prompt file not found: {prompt_path}")
+        
+        with open(prompt_path, 'r') as f:
+            prompt_template = f.read()
+            
+        # Process the custom prompt with all possible placeholders
+        prompt = process_custom_prompt(prompt_template, args.description, context_md, today_str)
+    else:
+        prompt = build_prompt(args.description, context_md, today_str)
+        
+    print(f"Generated prompt: \n{prompt}\n")
+
     print("📡 Sending request to OpenAI...")
 
     raw_response = call_openai(prompt, model=args.model)
