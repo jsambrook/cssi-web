@@ -23,13 +23,13 @@ $(BUILD_DIR)/%.html: $(SRC_DIR)/%.m4 $(SRC_DIR)/includes/head.m4
 	@mkdir -p $(dir $@)
 	$(M4) $(M4FLAGS) $< > $@
 
-# Clean up generated files
-clean:
+# Clean up generated files (prune drafts first)
+clean: prune-drafts
 	rm -f $(HTML_FILES)
 	rm -f $(BUILD_DIR)/blog/**/*.html
 
 # Target to rebuild everything from scratch
-rebuild: clean all
+ebuild: clean all
 
 # Target for static site pages only
 pages: $(HTML_FILES)
@@ -37,13 +37,14 @@ pages: $(HTML_FILES)
 # Help target
 help:
 	@echo "Available targets:"
-	@echo "  all         - Build all static HTML pages (default)"
-	@echo "  pages       - Build only static site pages"
-	@echo "  clean       - Remove all generated HTML files"
-	@echo "  rebuild     - Clean and rebuild all static pages"
-	@echo "  blog-today  - Generate today's blog post (requires DESCRIPTION=\"...\")"
-	@echo "  blog-index  - Regenerate blog/index.html from metadata"
-	@echo "  help        - Show this help message"
+	@echo "  all          - Build all static HTML pages (default)"
+	@echo "  pages        - Build only static site pages"
+	@echo "  clean        - Prune and remove all generated HTML files"
+	@echo "  rebuild      - Prune, clean and rebuild all static pages"
+	@echo "  blog-today   - Prune drafts and generate today's blog post"  # requires DESCRIPTION
+	@echo "  blog-index   - Regenerate blog/index.html from metadata"
+	@echo "  prune-drafts - Prune old files from the drafts directory"
+	@echo "  help         - Show this help message"
 
 # ========================================
 # Blog Automation Targets
@@ -52,11 +53,19 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today
+.PHONY: blog-today blog-index prune-drafts clean pages help
 
-blog-today:
+# Prune the drafts folder
+prune-drafts:
+	@echo "🗑️  Pruning old blog drafts..."
+	# keep only the last 30 days of drafts
+	find $(DRAFTS_DIR) -name '*.json' -mtime +30 -delete
+	@echo "✅ Old drafts pruned."
+
+# Generate today's blog post
+blog-today: prune-drafts
 ifndef DESCRIPTION
-	$(error DESCRIPTION is required. Usage: make blog-today DESCRIPTION="Short description here")
+	$(error DESCRIPTION is required. Usage: make blog-today DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post for today: $(TODAY)"
 	cd src/bin && ./generate_blog_json.py --description "$(DESCRIPTION)"
@@ -66,8 +75,7 @@ endif
 	@echo "✅ Blog post generated and HTML written!"
 	@$(MAKE) blog-index
 
-.PHONY: blog-index
-
+# Regenerate the blog index page
 blog-index:
 	cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog index rebuilt!"
