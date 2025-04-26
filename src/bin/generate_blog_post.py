@@ -3,9 +3,9 @@
 generate_blog_post.py
 
 Reads a JSON definition of a blog article and generates:
-1. A standalone .html blog post
-2. Updates blog/blog_index.json
-3. Generates a graphics prompt file for image generation
+1. A standalone .html blog post saved into blog/YYYY/MM/
+2. Updates src/blog/blog_index.json
+3. Generates a graphics prompt file under src/assets/img/blog/YYYY/MM/
 
 Usage:
     ./generate_blog_post.py --input path/to/blog/drafts/YYYY-MM-DD-title.json
@@ -74,7 +74,7 @@ def write_html_file(html_path, html_content):
 
 
 def update_blog_index_json(blog_index_path, metadata):
-    """Append a blog entry to blog_index.json (safe and idempotent)."""
+    """Append a blog entry to blog_index.json."""
     new_entry = {
         "title": metadata["title"],
         "slug": metadata["slug"],
@@ -119,16 +119,26 @@ def main():
     content = data["content_html"]
     graphics = data.get("graphics_prompt", {})
 
-    # Project root is two levels up from src/bin/
-    root_dir = Path(__file__).resolve().parents[2]
+    # 🔥 Correct project roots
+    script_dir = Path(__file__).resolve().parent
+    repo_root = script_dir.parent.parent
 
+    # Paths
     year = metadata["year"]
     month = metadata["month"]
     slug = metadata["slug"]
 
-    html_content = generate_html_content(metadata, content)
+    # 📍 Public blog HTML goes under ./blog/
+    html_path = repo_root / 'blog' / year / month / f"{slug}.html"
+    blog_index_path = repo_root / 'src' / 'blog' / 'blog_index.json'
+    graphics_prompt_path = repo_root / 'src' / 'assets' / 'img' / 'blog' / year / month / f"{slug}-image.txt"
 
-    # 💡 Write HTML post to public-facing blog/ dir
-    html_path = root_dir / 'blog' / year / month / f"{slug}.html"
-    index_path = root_dir / 'src' / 'blog' / 'blog_index.json'
-    image_path = root_dir / 'src' / 'assets'
+    # Write artifacts
+    html_content = generate_html_content(metadata, content)
+    write_html_file(html_path, html_content)
+    update_blog_index_json(blog_index_path, metadata)
+
+    if graphics:
+        write_graphics_prompt(graphics, graphics_prompt_path)
+
+    print(f"✅ Blog HTML generated at: {html_path}")
