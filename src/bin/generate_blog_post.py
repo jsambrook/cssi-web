@@ -111,26 +111,26 @@ def generate_html_content(metadata, content, references=None, cta_html=None, foo
   <style>
     /* Improved spacing for blog content */
     .blog-post .blog-section {{
-      margin-bottom: 3em;
+      margin-bottom: 2.5em;
     }}
     
     .blog-post h2 {{
       margin-top: 0.5em;
-      margin-bottom: 1.2em;
+      margin-bottom: 0.6em;  /* Reduced from 1.2em to 0.6em (half) */
       padding-top: 0.5em;
     }}
     
     .blog-post p {{
-      margin-bottom: 1.2em;
+      margin-bottom: 1em;    /* Reduced from 1.2em to 1em (about 15% tighter) */
       line-height: 1.6;
     }}
     
     .blog-post h1 {{
-      margin-bottom: 1em;
+      margin-bottom: 0.8em;  /* Slight reduction for consistency */
     }}
     
     .blog-post .blog-meta {{
-      margin-bottom: 2em;
+      margin-bottom: 1.6em;  /* Reduced from 2em to 1.6em (20% tighter) */
     }}
     
     /* References styling */
