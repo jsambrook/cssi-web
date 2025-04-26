@@ -2,7 +2,7 @@
 """
 generate_blog_json.py
 
-Takes a short meta-description and uses OpenAI to generate a JSON representation
+Takes a short meta-description and uses AI (OpenAI or Claude) to generate a JSON representation
 of a full blog article and image prompt, using company context from a TXT file.
 
 Today's real date is used consistently across metadata, filenames, and prompt content.
@@ -12,23 +12,32 @@ Also saves a .current_blog.json file pointing to the generated JSON file.
 Usage:
     ./generate_blog_json.py "How AI assistants help accountants manage client communication"
     ./generate_blog_json.py --prompt /path/to/prompt_file.txt "Blog topic"
+    ./generate_blog_json.py --provider claude --model claude-3-sonnet-20240229 "Blog topic"
 """
 
 import argparse
 import os
-import openai
+import json
+import requests
 from pathlib import Path
 import datetime
-import json
+
+# Import OpenAI conditionally to avoid hard dependency
+try:
+    import openai
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate blog article JSON from a meta-description using OpenAI")
+    parser = argparse.ArgumentParser(description="Generate blog article JSON from a meta-description using AI")
     parser.add_argument('description', help='Short meta-description of the blog post topic')
     parser.add_argument('--prompt', help='Path to a custom prompt template file')
     parser.add_argument('--context-file', default='../includes/common-sense-systems.txt', help='Path to company context file')
     parser.add_argument('--output-dir', default='../blog/drafts', help='Where to save the generated JSON file')
-    parser.add_argument('--model', default='gpt-4-turbo', help='OpenAI model name')
+    parser.add_argument('--provider', default='openai', choices=['openai', 'claude'], help='AI provider to use')
+    parser.add_argument('--model', default='gpt-4-turbo', help='Model name (default: gpt-4-turbo for OpenAI, claude-3-sonnet-20240229 for Claude)')
     return parser.parse_args()
 
 def build_prompt(description: str, context_md: str, today_str: str) -> str:
@@ -112,20 +121,84 @@ You may use the following company context when writing the blog post:
 """
 
 
-def call_openai(prompt: str, model: str) -> str:
-    openai.api_key = os.getenv('OPENAI_API_KEY')
-    if not openai.api_key:
-        raise ValueError("OPENAI_API_KEY environment variable not set")
+def call_ai(prompt: str, provider: str, model: str) -> str:
+    """Call AI using the specified provider and model"""
+    
+    # For OpenAI
+    if provider == 'openai':
+        if not OPENAI_AVAILABLE:
+            raise ImportError("OpenAI package not installed. Install with: pip install openai")
+            
+        openai.api_key = os.getenv('OPENAI_API_KEY')
+        if not openai.api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set")
 
-    response = openai.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": "You are a JSON-generating assistant for business blog posts."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.7
-    )
-    return response.choices[0].message.content
+        # Support for both new and old OpenAI Python library
+        if hasattr(openai, 'chat'):
+            # New API style (v1.0+)
+            response = openai.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "You are a JSON-generating assistant for business blog posts."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.7
+            )
+            return response.choices[0].message.content
+        else:
+            # Legacy API style (pre-v1.0)
+            response = openai.ChatCompletion.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "You are a JSON-generating assistant for business blog posts."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.7
+            )
+            return response.choices[0].message.content
+    
+    # For Claude
+    elif provider == 'claude':
+        api_key = os.getenv('ANTHROPIC_API_KEY')
+        if not api_key:
+            raise ValueError("ANTHROPIC_API_KEY environment variable not set")
+            
+        # If no model specified, use a default Claude model
+        if model == 'gpt-4-turbo':  # This is the default in the arg parser
+            model = 'claude-3-sonnet-20240229'
+            
+        headers = {
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+            "content-type": "application/json"
+        }
+        
+        data = {
+            "model": model,
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "max_tokens": 4000,
+            "temperature": 0.7
+        }
+        
+        response = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers=headers,
+            json=data
+        )
+        
+        if response.status_code != 200:
+            raise Exception(f"Claude API error: {response.status_code}\n{response.text}")
+            
+        return response.json()["content"][0]["text"]
+    
+    else:
+        raise ValueError(f"Unknown provider: {provider}")
+        
+def call_openai(prompt: str, model: str) -> str:
+    """Legacy function for backward compatibility"""
+    return call_ai(prompt, provider='openai', model=model)
 
 
 def clean_openai_response(text: str) -> str:
@@ -202,15 +275,18 @@ def main():
         
     print(f"Generated prompt: \n{prompt}\n")
 
-    print("📡 Sending request to OpenAI...")
+    # Determine provider-specific message
+    provider_name = "OpenAI" if args.provider == "openai" else "Claude"
+    print(f"📡 Sending request to {provider_name}...")
 
-    raw_response = call_openai(prompt, model=args.model)
+    # Call the appropriate AI provider
+    raw_response = call_ai(prompt, provider=args.provider, model=args.model)
     cleaned_response = clean_openai_response(raw_response)
 
     try:
         blog_json = json.loads(cleaned_response)
     except json.JSONDecodeError:
-        raise ValueError("OpenAI response was not valid JSON. Got:\n\n" + raw_response)
+        raise ValueError(f"{provider_name} response was not valid JSON. Got:\n\n" + raw_response)
 
     # Correct the date metadata
     blog_json['metadata']['date'] = today_str
