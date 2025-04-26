@@ -410,9 +410,7 @@ def main():
         prompt = process_custom_prompt(prompt_template, args.description, context_md, today_str)
     else:
         prompt = build_prompt(args.description, context_md, today_str)
-        
-    print(f"Generated prompt: \n{prompt}\n")
-
+    
     # Determine provider-specific message
     provider_name = "OpenAI" if args.provider == "openai" else "Claude"
     print(f"📡 Sending request to {provider_name}...")
