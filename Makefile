@@ -29,7 +29,7 @@ clean: prune-drafts
 	rm -f $(BUILD_DIR)/blog/**/*.html
 
 # Target to rebuild everything from scratch
-ebuild: clean all
+rebuild: clean all
 
 # Target for static site pages only
 pages: $(HTML_FILES)
@@ -41,7 +41,8 @@ help:
 	@echo "  pages        - Build only static site pages"
 	@echo "  clean        - Prune and remove all generated HTML files"
 	@echo "  rebuild      - Prune, clean and rebuild all static pages"
-	@echo "  blog-today   - Prune drafts and generate today's blog post"  # requires DESCRIPTION
+	@echo "  blog-today   - Generate today's blog post using OpenAI (default)"  # requires DESCRIPTION
+	@echo "  blog-claude  - Generate today's blog post using Claude"  # requires DESCRIPTION
 	@echo "  blog-index   - Regenerate blog/index.html from metadata"
 	@echo "  prune-drafts - Prune old files from the drafts directory"
 	@echo "  help         - Show this help message"
@@ -53,7 +54,7 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today blog-index prune-drafts clean pages help
+.PHONY: blog-today blog-claude blog-index prune-drafts clean pages rebuild help
 
 # Prune the drafts folder
 prune-drafts:
@@ -62,13 +63,26 @@ prune-drafts:
 	find $(DRAFTS_DIR) -name '*.json' -mtime +30 -delete
 	@echo "✅ Old drafts pruned."
 
-# Generate today's blog post
+# Generate today's blog post using OpenAI (default)
 blog-today: prune-drafts
 ifndef DESCRIPTION
 	$(error DESCRIPTION is required. Usage: make blog-today DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post for today: $(TODAY)"
 	cd src/bin && ./generate_blog_json.py "$(DESCRIPTION)"
+	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
+	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
+	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	@echo "✅ Blog post generated and HTML written!"
+	@$(MAKE) blog-index
+
+# Generate today's blog post using Claude
+blog-claude: prune-drafts
+ifndef DESCRIPTION
+	$(error DESCRIPTION is required. Usage: make blog-claude DESCRIPTION=\"Short description here\")
+endif
+	@echo "📝 Generating blog post using Claude for today: $(TODAY)"
+	cd src/bin && ./generate_blog_json.py --provider claude --prompt ../blog/claude-prompt.txt "$(DESCRIPTION)"
 	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
 	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
 	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
