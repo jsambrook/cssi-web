@@ -19,8 +19,12 @@ import argparse
 import os
 import json
 import requests
+import subprocess
+import re
 from pathlib import Path
 import datetime
+import time
+from urllib.parse import urlparse
 
 # Import OpenAI conditionally to avoid hard dependency
 try:
@@ -38,6 +42,7 @@ def parse_args():
     parser.add_argument('--output-dir', default='../blog/drafts', help='Where to save the generated JSON file')
     parser.add_argument('--provider', default='openai', choices=['openai', 'claude'], help='AI provider to use')
     parser.add_argument('--model', default='gpt-4-turbo', help='Model name (default: gpt-4-turbo for OpenAI, claude-3-sonnet-20240229 for Claude)')
+    parser.add_argument('--skip-reference-check', action='store_true', help='Skip reference URL validation (faster but might include invalid links)')
     return parser.parse_args()
 
 def build_prompt(description: str, context_md: str, today_str: str) -> str:
@@ -212,6 +217,139 @@ def clean_openai_response(text: str) -> str:
     return text
 
 
+def verify_url(url, timeout=5):
+    """Check if a URL is accessible using curl"""
+    try:
+        # First check if URL is well-formed
+        parsed = urlparse(url)
+        if not all([parsed.scheme, parsed.netloc]):
+            return False, "Invalid URL format"
+            
+        # Use curl to check URL validity - more reliable than Python requests for some sites
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", "--max-time", str(timeout), url],
+            capture_output=True,
+            text=True
+        )
+        
+        status_code = int(result.stdout.strip())
+        return status_code < 400, f"HTTP Status: {status_code}"
+    except Exception as e:
+        return False, str(e)
+
+def extract_and_verify_references(blog_json):
+    """Extract references from the blog JSON and verify their URLs"""
+    valid_refs = []
+    invalid_refs = []
+    citations_in_text = []
+    
+    # Check if the blog post has references
+    if "references" in blog_json and blog_json["references"]:
+        print("🔍 Verifying reference URLs...")
+        
+        # Find all citation patterns in the content to track which ones are used
+        content_text = ""
+        # Add introduction text
+        if "introduction" in blog_json.get("content", {}):
+            content_text += blog_json["content"]["introduction"] + " "
+            
+        # Add body text from all sections
+        for section in blog_json.get("content", {}).get("body", []):
+            for para in section.get("paragraphs", []):
+                content_text += para + " "
+                
+        # Add conclusion
+        if "conclusion" in blog_json.get("content", {}):
+            content_text += blog_json["content"]["conclusion"]
+            
+        # Find all citation patterns like [1], [2], etc.
+        citation_pattern = r'\[(\d+)\]'
+        citations_in_text = [int(match) for match in re.findall(citation_pattern, content_text)]
+        
+        # Check each reference URL
+        for ref in blog_json["references"]:
+            ref_id = ref.get("id")
+            
+            # Skip references not cited in the text
+            if ref_id not in citations_in_text:
+                print(f"ℹ️ Reference [{ref_id}] not cited in text, skipping verification")
+                continue
+                
+            url = ref.get("url", "")
+            if not url:
+                invalid_refs.append(ref)
+                continue
+                
+            # Verify URL
+            print(f"  Checking: [{ref_id}] {url}")
+            is_valid, message = verify_url(url)
+            
+            if is_valid:
+                print(f"  ✅ Valid: {url}")
+                valid_refs.append(ref)
+            else:
+                print(f"  ❌ Invalid: {url} - {message}")
+                invalid_refs.append(ref)
+                
+        print(f"📊 References summary: {len(valid_refs)} valid, {len(invalid_refs)} invalid")
+    
+    return valid_refs, invalid_refs, citations_in_text
+
+def fix_invalid_references(blog_json, provider, model, invalid_refs, citations_in_text):
+    """Fix blog post content with invalid references by asking the AI to revise it"""
+    if not invalid_refs:
+        return blog_json
+        
+    print("🔄 Revising blog post to fix invalid references...")
+    
+    # Create a prompt to fix the content
+    invalid_ids = [ref["id"] for ref in invalid_refs]
+    prompt = f"""You need to revise a blog post to remove references to invalid sources. 
+
+The blog post contains citations to the following invalid references:
+{json.dumps(invalid_refs, indent=2)}
+
+These citations have the form [1], [2], etc. in the text.
+
+Please revise the blog post to:
+1. Remove references to these invalid sources (citations {invalid_ids})
+2. Remove any statements that were only supported by these invalid sources
+3. Rephrase any sentences to remove the need for these citations
+4. Keep the overall flow and quality of the content
+5. DO NOT change any valid citations
+
+Here is the original blog post content:
+{json.dumps(blog_json["content"], indent=2)}
+
+Respond with ONLY a JSON object containing the revised content, with the same structure as the original.
+"""
+
+    # Call AI to revise the content
+    print("📡 Sending revision request to AI...")
+    
+    # Wait a moment to avoid rate limits
+    time.sleep(1)
+    
+    revised_content = call_ai(prompt, provider=provider, model=model)
+    revised_content = clean_openai_response(revised_content)
+    
+    try:
+        # Parse the revised content
+        revised_json = json.loads(revised_content)
+        
+        # Update the blog JSON with the revised content
+        blog_json["content"] = revised_json
+        
+        # Filter out invalid references
+        blog_json["references"] = [ref for ref in blog_json.get("references", []) if ref["id"] not in invalid_ids]
+        
+        print("✅ Blog post revised successfully to remove invalid references")
+    except json.JSONDecodeError:
+        print("❌ Failed to parse revised content - keeping original content")
+        print(f"Received: {revised_content[:200]}...")
+    
+    return blog_json
+
 def process_custom_prompt(prompt_template: str, description: str, context_md: str, today_str: str) -> str:
     """Process a custom prompt template by replacing placeholders with actual values"""
     # Define standard replacement mappings
@@ -287,6 +425,16 @@ def main():
         blog_json = json.loads(cleaned_response)
     except json.JSONDecodeError:
         raise ValueError(f"{provider_name} response was not valid JSON. Got:\n\n" + raw_response)
+        
+    # Verify references and fix invalid ones using a second pass (unless skipped)
+    if not args.skip_reference_check:
+        valid_refs, invalid_refs, citations_in_text = extract_and_verify_references(blog_json)
+        
+        # If any invalid references are found, ask the AI to fix the content
+        if invalid_refs:
+            blog_json = fix_invalid_references(blog_json, args.provider, args.model, invalid_refs, citations_in_text)
+    else:
+        print("ℹ️ Skipping reference URL validation as requested")
 
     # Correct the date metadata
     blog_json['metadata']['date'] = today_str

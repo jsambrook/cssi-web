@@ -41,8 +41,10 @@ help:
 	@echo "  pages        - Build only static site pages"
 	@echo "  clean        - Prune and remove all generated HTML files"
 	@echo "  rebuild      - Prune, clean and rebuild all static pages"
-	@echo "  blog-today   - Generate today's blog post using OpenAI (default)"  # requires DESCRIPTION
-	@echo "  blog-claude  - Generate today's blog post using Claude"  # requires DESCRIPTION
+	@echo "  blog-today   - Generate today's blog post using OpenAI (with ref validation)"  # requires DESCRIPTION
+	@echo "  blog-today-fast - Generate today's blog post using OpenAI (no ref checks)"  # requires DESCRIPTION
+	@echo "  blog-claude  - Generate today's blog post using Claude (with ref validation)"  # requires DESCRIPTION
+	@echo "  blog-claude-fast - Generate today's blog post using Claude (no ref checks)"  # requires DESCRIPTION
 	@echo "  blog-index   - Regenerate blog/index.html from metadata"
 	@echo "  blog-reset   - Reset blog system to pristine/empty state (⚠️ DESTRUCTIVE)"
 	@echo "  prune-drafts - Prune old files from the drafts directory"
@@ -55,7 +57,7 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today blog-claude blog-index blog-reset prune-drafts clean pages rebuild help
+.PHONY: blog-today blog-today-fast blog-claude blog-claude-fast blog-index blog-reset prune-drafts clean pages rebuild help
 
 # Prune the drafts folder
 prune-drafts:
@@ -77,6 +79,19 @@ endif
 	@echo "✅ Blog post generated and HTML written!"
 	@$(MAKE) blog-index
 
+# Generate today's blog post using OpenAI without reference checks (faster)
+blog-today-fast: prune-drafts
+ifndef DESCRIPTION
+	$(error DESCRIPTION is required. Usage: make blog-today-fast DESCRIPTION=\"Short description here\")
+endif
+	@echo "📝 Generating blog post for today (fast mode): $(TODAY)"
+	cd src/bin && ./generate_blog_json.py --skip-reference-check "$(DESCRIPTION)"
+	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
+	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
+	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	@echo "✅ Blog post generated and HTML written!"
+	@$(MAKE) blog-index
+
 # Generate today's blog post using Claude
 blog-claude: prune-drafts
 ifndef DESCRIPTION
@@ -84,6 +99,19 @@ ifndef DESCRIPTION
 endif
 	@echo "📝 Generating blog post using Claude for today: $(TODAY)"
 	cd src/bin && ./generate_blog_json.py --provider claude --prompt ../blog/claude-prompt.txt "$(DESCRIPTION)"
+	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
+	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
+	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	@echo "✅ Blog post generated and HTML written!"
+	@$(MAKE) blog-index
+
+# Generate today's blog post using Claude without reference checks (faster)
+blog-claude-fast: prune-drafts
+ifndef DESCRIPTION
+	$(error DESCRIPTION is required. Usage: make blog-claude-fast DESCRIPTION=\"Short description here\")
+endif
+	@echo "📝 Generating blog post using Claude for today (fast mode): $(TODAY)"
+	cd src/bin && ./generate_blog_json.py --skip-reference-check --provider claude --prompt ../blog/claude-prompt.txt "$(DESCRIPTION)"
 	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
 	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
 	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
