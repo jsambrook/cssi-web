@@ -3,14 +3,13 @@
 generate_blog_post.py
 
 Reads a JSON definition of a blog article and generates:
-1. A standalone .html file for the blog post
+1. A standalone .html file for the blog post under /blog/YYYY/MM/
 2. Updates src/blog/blog_index.json
-3. Writes a graphics prompt text file
-
-Run from inside the src/bin directory. All paths are resolved relative to repo root.
+3. Writes a graphics prompt text file under src/assets/img/blog/YYYY/MM/
+4. Appends the CTA fragment from src/includes/blog_cta.html if present
 
 Usage:
-    ./generate_blog_post.py --input path/to/article.json
+    ./generate_blog_post.py --input path/to/blog/drafts/YYYY-MM-DD-title.json
 """
 
 import json
@@ -18,13 +17,14 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate blog post HTML from JSON input")
     parser.add_argument('--input', required=True, help='Path to the input JSON file (relative to script)')
     return parser.parse_args()
 
-def generate_html_content(metadata, content):
-    """Generate full HTML page for a blog post."""
+
+def generate_html_content(metadata, content, cta_html=None):
     title = metadata['title']
     date_str = datetime.strptime(metadata['date'], '%Y-%m-%d').strftime('%B %d, %Y')
     tags = ', '.join(metadata['tags'])
@@ -32,138 +32,131 @@ def generate_html_content(metadata, content):
     body = content['body']
     conclusion = content['conclusion']
 
-    html = f"""<!DOCTYPE html>
+    return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content="{title}">
   <meta name="keywords" content="{tags}">
   <meta name="author" content="{metadata['author']}">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <header>
     <div class="container">
       <nav>
-        <a href="/index.html" class="logo">
-          <span>Common Sense Systems, Inc.</span>
-        </a>
+        <a href="/index.html" class="logo"><span>Common Sense Systems, Inc.</span></a>
         <ul class="nav-links">
           <li><a href="/index.html">Home</a></li>
           <li><a href="/index.html#services">Services</a></li>
           <li><a href="/blog/index.html" class="active">Blog</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
-        <div class="menu-toggle">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
       </nav>
     </div>
   </header>
 
-  <main class="blog-post">
-    <article class="container">
-      <header class="blog-header">
-        <h1>{title}</h1>
-        <div class="blog-meta">
-          <span class="blog-date">{date_str}</span>
-          <span class="blog-tags">{tags}</span>
-        </div>
-      </header>
-
-      <div class="blog-content">
-        {introduction}
-        {body}
-        {conclusion}
+  <main class="container blog-post">
+    <article>
+      <h1>{title}</h1>
+      <div class="blog-meta">
+        <span class="blog-date">{date_str}</span>
+        <span class="blog-tags">{tags}</span>
       </div>
-
-      <nav class="blog-nav">
-        <a href="/blog/index.html" class="blog-nav-link">&larr; Back to Blog</a>
-      </nav>
+      {introduction}
+      {body}
+      {conclusion}
     </article>
   </main>
+
+  {cta_html or ""}
+
+  <footer>
+    <div class="container">
+      <p>&copy; 1996-2025 Common Sense Systems, Inc. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
 """
-    return html
 
-def write_html_file(html_path, html_content):
-    html_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(html_path, 'w') as f:
-        f.write(html_content)
 
-def update_blog_index_json(blog_index_path, metadata):
-    """Update the blog_index.json file safely."""
-    post_entry = {
-        "title": metadata['title'],
-        "slug": metadata['slug'],
-        "date": metadata['date'],
-        "year": metadata['year'],
-        "month": metadata['month']
+def write_html_file(path: Path, content: str):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding='utf-8')
+
+
+def update_blog_index_json(index_path: Path, metadata: dict):
+    entry = {
+        "title": metadata["title"],
+        "slug": metadata["slug"],
+        "date": metadata["date"],
+        "year": metadata["year"],
+        "month": metadata["month"]
     }
-
-    blog_index_path.parent.mkdir(parents=True, exist_ok=True)
-    if blog_index_path.exists():
-        with open(blog_index_path, 'r') as f:
-            index_data = json.load(f)
+    index_path.parent.mkdir(parents=True, exist_ok=True)
+    if index_path.exists():
+        data = json.loads(index_path.read_text(encoding='utf-8'))
     else:
-        index_data = {"posts": []}
+        data = {"posts": []}
+    data["posts"].append(entry)
+    index_path.write_text(json.dumps(data, indent=2), encoding='utf-8')
 
-    index_data["posts"].append(post_entry)
 
-    with open(blog_index_path, 'w') as f:
-        json.dump(index_data, f, indent=2)
-
-def write_graphics_prompt(graphics, image_prompt_path):
-    image_prompt_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(image_prompt_path, 'w') as f:
+def write_graphics_prompt(graphics: dict, prompt_path: Path):
+    prompt_path.parent.mkdir(parents=True, exist_ok=True)
+    with prompt_path.open('w', encoding='utf-8') as f:
         f.write(f"Title: {graphics['title']}\n\n")
         f.write(f"Description:\n{graphics['description']}\n\n")
         f.write(f"Usage: {graphics['usage']}\n")
 
+
 def main():
     args = parse_args()
 
+    # script_dir = src/bin
     script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parent.parent   # <<<<<< FIXED to repo root (two levels up)
+    # repo_root = cssi-web/
+    repo_root = script_dir.parent.parent
 
     input_path = (script_dir / args.input).resolve()
-
     if not input_path.exists():
         raise FileNotFoundError(f"Input JSON file not found: {input_path}")
 
-    with open(input_path, 'r') as f:
-        data = json.load(f)
+    data = json.loads(input_path.read_text(encoding='utf-8'))
+    metadata = data["metadata"]
+    content = data["content_html"]
+    graphics = data.get("graphics_prompt")
 
-    metadata = data['metadata']
-    content = data['content_html']
-    graphics = data.get('graphics_prompt')
+    year, month, slug = metadata["year"], metadata["month"], metadata["slug"]
 
-    year = metadata['year']
-    month = metadata['month']
-    slug = metadata['slug']
+    # Paths
+    html_path = repo_root / "blog" / year / month / f"{slug}.html"
+    index_json_path = repo_root / "src" / "blog" / "blog_index.json"
+    graphics_path = repo_root / "src" / "assets" / "img" / "blog" / year / month / f"{slug}-image.txt"
+    cta_path = repo_root / "src" / "includes" / "blog_cta.html"
 
-    html_content = generate_html_content(metadata, content)
+    # Load CTA fragment if it exists
+    cta_html = cta_path.read_text(encoding='utf-8') if cta_path.exists() else None
 
-    # ✅ Correct output paths relative to repo root
-    html_path = repo_root / 'blog' / year / month / f"{slug}.html"
-    blog_index_path = repo_root / 'src' / 'blog' / 'blog_index.json'
-    image_prompt_path = repo_root / 'src' / 'assets' / 'img' / 'blog' / year / month / f"{slug}-image.txt"
-
+    # Generate and write HTML
+    html_content = generate_html_content(metadata, content, cta_html=cta_html)
     write_html_file(html_path, html_content)
-    update_blog_index_json(blog_index_path, metadata)
 
+    # Update index and graphics prompt
+    update_blog_index_json(index_json_path, metadata)
     if graphics:
-        write_graphics_prompt(graphics, image_prompt_path)
+        write_graphics_prompt(graphics, graphics_path)
 
     print(f"✅ Blog HTML generated at: {html_path}")
-    print(f"✅ Graphics prompt saved to: {image_prompt_path}")
-    print(f"✅ Blog index metadata updated at: {blog_index_path}")
+    print(f"✅ Graphics prompt saved to: {graphics_path}")
+    print(f"✅ Blog index metadata updated at: {index_json_path}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

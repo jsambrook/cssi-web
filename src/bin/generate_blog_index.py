@@ -2,9 +2,15 @@
 """
 generate_blog_index.py
 
-Generates blog/index.html by injecting blog links into a full HTML layout template.
+Reads src/blog/blog_index.json and generates blog/index.html by injecting
+your styled template and the up-to-date list of posts.
 
-Ensures styling by wrapping content in the .blog-index section used in styles.css.
+Fixes root detection so it always finds:
+ - src/blog/blog_index.json
+ - src/includes/blog_index_template.html
+and writes to
+ - blog/index.html
+regardless of where it's run from.
 """
 
 import json
@@ -12,57 +18,46 @@ from pathlib import Path
 from datetime import datetime
 
 def main():
+    # Where this script lives: .../cssi-web/src/bin
     script_dir = Path(__file__).resolve().parent
-    root_dir = script_dir.parent
+    # Repo root: one more level up
+    repo_root = script_dir.parent.parent
 
-    # Adjust if running from src/bin
-    if (root_dir / 'src').exists():
-        root_dir = root_dir.parent
+    index_json = repo_root / 'src' / 'blog' / 'blog_index.json'
+    template_html = repo_root / 'src' / 'includes' / 'blog_index_template.html'
+    output_html   = repo_root / 'blog' / 'index.html'
 
-    index_json_path = root_dir / 'src' / 'blog' / 'blog_index.json'
-    template_path = root_dir / 'src' / 'includes' / 'blog_index_template.html'
-    output_path = root_dir / 'blog' / 'index.html'
-
-    if not index_json_path.exists():
-        print(f"❌ {index_json_path} not found. Cannot generate blog index.")
+    # Sanity checks
+    if not index_json.exists():
+        print(f"❌ {index_json} not found. Cannot generate blog index.")
+        return
+    if not template_html.exists():
+        print(f"❌ {template_html} not found. Cannot apply template.")
         return
 
-    if not template_path.exists():
-        print(f"❌ {template_path} not found.")
-        return
+    # Load metadata
+    data = json.loads(index_json.read_text(encoding='utf-8'))
+    posts = sorted(data.get('posts', []), key=lambda p: p['date'], reverse=True)
 
-    with open(index_json_path) as f:
-        index_data = json.load(f)
+    # Build the <ul class="blog-list">...</ul>
+    lines = []
+    for p in posts:
+        date_str = datetime.strptime(p['date'], "%Y-%m-%d").strftime("%B %d, %Y")
+        href = f"/blog/{p['year']}/{p['month']}/{p['slug']}.html"
+        lines.append(f'      <li>')
+        lines.append(f'        <a href="{href}">{p["title"]}</a>')
+        lines.append(f'        <span class="blog-date">– {date_str}</span>')
+        lines.append(f'      </li>')
+    post_list = "<ul class=\"blog-list\">\n" + "\n".join(lines) + "\n    </ul>"
 
-    posts = sorted(index_data['posts'], key=lambda p: p['date'], reverse=True)
+    # Read your template and inject
+    template = template_html.read_text(encoding='utf-8')
+    final = template.replace('<!-- POST_LIST goes here -->', post_list)
 
-    # Generate styled <ul> list for blog posts
-    post_list_html = ''
-    for post in posts:
-        title = post['title']
-        slug = post['slug']
-        year = post['year']
-        month = post['month']
-        date = datetime.strptime(post['date'], "%Y-%m-%d").strftime("%B %d, %Y")
-        link = f"/blog/{year}/{month}/{slug}.html"
-        post_list_html += f'      <li>\n'
-        post_list_html += f'        <a href="{link}">{title}</a>\n'
-        post_list_html += f'        <span class="blog-date">{date}</span>\n'
-        post_list_html += f'      </li>\n'
-
-    full_list_html = f'<ul class="blog-list">\n{post_list_html}    </ul>'
-
-    with open(template_path) as f:
-        template = f.read()
-
-    # Insert into .blog-index section
-    full_content = template.replace('<!-- POST_LIST goes here -->', full_list_html)
-
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, 'w') as f:
-        f.write(full_content)
-
-    print(f"✅ Styled blog index generated at: {output_path}")
+    # Write out
+    output_html.parent.mkdir(parents=True, exist_ok=True)
+    output_html.write_text(final, encoding='utf-8')
+    print(f"✅ Styled blog index generated at: {output_html}")
 
 if __name__ == "__main__":
     main()
