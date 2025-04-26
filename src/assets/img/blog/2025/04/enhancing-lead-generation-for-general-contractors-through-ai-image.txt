@@ -1,6 +1,0 @@
-Title: AI in Action: Transforming Lead Generation for General Contractors
-
-Description:
-A visual representation of how AI tools like chatbots and analytics platforms can help general contractors filter and qualify leads more effectively.
-
-Usage: Accompanying visual for the blog post to help readers visualize the benefits and implementation of AI in their lead generation processes.

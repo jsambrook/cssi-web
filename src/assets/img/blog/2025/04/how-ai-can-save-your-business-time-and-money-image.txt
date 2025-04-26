@@ -1,6 +1,0 @@
-Title: Visualizing AI Efficiency
-
-Description:
-Create an infographic showing a day in the life of a small business owner with and without AI. Highlight time spent on various tasks and the overall increase in efficiency and cost savings with AI.
-
-Usage: To be used alongside the blog post to visually demonstrate the impact of AI on small business operations.

@@ -1,6 +1,0 @@
-Title: AI in Architecture
-
-Description:
-Create an infographic illustrating how AI assistants can streamline project management, enhance design processes, and improve client relationships for architects.
-
-Usage: To be used alongside the blog post for visual representation and better engagement.
