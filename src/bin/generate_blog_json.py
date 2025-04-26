@@ -10,8 +10,8 @@ Today's real date is used consistently across metadata, filenames, and prompt co
 Also saves a .current_blog.json file pointing to the generated JSON file.
 
 Usage:
-    ./generate_blog_json.py --description "How AI assistants help accountants manage client communication"
-    ./generate_blog_json.py --description "Blog topic" --prompt /path/to/prompt_file.txt
+    ./generate_blog_json.py "How AI assistants help accountants manage client communication"
+    ./generate_blog_json.py --prompt /path/to/prompt_file.txt "Blog topic"
 """
 
 import argparse
@@ -24,7 +24,7 @@ import json
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate blog article JSON from a meta-description using OpenAI")
-    parser.add_argument('--description', required=True, help='Short meta-description of the blog post topic')
+    parser.add_argument('description', help='Short meta-description of the blog post topic')
     parser.add_argument('--prompt', help='Path to a custom prompt template file')
     parser.add_argument('--context-file', default='../includes/common-sense-systems.txt', help='Path to company context file')
     parser.add_argument('--output-dir', default='../blog/drafts', help='Where to save the generated JSON file')

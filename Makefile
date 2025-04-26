@@ -68,7 +68,7 @@ ifndef DESCRIPTION
 	$(error DESCRIPTION is required. Usage: make blog-today DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post for today: $(TODAY)"
-	cd src/bin && ./generate_blog_json.py --description "$(DESCRIPTION)"
+	cd src/bin && ./generate_blog_json.py "$(DESCRIPTION)"
 	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
 	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
 	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
