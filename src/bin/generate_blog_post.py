@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 generate_blog_post.py
 
@@ -18,6 +19,8 @@ import json
 import argparse
 from pathlib import Path
 from datetime import datetime
+import requests
+from urllib.parse import urlparse
 
 
 def parse_args():
@@ -36,8 +39,23 @@ def format_body_sections(body_sections):
     return html
 
 
+def verify_url(url, timeout=5):
+    """Verify if a URL is accessible"""
+    # Check if URL is well-formed
+    parsed = urlparse(url)
+    if not all([parsed.scheme, parsed.netloc]):
+        return False
+        
+    try:
+        # Try to access the URL
+        response = requests.head(url, timeout=timeout, allow_redirects=True)
+        return response.status_code < 400
+    except Exception as e:
+        print(f"Warning: Could not verify URL {url}: {str(e)}")
+        return False
+
 def format_references(references):
-    """Format references into a properly formatted HTML references section."""
+    """Format references into a properly formatted HTML references section with URL verification."""
     if not references:
         return ""
     
@@ -49,7 +67,15 @@ def format_references(references):
         ref_html += f"{ref.get('year', '')}. "
         
         if ref.get('url'):
-            ref_html += f"<a href='{ref['url']}' target='_blank' rel='noopener noreferrer'>{ref['url']}</a>"
+            url = ref['url']
+            # Verify URL is accessible
+            url_verified = verify_url(url)
+            
+            if url_verified:
+                ref_html += f"<a href='{url}' target='_blank' rel='noopener noreferrer'>{url}</a>"
+            else:
+                # If URL is not accessible, just display it as text without a link
+                ref_html += f"{url} <em>(Link may not be accessible)</em>"
         
         ref_html += "</li>"
         html += ref_html + "\n"

@@ -19,11 +19,15 @@ Target length: 1,000 words (range: 800-1,200)
 
 # REQUIREMENTS
 1. Write specifically for the {{ small_business_example }} context
-2. Include 2-3 verified statistics with inline citations [1], [2], etc.
+2. Include 2-3 REAL, VERIFIABLE statistics with inline citations [1], [2], etc.
+   - CRITICAL: ONLY cite sources that actually exist and are accessible online
+   - Each citation MUST have a working URL that can be verified
+   - Prefer well-known industry sources like Gartner, Forrester, McKinsey, etc.
+   - If uncertain about a source, do NOT include it
 3. Provide at least one immediately actionable tip
 4. Use authentic business scenarios and practical examples
 5. Structure content with clear problem → solution flow
-6. Include full references for all cited sources
+6. Include full references for all cited sources with REAL, WORKING URLs
 
 # CONTENT STRUCTURE
 - Introduction: 100-150 words (problem + promise)
@@ -76,7 +80,10 @@ Target length: 1,000 words (range: 800-1,200)
 - Structure: Short paragraphs (3-4 sentences), descriptive subheadings
 - Focus: Benefits over features, specifics over generalities
 - Evidence: Use inline citations [1], [2] for all statistics or claims
-- References: Include complete source information for verification
+  - ONLY use statistics from REAL sources you can confirm exist
+  - If unsure about a statistic or source, use general language without citation
+  - Better to have fewer citations than to cite non-existent sources
+- References: Include complete source information with VERIFIED URLs
 - Call to action: Clear, single next step
 - Total length: Target 1,000 words (800-1,200 range acceptable)
 
@@ -94,13 +101,15 @@ Target length: 1,000 words (range: 800-1,200)
   "references": [
     {
       "id": 1,
-      "title": "2024 Accounting Industry Benchmark Report",
-      "source": "American Institute of CPAs",
-      "year": "2024",
-      "url": "https://www.aicpa.org/research/benchmarking/2024-report"
+      "title": "State of Accounting Automation 2023",
+      "source": "Accounting Today",
+      "year": "2023",
+      "url": "https://www.accountingtoday.com/research/state-of-accounting-automation-2023"
     }
   ],
   ...
 }
+
+IMPORTANT: The example URL above may also be fictional. You MUST ONLY use REAL, VERIFIABLE URLs for your references. Use only sources you are confident actually exist.
 
 Output the completed JSON only—no additional commentary.
