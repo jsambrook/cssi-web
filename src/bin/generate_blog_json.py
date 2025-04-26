@@ -218,34 +218,97 @@ def clean_openai_response(text: str) -> str:
 
 
 def verify_url(url, timeout=5):
-    """Check if a URL is accessible using curl"""
+    """Check if a URL is accessible using curl with more thorough validation"""
     try:
         # First check if URL is well-formed
         parsed = urlparse(url)
         if not all([parsed.scheme, parsed.netloc]):
             return False, "Invalid URL format"
             
+        # Check for common issues in URLs
+        if parsed.scheme not in ['http', 'https']:
+            return False, "Invalid URL scheme (must be http or https)"
+        
+        # Check for unusual characters that might cause issues
+        if any(c in url for c in [' ', '"', "'", '<', '>', '{', '}', '|', '\\', '^', '`']):
+            return False, "URL contains invalid characters"
+            
+        # Reject localhost, IP addresses, and suspicious domains
+        domain = parsed.netloc.lower()
+        if (domain.startswith('localhost') or 
+            domain == '127.0.0.1' or 
+            domain.startswith('192.168.') or 
+            domain.startswith('10.') or 
+            domain.endswith('.local')):
+            return False, "URL points to local or private address"
+        
+        # Validate common URL patterns and detect potentially unstable pages
+        if re.search(r'temporary|temp|tmp', url.lower()):
+            return False, "URL appears to be a temporary resource"
+            
         # Use curl to check URL validity - more reliable than Python requests for some sites
+        # Add user agent to avoid being blocked
+        user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+        
         result = subprocess.run(
-            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", "--max-time", str(timeout), url],
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", 
+             "-A", user_agent, "--max-time", str(timeout), url],
             capture_output=True,
             text=True
         )
         
         status_code = int(result.stdout.strip())
+        
+        # Check specifically for common error codes
+        if status_code == 404:
+            return False, "Page not found (404)"
+        elif status_code == 403:
+            return False, "Access forbidden (403)"
+        elif status_code == 401:
+            return False, "Authentication required (401)"
+        elif status_code == 429:
+            return False, "Too many requests (429)"
+        elif status_code >= 500:
+            return False, f"Server error ({status_code})"
+        elif status_code >= 400:
+            return False, f"Client error ({status_code})"
+            
         return status_code < 400, f"HTTP Status: {status_code}"
     except Exception as e:
         return False, str(e)
 
+def is_ai_related(text):
+    """Check if text appears to be related to AI, ML, or similar technologies"""
+    ai_keywords = [
+        'ai', 'artificial intelligence', 'machine learning', 'ml', 'deep learning', 
+        'neural network', 'nlp', 'natural language processing', 'computer vision',
+        'chatbot', 'language model', 'llm', 'gpt', 'claude', 'automation', 'robotics',
+        'data science', 'predictive analytics', 'algorithm'
+    ]
+    
+    text_lower = text.lower()
+    return any(keyword in text_lower for keyword in ai_keywords)
+
 def extract_and_verify_references(blog_json):
-    """Extract references from the blog JSON and verify their URLs"""
+    """Extract references from the blog JSON and verify their URLs and recency"""
     valid_refs = []
     invalid_refs = []
     citations_in_text = []
     
+    # Determine if the blog post is AI-related
+    is_blog_ai_related = False
+    
+    title = blog_json.get("metadata", {}).get("title", "")
+    tags = blog_json.get("metadata", {}).get("tags", [])
+    
+    # Check if title or tags suggest AI content
+    if is_ai_related(title) or any(is_ai_related(tag) for tag in tags):
+        is_blog_ai_related = True
+        print("ℹ️ This appears to be an AI-related blog post; enforcing recency requirements")
+    
     # Check if the blog post has references
     if "references" in blog_json and blog_json["references"]:
-        print("🔍 Verifying reference URLs...")
+        print("🔍 Verifying reference URLs and recency...")
         
         # Find all citation patterns in the content to track which ones are used
         content_text = ""
@@ -266,6 +329,21 @@ def extract_and_verify_references(blog_json):
         citation_pattern = r'\[(\d+)\]'
         citations_in_text = [int(match) for match in re.findall(citation_pattern, content_text)]
         
+        # Check if text around citations is AI-related
+        if not is_blog_ai_related:
+            for citation_id in citations_in_text:
+                # Find context around citation (50 chars before and after)
+                citation_marker = f"[{citation_id}]"
+                pos = content_text.find(citation_marker)
+                if pos >= 0:
+                    start = max(0, pos - 50)
+                    end = min(len(content_text), pos + len(citation_marker) + 50)
+                    context = content_text[start:end]
+                    
+                    if is_ai_related(context):
+                        is_blog_ai_related = True
+                        print(f"ℹ️ Citation [{citation_id}] appears in AI-related context")
+        
         # Check each reference URL
         for ref in blog_json["references"]:
             ref_id = ref.get("id")
@@ -279,6 +357,19 @@ def extract_and_verify_references(blog_json):
             if not url:
                 invalid_refs.append(ref)
                 continue
+            
+            # Check recency for AI-related content
+            year_str = ref.get("year", "")
+            
+            # Check if this specific reference is about AI
+            ref_is_ai_related = is_ai_related(ref.get("title", "")) or is_ai_related(ref.get("source", ""))
+            
+            # Apply recency check for AI-related references in AI-related blogs
+            if (is_blog_ai_related or ref_is_ai_related) and year_str and year_str.isdigit():
+                year = int(year_str)
+                if year < 2022:
+                    print(f"  ⚠️ Outdated: Reference [{ref_id}] from {year} is too old for AI content")
+                    ref["outdated"] = True
                 
             # Verify URL
             print(f"  Checking: [{ref_id}] {url}")
@@ -292,31 +383,71 @@ def extract_and_verify_references(blog_json):
                 invalid_refs.append(ref)
                 
         print(f"📊 References summary: {len(valid_refs)} valid, {len(invalid_refs)} invalid")
+        
+        # Check for outdated AI references
+        outdated_refs = [ref for ref in valid_refs if ref.get("outdated")]
+        if outdated_refs:
+            print(f"⚠️ Found {len(outdated_refs)} outdated references for AI content")
+            for ref in outdated_refs:
+                invalid_refs.append(ref)
+                valid_refs.remove(ref)
     
     return valid_refs, invalid_refs, citations_in_text
 
 def fix_invalid_references(blog_json, provider, model, invalid_refs, citations_in_text):
-    """Fix blog post content with invalid references by asking the AI to revise it"""
+    """Fix blog post content with invalid or outdated references by asking the AI to revise it"""
     if not invalid_refs:
         return blog_json
-        
-    print("🔄 Revising blog post to fix invalid references...")
+    
+    # Separate outdated from invalid references for clearer instructions
+    outdated_refs = [ref for ref in invalid_refs if ref.get("outdated")]
+    bad_url_refs = [ref for ref in invalid_refs if not ref.get("outdated")]
+    
+    has_outdated = len(outdated_refs) > 0
+    has_invalid = len(bad_url_refs) > 0
+    
+    print("🔄 Revising blog post to fix references...")
     
     # Create a prompt to fix the content
     invalid_ids = [ref["id"] for ref in invalid_refs]
-    prompt = f"""You need to revise a blog post to remove references to invalid sources. 
+    outdated_ids = [ref["id"] for ref in outdated_refs]
+    bad_url_ids = [ref["id"] for ref in bad_url_refs]
+    
+    prompt = f"""You need to revise a blog post to address reference issues. 
 
-The blog post contains citations to the following invalid references:
+The blog post contains citations that need to be revised:
 {json.dumps(invalid_refs, indent=2)}
 
+"""
+
+    if has_outdated and has_invalid:
+        prompt += f"""These include:
+- Outdated references (too old for AI topics): {outdated_ids}
+- References with invalid or inaccessible URLs: {bad_url_ids}
+"""
+    elif has_outdated:
+        prompt += f"These are outdated references (pre-2022) used for AI-related topics: {outdated_ids}\n"
+    elif has_invalid:
+        prompt += f"These references have invalid or inaccessible URLs: {bad_url_ids}\n"
+
+    prompt += f"""
 These citations have the form [1], [2], etc. in the text.
 
 Please revise the blog post to:
-1. Remove references to these invalid sources (citations {invalid_ids})
-2. Remove any statements that were only supported by these invalid sources
-3. Rephrase any sentences to remove the need for these citations
-4. Keep the overall flow and quality of the content
-5. DO NOT change any valid citations
+1. Remove references to these problematic sources (citations {invalid_ids})
+"""
+    
+    if has_outdated:
+        prompt += f"""2. Replace outdated AI references ({outdated_ids}) with newer, up-to-date statistics and information from the past 2 years
+3. Make sure any claims about AI capabilities or adoption reflect the current state of technology (2022 or newer)
+"""
+    else:
+        prompt += "2. Remove any statements that were only supported by these invalid sources\n"
+        
+    prompt += f"""
+{4 if has_outdated else 3}. Rephrase any sentences to remove the need for these specific citations
+{5 if has_outdated else 4}. Keep the overall flow and quality of the content
+{6 if has_outdated else 5}. DO NOT change any valid citations
 
 Here is the original blog post content:
 {json.dumps(blog_json["content"], indent=2)}

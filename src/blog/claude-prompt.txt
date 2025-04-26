@@ -22,12 +22,18 @@ Target length: 1,000 words (range: 800-1,200)
 2. Include 4-6 REAL, VERIFIABLE statistics with inline citations [1], [2], etc.
    - CRITICAL: ONLY cite sources that actually exist and are accessible online
    - Each citation MUST have a working URL that can be verified
+   - For ALL AI-related topics, statistics, or capabilities, use RECENT sources (2022 or newer)
+   - Older references (pre-2022) are ONLY acceptable for:
+     * Established business concepts unrelated to AI/technology
+     * Foundational research that hasn't been superseded
+     * Historical context or background information
    - PRIORITIZE research from reliable, authoritative sources:
      * Academic journals (Harvard Business Review, MIT Sloan, etc.)
      * Major research firms (Gartner, Forrester, McKinsey, etc.)
      * Government sources (BLS, Census Bureau, etc.)
      * Industry associations with public reports
-   - Invest time to find real statistics from verifiable sources
+   - Double-check that URLs are functional by ensuring they follow standard formats
+   - Prefer well-established websites (e.g., .gov, .edu, or major publications)
    - Citation quality is more important than quantity
    - If uncertain about a source, do NOT include it
 3. Provide at least one immediately actionable tip
@@ -104,7 +110,17 @@ Target length: 1,000 words (range: 800-1,200)
   4. Industry association research
   5. Publications from respected business media (HBR, Forbes, WSJ, etc.)
   6. Well-established resources like Wikipedia for basic definitions (acceptable for terminology only)
-- References: Include complete source information with VERIFIED URLs
+- References: 
+  - Include complete source information with VERIFIED URLs
+  - For each URL, carefully verify that:
+    * The domain is a legitimate, established website
+    * The URL follows proper structure with no unusual characters
+    * The URL points to a specific page, not just a homepage
+    * The resource is publicly accessible (not behind a paywall or login)
+    * The resource is likely to remain stable and accessible
+  - After including a URL, mentally verify that it would work if someone typed it in a browser
+  - Avoid references to temporary pages, social media posts, or pages likely to change
+  - For AI-related topics, prioritize URLs from the last 2-3 years (since 2022)
 - Call to action: Clear, single next step
 - Total length: Target 1,000 words (800-1,200 range acceptable)
 
