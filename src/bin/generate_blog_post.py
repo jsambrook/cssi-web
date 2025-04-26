@@ -7,6 +7,7 @@ Reads a JSON definition of a blog article and generates:
 2. Updates src/blog/blog_index.json
 3. Writes a graphics prompt text file under src/assets/img/blog/YYYY/MM/
 4. Appends the CTA fragment from src/includes/blog_cta.html if present
+5. Appends the full site footer from src/includes/site_footer.html
 
 Usage:
     ./generate_blog_post.py --input path/to/blog/drafts/YYYY-MM-DD-title.json
@@ -24,7 +25,7 @@ def parse_args():
     return parser.parse_args()
 
 
-def generate_html_content(metadata, content, cta_html=None):
+def generate_html_content(metadata, content, cta_html=None, footer_html=None):
     title = metadata['title']
     date_str = datetime.strptime(metadata['date'], '%Y-%m-%d').strftime('%B %d, %Y')
     tags = ', '.join(metadata['tags'])
@@ -75,11 +76,7 @@ def generate_html_content(metadata, content, cta_html=None):
 
   {cta_html or ""}
 
-  <footer>
-    <div class="container">
-      <p>&copy; 1996-2025 Common Sense Systems, Inc. All rights reserved.</p>
-    </div>
-  </footer>
+  {footer_html or ""}
 
 </body>
 </html>
@@ -119,9 +116,8 @@ def write_graphics_prompt(graphics: dict, prompt_path: Path):
 def main():
     args = parse_args()
 
-    # script_dir = src/bin
+    # compute repo root two levels up from src/bin
     script_dir = Path(__file__).resolve().parent
-    # repo_root = cssi-web/
     repo_root = script_dir.parent.parent
 
     input_path = (script_dir / args.input).resolve()
@@ -135,20 +131,22 @@ def main():
 
     year, month, slug = metadata["year"], metadata["month"], metadata["slug"]
 
-    # Paths
+    # define paths
     html_path = repo_root / "blog" / year / month / f"{slug}.html"
     index_json_path = repo_root / "src" / "blog" / "blog_index.json"
     graphics_path = repo_root / "src" / "assets" / "img" / "blog" / year / month / f"{slug}-image.txt"
     cta_path = repo_root / "src" / "includes" / "blog_cta.html"
+    footer_path = repo_root / "src" / "includes" / "site_footer.html"
 
-    # Load CTA fragment if it exists
+    # load optional fragments
     cta_html = cta_path.read_text(encoding='utf-8') if cta_path.exists() else None
+    footer_html = footer_path.read_text(encoding='utf-8') if footer_path.exists() else None
 
-    # Generate and write HTML
-    html_content = generate_html_content(metadata, content, cta_html=cta_html)
+    # generate full HTML and write
+    html_content = generate_html_content(metadata, content, cta_html=cta_html, footer_html=footer_html)
     write_html_file(html_path, html_content)
 
-    # Update index and graphics prompt
+    # update index and graphics prompt
     update_blog_index_json(index_json_path, metadata)
     if graphics:
         write_graphics_prompt(graphics, graphics_path)
@@ -157,6 +155,5 @@ def main():
     print(f"✅ Graphics prompt saved to: {graphics_path}")
     print(f"✅ Blog index metadata updated at: {index_json_path}")
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
