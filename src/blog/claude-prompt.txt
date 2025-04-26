@@ -85,6 +85,12 @@ Target length: 1,000 words (range: 800-1,200)
 - Voice: Active, conversational yet professional
 - Structure: Short paragraphs (3-4 sentences), descriptive subheadings
 - Focus: Benefits over features, specifics over generalities
+- Technical Terminology:
+  - When introducing industry-specific terms or acronyms (e.g., RPA, ML, etc.), provide a brief definition
+  - For key technical concepts, include a citation to an authoritative definition source
+  - Example: "Robotic Process Automation (RPA), the technology that uses software robots to automate repetitive tasks [3], can reduce..."
+  - Always assume the reader is unfamiliar with specialized terminology
+  - For acronyms, always spell out the full term on first use with the acronym in parentheses
 - Evidence: Use inline citations [1], [2] for all statistics or claims
   - ONLY use statistics from REAL sources you can confirm exist
   - When citing, prefer exact statistics with specific numbers (e.g., "increased by 37%" rather than "significantly increased")
@@ -97,6 +103,7 @@ Target length: 1,000 words (range: 800-1,200)
   3. Government data and reports (BLS, Bureau of Economic Analysis, etc.)
   4. Industry association research
   5. Publications from respected business media (HBR, Forbes, WSJ, etc.)
+  6. Well-established resources like Wikipedia for basic definitions (acceptable for terminology only)
 - References: Include complete source information with VERIFIED URLs
 - Call to action: Clear, single next step
 - Total length: Target 1,000 words (800-1,200 range acceptable)
