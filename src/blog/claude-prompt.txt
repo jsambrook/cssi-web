@@ -19,10 +19,16 @@ Target length: 1,000 words (range: 800-1,200)
 
 # REQUIREMENTS
 1. Write specifically for the {{ small_business_example }} context
-2. Include 2-3 REAL, VERIFIABLE statistics with inline citations [1], [2], etc.
+2. Include 4-6 REAL, VERIFIABLE statistics with inline citations [1], [2], etc.
    - CRITICAL: ONLY cite sources that actually exist and are accessible online
    - Each citation MUST have a working URL that can be verified
-   - Prefer well-known industry sources like Gartner, Forrester, McKinsey, etc.
+   - PRIORITIZE research from reliable, authoritative sources:
+     * Academic journals (Harvard Business Review, MIT Sloan, etc.)
+     * Major research firms (Gartner, Forrester, McKinsey, etc.)
+     * Government sources (BLS, Census Bureau, etc.)
+     * Industry associations with public reports
+   - Invest time to find real statistics from verifiable sources
+   - Citation quality is more important than quantity
    - If uncertain about a source, do NOT include it
 3. Provide at least one immediately actionable tip
 4. Use authentic business scenarios and practical examples
@@ -81,8 +87,16 @@ Target length: 1,000 words (range: 800-1,200)
 - Focus: Benefits over features, specifics over generalities
 - Evidence: Use inline citations [1], [2] for all statistics or claims
   - ONLY use statistics from REAL sources you can confirm exist
+  - When citing, prefer exact statistics with specific numbers (e.g., "increased by 37%" rather than "significantly increased")
+  - For each statistic, consider spending extra time to find a reputable source with a working URL
   - If unsure about a statistic or source, use general language without citation
-  - Better to have fewer citations than to cite non-existent sources
+  - Better to have fewer high-quality citations than many questionable ones
+- Source Quality: Prioritize the following source types (in order of preference):
+  1. Peer-reviewed academic publications
+  2. Reports from established research firms (Gartner, McKinsey, Deloitte, etc.)
+  3. Government data and reports (BLS, Bureau of Economic Analysis, etc.)
+  4. Industry association research
+  5. Publications from respected business media (HBR, Forbes, WSJ, etc.)
 - References: Include complete source information with VERIFIED URLs
 - Call to action: Clear, single next step
 - Total length: Target 1,000 words (800-1,200 range acceptable)
