@@ -35,7 +35,8 @@ def format_body_sections(body_sections):
     for section in body_sections:
         heading = section['heading']
         paragraphs = "\n".join([f"<p>{para}</p>" for para in section['paragraphs']])
-        html += f"<h2>{heading}</h2>\n{paragraphs}\n"
+        # Adding a section wrapper for better structural semantics and styling potential
+        html += f'<section class="blog-section">\n  <h2>{heading}</h2>\n  {paragraphs}\n</section>\n\n'
     return html
 
 
@@ -108,14 +109,41 @@ def generate_html_content(metadata, content, references=None, cta_html=None, foo
   <meta name="author" content="{metadata['author']}">
   <link rel="stylesheet" href="/css/styles.css">
   <style>
+    /* Improved spacing for blog content */
+    .blog-post .blog-section {{
+      margin-bottom: 3em;
+    }}
+    
+    .blog-post h2 {{
+      margin-top: 0.5em;
+      margin-bottom: 1.2em;
+      padding-top: 0.5em;
+    }}
+    
+    .blog-post p {{
+      margin-bottom: 1.2em;
+      line-height: 1.6;
+    }}
+    
+    .blog-post h1 {{
+      margin-bottom: 1em;
+    }}
+    
+    .blog-post .blog-meta {{
+      margin-bottom: 2em;
+    }}
+    
+    /* References styling */
     .references {{
-      margin-top: 2em;
-      padding-top: 1em;
+      margin-top: 3em;
+      padding-top: 1.5em;
       border-top: 1px solid #eee;
       font-size: 0.9em;
     }}
+    
     .references li {{
-      margin-bottom: 0.5em;
+      margin-bottom: 0.8em;
+      line-height: 1.5;
     }}
   </style>
 </head>
