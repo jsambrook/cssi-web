@@ -29,9 +29,9 @@ AI_RSS_FEEDS = [
         "source": "The Verge"
     },
     {
-        "name": "MIT Technology Review AI",
-        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
-        "source": "MIT Technology Review"
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "source": "TechCrunch"
     },
     {
         "name": "VentureBeat AI",
@@ -39,24 +39,29 @@ AI_RSS_FEEDS = [
         "source": "VentureBeat"
     },
     {
+        "name": "Wired AI",
+        "url": "https://www.wired.com/feed/tag/artificial-intelligence/latest/rss",
+        "source": "Wired"
+    },
+    {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/feed/",
+        "source": "MIT Technology Review"
+    },
+    {
         "name": "AI News",
         "url": "https://www.artificialintelligence-news.com/feed/",
         "source": "AI News"
     },
     {
-        "name": "Hugging Face Blog",
-        "url": "https://huggingface.co/blog/feed.xml",
-        "source": "Hugging Face"
+        "name": "Ars Technica AI",
+        "url": "https://arstechnica.com/tag/artificial-intelligence/feed/",
+        "source": "Ars Technica"
     },
     {
-        "name": "OpenAI Blog",
-        "url": "https://openai.com/blog/rss/",
-        "source": "OpenAI"
-    },
-    {
-        "name": "Google AI Blog",
-        "url": "http://googleaiblog.blogspot.com/atom.xml",
-        "source": "Google AI"
+        "name": "VB AI",
+        "url": "https://venturebeat.com/ai/feed/",
+        "source": "VentureBeat"
     }
 ]
 
@@ -79,18 +84,23 @@ def parse_feed_date(entry):
             try:
                 # Handle both string dates and time structs
                 if isinstance(entry[date_field], str):
-                    return date_parser.parse(entry[date_field])
+                    date = date_parser.parse(entry[date_field])
+                    return date.replace(tzinfo=None)  # Remove timezone to avoid comparison issues
                 else:
                     # Assume it's a time struct
-                    return datetime.datetime.fromtimestamp(time.mktime(entry[date_field]))
-            except Exception:
+                    date = datetime.datetime.fromtimestamp(time.mktime(entry[date_field]))
+                    return date.replace(tzinfo=None)  # Remove timezone to avoid comparison issues
+            except Exception as e:
+                print(f"      Error parsing date field '{date_field}': {e}")
                 continue
                 
     # If we get here, look in entry.get('dc_date')
     if 'dc_date' in entry and entry['dc_date']:
         try:
-            return date_parser.parse(entry['dc_date'])
-        except Exception:
+            date = date_parser.parse(entry['dc_date'])
+            return date.replace(tzinfo=None)  # Remove timezone to avoid comparison issues
+        except Exception as e:
+            print(f"      Error parsing dc_date: {e}")
             pass
             
     # As a last resort, try to find a date in the title or description
@@ -184,6 +194,13 @@ def fetch_ai_news(days_back=30, min_items=15):
     # If we don't have enough items, relax the date constraint
     if len(all_recent_items) < min_items:
         print(f"⚠️ Only found {len(all_recent_items)} items, extending search period...")
+        
+        # To avoid infinite recursion, cap the maximum days back
+        if days_back >= 180:  # 6 months is as far back as we'll go
+            print(f"⚠️ Reached maximum search period of 180 days, returning what we have")
+            return all_recent_items
+            
+        # Double the search period and try again
         return fetch_ai_news(days_back=days_back*2, min_items=min_items)
         
     print(f"✅ Found {len(all_recent_items)} total recent AI news items")
@@ -275,12 +292,28 @@ def main():
     output_dir = Path(args.output).parent
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    # Fetch news
-    items = fetch_ai_news(days_back=args.days, min_items=args.min_items)
-    
-    # Generate JSON
-    json_path = generate_news_json(items, args.output)
-    
+    try:
+        # Ensure today is timezone-naive to avoid comparison issues
+        global today
+        today = datetime.datetime.now().replace(tzinfo=None)
+        
+        # Fetch news
+        items = fetch_ai_news(days_back=args.days, min_items=args.min_items)
+        
+        # If we found any items, generate JSON
+        if items:
+            json_path = generate_news_json(items, args.output)
+            print(f"\n✅ Successfully saved {len(items)} news items to {json_path}")
+        else:
+            print("\n❌ No news items found, no JSON file generated")
+            return 1
+            
+    except Exception as e:
+        print(f"\n❌ Error: {type(e).__name__}: {e}")
+        import traceback
+        traceback.print_exc()
+        return 1
+        
     return 0
 
 if __name__ == "__main__":
