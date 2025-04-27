@@ -600,10 +600,16 @@ def main():
         print("🔄 Attempting to fix JSON format issues...")
         fixed_content = cleaned_response
         
-        # Try to remove any leading/trailing Markdown code fences
+        # Try to remove any leading/trailing Markdown code fences and escape problematic characters
         fixed_content = re.sub(r'^```json\s+', '', fixed_content)
         fixed_content = re.sub(r'^```\s+', '', fixed_content)
-        fixed_content = re.sub(r'\s+```$', '', fixed_content)$', '', fixed_content)
+        fixed_content = re.sub(r'\s+```$', '', fixed_content)
+        
+        # Fix escape sequences that might be problematic
+        fixed_content = fixed_content.replace('\\s+', ' ')
+        
+        # Remove any triple backslash sequences that can cause issues
+        fixed_content = fixed_content.replace('\\\\\\', '')
         
         # Retry parsing with fixed content
         try:
