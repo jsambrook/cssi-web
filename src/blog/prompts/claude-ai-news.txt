@@ -46,7 +46,6 @@ Target length: 1,200-1,500 words (longer than standard blogs to cover more devel
        - AWS Machine Learning Blog: https://aws.amazon.com/blogs/machine-learning/
        - Nvidia Blog: https://blogs.nvidia.com/
        - OpenAI Blog: https://openai.com/blog
-       - Stability AI Blog: https://stability.ai/blog
        - Replit Blog: https://blog.replit.com/
      * Industry News Sites:
        - The Verge: https://www.theverge.com/ai-artificial-intelligence
@@ -59,8 +58,6 @@ Target length: 1,200-1,500 words (longer than standard blogs to cover more devel
        - Papers With Code: https://paperswithcode.com/
      * Government & Policy Sources:
        - EU Commission (AI Act): https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence
-       - White House (AI Policy): https://www.whitehouse.gov/ostp/ai-bill-of-rights/
-       - UK Government AI: https://www.gov.uk/government/collections/artificial-intelligence
    - For each development, include specific release dates/announcements
    - CRITICAL: Double-check date information - report only CONFIRMED, RECENT developments
 
@@ -124,7 +121,7 @@ Target length: 1,200-1,500 words (longer than standard blogs to cover more devel
   * Version numbers where applicable
   * Specific feature names and capabilities
   * Factual performance metrics and improvements
-- Technical Accuracy: 
+- Technical Accuracy:
   * Define all technical terms clearly
   * Avoid hype and exaggeration
   * Distinguish between announced features and actually released features
