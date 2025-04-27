@@ -222,13 +222,36 @@ def call_openai(prompt: str, model: str) -> str:
 
 
 def clean_openai_response(text: str) -> str:
-    """Remove code fences from OpenAI JSON responses if present"""
+    """Remove code fences from AI JSON responses and fix common JSON format issues"""
+    # Remove code fences if present
     if text.startswith("```json"):
         text = text.lstrip("```json").strip()
     if text.startswith("```"):
         text = text.lstrip("```").strip()
     if text.endswith("```"):
         text = text.rstrip("```").strip()
+        
+    # Fix common JSON formatting issues
+    
+    # Sometimes AI adds a leading or trailing single quote that breaks JSON
+    text = text.strip("'")
+    
+    # Fix JSON delimiter issues (the specific error in screenshot shows delimiter error at line 27)
+    text = re.sub(r'"content"\s*:\s*(\w)', r'"content": {\1', text)  # Missing opening brace
+    text = re.sub(r'(\w)\s*}$', r'\1}}', text)  # Missing closing brace$', r'\1}}', text)  # Missing closing brace
+    
+    # Fix missing commas in arrays and objects
+    text = re.sub(r'"\s*\n\s*"', '",\n"', text)
+    text = re.sub(r'}\s*\n\s*{', '},\n{', text)
+    text = re.sub(r']\s*\n\s*\[', '],\n[', text)
+    
+    # Fix trailing commas which are invalid in JSON
+    text = re.sub(r',\s*}', '}', text)
+    text = re.sub(r',\s*]', ']', text)
+    
+    # Fix escaping in strings (common issues)
+    text = text.replace('\\"', '"')  # Sometimes AI double-escapes
+    
     return text
 
 
@@ -610,6 +633,21 @@ def main():
         
         # Remove any triple backslash sequences that can cause issues
         fixed_content = fixed_content.replace('\\\\\\', '')
+        
+        # Fix specific JSON format issues
+        
+        # The error shows a missing comma in JSON content
+        # Look for the pattern "content": { followed by "introduction": without a comma
+        fixed_content = re.sub(r'"content"\s*:\s*{(\s*)"introduction"', r'"content": {\1"introduction"', fixed_content)
+        
+        # Add missing commas between elements
+        fixed_content = re.sub(r'"}(\s*)"', r'"},\1"', fixed_content)
+        fixed_content = re.sub(r'"](\s*)"', r'"],\1"', fixed_content)
+        
+        # Fix common structural JSON errors
+        fixed_content = fixed_content.replace('""', '"')  # Double quote issue
+        fixed_content = fixed_content.replace('},}', '}}')  # Extra comma
+        fixed_content = fixed_content.replace('],]', ']]')  # Extra comma
         
         # Retry parsing with fixed content
         try:
