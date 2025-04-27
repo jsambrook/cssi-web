@@ -566,7 +566,7 @@ def process_custom_prompt(prompt_template: str, description: str, context_md: st
     # Handle special case for recent news from RSS feed
     if '{{ recent_news }}' in prompt_template:
         # Check if we have recent AI news from the RSS fetcher
-        news_json_path = Path(__file__).resolve().parent.parent / "blog" / "prompts" / "recent_ai_news.json"
+        news_json_path = Path(__file__).resolve().parent.parent.parent / "recent_ai_news.json"
         
         # If we don't have the news or it's older than 6 hours, try to generate it
         if not news_json_path.exists() or (time.time() - news_json_path.stat().st_mtime > 6 * 3600):
