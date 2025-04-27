@@ -45,6 +45,7 @@ help:
 	@echo "  blog-today-fast - Generate today's blog post using OpenAI (no ref checks)"  # requires DESCRIPTION
 	@echo "  blog-claude  - Generate today's blog post using Claude (with ref validation)"  # requires DESCRIPTION
 	@echo "  blog-claude-fast - Generate today's blog post using Claude (no ref checks)"  # requires DESCRIPTION
+	@echo "  blog-ai-news - Generate AI news roundup covering latest developments"  # requires DESCRIPTION
 	@echo "  blog-index   - Regenerate blog/index.html from metadata"
 	@echo "  blog-reset   - Reset blog system to pristine/empty state (⚠️ DESTRUCTIVE)"
 	@echo "  prune-drafts - Prune old files from the drafts directory"
@@ -57,7 +58,7 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today blog-today-fast blog-claude blog-claude-fast blog-index blog-reset prune-drafts clean pages rebuild help
+.PHONY: blog-today blog-today-fast blog-claude blog-claude-fast blog-ai-news blog-index blog-reset prune-drafts clean pages rebuild help
 
 # Prune the drafts folder
 prune-drafts:
@@ -116,6 +117,19 @@ endif
 	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
 	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
 	@echo "✅ Blog post generated and HTML written!"
+	@$(MAKE) blog-index
+
+# Generate AI news roundup using Claude
+blog-ai-news: prune-drafts
+ifndef DESCRIPTION
+	$(error DESCRIPTION is required. Usage: make blog-ai-news DESCRIPTION=\"AI news topic or focus area\")
+endif
+	@echo "📝 Generating AI news roundup for today: $(TODAY)"
+	cd src/bin && ./generate_blog_json.py --provider claude --prompt ../blog/prompts/claude-ai-news.txt "$(DESCRIPTION)"
+	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
+	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
+	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	@echo "✅ AI news roundup generated and HTML written!"
 	@$(MAKE) blog-index
 
 # Regenerate the blog index page
