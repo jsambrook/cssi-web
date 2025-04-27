@@ -69,7 +69,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Fetch recent AI news from RSS feeds")
     parser.add_argument("--days", type=int, default=30, 
                         help="Number of days to look back for news (default: 30)")
-    parser.add_argument("--output", default="./recent_ai_news.json",
+    parser.add_argument("--output", default="recent_ai_news.json",
                         help="Path to output JSON file")
     parser.add_argument("--min-items", type=int, default=15,
                         help="Minimum number of news items to collect (default: 15)")

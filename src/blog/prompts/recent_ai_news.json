@@ -1,0 +1,792 @@
+{
+  "fetch_date": "2025-04-26T18:17:35.108881",
+  "timeframe_days": 30,
+  "categories": {
+    "large_language_models": [
+      {
+        "title": "Google\u2019s DeepMind UK team reportedly seeks to unionize",
+        "link": "https://techcrunch.com/2025/04/26/googles-deepmind-uk-team-reportedly-seeks-to-unionize/",
+        "date": "2025-04-26",
+        "source": "TechCrunch",
+        "summary": "Around 300 London-based members of Google\u2019s AI-focused DeepMind team are seeking to unionize with the Communication Workers Union, according to a Financial Times report that cites three people involved with the unionization effort. These DeepMind employees are reportedly unhappy about Google\u2019s decis"
+      },
+      {
+        "title": "Anthropic sent a takedown notice to a dev trying to reverse-engineer its coding tool",
+        "link": "https://techcrunch.com/2025/04/25/anthropic-sent-a-takedown-notice-to-a-dev-trying-to-reverse-engineer-its-coding-tool/",
+        "date": "2025-04-25",
+        "source": "TechCrunch",
+        "summary": "In the battle between two &#8220;agentic&#8221; coding tools \u2014 Anthropic&#8217;s Claude Code and OpenAI&#8217;s Codex CLI \u2014 the latter appears to be fostering more developer goodwill than the former. That&#8217;s at least partly because Anthropic has issued takedown notices to a developer trying to "
+      },
+      {
+        "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+        "link": "https://techcrunch.com/2025/04/25/chatgpt-everything-to-know-about-the-ai-chatbot/",
+        "date": "2025-04-25",
+        "source": "TechCrunch",
+        "summary": "ChatGPT, OpenAI\u2019s text-generating AI chatbot, has taken the world by storm since its launch in November 2022. What started as a tool to supercharge productivity through writing essays and code with short text prompts has evolved into a behemoth with 300 million weekly active users. 2024 was a big ye"
+      },
+      {
+        "title": "An OpenAI researcher who worked on GPT-4.5 had their green card denied",
+        "link": "https://techcrunch.com/2025/04/25/an-openai-researcher-who-worked-on-gpt-4-5-had-their-green-card-denied/",
+        "date": "2025-04-25",
+        "source": "TechCrunch",
+        "summary": "Kai Chen, a Canadian AI researcher working at OpenAI who&#8217;s lived in the U.S. for 12 years, was denied a green card, according to Noam Brown, a leading research scientist at the company. In a post on X, Brown said that Chen learned of the decision Friday and must soon leave the country. &#8220;"
+      },
+      {
+        "title": "Liquid AI is revolutionizing LLMs to work on edge devices like smartphones with new \u2018Hyena Edge\u2019 model",
+        "link": "https://venturebeat.com/ai/liquid-ai-is-revolutionizing-llms-to-work-on-edge-devices-like-smartphones-with-new-hyena-edge-model/",
+        "date": "2025-04-25",
+        "source": "VentureBeat",
+        "summary": "Hyena Edge\u2019s success positions Liquid AI as one of the emerging players to watch in the evolving AI model landscape."
+      },
+      {
+        "title": "Trump orders Ed Dept to make AI a national priority while plotting agency\u2019s death",
+        "link": "https://arstechnica.com/tech-policy/2025/04/trump-orders-doe-to-make-ai-a-national-priority-while-plotting-agencys-death/",
+        "date": "2025-04-24",
+        "source": "Ars Technica",
+        "summary": "States could mess with Trump\u2019s AI education plan if the Education Department dies."
+      },
+      {
+        "title": "Microsoft just launched powerful AI \u2018agents\u2019 that could completely transform your workday \u2014 and challenge Google\u2019s workplace dominance",
+        "link": "https://venturebeat.com/ai/microsoft-just-launched-powerful-ai-agents-that-could-completely-transform-your-workday-and-challenge-googles-workplace-dominance/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "Microsoft unveils new AI reasoning agents and Copilot features to transform workplace productivity, with Chief Product Officer Aparna Chennapragada sharing exclusive insights on the company's vision for human-agent collaboration."
+      },
+      {
+        "title": "Google reveals sky-high Gemini usage numbers in antitrust case",
+        "link": "https://arstechnica.com/ai/2025/04/gemini-usage-is-exploding-but-google-is-a-long-way-from-catching-chatgpt/",
+        "date": "2025-04-23",
+        "source": "Ars Technica",
+        "summary": "Google revealed in court that Gemini now sees 350 million monthly users."
+      },
+      {
+        "title": "Watch: Google DeepMind CEO and AI Nobel winner Demis Hassabis on CBS\u2019 \u201960 Minutes\u2019",
+        "link": "https://venturebeat.com/ai/watch-google-deepmind-ceo-and-ai-nobel-winner-demis-hassabis-on-cbs-60-minutes/",
+        "date": "2025-04-21",
+        "source": "VentureBeat",
+        "summary": "The segment ended with a meditation on the future: a world where AI tools could transform almost every human endeavor."
+      },
+      {
+        "title": "From \u2018catch up\u2019 to \u2018catch us\u2019: How Google quietly took the lead in enterprise AI",
+        "link": "https://venturebeat.com/ai/from-catch-up-to-catch-us-how-google-quietly-took-the-lead-in-enterprise-ai/",
+        "date": "2025-04-18",
+        "source": "VentureBeat",
+        "summary": "Google has surged ahead in the enterprise AI race after perceived stumbles. VentureBeat details the Gemini models, TPU advantage &#038; agent ecosystem driving its turnaround."
+      },
+      {
+        "title": "Google announces faster, more efficient Gemini AI model",
+        "link": "https://arstechnica.com/ai/2025/04/googles-best-gemini-ai-model-is-showing-up-in-more-places/",
+        "date": "2025-04-09",
+        "source": "Ars Technica",
+        "summary": "Gemini 2.5 is starting to move beyond its experimental phase."
+      },
+      {
+        "title": "Most Americans think AI won\u2019t improve their lives, survey says",
+        "link": "https://arstechnica.com/tech-policy/2025/04/survey-americans-fear-ai-will-hurt-them-experts-expect-the-opposite/",
+        "date": "2025-04-03",
+        "source": "Ars Technica",
+        "summary": "Rare survey of AI experts exposes deep divide with public opinion."
+      }
+    ],
+    "multimodal_ai": [
+      {
+        "title": "DeepSeek\u2019s success shows why motivation is key to AI innovation",
+        "link": "https://venturebeat.com/ai/deepseeks-success-shows-why-motivation-is-key-to-ai-innovation/",
+        "date": "2025-04-26",
+        "source": "VentureBeat",
+        "summary": "How did DeepSeek attain such cost-savings while American companies could not? Let's dive into the technical details."
+      },
+      {
+        "title": "OpenAI may be developing its own social platform, but who\u2019s it for?",
+        "link": "https://techcrunch.com/video/openai-may-be-developing-its-own-social-platform-but-whos-it-for/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "OpenAI is reportedly building its own X-like social network. The project is still in the early stages, but there\u2019s an internal prototype focused on ChatGPT\u2019s image generation that contains a social feed, The Verge reports. A social app would give OpenAI its own unique, real-time data that X and Meta"
+      },
+      {
+        "title": "Is that really your boss calling? Jericho Security raises $15M to stop deepfake fraud that\u2019s cost businesses $200M in 2025 alone",
+        "link": "https://venturebeat.com/ai/is-that-really-your-boss-calling-jericho-security-raises-15m-to-stop-deepfake-fraud-thats-cost-businesses-200m-in-2025-alone/",
+        "date": "2025-04-24",
+        "source": "VentureBeat",
+        "summary": "Pentagon-backed Jericho Security raises $15 million to combat deepfake fraud that has already cost North American businesses $200 million in 2025, using AI to detect increasingly convincing voice and video impersonations."
+      },
+      {
+        "title": "Ethically trained AI startup Pleias releases new small reasoning models optimized for RAG with built-in citations",
+        "link": "https://venturebeat.com/ai/ethically-trained-ai-startup-pleias-releases-new-small-reasoning-models-optimized-for-rag-with-built-in-citations/",
+        "date": "2025-04-24",
+        "source": "VentureBeat",
+        "summary": "Pleias emphasizes the models\u2019 suitability for integration into search-augmented assistants, educational tools, and user support systems."
+      },
+      {
+        "title": "The vibes are shifting for US climate tech",
+        "link": "https://www.technologyreview.com/2025/04/24/1115718/climate-tech-investments-trump/",
+        "date": "2025-04-24",
+        "source": "MIT Technology Review",
+        "summary": "The past few years have been an almost nonstop parade of good news for climate tech in the US. Headlines about billion-dollar grants from the government, massive private funding rounds, and labs churning out advance after advance have been routine. Now, though, things are starting to shift.&#160;&#1"
+      },
+      {
+        "title": "Perplexity will come to Moto phones after exec testified Google limited access",
+        "link": "https://arstechnica.com/gadgets/2025/04/perplexity-will-come-to-moto-phones-after-exec-testified-google-blocked-access/",
+        "date": "2025-04-24",
+        "source": "Ars Technica",
+        "summary": "After telling the court Google blocked its Moto deal, Perplexity debuts on the new Razrs."
+      },
+      {
+        "title": "$42.1 million poured into startup offering energy-efficient solutions for costly and unwieldy operational data and AI workloads",
+        "link": "https://venturebeat.com/data-infrastructure/42-1-million-poured-into-startup-offering-energy-efficient-solutions-for-costly-and-unwieldy-operational-data-and-ai-workloads/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "The funding infusion sharpens a mission to make hyperscale analytics radically cheaper and greener at the very moment enterprises fear ballooning data\u2011center power bills."
+      },
+      {
+        "title": "SWiRL: The business case for AI that thinks like your best problem-solvers",
+        "link": "https://venturebeat.com/ai/swirl-the-business-case-for-ai-that-thinks-like-your-best-problem-solvers/",
+        "date": "2025-04-22",
+        "source": "VentureBeat",
+        "summary": "Training LLMs on trajectories of reasoning and tool use makes them superior at multi-step reasoning tasks."
+      },
+      {
+        "title": "Anthropic just analyzed 700,000 Claude conversations \u2014 and found its AI has a moral code of its own",
+        "link": "https://venturebeat.com/ai/anthropic-just-analyzed-700000-claude-conversations-and-found-its-ai-has-a-moral-code-of-its-own/",
+        "date": "2025-04-21",
+        "source": "VentureBeat",
+        "summary": "Anthropic's groundbreaking study analyzes 700,000 conversations to reveal how AI assistant Claude expresses 3,307 unique values in real-world interactions, providing new insights into AI alignment and safety."
+      },
+      {
+        "title": "How NTT Research has shifted more basic R&D into AI for the enterprise | Kazu Gomi interview",
+        "link": "https://venturebeat.com/games/kazu-gomi-interview/",
+        "date": "2025-04-18",
+        "source": "VentureBeat",
+        "summary": "Kazu Gomi, president and CEO of NTT Research, has a big view of the technology world from his perch in Silicon Valley."
+      },
+      {
+        "title": "Meta secretly helped China advance AI, ex-Facebooker will tell Congress",
+        "link": "https://arstechnica.com/tech-policy/2025/04/congress-to-question-whistleblower-who-accused-meta-of-helping-china-in-ai-race/",
+        "date": "2025-04-09",
+        "source": "Ars Technica",
+        "summary": "Meta whistleblower can testify to Congress despite gag order on press interviews."
+      },
+      {
+        "title": "Google\u2019s new experimental Gemini 2.5 model rolls out to free users",
+        "link": "https://arstechnica.com/gadgets/2025/03/googles-new-experimental-gemini-2-5-model-rolls-out-to-free-users/",
+        "date": "2025-03-31",
+        "source": "Ars Technica",
+        "summary": "Google's improved AI model is now available for free, but usage is limited."
+      }
+    ],
+    "generative_ai": [
+      {
+        "title": "Perplexity CEO says its browser will track everything users do online to sell \u2018hyper personalized\u2019 ads",
+        "link": "https://techcrunch.com/2025/04/24/perplexity-ceo-says-its-browser-will-track-everything-users-do-online-to-sell-hyper-personalized-ads/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Perplexity is building its own browser is to collect data on everything users do outside of its own app to sell  ads."
+      },
+      {
+        "title": "Speak at TechCrunch Disrupt 2025: Applications now open",
+        "link": "https://techcrunch.com/2025/04/24/speak-at-techcrunch-disrupt-2025-applications-now-open/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "TechCrunch Disrupt returns October 27-29 to Moscone West in San Francisco \u2014 and we\u2019re inviting thought leaders, founders, VCs, and tech experts to apply for a chance to take the stage at one of the most anticipated tech events of the year. Applications are now open to speak at Disrupt 2025, where ov"
+      },
+      {
+        "title": "Intel\u2019s new CEO signals streamlining efforts but does not spell out exact layoff numbers",
+        "link": "https://venturebeat.com/games/intels-new-ceo-signals-streamlining-efforts-but-does-not-spell-out-exact-layoff-numbers/",
+        "date": "2025-04-24",
+        "source": "VentureBeat",
+        "summary": "Lip-Bu Tan, the new CEO of Intel, sent out a blunt message to employees saying the company has to reorganize to be more efficient."
+      },
+      {
+        "title": "Evil Geniuses and Theta Labs launch AI chatbot based on esports mascot Meesh",
+        "link": "https://venturebeat.com/games/evil-geniuses-and-theta-labs-launch-ai-chatbot-based-on-esports-mascot-meesh/",
+        "date": "2025-04-24",
+        "source": "VentureBeat",
+        "summary": "Evil Geniuses, the well-known esports organization and brand, has launched its Meesh AI chatbot in a partnership with Theta Labs."
+      },
+      {
+        "title": "Inside the controversial tree farms powering Apple\u2019s carbon neutral goal",
+        "link": "https://www.technologyreview.com/2025/04/24/1115751/apple-carbon-neutral-eucalyptus-tree-farm-brazil/",
+        "date": "2025-04-24",
+        "source": "MIT Technology Review",
+        "summary": "We were losing the light, and still about 20 kilometers from the main road, when the car shuddered and died at the edge of a strange forest.&#160; The grove grew as if indifferent to certain unspoken rules of botany. There was no understory, no foreground or background, only the trees themselves, wh"
+      },
+      {
+        "title": "Google adds more AI tools to its Workspace productivity apps",
+        "link": "https://venturebeat.com/ai/google-adds-more-ai-tools-to-its-workspace-productivity-apps/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "Google expanded Gemini's features, adding the popular podcast-style feature Audio Overviews to the platform."
+      },
+      {
+        "title": "More accurate coding: Researchers adapt Sequential Monte Carlo for AI-generated code",
+        "link": "https://venturebeat.com/ai/more-accurate-coding-researchers-adapt-sequential-monte-carlo-for-ai-generated-code/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "Researchers from MIT, Yale, McGill University and others found that adapting the Sequential Monte Carlo algorithm can make AI-generated code better."
+      },
+      {
+        "title": "Batch data processing is too slow for real-time AI: How open-source Apache Airflow 3.0 solves the challenge with event-driven data orchestration",
+        "link": "https://venturebeat.com/data-infrastructure/open-source-airflow-3-0-set-to-accelerate-data-orchestration-for-enterprise-ai-inference/",
+        "date": "2025-04-22",
+        "source": "VentureBeat",
+        "summary": "Open-source data orchestration gets a major rewrite to help support inference and enterprise AI"
+      },
+      {
+        "title": "TBD VC unveils $35M venture fund to back Israeli deep tech startups",
+        "link": "https://venturebeat.com/games/tbd-vc-unveils-35m-venture-fund-to-back-israeli-deep-tech-startups/",
+        "date": "2025-04-21",
+        "source": "VentureBeat",
+        "summary": "TBD VC, a new early-stage venture capital firm, has announced a $35 million fund to back deep tech Israeli founders at the pre-seed and seed stages, both in Israel and around the globe. The fund launch comes amid a new wave of breakout Israeli tech stories, including Wiz\u2019s recent $32 billion acqu"
+      },
+      {
+        "title": "Regrets: Actors who sold AI avatars stuck in Black Mirror-esque dystopia",
+        "link": "https://arstechnica.com/ai/2025/04/regrets-actors-who-sold-ai-avatars-stuck-in-black-mirror-esque-dystopia/",
+        "date": "2025-04-18",
+        "source": "Ars Technica",
+        "summary": "Is $1,000 worth being the AI face of obvious scams? Rueful actors say no."
+      },
+      {
+        "title": "Google\u2019s AI Mode search can now answer questions about images",
+        "link": "https://arstechnica.com/gadgets/2025/04/googles-ai-mode-search-can-now-answer-questions-about-images/",
+        "date": "2025-04-07",
+        "source": "Ars Technica",
+        "summary": "Google's AI Mode can now understand images as part of your searches."
+      },
+      {
+        "title": "Gemini hackers can deliver more potent attacks with a helping hand from\u2026 Gemini",
+        "link": "https://arstechnica.com/security/2025/03/gemini-hackers-can-deliver-more-potent-attacks-with-a-helping-hand-from-gemini/",
+        "date": "2025-03-28",
+        "source": "Ars Technica",
+        "summary": "Hacking LLMs has always been more art than science. A new attack on Gemini could change that."
+      }
+    ],
+    "ai_applications": [
+      {
+        "title": "Last day to boost your brand and host a Side Event at TechCrunch Sessions: AI",
+        "link": "https://techcrunch.com/2025/04/25/last-day-to-boost-your-brand-and-host-a-side-event-at-techcrunch-sessions-ai/",
+        "date": "2025-04-25",
+        "source": "TechCrunch",
+        "summary": "This is your last chance to put your brand at the center of the AI conversation during TechCrunch Sessions: AI Week \u2014 with applications to host a Side Event closing tonight at 11:59 p.m. PT. From June 1-7, TechCrunch is curating a dynamic weeklong series of Side Events leading up to and following th"
+      },
+      {
+        "title": "Chinese AI startup Manus reportedly gets funding from Benchmark at $500M valuation",
+        "link": "https://techcrunch.com/2025/04/25/chinese-ai-startup-manus-reportedly-gets-funding-from-benchmark-at-500m-valuation/",
+        "date": "2025-04-25",
+        "source": "TechCrunch",
+        "summary": "Chinese startup Manus AI, which works on building tools related to AI agents, has picked up $75 million in a funding round led by Benchmark at a roughly $500 million valuation, according to Bloomberg. The company will use the money to expand to new markets, including the U.S., Japan, and the Middle "
+      },
+      {
+        "title": "How do you define cheating in the age of AI?",
+        "link": "https://techcrunch.com/video/how-do-you-define-cheating-in-the-age-of-ai/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "This AI startup raised $5.3 million to help people &#8220;cheat on everything.&#8221; But in the age of AI, how do you define cheating? Columbia University recently suspended student Roy Lee for building a tool to help people cheat on engineering interviews. He\u2019s been making waves on X after posting"
+      },
+      {
+        "title": "OpenAI rolls out a \u2018lightweight\u2019 version of its ChatGPT deep research tool",
+        "link": "https://techcrunch.com/2025/04/24/openai-rolls-out-a-lightweight-version-of-its-chatgpt-deep-research-tool/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "OpenAI is bringing a new &#8220;lightweight&#8221; version of its ChatGPT deep research tool, which scours the web to compile research reports on a topic, to ChatGPT Plus, Team, and Pro users, the company announced Thursday. The new lightweight deep research, which will also come to free ChatGPT use"
+      },
+      {
+        "title": "OpenAI wants its \u2018open\u2019 AI model to call models in the cloud for help",
+        "link": "https://techcrunch.com/2025/04/24/openai-wants-its-open-ai-model-to-call-models-in-the-cloud-for-help/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "For the first time in roughly five years, OpenAI is gearing up to release an AI system that&#8217;s truly &#8220;open,&#8221; meaning it&#8217;ll be available for download at no cost and not gated behind an API. TechCrunch reported on Wednesday that OpenAI is aiming for an early summer launch, and t"
+      },
+      {
+        "title": "Former DeepSeeker and collaborators release new method for training reliable AI agents: RAGEN",
+        "link": "https://venturebeat.com/ai/former-deepseeker-and-collaborators-release-new-method-for-training-reliable-ai-agents-ragen/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "RAGEN stands out not just as a technical contribution but as a conceptual step toward more autonomous, reasoning-capable AI agents."
+      },
+      {
+        "title": "Roundtables: Brain-Computer Interfaces: From Promise to Product",
+        "link": "https://www.technologyreview.com/2025/04/23/1115741/roundtables-brain-computer-interfaces-from-promise-to-product/",
+        "date": "2025-04-23",
+        "source": "MIT Technology Review",
+        "summary": "Recorded on\u00a0April 23, 2025 Brain-Computer Interfaces: From Promise to Product Speakers: David Rotman, editor at large, and Antonio Regalado, senior editor for biomedicine. Brain-computer interfaces (BCIs) have been crowned the 11th Breakthrough Technology of 2025 by\u00a0MIT Technology Review&#8216;s rea"
+      },
+      {
+        "title": "A new, open source text-to-speech model called Dia has arrived to challenge ElevenLabs, OpenAI and more",
+        "link": "https://venturebeat.com/ai/a-new-open-source-text-to-speech-model-called-dia-has-arrived-to-challenge-elevenlabs-openai-and-more/",
+        "date": "2025-04-22",
+        "source": "VentureBeat",
+        "summary": "With a focus on expressive quality, reproducibility, and open access, Dia adds a distinctive new voice to the landscape of text-to-speech."
+      },
+      {
+        "title": "Aethir launches AI Unbundled industry alliance for Web3 AI development",
+        "link": "https://venturebeat.com/games/aethir-launches-ai-unbundled-industry-alliance-for-web3-ai-development/",
+        "date": "2025-04-21",
+        "source": "VentureBeat",
+        "summary": "Aethir, a provider of decentralized GPU cloud compute, announced the launch of AI Unbundled, an industry-wide alliance for Web3 AI."
+      },
+      {
+        "title": "Gemini 2.5 Flash comes to the Gemini app as Google seeks to improve \u201cdynamic thinking\u201d",
+        "link": "https://arstechnica.com/ai/2025/04/gemini-2-5-flash-comes-to-the-gemini-app-gives-developers-control-over-thinking/",
+        "date": "2025-04-17",
+        "source": "Ars Technica",
+        "summary": "Gemini 2.5 Flash is ready for you to try in the Gemini app, but it's starting as a preview."
+      },
+      {
+        "title": "Gemini \u201ccoming together in really awesome ways,\u201d Google says after 2.5 Pro release",
+        "link": "https://arstechnica.com/ai/2025/04/with-the-release-of-gemini-2-5-pro-google-looks-toward-a-dynamic-ai-future/",
+        "date": "2025-04-04",
+        "source": "Ars Technica",
+        "summary": "Google's Tulsee Doshi talks vibes and efficiency in Gemini 2.5 Pro."
+      }
+    ],
+    "ai_research": [
+      {
+        "title": "The new AI calculus: Google\u2019s 80% cost edge vs. OpenAI\u2019s ecosystem",
+        "link": "https://venturebeat.com/ai/the-new-ai-calculus-googles-80-cost-edge-vs-openais-ecosystem/",
+        "date": "2025-04-25",
+        "source": "VentureBeat",
+        "summary": "Explore the Google vs OpenAI AI ecosystem battle post-o3. Deep dive into Google's huge cost advantage (TPU vs GPU), agent strategies &#038; model risks for enterprise"
+      },
+      {
+        "title": "Anthropic CEO wants to open the black box of AI models by 2027",
+        "link": "https://techcrunch.com/2025/04/24/anthropic-ceo-wants-to-open-the-black-box-of-ai-models-by-2027/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Anthropic CEO Dario Amodei&#160;published an essay&#160;Thursday highlighting how little researchers understand about the inner workings of the world&#8217;s leading AI models. To address that, Amodei set an ambitious goal for Anthropic to reliably detect most AI model problems by 2027. Amodei ackno"
+      },
+      {
+        "title": "Within six years, building the leading AI data center may cost $200B",
+        "link": "https://techcrunch.com/2025/04/24/within-six-years-building-the-leading-ai-data-center-may-cost-200b/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Data centers to train and run AI may soon contain millions of chips, cost hundreds of billions of dollars, and require power equivalent to a large city&#8217;s electricity grid, if the current trends hold. That&#8217;s according to a new study from researchers at Georgetown, Epoch AI, and Rand, whic"
+      },
+      {
+        "title": "Anthropic is launching a new program to study AI \u2018model welfare\u2019",
+        "link": "https://techcrunch.com/2025/04/24/anthropic-is-launching-a-new-program-to-study-ai-model-welfare/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Could future AIs be &#8220;conscious,&#8221; and experience the world similarly to the way humans do? There&#8217;s no strong evidence that they will, but Anthropic isn&#8217;t ruling out the possibility. On Thursday, the AI lab announced that it has started a research program to investigate \u2014 and p"
+      },
+      {
+        "title": "This tool estimates how much electricity your chatbot messages consume",
+        "link": "https://techcrunch.com/2025/04/24/this-tool-estimates-how-much-electricity-your-chatbot-messages-consume/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Ever wonder how much electricity you&#8217;re using when you prompt, or thank, an AI model? Hugging Face engineer Julien Delavande did, so he built a tool to help arrive at the answer. AI models consume energy each time they&#8217;re run. They&#8217;re run on GPUs and specialized chips that need a l"
+      },
+      {
+        "title": "Amazon\u2019s SWE-PolyBench just exposed the dirty secret about your AI coding assistant",
+        "link": "https://venturebeat.com/ai/amazon-swe-polybench-just-exposed-the-dirty-secret-about-your-ai-coding-assistant/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "Amazon launches SWE-PolyBench, a groundbreaking multi-language benchmark that exposes critical limitations in AI coding assistants across Python, JavaScript, TypeScript, and Java while introducing new metrics beyond simple pass rates for real-world development tasks."
+      },
+      {
+        "title": "The Download: introducing the Creativity issue",
+        "link": "https://www.technologyreview.com/2025/04/23/1115681/the-download-introducing-the-creativity-issue/",
+        "date": "2025-04-23",
+        "source": "MIT Technology Review",
+        "summary": "This is today&#8217;s edition of\u00a0The Download,\u00a0our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Introducing: the Creativity issue The university computer lab may seem like an unlikely center for creativity. We tend to think of creativity as happe"
+      },
+      {
+        "title": "Relyance AI builds \u2018x-ray vision\u2019 for company data: Cuts AI compliance time by 80% while solving trust crisis",
+        "link": "https://venturebeat.com/ai/relyance-ai-builds-x-ray-vision-for-company-data-cuts-ai-compliance-time-by-80-while-solving-trust-crisis/",
+        "date": "2025-04-22",
+        "source": "VentureBeat",
+        "summary": "Relyance AI's new Data Journeys platform gives enterprises unprecedented visibility into data flows, reducing AI compliance time by 80% while helping organizations build trustworthy artificial intelligence systems in an increasingly regulated landscape."
+      },
+      {
+        "title": "Trump can\u2019t keep China from getting AI chips, TSMC suggests",
+        "link": "https://arstechnica.com/tech-policy/2025/04/trump-cant-keep-china-from-getting-ai-chips-tsmc-suggests/",
+        "date": "2025-04-21",
+        "source": "Ars Technica",
+        "summary": "As Trump eyes chip controls, TSMC fears its tariff-proof era will end."
+      },
+      {
+        "title": "Google suspended 39.2 million malicious advertisers in 2024 thanks to AI",
+        "link": "https://arstechnica.com/gadgets/2025/04/google-used-ai-to-block-three-times-more-fraudulent-advertisers-in-2024/",
+        "date": "2025-04-16",
+        "source": "Ars Technica",
+        "summary": "Google is adding LLMs to everything, including ad policy enforcement."
+      },
+      {
+        "title": "NJ teen wins fight to put nudify app users in prison, impose fines up to $30K",
+        "link": "https://arstechnica.com/tech-policy/2025/04/adults-told-her-to-move-on-instead-teen-won-fight-to-criminalize-deepfakes/",
+        "date": "2025-04-04",
+        "source": "Ars Technica",
+        "summary": "Here's how one teen plans to fix schools failing kids affected by nudify apps."
+      }
+    ],
+    "ai_business": [
+      {
+        "title": "Musk\u2019s xAI Holdings is reportedly raising the second-largest private funding round ever",
+        "link": "https://techcrunch.com/2025/04/25/musks-xai-holdings-is-reportedly-raising-the-second-largest-private-funding-round-ever/",
+        "date": "2025-04-26",
+        "source": "TechCrunch",
+        "summary": "Elon Musk&#8217;s xAI Holdings is in talks to raise $20 billion in fresh funding, potentially valuing the AI and social media combo at over $120 billion, according to a new Bloomberg report that says talks are in the &#8220;early stages.&#8221; If successful, the deal would be the second-largest sta"
+      },
+      {
+        "title": "Google\u2019s AI search numbers are growing, and that\u2019s by design",
+        "link": "https://techcrunch.com/2025/04/25/googles-ai-search-numbers-are-growing-and-thats-by-design/",
+        "date": "2025-04-25",
+        "source": "TechCrunch",
+        "summary": "Google started testing AI-summarized results in Google Search, AI Overviews, two years ago, and continues to expand the feature to new regions and languages. By the company&#8217;s estimation, it&#8217;s been a big success. AI Overviews is now used by more than 1.5 billion users monthly across over "
+      },
+      {
+        "title": "The Download: how Trump\u2019s tariffs will affect US manufacturing, and AI architecture",
+        "link": "https://www.technologyreview.com/2025/04/25/1115868/the-download-how-trumps-tariffs-will-affect-us-manufacturing-and-ai-architecture/",
+        "date": "2025-04-25",
+        "source": "MIT Technology Review",
+        "summary": "This is today&#8217;s edition of\u00a0The Download,\u00a0our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Sweeping tariffs could threaten the US manufacturing rebound Despite the geopolitical chaos and market collapses triggered by President Trump\u2019s announ"
+      },
+      {
+        "title": "Sweeping tariffs could threaten the US manufacturing rebound",
+        "link": "https://www.technologyreview.com/2025/04/25/1115827/sweeping-tariffs-could-threaten-the-us-manufacturing-rebound/",
+        "date": "2025-04-25",
+        "source": "MIT Technology Review",
+        "summary": "Despite the geopolitical chaos and market collapses triggered by President Trump\u2019s announcement of broad tariffs on international goods, some supporters still hope the strategy will produce a \u201cgolden age\u201d of American industry. Trump himself insists, \u201cJobs and factories will come roaring back into ou"
+      },
+      {
+        "title": "Dropbox adds new features to Dash, its AI-powered search tool",
+        "link": "https://techcrunch.com/2025/04/24/dropbox-adds-new-features-to-its-ai-powered-search-tool-dash/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Companies like Google and Microsoft have equipped their productivity suites with AI features and assistants, while startups such as ClickUp and ReadAI have focused heavily on building AI integrations and search capabilities. In alignment with this growing trend of infusing digital work suites with A"
+      },
+      {
+        "title": "OpenAI makes ChatGPT\u2019s image generation available as API",
+        "link": "https://venturebeat.com/ai/openai-makes-chatgpts-image-generation-available-as-api/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "Enterprises can now make Studio Ghibli-inspired images through OpenAI's API."
+      },
+      {
+        "title": "3 Things Caiwei Chen is into right now",
+        "link": "https://www.technologyreview.com/2025/04/23/1114885/caiwei-chen-ai-openai-play-dinner-parties-sewing/",
+        "date": "2025-04-23",
+        "source": "MIT Technology Review",
+        "summary": "A new play about OpenAI I recently saw Doomers, a new play by Matthew Gasda about the aborted 2023 coup at OpenAI, here represented by a fictional company called MindMesh. The action is set almost entirely in a meeting room; the first act follows executives immediately after the firing of company CE"
+      },
+      {
+        "title": "eSelf will bring private AI tutors to students worldwide",
+        "link": "https://venturebeat.com/games/eself-will-bring-private-ai-tutors-to-students-worldwide/",
+        "date": "2025-04-22",
+        "source": "VentureBeat",
+        "summary": "eSelf, a startup that focuses on conversational AI agents, is partnering an educational group\u00a0to bring private AI tutors to students."
+      },
+      {
+        "title": "2027 AGI forecast maps a 24-month sprint to human-level AI",
+        "link": "https://venturebeat.com/ai/2027-agi-forecast-maps-a-24-month-sprint-to-human-level-ai/",
+        "date": "2025-04-20",
+        "source": "VentureBeat",
+        "summary": "The newly published AI 2027 scenario offers a detailed 2 to 3-year forecast for the future that includes specific technical milestones."
+      },
+      {
+        "title": "Google created a new AI model for talking to dolphins",
+        "link": "https://arstechnica.com/science/2025/04/google-created-a-new-ai-model-for-talking-to-dolphins/",
+        "date": "2025-04-14",
+        "source": "Ars Technica",
+        "summary": "DolphinGemma will get its first test run this summer."
+      },
+      {
+        "title": "DeepMind has detailed all the ways AGI could wreck the world",
+        "link": "https://arstechnica.com/ai/2025/04/google-deepmind-releases-its-plan-to-keep-agi-from-running-wild/",
+        "date": "2025-04-03",
+        "source": "Ars Technica",
+        "summary": "DeepMind says AGI could arrive in 2030, and it has some ideas to keep us safe."
+      }
+    ],
+    "ai_policy": [
+      {
+        "title": "Mike Lindell\u2019s lawyers used AI to write brief\u2014judge finds nearly 30 mistakes",
+        "link": "https://arstechnica.com/tech-policy/2025/04/mypillow-ceos-lawyers-used-ai-in-brief-citing-fictional-cases-judge-says/",
+        "date": "2025-04-25",
+        "source": "Ars Technica",
+        "summary": "Lindell brief has many defects including \"cases that do not exist,\" judge says."
+      },
+      {
+        "title": "Public comments to White House on AI policy touch on copyright, tariffs",
+        "link": "https://techcrunch.com/2025/04/24/public-comments-to-white-house-on-ai-policy-touch-on-copyright-tariffs/",
+        "date": "2025-04-24",
+        "source": "TechCrunch",
+        "summary": "Individuals, industry groups, and local governments submitted over 10,000 comments to the White House about its work-in-progress national AI policy, also known as the AI Action Plan. The White House Office of Science and Technology Policy (OSTP) on Thursday published the text of the submissions in a"
+      },
+      {
+        "title": "Zencoder buys Machinet to challenge GitHub Copilot as AI coding assistant consolidation accelerates",
+        "link": "https://venturebeat.com/ai/zencoder-buys-machinet-to-challenge-github-copilot-as-ai-coding-assistant-consolidation-accelerates/",
+        "date": "2025-04-24",
+        "source": "VentureBeat",
+        "summary": "Zencoder acquires Machinet to strengthen its position in the rapidly consolidating AI coding assistant market, expanding its JetBrains ecosystem integration while outperforming competitors like GitHub Copilot with innovative features such as Repo Grokking and Coffee Mode."
+      },
+      {
+        "title": "Driving business value by optimizing the cloud",
+        "link": "https://www.technologyreview.com/2025/04/24/1115716/driving-business-value-by-optimizing-the-cloud/",
+        "date": "2025-04-24",
+        "source": "MIT Technology Review",
+        "summary": "Organizations are deepening their cloud investments at an unprecedented pace, recognizing its fundamental role in driving business agility and innovation. Synergy Research Group reports that companies spent $84 billion worldwide on cloud infrastructure services in the third quarter of 2024, a 23% ri"
+      },
+      {
+        "title": "The Download: Apple\u2019s eucalyptus carbon bet, and climate tech\u2019s bad vibes",
+        "link": "https://www.technologyreview.com/2025/04/24/1115809/the-download-apples-eucalyptus-carbon-bet-and-climate-techs-bad-vibes/",
+        "date": "2025-04-24",
+        "source": "MIT Technology Review",
+        "summary": "This is today&#8217;s edition of\u00a0The Download,\u00a0our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Inside the controversial tree farms powering Apple\u2019s carbon neutral goal \u201cWe were losing the light, and still about 20 kilometers from the main road, "
+      },
+      {
+        "title": "From friction to flow: Why Swissport scrapped its VPN maze for Cato\u2019s SASE platform",
+        "link": "https://venturebeat.com/security/from-friction-to-flow-why-swissport-scrapped-its-vpn-maze-for-catos-sase-platform/",
+        "date": "2025-04-23",
+        "source": "VentureBeat",
+        "summary": "Swissport ditches legacy tech, deploying a global SASE architecture with Cato Networks securing 26,000 users, unlocking real-time control."
+      },
+      {
+        "title": "Why we still need AM radio",
+        "link": "https://www.technologyreview.com/2025/04/23/1114889/am-radio-disaster-response-emergency-safety/",
+        "date": "2025-04-23",
+        "source": "MIT Technology Review",
+        "summary": "Ariel Aberg-Riger is the author of America Redux: Visual Stories from Our Dynamic History."
+      },
+      {
+        "title": "VentureBeat spins out GamesBeat, accelerates enterprise AI mission",
+        "link": "https://venturebeat.com/ai/venturebeat-spins-out-gamesbeat-accelerates-enterprise-ai-mission/",
+        "date": "2025-04-22",
+        "source": "VentureBeat",
+        "summary": "VentureBeat today announced the spinout of GamesBeat as a standalone company \u2013 a strategic move that sharpens our focus on the biggest transformation of our time: the enterprise shift to AI, data infrastructure and intelligent security."
+      },
+      {
+        "title": "Identity as the new perimeter: NOV\u2019s approach to stopping the 79% of attacks that are malware-free",
+        "link": "https://venturebeat.com/security/nov-cio-fused-ai-and-zero-trust-to-slash-threats-by-35x/",
+        "date": "2025-04-18",
+        "source": "VentureBeat",
+        "summary": "NOV\u2019s CIO led a cyber strategy fusing Zero Trust, AI, and airtight identity controls to cut threats by 35x and eliminating reimaging."
+      },
+      {
+        "title": "Elon Musk wants to be \u201cAGI dictator,\u201d OpenAI tells court",
+        "link": "https://arstechnica.com/ai/2025/04/elon-musk-wants-to-be-agi-dictator-openai-tells-court/",
+        "date": "2025-04-10",
+        "source": "Ars Technica",
+        "summary": "Elon Musk\u2019s \u201crelentless\u201d attacks on OpenAI must cease, court filing says."
+      },
+      {
+        "title": "Feeling curious? Google\u2019s NotebookLM can now discover data sources for you",
+        "link": "https://arstechnica.com/ai/2025/04/google-gives-notebooklm-a-discover-button-to-search-the-web/",
+        "date": "2025-04-03",
+        "source": "Ars Technica",
+        "summary": "NotebookLM can do the legwork for you now."
+      }
+    ]
+  },
+  "all_items": [
+    {
+      "title": "Google\u2019s DeepMind UK team reportedly seeks to unionize",
+      "link": "https://techcrunch.com/2025/04/26/googles-deepmind-uk-team-reportedly-seeks-to-unionize/",
+      "date": "2025-04-26",
+      "source": "TechCrunch",
+      "summary": "Around 300 London-based members of Google\u2019s AI-focused DeepMind team are seeking to unionize with the Communication Workers Union, according to a Financial Times report that cites three people involved with the unionization effort. These DeepMind employees are reportedly unhappy about Google\u2019s decis"
+    },
+    {
+      "title": "Musk\u2019s xAI Holdings is reportedly raising the second-largest private funding round ever",
+      "link": "https://techcrunch.com/2025/04/25/musks-xai-holdings-is-reportedly-raising-the-second-largest-private-funding-round-ever/",
+      "date": "2025-04-26",
+      "source": "TechCrunch",
+      "summary": "Elon Musk&#8217;s xAI Holdings is in talks to raise $20 billion in fresh funding, potentially valuing the AI and social media combo at over $120 billion, according to a new Bloomberg report that says talks are in the &#8220;early stages.&#8221; If successful, the deal would be the second-largest sta"
+    },
+    {
+      "title": "DeepSeek\u2019s success shows why motivation is key to AI innovation",
+      "link": "https://venturebeat.com/ai/deepseeks-success-shows-why-motivation-is-key-to-ai-innovation/",
+      "date": "2025-04-26",
+      "source": "VentureBeat",
+      "summary": "How did DeepSeek attain such cost-savings while American companies could not? Let's dive into the technical details."
+    },
+    {
+      "title": "Anthropic sent a takedown notice to a dev trying to reverse-engineer its coding tool",
+      "link": "https://techcrunch.com/2025/04/25/anthropic-sent-a-takedown-notice-to-a-dev-trying-to-reverse-engineer-its-coding-tool/",
+      "date": "2025-04-25",
+      "source": "TechCrunch",
+      "summary": "In the battle between two &#8220;agentic&#8221; coding tools \u2014 Anthropic&#8217;s Claude Code and OpenAI&#8217;s Codex CLI \u2014 the latter appears to be fostering more developer goodwill than the former. That&#8217;s at least partly because Anthropic has issued takedown notices to a developer trying to "
+    },
+    {
+      "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+      "link": "https://techcrunch.com/2025/04/25/chatgpt-everything-to-know-about-the-ai-chatbot/",
+      "date": "2025-04-25",
+      "source": "TechCrunch",
+      "summary": "ChatGPT, OpenAI\u2019s text-generating AI chatbot, has taken the world by storm since its launch in November 2022. What started as a tool to supercharge productivity through writing essays and code with short text prompts has evolved into a behemoth with 300 million weekly active users. 2024 was a big ye"
+    },
+    {
+      "title": "An OpenAI researcher who worked on GPT-4.5 had their green card denied",
+      "link": "https://techcrunch.com/2025/04/25/an-openai-researcher-who-worked-on-gpt-4-5-had-their-green-card-denied/",
+      "date": "2025-04-25",
+      "source": "TechCrunch",
+      "summary": "Kai Chen, a Canadian AI researcher working at OpenAI who&#8217;s lived in the U.S. for 12 years, was denied a green card, according to Noam Brown, a leading research scientist at the company. In a post on X, Brown said that Chen learned of the decision Friday and must soon leave the country. &#8220;"
+    },
+    {
+      "title": "Google\u2019s AI search numbers are growing, and that\u2019s by design",
+      "link": "https://techcrunch.com/2025/04/25/googles-ai-search-numbers-are-growing-and-thats-by-design/",
+      "date": "2025-04-25",
+      "source": "TechCrunch",
+      "summary": "Google started testing AI-summarized results in Google Search, AI Overviews, two years ago, and continues to expand the feature to new regions and languages. By the company&#8217;s estimation, it&#8217;s been a big success. AI Overviews is now used by more than 1.5 billion users monthly across over "
+    },
+    {
+      "title": "Last day to boost your brand and host a Side Event at TechCrunch Sessions: AI",
+      "link": "https://techcrunch.com/2025/04/25/last-day-to-boost-your-brand-and-host-a-side-event-at-techcrunch-sessions-ai/",
+      "date": "2025-04-25",
+      "source": "TechCrunch",
+      "summary": "This is your last chance to put your brand at the center of the AI conversation during TechCrunch Sessions: AI Week \u2014 with applications to host a Side Event closing tonight at 11:59 p.m. PT. From June 1-7, TechCrunch is curating a dynamic weeklong series of Side Events leading up to and following th"
+    },
+    {
+      "title": "Chinese AI startup Manus reportedly gets funding from Benchmark at $500M valuation",
+      "link": "https://techcrunch.com/2025/04/25/chinese-ai-startup-manus-reportedly-gets-funding-from-benchmark-at-500m-valuation/",
+      "date": "2025-04-25",
+      "source": "TechCrunch",
+      "summary": "Chinese startup Manus AI, which works on building tools related to AI agents, has picked up $75 million in a funding round led by Benchmark at a roughly $500 million valuation, according to Bloomberg. The company will use the money to expand to new markets, including the U.S., Japan, and the Middle "
+    },
+    {
+      "title": "Liquid AI is revolutionizing LLMs to work on edge devices like smartphones with new \u2018Hyena Edge\u2019 model",
+      "link": "https://venturebeat.com/ai/liquid-ai-is-revolutionizing-llms-to-work-on-edge-devices-like-smartphones-with-new-hyena-edge-model/",
+      "date": "2025-04-25",
+      "source": "VentureBeat",
+      "summary": "Hyena Edge\u2019s success positions Liquid AI as one of the emerging players to watch in the evolving AI model landscape."
+    },
+    {
+      "title": "The new AI calculus: Google\u2019s 80% cost edge vs. OpenAI\u2019s ecosystem",
+      "link": "https://venturebeat.com/ai/the-new-ai-calculus-googles-80-cost-edge-vs-openais-ecosystem/",
+      "date": "2025-04-25",
+      "source": "VentureBeat",
+      "summary": "Explore the Google vs OpenAI AI ecosystem battle post-o3. Deep dive into Google's huge cost advantage (TPU vs GPU), agent strategies &#038; model risks for enterprise"
+    },
+    {
+      "title": "The Download: how Trump\u2019s tariffs will affect US manufacturing, and AI architecture",
+      "link": "https://www.technologyreview.com/2025/04/25/1115868/the-download-how-trumps-tariffs-will-affect-us-manufacturing-and-ai-architecture/",
+      "date": "2025-04-25",
+      "source": "MIT Technology Review",
+      "summary": "This is today&#8217;s edition of\u00a0The Download,\u00a0our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Sweeping tariffs could threaten the US manufacturing rebound Despite the geopolitical chaos and market collapses triggered by President Trump\u2019s announ"
+    },
+    {
+      "title": "Sweeping tariffs could threaten the US manufacturing rebound",
+      "link": "https://www.technologyreview.com/2025/04/25/1115827/sweeping-tariffs-could-threaten-the-us-manufacturing-rebound/",
+      "date": "2025-04-25",
+      "source": "MIT Technology Review",
+      "summary": "Despite the geopolitical chaos and market collapses triggered by President Trump\u2019s announcement of broad tariffs on international goods, some supporters still hope the strategy will produce a \u201cgolden age\u201d of American industry. Trump himself insists, \u201cJobs and factories will come roaring back into ou"
+    },
+    {
+      "title": "Mike Lindell\u2019s lawyers used AI to write brief\u2014judge finds nearly 30 mistakes",
+      "link": "https://arstechnica.com/tech-policy/2025/04/mypillow-ceos-lawyers-used-ai-in-brief-citing-fictional-cases-judge-says/",
+      "date": "2025-04-25",
+      "source": "Ars Technica",
+      "summary": "Lindell brief has many defects including \"cases that do not exist,\" judge says."
+    },
+    {
+      "title": "Anthropic CEO wants to open the black box of AI models by 2027",
+      "link": "https://techcrunch.com/2025/04/24/anthropic-ceo-wants-to-open-the-black-box-of-ai-models-by-2027/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Anthropic CEO Dario Amodei&#160;published an essay&#160;Thursday highlighting how little researchers understand about the inner workings of the world&#8217;s leading AI models. To address that, Amodei set an ambitious goal for Anthropic to reliably detect most AI model problems by 2027. Amodei ackno"
+    },
+    {
+      "title": "How do you define cheating in the age of AI?",
+      "link": "https://techcrunch.com/video/how-do-you-define-cheating-in-the-age-of-ai/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "This AI startup raised $5.3 million to help people &#8220;cheat on everything.&#8221; But in the age of AI, how do you define cheating? Columbia University recently suspended student Roy Lee for building a tool to help people cheat on engineering interviews. He\u2019s been making waves on X after posting"
+    },
+    {
+      "title": "OpenAI rolls out a \u2018lightweight\u2019 version of its ChatGPT deep research tool",
+      "link": "https://techcrunch.com/2025/04/24/openai-rolls-out-a-lightweight-version-of-its-chatgpt-deep-research-tool/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "OpenAI is bringing a new &#8220;lightweight&#8221; version of its ChatGPT deep research tool, which scours the web to compile research reports on a topic, to ChatGPT Plus, Team, and Pro users, the company announced Thursday. The new lightweight deep research, which will also come to free ChatGPT use"
+    },
+    {
+      "title": "Perplexity CEO says its browser will track everything users do online to sell \u2018hyper personalized\u2019 ads",
+      "link": "https://techcrunch.com/2025/04/24/perplexity-ceo-says-its-browser-will-track-everything-users-do-online-to-sell-hyper-personalized-ads/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Perplexity is building its own browser is to collect data on everything users do outside of its own app to sell  ads."
+    },
+    {
+      "title": "Public comments to White House on AI policy touch on copyright, tariffs",
+      "link": "https://techcrunch.com/2025/04/24/public-comments-to-white-house-on-ai-policy-touch-on-copyright-tariffs/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Individuals, industry groups, and local governments submitted over 10,000 comments to the White House about its work-in-progress national AI policy, also known as the AI Action Plan. The White House Office of Science and Technology Policy (OSTP) on Thursday published the text of the submissions in a"
+    },
+    {
+      "title": "OpenAI wants its \u2018open\u2019 AI model to call models in the cloud for help",
+      "link": "https://techcrunch.com/2025/04/24/openai-wants-its-open-ai-model-to-call-models-in-the-cloud-for-help/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "For the first time in roughly five years, OpenAI is gearing up to release an AI system that&#8217;s truly &#8220;open,&#8221; meaning it&#8217;ll be available for download at no cost and not gated behind an API. TechCrunch reported on Wednesday that OpenAI is aiming for an early summer launch, and t"
+    },
+    {
+      "title": "OpenAI may be developing its own social platform, but who\u2019s it for?",
+      "link": "https://techcrunch.com/video/openai-may-be-developing-its-own-social-platform-but-whos-it-for/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "OpenAI is reportedly building its own X-like social network. The project is still in the early stages, but there\u2019s an internal prototype focused on ChatGPT\u2019s image generation that contains a social feed, The Verge reports. A social app would give OpenAI its own unique, real-time data that X and Meta"
+    },
+    {
+      "title": "Within six years, building the leading AI data center may cost $200B",
+      "link": "https://techcrunch.com/2025/04/24/within-six-years-building-the-leading-ai-data-center-may-cost-200b/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Data centers to train and run AI may soon contain millions of chips, cost hundreds of billions of dollars, and require power equivalent to a large city&#8217;s electricity grid, if the current trends hold. That&#8217;s according to a new study from researchers at Georgetown, Epoch AI, and Rand, whic"
+    },
+    {
+      "title": "Anthropic is launching a new program to study AI \u2018model welfare\u2019",
+      "link": "https://techcrunch.com/2025/04/24/anthropic-is-launching-a-new-program-to-study-ai-model-welfare/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Could future AIs be &#8220;conscious,&#8221; and experience the world similarly to the way humans do? There&#8217;s no strong evidence that they will, but Anthropic isn&#8217;t ruling out the possibility. On Thursday, the AI lab announced that it has started a research program to investigate \u2014 and p"
+    },
+    {
+      "title": "Speak at TechCrunch Disrupt 2025: Applications now open",
+      "link": "https://techcrunch.com/2025/04/24/speak-at-techcrunch-disrupt-2025-applications-now-open/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "TechCrunch Disrupt returns October 27-29 to Moscone West in San Francisco \u2014 and we\u2019re inviting thought leaders, founders, VCs, and tech experts to apply for a chance to take the stage at one of the most anticipated tech events of the year. Applications are now open to speak at Disrupt 2025, where ov"
+    },
+    {
+      "title": "Dropbox adds new features to Dash, its AI-powered search tool",
+      "link": "https://techcrunch.com/2025/04/24/dropbox-adds-new-features-to-its-ai-powered-search-tool-dash/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Companies like Google and Microsoft have equipped their productivity suites with AI features and assistants, while startups such as ClickUp and ReadAI have focused heavily on building AI integrations and search capabilities. In alignment with this growing trend of infusing digital work suites with A"
+    },
+    {
+      "title": "This tool estimates how much electricity your chatbot messages consume",
+      "link": "https://techcrunch.com/2025/04/24/this-tool-estimates-how-much-electricity-your-chatbot-messages-consume/",
+      "date": "2025-04-24",
+      "source": "TechCrunch",
+      "summary": "Ever wonder how much electricity you&#8217;re using when you prompt, or thank, an AI model? Hugging Face engineer Julien Delavande did, so he built a tool to help arrive at the answer. AI models consume energy each time they&#8217;re run. They&#8217;re run on GPUs and specialized chips that need a l"
+    },
+    {
+      "title": "Is that really your boss calling? Jericho Security raises $15M to stop deepfake fraud that\u2019s cost businesses $200M in 2025 alone",
+      "link": "https://venturebeat.com/ai/is-that-really-your-boss-calling-jericho-security-raises-15m-to-stop-deepfake-fraud-thats-cost-businesses-200m-in-2025-alone/",
+      "date": "2025-04-24",
+      "source": "VentureBeat",
+      "summary": "Pentagon-backed Jericho Security raises $15 million to combat deepfake fraud that has already cost North American businesses $200 million in 2025, using AI to detect increasingly convincing voice and video impersonations."
+    },
+    {
+      "title": "Intel\u2019s new CEO signals streamlining efforts but does not spell out exact layoff numbers",
+      "link": "https://venturebeat.com/games/intels-new-ceo-signals-streamlining-efforts-but-does-not-spell-out-exact-layoff-numbers/",
+      "date": "2025-04-24",
+      "source": "VentureBeat",
+      "summary": "Lip-Bu Tan, the new CEO of Intel, sent out a blunt message to employees saying the company has to reorganize to be more efficient."
+    },
+    {
+      "title": "Zencoder buys Machinet to challenge GitHub Copilot as AI coding assistant consolidation accelerates",
+      "link": "https://venturebeat.com/ai/zencoder-buys-machinet-to-challenge-github-copilot-as-ai-coding-assistant-consolidation-accelerates/",
+      "date": "2025-04-24",
+      "source": "VentureBeat",
+      "summary": "Zencoder acquires Machinet to strengthen its position in the rapidly consolidating AI coding assistant market, expanding its JetBrains ecosystem integration while outperforming competitors like GitHub Copilot with innovative features such as Repo Grokking and Coffee Mode."
+    },
+    {
+      "title": "Ethically trained AI startup Pleias releases new small reasoning models optimized for RAG with built-in citations",
+      "link": "https://venturebeat.com/ai/ethically-trained-ai-startup-pleias-releases-new-small-reasoning-models-optimized-for-rag-with-built-in-citations/",
+      "date": "2025-04-24",
+      "source": "VentureBeat",
+      "summary": "Pleias emphasizes the models\u2019 suitability for integration into search-augmented assistants, educational tools, and user support systems."
+    }
+  ]
+}
