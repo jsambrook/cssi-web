@@ -223,36 +223,60 @@ def call_openai(prompt: str, model: str) -> str:
 
 def clean_openai_response(text: str) -> str:
     """Remove code fences from AI JSON responses and fix common JSON format issues"""
-    # Remove code fences if present
-    if text.startswith("```json"):
-        text = text.lstrip("```json").strip()
-    if text.startswith("```"):
-        text = text.lstrip("```").strip()
-    if text.endswith("```"):
-        text = text.rstrip("```").strip()
+    try:
+        # Remove code fences if present
+        if text.startswith("```json"):
+            text = text.lstrip("```json").strip()
+        if text.startswith("```"):
+            text = text.lstrip("```").strip()
+        if text.endswith("```"):
+            text = text.rstrip("```").strip()
+            
+        # Fix common JSON formatting issues
         
-    # Fix common JSON formatting issues
-    
-    # Sometimes AI adds a leading or trailing single quote that breaks JSON
-    text = text.strip("'")
-    
-    # Fix JSON delimiter issues (the specific error in screenshot shows delimiter error at line 27)
-    text = re.sub(r'"content"\s*:\s*(\w)', r'"content": {\1', text)  # Missing opening brace
-    text = re.sub(r'(\w)\s*}$', r'\1}}', text)  # Missing closing brace$', r'\1}}', text)  # Missing closing brace
-    
-    # Fix missing commas in arrays and objects
-    text = re.sub(r'"\s*\n\s*"', '",\n"', text)
-    text = re.sub(r'}\s*\n\s*{', '},\n{', text)
-    text = re.sub(r']\s*\n\s*\[', '],\n[', text)
-    
-    # Fix trailing commas which are invalid in JSON
-    text = re.sub(r',\s*}', '}', text)
-    text = re.sub(r',\s*]', ']', text)
-    
-    # Fix escaping in strings (common issues)
-    text = text.replace('\\"', '"')  # Sometimes AI double-escapes
-    
-    return text
+        # Sometimes AI adds a leading or trailing single quote that breaks JSON
+        text = text.strip("'")
+        
+        # Fix JSON delimiter issues 
+        text = re.sub(r'"content"\s*:\s*(\w)', r'"content": {\1', text)  # Missing opening brace
+        text = re.sub(r'(\w)\s*}$', r'\1}}', text)  # Missing closing brace
+        
+        # Fix missing commas in arrays and objects
+        text = re.sub(r'"\s*\n\s*"', '",\n"', text)
+        text = re.sub(r'}\s*\n\s*{', '},\n{', text)
+        text = re.sub(r']\s*\n\s*\[', '],\n[', text)
+        
+        # Fix trailing commas which are invalid in JSON
+        text = re.sub(r',\s*}', '}', text)
+        text = re.sub(r',\s*]', ']', text)
+        
+        # Fix escaping in strings (common issues)
+        text = text.replace('\\"', '"')  # Sometimes AI double-escapes
+        
+        # Fix unterminated strings (this is a common issue with Claude)
+        lines = text.split("\n")
+        fixed_lines = []
+        
+        for i, line in enumerate(lines):
+            # Count quotes in the line
+            quote_count = line.count('"')
+            
+            # If odd number of quotes, we have an unterminated string
+            if quote_count % 2 == 1:
+                # Add a closing quote
+                line = line + '"'
+                
+                # If next line exists and starts with a property name, add a comma
+                if i + 1 < len(lines) and re.match(r'\s*"[^"]+"\s*:', lines[i + 1]):
+                    line = line + ','
+            
+            fixed_lines.append(line)
+        
+        # Join lines back
+        return "\n".join(fixed_lines)
+    except Exception as e:
+        print(f"❌ Error in clean_openai_response: {e}")
+        return text  # Return original if fixing attempt fails
 
 
 def verify_url(url, timeout=5):
@@ -503,8 +527,8 @@ Respond with ONLY a JSON object containing the revised content, with the same st
     revised_content = clean_openai_response(revised_content)
     
     try:
+        # Parse the revised content
         try:
-            # Parse the revised content
             revised_json = json.loads(revised_content)
             
             # Update the blog JSON with the revised content
@@ -513,7 +537,6 @@ Respond with ONLY a JSON object containing the revised content, with the same st
             print(f"❌ Error parsing revised content: {e}")
             print(f"Error at line {e.lineno}, column {e.colno}")
             print(f"Error message: {e.msg}")
-            print(f"First 100 chars of content: {revised_content[:100]}")
             
             # Attempt to fix common JSON issues
             print("🔄 Attempting to fix JSON format issues...")
@@ -524,6 +547,27 @@ Respond with ONLY a JSON object containing the revised content, with the same st
             fixed_content = re.sub(r'^```\s+', '', fixed_content)
             fixed_content = re.sub(r'\s+```$', '', fixed_content)
             
+            # Fix escape sequences that might be problematic
+            fixed_content = fixed_content.replace('\\s+', ' ')
+            
+            # Remove any triple backslash sequences that can cause issues
+            fixed_content = fixed_content.replace('\\\\\\', '')
+            
+            # Fix specific JSON format issues
+            
+            # The error shows a missing comma in JSON content
+            # Look for the pattern "content": { followed by "introduction": without a comma
+            fixed_content = re.sub(r'"content"\s*:\s*{(\s*)"introduction"', r'"content": {\1"introduction"', fixed_content)
+            
+            # Add missing commas between elements
+            fixed_content = re.sub(r'"}(\s*)"', r'"},\1"', fixed_content)
+            fixed_content = re.sub(r'"](\s*)"', r'"],\1"', fixed_content)
+            
+            # Fix common structural JSON errors
+            fixed_content = fixed_content.replace('""', '"')  # Double quote issue
+            fixed_content = fixed_content.replace('},}', '}}')  # Extra comma
+            fixed_content = fixed_content.replace('],]', ']]')  # Extra comma
+            
             # Retry parsing with fixed content
             try:
                 revised_json = json.loads(fixed_content)
@@ -532,6 +576,7 @@ Respond with ONLY a JSON object containing the revised content, with the same st
             except json.JSONDecodeError:
                 print("❌ Could not fix JSON format issues - keeping original content")
                 print(f"Problematic content: {revised_content[:200]}...")
+                raise
         
         # Filter out invalid references
         blog_json["references"] = [ref for ref in blog_json.get("references", []) if ref["id"] not in invalid_ids]
@@ -566,7 +611,7 @@ def process_custom_prompt(prompt_template: str, description: str, context_md: st
     # Handle special case for recent news from RSS feed
     if '{{ recent_news }}' in prompt_template:
         # Check if we have recent AI news from the RSS fetcher
-        news_json_path = Path(__file__).resolve().parent.parent.parent / "recent_ai_news.json"
+        news_json_path = Path(__file__).resolve().parent.parent / "blog" / "prompts" / "recent_ai_news.json"
         
         # If we don't have the news or it's older than 6 hours, try to generate it
         if not news_json_path.exists() or (time.time() - news_json_path.stat().st_mtime > 6 * 3600):
@@ -671,32 +716,38 @@ def main():
         print("🔄 Attempting to fix JSON format issues...")
         fixed_content = cleaned_response
         
-        # Try to remove any leading/trailing Markdown code fences and escape problematic characters
+        # Try to remove any leading/trailing Markdown code fences
         fixed_content = re.sub(r'^```json\s+', '', fixed_content)
         fixed_content = re.sub(r'^```\s+', '', fixed_content)
         fixed_content = re.sub(r'\s+```$', '', fixed_content)
         
-        # Fix escape sequences that might be problematic
-        fixed_content = fixed_content.replace('\\s+', ' ')
+        # Fix common escaping and structural issues
+        fixed_content = fixed_content.replace('\\\\', '\\')  # Double backslash
+        fixed_content = fixed_content.replace('\\"', '"')    # Escaped quotes
         
-        # Remove any triple backslash sequences that can cause issues
-        fixed_content = fixed_content.replace('\\\\\\', '')
+        # Split into lines and fix each line
+        lines = fixed_content.split('\n')
+        fixed_lines = []
+        in_string = False
         
-        # Fix specific JSON format issues
+        for line in lines:
+            # Track quotes to avoid fixing stuff inside strings
+            for i, char in enumerate(line):
+                if char == '"' and (i == 0 or line[i-1] != '\\'):
+                    in_string = not in_string
+                    
+            # Fix common issues outside of strings
+            if not in_string:
+                # Fix trailing commas in arrays and objects
+                line = re.sub(r',(\s*[\]}])', r'\1', line)
+                
+                # Add missing commas between array/object elements
+                line = re.sub(r'([\]}])(\s*["{\[])', r'\1,\2', line)
+                
+            fixed_lines.append(line)
         
-        # The error shows a missing comma in JSON content
-        # Look for the pattern "content": { followed by "introduction": without a comma
-        fixed_content = re.sub(r'"content"\s*:\s*{(\s*)"introduction"', r'"content": {\1"introduction"', fixed_content)
-        
-        # Add missing commas between elements
-        fixed_content = re.sub(r'"}(\s*)"', r'"},\1"', fixed_content)
-        fixed_content = re.sub(r'"](\s*)"', r'"],\1"', fixed_content)
-        
-        # Fix common structural JSON errors
-        fixed_content = fixed_content.replace('""', '"')  # Double quote issue
-        fixed_content = fixed_content.replace('},}', '}}')  # Extra comma
-        fixed_content = fixed_content.replace('],]', ']]')  # Extra comma
-        
+        fixed_content = '\n'.join(fixed_lines)
+            
         # Retry parsing with fixed content
         try:
             blog_json = json.loads(fixed_content)
