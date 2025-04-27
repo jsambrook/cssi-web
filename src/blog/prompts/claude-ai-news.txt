@@ -138,16 +138,18 @@ Target length: 1,200-1,500 words (longer than standard blogs to cover more devel
   - Prioritize official product announcements and documentation
   - Ensure URLs point to stable, authoritative pages
 
+# LATEST NEWS CONTEXT
+The following is REAL, VERIFIED recent AI news from the past {{ days }} days that you MUST reference in your article:
+
+{{ recent_news }}
+
 # METHODOLOGY
 To find the very latest developments:
-1. Check the past month's announcements from:
-   - Official company blogs (OpenAI, Anthropic, Google, etc.)
-   - Major AI conferences and events from past 30 days
-   - Release notes and changelogs for major AI tools
-   - Tech publications focusing on AI developments
-2. Verify dates for all developments mentioned
-3. Focus on factual information, not speculation or rumors
-4. Look for meaningful updates rather than minor revisions
-5. Pay special attention to changes that affect how businesses use AI
+1. Use ONLY the verified news items above as your primary reference points
+2. Focus exclusively on developments explicitly mentioned in the LATEST NEWS CONTEXT section
+3. For each news item mentioned, include its exact publication date (YYYY-MM-DD format)
+4. Focus on factual information from these verified sources, not speculation or rumors
+5. Look for meaningful updates rather than minor revisions
+6. Pay special attention to changes that affect how businesses use AI
 
 Output the completed JSON onlyno additional commentary.

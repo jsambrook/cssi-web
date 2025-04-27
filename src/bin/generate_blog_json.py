@@ -559,8 +559,56 @@ def process_custom_prompt(prompt_template: str, description: str, context_md: st
         '{{ category }}': '"AI for Business"',  # Default category
         '{{ small_business_example }}': 'small business',  # Default example
         '{{ company }}': 'Common Sense Systems, Inc.',
-        '{{ company_short }}': 'Common Sense'
+        '{{ company_short }}': 'Common Sense',
+        '{{ days }}': '30'  # Default days for news
     }
+    
+    # Handle special case for recent news from RSS feed
+    if '{{ recent_news }}' in prompt_template:
+        # Check if we have recent AI news from the RSS fetcher
+        news_json_path = Path(__file__).resolve().parent.parent / "blog" / "prompts" / "recent_ai_news.json"
+        
+        # If we don't have the news or it's older than 6 hours, try to generate it
+        if not news_json_path.exists() or (time.time() - news_json_path.stat().st_mtime > 6 * 3600):
+            try:
+                print("📰 Fetching recent AI news from RSS feeds...")
+                rss_fetcher_path = Path(__file__).resolve().parent.parent / "blog" / "prompts" / "ai_news_rss_fetcher.py"
+                
+                if rss_fetcher_path.exists():
+                    subprocess.run([str(rss_fetcher_path)], check=True)
+                    print("✅ RSS news fetched successfully")
+                else:
+                    print(f"⚠️ RSS fetcher script not found at {rss_fetcher_path}")
+            except Exception as e:
+                print(f"❌ Error fetching RSS news: {e}")
+        
+        # Load news items from json if it exists
+        if news_json_path.exists():
+            try:
+                with open(news_json_path, 'r') as f:
+                    news_data = json.load(f)
+                    
+                # Format news data as a nice markdown list for the prompt
+                news_md = "## Recent News Items:\n\n"
+                
+                # Add categorized news items
+                for category, items in news_data.get("categories", {}).items():
+                    news_md += f"### {category.replace('_', ' ').title()} News:\n\n"
+                    for item in items[:5]:  # Limit to 5 items per category
+                        news_md += f"- **{item['title']}** ({item['date']}, {item['source']})\n"
+                        news_md += f"  {item['summary'][:150]}...\n"
+                        news_md += f"  Source: {item['link']}\n\n"
+                    news_md += "\n"
+                
+                replacements['{{ recent_news }}'] = news_md
+                replacements['{{ days }}'] = str(news_data.get("timeframe_days", 30))
+                
+                print(f"✅ Incorporated {len(news_data.get('all_items', []))} recent news items into prompt")
+            except Exception as e:
+                print(f"❌ Error loading RSS news data: {e}")
+                replacements['{{ recent_news }}'] = "*No recent news data available*"
+        else:
+            replacements['{{ recent_news }}'] = "*No recent news data available*"
     
     # Apply all replacements
     result = prompt_template

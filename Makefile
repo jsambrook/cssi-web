@@ -47,6 +47,7 @@ help:
 	@echo "  blog-claude-fast - Generate today's blog post using Claude (no ref checks)"  # requires DESCRIPTION
 	@echo "  blog-ai-news - Generate AI news roundup covering latest developments"  # requires DESCRIPTION
 	@echo "  verify-news-sources - Check if AI news sources are accessible"
+	@echo "  fetch-ai-news - Fetch recent AI news from RSS feeds"
 	@echo "  blog-index   - Regenerate blog/index.html from metadata"
 	@echo "  blog-reset   - Reset blog system to pristine/empty state (⚠️ DESTRUCTIVE)"
 	@echo "  prune-drafts - Prune old files from the drafts directory"
@@ -59,7 +60,7 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today blog-today-fast blog-claude blog-claude-fast blog-ai-news verify-news-sources blog-index blog-reset prune-drafts clean pages rebuild help
+.PHONY: blog-today blog-today-fast blog-claude blog-claude-fast blog-ai-news verify-news-sources fetch-ai-news blog-index blog-reset prune-drafts clean pages rebuild help
 
 # Prune the drafts folder
 prune-drafts:
@@ -143,6 +144,12 @@ verify-news-sources:
 	@echo "🔍 Checking AI news sources for accessibility..."
 	cd src/blog/prompts && ./claude-ai-news-helper.py
 	@echo "✅ Source verification complete!"
+	
+# Fetch recent AI news from RSS feeds
+fetch-ai-news:
+	@echo "📰 Fetching recent AI news from RSS feeds..."
+	cd src/blog/prompts && ./ai_news_rss_fetcher.py
+	@echo "✅ Recent AI news fetched successfully!"
 
 # Reset the blog system to a pristine, empty state
 blog-reset:
