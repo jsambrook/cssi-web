@@ -1,0 +1,38 @@
+# Reliable AI News Sources for Reference Validation
+
+## Official Company Blogs (Primary Sources)
+- Hugging Face: https://huggingface.co/blog
+- TechCrunch AI section: https://techcrunch.com/category/artificial-intelligence/
+- GitHub Blog: https://github.blog/
+- Google AI Blog: https://blog.google/technology/ai/
+- Anthropic Blog: https://www.anthropic.com/blog
+- Microsoft AI Blog: https://blogs.microsoft.com/ai/
+- Meta AI Blog: https://ai.meta.com/blog/
+- AWS Machine Learning Blog: https://aws.amazon.com/blogs/machine-learning/
+- Nvidia Blog: https://blogs.nvidia.com/
+- OpenAI Blog: https://openai.com/blog
+- Stability AI Blog: https://stability.ai/blog
+- Replit Blog: https://blog.replit.com/
+
+## Research Publications
+- arXiv (AI/ML/CS sections): https://arxiv.org/
+- Papers With Code: https://paperswithcode.com/
+- Hugging Face Papers: https://huggingface.co/papers
+
+## Industry News Sites
+- The Verge: https://www.theverge.com/ai-artificial-intelligence
+- TechCrunch: https://techcrunch.com/category/artificial-intelligence/
+- VentureBeat AI: https://venturebeat.com/category/ai/
+- Wired AI: https://www.wired.com/tag/artificial-intelligence/
+- MIT Technology Review: https://www.technologyreview.com/topic/artificial-intelligence/
+
+## Government & Policy Sources
+- EU Commission (AI Act): https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence
+- White House (AI Policy): https://www.whitehouse.gov/ostp/ai-bill-of-rights/
+- UK Government AI: https://www.gov.uk/government/collections/artificial-intelligence
+
+## Newsletters & Aggregators
+- The Algorithm (MIT Tech Review): https://forms.technologyreview.com/the-algorithm/
+- Import AI: https://jack-clark.net/
+- The Batch (Andrew Ng): https://www.deeplearning.ai/the-batch/
+- Last Week in AI: https://lastweekin.ai/
