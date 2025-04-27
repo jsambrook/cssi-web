@@ -196,7 +196,22 @@ def call_ai(prompt: str, provider: str, model: str) -> str:
         if response.status_code != 200:
             raise Exception(f"Claude API error: {response.status_code}\n{response.text}")
             
-        return response.json()["content"][0]["text"]
+        response_json = response.json()
+        
+        try:
+            return response_json["content"][0]["text"]
+        except (KeyError, IndexError) as e:
+            print(f"Error parsing Claude response: {e}")
+            print(f"Response structure: {response_json.keys()}")
+            
+            # Try alternative response format (Claude API might change)
+            if "completion" in response_json:
+                return response_json["completion"]
+            elif "response" in response_json:
+                return response_json["response"]
+            else:
+                print(f"Full response: {response_json}")
+                raise ValueError(f"Could not extract text from Claude response: {e}")
     
     else:
         raise ValueError(f"Unknown provider: {provider}")
@@ -465,18 +480,42 @@ Respond with ONLY a JSON object containing the revised content, with the same st
     revised_content = clean_openai_response(revised_content)
     
     try:
-        # Parse the revised content
-        revised_json = json.loads(revised_content)
-        
-        # Update the blog JSON with the revised content
-        blog_json["content"] = revised_json
+        try:
+            # Parse the revised content
+            revised_json = json.loads(revised_content)
+            
+            # Update the blog JSON with the revised content
+            blog_json["content"] = revised_json
+        except json.JSONDecodeError as e:
+            print(f"❌ Error parsing revised content: {e}")
+            print(f"Error at line {e.lineno}, column {e.colno}")
+            print(f"Error message: {e.msg}")
+            print(f"First 100 chars of content: {revised_content[:100]}")
+            
+            # Attempt to fix common JSON issues
+            print("🔄 Attempting to fix JSON format issues...")
+            fixed_content = revised_content
+            
+            # Try to remove any leading/trailing Markdown code fences
+            fixed_content = re.sub(r'^```json\s+', '', fixed_content)
+            fixed_content = re.sub(r'^```\s+', '', fixed_content)
+            fixed_content = re.sub(r'\s+```$', '', fixed_content)
+            
+            # Retry parsing with fixed content
+            try:
+                revised_json = json.loads(fixed_content)
+                print("✅ Successfully fixed and parsed JSON")
+                blog_json["content"] = revised_json
+            except json.JSONDecodeError:
+                print("❌ Could not fix JSON format issues - keeping original content")
+                print(f"Problematic content: {revised_content[:200]}...")
         
         # Filter out invalid references
         blog_json["references"] = [ref for ref in blog_json.get("references", []) if ref["id"] not in invalid_ids]
         
         print("✅ Blog post revised successfully to remove invalid references")
-    except json.JSONDecodeError:
-        print("❌ Failed to parse revised content - keeping original content")
+    except Exception as e:
+        print(f"❌ Failed to parse revised content: {type(e).__name__}: {e}")
         print(f"Received: {revised_content[:200]}...")
     
     return blog_json
@@ -552,8 +591,28 @@ def main():
 
     try:
         blog_json = json.loads(cleaned_response)
-    except json.JSONDecodeError:
-        raise ValueError(f"{provider_name} response was not valid JSON. Got:\n\n" + raw_response)
+    except json.JSONDecodeError as e:
+        print(f"❌ Error parsing {provider_name} response: {e}")
+        print(f"Error at line {e.lineno}, column {e.colno}")
+        print(f"Error message: {e.msg}")
+        
+        # Attempt to fix common JSON issues
+        print("🔄 Attempting to fix JSON format issues...")
+        fixed_content = cleaned_response
+        
+        # Try to remove any leading/trailing Markdown code fences
+        fixed_content = re.sub(r'^```json\s+', '', fixed_content)
+        fixed_content = re.sub(r'^```\s+', '', fixed_content)
+        fixed_content = re.sub(r'\s+```$', '', fixed_content)$', '', fixed_content)
+        
+        # Retry parsing with fixed content
+        try:
+            blog_json = json.loads(fixed_content)
+            print("✅ Successfully fixed and parsed JSON")
+        except json.JSONDecodeError:
+            print("❌ Could not fix JSON format issues")
+            print(f"First 500 chars of problematic content:\n{raw_response[:500]}")
+            raise ValueError(f"{provider_name} response was not valid JSON. See errors above.")
         
     # Verify references and fix invalid ones using a second pass (unless skipped)
     if not args.skip_reference_check:
