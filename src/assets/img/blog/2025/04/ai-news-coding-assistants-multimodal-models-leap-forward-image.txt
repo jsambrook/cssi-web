@@ -1,6 +1,0 @@
-Title: 
-
-Description:
-A simple image description for the latest AI developments
-
-Usage: social/marketing

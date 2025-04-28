@@ -2,26 +2,12 @@
   "posts": [
     {
       "title": "Untitled",
-      "slug": "blog-post-how-ai-assistants-help-accountants-manage-client-communication",
+      "slug": "post-ai-is-transforming-small-business-operations",
       "date": "2025-04-28",
       "year": "2025",
       "month": "04",
       "category": "Uncategorized",
       "tags": []
-    },
-    {
-      "title": "AI News Roundup: Latest Breakthroughs in Language Models and AI Agents",
-      "slug": "ai-news-roundup-latest-breakthroughs-language-models-ai-agents",
-      "date": "2025-04-26",
-      "year": "2025",
-      "month": "04"
-    },
-    {
-      "title": "AI News: Coding Assistants & Multimodal Models Leap Forward",
-      "slug": "ai-news-coding-assistants-multimodal-models-leap-forward",
-      "date": "2025-04-26",
-      "year": "2025",
-      "month": "04"
     }
   ]
 }

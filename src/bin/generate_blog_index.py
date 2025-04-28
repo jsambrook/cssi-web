@@ -35,7 +35,9 @@ def collect_categories_and_tags(posts, repo_root):
 
         # Count tags
         for tag in post_tags:
-            tags[tag] = tags.get(tag, 0) + 1
+            # Ensure tag is a string
+            tag_str = str(tag).strip('"\'[]')
+            tags[tag_str] = tags.get(tag_str, 0) + 1
 
     return categories, tags
 
@@ -318,6 +320,93 @@ document.addEventListener('DOMContentLoaded', function() {
     return html
 
 
+def get_metadata_from_json(post_path, repo_root):
+    """
+    Try to get post metadata either from:
+    1. A JSON file with the same name in the drafts directory
+    2. A JSON metadata file with the same name as the MD file
+    """
+    # Extract date and slug from the HTML path
+    parts = post_path.name.split('.')
+    if len(parts) < 2:
+        return {}
+
+    # Remove .html extension
+    slug = parts[0]
+
+    # Check if the slug contains a date
+    date_parts = []
+    if '-' in slug:
+        date_parts = slug.split('-')
+        if len(date_parts) >= 3 and len(date_parts[0]) == 4:
+            year = date_parts[0]
+            month = date_parts[1]
+            # Rebuild the slug without the date
+            slug = '-'.join(date_parts[3:])
+            date = f"{year}-{month}-{date_parts[2]}"
+        else:
+            # Try parent directories for date
+            year = post_path.parent.name  # Month directory
+            month = post_path.parent.parent.name  # Year directory
+            date = None  # We don't have the day
+    else:
+        # Try parent directories for date
+        month = post_path.parent.name
+        year = post_path.parent.parent.name
+        date = None
+
+    # First, try to find a matching JSON file in the drafts directory
+    json_paths = []
+
+    # Most specific search: look for a JSON file with matching date and slug
+    if date:
+        # Check drafts directory for JSON with same name pattern
+        json_path = repo_root / 'src' / 'blog' / 'drafts' / f"{date}-{slug}.json"
+        json_paths.append(json_path)
+
+    # Also check for a JSON with just the slug (without date)
+    json_paths.append(repo_root / 'src' / 'blog' / 'drafts' / f"{slug}.json")
+
+    # Try to find any JSON file with matching slug pattern
+    drafts_dir = repo_root / 'src' / 'blog' / 'drafts'
+    if drafts_dir.exists():
+        for json_file in drafts_dir.glob(f"*-{slug}.json"):
+            if json_file not in json_paths:
+                json_paths.append(json_file)
+
+    # Try each potential JSON path
+    for json_path in json_paths:
+        if json_path.exists():
+            try:
+                data = json.loads(json_path.read_text(encoding='utf-8'))
+
+                # Check if this is the metadata format from generate_blog_markdown.py
+                if 'metadata' in data:
+                    return data['metadata']
+
+                # Check for older JSON format
+                if 'metadata' not in data and 'content_html' in data:
+                    return data.get('metadata', {})
+
+                # Otherwise, use the whole JSON
+                return data
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                continue
+
+    # If we couldn't find a JSON file, create basic metadata
+    basic_metadata = {
+        "title": slug.replace('-', ' ').title(),
+        "slug": slug,
+        "date": date if date else f"{year}-{month}-01",
+        "year": year,
+        "month": month,
+        "category": "Uncategorized",
+        "tags": []
+    }
+
+    return basic_metadata
+
+
 def main():
     # Locate script and repo root
     script_dir = Path(__file__).resolve().parent
@@ -332,8 +421,10 @@ def main():
 
     # Sanity checks
     if not index_json.exists():
-        print(f"❌ {index_json} not found. Cannot generate blog index.")
-        return
+        print(f"❌ {index_json} not found. Creating an empty blog index.")
+        index_json.parent.mkdir(parents=True, exist_ok=True)
+        index_json.write_text('{"posts":[]}', encoding='utf-8')
+
     if not template_html.exists():
         print(f"❌ {template_html} not found. Creating a basic template...")
         # Create a basic template if one doesn't exist
@@ -379,17 +470,86 @@ def main():
         data = json.loads(index_json.read_text(encoding='utf-8'))
         posts = sorted(data.get('posts', []), key=lambda p: p['date'], reverse=True)
     except (json.JSONDecodeError, FileNotFoundError):
-        print(f"❌ Error reading or parsing {index_json}.")
-        return
+        print(f"❌ Error reading or parsing {index_json}. Creating a new index.")
+        posts = []
+
+    # Collect all HTML files in the blog directory (find actual posts)
+    html_files = []
+    blog_dir = repo_root / 'blog'
+
+    # Skip if blog directory doesn't exist
+    if blog_dir.exists():
+        # Recursively find all HTML files in the blog directory
+        for html_file in blog_dir.glob('**/*.html'):
+            # Skip index.html files
+            if html_file.name != 'index.html':
+                html_files.append(html_file)
+
+    # Update posts list with any HTML files not in the index
+    for html_file in html_files:
+        # Extract relative path from blog directory
+        rel_path = html_file.relative_to(blog_dir)
+        parts = list(rel_path.parts)
+
+        # Skip if we don't have at least year/month/file.html
+        if len(parts) < 3:
+            continue
+
+        # Get year, month, and slug
+        year = parts[0]
+        month = parts[1]
+        slug = html_file.stem  # Filename without extension
+
+        # Check if this post is already in the index
+        existing = [p for p in posts if p.get('slug') == slug and
+                   p.get('year') == year and p.get('month') == month]
+
+        if not existing:
+            # This is a new HTML file, get its metadata
+            metadata = get_metadata_from_json(html_file, repo_root)
+
+            # Ensure we have the correct year, month, slug
+            metadata['year'] = year
+            metadata['month'] = month
+            metadata['slug'] = slug
+
+            # Add to posts list
+            posts.append(metadata)
+
+    # Remove posts that don't have corresponding HTML files
+    valid_posts = []
+    for p in posts:
+        year = p.get('year', '')
+        month = p.get('month', '')
+        slug = p.get('slug', '')
+
+        html_path = blog_dir / year / month / f"{slug}.html"
+        if html_path.exists():
+            # Ensure post has complete metadata
+            if not p.get('title'):
+                # Try to get full metadata
+                metadata = get_metadata_from_json(html_path, repo_root)
+                if metadata.get('title'):
+                    # Update with better metadata
+                    p.update(metadata)
+
+            valid_posts.append(p)
+
+    # Sort posts by date (newest first)
+    valid_posts = sorted(valid_posts, key=lambda p: p.get('date', ''), reverse=True)
+
+    # Save the updated blog index
+    data = {"posts": valid_posts}
+    index_json.write_text(json.dumps(data, indent=2), encoding='utf-8')
 
     # Collect categories and tags from posts
-    categories, tags = collect_categories_and_tags(posts, repo_root)
+    categories, tags = collect_categories_and_tags(valid_posts, repo_root)
 
-    # Build list items only for posts whose HTML exists
+    # Build list items for the blog index page
     lines = []
-    for p in posts:
+    for p in valid_posts:
         year, month, slug = p.get('year', ''), p.get('month', ''), p.get('slug', '')
-        html_path = repo_root / 'blog' / year / month / f"{slug}.html"
+        html_path = blog_dir / year / month / f"{slug}.html"
         if not html_path.exists():
             continue
 
@@ -406,12 +566,20 @@ def main():
         # Get category and tags
         category = p.get('category', '')
         post_tags = p.get('tags', [])
-        tag_attr = ",".join(post_tags) if post_tags else ""
+
+        # Handle tags in different formats
+        if isinstance(post_tags, list):
+            tag_attr = ",".join(str(tag).strip('"\'') for tag in post_tags)
+        elif isinstance(post_tags, str):
+            # Handle comma-separated string
+            tag_attr = post_tags.replace('"', '').replace("'", "")
+        else:
+            tag_attr = ""
 
         # Create list item with data attributes for filtering
         lines.append(
             f'      <li data-categories="{category}" data-tags="{tag_attr}">'
-            f'<a href="{href}">{p["title"]}</a> <span class="blog-date">– {date_str}</span>'
+            f'<a href="{href}">{p.get("title", slug.replace("-", " ").title())}</a> <span class="blog-date">– {date_str}</span>'
             f'</li>'
         )
 

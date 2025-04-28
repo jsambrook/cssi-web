@@ -41,13 +41,11 @@ help:
 	@echo "  pages        - Build only static site pages"
 	@echo "  clean        - Prune and remove all generated HTML files"
 	@echo "  rebuild      - Prune, clean and rebuild all static pages"
-	@echo "  blog-today   - Generate today's blog post using OpenAI (with ref validation)"  # requires DESCRIPTION
-	@echo "  blog-today-fast - Generate today's blog post using OpenAI (no ref checks)"  # requires DESCRIPTION
+	@echo "  blog-md      - Generate today's blog post using Markdown + Pandoc"  # requires DESCRIPTION
+	@echo "  blog-md-fast - Generate today's blog post using Markdown + Pandoc (no ref checks)"  # requires DESCRIPTION
 	@echo "  blog-claude  - Generate today's blog post using Claude (with ref validation)"  # requires DESCRIPTION
 	@echo "  blog-claude-fast - Generate today's blog post using Claude (no ref checks)"  # requires DESCRIPTION
 	@echo "  blog-ai-news - Generate AI news roundup covering latest developments"  # requires DESCRIPTION
-	@echo "  verify-news-sources - Check if AI news sources are accessible"
-	@echo "  fetch-ai-news - Fetch recent AI news from RSS feeds"
 	@echo "  blog-index   - Regenerate blog/index.html from metadata"
 	@echo "  blog-reset   - Reset blog system to pristine/empty state (⚠️ DESTRUCTIVE)"
 	@echo "  prune-drafts - Prune old files from the drafts directory"
@@ -60,40 +58,41 @@ help:
 TODAY := $(shell date +"%Y-%m-%d")
 DRAFTS_DIR := src/blog/drafts
 
-.PHONY: blog-today blog-today-fast blog-claude blog-claude-fast blog-ai-news verify-news-sources fetch-ai-news blog-index blog-reset prune-drafts clean pages rebuild help
+.PHONY: blog-md blog-md-fast blog-claude blog-claude-fast blog-ai-news blog-index blog-reset prune-drafts clean pages rebuild help
 
 # Prune the drafts folder
 prune-drafts:
 	@echo "🗑️  Pruning old blog drafts..."
 	# keep only the last 30 days of drafts
 	find $(DRAFTS_DIR) -name '*.json' -mtime +30 -delete
+	find $(DRAFTS_DIR) -name '*.md' -mtime +30 -delete
 	@echo "✅ Old drafts pruned."
 
-# Generate today's blog post using OpenAI (default)
-blog-today: prune-drafts
+# Generate today's blog post using Markdown + Pandoc (default)
+blog-md: prune-drafts
 ifndef DESCRIPTION
-	$(error DESCRIPTION is required. Usage: make blog-today DESCRIPTION=\"Short description here\")
+	$(error DESCRIPTION is required. Usage: make blog-md DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post for today: $(TODAY)"
-	cd src/bin && ./generate_blog_json.py "$(DESCRIPTION)"
-	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
-	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
-	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	cd src/bin && ./generate_blog_markdown.py "$(DESCRIPTION)"
+	@CURRENT_MD=$$(cat $(DRAFTS_DIR)/.current_blog.md); \
+	echo "🔍 Using generated Markdown file: $$CURRENT_MD"; \
+	cd src/bin && ./markdown_to_html.py --input ../blog/drafts/$$CURRENT_MD
+	@cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog post generated and HTML written!"
-	@$(MAKE) blog-index
 
-# Generate today's blog post using OpenAI without reference checks (faster)
-blog-today-fast: prune-drafts
+# Generate today's blog post using Markdown + Pandoc without reference checks (faster)
+blog-md-fast: prune-drafts
 ifndef DESCRIPTION
-	$(error DESCRIPTION is required. Usage: make blog-today-fast DESCRIPTION=\"Short description here\")
+	$(error DESCRIPTION is required. Usage: make blog-md-fast DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post for today (fast mode): $(TODAY)"
-	cd src/bin && ./generate_blog_json.py --skip-reference-check "$(DESCRIPTION)"
-	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
-	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
-	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	cd src/bin && ./generate_blog_markdown.py --skip-reference-check "$(DESCRIPTION)"
+	@CURRENT_MD=$$(cat $(DRAFTS_DIR)/.current_blog.md); \
+	echo "🔍 Using generated Markdown file: $$CURRENT_MD"; \
+	cd src/bin && ./markdown_to_html.py --input ../blog/drafts/$$CURRENT_MD
+	@cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog post generated and HTML written!"
-	@$(MAKE) blog-index
 
 # Generate today's blog post using Claude
 blog-claude: prune-drafts
@@ -101,12 +100,12 @@ ifndef DESCRIPTION
 	$(error DESCRIPTION is required. Usage: make blog-claude DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post using Claude for today: $(TODAY)"
-	cd src/bin && ./generate_blog_json.py --provider claude --prompt ../blog/claude-prompt.txt "$(DESCRIPTION)"
-	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
-	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
-	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	cd src/bin && ./generate_blog_markdown.py --provider claude "$(DESCRIPTION)"
+	@CURRENT_MD=$$(cat $(DRAFTS_DIR)/.current_blog.md); \
+	echo "🔍 Using generated Markdown file: $$CURRENT_MD"; \
+	cd src/bin && ./markdown_to_html.py --input ../blog/drafts/$$CURRENT_MD
+	@cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog post generated and HTML written!"
-	@$(MAKE) blog-index
 
 # Generate today's blog post using Claude without reference checks (faster)
 blog-claude-fast: prune-drafts
@@ -114,12 +113,12 @@ ifndef DESCRIPTION
 	$(error DESCRIPTION is required. Usage: make blog-claude-fast DESCRIPTION=\"Short description here\")
 endif
 	@echo "📝 Generating blog post using Claude for today (fast mode): $(TODAY)"
-	cd src/bin && ./generate_blog_json.py --skip-reference-check --provider claude --prompt ../blog/claude-prompt.txt "$(DESCRIPTION)"
-	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
-	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
-	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	cd src/bin && ./generate_blog_markdown.py --skip-reference-check --provider claude "$(DESCRIPTION)"
+	@CURRENT_MD=$$(cat $(DRAFTS_DIR)/.current_blog.md); \
+	echo "🔍 Using generated Markdown file: $$CURRENT_MD"; \
+	cd src/bin && ./markdown_to_html.py --input ../blog/drafts/$$CURRENT_MD
+	@cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog post generated and HTML written!"
-	@$(MAKE) blog-index
 
 # Generate AI news roundup using Claude
 blog-ai-news: prune-drafts
@@ -127,29 +126,17 @@ ifndef DESCRIPTION
 	$(error DESCRIPTION is required. Usage: make blog-ai-news DESCRIPTION=\"AI news topic or focus area\")
 endif
 	@echo "📝 Generating AI news roundup for today: $(TODAY)"
-	cd src/bin && ./generate_blog_json.py --provider claude --prompt ../blog/prompts/claude-ai-news.txt "$(DESCRIPTION)"
-	@CURRENT_JSON=$$(cat $(DRAFTS_DIR)/.current_blog.json); \
-	echo "🔍 Using generated JSON file: $$CURRENT_JSON"; \
-	cd src/bin && ./generate_blog_post.py --input ../blog/drafts/$$CURRENT_JSON
+	cd src/bin && ./generate_blog_markdown.py --provider claude --prompt ../blog/prompts/claude-ai-news.txt "$(DESCRIPTION)"
+	@CURRENT_MD=$$(cat $(DRAFTS_DIR)/.current_blog.md); \
+	echo "🔍 Using generated Markdown file: $$CURRENT_MD"; \
+	cd src/bin && ./markdown_to_html.py --input ../blog/drafts/$$CURRENT_MD
+	@cd src/bin && ./generate_blog_index.py
 	@echo "✅ AI news roundup generated and HTML written!"
-	@$(MAKE) blog-index
 
 # Regenerate the blog index page
 blog-index:
 	cd src/bin && ./generate_blog_index.py
 	@echo "✅ Blog index rebuilt!"
-	
-# Verify AI news sources in claude-ai-news.txt are accessible
-verify-news-sources:
-	@echo "🔍 Checking AI news sources for accessibility..."
-	cd src/blog/prompts && ./claude-ai-news-helper.py
-	@echo "✅ Source verification complete!"
-	
-# Fetch recent AI news from RSS feeds
-fetch-ai-news:
-	@echo "📰 Fetching recent AI news from RSS feeds..."
-	cd src/blog/prompts && ./ai_news_rss_fetcher.py
-	@echo "✅ Recent AI news fetched successfully!"
 
 # Reset the blog system to a pristine, empty state
 blog-reset:
@@ -161,6 +148,7 @@ blog-reset:
 		rm -rf $(BUILD_DIR)/blog/20*; \
 		echo "🗑️  Removing all blog drafts..."; \
 		rm -rf $(BLOG_SRC_DIR)/drafts/*.json; \
+		rm -rf $(BLOG_SRC_DIR)/drafts/*.md; \
 		echo "🗑️  Deleting blog images and prompts..."; \
 		rm -rf $(SRC_DIR)/assets/img/blog/20*; \
 		echo "🗑️  Resetting blog index..."; \
