@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$title$ - Common Sense Systems, Inc.</title>
+  <meta name="description" content="$description$">
+  $if(keywords)$
+  <meta name="keywords" content="$keywords$">
+  $endif$
+  <meta name="author" content="$author$">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Blog-specific styles that match your current design */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .blog-content {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .blog-content h1 {
+      color: #24292e;
+      margin-bottom: 10px;
+    }
+
+    .blog-meta {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .blog-content h2 {
+      color: #24292e;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .blog-content p {
+      margin-bottom: 20px;
+    }
+
+    /* References section styling */
+    .references {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 0.9em;
+    }
+
+    .references li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/index.html" class="logo"><span>Common Sense Systems, Inc.</span></a>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#services">Services</a></li>
+          <li><a href="/blog/index.html" class="active">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container blog-content">
+    <article>
+      <h1>$title$</h1>
+      <div class="blog-meta">
+        <span class="blog-date">$date$</span>
+        $if(tags)$
+        <span class="blog-tags">$for(tags)$$tags$$sep$, $endfor$</span>
+        $endif$
+      </div>
+
+      $body$
+
+      $if(references)$
+      <div class="references">
+        <h2>References</h2>
+        <ol>
+          $for(references)$
+          <li id="ref-$it.id$">
+            $it.title$. $it.source$. $it.year$.
+            $if(it.url)$
+            <a href="$it.url$" target="_blank" rel="noopener noreferrer">$it.url$</a>
+            $endif$
+          </li>
+          $endfor$
+        </ol>
+      </div>
+      $endif$
+    </article>
+  </main>
+
+  $if(cta_html)$
+  $cta_html$
+  $endif$
+
+  $if(footer_html)$
+  $footer_html$
+  $endif$
+
+</body>
+</html>
