@@ -199,7 +199,7 @@
     }
   }
 
-  /* Ensure the blog list is responsive */
+  /* Blog list styling */
   .blog-list {
     list-style: none;
     padding: 0;
@@ -268,35 +268,68 @@
     <div class="filter-section category-filter">
       <h3>Categories</h3>
       <ul>
+        <li><a href="#" data-category="AI for Business">AI for Business <span class="count">(1)</span></a></li>
         <li><a href="#" data-category="Uncategorized">Uncategorized <span class="count">(1)</span></a></li>
       </ul>
+    </div>
+    <div class="filter-section tag-filter">
+      <h3>Tags</h3>
+      <div class="tag-cloud">
+        <a href="#" data-tag="AI" class="tag">AI <span class="count">(1)</span></a>
+        <a href="#" data-tag="Automation" class="tag">Automation <span class="count">(1)</span></a>
+        <a href="#" data-tag="Process Improvement" class="tag">Process Improvement <span class="count">(1)</span></a>
+        <a href="#" data-tag="Small Business" class="tag">Small Business <span class="count">(1)</span></a>
+      </div>
     </div>
   </div>
   <div class="active-filters" id="active-filters"></div>
 </div>
 
+<ul class="blog-list">
+      <li data-categories="Uncategorized" data-tags=""><a href="/blog/2025/04/post-ai-is-transforming-small-business-operations.html">Untitled</a> <span class="blog-date">– April 28, 2025</span></li>
+      <li data-categories="AI for Business" data-tags="AI,Small Business,Process Improvement,Automation"><a href="/blog/2025/04/ai-transforming-small-business-operations.html">How AI is Transforming Small Business Operations</a> <span class="blog-date">– April 28, 2025</span></li>
+    </ul>
+
+      <!-- CTA Start -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Let's discuss how our process automation and AI solutions can help you achieve your business goals.</p>
+    <a href="/contact.html" class="btn">Schedule a Consultation</a>
+  </div>
+</section>
+<!-- CTA End -->
+
+    </section>
+  </main>
+
+  <!-- (Footer will be injected here by generate_blog_index.py) -->
+
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Toggle filter panel visibility (mobile-friendly)
+  // Toggle filter panel visibility
   const toggleBtn = document.getElementById('toggle-filters');
   const filterPanel = document.getElementById('filter-panel');
   const activeFilters = document.getElementById('active-filters');
 
-  // Initialize and maintain active filters state
+  // Initialize active filters state
   let activeFiltersState = {
     category: null,
     tags: []
   };
 
   // Toggle filter panel
-  toggleBtn.addEventListener('click', function() {
-    filterPanel.classList.toggle('expanded');
-    this.classList.toggle('active');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      filterPanel.classList.toggle('expanded');
+      this.classList.toggle('active');
 
-    // Toggle icon
-    const icon = this.querySelector('.toggle-icon');
-    icon.textContent = filterPanel.classList.contains('expanded') ? '−' : '+';
-  });
+      // Toggle icon
+      const icon = this.querySelector('.toggle-icon');
+      icon.textContent = filterPanel.classList.contains('expanded') ? '−' : '+';
+    });
+  }
 
   // Update active filters UI
   function updateActiveFiltersUI() {
@@ -419,38 +452,44 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Remove filter when clicking X on filter pill
-  activeFilters.addEventListener('click', function(e) {
-    if (e.target.classList.contains('remove-filter')) {
-      const type = e.target.getAttribute('data-type');
-      const value = e.target.getAttribute('data-value');
+  if (activeFilters) {
+    activeFilters.addEventListener('click', function(e) {
+      if (e.target.classList.contains('remove-filter')) {
+        const type = e.target.getAttribute('data-type');
+        const value = e.target.getAttribute('data-value');
 
-      if (type === 'category') {
-        activeFiltersState.category = null;
-        document.querySelectorAll('.category-filter a').forEach(a => a.classList.remove('active'));
-      } else if (type === 'tag') {
-        activeFiltersState.tags = activeFiltersState.tags.filter(t => t !== value);
-        document.querySelector(`.tag-filter a[data-tag="${value}"]`).classList.remove('active');
+        if (type === 'category') {
+          activeFiltersState.category = null;
+          document.querySelectorAll('.category-filter a').forEach(a => a.classList.remove('active'));
+        } else if (type === 'tag') {
+          activeFiltersState.tags = activeFiltersState.tags.filter(t => t !== value);
+          const tagLink = document.querySelector(`.tag-filter a[data-tag="${value}"]`);
+          if (tagLink) tagLink.classList.remove('active');
+        }
+
+        updateActiveFiltersUI();
+        applyAllFilters();
       }
-
-      updateActiveFiltersUI();
-      applyAllFilters();
-    }
-  });
+    });
+  }
 
   // Clear filters button
-  document.getElementById('clear-filters').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('.category-filter a, .tag-filter a').forEach(a => a.classList.remove('active'));
-    activeFiltersState = { category: null, tags: [] };
-    updateActiveFiltersUI();
+  const clearBtn = document.getElementById('clear-filters');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.category-filter a, .tag-filter a').forEach(a => a.classList.remove('active'));
+      activeFiltersState = { category: null, tags: [] };
+      updateActiveFiltersUI();
 
-    document.querySelectorAll('.blog-list li').forEach(item => {
-      item.style.display = '';
+      document.querySelectorAll('.blog-list li').forEach(item => {
+        item.style.display = '';
+      });
+
+      // Clear URL parameters
+      history.replaceState({}, document.title, window.location.pathname);
     });
-
-    // Clear URL parameters
-    history.replaceState({}, document.title, window.location.pathname);
-  });
+  }
 
   // Update URL with current filter state
   function updateURL() {
@@ -471,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
     history.replaceState({}, document.title, newURL);
   }
 
-  // Initialize from URL parameters (if any)
+  // Initialize from URL parameters
   function initFromURL() {
     const params = new URLSearchParams(window.location.search);
 
@@ -509,25 +548,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initFromURL();
 });
 </script>
-
-<ul class="blog-list">
-      <li data-categories="Uncategorized" data-tags=""><a href="/blog/2025/04/post-ai-is-transforming-small-business-operations.html">Untitled</a> <span class="blog-date">– April 28, 2025</span></li>
-    </ul>
-
-      <!-- CTA Start -->
-<section class="cta">
-  <div class="container">
-    <h2>Ready to Transform Your Business?</h2>
-    <p>Let's discuss how our process automation and AI solutions can help you achieve your business goals.</p>
-    <a href="/contact.html" class="btn">Schedule a Consultation</a>
-  </div>
-</section>
-<!-- CTA End -->
-
-    </section>
-  </main>
-
-  <!-- (Footer will be injected here by generate_blog_index.py) -->
 
 <footer>
   <div class="container">

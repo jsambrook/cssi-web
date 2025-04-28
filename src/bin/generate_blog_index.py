@@ -2,48 +2,133 @@
 """
 generate_blog_index.py
 
-Reads src/blog/blog_index.json, filters out posts without HTML files,
-injects the post list into blog_index_template.html, fills in the CTA,
-appends the site footer, and writes blog/index.html.
+Generates a comprehensive blog index page by:
+1. Scanning the blog directory for HTML files
+2. Extracting metadata from corresponding JSON files
+3. Creating a filtered, categorized, and tagged index
+4. Generating the blog/index.html file with proper styling and filtering
 
-Usage:
-    ./generate_blog_index.py
+This script is designed to be robust against various issues and can handle
+missing or malformed metadata gracefully.
 """
 
 import json
+import re
+import os
 from pathlib import Path
 from datetime import datetime
 
-def collect_categories_and_tags(posts, repo_root):
-    """
-    Extracts categories and tags from the blog posts.
 
-    Returns a tuple of (categories, tags) where each is a dictionary mapping
-    the category/tag name to a count of posts.
-    """
+def extract_title_from_html(html_path):
+    """Extract the title from an HTML file if metadata is missing"""
+    try:
+        content = html_path.read_text(encoding='utf-8')
+        # Look for the title tag
+        title_match = re.search(r'<title>(.*?)</title>', content)
+        if title_match:
+            return title_match.group(1).replace(' - Common Sense Systems, Inc.', '').strip()
+
+        # Look for h1 tag
+        h1_match = re.search(r'<h1>(.*?)</h1>', content)
+        if h1_match:
+            return h1_match.group(1).strip()
+
+        # Fall back to filename
+        return html_path.stem.replace('-', ' ').title()
+    except Exception:
+        return html_path.stem.replace('-', ' ').title()
+
+
+def get_post_metadata(html_path, repo_root):
+    """Get metadata for a blog post from multiple potential sources"""
+    # Start with basic metadata from the path
+    year = html_path.parent.name  # Month directory
+    month = html_path.parent.parent.name  # Year directory
+    slug = html_path.stem
+
+    # Default metadata
+    metadata = {
+        "title": slug.replace('-', ' ').title(),
+        "slug": slug,
+        "date": f"{year}-{month}-01",  # Default to first of month if no exact date
+        "year": year,
+        "month": month,
+        "category": "Uncategorized",
+        "tags": []
+    }
+
+    # Check for metadata sources in this order:
+    # 1. Look for JSON file in drafts with same date-slug pattern
+    # 2. Look for any JSON file with matching slug
+    # 3. Extract title from HTML if nothing else works
+
+    # Search for JSON files in drafts directory with matching patterns
+    drafts_dir = repo_root / "src" / "blog" / "drafts"
+    if drafts_dir.exists():
+        # First try to find exact match with date pattern
+        for json_file in drafts_dir.glob(f"*-{slug}.json"):
+            try:
+                data = json.loads(json_file.read_text(encoding='utf-8'))
+
+                # Handle different JSON structures
+                if "metadata" in data:
+                    # New format with metadata key
+                    metadata.update(data["metadata"])
+                    return metadata
+                elif "content" in data or "content_html" in data:
+                    # Old format with inline metadata
+                    for key in ["title", "slug", "date", "author", "category", "tags"]:
+                        if key in data:
+                            metadata[key] = data[key]
+                    return metadata
+                else:
+                    # Assume whole file is metadata
+                    metadata.update(data)
+                    return metadata
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                continue
+
+    # If we got here, we need to extract the title from the HTML
+    metadata["title"] = extract_title_from_html(html_path)
+
+    return metadata
+
+
+def collect_categories_and_tags(posts):
+    """Collect unique categories and tags with their post counts"""
     categories = {}
     tags = {}
 
-    for p in posts:
-        # Get categories and tags from the post metadata
-        category = p.get('category', '')
-        post_tags = p.get('tags', [])
+    for post in posts:
+        # Process category
+        category = post.get("category", "Uncategorized")
+        categories[category] = categories.get(category, 0) + 1
 
-        # Count categories
-        if category:
-            categories[category] = categories.get(category, 0) + 1
+        # Process tags
+        post_tags = post.get("tags", [])
+        if isinstance(post_tags, str):
+            # Handle comma-separated string format
+            post_tags = [tag.strip() for tag in post_tags.split(",")]
 
-        # Count tags
         for tag in post_tags:
-            # Ensure tag is a string
             tag_str = str(tag).strip('"\'[]')
-            tags[tag_str] = tags.get(tag_str, 0) + 1
+            if tag_str:  # Skip empty tags
+                tags[tag_str] = tags.get(tag_str, 0) + 1
 
     return categories, tags
 
 
+def format_date(date_str):
+    """Format a date string from YYYY-MM-DD to Month DD, YYYY"""
+    try:
+        date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+        return date_obj.strftime("%B %d, %Y")
+    except ValueError:
+        return date_str
+
+
 def build_filter_section(categories, tags):
-    """Builds HTML for category and tag filters with mobile-friendly design"""
+    """Generate HTML for the filter UI if categories or tags exist"""
     if not categories and not tags:
         return ""
 
@@ -79,30 +164,36 @@ def build_filter_section(categories, tags):
     html += '  <div class="active-filters" id="active-filters"></div>\n'
     html += '</div>\n'
 
-    # Add filter functionality with mobile-friendly enhancements
-    html += """
+    return html
+
+
+def generate_filter_javascript():
+    """Generate the JavaScript for the filter UI"""
+    return """
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Toggle filter panel visibility (mobile-friendly)
+  // Toggle filter panel visibility
   const toggleBtn = document.getElementById('toggle-filters');
   const filterPanel = document.getElementById('filter-panel');
   const activeFilters = document.getElementById('active-filters');
 
-  // Initialize and maintain active filters state
+  // Initialize active filters state
   let activeFiltersState = {
     category: null,
     tags: []
   };
 
   // Toggle filter panel
-  toggleBtn.addEventListener('click', function() {
-    filterPanel.classList.toggle('expanded');
-    this.classList.toggle('active');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      filterPanel.classList.toggle('expanded');
+      this.classList.toggle('active');
 
-    // Toggle icon
-    const icon = this.querySelector('.toggle-icon');
-    icon.textContent = filterPanel.classList.contains('expanded') ? '−' : '+';
-  });
+      // Toggle icon
+      const icon = this.querySelector('.toggle-icon');
+      icon.textContent = filterPanel.classList.contains('expanded') ? '−' : '+';
+    });
+  }
 
   // Update active filters UI
   function updateActiveFiltersUI() {
@@ -225,38 +316,44 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Remove filter when clicking X on filter pill
-  activeFilters.addEventListener('click', function(e) {
-    if (e.target.classList.contains('remove-filter')) {
-      const type = e.target.getAttribute('data-type');
-      const value = e.target.getAttribute('data-value');
+  if (activeFilters) {
+    activeFilters.addEventListener('click', function(e) {
+      if (e.target.classList.contains('remove-filter')) {
+        const type = e.target.getAttribute('data-type');
+        const value = e.target.getAttribute('data-value');
 
-      if (type === 'category') {
-        activeFiltersState.category = null;
-        document.querySelectorAll('.category-filter a').forEach(a => a.classList.remove('active'));
-      } else if (type === 'tag') {
-        activeFiltersState.tags = activeFiltersState.tags.filter(t => t !== value);
-        document.querySelector(`.tag-filter a[data-tag="${value}"]`).classList.remove('active');
+        if (type === 'category') {
+          activeFiltersState.category = null;
+          document.querySelectorAll('.category-filter a').forEach(a => a.classList.remove('active'));
+        } else if (type === 'tag') {
+          activeFiltersState.tags = activeFiltersState.tags.filter(t => t !== value);
+          const tagLink = document.querySelector(`.tag-filter a[data-tag="${value}"]`);
+          if (tagLink) tagLink.classList.remove('active');
+        }
+
+        updateActiveFiltersUI();
+        applyAllFilters();
       }
-
-      updateActiveFiltersUI();
-      applyAllFilters();
-    }
-  });
+    });
+  }
 
   // Clear filters button
-  document.getElementById('clear-filters').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('.category-filter a, .tag-filter a').forEach(a => a.classList.remove('active'));
-    activeFiltersState = { category: null, tags: [] };
-    updateActiveFiltersUI();
+  const clearBtn = document.getElementById('clear-filters');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.category-filter a, .tag-filter a').forEach(a => a.classList.remove('active'));
+      activeFiltersState = { category: null, tags: [] };
+      updateActiveFiltersUI();
 
-    document.querySelectorAll('.blog-list li').forEach(item => {
-      item.style.display = '';
+      document.querySelectorAll('.blog-list li').forEach(item => {
+        item.style.display = '';
+      });
+
+      // Clear URL parameters
+      history.replaceState({}, document.title, window.location.pathname);
     });
-
-    // Clear URL parameters
-    history.replaceState({}, document.title, window.location.pathname);
-  });
+  }
 
   // Update URL with current filter state
   function updateURL() {
@@ -277,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
     history.replaceState({}, document.title, newURL);
   }
 
-  // Initialize from URL parameters (if any)
+  // Initialize from URL parameters
   function initFromURL() {
     const params = new URLSearchParams(window.location.search);
 
@@ -317,288 +414,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 """
 
-    return html
 
-
-def get_metadata_from_json(post_path, repo_root):
-    """
-    Try to get post metadata either from:
-    1. A JSON file with the same name in the drafts directory
-    2. A JSON metadata file with the same name as the MD file
-    """
-    # Extract date and slug from the HTML path
-    parts = post_path.name.split('.')
-    if len(parts) < 2:
-        return {}
-
-    # Remove .html extension
-    slug = parts[0]
-
-    # Check if the slug contains a date
-    date_parts = []
-    if '-' in slug:
-        date_parts = slug.split('-')
-        if len(date_parts) >= 3 and len(date_parts[0]) == 4:
-            year = date_parts[0]
-            month = date_parts[1]
-            # Rebuild the slug without the date
-            slug = '-'.join(date_parts[3:])
-            date = f"{year}-{month}-{date_parts[2]}"
-        else:
-            # Try parent directories for date
-            year = post_path.parent.name  # Month directory
-            month = post_path.parent.parent.name  # Year directory
-            date = None  # We don't have the day
-    else:
-        # Try parent directories for date
-        month = post_path.parent.name
-        year = post_path.parent.parent.name
-        date = None
-
-    # First, try to find a matching JSON file in the drafts directory
-    json_paths = []
-
-    # Most specific search: look for a JSON file with matching date and slug
-    if date:
-        # Check drafts directory for JSON with same name pattern
-        json_path = repo_root / 'src' / 'blog' / 'drafts' / f"{date}-{slug}.json"
-        json_paths.append(json_path)
-
-    # Also check for a JSON with just the slug (without date)
-    json_paths.append(repo_root / 'src' / 'blog' / 'drafts' / f"{slug}.json")
-
-    # Try to find any JSON file with matching slug pattern
-    drafts_dir = repo_root / 'src' / 'blog' / 'drafts'
-    if drafts_dir.exists():
-        for json_file in drafts_dir.glob(f"*-{slug}.json"):
-            if json_file not in json_paths:
-                json_paths.append(json_file)
-
-    # Try each potential JSON path
-    for json_path in json_paths:
-        if json_path.exists():
-            try:
-                data = json.loads(json_path.read_text(encoding='utf-8'))
-
-                # Check if this is the metadata format from generate_blog_markdown.py
-                if 'metadata' in data:
-                    return data['metadata']
-
-                # Check for older JSON format
-                if 'metadata' not in data and 'content_html' in data:
-                    return data.get('metadata', {})
-
-                # Otherwise, use the whole JSON
-                return data
-            except (json.JSONDecodeError, UnicodeDecodeError):
-                continue
-
-    # If we couldn't find a JSON file, create basic metadata
-    basic_metadata = {
-        "title": slug.replace('-', ' ').title(),
-        "slug": slug,
-        "date": date if date else f"{year}-{month}-01",
-        "year": year,
-        "month": month,
-        "category": "Uncategorized",
-        "tags": []
-    }
-
-    return basic_metadata
-
-
-def main():
-    # Locate script and repo root
-    script_dir = Path(__file__).resolve().parent
-    repo_root = script_dir.parent.parent
-
-    # Paths
-    index_json = repo_root / 'src' / 'blog' / 'blog_index.json'
-    template_html = repo_root / 'src' / 'includes' / 'blog_index_template.html'
-    cta_html_file = repo_root / 'src' / 'includes' / 'blog_cta.html'
-    footer_file = repo_root / 'src' / 'includes' / 'site_footer.html'
-    output_html = repo_root / 'blog' / 'index.html'
-
-    # Sanity checks
-    if not index_json.exists():
-        print(f"❌ {index_json} not found. Creating an empty blog index.")
-        index_json.parent.mkdir(parents=True, exist_ok=True)
-        index_json.write_text('{"posts":[]}', encoding='utf-8')
-
-    if not template_html.exists():
-        print(f"❌ {template_html} not found. Creating a basic template...")
-        # Create a basic template if one doesn't exist
-        template_html.parent.mkdir(parents=True, exist_ok=True)
-        template_html.write_text("""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Common Sense Systems, Inc.</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <!-- CSS_PLACEHOLDER -->
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="/index.html" class="logo"><span>Common Sense Systems, Inc.</span></a>
-        <ul class="nav-links">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html#services">Services</a></li>
-          <li><a href="/blog/index.html" class="active">Blog</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-        <div class="menu-toggle"><span></span><span></span><span></span></div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h1>Blog Articles</h1>
-    <!-- POST_LIST goes here -->
-  </main>
-
-  <!-- CTA_PLACEHOLDER -->
-
-</body>
-</html>""", encoding='utf-8')
-        print(f"✅ Created basic template at: {template_html}")
-
-    # Load metadata
-    try:
-        data = json.loads(index_json.read_text(encoding='utf-8'))
-        posts = sorted(data.get('posts', []), key=lambda p: p['date'], reverse=True)
-    except (json.JSONDecodeError, FileNotFoundError):
-        print(f"❌ Error reading or parsing {index_json}. Creating a new index.")
-        posts = []
-
-    # Collect all HTML files in the blog directory (find actual posts)
-    html_files = []
-    blog_dir = repo_root / 'blog'
-
-    # Skip if blog directory doesn't exist
-    if blog_dir.exists():
-        # Recursively find all HTML files in the blog directory
-        for html_file in blog_dir.glob('**/*.html'):
-            # Skip index.html files
-            if html_file.name != 'index.html':
-                html_files.append(html_file)
-
-    # Update posts list with any HTML files not in the index
-    for html_file in html_files:
-        # Extract relative path from blog directory
-        rel_path = html_file.relative_to(blog_dir)
-        parts = list(rel_path.parts)
-
-        # Skip if we don't have at least year/month/file.html
-        if len(parts) < 3:
-            continue
-
-        # Get year, month, and slug
-        year = parts[0]
-        month = parts[1]
-        slug = html_file.stem  # Filename without extension
-
-        # Check if this post is already in the index
-        existing = [p for p in posts if p.get('slug') == slug and
-                   p.get('year') == year and p.get('month') == month]
-
-        if not existing:
-            # This is a new HTML file, get its metadata
-            metadata = get_metadata_from_json(html_file, repo_root)
-
-            # Ensure we have the correct year, month, slug
-            metadata['year'] = year
-            metadata['month'] = month
-            metadata['slug'] = slug
-
-            # Add to posts list
-            posts.append(metadata)
-
-    # Remove posts that don't have corresponding HTML files
-    valid_posts = []
-    for p in posts:
-        year = p.get('year', '')
-        month = p.get('month', '')
-        slug = p.get('slug', '')
-
-        html_path = blog_dir / year / month / f"{slug}.html"
-        if html_path.exists():
-            # Ensure post has complete metadata
-            if not p.get('title'):
-                # Try to get full metadata
-                metadata = get_metadata_from_json(html_path, repo_root)
-                if metadata.get('title'):
-                    # Update with better metadata
-                    p.update(metadata)
-
-            valid_posts.append(p)
-
-    # Sort posts by date (newest first)
-    valid_posts = sorted(valid_posts, key=lambda p: p.get('date', ''), reverse=True)
-
-    # Save the updated blog index
-    data = {"posts": valid_posts}
-    index_json.write_text(json.dumps(data, indent=2), encoding='utf-8')
-
-    # Collect categories and tags from posts
-    categories, tags = collect_categories_and_tags(valid_posts, repo_root)
-
-    # Build list items for the blog index page
-    lines = []
-    for p in valid_posts:
-        year, month, slug = p.get('year', ''), p.get('month', ''), p.get('slug', '')
-        html_path = blog_dir / year / month / f"{slug}.html"
-        if not html_path.exists():
-            continue
-
-        # Get formatted date
-        try:
-            date_obj = datetime.strptime(p.get('date', ''), "%Y-%m-%d")
-            date_str = date_obj.strftime("%B %d, %Y")
-        except ValueError:
-            date_str = p.get('date', '')
-
-        # Get path to blog post
-        href = f"/blog/{year}/{month}/{slug}.html"
-
-        # Get category and tags
-        category = p.get('category', '')
-        post_tags = p.get('tags', [])
-
-        # Handle tags in different formats
-        if isinstance(post_tags, list):
-            tag_attr = ",".join(str(tag).strip('"\'') for tag in post_tags)
-        elif isinstance(post_tags, str):
-            # Handle comma-separated string
-            tag_attr = post_tags.replace('"', '').replace("'", "")
-        else:
-            tag_attr = ""
-
-        # Create list item with data attributes for filtering
-        lines.append(
-            f'      <li data-categories="{category}" data-tags="{tag_attr}">'
-            f'<a href="{href}">{p.get("title", slug.replace("-", " ").title())}</a> <span class="blog-date">– {date_str}</span>'
-            f'</li>'
-        )
-
-    # Create filter HTML if we have categories or tags
-    filter_html = build_filter_section(categories, tags) if (categories or tags) else ""
-
-    # Simplified post list structure without redundant clear button (now in filter HTML)
-    post_list = (
-        f'{filter_html}\n'
-        '<ul class="blog-list">\n'
-        + "\n".join(lines) +
-        "\n    </ul>"
-    )
-
-    # Read the template
-    template = template_html.read_text(encoding='utf-8')
-
-    # Add responsive CSS for filtering
-    css_styles = """
+def generate_filter_css():
+    """Generate the CSS for the filter UI"""
+    return """
 <style>
   /* Overall filter container */
   .filter-container {
@@ -791,7 +610,7 @@ def main():
     }
   }
 
-  /* Ensure the blog list is responsive */
+  /* Blog list styling */
   .blog-list {
     list-style: none;
     padding: 0;
@@ -824,50 +643,231 @@ def main():
 </style>
 """
 
-    # Check if we need to inject CSS
-    if '<!-- CSS_PLACEHOLDER -->' in template:
-        filled = template.replace('<!-- CSS_PLACEHOLDER -->', css_styles)
-    else:
-        filled = template.replace('</head>', f'{css_styles}\n</head>')
 
-    # Inject post list
-    if '<!-- POST_LIST goes here -->' in filled:
-        filled = filled.replace('<!-- POST_LIST goes here -->', post_list)
+def create_default_template():
+    """Create a default blog index template if none exists"""
+    return """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Common Sense Systems, Inc.</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <!-- CSS_PLACEHOLDER -->
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/index.html" class="logo"><span>Common Sense Systems, Inc.</span></a>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#services">Services</a></li>
+          <li><a href="/blog/index.html" class="active">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Blog Articles</h1>
+    <!-- POST_LIST goes here -->
+  </main>
+
+  <!-- CTA_PLACEHOLDER -->
+</body>
+</html>"""
+
+
+def main():
+    # Locate script and repo root
+    script_dir = Path(__file__).resolve().parent
+    repo_root = script_dir.parent.parent
+
+    # Define paths
+    blog_dir = repo_root / "blog"
+    template_path = repo_root / "src" / "includes" / "blog_index_template.html"
+    cta_path = repo_root / "src" / "includes" / "blog_cta.html"
+    footer_path = repo_root / "src" / "includes" / "site_footer.html"
+    index_json_path = repo_root / "src" / "blog" / "blog_index.json"
+    output_path = blog_dir / "index.html"
+
+    # Ensure blog directory exists
+    blog_dir.mkdir(parents=True, exist_ok=True)
+
+    # Create template if it doesn't exist
+    if not template_path.exists():
+        print(f"Creating default template at {template_path}")
+        template_path.parent.mkdir(parents=True, exist_ok=True)
+        template_path.write_text(create_default_template(), encoding='utf-8')
+
+    # Load index.json if it exists
+    if index_json_path.exists():
+        try:
+            data = json.loads(index_json_path.read_text(encoding='utf-8'))
+            index_posts = data.get("posts", [])
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            print(f"Warning: Invalid JSON in {index_json_path}. Creating new index.")
+            index_posts = []
     else:
-        # Try to find the main content area and append
+        index_posts = []
+
+    # Find all HTML files in the blog directory
+    html_files = []
+    for year_dir in blog_dir.glob("[0-9][0-9][0-9][0-9]"):
+        if year_dir.is_dir():
+            for month_dir in year_dir.glob("[0-9][0-9]"):
+                if month_dir.is_dir():
+                    for html_file in month_dir.glob("*.html"):
+                        # Skip index.html files
+                        if html_file.name != "index.html":
+                            html_files.append(html_file)
+
+    # Build complete posts list
+    all_posts = []
+
+    # First add posts from the index that have HTML files
+    for post in index_posts:
+        year = post.get("year", "")
+        month = post.get("month", "")
+        slug = post.get("slug", "")
+
+        if not year or not month or not slug:
+            continue
+
+        html_path = blog_dir / year / month / f"{slug}.html"
+
+        if html_path.exists() and html_path in html_files:
+            # This post exists and is in the index
+            all_posts.append(post)
+            html_files.remove(html_path)  # Remove from list to avoid duplicates
+
+    # Now process any HTML files not in the index
+    for html_path in html_files:
+        metadata = get_post_metadata(html_path, repo_root)
+        all_posts.append(metadata)
+
+    # Sort posts by date (newest first)
+    all_posts = sorted(all_posts, key=lambda p: p.get("date", ""), reverse=True)
+
+    # Update the index.json file
+    index_json_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(index_json_path, 'w', encoding='utf-8') as f:
+        json.dump({"posts": all_posts}, f, indent=2)
+
+    print(f"Updated blog index metadata at {index_json_path}")
+
+    # Collect categories and tags
+    categories, tags = collect_categories_and_tags(all_posts)
+
+    # Build list items for the HTML index
+    post_items = []
+    for post in all_posts:
+        title = post.get("title", "Untitled")
+        date = post.get("date", "")
+        year = post.get("year", "")
+        month = post.get("month", "")
+        slug = post.get("slug", "")
+        category = post.get("category", "Uncategorized")
+
+        # Handle tags in different formats
+        post_tags = post.get("tags", [])
+        if isinstance(post_tags, str):
+            # Handle comma-separated string format
+            tag_list = [tag.strip() for tag in post_tags.split(",")]
+        else:
+            tag_list = post_tags
+
+        # Create tag string for data attribute
+        tag_attr = ",".join(str(tag).strip('"\'[]') for tag in tag_list)
+
+        # Format date
+        formatted_date = format_date(date)
+
+        # Build HTML
+        post_items.append(
+            f'      <li data-categories="{category}" data-tags="{tag_attr}">'
+            f'<a href="/blog/{year}/{month}/{slug}.html">{title}</a> '
+            f'<span class="blog-date">– {formatted_date}</span>'
+            f'</li>'
+        )
+
+    # Build filter section if we have categories or tags
+    filter_html = build_filter_section(categories, tags) if categories or tags else ""
+
+    # Combine filter and post list
+    post_list_html = (
+        f'{filter_html}\n'
+        '<ul class="blog-list">\n'
+        + "\n".join(post_items) +
+        "\n    </ul>"
+    )
+
+    # Read the template
+    template = template_path.read_text(encoding='utf-8')
+
+    # Add CSS styles
+    if '<!-- CSS_PLACEHOLDER -->' in template:
+        filled = template.replace('<!-- CSS_PLACEHOLDER -->', generate_filter_css())
+    else:
+        filled = template.replace('</head>', f'{generate_filter_css()}\n</head>')
+
+    # Add JavaScript before closing body tag
+    filled = filled.replace('</body>', f'{generate_filter_javascript()}\n</body>')
+
+    # Add post list
+    if '<!-- POST_LIST goes here -->' in filled:
+        filled = filled.replace('<!-- POST_LIST goes here -->', post_list_html)
+    else:
+        # Try to find a suitable location
         main_tag = filled.find('<main')
         if main_tag != -1:
             end_main_tag = filled.find('</main>', main_tag)
             if end_main_tag != -1:
-                filled = filled[:end_main_tag] + post_list + filled[end_main_tag:]
+                # Find the end of the first h1 tag after main
+                h1_start = filled.find('<h1', main_tag, end_main_tag)
+                if h1_start != -1:
+                    h1_end = filled.find('</h1>', h1_start, end_main_tag)
+                    if h1_end != -1:
+                        # Insert after the h1
+                        filled = filled[:h1_end + 5] + '\n' + post_list_html + filled[h1_end + 5:]
+                    else:
+                        # Fall back to inserting at the end of main
+                        filled = filled[:end_main_tag] + '\n' + post_list_html + filled[end_main_tag:]
+                else:
+                    # Fall back to inserting at the end of main
+                    filled = filled[:end_main_tag] + '\n' + post_list_html + filled[end_main_tag:]
             else:
-                print("⚠️ Could not find closing </main> tag. Appending to end of document.")
-                filled = filled + "\n" + post_list
+                # Fall back to inserting at the end of the document
+                filled = filled + '\n' + post_list_html
         else:
-            print("⚠️ Could not find <main> tag. Appending to end of document.")
-            filled = filled + "\n" + post_list
+            # Fall back to inserting at the end of the document
+            filled = filled + '\n' + post_list_html
 
-    # Inject CTA (if present)
+    # Add CTA (if present)
     cta_html = ''
-    if cta_html_file.exists():
-        cta_html = cta_html_file.read_text(encoding='utf-8')
+    if cta_path.exists():
+        cta_html = cta_path.read_text(encoding='utf-8')
 
     if '<!-- CTA_PLACEHOLDER -->' in filled:
         filled = filled.replace('<!-- CTA_PLACEHOLDER -->', cta_html)
 
-    # Append full footer just before </body>
+    # Add footer (if present)
     footer_html = ''
-    if footer_file.exists():
-        footer_html = footer_file.read_text(encoding='utf-8')
+    if footer_path.exists():
+        footer_html = footer_path.read_text(encoding='utf-8')
 
     final_html = filled.replace('</body>', f'{footer_html}\n</body>')
 
-    # Write out
-    output_html.parent.mkdir(parents=True, exist_ok=True)
-    output_html.write_text(final_html, encoding='utf-8')
+    # Write output
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(final_html)
 
-    print(f"✅ Blog index generated at: {output_html}")
-    print(f"📊 Listed {len(lines)} blog posts")
+    print(f"✅ Blog index generated at: {output_path}")
+    print(f"📊 Listed {len(post_items)} blog posts")
 
 
 if __name__ == "__main__":
