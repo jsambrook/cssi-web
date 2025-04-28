@@ -41,6 +41,10 @@ echo "✅ Markdown file generated: $MARKDOWN_PATH"
 echo "🔄 Converting Markdown to HTML using Pandoc..."
 python3 "$SCRIPT_DIR/markdown_to_html.py" --input "$MARKDOWN_PATH"
 
+# Step 3: Regenerate the blog index
+echo "🔄 Regenerating blog index page..."
+python3 "$SCRIPT_DIR/generate_blog_index.py"
+
 echo "🎉 Blog post generation complete!"
 echo "To view your blog post, check the HTML file in the blog directory."
 
@@ -50,8 +54,8 @@ YEAR=$(basename "$MARKDOWN_PATH" | cut -d'-' -f1)
 MONTH=$(basename "$MARKDOWN_PATH" | cut -d'-' -f2)
 
 echo "📝 Blog post URL: /blog/$YEAR/$MONTH/$SLUG.html"
+echo "📝 Blog index: /blog/index.html"
 echo ""
 echo "Next steps:"
 echo "1. Check the HTML output and make any desired edits"
 echo "2. Generate an image using the image prompt file"
-echo "3. Update your blog index if needed"

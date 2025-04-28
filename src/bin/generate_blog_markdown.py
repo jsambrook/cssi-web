@@ -45,6 +45,55 @@ def parse_args():
     parser.add_argument('--skip-reference-check', action='store_true', help='Skip reference URL validation (faster but might include invalid links)')
     return parser.parse_args()
 
+
+def generate_optimized_slug(title, max_length=50):
+    """
+    Generate an optimized, SEO-friendly slug from a title.
+
+    Args:
+        title (str): The title to convert to a slug
+        max_length (int): Maximum length of the slug
+
+    Returns:
+        str: An optimized slug
+    """
+    import re
+
+    # Convert to lowercase
+    slug = title.lower()
+
+    # Remove common words that don't add value
+    stop_words = ['a', 'an', 'the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+                 'with', 'by', 'about', 'as', 'of', 'how', 'why', 'when', 'what',
+                 'where', 'who', 'blog', 'post', 'article']
+
+    # Replace spaces with hyphens and remove stop words
+    words = slug.split()
+    filtered_words = [word for word in words if word not in stop_words]
+
+    # If we removed too many words, keep at least the first 3 meaningful words
+    if len(filtered_words) < 3 and len(words) >= 3:
+        filtered_words = words[:3]
+
+    # Join the words with hyphens
+    slug = '-'.join(filtered_words)
+
+    # Remove any special characters
+    slug = re.sub(r'[^a-z0-9-]', '', slug)
+
+    # Replace multiple hyphens with a single hyphen
+    slug = re.sub(r'-+', '-', slug)
+
+    # Remove leading/trailing hyphens
+    slug = slug.strip('-')
+
+    # Truncate if too long, but try to keep whole words
+    if len(slug) > max_length:
+        slug = slug[:max_length].rsplit('-', 1)[0]
+
+    return slug
+
+
 def build_prompt(description: str, context_md: str, today_str: str) -> str:
     return f"""
 Today's date is {today_str}.
@@ -607,10 +656,9 @@ def main():
 
     # Generate slug if not present
     if 'slug' not in metadata:
-        # Create a slug from title (lowercase, replace spaces with hyphens, remove special chars)
+        # Create an optimized slug from title
         title = metadata.get('title', args.description)
-        slug = re.sub(r'[^a-z0-9-]', '', title.lower().replace(' ', '-'))
-        metadata['slug'] = slug
+        metadata['slug'] = generate_optimized_slug(title)
 
     # Add year and month to metadata
     metadata['year'] = year_str
