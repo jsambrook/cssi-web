@@ -11,28 +11,14 @@
   <meta name="author" content="$author$">
   <link rel="stylesheet" href="/css/styles.css">
   <style>
-    /* Blog-specific styles that match your current design */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
+    /* Blog-specific styles */
     .blog-content {
       max-width: 800px;
       margin: 20px auto;
+      line-height: 1.6;
     }
 
     .blog-content h1 {
-      color: #24292e;
       margin-bottom: 10px;
     }
 
@@ -42,7 +28,6 @@
     }
 
     .blog-content h2 {
-      color: #24292e;
       margin-top: 40px;
       margin-bottom: 15px;
     }
@@ -51,7 +36,12 @@
       margin-bottom: 20px;
     }
 
-    /* References section styling */
+    .blog-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
     .references {
       margin-top: 40px;
       padding-top: 20px;
@@ -66,7 +56,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="container">
       <nav>
@@ -84,7 +73,13 @@
 
   <main class="container blog-content">
     <article>
+      <!-- Check if first line of body contains an h1 with same title -->
+      $if(first_heading_is_title)$
+      <!-- Skip the h1 title as it's already in the body -->
+      $else$
       <h1>$title$</h1>
+      $endif$
+
       <div class="blog-meta">
         <span class="blog-date">$date$</span>
         $if(tags)$
