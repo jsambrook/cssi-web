@@ -27,9 +27,13 @@ A voice agent eliminates this friction by allowing visitors to simply ask their 
 
 This direct approach is particularly valuable for service-based businesses where customers often have specific questions before making contact. Plumbers, legal consultants, healthcare providers, and other service professionals can use voice agents to qualify leads efficiently while providing helpful information.
 
+> **Try It Now!** Experience a voice agent in action right on our website! Simply click the microphone icon in the lower right-hand corner of our site ("Talk to AI") and ask a question about our services. See firsthand how this technology can transform visitor interactions. [Try Our Voice Agent](https://common-sense.com)
+
 ### Multilingual Support That Builds Connection
 
 One of the most powerful yet underutilized advantages of voice agents is their ability to communicate in multiple languages. This capability opens your business to global markets and enhances your connection with diverse local communities.
+
+![Voice agent providing multilingual support to website visitors](assets/header-image.jpg)
 
 When a visitor can interact with your website in their native language, it creates an immediate sense of comfort and trust. Voice agents can detect the visitor's preferred language and switch seamlessly, removing language barriers that might otherwise prevent engagement.
 
@@ -97,6 +101,8 @@ While voice agents offer compelling benefits, they're not the right solution for
 
 **Resource Constraints**: Consider your current ability to respond to leads. If you're consistently missing opportunities because you can't respond quickly enough to inquiries, a voice agent can bridge this gap.
 
+At Common Sense Systems, we can help you evaluate whether a voice agent is the right solution for your business needs. Our team will analyze your website traffic, customer interaction patterns, and business goals to provide tailored recommendations. Contact us for a free consultation to determine if voice agent technology is right for your business.
+
 ### Getting Started with Voice Agent Implementation
 
 Implementing a voice agent doesn't have to be complicated or expensive. Here's a simplified approach:
@@ -150,6 +156,8 @@ Today's voice agents leverage several advanced technologies to create natural, h
 
 These technologies work together to create voice interactions that feel surprisingly human and helpful, removing the frustration often associated with earlier generations of automated systems.
 
+> **Need expert implementation?** At Common Sense Systems, we handle all the technical aspects of voice agent implementation, from setup to optimization. Our team stays current with the latest voice technology advancements to ensure your solution remains cutting-edge. [Schedule a Demo](#) to see how we can implement this technology on your website.
+
 ## Conclusion: Transforming Visitor Experiences Through Voice
 
 In the competitive digital landscape of 2025, passive websites that merely present information are increasingly ineffective. Visitors expect interactive experiences that address their specific needs quickly and effectively.
@@ -158,6 +166,11 @@ Voice agents represent an accessible way for small businesses to transform their
 
 Before implementing a voice agent, however, it's crucial to ensure you're generating sufficient traffic to your website. Even the most sophisticated voice agent can't engage visitors who aren't there. If your website isn't currently receiving consistent traffic, we recommend prioritizing traffic-building strategies first.
 
-At Common Sense Systems, we specialize in helping small businesses implement the right technology solutions at the right time. Whether you need assistance driving traffic to your website or implementing a voice agent to better engage your visitors, our team can provide the guidance and support you need.
+At Common Sense Systems, we specialize in helping small businesses implement the right technology solutions at the right time. Our voice agent implementation services include:
 
-Ready to explore how a voice agent could transform your website visitor experience? Contact us today to discuss your specific business needs and discover the most effective approach for your situation.
+- Custom voice agent development tailored to your business needs
+- Integration with your existing website and CRM systems
+- Training and ongoing support to maximize effectiveness
+- Traffic-building strategies to ensure your voice agent has visitors to engage
+
+Ready to explore how a voice agent could transform your website visitor experience? [Contact us today](#) to discuss your specific business needs and discover the most effective approach for your situation.
