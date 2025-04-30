@@ -7,7 +7,7 @@ Generate a complete blog article using Markdown format that follows these requir
 1. **YAML Front Matter**: Begin with YAML front matter enclosed by triple dashes (---) containing:
    - title: "Article Title" (clear, engaging, under 70 characters)
    - date: YYYY-MM-DD (use today's date)
-   - author: "Author Name" (default: "Common Sense Systems")
+   - author: "Author Name" (default: "Common Sense Systems, Inc.")
    - categories: ["Primary Category"] (choose 1-2 most relevant categories)
    - tags: ["Tag1", "Tag2", "Tag3", "Tag4"] (4-6 specific keywords)
    - summary: "A concise 1-2 sentence description of the article" (under 160 characters)
@@ -44,6 +44,7 @@ Generate a complete blog article using Markdown format that follows these requir
    - Knowledgeable but not overly technical
    - Write for small to medium business owners/operators
    - Be helpful, practical, and solution-oriented
+   - Neither too enthusiastic nor too dour
 
 2. **Content Focus**:
    - Focus on actionable insights and practical applications
