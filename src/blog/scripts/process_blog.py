@@ -26,7 +26,7 @@ CONFIG = {
 }
 
 def extract_metadata(md_file):
-    """Extract YAML front matter from markdown file"""
+    """Extract YAML front matter from markdown file with improved formatting"""
     with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -61,7 +61,7 @@ def extract_metadata(md_file):
             if isinstance(metadata["date"], str):
                 metadata["date"] = datetime.strptime(metadata["date"], "%Y-%m-%d")
 
-            # Ensure tags and categories are lists
+            # Ensure tags and categories are lists and properly formatted
             if "tags" in metadata and not isinstance(metadata["tags"], list):
                 metadata["tags"] = [t.strip() for t in metadata["tags"].split(",")]
             elif "tags" not in metadata:
@@ -71,6 +71,10 @@ def extract_metadata(md_file):
                 metadata["categories"] = [c.strip() for c in metadata["categories"].split(",")]
             elif "categories" not in metadata:
                 metadata["categories"] = ["Uncategorized"]
+
+            # Format categories and tags for display with proper spacing
+            metadata["categories_display"] = ", ".join(metadata["categories"])
+            metadata["tags_display"] = ", ".join(metadata["tags"])
 
             return metadata
         except yaml.YAMLError as e:
@@ -105,10 +109,11 @@ def default_metadata(md_file):
     # Create title from filename
     title = " ".join(word.capitalize() for word in slug.replace("-", " ").replace("_", " ").split())
 
-    return {
+    # Create default metadata with proper display formatting
+    metadata = {
         "title": title,
         "date": date,
-        "author": "Common Sense Systems",
+        "author": "Common Sense Systems, Inc.",
         "categories": ["Uncategorized"],
         "tags": [],
         "slug": slug,
@@ -116,8 +121,12 @@ def default_metadata(md_file):
         "year": year,
         "month": month,
         "url": url,
-        "html_path": html_path
+        "html_path": html_path,
+        "categories_display": "Uncategorized",
+        "tags_display": ""
     }
+
+    return metadata
 
 def copy_assets(md_file, metadata):
     """Copy assets directory if it exists"""
@@ -148,7 +157,7 @@ def copy_assets(md_file, metadata):
         print(f"Copied assets: {source_assets} -> {output_assets}")
 
 def generate_html(md_file, metadata):
-    """Generate HTML from markdown using pandoc"""
+    """Generate HTML from markdown using pandoc with improved metadata handling"""
     # Determine output path
     rel_path = os.path.relpath(md_file, CONFIG["content_root"])
     dir_parts = os.path.dirname(rel_path).split(os.sep)
@@ -169,7 +178,8 @@ def generate_html(md_file, metadata):
     metadata_args = []
     for key, value in metadata.items():
         if isinstance(value, list):
-            value = ",".join(value)
+            # Join lists with comma and space for better display
+            value = ", ".join(value)
         elif isinstance(value, datetime):
             value = value.strftime("%B %d, %Y")  # Format date as "April 28, 2025"
 
@@ -192,7 +202,7 @@ def generate_html(md_file, metadata):
         return None
 
 def generate_index(posts):
-    """Generate blog index.html from posts metadata"""
+    """Generate blog index.html from posts metadata with improved formatting"""
     index_template = os.path.join(CONFIG["template_dir"], "blog_index_template.html")
     output_file = os.path.join(CONFIG["output_root"], "index.html")
 
@@ -228,12 +238,14 @@ def generate_index(posts):
         tag_html += f'        <a href="#" data-tag="{html.escape(tag)}" class="tag">{html.escape(tag)} <span class="count">({count})</span></a>\n'
     tag_html += '      </div>'
 
-    # Generate blog posts list HTML
+    # Generate blog posts list HTML with properly formatted categories and tags
     posts_html = '<ul class="blog-list">\n'
     for post in sorted_posts:
         date_str = post["date"].strftime("%B %d, %Y")
+
+        # Ensure categories and tags are properly formatted for data attributes
         categories_attr = ",".join(post["categories"]) if isinstance(post["categories"], list) else post["categories"]
-        tags_attr = ",".join(post["tags"]) if isinstance(post["tags"], list) else ""
+        tags_attr = ",".join(post["tags"]) if isinstance(post["tags"], list) and post["tags"] else ""
 
         posts_html += f'      <li data-categories="{html.escape(categories_attr)}" data-tags="{html.escape(tags_attr)}"><a href="{html.escape(post["html_path"])}">{html.escape(post["title"])}</a> <span class="blog-date">– {date_str}</span></li>\n'
     posts_html += '    </ul>'
@@ -351,19 +363,27 @@ def main():
                                 date = datetime.now()
 
                         categories_match = re.search(r'<meta name="categories" content="(.*?)"', content)
-                        categories = categories_match.group(1).split(",") if categories_match else ["Uncategorized"]
+                        categories_str = categories_match.group(1) if categories_match else "Uncategorized"
+                        categories = [c.strip() for c in categories_str.split(",")]
 
                         tags_match = re.search(r'<meta name="tags" content="(.*?)"', content)
-                        tags = tags_match.group(1).split(",") if tags_match and tags_match.group(1) else []
+                        tags_str = tags_match.group(1) if tags_match and tags_match.group(1) else ""
+                        tags = [t.strip() for t in tags_str.split(",")] if tags_str else []
 
                         # Get relative path for URLs
                         rel_path = os.path.relpath(os.path.join(root, file), CONFIG["output_root"])
+
+                        # Add properly formatted display versions
+                        categories_display = ", ".join(categories)
+                        tags_display = ", ".join(tags)
 
                         all_posts.append({
                             "title": title,
                             "date": date,
                             "categories": categories,
                             "tags": tags,
+                            "categories_display": categories_display,
+                            "tags_display": tags_display,
                             "html_path": f"/{rel_path}"
                         })
                     except Exception as e:

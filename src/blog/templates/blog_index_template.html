@@ -65,6 +65,75 @@
     color: #333;
   }
 
+  /* Updated blog-meta styling for consistency with blog template */
+  .blog-meta {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem; /* Vertical and horizontal gap between items */
+  }
+
+  /* Updated separator style */
+  .blog-meta span:not(:last-child):after {
+    content: "•";
+    margin-left: 1rem;
+    color: #999;
+  }
+
+  /* Ensure categories display properly with space after commas */
+  .blog-categories {
+    display: inline-block;
+  }
+
+  /* Responsive adjustments for blog meta */
+  @media (max-width: 768px) {
+    .blog-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .blog-meta span:not(:last-child):after {
+      display: none; /* Remove separators on mobile */
+    }
+  }
+
+  /* Improved blog list display */
+  .blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .blog-list li {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .blog-list a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  .blog-list a:hover {
+    color: #0066cc;
+  }
+
+  /* Improved date display */
+  .blog-date {
+    color: #666;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+
   /* Filter panel - collapsed by default on mobile */
   .blog-filters {
     display: none;
@@ -197,37 +266,6 @@
     .tag {
       padding: 0.4rem 0.6rem;
     }
-  }
-
-  /* Blog list styling */
-  .blog-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .blog-list li {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .blog-list a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-
-  .blog-list a:hover {
-    color: #0066cc;
-  }
-
-  .blog-date {
-    color: #666;
-    font-size: 0.9rem;
   }
 </style>
 

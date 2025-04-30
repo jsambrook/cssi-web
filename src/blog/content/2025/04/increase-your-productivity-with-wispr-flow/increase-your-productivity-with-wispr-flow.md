@@ -1,7 +1,7 @@
 ---
 title: "Increase Your Productivity with Wispr Flow"
 date: 2025-04-29
-author: "Common Sense Systems"
+author: "Common Sense Systems, Inc."
 categories: ["Productivity", "Small Business Technology"]
 tags: ["AI", "Voice Dictation", "Productivity Tools", "Time Saving", "Digital Strategy", "Efficiency"]
 summary: "Discover how Wispr Flow's AI-powered voice dictation tool can help busy professionals write three times faster across all applications."
