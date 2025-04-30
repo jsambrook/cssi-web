@@ -21,8 +21,6 @@ But what if there was a way to bridge this gap? What if your words could flow di
 
 Wispr Flow is an AI-powered voice dictation tool designed to transform how professionals interact with their computers. Unlike traditional dictation software that requires specific formatting commands or extensive editing afterward, Wispr Flow understands natural speech patterns and converts them into perfectly formatted text in real-time.
 
-![Wispr Flow Interface](assets/wispr-flow-interface.jpg)
-
 The core proposition is straightforward but powerful: speak naturally, and watch your words appear on screen with the proper formatting, punctuation, and context-appropriate style—no extra edits needed. This technology allows users to write approximately three times faster than traditional typing methods across all applications.
 
 ## Key Features That Set Wispr Flow Apart
@@ -116,8 +114,6 @@ Implementing Wispr Flow across your organization is straightforward:
 4. **Start Dictating**: Hold down the designated key (typically Ctrl) and begin speaking naturally to dictate in any application.
 
 5. **Explore Advanced Features**: As you become comfortable with basic dictation, explore features like command mode and whispering options.
-
-![Wispr Flow in Action](assets/wispr-flow-in-action.jpg)
 
 ## Best Practices for Maximizing Value
 
