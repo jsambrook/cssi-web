@@ -1,33 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://common-sense.com/</loc>
-    <lastmod>2025-03-24</lastmod>
+    <lastmod>2025-04-29</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/ai-integration.html</loc>
+    <lastmod>2025-04-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/about.html</loc>
-    <lastmod>2025-03-24</lastmod>
+    <lastmod>2025-04-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://common-sense.com/contact.html</loc>
-    <lastmod>2025-03-24</lastmod>
+    <lastmod>2025-04-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://common-sense.com/ai-integration.html</loc>
-    <lastmod>2025-03-24</lastmod>
+    <loc>https://common-sense.com/revenue-improvement.html</loc>
+    <lastmod>2025-04-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/payments.html</loc>
+    <lastmod>2025-04-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va.html</loc>
+    <lastmod>2025-03-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-1.html</loc>
+    <lastmod>2025-03-29</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/process-automation.html</loc>
-    <lastmod>2025-03-24</lastmod>
+    <lastmod>2025-04-29</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://common-sense.com/revenue-improvement.html</loc>
-    <lastmod>2025-03-24</lastmod>
-    <priority>0.7</priority>
+    <loc>https://common-sense.com/blog/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/04/increase-your-productivity-with-wispr-flow/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/</loc>
+    <lastmod>2025-04-30</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
