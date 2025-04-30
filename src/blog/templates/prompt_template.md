@@ -11,7 +11,7 @@ Generate a complete blog article using Markdown format that follows these requir
    - categories: ["Primary Category"] (choose 1-2 most relevant categories)
    - tags: ["Tag1", "Tag2", "Tag3", "Tag4"] (4-6 specific keywords)
    - summary: "A concise 1-2 sentence description of the article" (under 160 characters)
-   - featuredImage: "assets/header-image.jpg" (always use this path)
+   - featuredImage: "assets/header-image.png" (always use this path)
    - status: "published"
 
 2. **Content Structure**:
