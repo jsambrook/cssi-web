@@ -1,7 +1,7 @@
 ---
 title: "How AI is Transforming Small Business Operations"
 date: 2025-04-28
-author: "John Smith"
+author: "Common Sense Systems, Inc."
 categories: ["AI for Business"]
 tags: ["AI", "Automation", "Small Business", "Process Improvement"]
 summary: "Learn how small businesses can leverage AI to automate tasks and improve efficiency."
