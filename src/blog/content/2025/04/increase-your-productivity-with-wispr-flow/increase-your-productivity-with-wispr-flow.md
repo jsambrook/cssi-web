@@ -5,7 +5,7 @@ author: "Common Sense Systems"
 categories: ["Productivity", "Small Business Technology"]
 tags: ["AI", "Voice Dictation", "Productivity Tools", "Time Saving", "Digital Strategy", "Efficiency"]
 summary: "Discover how Wispr Flow's AI-powered voice dictation tool can help busy professionals write three times faster across all applications."
-featuredImage: "assets/wispr-flow_2.jpg"
+featuredImage: "assets/wispr-flow_2.png"
 status: "published"
 ---
 

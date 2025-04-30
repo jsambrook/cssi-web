@@ -123,6 +123,12 @@
         </div>
       </div>
 
+      $if(featuredImage)$
+      <div class="featured-image">
+        <img src="$featuredImage$" alt="$title$">
+      </div>
+      $endif$
+
       <div class="blog-content">
         $body$
       </div>
