@@ -23,8 +23,6 @@ title: 'The Steady Hand: How AI Assistants Bring Consistency to Business Operati
 
 In business, consistency is king. From customer service interactions to internal processes, predictable outcomes build trust, improve efficiency, and reduce operational stress. Yet human teams—for all their creativity and adaptability—inevitably introduce variability into business operations. Mood swings, personal biases, fatigue, and individual differences in training all contribute to inconsistent results that can impact your bottom line.
 
-![AI assistant working consistently across multiple business functions](assets/header-image.png)
-
 Enter the AI assistant: a digital colleague with an even temperament that never has a bad day, never gets tired, and never deviates from established protocols unless instructed to do so. As businesses increasingly integrate AI assistants into their operations, many are discovering a significant and often unexpected benefit: the elimination of emotional and performance variability that has long been accepted as an unavoidable aspect of business operations.
 
 This consistency isn't about replacing human creativity or judgment—it's about complementing human teams with a reliable foundation that reduces unnecessary surprises and creates space for human employees to focus on what they do best: innovation, relationship-building, and complex problem-solving that requires emotional intelligence.
@@ -79,8 +77,6 @@ AI assistants follow established protocols without deviation unless specifically
 - Workflows proceed exactly as designed every time
 - Compliance requirements are consistently met
 - Quality control becomes more predictable
-
-![AI maintaining consistent performance across business processes](assets/header-image.png)
 
 A manufacturing client of Common Sense Systems reduced quality control exceptions by 47% after implementing AI assistants to monitor and guide production processes. The consistency of the AI's monitoring eliminated the variability that had previously resulted from human attention lapses during repetitive tasks.
 
