@@ -1,5 +1,5 @@
 ---
-author: Sunday's Acupuncture
+author: Sundays Acupuncture
 categories:
 - Holistic Health
 date: 2025-05-02
@@ -20,7 +20,7 @@ title: 'Finding Balance: The Gentle Power of Japanese Acupuncture'
 
 When most people think of acupuncture, they often picture the traditional Chinese approach—perhaps with visions of multiple needles penetrating deeply into the skin. However, there's another approach that's gaining recognition for its subtlety and effectiveness: Japanese-style acupuncture. This refined technique emphasizes gentleness, precision, and a highly individualized treatment experience.
 
-At Sunday's Acupuncture in Kirkland, Licensed Acupuncturist Shannon Evans specializes in this Japanese approach, offering a therapeutic experience that many find surprisingly comfortable and remarkably effective. Unlike its Chinese counterpart, Japanese acupuncture typically uses thinner needles, shallower insertion, and fewer needles overall—making it an excellent option for those who might be needle-sensitive or trying acupuncture for the first time.
+At Sundays Acupuncture in Kirkland, Licensed Acupuncturist Shannon Evans specializes in this Japanese approach, offering a therapeutic experience that many find surprisingly comfortable and remarkably effective. Unlike its Chinese counterpart, Japanese acupuncture typically uses thinner needles, shallower insertion, and fewer needles overall—making it an excellent option for those who might be needle-sensitive or trying acupuncture for the first time.
 
 "Japanese acupuncture is like a whisper rather than a shout," Shannon often explains to new patients. "It demonstrates that sometimes the lightest touch can create the most profound healing response."
 
@@ -55,7 +55,7 @@ While acupuncture has roots in traditional East Asian medicine dating back thous
 
 What makes Japanese acupuncture particularly effective is its emphasis on working with the body rather than forcing change. The gentle approach allows the nervous system to remain in a parasympathetic (rest and digest) state during treatment, optimizing the healing response.
 
-## Common Conditions Treated at Sunday's Acupuncture
+## Common Conditions Treated at Sundays Acupuncture
 
 Shannon Evan's expertise in Japanese acupuncture techniques makes her practice well-suited for addressing a wide range of health concerns. Some of the most common conditions she treats include:
 
@@ -108,11 +108,11 @@ Shannon's journey to acupuncture began with her own health challenges and discov
 
 Her approach is characterized by attentiveness and individualization. "No two bodies are exactly alike," Shannon explains, "so no two treatments should be identical either." This philosophy guides her practice, where each session begins with careful observation and palpation to determine the precise approach needed for that specific day.
 
-Patients consistently note Shannon's ability to create a calming environment where healing can naturally unfold. The treatment room at Sunday's Acupuncture reflects this intention—warm lighting, subtle Japanese aesthetic elements, and an atmosphere of tranquility welcome you from the moment you arrive.
+Patients consistently note Shannon's ability to create a calming environment where healing can naturally unfold. The treatment room at Sundays Acupuncture reflects this intention—warm lighting, subtle Japanese aesthetic elements, and an atmosphere of tranquility welcome you from the moment you arrive.
 
 ## What to Expect During Your First Visit
 
-For those new to Japanese acupuncture, knowing what to expect can help ease any apprehension about the experience. Here's what a typical first appointment at Sunday's Acupuncture includes:
+For those new to Japanese acupuncture, knowing what to expect can help ease any apprehension about the experience. Here's what a typical first appointment at Sundays Acupuncture includes:
 
 ### Comprehensive Consultation
 
@@ -134,7 +134,7 @@ After your session, Shannon provides personalized recommendations that might inc
 
 ## Patient Stories: Experiencing the Difference
 
-The true measure of any healing practice is in the experiences of those who've benefited from it. Here are just a few examples of how Japanese acupuncture at Sunday's Acupuncture has helped Kirkland residents:
+The true measure of any healing practice is in the experiences of those who've benefited from it. Here are just a few examples of how Japanese acupuncture at Sundays Acupuncture has helped Kirkland residents:
 
 > "After years of trying different approaches for my chronic migraines, I was skeptical that something as gentle as Japanese acupuncture could help. But after just three sessions with Shannon, the frequency of my headaches decreased dramatically. What impressed me most was how comfortable the whole experience was—nothing like what I'd imagined acupuncture to be." — Melissa K.
 
@@ -152,10 +152,10 @@ Japanese acupuncture pairs particularly well with other wellness practices like 
 
 ## Taking the First Step Toward Balance
 
-If you've been curious about acupuncture but hesitant about the potential discomfort, Japanese-style acupuncture at Sunday's Acupuncture offers an ideal introduction to this powerful healing tradition. The gentle approach, personalized care, and Shannon's expertise create an experience that's both accessible and effective.
+If you've been curious about acupuncture but hesitant about the potential discomfort, Japanese-style acupuncture at Sundays Acupuncture offers an ideal introduction to this powerful healing tradition. The gentle approach, personalized care, and Shannon's expertise create an experience that's both accessible and effective.
 
 Your journey toward improved wellbeing can begin with a simple step: scheduling a consultation with Shannon to discuss your specific health concerns and learn more about how Japanese acupuncture might help. The website at [sundaysacupuncture.com](https://sundaysacupuncture.com) offers easy online booking, or you can call directly to arrange your visit.
 
-In the peaceful setting of Sunday's Acupuncture in Kirkland, you'll discover that sometimes the gentlest approach can create the most profound healing. Your body has an innate wisdom and capacity for balance—Japanese acupuncture simply helps remove the obstacles standing in the way of your natural wellbeing.
+In the peaceful setting of Sundays Acupuncture in Kirkland, you'll discover that sometimes the gentlest approach can create the most profound healing. Your body has an innate wisdom and capacity for balance—Japanese acupuncture simply helps remove the obstacles standing in the way of your natural wellbeing.
 
 Whether you're seeking relief from a specific condition or simply wanting to enhance your overall health, Shannon Evans skilled practice of Japanese acupuncture offers a path forward that honors both ancient wisdom and modern understanding of the body's remarkable healing potential.
