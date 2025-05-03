@@ -57,7 +57,7 @@ What makes Japanese acupuncture particularly effective is its emphasis on workin
 
 ## Common Conditions Treated at Sunday's Acupuncture
 
-Shannon Sunday's expertise in Japanese acupuncture techniques makes her practice well-suited for addressing a wide range of health concerns. Some of the most common conditions she treats include:
+Shannon Evan's expertise in Japanese acupuncture techniques makes her practice well-suited for addressing a wide range of health concerns. Some of the most common conditions she treats include:
 
 ### Pain Management
 
@@ -100,9 +100,9 @@ The gut-brain connection responds well to acupuncture's balancing effects, helpi
 - Food sensitivities
 - General digestive discomfort
 
-## Meet Shannon Sunday: Your Guide to Balanced Wellness
+## Meet Shannon Evans: Your Guide to Balanced Wellness
 
-Behind every effective treatment is a skilled practitioner, and Shannon Sunday brings both extensive training and a compassionate approach to her Kirkland practice. As a Licensed Acupuncturist (L.Ac.) with specialized training in Japanese techniques, Shannon combines traditional wisdom with modern understanding.
+Behind every effective treatment is a skilled practitioner, and Shannon Evans brings both extensive training and a compassionate approach to her Kirkland practice. As a Licensed Acupuncturist (L.Ac.) with specialized training in Japanese techniques, Shannon combines traditional wisdom with modern understanding.
 
 Shannon's journey to acupuncture began with her own health challenges and discovery of this gentle yet powerful healing modality. After experiencing the benefits firsthand, she dedicated herself to mastering the art and science of Japanese acupuncture through rigorous education and apprenticeship.
 
@@ -158,4 +158,4 @@ Your journey toward improved wellbeing can begin with a simple step: scheduling 
 
 In the peaceful setting of Sunday's Acupuncture in Kirkland, you'll discover that sometimes the gentlest approach can create the most profound healing. Your body has an innate wisdom and capacity for balance—Japanese acupuncture simply helps remove the obstacles standing in the way of your natural wellbeing.
 
-Whether you're seeking relief from a specific condition or simply wanting to enhance your overall health, Shannon Sunday's skilled practice of Japanese acupuncture offers a path forward that honors both ancient wisdom and modern understanding of the body's remarkable healing potential.
+Whether you're seeking relief from a specific condition or simply wanting to enhance your overall health, Shannon Evans skilled practice of Japanese acupuncture offers a path forward that honors both ancient wisdom and modern understanding of the body's remarkable healing potential.
