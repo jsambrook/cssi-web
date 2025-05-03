@@ -20,7 +20,7 @@ title: 'Finding Balance: The Gentle Power of Japanese Acupuncture'
 
 When most people think of acupuncture, they often picture the traditional Chinese approach—perhaps with visions of multiple needles penetrating deeply into the skin. However, there's another approach that's gaining recognition for its subtlety and effectiveness: Japanese-style acupuncture. This refined technique emphasizes gentleness, precision, and a highly individualized treatment experience.
 
-At Sunday's Acupuncture in Kirkland, Licensed Acupuncturist Shannon Sunday specializes in this Japanese approach, offering a therapeutic experience that many find surprisingly comfortable and remarkably effective. Unlike its Chinese counterpart, Japanese acupuncture typically uses thinner needles, shallower insertion, and fewer needles overall—making it an excellent option for those who might be needle-sensitive or trying acupuncture for the first time.
+At Sunday's Acupuncture in Kirkland, Licensed Acupuncturist Shannon Evans specializes in this Japanese approach, offering a therapeutic experience that many find surprisingly comfortable and remarkably effective. Unlike its Chinese counterpart, Japanese acupuncture typically uses thinner needles, shallower insertion, and fewer needles overall—making it an excellent option for those who might be needle-sensitive or trying acupuncture for the first time.
 
 "Japanese acupuncture is like a whisper rather than a shout," Shannon often explains to new patients. "It demonstrates that sometimes the lightest touch can create the most profound healing response."
 
