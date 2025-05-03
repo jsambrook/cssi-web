@@ -24,7 +24,7 @@ In today's fast-paced business environment, automation isn't just a luxury—it'
 
 n8n (pronounced "n-eight-n") is an extendable workflow automation tool that connects your apps, data, and services—allowing them to communicate with each other seamlessly. Unlike many automation platforms that lock you into their ecosystem, n8n is fair-code licensed, giving you unprecedented freedom and control over your automation infrastructure. It's designed for businesses that want the power of enterprise-grade automation without the enterprise-grade complexity or price tag.
 
-At Common Sense Systems, we've integrated n8n into numerous client solutions, and we've seen firsthand how it transforms business operations. This article will introduce you to the capabilities of n8n and show you why it might be the missing piece in your business technology stack.
+At Common Sense Systems, we're experts on n8n, and we've seen firsthand how it transforms business operations. This article will introduce you to the capabilities of n8n and show you why it might be the missing piece in your business technology stack.
 
 ## What Makes n8n Different from Other Automation Tools?
 
@@ -52,7 +52,7 @@ n8n truly shines when it comes to connecting different systems:
 
 ## Real-World Business Applications of n8n
 
-Understanding the theoretical benefits of n8n is one thing, but seeing how it applies to real business scenarios brings its value to life. Here are some common applications we've implemented for clients:
+Understanding the theoretical benefits of n8n is one thing, but seeing how it applies to real business scenarios brings its value to life. Here are some common applications of it:
 
 ### Customer Data Synchronization
 
@@ -88,7 +88,7 @@ Generate business intelligence without the manual data gathering:
 
 ## Getting Started with n8n: A Simplified Approach
 
-If you're intrigued by the possibilities of n8n but concerned about the technical aspects, here's how we approach implementation for our clients:
+If you're intrigued by the possibilities of n8n but concerned about the technical aspects, here's an approach we recommend:
 
 ### 1. Identify Automation Opportunities
 
@@ -185,7 +185,7 @@ We offer:
 - **Training and documentation**: We'll ensure your team understands how to use and maintain your automations
 - **Ongoing support**: We're here to help as your automation needs evolve
 
-> "Our goal isn't to sell you technology for technology's sake. We want to find the right solutions for your specific business challenges—and sometimes, n8n is exactly the right tool for the job." — Common Sense Systems
+> "Our goal isn't to sell you technology for technology's sake. We want to find the right solutions for your specific business challenges—and sometimes, n8n is exactly the right tool for the job." — John Sambrook
 
 ## Is n8n Right for Your Business?
 
