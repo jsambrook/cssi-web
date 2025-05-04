@@ -205,7 +205,7 @@ def generate_html(md_file, metadata):
                 metadata_args.extend(["--metadata", f"{key}={value}"])
 
         # Run pandoc with JSON-LD included in header
-        cmd = ["pandoc", "--include-in-header", json_ld_file.name, md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args
+        cmd = ["pandoc", f"--include-in-header={json_ld_file.name}", md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args
 
         print(f"PANDOC COMMAND: {cmd}")
 
