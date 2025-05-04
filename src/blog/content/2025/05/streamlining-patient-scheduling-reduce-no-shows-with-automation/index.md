@@ -3,7 +3,7 @@ author: Common Sense Systems, Inc.
 categories:
 - Process Automation
 - Small Business Technology
-date: 2023-05-03
+date: 2025-05-03
 featuredImage: assets/header-image.png
 status: published
 summary: Discover how healthcare practices can implement automated scheduling systems

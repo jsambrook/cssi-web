@@ -3,7 +3,7 @@ author: Common Sense Systems, Inc.
 categories:
 - Small Business Technology
 - Process Automation
-date: 2023-05-03
+date: 2025-05-03
 featuredImage: assets/header-image.png
 status: published
 summary: Discover how modern inventory management systems can help small retailers
