@@ -5,6 +5,7 @@ import re
 import yaml
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 from datetime import datetime
 import argparse
@@ -174,22 +175,38 @@ def generate_html(md_file, metadata):
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
 
-    # Prepare metadata for pandoc as variables
-    metadata_args = []
-    for key, value in metadata.items():
-        if isinstance(value, list):
-            # Join lists with comma and space for better display
-            value = ", ".join(value)
-        elif isinstance(value, datetime):
-            value = value.strftime("%B %d, %Y")  # Format date as "April 28, 2025"
-
-        if value:  # Ignore empty values
-            metadata_args.extend(["--metadata", f"{key}={value}"])
-
-    # Run pandoc
-    cmd = ["pandoc", md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args
+    # Generate JSON-LD structured data using gen-json-ld.py
+    json_ld_file = tempfile.NamedTemporaryFile(suffix='.html', delete=False)
+    json_ld_file.close()
 
     try:
+        # Call gen-json-ld.py to generate the JSON-LD markup
+        json_ld_cmd = [
+            "/Users/john/cssi-ai/gen-json-ld/gen-json-ld.py",
+            md_file,
+            "--output",
+            json_ld_file.name
+        ]
+
+        print(f"Generating JSON-LD structured data...")
+        subprocess.run(json_ld_cmd, check=True)
+        print(f"JSON-LD generated: {json_ld_file.name}")
+
+        # Prepare metadata for pandoc as variables
+        metadata_args = []
+        for key, value in metadata.items():
+            if isinstance(value, list):
+                # Join lists with comma and space for better display
+                value = ", ".join(value)
+            elif isinstance(value, datetime):
+                value = value.strftime("%B %d, %Y")  # Format date as "April 28, 2025"
+
+            if value:  # Ignore empty values
+                metadata_args.extend(["--metadata", f"{key}={value}"])
+
+        # Run pandoc with JSON-LD included in header
+        cmd = ["pandoc", md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args + ["--include-in-header", json_ld_file.name]
+
         subprocess.run(cmd, check=True)
         print(f"Generated HTML: {output_file}")
 
@@ -200,6 +217,12 @@ def generate_html(md_file, metadata):
     except subprocess.CalledProcessError as e:
         print(f"Error generating HTML for {md_file}: {e}")
         return None
+    finally:
+        # Clean up the temporary file
+        try:
+            os.unlink(json_ld_file.name)
+        except Exception as e:
+            print(f"Warning: Could not delete temporary file {json_ld_file.name}: {e}")
 
 def generate_index(posts):
     """Generate blog index.html from posts metadata with improved formatting"""
