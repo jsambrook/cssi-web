@@ -182,7 +182,7 @@ def generate_html(md_file, metadata):
     try:
         # Call gen-json-ld.py to generate the JSON-LD markup
         json_ld_cmd = [
-            "/Users/john/cssi-ai/gen-json-ld/gen-json-ld.py",
+            "/Users/john/git/cssi-ai/gen-json-ld/gen-json-ld.py",
             md_file,
             "--output",
             json_ld_file.name
