@@ -207,6 +207,17 @@ def generate_html(md_file, metadata):
         # Run pandoc with JSON-LD included in header
         cmd = ["pandoc", md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args + ["--include-in-header", json_ld_file.name]
 
+        print(f"PANDOC COMMAND: {cmd}")
+
+        subprocess.run(cmd, check=True)
+        print(f"Generated HTML: {output_file}")
+
+        # Copy assets if they exist
+        copy_assets(md_file, metadata)
+
+        return output_file
+    except subprocess.CalledProcessError as e:
+
         subprocess.run(cmd, check=True)
         print(f"Generated HTML: {output_file}")
 
@@ -220,7 +231,8 @@ def generate_html(md_file, metadata):
     finally:
         # Clean up the temporary file
         try:
-            os.unlink(json_ld_file.name)
+            pass
+            #os.unlink(json_ld_file.name)
         except Exception as e:
             print(f"Warning: Could not delete temporary file {json_ld_file.name}: {e}")
 
