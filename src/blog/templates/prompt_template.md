@@ -6,7 +6,7 @@ Generate a complete blog article using Markdown format that follows these requir
 
 1. **YAML Front Matter**: Begin with YAML front matter enclosed by triple dashes (---) containing:
    - title: "Article Title" (clear, engaging, under 70 characters)
-   - date: YYYY-MM-DD (use today's date)
+   - date: 2025-MM-DD (use today's exact day and month, but always use 2025 as the year)
    - author: "Author Name" (default: "Common Sense Systems, Inc.")
    - categories: ["Primary Category"] (choose 1-2 most relevant categories)
    - tags: ["Tag1", "Tag2", "Tag3", "Tag4"] (4-6 specific keywords)
