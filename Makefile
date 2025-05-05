@@ -116,4 +116,4 @@ help:
 	@echo "  help         - Show this help message"
 
 # Define all phony targets
-.PHONY: all validate-html sitemap blog blog-post blog-index clean-sitemap clean-blog clean help
+.PHONY: all validate sitemap blog blog-post blog-index clean-sitemap clean-blog clean help
