@@ -1,0 +1,412 @@
+2025-05-05 10:00:07 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:00:07 - INFO - Starting blog processing
+2025-05-05 10:00:07 - INFO - DRY RUN: Would process 12 posts:
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:00:07 - INFO -   - src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:00:07 - INFO - No changes were made (dry run)
+2025-05-05 10:00:07 - INFO - Blog processing completed
+2025-05-05 10:00:34 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:00:34 - INFO - Starting blog processing
+2025-05-05 10:00:34 - INFO - Processing posts matching: wispr
+2025-05-05 10:00:34 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:00:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:00:45 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-05-05 10:00:45 - INFO - Copied assets: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets -> ./blog/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-05-05 10:00:45 - INFO - Generated blog index with 1 posts
+2025-05-05 10:00:45 - INFO - Blog processing completed
+2025-05-05 10:35:44 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:35:44 - INFO - Starting blog processing
+2025-05-05 10:35:44 - INFO - DRY RUN: Would process 12 out of 12 posts:
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:35:44 - INFO -   - src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:35:44 - INFO - No changes were made (dry run)
+2025-05-05 10:35:44 - INFO - Blog processing completed
+2025-05-05 10:35:58 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:35:58 - INFO - Starting blog processing
+2025-05-05 10:35:58 - INFO - Processing posts matching: 2025/04/increase-your-productivity-with-wispr-flow
+2025-05-05 10:35:58 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:35:58 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:36:09 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-05-05 10:36:09 - INFO - Copied assets: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets -> ./blog/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-05-05 10:36:09 - INFO - Rebuilding blog index
+2025-05-05 10:36:09 - INFO - Generated blog index with 1 posts
+2025-05-05 10:36:09 - INFO - Blog processing completed
+2025-05-05 10:36:09 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:36:09 - INFO - Starting blog processing
+2025-05-05 10:36:09 - INFO - Processing posts matching: 2025/04/transform-website-ai-voice-agents-24-7-engagement
+2025-05-05 10:36:09 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:36:09 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:36:18 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-05-05 10:36:18 - INFO - Copied assets: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets -> ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-05-05 10:36:18 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:36:18 - INFO - Blog processing completed
+2025-05-05 10:36:18 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:36:18 - INFO - Starting blog processing
+2025-05-05 10:36:18 - INFO - Processing posts matching: 2025/04/improve-your-online-meetings-with-fathom-note-taking-software
+2025-05-05 10:36:18 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:36:18 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:36:26 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-05-05 10:36:26 - INFO - Copied assets: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets -> ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-05-05 10:36:26 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:36:26 - INFO - Blog processing completed
+2025-05-05 10:36:26 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:36:26 - INFO - Starting blog processing
+2025-05-05 10:36:26 - INFO - Processing posts matching: 2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality
+2025-05-05 10:36:26 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:36:26 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:36:34 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-05-05 10:36:34 - INFO - Copied assets: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets -> ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-05-05 10:36:34 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:36:34 - INFO - Blog processing completed
+2025-05-05 10:36:34 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:36:34 - INFO - Starting blog processing
+2025-05-05 10:36:34 - INFO - Processing posts matching: 2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025
+2025-05-05 10:36:34 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:36:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:36:43 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-05-05 10:36:43 - INFO - Copied assets: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets -> ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-05-05 10:36:43 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:36:43 - INFO - Blog processing completed
+2025-05-05 10:36:43 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:36:43 - INFO - Starting blog processing
+2025-05-05 10:36:43 - INFO - Processing posts matching: 2025/05/the-self-improving-website-your-247-digital-marketing-assistant
+2025-05-05 10:36:43 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:36:43 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:36:55 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-05-05 10:36:55 - INFO - Copied assets: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets -> ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-05-05 10:36:55 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:36:55 - INFO - Blog processing completed
+2025-05-05 10:36:55 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:36:55 - INFO - Starting blog processing
+2025-05-05 10:36:55 - INFO - Processing posts matching: 2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025
+2025-05-05 10:36:55 - INFO - Processing: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:36:55 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:37:02 - INFO - Generated HTML: ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html
+2025-05-05 10:37:02 - INFO - Copied assets: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets -> ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets
+2025-05-05 10:37:02 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:02 - INFO - Blog processing completed
+2025-05-05 10:37:02 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:37:02 - INFO - Starting blog processing
+2025-05-05 10:37:02 - INFO - Processing posts matching: 2025/05/unleash-your-business-automation-potential-with-n8n
+2025-05-05 10:37:02 - INFO - Processing: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:37:02 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:37:10 - INFO - Generated HTML: ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html
+2025-05-05 10:37:10 - INFO - Copied assets: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/assets -> ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/assets
+2025-05-05 10:37:10 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:10 - INFO - Blog processing completed
+2025-05-05 10:37:10 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:37:10 - INFO - Starting blog processing
+2025-05-05 10:37:10 - INFO - Processing posts matching: 2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation
+2025-05-05 10:37:10 - INFO - Processing: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:37:10 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:37:18 - INFO - Generated HTML: ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html
+2025-05-05 10:37:18 - INFO - Copied assets: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets -> ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets
+2025-05-05 10:37:18 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:18 - INFO - Blog processing completed
+2025-05-05 10:37:18 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:37:18 - INFO - Starting blog processing
+2025-05-05 10:37:18 - INFO - Processing posts matching: 2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business
+2025-05-05 10:37:18 - INFO - Processing: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:37:18 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:37:27 - INFO - Generated HTML: ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html
+2025-05-05 10:37:27 - INFO - Copied assets: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets -> ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets
+2025-05-05 10:37:27 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:27 - INFO - Blog processing completed
+2025-05-05 10:37:27 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:37:27 - INFO - Starting blog processing
+2025-05-05 10:37:27 - INFO - Processing posts matching: 2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture
+2025-05-05 10:37:27 - INFO - Processing: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:37:27 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:37:34 - INFO - Generated HTML: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-05-05 10:37:34 - INFO - Copied assets: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets -> ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-05-05 10:37:34 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:34 - INFO - Blog processing completed
+2025-05-05 10:37:35 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:37:35 - INFO - Starting blog processing
+2025-05-05 10:37:35 - INFO - Processing posts matching: 2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts
+2025-05-05 10:37:35 - INFO - Processing: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:37:35 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:37:46 - INFO - Generated HTML: ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html
+2025-05-05 10:37:46 - INFO - Copied assets: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets -> ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets
+2025-05-05 10:37:46 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:46 - INFO - Blog processing completed
+2025-05-05 10:37:46 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:37:46 - INFO - Starting blog processing
+2025-05-05 10:37:46 - INFO - Rebuilding index only from existing posts
+2025-05-05 10:37:46 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:37:46 - INFO - Blog processing completed
+2025-05-05 10:38:50 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:38:50 - INFO - Starting blog processing
+2025-05-05 10:38:50 - INFO - DRY RUN: Would process 0 out of 12 posts:
+2025-05-05 10:38:50 - INFO - No changes were made (dry run)
+2025-05-05 10:38:50 - INFO - Blog processing completed
+2025-05-05 10:40:05 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:40:05 - INFO - Starting blog processing
+2025-05-05 10:40:05 - INFO - DRY RUN: Would process 1 out of 12 posts:
+2025-05-05 10:40:05 - INFO -   - src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:40:05 - INFO - No changes were made (dry run)
+2025-05-05 10:40:05 - INFO - Blog processing completed
+2025-05-05 10:40:11 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:40:11 - INFO - Starting blog processing
+2025-05-05 10:40:11 - INFO - Processing posts matching: 2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture
+2025-05-05 10:40:11 - INFO - Processing: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:40:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:40:19 - INFO - Generated HTML: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-05-05 10:40:19 - INFO - Assets up to date, skipping: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-05-05 10:40:19 - INFO - Rebuilding blog index
+2025-05-05 10:40:19 - INFO - Generated blog index with 1 posts
+2025-05-05 10:40:19 - INFO - Blog processing completed
+2025-05-05 10:40:19 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:40:19 - INFO - Starting blog processing
+2025-05-05 10:40:19 - INFO - Rebuilding index only from existing posts
+2025-05-05 10:40:19 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:40:19 - INFO - Blog processing completed
+2025-05-05 10:41:01 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:41:01 - INFO - Starting blog processing
+2025-05-05 10:41:01 - INFO - DRY RUN: Would process 12 out of 12 posts:
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:41:01 - INFO -   - src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:41:01 - INFO - No changes were made (dry run)
+2025-05-05 10:41:01 - INFO - Blog processing completed
+2025-05-05 10:44:22 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:44:22 - INFO - Starting blog processing
+2025-05-05 10:44:22 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:44:22 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:44:32 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-05-05 10:44:32 - INFO - Assets up to date, skipping: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-05-05 10:44:32 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:44:32 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:44:41 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-05-05 10:44:41 - INFO - Assets up to date, skipping: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-05-05 10:44:41 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:44:41 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:44:52 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-05-05 10:44:52 - INFO - Assets up to date, skipping: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-05-05 10:44:52 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:44:52 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:45:00 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-05-05 10:45:00 - INFO - Assets up to date, skipping: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-05-05 10:45:00 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:45:00 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:45:10 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-05-05 10:45:10 - INFO - Assets up to date, skipping: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-05-05 10:45:10 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:45:10 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:45:20 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-05-05 10:45:20 - INFO - Assets up to date, skipping: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-05-05 10:45:20 - INFO - Processing: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:45:20 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:45:29 - INFO - Generated HTML: ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html
+2025-05-05 10:45:29 - INFO - Assets up to date, skipping: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets
+2025-05-05 10:45:29 - INFO - Processing: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:45:29 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:45:37 - INFO - Generated HTML: ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html
+2025-05-05 10:45:37 - INFO - Assets up to date, skipping: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/assets
+2025-05-05 10:45:37 - INFO - Processing: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:45:37 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:45:45 - INFO - Generated HTML: ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html
+2025-05-05 10:45:45 - INFO - Assets up to date, skipping: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets
+2025-05-05 10:45:45 - INFO - Processing: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:45:45 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:45:56 - INFO - Generated HTML: ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html
+2025-05-05 10:45:56 - INFO - Assets up to date, skipping: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets
+2025-05-05 10:45:56 - INFO - Processing: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:45:56 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:46:05 - INFO - Generated HTML: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-05-05 10:46:05 - INFO - Assets up to date, skipping: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-05-05 10:46:05 - INFO - Processing: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:46:05 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:46:13 - INFO - Generated HTML: ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html
+2025-05-05 10:46:13 - INFO - Assets up to date, skipping: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets
+2025-05-05 10:46:13 - INFO - Blog index is up to date, skipping rebuild
+2025-05-05 10:46:13 - INFO - Blog processing completed
+2025-05-05 10:48:34 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:48:34 - INFO - Starting blog processing
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:48:34 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:48:34 - INFO - No posts changed, skipping index regeneration
+2025-05-05 10:48:34 - INFO - Blog processing completed
+2025-05-05 10:48:36 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-05 10:48:36 - INFO - Starting blog processing
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 10:48:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 10:48:36 - INFO - No posts changed, skipping index regeneration
+2025-05-05 10:48:36 - INFO - Blog processing completed
+2025-05-05 10:59:00 - INFO - Starting blog processing
+2025-05-05 10:59:00 - DEBUG - Arguments: {'content_root': None, 'output_root': None, 'template_dir': None, 'site_url': None, 'gen_json_ld_path': None, 'post': None, 'year': None, 'month': None, 'rebuild_index': False, 'interactive': False, 'dry_run': False, 'force': False, 'cache_file': None, 'log_file': None, 'log_level': 'DEBUG'}
+2025-05-05 10:59:00 - DEBUG - No cache file found at .blog_cache.json, starting with empty cache
+2025-05-05 10:59:00 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:59:00 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:59:00 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:59:13 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpksu3n8m7.html
+2025-05-05 10:59:13 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpksu3n8m7.html src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md -o ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata title=Increase Your Productivity with Wispr Flow --metadata date=2025-04-29 --metadata author=Common Sense Systems, Inc. --metadata categories=Productivity, Small Business Technology --metadata tags=AI, Voice Dictation, Productivity Tools, Time Saving, Digital Strategy, Efficiency --metadata summary=Discover how Wispr Flow's AI-powered voice dictation tool can help busy professionals write three times faster across all applications. --metadata featuredImage=assets/wispr-flow_2.png --metadata status=published --metadata year=2025 --metadata month=04 --metadata slug=increase-your-productivity-with-wispr-flow --metadata url=/blog/2025/04/increase-your-productivity-with-wispr-flow/ --metadata html_path=/blog/2025/04/increase-your-productivity-with-wispr-flow/index.html --metadata categories_display=Productivity, Small Business Technology --metadata tags_display=AI, Voice Dictation, Productivity Tools, Time Saving, Digital Strategy, Efficiency --metadata source_file=src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:59:13 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-05-05 10:59:13 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-05-05 10:59:13 - INFO - Assets up to date, skipping: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-05-05 10:59:13 - DEBUG - Updated cache for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-05 10:59:13 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpksu3n8m7.html
+2025-05-05 10:59:13 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:59:13 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:59:13 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:59:23 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpizb9ylx4.html
+2025-05-05 10:59:23 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpizb9ylx4.html src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md -o ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata title=Transform Your Website with AI Voice Agents: 24/7 Engagement for Small Businesses --metadata date=2025-04-30 --metadata author=Common Sense Systems, Inc. --metadata categories=Small Business Technology, Digital Transformation --metadata tags=AI, Voice Agents, Customer Engagement, Multilingual Support, Website Optimization --metadata summary=Discover how AI voice agents can transform your small business website by providing 24/7 customer engagement, multilingual support, and improved conversion rates. --metadata featuredImage=assets/header-image.png --metadata status=published --metadata year=2025 --metadata month=04 --metadata slug=transform-website-ai-voice-agents-24-7-engagement --metadata url=/blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/ --metadata html_path=/blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html --metadata categories_display=Small Business Technology, Digital Transformation --metadata tags_display=AI, Voice Agents, Customer Engagement, Multilingual Support, Website Optimization --metadata source_file=src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:59:23 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-05-05 10:59:23 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-05-05 10:59:23 - INFO - Assets up to date, skipping: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-05-05 10:59:23 - DEBUG - Updated cache for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-05 10:59:23 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpizb9ylx4.html
+2025-05-05 10:59:23 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:59:23 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:59:23 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:59:35 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpx3gqenfq.html
+2025-05-05 10:59:35 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpx3gqenfq.html src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md -o ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata title=Improve Your Online Meetings With Fathom Note Taking Software --metadata date=2025-04-30 --metadata author=Common Sense Systems, Inc. --metadata categories=Productivity, Small Business Technology --metadata tags=AI, Remote Work, Productivity Tools, Meeting Efficiency, Automation, Collaboration --metadata summary=Discover how Fathom AI Note Taker transforms virtual meetings by automating transcription, highlighting key points, and generating instant summaries. --metadata featuredImage=assets/header-image.png --metadata status=published --metadata year=2025 --metadata month=04 --metadata slug=improve-your-online-meetings-with-fathom-note-taking-software --metadata url=/blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/ --metadata html_path=/blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html --metadata categories_display=Productivity, Small Business Technology --metadata tags_display=AI, Remote Work, Productivity Tools, Meeting Efficiency, Automation, Collaboration --metadata source_file=src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:59:36 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-05-05 10:59:36 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-05-05 10:59:36 - INFO - Assets up to date, skipping: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-05-05 10:59:36 - DEBUG - Updated cache for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-05 10:59:36 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpx3gqenfq.html
+2025-05-05 10:59:36 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:59:36 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:59:36 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:59:46 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpjb5zfsz7.html
+2025-05-05 10:59:46 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpjb5zfsz7.html src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md -o ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=AI for Business --metadata date=2025-05-04 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Learn how orchestrating multiple AI language models as specialized editors can dramatically improve the quality of AI-generated content for your business. --metadata tags=AI, Productivity Tools, Efficiency, Digital Strategy, Technology Adoption --metadata title=Using Multiple LLMs as Editors: Elevating AI-Generated Content Quality --metadata year=2025 --metadata month=05 --metadata slug=using-multiple-llms-as-editors-elevating-ai-generated-content-quality --metadata url=/blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/ --metadata html_path=/blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html --metadata categories_display=AI for Business --metadata tags_display=AI, Productivity Tools, Efficiency, Digital Strategy, Technology Adoption --metadata source_file=src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:59:46 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-05-05 10:59:46 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-05-05 10:59:46 - INFO - Assets up to date, skipping: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-05-05 10:59:46 - DEBUG - Updated cache for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-05 10:59:46 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpjb5zfsz7.html
+2025-05-05 10:59:46 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:59:46 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:59:46 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:59:56 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpfvzx01g6.html
+2025-05-05 10:59:56 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpfvzx01g6.html src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md -o ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=Process Automation, AI for Business --metadata date=2025-05-03 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover five practical, cost-effective AI automation solutions that help small IT service providers streamline operations and deliver enhanced client value. --metadata tags=IT Automation, AI, Small Business, Efficiency, Technology Adoption, ROI --metadata title=5 AI-Powered Process Automation Solutions for IT Service Providers in 2025 --metadata year=2025 --metadata month=05 --metadata slug=5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025 --metadata url=/blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/ --metadata html_path=/blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html --metadata categories_display=Process Automation, AI for Business --metadata tags_display=IT Automation, AI, Small Business, Efficiency, Technology Adoption, ROI --metadata source_file=src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:59:56 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-05-05 10:59:56 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-05-05 10:59:56 - INFO - Assets up to date, skipping: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-05-05 10:59:56 - DEBUG - Updated cache for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-05 10:59:56 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpfvzx01g6.html
+2025-05-05 10:59:56 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:59:56 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 10:59:56 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 11:00:07 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp3uofoxyg.html
+2025-05-05 11:00:07 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp3uofoxyg.html src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md -o ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=AI for Business, Small Business Technology --metadata date=2025-05-02 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how self-improving websites use AI to automatically optimize content, improve SEO, and drive traffic—all while you focus on running your business. --metadata tags=AI, Automation, Small Business, Digital Strategy, Efficiency, Technology Adoption --metadata title=The Self-Improving Website: Your 24/7 Digital Marketing Assistant --metadata year=2025 --metadata month=05 --metadata slug=the-self-improving-website-your-247-digital-marketing-assistant --metadata url=/blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/ --metadata html_path=/blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html --metadata categories_display=AI for Business, Small Business Technology --metadata tags_display=AI, Automation, Small Business, Digital Strategy, Efficiency, Technology Adoption --metadata source_file=src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 11:00:07 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-05-05 11:00:07 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-05-05 11:00:07 - INFO - Assets up to date, skipping: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-05-05 11:00:07 - DEBUG - Updated cache for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-05 11:00:07 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp3uofoxyg.html
+2025-05-05 11:00:07 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 11:00:07 - INFO - Processing: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 11:00:07 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 11:00:15 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpexxr6zx7.html
+2025-05-05 11:00:15 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpexxr6zx7.html src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md -o ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=AI for Business, Process Automation --metadata date=2025-05-03 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how IT service providers can implement AI-driven process automation to create new revenue streams while delivering exceptional value to small business clients. --metadata tags=AI, Automation, Small Business, Technology Adoption, ROI, Efficiency --metadata title=How IT Service Providers Can Leverage AI for Small Business Automation in 2025 --metadata year=2025 --metadata month=05 --metadata slug=how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025 --metadata url=/blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/ --metadata html_path=/blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html --metadata categories_display=AI for Business, Process Automation --metadata tags_display=AI, Automation, Small Business, Technology Adoption, ROI, Efficiency --metadata source_file=src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 11:00:15 - INFO - Generated HTML: ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html
+2025-05-05 11:00:15 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets
+2025-05-05 11:00:15 - INFO - Assets up to date, skipping: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets
+2025-05-05 11:00:15 - DEBUG - Updated cache for src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-05 11:00:15 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpexxr6zx7.html
+2025-05-05 11:00:15 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 11:00:15 - INFO - Processing: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 11:00:15 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 11:00:24 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmph1z74lwx.html
+2025-05-05 11:00:24 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmph1z74lwx.html src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md -o ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=Process Automation, Small Business Technology --metadata date=2025-05-03 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how n8n's powerful workflow automation platform can transform your business operations and eliminate repetitive tasks without complex coding. --metadata tags=Automation, Productivity Tools, Integration, Efficiency, Digital Strategy, Technology Adoption --metadata title=Unleash Your Business Automation Potential with n8n --metadata year=2025 --metadata month=05 --metadata slug=unleash-your-business-automation-potential-with-n8n --metadata url=/blog/2025/05/unleash-your-business-automation-potential-with-n8n/ --metadata html_path=/blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html --metadata categories_display=Process Automation, Small Business Technology --metadata tags_display=Automation, Productivity Tools, Integration, Efficiency, Digital Strategy, Technology Adoption --metadata source_file=src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 11:00:24 - INFO - Generated HTML: ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html
+2025-05-05 11:00:24 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/assets
+2025-05-05 11:00:24 - INFO - Assets up to date, skipping: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/assets
+2025-05-05 11:00:24 - DEBUG - Updated cache for src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-05 11:00:24 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmph1z74lwx.html
+2025-05-05 11:00:24 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 11:00:24 - INFO - Processing: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 11:00:24 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 11:00:31 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp0dphrk2x.html
+2025-05-05 11:00:31 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp0dphrk2x.html src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md -o ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=Process Automation, Small Business Technology --metadata date=2025-05-03 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how healthcare practices can implement automated scheduling systems to significantly reduce appointment no-shows and increase revenue. --metadata tags=Automation, Healthcare, Efficiency, ROI, Technology Adoption, Customer Experience --metadata title=Streamlining Patient Scheduling: Reduce No-Shows with Automation --metadata year=2025 --metadata month=05 --metadata slug=streamlining-patient-scheduling-reduce-no-shows-with-automation --metadata url=/blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/ --metadata html_path=/blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html --metadata categories_display=Process Automation, Small Business Technology --metadata tags_display=Automation, Healthcare, Efficiency, ROI, Technology Adoption, Customer Experience --metadata source_file=src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 11:00:31 - INFO - Generated HTML: ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html
+2025-05-05 11:00:31 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets
+2025-05-05 11:00:31 - INFO - Assets up to date, skipping: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets
+2025-05-05 11:00:31 - DEBUG - Updated cache for src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-05 11:00:31 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp0dphrk2x.html
+2025-05-05 11:00:31 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 11:00:31 - INFO - Processing: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 11:00:31 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 11:00:42 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp6nl3f2xm.html
+2025-05-05 11:00:42 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp6nl3f2xm.html src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md -o ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=Small Business Technology, AI for Business --metadata date=2025-05-02 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how AI-driven self-improving websites built with simple HTML/CSS/JS outperform complex WordPress solutions for small businesses seeking growth without technical headaches. --metadata tags=AI, Automation, Small Business, Cost Reduction, Technology Adoption, Efficiency --metadata title=Self-Improving Websites: Why Simple HTML Beats WordPress for Small Business --metadata year=2025 --metadata month=05 --metadata slug=self-improving-websites-why-simple-html-beats-wordpress-for-small-business --metadata url=/blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/ --metadata html_path=/blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html --metadata categories_display=Small Business Technology, AI for Business --metadata tags_display=AI, Automation, Small Business, Cost Reduction, Technology Adoption, Efficiency --metadata source_file=src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 11:00:42 - INFO - Generated HTML: ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html
+2025-05-05 11:00:42 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets
+2025-05-05 11:00:42 - INFO - Assets up to date, skipping: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets
+2025-05-05 11:00:42 - DEBUG - Updated cache for src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-05 11:00:42 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp6nl3f2xm.html
+2025-05-05 11:00:42 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 11:00:42 - INFO - Processing: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 11:00:42 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 11:00:52 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpm9_drohj.html
+2025-05-05 11:00:52 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpm9_drohj.html src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md -o ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Sundays Acupuncture --metadata categories=Holistic Health --metadata date=2025-05-02 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how Japanese-style acupuncture offers a gentle, effective approach to pain relief, stress management, and overall wellness in Kirkland. --metadata tags=Japanese Acupuncture, Pain Management, Stress Relief, Holistic Healing, Kirkland Wellness --metadata title=Finding Balance: The Gentle Power of Japanese Acupuncture --metadata year=2025 --metadata month=05 --metadata slug=finding-balance-the-gentle-power-of-japanese-acupuncture --metadata url=/blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/ --metadata html_path=/blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html --metadata categories_display=Holistic Health --metadata tags_display=Japanese Acupuncture, Pain Management, Stress Relief, Holistic Healing, Kirkland Wellness --metadata source_file=src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 11:00:52 - INFO - Generated HTML: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-05-05 11:00:52 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-05-05 11:00:52 - INFO - Assets up to date, skipping: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-05-05 11:00:52 - DEBUG - Updated cache for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-05 11:00:52 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmpm9_drohj.html
+2025-05-05 11:00:52 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 11:00:52 - INFO - Processing: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 11:00:52 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 11:00:58 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmphij3ktcv.html
+2025-05-05 11:00:58 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmphij3ktcv.html src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md -o ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=Small Business Technology, Process Automation --metadata date=2025-05-03 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover how modern inventory management systems can help small retailers reduce costs while ensuring products are always available for customers. --metadata tags=Small Business, Process Improvement, Cost Reduction, Efficiency, Technology Adoption --metadata title=Inventory Management Systems for Small Retail: Cut Costs, Prevent Stockouts --metadata year=2025 --metadata month=05 --metadata slug=inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts --metadata url=/blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/ --metadata html_path=/blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html --metadata categories_display=Small Business Technology, Process Automation --metadata tags_display=Small Business, Process Improvement, Cost Reduction, Efficiency, Technology Adoption --metadata source_file=src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 11:00:58 - INFO - Generated HTML: ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html
+2025-05-05 11:00:58 - DEBUG - Assets unchanged, skipping copy: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets
+2025-05-05 11:00:58 - INFO - Assets up to date, skipping: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets
+2025-05-05 11:00:58 - DEBUG - Updated cache for src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-05 11:00:58 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmphij3ktcv.html
+2025-05-05 11:00:58 - INFO - Rebuilding blog index
+2025-05-05 11:00:58 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-05-05 11:00:58 - INFO - Generated blog index with 12 posts
+2025-05-05 11:00:58 - DEBUG - Saved cache with 13 entries
+2025-05-05 11:00:58 - INFO - Blog processing completed

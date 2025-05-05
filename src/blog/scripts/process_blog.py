@@ -530,6 +530,7 @@ def generate_index(posts):
         return output_file
 
     logging.info("Rebuilding blog index")
+    logging.info(f"DEBUG: Generating index at absolute path: {os.path.abspath(output_file)}")
 
     with open(index_template, 'r', encoding='utf-8') as f:
         template = f.read()
