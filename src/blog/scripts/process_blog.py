@@ -66,105 +66,69 @@ CONFIG = {
 }
 
 def extract_metadata(md_file):
-    """Extract YAML front matter from markdown file with improved formatting"""
+    """Extract YAML front matter from markdown file
+
+    Reads the file and extracts the YAML front matter between the opening and
+    closing '---' markers. If the front matter is missing or invalid, raises
+    an error with a clear explanation.
+
+    Args:
+        md_file: Path to the markdown file
+
+    Returns:
+        dict: Parsed metadata from the YAML front matter
+
+    Raises:
+        ValueError: If the file has no front matter or the YAML is invalid
+    """
     with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
 
     # Check for YAML front matter (between --- markers)
     front_matter_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
-    if front_matter_match:
-        try:
-            metadata = yaml.safe_load(front_matter_match.group(1))
-            # Add path information
-            rel_path = os.path.relpath(md_file, CONFIG["content_root"])
-            dir_parts = os.path.dirname(rel_path).split(os.sep)
 
-            # Add derived paths
-            if len(dir_parts) >= 3:  # Should be YEAR/MONTH/SLUG format
-                year, month, slug = dir_parts[0], dir_parts[1], dir_parts[2]
-                metadata["year"] = year
-                metadata["month"] = month
-                metadata["slug"] = slug
-                metadata["url"] = f"/blog/{year}/{month}/{slug}/"
-                metadata["html_path"] = f"/blog/{year}/{month}/{slug}/index.html"
+    if not front_matter_match:
+        raise ValueError(f"Missing YAML front matter in {md_file}. All blog posts must begin with front matter enclosed by '---' markers.")
 
-            # Ensure required fields exist
-            if "date" not in metadata:
-                # Try to extract from path or use file modification time
-                if "year" in metadata and "month" in metadata:
-                    metadata["date"] = f"{metadata['year']}-{metadata['month']}-01"
-                else:
-                    mtime = os.path.getmtime(md_file)
-                    metadata["date"] = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+    # Extract and parse the YAML
+    yaml_content = front_matter_match.group(1)
+    try:
+        metadata = yaml.safe_load(yaml_content)
+    except yaml.YAMLError as e:
+        raise ValueError(f"Invalid YAML front matter in {md_file}: {e}")
 
-            # Convert date string to datetime for sorting
-            if isinstance(metadata["date"], str):
-                metadata["date"] = datetime.strptime(metadata["date"], "%Y-%m-%d")
+    # Verify required fields
+    required_fields = ['title', 'date', 'author', 'categories', 'tags']
+    missing_fields = [field for field in required_fields if field not in metadata]
 
-            # Ensure tags and categories are lists and properly formatted
-            if "tags" in metadata and not isinstance(metadata["tags"], list):
-                metadata["tags"] = [t.strip() for t in metadata["tags"].split(",")]
-            elif "tags" not in metadata:
-                metadata["tags"] = []
+    if missing_fields:
+        raise ValueError(f"Missing required fields in front matter of {md_file}: {', '.join(missing_fields)}")
 
-            if "categories" in metadata and not isinstance(metadata["categories"], list):
-                metadata["categories"] = [c.strip() for c in metadata["categories"].split(",")]
-            elif "categories" not in metadata:
-                metadata["categories"] = ["Uncategorized"]
-
-            # Format categories and tags for display with proper spacing
-            metadata["categories_display"] = ", ".join(metadata["categories"])
-            metadata["tags_display"] = ", ".join(metadata["tags"])
-
-            return metadata
-        except yaml.YAMLError as e:
-            print(f"Error parsing front matter in {md_file}: {e}")
-            return default_metadata(md_file)
-    else:
-        return default_metadata(md_file)
-
-def default_metadata(md_file):
-    """Create default metadata for files without front matter"""
-    file_name = os.path.basename(md_file)
-    slug = os.path.splitext(file_name)[0]
-
-    # Try to extract date from path
+    # Add derived paths based on file location
     rel_path = os.path.relpath(md_file, CONFIG["content_root"])
     dir_parts = os.path.dirname(rel_path).split(os.sep)
 
+    # Add path information if the file is in the expected directory structure
     if len(dir_parts) >= 3:  # Should be YEAR/MONTH/SLUG format
-        year, month, dir_slug = dir_parts[0], dir_parts[1], dir_parts[2]
-        date = datetime.strptime(f"{year}-{month}-01", "%Y-%m-%d")
-        url = f"/blog/{year}/{month}/{dir_slug}/"
-        html_path = f"/blog/{year}/{month}/{dir_slug}/index.html"
+        year, month, slug = dir_parts[0], dir_parts[1], dir_parts[2]
+        metadata["year"] = year
+        metadata["month"] = month
+        metadata["slug"] = slug
+        metadata["url"] = f"/blog/{year}/{month}/{slug}/"
+        metadata["html_path"] = f"/blog/{year}/{month}/{slug}/index.html"
     else:
-        # Use file modification time
-        mtime = os.path.getmtime(md_file)
-        date = datetime.fromtimestamp(mtime)
-        year = date.strftime("%Y")
-        month = date.strftime("%m")
-        url = f"/blog/{slug}"
-        html_path = f"/blog/{slug}/index.html"
+        raise ValueError(f"Blog post {md_file} is not in the expected directory structure: YEAR/MONTH/SLUG")
 
-    # Create title from filename
-    title = " ".join(word.capitalize() for word in slug.replace("-", " ").replace("_", " ").split())
+    # Ensure date is a datetime object for sorting
+    if isinstance(metadata["date"], str):
+        try:
+            metadata["date"] = datetime.strptime(metadata["date"], "%Y-%m-%d")
+        except ValueError as e:
+            raise ValueError(f"Invalid date format in {md_file}. Expected YYYY-MM-DD: {e}")
 
-    # Create default metadata with proper display formatting
-    metadata = {
-        "title": title,
-        "date": date,
-        "author": "Common Sense Systems, Inc.",
-        "categories": ["Uncategorized"],
-        "tags": [],
-        "slug": slug,
-        "summary": f"Blog post about {title.lower()}",
-        "year": year,
-        "month": month,
-        "url": url,
-        "html_path": html_path,
-        "categories_display": "Uncategorized",
-        "tags_display": ""
-    }
+    # Format categories and tags for display with proper spacing
+    metadata["categories_display"] = ", ".join(metadata["categories"])
+    metadata["tags_display"] = ", ".join(metadata["tags"])
 
     return metadata
 
@@ -344,6 +308,7 @@ def process_blog(posts_filter=None):
     """
     content_root = Path(CONFIG["content_root"])
     posts_metadata = []
+    error_files = []
 
     # Find all markdown files
     md_files = list(content_root.glob('**/*.md'))
@@ -360,16 +325,36 @@ def process_blog(posts_filter=None):
     for md_file in md_files:
         print(f"Processing: {md_file}")
 
-        # Extract metadata
-        metadata = extract_metadata(md_file)
+        try:
+            # Extract metadata - will raise an error if front matter is missing or invalid
+            metadata = extract_metadata(md_file)
 
-        # Only process if not draft
-        if metadata.get("status") != "draft":
-            # Generate HTML
-            html_file = generate_html(md_file, metadata)
+            # Only process if not draft
+            if metadata.get("status") != "draft":
+                # Generate HTML
+                html_file = generate_html(md_file, metadata)
 
-            if html_file:
-                posts_metadata.append(metadata)
+                if html_file:
+                    posts_metadata.append(metadata)
+        except ValueError as e:
+            # Log the error and add to the list of files with errors
+            print(f"ERROR: {e}")
+            error_files.append((md_file, str(e)))
+            continue
+        except Exception as e:
+            # Log other unexpected errors
+            print(f"UNEXPECTED ERROR processing {md_file}: {e}")
+            error_files.append((md_file, f"Unexpected error: {str(e)}"))
+            continue
+
+    # If we encountered any errors, show a summary and exit
+    if error_files:
+        print("\n======== ERROR SUMMARY ========")
+        print(f"Encountered errors in {len(error_files)} file(s):")
+        for file_path, error_msg in error_files:
+            print(f"  - {file_path}: {error_msg}")
+        print("\nPlease fix these errors and run the script again.")
+        sys.exit(1)
 
     # Generate index
     if posts_metadata:
