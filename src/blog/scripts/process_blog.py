@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-#!/usr/bin/env python3
-
 """
 Process Blog - A Static Blog Generator for Markdown Content
 
@@ -33,6 +31,12 @@ Usage Examples:
     # Specify custom directories
     python3 process_blog.py --content-root ./content --output-root ./public --template-dir ./templates
 
+    # Log to a specific file
+    python3 process_blog.py --log-file /path/to/blog_process.log
+
+    # Increase log verbosity
+    python3 process_blog.py --log-level DEBUG
+
 Requirements:
     - Pandoc must be installed and available in PATH
     - Proper directory structure (YEAR/MONTH/SLUG format recommended)
@@ -45,6 +49,8 @@ import yaml
 import shutil
 import subprocess
 import tempfile
+import logging
+import sys
 from pathlib import Path
 from datetime import datetime
 import argparse
@@ -64,6 +70,61 @@ CONFIG = {
         "--mathjax"
     ]
 }
+
+def setup_logging(log_file=None, log_level="INFO"):
+    """Set up logging configuration
+
+    Args:
+        log_file: Optional path to log file. If None, logs to a default location
+        log_level: Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    """
+    # Convert string log level to logging constant
+    numeric_level = getattr(logging, log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError(f"Invalid log level: {log_level}")
+
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(numeric_level)
+
+    # Clear any existing handlers (in case this function is called multiple times)
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+
+    # Create formatter
+    formatter = logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+
+    # Console handler (always enabled)
+    console_handler = logging.StreamHandler(stream=sys.stdout)
+    console_handler.setFormatter(formatter)
+    root_logger.addHandler(console_handler)
+
+    # File handler
+    if log_file:
+        # User-specified log file
+        log_path = Path(log_file)
+    else:
+        # Default log file in the same directory as the script
+        script_dir = Path(__file__).parent
+        log_path = script_dir / "process_blog.log"
+
+    try:
+        # Create directory if it doesn't exist
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Add file handler
+        file_handler = logging.FileHandler(log_path)
+        file_handler.setFormatter(formatter)
+        root_logger.addHandler(file_handler)
+
+        # Only log this if we're not at DEBUG level to avoid confusion
+        if numeric_level > logging.DEBUG:
+            root_logger.info(f"Logging to file: {log_path}")
+    except Exception as e:
+        root_logger.error(f"Failed to set up file logging to {log_path}: {e}")
 
 def extract_metadata(md_file):
     """Extract YAML front matter from markdown file
@@ -147,7 +208,7 @@ def copy_assets(md_file, metadata):
             output_dir = os.path.join(CONFIG["output_root"], year, month, slug)
             output_assets = os.path.join(output_dir, "assets")
         else:
-            # Handle unexpected structure
+            # Handle unexpected structure - should not happen with new error checking
             output_dir = os.path.join(CONFIG["output_root"], metadata["slug"])
             output_assets = os.path.join(output_dir, "assets")
 
@@ -158,10 +219,21 @@ def copy_assets(md_file, metadata):
         if os.path.exists(output_assets):
             shutil.rmtree(output_assets)
         shutil.copytree(source_assets, output_assets)
-        print(f"Copied assets: {source_assets} -> {output_assets}")
+        logging.info(f"Copied assets: {source_assets} -> {output_assets}")
 
 def generate_html(md_file, metadata):
-    """Generate HTML from markdown using pandoc with improved metadata handling"""
+    """Generate HTML from markdown using pandoc
+
+    Converts markdown to HTML using Pandoc, handling JSON-LD
+    structured data generation and including metadata.
+
+    Args:
+        md_file: Path to the markdown file
+        metadata: Dictionary containing post metadata
+
+    Returns:
+        str: Path to the generated HTML file, or None if generation failed
+    """
     # Determine output path
     rel_path = os.path.relpath(md_file, CONFIG["content_root"])
     dir_parts = os.path.dirname(rel_path).split(os.sep)
@@ -171,7 +243,6 @@ def generate_html(md_file, metadata):
         output_dir = os.path.join(CONFIG["output_root"], year, month, slug)
         output_file = os.path.join(output_dir, "index.html")
     else:
-        # Handle unexpected structure
         output_dir = os.path.join(CONFIG["output_root"], metadata["slug"])
         output_file = os.path.join(output_dir, "index.html")
 
@@ -191,9 +262,9 @@ def generate_html(md_file, metadata):
             json_ld_file.name
         ]
 
-        print(f"Generating JSON-LD structured data...")
+        logging.info(f"Generating JSON-LD structured data for {md_file}")
         subprocess.run(json_ld_cmd, check=True)
-        print(f"JSON-LD generated: {json_ld_file.name}")
+        logging.debug(f"JSON-LD generated: {json_ld_file.name}")
 
         # Prepare metadata for pandoc as variables
         metadata_args = []
@@ -210,34 +281,24 @@ def generate_html(md_file, metadata):
         # Run pandoc with JSON-LD included in header
         cmd = ["pandoc", f"--include-in-header={json_ld_file.name}", md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args
 
-        print(f"PANDOC COMMAND: {cmd}")
-
+        logging.debug(f"PANDOC COMMAND: {' '.join(cmd)}")
         subprocess.run(cmd, check=True)
-        print(f"Generated HTML: {output_file}")
+        logging.info(f"Generated HTML: {output_file}")
 
         # Copy assets if they exist
         copy_assets(md_file, metadata)
 
         return output_file
     except subprocess.CalledProcessError as e:
-
-        subprocess.run(cmd, check=True)
-        print(f"Generated HTML: {output_file}")
-
-        # Copy assets if they exist
-        copy_assets(md_file, metadata)
-
-        return output_file
-    except subprocess.CalledProcessError as e:
-        print(f"Error generating HTML for {md_file}: {e}")
+        logging.error(f"Error generating HTML for {md_file}: {e}")
         return None
     finally:
         # Clean up the temporary file
         try:
-            pass
-            #os.unlink(json_ld_file.name)
+            os.unlink(json_ld_file.name)
+            logging.debug(f"Cleaned up temporary file: {json_ld_file.name}")
         except Exception as e:
-            print(f"Warning: Could not delete temporary file {json_ld_file.name}: {e}")
+            logging.warning(f"Could not delete temporary file {json_ld_file.name}: {e}")
 
 def generate_index(posts):
     """Generate blog index.html from posts metadata with improved formatting"""
@@ -297,7 +358,7 @@ def generate_index(posts):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(result)
 
-    print(f"Generated blog index with {len(posts)} posts")
+    logging.info(f"Generated blog index with {len(posts)} posts")
     return output_file
 
 def process_blog(posts_filter=None):
@@ -314,7 +375,7 @@ def process_blog(posts_filter=None):
     md_files = list(content_root.glob('**/*.md'))
 
     if not md_files:
-        print(f"No markdown files found in {content_root}")
+        logging.warning(f"No markdown files found in {content_root}")
         return
 
     # Filter files if needed
@@ -323,7 +384,7 @@ def process_blog(posts_filter=None):
 
     # Process each markdown file
     for md_file in md_files:
-        print(f"Processing: {md_file}")
+        logging.info(f"Processing: {md_file}")
 
         try:
             # Extract metadata - will raise an error if front matter is missing or invalid
@@ -338,29 +399,29 @@ def process_blog(posts_filter=None):
                     posts_metadata.append(metadata)
         except ValueError as e:
             # Log the error and add to the list of files with errors
-            print(f"ERROR: {e}")
+            logging.error(f"ERROR: {e}")
             error_files.append((md_file, str(e)))
             continue
         except Exception as e:
             # Log other unexpected errors
-            print(f"UNEXPECTED ERROR processing {md_file}: {e}")
+            logging.error(f"UNEXPECTED ERROR processing {md_file}: {e}")
             error_files.append((md_file, f"Unexpected error: {str(e)}"))
             continue
 
     # If we encountered any errors, show a summary and exit
     if error_files:
-        print("\n======== ERROR SUMMARY ========")
-        print(f"Encountered errors in {len(error_files)} file(s):")
+        logging.error("\n======== ERROR SUMMARY ========")
+        logging.error(f"Encountered errors in {len(error_files)} file(s):")
         for file_path, error_msg in error_files:
-            print(f"  - {file_path}: {error_msg}")
-        print("\nPlease fix these errors and run the script again.")
+            logging.error(f"  - {file_path}: {error_msg}")
+        logging.error("\nPlease fix these errors and run the script again.")
         sys.exit(1)
 
     # Generate index
     if posts_metadata:
         generate_index(posts_metadata)
     else:
-        print("No posts to index")
+        logging.warning("No posts to index")
 
 def main():
     """Main entry point with command line argument parsing"""
@@ -373,34 +434,58 @@ def main():
     parser.add_argument('--year', help='Process only posts from a specific year')
     parser.add_argument('--month', help='Process only posts from a specific month (requires --year)')
     parser.add_argument('--rebuild-index', action='store_true', help='Only rebuild the index, don\'t regenerate posts')
+
+    # Add logging arguments
+    parser.add_argument('--log-file', help='Path to log file (default: ./process_blog.log)')
+    parser.add_argument('--log-level',
+                       choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'],
+                       default='INFO',
+                       help='Set the logging level (default: INFO)')
+
     args = parser.parse_args()
+
+    # Setup logging first thing
+    setup_logging(args.log_file, args.log_level)
+
+    # Log the start of execution with key parameters
+    logging.info("Starting blog processing")
+    logging.debug(f"Arguments: {vars(args)}")
 
     # Update config from command line args
     if args.content_root:
         CONFIG["content_root"] = args.content_root
+        logging.debug(f"Using content root: {CONFIG['content_root']}")
     if args.output_root:
         CONFIG["output_root"] = args.output_root
+        logging.debug(f"Using output root: {CONFIG['output_root']}")
     if args.template_dir:
         CONFIG["template_dir"] = args.template_dir
+        logging.debug(f"Using template directory: {CONFIG['template_dir']}")
     if args.site_url:
         CONFIG["site_url"] = args.site_url
+        logging.debug(f"Using site URL: {CONFIG['site_url']}")
 
     # Update pandoc args with new template path if template_dir changed
     if args.template_dir:
         for i, arg in enumerate(CONFIG["pandoc_args"]):
             if arg.startswith("--template="):
                 CONFIG["pandoc_args"][i] = f"--template={os.path.join(args.template_dir, 'blog_template.html')}"
+                logging.debug(f"Updated pandoc template path: {CONFIG['pandoc_args'][i]}")
 
     # Handle filters
     if args.rebuild_index:
         # Just rebuild the index from existing posts
+        logging.info("Rebuilding index only from existing posts")
         all_posts = []
         for root, dirs, files in os.walk(CONFIG["output_root"]):
             for file in files:
                 if file == "index.html" and root != CONFIG["output_root"]:
                     # This is a blog post, read its metadata
                     try:
-                        with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
+                        file_path = os.path.join(root, file)
+                        logging.debug(f"Extracting metadata from existing post: {file_path}")
+
+                        with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
 
                         # Extract metadata from meta tags
@@ -418,8 +503,10 @@ def main():
                             if len(parts) >= 3:
                                 year, month = parts[-3], parts[-2]
                                 date = datetime.strptime(f"{year}-{month}-01", "%Y-%m-%d")
+                                logging.debug(f"Using directory structure for date: {year}-{month}-01")
                             else:
                                 date = datetime.now()
+                                logging.warning(f"Could not determine date for {file_path}, using current date")
 
                         categories_match = re.search(r'<meta name="categories" content="(.*?)"', content)
                         categories_str = categories_match.group(1) if categories_match else "Uncategorized"
@@ -430,7 +517,7 @@ def main():
                         tags = [t.strip() for t in tags_str.split(",")] if tags_str else []
 
                         # Get relative path for URLs
-                        rel_path = os.path.relpath(os.path.join(root, file), CONFIG["output_root"])
+                        rel_path = os.path.relpath(file_path, CONFIG["output_root"])
 
                         # Add properly formatted display versions
                         categories_display = ", ".join(categories)
@@ -445,14 +532,15 @@ def main():
                             "tags_display": tags_display,
                             "html_path": f"/{rel_path}"
                         })
+                        logging.debug(f"Added post to index: {title}")
                     except Exception as e:
-                        print(f"Error processing existing post {os.path.join(root, file)}: {e}")
+                        logging.error(f"Error processing existing post {os.path.join(root, file)}: {e}")
                         continue
 
         if all_posts:
             generate_index(all_posts)
         else:
-            print("No existing posts found to rebuild index")
+            logging.warning("No existing posts found to rebuild index")
     else:
         # Process posts with filters
         filter_func = None
@@ -461,19 +549,24 @@ def main():
             def post_filter(f):
                 return args.post in str(f)
             filter_func = post_filter
+            logging.info(f"Processing posts matching: {args.post}")
         elif args.year:
             if args.month:
                 def year_month_filter(f):
                     parts = os.path.relpath(f, CONFIG["content_root"]).split(os.sep)
                     return len(parts) >= 3 and parts[0] == args.year and parts[1] == args.month
                 filter_func = year_month_filter
+                logging.info(f"Processing posts from year/month: {args.year}/{args.month}")
             else:
                 def year_filter(f):
                     parts = os.path.relpath(f, CONFIG["content_root"]).split(os.sep)
                     return len(parts) >= 3 and parts[0] == args.year
                 filter_func = year_filter
+                logging.info(f"Processing posts from year: {args.year}")
 
         process_blog(filter_func)
+
+    logging.info("Blog processing completed")
 
 if __name__ == "__main__":
     main()
