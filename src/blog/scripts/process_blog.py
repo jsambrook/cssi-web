@@ -15,9 +15,18 @@ The script performs the following operations:
 5. Copies associated assets (images, etc.) for each post
 6. Generates a filterable index page with category and tag navigation
 
+Dependency Tracking:
+The script now tracks dependencies to avoid rebuilding files unnecessarily:
+- Uses a cache file to store timestamps of processed files
+- Only rebuilds posts when the source file has changed
+- Only rebuilds the index when posts have changed
+
 Usage Examples:
     # Process all blog posts with default settings
     python3 process_blog.py
+
+    # Process all blog posts, forcing rebuild regardless of timestamps
+    python3 process_blog.py --force
 
     # Process only posts containing "my-awesome-post" in their path
     # (typically matches a specific post by its slug directory name)
@@ -65,6 +74,7 @@ import subprocess
 import tempfile
 import logging
 import sys
+import json
 from pathlib import Path
 from datetime import datetime
 import argparse
@@ -76,15 +86,21 @@ CONFIG = {
     "output_root": "./blog",
     "template_dir": "./src/blog/templates",
     "site_url": "https://common-sense.com",
-    "gen_json_ld_path": "/Users/john/git/cssi-ai/gen-json-ld/gen-json-ld.py",  # Now in CONFIG
+    "gen_json_ld_path": "/Users/john/git/cssi-ai/gen-json-ld/gen-json-ld.py",
     "pandoc_args": [
         "--standalone",
         "--template=./src/blog/templates/blog_template.html",
         "--css=/css/styles.css",
         "--highlight-style=pygments",
         "--mathjax"
-    ]
+    ],
+    # Add cache file path for dependency tracking
+    "cache_file": ".blog_cache.json"
 }
+
+# Cache to store file modification timestamps
+# Structure: {file_path: {"mtime": last_modified_time, "output": output_file_path}}
+CACHE = {}
 
 def setup_logging(log_file=None, log_level="INFO"):
     """Set up logging configuration
@@ -140,6 +156,130 @@ def setup_logging(log_file=None, log_level="INFO"):
             root_logger.info(f"Logging to file: {log_path}")
     except Exception as e:
         root_logger.error(f"Failed to set up file logging to {log_path}: {e}")
+
+def load_cache():
+    """Load dependency cache from file"""
+    global CACHE
+    cache_path = Path(CONFIG["cache_file"])
+
+    if cache_path.exists():
+        try:
+            with open(cache_path, 'r', encoding='utf-8') as f:
+                CACHE = json.load(f)
+            logging.debug(f"Loaded cache with {len(CACHE)} entries")
+        except Exception as e:
+            logging.warning(f"Failed to load cache from {cache_path}: {e}")
+            CACHE = {}
+    else:
+        logging.debug(f"No cache file found at {cache_path}, starting with empty cache")
+        CACHE = {}
+
+def save_cache():
+    """Save dependency cache to file"""
+    cache_path = Path(CONFIG["cache_file"])
+
+    try:
+        with open(cache_path, 'w', encoding='utf-8') as f:
+            json.dump(CACHE, f, indent=2)
+        logging.debug(f"Saved cache with {len(CACHE)} entries")
+    except Exception as e:
+        logging.error(f"Failed to save cache to {cache_path}: {e}")
+
+def needs_rebuild(md_file, output_file=None):
+    """Determine if a file needs to be rebuilt
+
+    A file needs rebuilding if any of these conditions are true:
+    1. It's not in the cache (never been processed)
+    2. It's been modified since last processing
+    3. The output file doesn't exist
+    4. The template is newer than the output file
+
+    Args:
+        md_file: Path to the markdown file
+        output_file: Optional path to the output file
+
+    Returns:
+        bool: True if the file needs to be rebuilt, False otherwise
+    """
+    md_file_str = str(md_file)  # Convert Path to string for cache key
+
+    # Get current file modification time
+    try:
+        current_mtime = os.path.getmtime(md_file)
+    except OSError as e:
+        logging.error(f"Error getting modification time for {md_file}: {e}")
+        return True  # Rebuild if we can't determine mtime
+
+    # Check if file is in cache
+    if md_file_str not in CACHE:
+        logging.debug(f"File not in cache, needs rebuild: {md_file}")
+        return True
+
+    # Check if file has been modified
+    cached_mtime = CACHE[md_file_str].get("mtime", 0)
+    if current_mtime > cached_mtime:
+        logging.debug(f"File modified since last build, needs rebuild: {md_file}")
+        return True
+
+    # Determine output file path if not provided
+    if not output_file:
+        if "output" in CACHE[md_file_str]:
+            output_file = CACHE[md_file_str]["output"]
+        else:
+            # We don't know the output path, rebuild to be safe
+            logging.debug(f"Output path unknown, needs rebuild: {md_file}")
+            return True
+
+    # Check if output file exists
+    if not os.path.exists(output_file):
+        logging.debug(f"Output file doesn't exist, needs rebuild: {md_file}")
+        return True
+
+    # Check if template is newer than output file
+    template_path = os.path.join(CONFIG["template_dir"], "blog_template.html")
+    try:
+        template_mtime = os.path.getmtime(template_path)
+        output_mtime = os.path.getmtime(output_file)
+        if template_mtime > output_mtime:
+            logging.debug(f"Template newer than output, needs rebuild: {md_file}")
+            return True
+    except OSError as e:
+        logging.warning(f"Error comparing template and output times: {e}")
+        # Continue with other checks
+
+    # Check if JSON-LD script is newer than output file
+    try:
+        script_mtime = os.path.getmtime(CONFIG["gen_json_ld_path"])
+        output_mtime = os.path.getmtime(output_file)
+        if script_mtime > output_mtime:
+            logging.debug(f"JSON-LD script newer than output, needs rebuild: {md_file}")
+            return True
+    except OSError as e:
+        logging.warning(f"Error comparing JSON-LD script time: {e}")
+        # Continue with other checks
+
+    # All checks passed, no need to rebuild
+    logging.debug(f"File unchanged, no rebuild needed: {md_file}")
+    return False
+
+def update_cache(md_file, output_file):
+    """Update cache with file information
+
+    Args:
+        md_file: Path to the markdown file
+        output_file: Path to the output file
+    """
+    md_file_str = str(md_file)  # Convert Path to string for cache key
+
+    try:
+        mtime = os.path.getmtime(md_file)
+        CACHE[md_file_str] = {
+            "mtime": mtime,
+            "output": output_file
+        }
+        logging.debug(f"Updated cache for {md_file}")
+    except OSError as e:
+        logging.error(f"Error updating cache for {md_file}: {e}")
 
 def extract_metadata(md_file):
     """Extract YAML front matter from markdown file
@@ -230,11 +370,41 @@ def copy_assets(md_file, metadata):
         # Ensure output directory exists
         os.makedirs(output_dir, exist_ok=True)
 
-        # Copy assets directory
+        # Check if assets need to be copied - compare directory timestamps
+        should_copy = True
         if os.path.exists(output_assets):
-            shutil.rmtree(output_assets)
-        shutil.copytree(source_assets, output_assets)
-        logging.info(f"Copied assets: {source_assets} -> {output_assets}")
+            try:
+                # Get the latest modification time of any file in source assets
+                latest_source_mtime = max(
+                    os.path.getmtime(os.path.join(root, file))
+                    for root, _, files in os.walk(source_assets)
+                    for file in files
+                )
+
+                # Get the latest modification time of any file in output assets
+                latest_output_mtime = max(
+                    os.path.getmtime(os.path.join(root, file))
+                    for root, _, files in os.walk(output_assets)
+                    for file in files
+                )
+
+                # Only copy if source is newer than output
+                if latest_source_mtime <= latest_output_mtime:
+                    should_copy = False
+                    logging.debug(f"Assets unchanged, skipping copy: {source_assets}")
+            except (OSError, ValueError) as e:
+                # If there's any error (e.g., no files in directory), copy to be safe
+                logging.debug(f"Error checking asset timestamps, will copy: {e}")
+                should_copy = True
+
+        if should_copy:
+            # Copy assets directory
+            if os.path.exists(output_assets):
+                shutil.rmtree(output_assets)
+            shutil.copytree(source_assets, output_assets)
+            logging.info(f"Copied assets: {source_assets} -> {output_assets}")
+        else:
+            logging.info(f"Assets up to date, skipping: {source_assets}")
 
 def generate_html(md_file, metadata):
     """Generate HTML from markdown using pandoc
@@ -311,6 +481,9 @@ def generate_html(md_file, metadata):
         # Copy assets if they exist
         copy_assets(md_file, metadata)
 
+        # Update cache with the new file information
+        update_cache(md_file, output_file)
+
         return output_file
     except subprocess.CalledProcessError as e:
         logging.error(f"Error generating HTML for {md_file}: {e}")
@@ -327,6 +500,36 @@ def generate_index(posts):
     """Generate blog index.html from posts metadata with improved formatting"""
     index_template = os.path.join(CONFIG["template_dir"], "blog_index_template.html")
     output_file = os.path.join(CONFIG["output_root"], "index.html")
+
+    # Check if index needs rebuilding
+    index_needs_rebuild = True
+
+    # If the index exists, check if it's newer than the template
+    if os.path.exists(output_file):
+        try:
+            index_mtime = os.path.getmtime(output_file)
+            template_mtime = os.path.getmtime(index_template)
+
+            # If the template hasn't changed and we have a special cache entry for the index
+            if template_mtime <= index_mtime and "_index_last_build" in CACHE:
+                # Check if any posts have been modified since the last index build
+                last_index_build = CACHE["_index_last_build"]
+
+                # If no posts have been modified or added since the last index build
+                if all(CACHE.get(str(post["source_file"]), {}).get("mtime", float('inf')) <= last_index_build
+                       for post in posts if "source_file" in post):
+                    index_needs_rebuild = False
+                    logging.debug("Index is up to date, skipping rebuild")
+        except OSError as e:
+            logging.warning(f"Error checking index timestamps: {e}")
+            # Rebuild to be safe
+            index_needs_rebuild = True
+
+    if not index_needs_rebuild:
+        logging.info("Blog index is up to date, skipping rebuild")
+        return output_file
+
+    logging.info("Rebuilding blog index")
 
     with open(index_template, 'r', encoding='utf-8') as f:
         template = f.read()
@@ -381,20 +584,25 @@ def generate_index(posts):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(result)
 
+    # Update index build timestamp in cache
+    CACHE["_index_last_build"] = datetime.now().timestamp()
+
     logging.info(f"Generated blog index with {len(posts)} posts")
     return output_file
 
-def process_blog(posts_filter=None, interactive=False, dry_run=False):
+def process_blog(posts_filter=None, interactive=False, dry_run=False, force=False):
     """Process all blog articles and generate index
 
     Args:
         posts_filter: Optional filter function to process only certain posts
         interactive: If True, prompt for confirmation before processing each post
         dry_run: If True, only show what would be processed without making changes
+        force: If True, rebuild all posts regardless of timestamps
     """
     content_root = Path(CONFIG["content_root"])
     posts_metadata = []
     error_files = []
+    any_posts_changed = False
 
     # Find all markdown files
     md_files = list(content_root.glob('**/*.md'))
@@ -409,18 +617,55 @@ def process_blog(posts_filter=None, interactive=False, dry_run=False):
 
     # Dry run mode - just show what would be processed
     if dry_run:
-        logging.info(f"DRY RUN: Would process {len(md_files)} posts:")
-        for md_file in md_files:
-            logging.info(f"  - {md_file}")
+        # For dry run with dependency checking, show which files would actually be processed
+        if not force:
+            would_process = []
+            for md_file in md_files:
+                if needs_rebuild(md_file):
+                    would_process.append(md_file)
+
+            logging.info(f"DRY RUN: Would process {len(would_process)} out of {len(md_files)} posts:")
+            for md_file in would_process:
+                logging.info(f"  - {md_file}")
+        else:
+            logging.info(f"DRY RUN with FORCE: Would process all {len(md_files)} posts:")
+            for md_file in md_files:
+                logging.info(f"  - {md_file}")
+
         logging.info("No changes were made (dry run)")
         return
 
     # Show how many files matched if in interactive mode
     if interactive and md_files:
+        # For interactive mode with dependency checking, first filter for posts that need rebuilding
+        if not force:
+            md_files = [f for f in md_files if needs_rebuild(f)]
+
         logging.info(f"Found {len(md_files)} posts to process")
 
     # Process each markdown file
     for md_file in md_files:
+        # Check if file needs rebuilding
+        if not force and not needs_rebuild(md_file):
+            logging.info(f"Skipping unchanged file: {md_file}")
+
+            # Still need the metadata for the index
+            try:
+                metadata = extract_metadata(md_file)
+
+                # Add source file info for later index checks
+                metadata["source_file"] = md_file
+
+                if metadata.get("status") != "draft":
+                    # Get the output file path from cache
+                    md_file_str = str(md_file)
+                    if md_file_str in CACHE and "output" in CACHE[md_file_str]:
+                        posts_metadata.append(metadata)
+            except Exception as e:
+                logging.error(f"Error extracting metadata from unchanged file {md_file}: {e}")
+
+            continue
+
         # Prompt for confirmation in interactive mode
         if interactive:
             confirm = input(f"Process {md_file}? [y/n/q/a] (yes/no/quit/all): ").lower()
@@ -435,10 +680,14 @@ def process_blog(posts_filter=None, interactive=False, dry_run=False):
                 continue
 
         logging.info(f"Processing: {md_file}")
+        any_posts_changed = True
 
         try:
             # Extract metadata - will raise an error if front matter is missing or invalid
             metadata = extract_metadata(md_file)
+
+            # Add source file info for later index checks
+            metadata["source_file"] = md_file
 
             # Only process if not draft
             if metadata.get("status") != "draft":
@@ -467,11 +716,17 @@ def process_blog(posts_filter=None, interactive=False, dry_run=False):
         logging.error("\nPlease fix these errors and run the script again.")
         sys.exit(1)
 
-    # Generate index
-    if posts_metadata:
-        generate_index(posts_metadata)
+    # Generate index if any posts were changed or if specifically forced
+    if any_posts_changed or force or posts_filter:
+        if posts_metadata:
+            generate_index(posts_metadata)
+        else:
+            logging.warning("No posts to index")
     else:
-        logging.warning("No posts to index")
+        logging.info("No posts changed, skipping index regeneration")
+
+    # Save the updated cache
+    save_cache()
 
 def main():
     """Main entry point with command line argument parsing"""
@@ -489,6 +744,9 @@ def main():
                       help='Prompt for confirmation before processing each post')
     parser.add_argument('--dry-run', action='store_true',
                       help='Show what would be processed without making any changes')
+    parser.add_argument('--force', action='store_true',
+                      help='Force rebuild of all posts regardless of timestamps')
+    parser.add_argument('--cache-file', help='Path to dependency cache file')
 
     # Add logging arguments
     parser.add_argument('--log-file', help='Path to log file (default: ./process_blog.log)')
@@ -522,6 +780,9 @@ def main():
     if args.gen_json_ld_path:
         CONFIG["gen_json_ld_path"] = args.gen_json_ld_path
         logging.debug(f"Using gen-json-ld.py path: {CONFIG['gen_json_ld_path']}")
+    if args.cache_file:
+        CONFIG["cache_file"] = args.cache_file
+        logging.debug(f"Using cache file: {CONFIG['cache_file']}")
 
     # Update pandoc args with new template path if template_dir changed
     if args.template_dir:
@@ -529,6 +790,9 @@ def main():
             if arg.startswith("--template="):
                 CONFIG["pandoc_args"][i] = f"--template={os.path.join(args.template_dir, 'blog_template.html')}"
                 logging.debug(f"Updated pandoc template path: {CONFIG['pandoc_args'][i]}")
+
+    # Load dependency cache
+    load_cache()
 
     # Handle filters
     if args.rebuild_index:
@@ -604,6 +868,10 @@ def main():
 
         if all_posts:
             generate_index(all_posts)
+
+            # Update index build timestamp in cache
+            CACHE["_index_last_build"] = datetime.now().timestamp()
+            save_cache()
         else:
             logging.warning("No existing posts found to rebuild index")
     else:
@@ -630,7 +898,12 @@ def main():
                 logging.info(f"Processing posts from year: {args.year}")
 
         # Interactive mode is ignored in dry-run mode
-        process_blog(filter_func, args.interactive and not args.dry_run, args.dry_run)
+        process_blog(
+            filter_func,
+            args.interactive and not args.dry_run,
+            args.dry_run,
+            args.force
+        )
 
     logging.info("Blog processing completed")
 
