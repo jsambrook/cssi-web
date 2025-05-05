@@ -76,6 +76,7 @@ CONFIG = {
     "output_root": "./blog",
     "template_dir": "./src/blog/templates",
     "site_url": "https://common-sense.com",
+    "gen_json_ld_path": "/Users/john/git/cssi-ai/gen-json-ld/gen-json-ld.py",  # Now in CONFIG
     "pandoc_args": [
         "--standalone",
         "--template=./src/blog/templates/blog_template.html",
@@ -269,9 +270,10 @@ def generate_html(md_file, metadata):
 
     try:
         # Call gen-json-ld.py to generate the JSON-LD markup
+        # Convert Path objects to strings for subprocess
         json_ld_cmd = [
-            "/Users/john/git/cssi-ai/gen-json-ld/gen-json-ld.py",
-            md_file,
+            CONFIG["gen_json_ld_path"],
+            str(md_file),  # Convert Path to string
             "--output",
             json_ld_file.name
         ]
@@ -293,7 +295,14 @@ def generate_html(md_file, metadata):
                 metadata_args.extend(["--metadata", f"{key}={value}"])
 
         # Run pandoc with JSON-LD included in header
-        cmd = ["pandoc", f"--include-in-header={json_ld_file.name}", md_file, "-o", output_file] + CONFIG["pandoc_args"] + metadata_args
+        # Convert Path objects to strings for subprocess
+        cmd = [
+            "pandoc",
+            f"--include-in-header={json_ld_file.name}",
+            str(md_file),  # Convert Path to string
+            "-o",
+            str(output_file)  # Convert Path to string
+        ] + CONFIG["pandoc_args"] + metadata_args
 
         logging.debug(f"PANDOC COMMAND: {' '.join(cmd)}")
         subprocess.run(cmd, check=True)
@@ -415,13 +424,13 @@ def process_blog(posts_filter=None, interactive=False, dry_run=False):
         # Prompt for confirmation in interactive mode
         if interactive:
             confirm = input(f"Process {md_file}? [y/n/q/a] (yes/no/quit/all): ").lower()
-            if confirm == 'q':
+            if confirm in ('q', 'quit'):
                 logging.info("User aborted processing")
                 return
-            elif confirm == 'a':
+            elif confirm in ('a', 'all'):
                 # Turn off interactive mode for remaining files
                 interactive = False
-            elif confirm != 'y':
+            elif confirm not in ('y', 'yes'):
                 logging.info(f"Skipping {md_file}")
                 continue
 
@@ -471,6 +480,7 @@ def main():
     parser.add_argument('--output-root', help='Root directory for generated output')
     parser.add_argument('--template-dir', help='Directory containing templates')
     parser.add_argument('--site-url', help='Base URL for the website')
+    parser.add_argument('--gen-json-ld-path', help='Path to gen-json-ld.py script')
     parser.add_argument('--post', help='Process only posts containing this string in their path (usually matches the slug directory)')
     parser.add_argument('--year', help='Process only posts from a specific year')
     parser.add_argument('--month', help='Process only posts from a specific month (requires --year)')
@@ -509,6 +519,9 @@ def main():
     if args.site_url:
         CONFIG["site_url"] = args.site_url
         logging.debug(f"Using site URL: {CONFIG['site_url']}")
+    if args.gen_json_ld_path:
+        CONFIG["gen_json_ld_path"] = args.gen_json_ld_path
+        logging.debug(f"Using gen-json-ld.py path: {CONFIG['gen_json_ld_path']}")
 
     # Update pandoc args with new template path if template_dir changed
     if args.template_dir:
