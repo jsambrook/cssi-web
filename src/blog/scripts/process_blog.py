@@ -19,11 +19,25 @@ Usage Examples:
     # Process all blog posts with default settings
     python3 process_blog.py
 
+    # Process only posts containing "my-awesome-post" in their path
+    # (typically matches a specific post by its slug directory name)
+    python3 process_blog.py --post "my-awesome-post"
+
+    # Example: For a post in src/blog/content/2024/05/my-awesome-post/index.md
+    # The command would be:
+    python3 process_blog.py --post "my-awesome-post"
+
+    # Show what posts would be processed without making changes
+    python3 process_blog.py --post "my-awesome-post" --dry-run
+
+    # Process posts interactively, confirming each post before processing
+    python3 process_blog.py --year 2024 -i
+
     # Process posts from a specific year
     python3 process_blog.py --year 2024
 
-    # Process a specific post only
-    python3 process_blog.py --post "my-awesome-post"
+    # Process posts from a specific month (requires --year)
+    python3 process_blog.py --year 2024 --month 05
 
     # Only rebuild the index without regenerating posts
     python3 process_blog.py --rebuild-index
@@ -361,11 +375,13 @@ def generate_index(posts):
     logging.info(f"Generated blog index with {len(posts)} posts")
     return output_file
 
-def process_blog(posts_filter=None):
+def process_blog(posts_filter=None, interactive=False, dry_run=False):
     """Process all blog articles and generate index
 
     Args:
         posts_filter: Optional filter function to process only certain posts
+        interactive: If True, prompt for confirmation before processing each post
+        dry_run: If True, only show what would be processed without making changes
     """
     content_root = Path(CONFIG["content_root"])
     posts_metadata = []
@@ -382,8 +398,33 @@ def process_blog(posts_filter=None):
     if posts_filter:
         md_files = [f for f in md_files if posts_filter(f)]
 
+    # Dry run mode - just show what would be processed
+    if dry_run:
+        logging.info(f"DRY RUN: Would process {len(md_files)} posts:")
+        for md_file in md_files:
+            logging.info(f"  - {md_file}")
+        logging.info("No changes were made (dry run)")
+        return
+
+    # Show how many files matched if in interactive mode
+    if interactive and md_files:
+        logging.info(f"Found {len(md_files)} posts to process")
+
     # Process each markdown file
     for md_file in md_files:
+        # Prompt for confirmation in interactive mode
+        if interactive:
+            confirm = input(f"Process {md_file}? [y/n/q/a] (yes/no/quit/all): ").lower()
+            if confirm == 'q':
+                logging.info("User aborted processing")
+                return
+            elif confirm == 'a':
+                # Turn off interactive mode for remaining files
+                interactive = False
+            elif confirm != 'y':
+                logging.info(f"Skipping {md_file}")
+                continue
+
         logging.info(f"Processing: {md_file}")
 
         try:
@@ -430,10 +471,14 @@ def main():
     parser.add_argument('--output-root', help='Root directory for generated output')
     parser.add_argument('--template-dir', help='Directory containing templates')
     parser.add_argument('--site-url', help='Base URL for the website')
-    parser.add_argument('--post', help='Process only a specific post directory')
+    parser.add_argument('--post', help='Process only posts containing this string in their path (usually matches the slug directory)')
     parser.add_argument('--year', help='Process only posts from a specific year')
     parser.add_argument('--month', help='Process only posts from a specific month (requires --year)')
     parser.add_argument('--rebuild-index', action='store_true', help='Only rebuild the index, don\'t regenerate posts')
+    parser.add_argument('-i', '--interactive', action='store_true',
+                      help='Prompt for confirmation before processing each post')
+    parser.add_argument('--dry-run', action='store_true',
+                      help='Show what would be processed without making any changes')
 
     # Add logging arguments
     parser.add_argument('--log-file', help='Path to log file (default: ./process_blog.log)')
@@ -476,6 +521,13 @@ def main():
     if args.rebuild_index:
         # Just rebuild the index from existing posts
         logging.info("Rebuilding index only from existing posts")
+
+        # Show dry run message if applicable
+        if args.dry_run:
+            logging.info("DRY RUN: Would rebuild the index only")
+            logging.info("No changes were made (dry run)")
+            return
+
         all_posts = []
         for root, dirs, files in os.walk(CONFIG["output_root"]):
             for file in files:
@@ -564,7 +616,8 @@ def main():
                 filter_func = year_filter
                 logging.info(f"Processing posts from year: {args.year}")
 
-        process_blog(filter_func)
+        # Interactive mode is ignored in dry-run mode
+        process_blog(filter_func, args.interactive and not args.dry_run, args.dry_run)
 
     logging.info("Blog processing completed")
 
