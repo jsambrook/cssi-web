@@ -1,5 +1,44 @@
 #!/usr/bin/env python3
 
+#!/usr/bin/env python3
+
+"""
+Process Blog - A Static Blog Generator for Markdown Content
+
+This script processes markdown files with YAML front matter to generate a static blog site.
+It converts markdown to HTML using Pandoc, extracts and normalizes metadata, and creates
+a filterable index page.
+
+The script performs the following operations:
+1. Recursively finds markdown files in the content directory
+2. Extracts YAML front matter metadata from each file
+3. Generates HTML using Pandoc with custom templates
+4. Adds JSON-LD structured data for SEO
+5. Copies associated assets (images, etc.) for each post
+6. Generates a filterable index page with category and tag navigation
+
+Usage Examples:
+    # Process all blog posts with default settings
+    python3 process_blog.py
+
+    # Process posts from a specific year
+    python3 process_blog.py --year 2024
+
+    # Process a specific post only
+    python3 process_blog.py --post "my-awesome-post"
+
+    # Only rebuild the index without regenerating posts
+    python3 process_blog.py --rebuild-index
+
+    # Specify custom directories
+    python3 process_blog.py --content-root ./content --output-root ./public --template-dir ./templates
+
+Requirements:
+    - Pandoc must be installed and available in PATH
+    - Proper directory structure (YEAR/MONTH/SLUG format recommended)
+    - gen-json-ld.py script must be available for structured data generation
+"""
+
 import os
 import re
 import yaml
