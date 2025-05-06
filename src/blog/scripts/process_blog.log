@@ -410,3 +410,62 @@
 2025-05-05 11:00:58 - INFO - Generated blog index with 12 posts
 2025-05-05 11:00:58 - DEBUG - Saved cache with 13 entries
 2025-05-05 11:00:58 - INFO - Blog processing completed
+2025-05-06 06:56:53 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-06 06:56:53 - INFO - Starting blog processing
+2025-05-06 06:56:53 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-06 06:56:53 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-06 06:57:01 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-05-06 06:57:01 - INFO - Copied assets: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets -> ./blog/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-05-06 06:57:01 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-06 06:57:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-06 06:57:11 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-05-06 06:57:11 - INFO - Copied assets: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets -> ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-05-06 06:57:11 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-06 06:57:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-06 06:57:19 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-05-06 06:57:19 - INFO - Copied assets: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets -> ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-05-06 06:57:19 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-06 06:57:19 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-06 06:57:27 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-05-06 06:57:27 - INFO - Copied assets: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets -> ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-05-06 06:57:27 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-06 06:57:27 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-06 06:57:35 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-05-06 06:57:35 - INFO - Copied assets: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets -> ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-05-06 06:57:35 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-06 06:57:35 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-06 06:57:41 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-05-06 06:57:41 - INFO - Copied assets: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets -> ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-05-06 06:57:41 - INFO - Processing: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-06 06:57:41 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-06 06:57:49 - INFO - Generated HTML: ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html
+2025-05-06 06:57:49 - INFO - Copied assets: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets -> ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets
+2025-05-06 06:57:49 - INFO - Processing: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-06 06:57:49 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-06 06:57:58 - INFO - Generated HTML: ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html
+2025-05-06 06:57:58 - INFO - Copied assets: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/assets -> ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/assets
+2025-05-06 06:57:58 - INFO - Processing: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-06 06:57:58 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-06 06:58:05 - INFO - Generated HTML: ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html
+2025-05-06 06:58:05 - INFO - Copied assets: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets -> ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets
+2025-05-06 06:58:05 - INFO - Processing: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-06 06:58:05 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-06 06:58:14 - INFO - Generated HTML: ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html
+2025-05-06 06:58:14 - INFO - Copied assets: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets -> ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets
+2025-05-06 06:58:14 - INFO - Processing: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-06 06:58:14 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-06 06:58:23 - INFO - Generated HTML: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-05-06 06:58:23 - INFO - Copied assets: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets -> ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-05-06 06:58:23 - INFO - Processing: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-06 06:58:23 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-06 06:58:32 - INFO - Generated HTML: ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html
+2025-05-06 06:58:32 - INFO - Copied assets: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets -> ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets
+2025-05-06 06:58:32 - INFO - Rebuilding blog index
+2025-05-06 06:58:32 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-05-06 06:58:32 - INFO - Generated blog index with 12 posts
+2025-05-06 06:58:32 - INFO - Blog processing completed
+2025-05-06 07:57:59 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-06 07:57:59 - INFO - Starting blog processing
+2025-05-06 07:57:59 - INFO - DRY RUN: Would process 0 out of 12 posts:
+2025-05-06 07:57:59 - INFO - No changes were made (dry run)
+2025-05-06 07:57:59 - INFO - Blog processing completed
