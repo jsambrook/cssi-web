@@ -514,3 +514,204 @@
 2025-05-07 10:02:33 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
 2025-05-07 10:02:33 - INFO - Generated blog index with 14 posts
 2025-05-07 10:02:33 - INFO - Blog processing completed
+2025-05-07 14:11:16 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:11:16 - INFO - Starting blog processing
+2025-05-07 14:11:16 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:11:16 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:11:16 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:11:16 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:11:16 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:11:16 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:11:16 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:11:16 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:11:24 - ERROR - UNEXPECTED ERROR processing src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md: [Errno 2] No such file or directory: 'pandoc'
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:11:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:11:24 - ERROR - 
+======== ERROR SUMMARY ========
+2025-05-07 14:11:24 - ERROR - Encountered errors in 1 file(s):
+2025-05-07 14:11:24 - ERROR -   - src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md: Unexpected error: [Errno 2] No such file or directory: 'pandoc'
+2025-05-07 14:11:24 - ERROR - 
+Please fix these errors and run the script again.
+2025-05-07 14:24:10 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:24:10 - INFO - Starting blog processing
+2025-05-07 14:24:10 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:24:10 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:24:10 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:24:10 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:24:10 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:24:10 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:24:10 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:24:10 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:24:18 - INFO - Generated HTML: ./blog/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.html
+2025-05-07 14:24:18 - INFO - Copied assets: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/assets -> ./blog/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/assets
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:24:18 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:24:18 - INFO - Rebuilding blog index
+2025-05-07 14:24:18 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-05-07 14:24:18 - INFO - Generated blog index with 15 posts
+2025-05-07 14:24:18 - INFO - Blog processing completed
+2025-05-07 14:38:26 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:38:26 - INFO - Starting blog processing
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:38:26 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:38:26 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:38:26 - INFO - Blog processing completed
+2025-05-07 14:40:39 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:40:39 - INFO - Starting blog processing
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:40:39 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:40:39 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:40:39 - INFO - Blog processing completed
+2025-05-07 14:42:40 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:42:40 - INFO - Starting blog processing
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:42:40 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:42:40 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:42:40 - INFO - Blog processing completed
+2025-05-07 14:43:44 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:43:44 - INFO - Starting blog processing
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:43:44 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:43:44 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:43:44 - INFO - Blog processing completed
+2025-05-07 14:46:11 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:46:11 - INFO - Starting blog processing
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:46:11 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:46:12 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:46:12 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:46:12 - INFO - Blog processing completed
+2025-05-07 14:47:27 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:47:27 - INFO - Starting blog processing
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:47:27 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:47:27 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:47:27 - INFO - Blog processing completed
+2025-05-07 14:48:05 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:48:05 - INFO - Starting blog processing
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:48:05 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:48:05 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:48:05 - INFO - Blog processing completed
+2025-05-07 14:48:09 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-07 14:48:09 - INFO - Starting blog processing
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-07 14:48:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-07 14:48:09 - INFO - No posts changed, skipping index regeneration
+2025-05-07 14:48:09 - INFO - Blog processing completed
