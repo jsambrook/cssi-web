@@ -766,3 +766,90 @@ Please fix these errors and run the script again.
 2025-05-07 15:01:02 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
 2025-05-07 15:01:02 - INFO - Generated blog index with 17 posts
 2025-05-07 15:01:02 - INFO - Blog processing completed
+2025-05-08 17:31:06 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-08 17:31:06 - INFO - Starting blog processing
+2025-05-08 17:31:06 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-08 17:31:06 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-08 17:31:06 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-08 17:31:06 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-08 17:31:06 - INFO - Processing: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-05-08 17:31:06 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-05-08 17:31:14 - INFO - Generated HTML: ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.html
+2025-05-08 17:31:14 - INFO - Copied assets: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets -> ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets
+2025-05-08 17:31:14 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-08 17:31:14 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-08 17:31:14 - INFO - Processing: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-05-08 17:31:14 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-05-08 17:31:26 - INFO - Generated HTML: ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.html
+2025-05-08 17:31:26 - INFO - Copied assets: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets -> ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets
+2025-05-08 17:31:26 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-05-08 17:31:26 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-05-08 17:31:33 - INFO - Generated HTML: ./blog/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.html
+2025-05-08 17:31:33 - INFO - Copied assets: src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/assets -> ./blog/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/assets
+2025-05-08 17:31:33 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-08 17:31:33 - INFO - Processing: src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-05-08 17:31:33 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-05-08 17:31:43 - INFO - Generated HTML: ./blog/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.html
+2025-05-08 17:31:43 - INFO - Copied assets: src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/assets -> ./blog/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/assets
+2025-05-08 17:31:43 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-08 17:31:43 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-08 17:31:43 - INFO - Processing: src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-05-08 17:31:43 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-05-08 17:31:51 - INFO - Generated HTML: ./blog/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.html
+2025-05-08 17:31:51 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/assets -> ./blog/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/assets
+2025-05-08 17:31:51 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-08 17:31:51 - INFO - Processing: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-05-08 17:31:51 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-05-08 17:31:59 - INFO - Generated HTML: ./blog/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.html
+2025-05-08 17:31:59 - INFO - Copied assets: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/assets -> ./blog/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/assets
+2025-05-08 17:31:59 - INFO - Skipping unchanged file: src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md
+2025-05-08 17:31:59 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-08 17:31:59 - INFO - Processing: src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-05-08 17:31:59 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-05-08 17:32:11 - INFO - Generated HTML: ./blog/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.html
+2025-05-08 17:32:11 - INFO - Copied assets: src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/assets -> ./blog/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/assets
+2025-05-08 17:32:11 - INFO - Processing: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-05-08 17:32:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-05-08 17:32:17 - INFO - Generated HTML: ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.html
+2025-05-08 17:32:17 - INFO - Copied assets: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/assets -> ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/assets
+2025-05-08 17:32:17 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md
+2025-05-08 17:32:17 - INFO - Processing: src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-05-08 17:32:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-05-08 17:32:23 - INFO - Generated HTML: ./blog/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.html
+2025-05-08 17:32:23 - INFO - Copied assets: src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/assets -> ./blog/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/assets
+2025-05-08 17:32:23 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-08 17:32:23 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-08 17:32:23 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-05-08 17:32:23 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-05-08 17:32:29 - INFO - Generated HTML: ./blog/2025/05/the-ultimate-small-business-website-automation-checklist/index.html
+2025-05-08 17:32:29 - INFO - Copied assets: src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/assets -> ./blog/2025/05/the-ultimate-small-business-website-automation-checklist/assets
+2025-05-08 17:32:29 - INFO - Processing: src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-05-08 17:32:29 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-05-08 17:32:37 - INFO - Generated HTML: ./blog/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.html
+2025-05-08 17:32:37 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/assets -> ./blog/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/assets
+2025-05-08 17:32:37 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-08 17:32:37 - INFO - Processing: src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-05-08 17:32:37 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-05-08 17:32:47 - INFO - Generated HTML: ./blog/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.html
+2025-05-08 17:32:47 - INFO - Copied assets: src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/assets -> ./blog/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/assets
+2025-05-08 17:32:47 - INFO - Processing: src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-05-08 17:32:47 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-05-08 17:32:54 - INFO - Generated HTML: ./blog/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.html
+2025-05-08 17:32:54 - INFO - Copied assets: src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/assets -> ./blog/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/assets
+2025-05-08 17:32:54 - INFO - Processing: src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-05-08 17:32:54 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-05-08 17:33:01 - INFO - Generated HTML: ./blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.html
+2025-05-08 17:33:01 - INFO - Copied assets: src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/assets -> ./blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/assets
+2025-05-08 17:33:01 - INFO - Processing: src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-05-08 17:33:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-05-08 17:33:09 - INFO - Generated HTML: ./blog/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.html
+2025-05-08 17:33:09 - INFO - Copied assets: src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/assets -> ./blog/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/assets
+2025-05-08 17:33:09 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-08 17:33:09 - INFO - Processing: src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-05-08 17:33:09 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-05-08 17:33:16 - INFO - Generated HTML: ./blog/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.html
+2025-05-08 17:33:16 - INFO - Copied assets: src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/assets -> ./blog/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/assets
+2025-05-08 17:33:16 - INFO - Rebuilding blog index
+2025-05-08 17:33:16 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-05-08 17:33:16 - INFO - Generated blog index with 33 posts
+2025-05-08 17:33:16 - INFO - Blog processing completed
