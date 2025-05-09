@@ -1,5 +1,26 @@
 # Makefile
 
+# Set up PATH to ensure we can find what we depend on.
+export PATH := /opt/homebrew/Cellar/pyenv-virtualenv/HEAD-e8c8fd9/shims:\
+	           /Users/john/.pyenv/shims:\
+               /Users/john/.pyenv/bin:\
+               .:\
+               /Users/john/bin:\
+               /Users/john/git/cssi/bin:\
+               /Users/john/git/cssi-dev-env/bin:\
+               /opt/homebrew/opt/postgresql@16/bin:\
+               /opt/homebrew/bin:\
+               /opt/homebrew/opt/ruby/bin:\
+               /opt/homebrew/sbin:\
+               /usr/local/bin:\
+               /bin:\
+               /usr/bin:\
+               /usr/sbin:\
+               /sbin:\
+               /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin:\
+               /Users/john/.local/bin:\
+               /Library/TeX/texbin:
+
 # Source directory
 SRC_DIR = src
 
