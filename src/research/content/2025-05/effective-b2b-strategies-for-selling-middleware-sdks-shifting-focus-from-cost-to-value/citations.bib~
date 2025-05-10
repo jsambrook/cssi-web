@@ -1,0 +1,464 @@
+2025-05-10 11:58:02,576 [INFO] Fetching content from URL: https://www.ibm.com/products/webmethods-b2b
+2025-05-10 11:58:08,857 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:08,860 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:13,524 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:13,534 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{ibm_webmethods_b2b_2024,
+  title        = {IBM webMethods B2B},
+  howpublished = {\url{https://www.ibm.com/products/webmethods-b2b}},
+  note         = {Accessed: 2025-05-10},
+  year         = 2024,
+  month        = sep,
+  day          = 24,
+  publisher    = {IBM},
+  url          = {https://www.ibm.com/products/webmethods-b2b},
+  abstract     = {IBM webMethods unifies all integrations—applications, APIs, B2B and files—across geographies, hybrid multicloud hosting environments, user personas and teams. Features include a self-service portal for partner onboarding, integrated IBM VAN with access to 3M+ partners, and deployment on AWS and Azure for flexibility.},
+  keywords     = {iPaaS, B2B integration, Electronic data interchange, Data exchange, IBM webMethods B2B}
+}
+
+2025-05-10 11:58:13,938 [INFO] Fetching content from URL: https://kms-solutions.asia/blogs/measure-roi-of-custom-software-project
+2025-05-10 11:58:14,546 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:14,549 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:16,697 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:16,707 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{kms2025measure,
+  title = {Just a moment...},
+  howpublished = {\url{https://kms-solutions.asia/blogs/measure-roi-of-custom-software-project}},
+  note = {Accessed: 2025-05-10},
+  author = {{KMS Solutions}},
+  year = {2025}
+}
+
+2025-05-10 11:58:17,090 [INFO] Fetching content from URL: https://www.haveignition.com/kpis-for-product-managers/kpis-for-product-managers-sdk-performance
+2025-05-10 11:58:17,908 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:17,910 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:21,202 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:21,211 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{haveignition2024kpis,
+  title        = {KPIs for Product Managers: SDK performance},
+  author       = {{Have Ignition}},
+  year         = {2024},
+  url          = {https://www.haveignition.com/kpis-for-product-managers/kpis-for-product-managers-sdk-performance},
+  note         = {Accessed: 2025-05-10},
+  howpublished = {\url{https://www.haveignition.com/kpis-for-product-managers/kpis-for-product-managers-sdk-performance}},
+  institution  = {haveignition.com},
+  abstract     = {Learn about the essential KPIs for product managers to track SDK performance.}
+}
+
+2025-05-10 11:58:21,584 [INFO] Fetching content from URL: https://productive.io/blog/time-to-market/
+2025-05-10 11:58:23,199 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:23,201 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:26,124 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:26,132 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{Jurcic2025TimeToMarket,
+  author       = {Marin Jurčić},
+  title        = {A Guide to Time To Market (TTM)},
+  year         = {2025},
+  month        = mar,
+  day          = 4,
+  url          = {https://productive.io/blog/time-to-market},
+  note         = {Accessed: 2025-05-10},
+  organization = {Productive},
+  description  = {Learn how Time to Market can make or break your product's success and discover proven strategies for faster launches.}
+}
+
+2025-05-10 11:58:26,506 [INFO] Fetching content from URL: https://enkonix.com/blog/time-to-market
+2025-05-10 11:58:28,449 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:28,452 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:32,096 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:32,103 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{kleshchuk2021timetomarket,
+  author       = {Sophie Kleshchuk},
+  title        = {Time to Market (TTM): What Is It and Why Does It Matter},
+  year         = {2021},
+  month        = nov,
+  day          = {18},
+  howpublished = {\url{https://enkonix.com/blog/time-to-market}},
+  note         = {Accessed: 2025-05-10},
+  publisher    = {Enkonix},
+  url          = {https://enkonix.com/blog/time-to-market},
+  abstract     = {Learn about Time to Market (TTM) and its significance in product development. Discover how to measure TTM, make informed decisions, and accelerate it. Enkonix can assist you in speeding up your product development process.}
+}
+
+2025-05-10 11:58:32,485 [INFO] Fetching content from URL: https://news.sap.com/2024/08/sap-integration-suite-delivers-roi-boosts-efficiency-economic-gains/
+2025-05-10 11:58:35,470 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:35,473 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:44,934 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:44,945 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{Sandhu2024,
+  author       = {Bharat Sandhu},
+  title        = {SAP Integration Suite Delivered 345\% ROI, Boosting Efficiency by 30\%, and Granted Economic Gains for Customers},
+  year         = {2024},
+  month        = aug,
+  day          = {27},
+  url          = {https://news.sap.com/2024/08/sap-integration-suite-delivers-roi-boosts-efficiency-economic-gains/},
+  organization = {SAP News Center},
+  note         = {Accessed: 2025-05-10},
+  abstract     = {A new independent study conducted by Forrester Research reveals that SAP Integration Suite delivers substantial ROI for businesses, including a 345\% ROI over three years, a 30\% increase in integration developer efficiency, and nearly \$1 million in incremental profit.}
+}
+
+2025-05-10 11:58:45,320 [INFO] Fetching content from URL: https://prismatic.io/blog/measure-integration-roi/
+2025-05-10 11:58:46,468 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:46,470 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:49,903 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:49,911 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{prismatic2024roi,
+  author       = {{Prismatic}},
+  title        = {How to Determine ROI for B2B SaaS Integrations},
+  year         = 2024,
+  month        = sep,
+  day          = 10,
+  url          = {https://prismatic.io/blog/measure-integration-roi/},
+  note         = {Accessed: 2025-05-10},
+  organization = {Prismatic},
+  description  = {How do you calculate the ROI for your B2B SaaS integrations? See how costs, revenue, and the tools you use all contribute to integration ROI.}
+}
+
+2025-05-10 11:58:50,286 [INFO] Fetching content from URL: https://elmlearning.com/blog/customer-education-programs/
+2025-05-10 11:58:50,998 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:51,000 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:53,961 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:53,970 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{ELMLearning2024,
+  author       = {{ELM Learning}},
+  title        = {Effective Strategies for Customer Education Programs},
+  year         = {2024},
+  month        = sep,
+  day          = {30},
+  howpublished = {\url{https://elmlearning.com/blog/customer-education-programs/}},
+  note         = {Accessed: 2025-05-10},
+  institution  = {ELM Learning},
+  keywords     = {Customer Education, Instructional Design, Customer Engagement, Learning Programs}
+}
+
+2025-05-10 11:58:54,342 [INFO] Fetching content from URL: https://userpilot.com/blog/customer-education-strategy/
+2025-05-10 11:58:55,226 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:58:55,228 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:58:58,872 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:58:58,878 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{Grigoryan2022,
+  author       = {Sophie Grigoryan},
+  title        = {How to Build an Effective Customer Education Strategy},
+  year         = {2022},
+  month        = nov,
+  day          = {23},
+  url          = {https://userpilot.com/blog/customer-education-strategy/},
+  note         = {Accessed: 2025-05-10},
+  organization = {Userpilot},
+  description  = {What can a well-defined customer education strategy do for your SaaS? It helps your users experience value fast and learn about your product.},
+  keywords     = {Customer Education, Product Adoption, Customer Success, SaaS, Customer Training}
+}
+
+2025-05-10 11:58:59,260 [INFO] Fetching content from URL: https://developer.apple.com/videos/play/wwdc2021/10235/
+2025-05-10 11:59:00,301 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:00,303 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:02,861 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:02,878 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{apple2021build,
+  author       = {{Apple Inc}},
+  title        = {Build interactive tutorials using DocC - WWDC21},
+  year         = 2021,
+  month        = jun,
+  day          = 10,
+  howpublished = {\url{https://developer.apple.com/videos/play/wwdc2021/10235/}},
+  note         = {Accessed: 2025-05-10},
+  institution  = {Apple Developer}
+}
+
+2025-05-10 11:59:03,252 [INFO] Fetching content from URL: https://aws.amazon.com/solutions/case-studies/nnamu/
+2025-05-10 11:59:04,407 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:04,410 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:07,410 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:07,423 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{aws2022nnamu,
+  author       = {{Amazon Web Services, Inc.}},
+  title        = {Reducing Development Time by 30\% Using Amazon Q with nnamu | Case Study | AWS},
+  year         = 2022,
+  month        = jul,
+  day          = 31,
+  howpublished = {\url{https://aws.amazon.com/solutions/case-studies/nnamu/}},
+  note         = {Accessed: 2025-05-10},
+  organization = {Amazon Web Services, Inc.},
+  description  = {Learn how AI startup nnamu reduced time to market and improved code quality using Amazon Q.}
+}
+
+2025-05-10 11:59:07,799 [INFO] Fetching content from URL: https://middleware.io/pricing/
+2025-05-10 11:59:08,574 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:08,577 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:11,694 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:11,702 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{middleware2025pricing,
+  title        = {Observability Pricing | Middleware},
+  howpublished = {\url{https://middleware.io/pricing/}},
+  note         = {Accessed: 2025-05-10},
+  year         = 2025,
+  month        = jan,
+  author       = {{Middleware}},
+  description  = {Discover affordable pricing plans tailored to your needs. Scale with confidence using Middleware's flexible and cost-effective observability solutions.},
+  url          = {https://middleware.io/pricing/},
+  organization = {middleware.io}
+}
+
+2025-05-10 11:59:12,075 [INFO] Fetching content from URL: https://www.gravitee.io/api-gateway-pricing-guide
+2025-05-10 11:59:13,583 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:13,586 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:16,679 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:16,688 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{gravitee2025apigatewaypricing,
+  title        = {Complete guide to API gateway pricing},
+  author       = {{Gravitee.io}},
+  year         = {2025},
+  month        = {jan},
+  url          = {https://www.gravitee.io/api-gateway-pricing-guide},
+  note         = {Accessed: 2025-05-10},
+  howpublished = {\url{https://www.gravitee.io/api-gateway-pricing-guide}},
+  institution  = {gravitee.io},
+  abstract     = {API gateway price, API gateway cost, pricing models, and API gateway price calculators help estimate API gateway costs based on usage and features.}
+}
+
+2025-05-10 11:59:17,061 [INFO] Fetching content from URL: https://www.withorb.com/blog/outcome-based-pricing?a8e726b1_page=2
+2025-05-10 11:59:17,962 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:17,964 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:24,238 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:24,245 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{deGoei2025OutcomeBasedPricing,
+  author       = {Bas de Goei},
+  title        = {Orb | What is outcome-based pricing? How SaaS companies use it},
+  year         = {2025},
+  month        = {jan},
+  day          = {8},
+  url          = {https://www.withorb.com/blog/outcome-based-pricing?a8e726b1_page=2},
+  note         = {Accessed: 2025-05-10},
+  organization = {withorb.com},
+  description  = {Discover why and how outcome-based pricing can change the SaaS pricing game. Explore real-world examples and implementation strategies.}
+}
+
+2025-05-10 11:59:24,622 [INFO] Fetching content from URL: https://www.vendr.com/blog/measuring-saas-tco-roi
+2025-05-10 11:59:26,877 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:26,880 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:30,844 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:30,854 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{VendrTeam2023,
+  author       = {Vendr Team},
+  title        = {Calculate TCO and ROI for effective SaaS evaluation},
+  year         = {2023},
+  month        = feb,
+  day          = {17},
+  howpublished = {\url{https://www.vendr.com/blog/measuring-saas-tco-roi}},
+  note         = {Accessed: 2025-05-10},
+  url          = {https://www.vendr.com/blog/measuring-saas-tco-roi},
+  organization = {vendr.com},
+  description  = {Learn how to determine the value of SaaS tools for your business by measuring their Total Cost of Ownership (TCO) and Return on Investment (ROI).}
+}
+
+2025-05-10 11:59:31,226 [INFO] Fetching content from URL: https://www.salesforce.com/sales/cpq/value-based-pricing/
+2025-05-10 11:59:32,390 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:32,393 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:35,447 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:35,455 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{Strohkorb2025,
+  author       = {Peter Strohkorb},
+  title        = {Value-Based Pricing: A Complete Overview \& Guide},
+  year         = {2025},
+  month        = {jan},
+  day          = {17},
+  url          = {https://www.salesforce.com/sales/cpq/value-based-pricing/},
+  note         = {Accessed: 2025-05-10},
+  organization = {Salesforce},
+  description  = {Value based pricing quantifies the value of a product or service based on its perceived value to the customer.}
+}
+
+2025-05-10 11:59:35,833 [INFO] Fetching content from URL: https://www.zmistandcopy.com/blog/how-to-write-case-studies
+2025-05-10 11:59:36,436 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:36,438 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:41,504 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:41,513 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@online{July2024,
+  author       = {July 3},
+  title        = {How to Write an Impactful Case Study: 5 Best Practices and a Template for Software Development Companies},
+  year         = {2024},
+  month        = jul,
+  url          = {https://www.zmistandcopy.com/blog/how-to-write-case-studies},
+  note         = {Accessed: 2025-05-10},
+  description  = {Case studies are your main asset in acquiring new customers. But how can you make them compelling? Discover 5 best practices and a template in our article.}
+}
+
+2025-05-10 11:59:41,885 [INFO] Fetching content from URL: https://kaizen.com/insights/case-study-lead-time-reduction-in-product-development/
+2025-05-10 11:59:44,882 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:44,885 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:49,106 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:49,112 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{KaizenInstitute2021LeadTime,
+  author       = {Kaizen Institute},
+  title        = {{KAIZEN™ Case Study | Lead Time Reduction in Product Development}},
+  year         = {2021},
+  month        = nov,
+  day          = {17},
+  howpublished = {\url{https://kaizen.com/insights/case-study-lead-time-reduction-in-product-development/}},
+  note         = {Accessed: 2025-05-10},
+  organization = {Kaizen Institute},
+  url          = {https://kaizen.com/insights/case-study-lead-time-reduction-in-product-development/},
+  abstract     = {The constant access to information pushes consumers in a continuous search for something new and innovative. In order to keep up, organisations need a fast and agile development process. See how this company reduced its product development time by half.}
+}
+
+2025-05-10 11:59:49,492 [INFO] Fetching content from URL: https://github.com/mlcommons/training
+2025-05-10 11:59:50,791 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:50,794 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:53,215 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:53,224 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{mlcommons_training_2018,
+  author       = {Mlcommons},
+  title        = {{GitHub - mlcommons/training: Reference implementations of MLPerf™ training benchmarks}},
+  howpublished = {\url{https://github.com/mlcommons/training}},
+  year         = 2018,
+  month        = mar,
+  note         = {Accessed: 2025-05-10},
+  url          = {https://github.com/mlcommons/training}
+}
+
+2025-05-10 11:59:53,599 [INFO] Fetching content from URL: https://en.wikipedia.org/wiki/Reference_implementation
+2025-05-10 11:59:54,214 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:54,216 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 11:59:56,732 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 11:59:56,741 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{WikipediaReferenceImplementation2025,
+  author       = {{Wikimedia Foundation, Inc.}},
+  title        = {Reference implementation - Wikipedia},
+  year         = 2004,
+  howpublished = {\url{https://en.wikipedia.org/wiki/Reference_implementation}},
+  note         = {Accessed: 2025-05-10},
+  url          = {https://en.wikipedia.org/wiki/Reference_implementation}
+}
+
+2025-05-10 11:59:57,114 [INFO] Fetching content from URL: https://www.royalcyber.com/services/integration-services/
+2025-05-10 11:59:58,390 [INFO] Document fetched and extracted successfully.
+2025-05-10 11:59:58,393 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 12:00:00,427 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:00:00,435 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{royalcyber_integration_2025,
+  title        = {Integration Services},
+  howpublished = {\url{https://www.royalcyber.com/services/integration-services/}},
+  note         = {Accessed: 2025-05-10; page blocked by security service},
+  author       = {{Royal Cyber}},
+  year         = {2025}
+}
+
+2025-05-10 12:00:00,852 [INFO] Fetching content from URL: https://trailhead.salesforce.com/content/learn/modules/mulesoft-catalyst-playbooks/learn-about-the-mulesoft-catalyst-delivery-methodology
+2025-05-10 12:00:02,498 [INFO] Document fetched and extracted successfully.
+2025-05-10 12:00:02,502 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 12:00:05,967 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:00:05,976 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{mulesoft2025catalyst,
+  title        = {MuleSoft Catalyst Delivery Methodology},
+  howpublished = {\url{https://trailhead.salesforce.com/content/learn/modules/mulesoft-catalyst-playbooks/learn-about-the-mulesoft-catalyst-delivery-methodology}},
+  note         = {Accessed: 2025-05-10},
+  publisher    = {Trailhead, salesforce.com},
+  year         = {2025},
+  description  = {Discover MuleSoft's six-path Catalyst Delivery Methodology to redefine IT operations, align KPIs, and achieve efficient integration for organization success},
+}
+
+2025-05-10 12:00:06,358 [INFO] Fetching content from URL: https://multishoring.com/boomi-integration-services/
+2025-05-10 12:00:07,736 [INFO] Document fetched and extracted successfully.
+2025-05-10 12:00:07,739 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 12:00:10,755 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:00:10,762 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{multishoring2025boomi,
+  title        = {Dell Boomi Consulting - Boomi Integration Services},
+  author       = {{Multishoring}},
+  year         = {2025},
+  month        = apr,
+  day          = 24,
+  howpublished = {\url{https://multishoring.com/boomi-integration-services/}},
+  note         = {Accessed: 2025-05-10},
+  organization = {Multishoring},
+  keywords     = {Dell Boomi, integration services, consulting, digital transformation, Boomi AtomSphere}
+}
+
+2025-05-10 12:00:11,138 [INFO] Fetching content from URL: https://middlewareadvisor.com/benefits-of-establishing-mulesoft-center-for-enablement-c4e/
+2025-05-10 12:00:14,362 [INFO] Document fetched and extracted successfully.
+2025-05-10 12:00:14,365 [INFO] Generating BibTeX citation using OpenAI GPT-4.1 mini
+2025-05-10 12:00:18,096 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-10 12:00:18,103 [INFO] Citation generated successfully with OpenAI model.
+
+Generated BibTeX Citation:
+
+@misc{Admin2023Benefits,
+  author       = {Admin},
+  title        = {Benefits of establishing MuleSoft Center for Enablement (C4E)},
+  year         = {2023},
+  month        = jul,
+  day          = {03},
+  howpublished = {\url{https://middlewareadvisor.com/benefits-of-establishing-mulesoft-center-for-enablement-c4e/}},
+  note         = {Accessed: 2025-05-10},
+  publisher    = {Middleware Advisor},
+  keywords     = {Catalyst, MuleSoft, Center for Enablement, C4E, Center of Excellence, CoE}
+}
