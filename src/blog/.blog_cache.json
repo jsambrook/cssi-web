@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1746918986.433782,
+  "_index_last_build": 1746933122.28075,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -243,5 +243,9 @@
   "src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md": {
     "mtime": 1746918971.8994675,
     "output": "./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.html"
+  },
+  "src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md": {
+    "mtime": 1746933106.2638412,
+    "output": "./blog/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.html"
   }
 }
