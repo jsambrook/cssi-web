@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1746990748.577034,
+  "_index_last_build": 1746991003.780128,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -279,5 +279,9 @@
   "src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md": {
     "mtime": 1746990736.8747458,
     "output": "./blog/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md": {
+    "mtime": 1746990989.665094,
+    "output": "./blog/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.html"
   }
 }
