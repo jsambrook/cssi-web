@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1747077439.878514,
+  "_index_last_build": 1747077710.639647,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -299,5 +299,9 @@
   "src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.md": {
     "mtime": 1747077427.5249417,
     "output": "./blog/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.html"
+  },
+  "src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.md": {
+    "mtime": 1747077697.6208694,
+    "output": "./blog/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.html"
   }
 }
