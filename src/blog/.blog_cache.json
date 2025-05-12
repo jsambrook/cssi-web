@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1747033917.88454,
+  "_index_last_build": 1747077156.764288,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -291,5 +291,9 @@
   "src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md": {
     "mtime": 1747033904.073088,
     "output": "./blog/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.html"
+  },
+  "src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md": {
+    "mtime": 1747077144.3849862,
+    "output": "./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.html"
   }
 }

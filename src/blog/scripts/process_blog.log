@@ -2864,3 +2864,86 @@ Please fix these errors and run the script again.
 2025-05-12 00:11:57 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
 2025-05-12 00:11:57 - INFO - Generated blog index with 73 posts
 2025-05-12 00:11:57 - INFO - Blog processing completed
+2025-05-12 12:12:25 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-05-12 12:12:25 - INFO - Starting blog processing
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-05-12 12:12:25 - INFO - Skipping unchanged file: src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-05-12 12:12:25 - INFO - Processing: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md
+2025-05-12 12:12:25 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md
+2025-05-12 12:12:36 - INFO - Generated HTML: ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.html
+2025-05-12 12:12:36 - INFO - Copied assets: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/assets -> ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/assets
+2025-05-12 12:12:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-05-12 12:12:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.md
+2025-05-12 12:12:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-05-12 12:12:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-05-12 12:12:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.md
+2025-05-12 12:12:36 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md
+2025-05-12 12:12:36 - INFO - Rebuilding blog index
+2025-05-12 12:12:36 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-05-12 12:12:36 - INFO - Generated blog index with 74 posts
+2025-05-12 12:12:36 - INFO - Blog processing completed
