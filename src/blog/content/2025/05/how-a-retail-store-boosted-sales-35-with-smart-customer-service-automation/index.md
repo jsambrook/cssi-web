@@ -131,7 +131,7 @@ This phased approach allows for continuous learning and adjustment, ensuring eac
 
 ## The Potential Results
 
-Sales increases are just one potential outcome. Retailers may also experience numerous other benefits from customer service automation:
+Improved sales are just one potential outcome. Retailers may also experience numerous other benefits from customer service automation:
 
 ### Customer Experience Improvements
 
@@ -149,9 +149,9 @@ Sales increases are just one potential outcome. Retailers may also experience nu
 
 ### Business Impact
 
-- Increase in overall sales
-- Growth in online sales specifically
-- Increase in average transaction value
+- Potential increase in overall sales
+- Possible growth in online sales specifically
+- Potential increase in average transaction value
 - Reduction in returns due to better pre-purchase information
 
 Perhaps most tellingly, businesses may see an increase in customer referrals—a clear indication that improved service experience generates positive word-of-mouth.

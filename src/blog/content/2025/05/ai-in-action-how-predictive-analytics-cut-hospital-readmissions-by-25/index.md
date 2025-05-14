@@ -135,7 +135,7 @@ This tiered approach allows hospitals to focus resources where they will have th
 
 ### Clinical Outcomes
 
-After implementation, healthcare organizations may achieve results such as:
+After implementation, healthcare organizations may potentially achieve results such as:
 
 - Reduction in overall 30-day readmission rates
 - Reduction in specific condition readmissions (like heart failure)

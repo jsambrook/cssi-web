@@ -185,7 +185,7 @@ Finding a partner with small business experience is crucial. Look for:
 - Willingness to understand your specific business needs
 - Ongoing support and training capabilities
 
-If you're considering a similar transformation for your business, Common Sense Systems can help assess whether AI automation solutions might be right for your needs. With 30 years of business and technology experience, we can provide guidance on implementing solutions that deliver measurable ROI.
+If you're considering a transformation for your business, Common Sense Systems can help assess whether AI automation solutions might be right for your needs. With 30 years of business and technology experience, we can provide guidance on implementing solutions that deliver measurable ROI.
 
 ## Tips for Small Businesses Considering AI Process Automation
 

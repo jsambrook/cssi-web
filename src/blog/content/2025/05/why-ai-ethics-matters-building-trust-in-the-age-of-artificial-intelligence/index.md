@@ -20,7 +20,7 @@ title: 'Why AI Ethics Matters: Building Trust in the Age of Artificial Intellige
 
 ## The AI Revolution: Promise and Responsibility
 
-Artificial Intelligence is no longer the stuff of science fiction—it's transforming how businesses operate across every industry. From predictive analytics that forecast customer behavior to automated customer service systems that operate 24/7, AI technologies are delivering unprecedented efficiencies and capabilities. According to recent research by Gartner, 75% of organizations will shift from piloting to operationalizing AI by 2025, driving a 5x increase in streaming data and analytics infrastructures.
+Artificial Intelligence is no longer the stuff of science fiction—it's transforming how businesses operate across every industry. From predictive analytics that forecast customer behavior to automated customer service systems that operate 24/7, AI technologies are delivering unprecedented efficiencies and capabilities. Industry research indicates that a growing majority of organizations are moving from experimental AI pilots to operational implementations.
 
 But as AI becomes more deeply embedded in business operations, we're facing a critical inflection point. The same technologies that offer tremendous benefits also present significant ethical challenges. Algorithmic bias, privacy concerns, lack of transparency, and questions about human oversight have all emerged as pressing issues that can't be ignored.
 
@@ -32,7 +32,7 @@ At Common Sense Systems, we believe that responsible AI implementation isn't jus
 
 Implementing AI ethically isn't simply about avoiding negative outcomes—it's about creating sustainable business value. Consider these compelling reasons why ethical AI practices matter:
 
-1. **Trust and Brand Reputation**: In an era of increasing consumer awareness, companies that demonstrate responsible AI use build stronger trust with their customers. A 2024 IBM study found that 85% of consumers say it's important for companies to be transparent about how their AI systems work.
+1. **Trust and Brand Reputation**: In an era of increasing consumer awareness, companies that demonstrate responsible AI use build stronger trust with their customers. Recent research indicates that a significant majority of consumers value transparency in how companies use AI systems.
 
 2. **Regulatory Compliance**: The regulatory landscape around AI is evolving rapidly. The EU's AI Act, similar legislation in development in the US, and industry-specific regulations are creating a complex compliance environment that businesses must navigate.
 
