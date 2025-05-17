@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1747510071.457075,
+  "_index_last_build": 1747510396.4861,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -351,5 +351,9 @@
   "src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.md": {
     "mtime": 1747510058.133335,
     "output": "./blog/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.html"
+  },
+  "src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.md": {
+    "mtime": 1747510379.7779808,
+    "output": "./blog/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.html"
   }
 }
