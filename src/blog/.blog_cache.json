@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1747422723.514958,
+  "_index_last_build": 1747509199.467025,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -335,5 +335,9 @@
   "src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.md": {
     "mtime": 1747422710.8437457,
     "output": "./blog/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.html"
+  },
+  "src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/index.md": {
+    "mtime": 1747509185.6261835,
+    "output": "./blog/2025/05/the-small-business-owners-playbook-for-ai-success/index.html"
   }
 }
