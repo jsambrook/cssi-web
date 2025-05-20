@@ -3,7 +3,7 @@
     "mtime": 1746468741.4937272,
     "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
   },
-  "_index_last_build": 1747682007.42089,
+  "_index_last_build": 1747768321.782713,
   "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
     "mtime": 1746468741.4973624,
     "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
@@ -371,5 +371,9 @@
   "src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.md": {
     "mtime": 1747681990.279352,
     "output": "./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.html"
+  },
+  "src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md": {
+    "mtime": 1747768308.924009,
+    "output": "./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.html"
   }
 }
