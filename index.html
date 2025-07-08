@@ -389,8 +389,8 @@
         position: fixed;
         bottom: 80px;
         left: 20px;
-        width: 350px;
-        height: 500px;
+        width: 440px; /* more spacious than 350px */
+        height: 560px;
         z-index: 9999;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         border-radius: 12px;
@@ -404,13 +404,13 @@
         border: none;
       }
 
-      @media (max-width: 768px) {
-        #cssi-sam-wrapper {
-          width: 90%;
-          left: 5%;
-          height: 60vh;
-        }
-      }
+     @media (min-width: 1024px) {
+       #cssi-sam-wrapper {
+         width: 460px;
+         height: 580px;
+       }
+     }
+
     </style>
 
     <script>
