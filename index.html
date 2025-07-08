@@ -350,36 +350,81 @@
         });
     </script>
 
-    <!-- CSSI-SAM Chatbot Widget -->
-    <div id="cssi-sam-container">
+    <!-- CSSI-SAM Chatbot Widget with Toggle -->
+    <div id="cssi-sam-toggle" title="Chat with Sam">💬</div>
+
+    <div id="cssi-sam-wrapper" style="display: none;">
       <iframe
+        id="cssi-sam-iframe"
         src="https://common-sense.com/cssi-sam"
-        title="CSSI Sam Chatbot"
+        title="Chatbot: Sam from Common Sense"
         allow="microphone; fullscreen"
-        style="border: none; width: 350px; height: 500px;"
       ></iframe>
     </div>
 
     <style>
-      #cssi-sam-container {
+      #cssi-sam-toggle {
         position: fixed;
         bottom: 20px;
         left: 20px;
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        color: #333;
+        border-radius: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-size: 24px;
+        line-height: 48px;
+        cursor: pointer;
+        z-index: 10000;
+        transition: background-color 0.3s ease;
+      }
+
+      #cssi-sam-toggle:hover {
+        background-color: #f0f0f0;
+      }
+
+      #cssi-sam-wrapper {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        width: 350px;
+        height: 500px;
         z-index: 9999;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        background: white;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         border-radius: 12px;
         overflow: hidden;
+        background-color: white;
+      }
+
+      #cssi-sam-iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
 
       @media (max-width: 768px) {
-        #cssi-sam-container {
+        #cssi-sam-wrapper {
           width: 90%;
           left: 5%;
           height: 60vh;
         }
       }
     </style>
+
+    <script>
+      const toggle = document.getElementById('cssi-sam-toggle');
+      const wrapper = document.getElementById('cssi-sam-wrapper');
+
+      toggle.addEventListener('click', () => {
+        if (wrapper.style.display === 'none') {
+          wrapper.style.display = 'block';
+        } else {
+          wrapper.style.display = 'none';
+        }
+      });
+    </script>
 
 </body>
 </html>
