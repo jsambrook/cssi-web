@@ -349,5 +349,37 @@
             });
         });
     </script>
+
+    <!-- CSSI-SAM Chatbot Widget -->
+    <div id="cssi-sam-container">
+      <iframe
+        src="https://common-sense.com/cssi-sam"
+        title="CSSI Sam Chatbot"
+        allow="microphone; fullscreen"
+        style="border: none; width: 350px; height: 500px;"
+      ></iframe>
+    </div>
+
+    <style>
+      #cssi-sam-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 9999;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+        #cssi-sam-container {
+          width: 90%;
+          left: 5%;
+          height: 60vh;
+        }
+      }
+    </style>
+
 </body>
 </html>
