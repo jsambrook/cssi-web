@@ -108,7 +108,14 @@
                 </ul>
 
                 <div class="agent-widget">
-                    <iframe src="va-advisor.html" width="100%" height="150" frameborder="0"></iframe>
+                    <div class="cta-section">
+                        <h4>Try Me Now!</h4>
+                        <p>Click the "Start a call" button to experience voice agent technology firsthand. Ask Eric about voice agents, implementation strategies, or anything you'd like to know!</p>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="widget-section">
+                        <iframe src="va-advisor.html" width="100%" height="150" frameborder="0"></iframe>
+                    </div>
                 </div>
 
                 <p>After speaking with Eric, you'll have a clear understanding of how voice agents can benefit your organization. The conversation is designed to be both informative and interactive, giving you firsthand experience with the technology while learning about its practical applications.</p>
@@ -215,8 +222,10 @@
         border: 2px solid #e9ecef;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        text-align: center;
         transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 30px;
       }
 
       .agent-widget:hover {
@@ -225,13 +234,64 @@
         border-color: var(--primary-color);
       }
 
+      .agent-widget .cta-section {
+        flex: 1;
+        text-align: left;
+      }
+
+      .agent-widget .cta-section h4 {
+        color: var(--primary-color);
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .agent-widget .cta-section p {
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      .agent-widget .cta-section .arrow {
+        font-size: 2rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        display: inline-block;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+
+      .agent-widget .widget-section {
+        flex: 1;
+        text-align: center;
+      }
+
       .agent-widget iframe {
         width: 100%;
         background: white;
         border: 1px solid #dee2e6;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        margin-top: 10px;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 768px) {
+        .agent-widget {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .agent-widget .cta-section {
+          text-align: center;
+        }
+        
+        .agent-widget .cta-section .arrow {
+          transform: rotate(90deg);
+        }
       }
     </style>
 
