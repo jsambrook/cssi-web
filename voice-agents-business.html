@@ -103,7 +103,7 @@
                 <p>The Red Direction agent is an AI-powered voice agent designed to help prospective clients learn more about the services offered by Red Direction, a management consulting firm. This agent demonstrates how consulting firms can provide instant access to information about their methodologies, case studies, and service areas.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-reddirection.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-reddirection.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Try asking the Red Direction agent about their consulting approach, areas of expertise, or how they help clients achieve their business objectives. This example shows how voice agents can articulate complex service offerings in an accessible, conversational format.</p>
@@ -118,7 +118,7 @@
                 <p>The Silver Age Care agent is an AI-powered voice agent designed to help prospective clients learn more about the services offered by Silver Age Care, a senior living advisory firm. This agent demonstrates how advisory services can use voice technology to provide empathetic, informative support during sensitive decision-making processes.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-silveragecare.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-silveragecare.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Engage with the Silver Age Care agent to learn about their personalized approach to senior living guidance, care assessments, and family support services. This example illustrates how voice agents can handle sensitive topics with appropriate tone and expertise.</p>
@@ -133,7 +133,7 @@
                 <p>The Atekro agent is an AI-powered voice agent designed to help prospective customers understand the services offered by Atekro, an IT services provider. This agent showcases how technology companies can make technical services more approachable through conversational interfaces.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-atekro.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-atekro.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Ask the Atekro agent about different IT services, support options, or technology solutions. This example demonstrates how voice agents can bridge the gap between complex technical capabilities and clear business value propositions.</p>
@@ -148,7 +148,7 @@
                 <p>The Hosseini Law Office agent is an AI-powered voice agent designed to help prospective customers understand the services offered by Hosseini Law Office. This agent illustrates how legal practices can use voice technology to provide accessible information while maintaining professional boundaries.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-hosseini.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-hosseini.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Interact with the Hosseini Law Office agent to learn about their practice areas, approach to client service, and legal expertise. This example shows how voice agents in legal services must balance accessibility with professional responsibility and appropriate limitations.</p>
@@ -163,7 +163,7 @@
                 <p>The Block agent is an AI-powered voice agent designed to help prospective customers understand the services offered by The Block. This agent demonstrates how business service providers can use voice technology to efficiently communicate their value proposition and service capabilities.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-theblock.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-theblock.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Explore The Block agent's capabilities by asking about their services, approach, and how they support business clients. This example shows how voice agents can effectively represent professional service organizations with clarity and professionalism.</p>
@@ -178,7 +178,7 @@
                 <p>This voice agent has been trained on Japanese acupuncture practices and demonstrates how healthcare specialists can provide educational information about traditional and alternative medicine approaches. The agent is quite knowledgeable and can speak on many topics related to acupuncture theory and practice.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-japanese-acupuncture.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-japanese-acupuncture.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Try asking the Japanese Acupuncture agent about treatment approaches, the philosophy behind Japanese acupuncture, or specific conditions. This demonstrates how voice agents can provide specialized healthcare information while maintaining appropriate educational boundaries.</p>
@@ -187,7 +187,7 @@
                 <p>This is a sample voice agent for Sundays Acupuncture, showcasing how individual practitioners can use voice technology to provide information about their practice, treatment philosophy, and services. This example demonstrates voice agent applications for individual healthcare providers.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-sundays.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-sundays.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Engage with the Sundays Acupuncture agent to learn about their practice approach and services. This example shows how individual healthcare practitioners can use voice agents to provide accessible information about their specialized services.</p>
@@ -234,17 +234,28 @@
 
       .agent-widget {
         margin: 30px 0;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 8px;
+        padding: 25px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .agent-widget:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary-color);
       }
 
       .agent-widget iframe {
         width: 100%;
         background: white;
-        border: none;
-        box-shadow: none;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        margin-top: 10px;
       }
 
       .section-title {

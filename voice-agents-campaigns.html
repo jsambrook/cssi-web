@@ -119,7 +119,7 @@
                 <p>Jon Pascal is a member of the Kirkland City Council and is running for re-election in 2025. This voice agent strives to provide interested parties with factual information about Jon and his service to the City. The agent demonstrates how local political candidates can use voice technology to make themselves more accessible to constituents.</p>
 
                 <div class="agent-widget">
-                    <iframe src="va-jonpascal.html" width="100%" height="130" frameborder="0"></iframe>
+                    <iframe src="va-jonpascal.html" width="100%" height="150" frameborder="0"></iframe>
                 </div>
 
                 <p>Try asking the Jon Pascal agent about his experience on the city council, his positions on local issues, his background and qualifications, or his vision for Kirkland's future. This example shows how voice agents can provide voters with comprehensive information about candidates while maintaining an authentic, conversational tone.</p>
@@ -273,17 +273,28 @@
 
       .agent-widget {
         margin: 30px 0;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 8px;
+        padding: 25px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .agent-widget:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary-color);
       }
 
       .agent-widget iframe {
         width: 100%;
         background: white;
-        border: none;
-        box-shadow: none;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        margin-top: 10px;
       }
 
       .section-title {
