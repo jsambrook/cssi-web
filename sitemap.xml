@@ -1,18 +1,38 @@
 <?xml version="1.0" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://common-sense.com/voice-agents-government.html</loc>
-    <lastmod>2025-07-16</lastmod>
+    <loc>https://common-sense.com/va-advisor.html</loc>
+    <lastmod>2025-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/voice-agents-health.html</loc>
+    <lastmod>2025-07-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-jungo.html</loc>
+    <lastmod>2025-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/voice-agents-intro.html</loc>
+    <lastmod>2025-07-14</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-07-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://common-sense.com/ai-integration.html</loc>
-    <lastmod>2025-05-05</lastmod>
+    <loc>https://common-sense.com/va-eghlidlift.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-jonpascal.html</loc>
+    <lastmod>2025-07-13</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -22,17 +42,32 @@
   </url>
   <url>
     <loc>https://common-sense.com/about.html</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-07-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://common-sense.com/contact.html</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-07-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/va-reddirection.html</loc>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/revenue-improvement.html</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-cherishkirkland.html</loc>
+    <lastmod>2025-07-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/voice-agents-campaigns.html</loc>
+    <lastmod>2025-07-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -41,8 +76,28 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/va-atekro.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/payments.html</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-07-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-hosseini.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-yourbesthealth.html</loc>
+    <lastmod>2025-07-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-theblock.html</loc>
+    <lastmod>2025-07-11</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -51,18 +106,53 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/va-silveragecare.html</loc>
+    <lastmod>2025-07-12</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/va.html</loc>
-    <lastmod>2025-05-08</lastmod>
+    <lastmod>2025-07-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/voice-agents-business.html</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-truenorth.html</loc>
+    <lastmod>2025-07-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/process-automation.html</loc>
-    <lastmod>2025-05-05</lastmod>
+    <lastmod>2025-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-kurtdresner.html</loc>
+    <lastmod>2025-07-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/voice-agents.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/va-skibot.html</loc>
+    <lastmod>2025-07-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/voice-agents-government.html</loc>
+    <lastmod>2025-07-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/blog/</loc>
-    <lastmod>2025-05-17</lastmod>
+    <lastmod>2025-05-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -96,6 +186,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/</loc>
+    <lastmod>2025-05-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/</loc>
     <lastmod>2025-05-15</lastmod>
     <priority>0.6</priority>
@@ -126,13 +221,28 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/</loc>
+    <lastmod>2025-05-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/</loc>
     <lastmod>2025-05-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/</loc>
+    <lastmod>2025-05-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/</loc>
     <lastmod>2025-05-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/</loc>
+    <lastmod>2025-05-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -143,6 +253,11 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/</loc>
     <lastmod>2025-05-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/</loc>
+    <lastmod>2025-05-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -163,6 +278,11 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/the-small-business-owners-playbook-for-ai-success/</loc>
     <lastmod>2025-05-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/</loc>
+    <lastmod>2025-05-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -191,8 +311,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/</loc>
+    <lastmod>2025-05-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/</loc>
     <lastmod>2025-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/</loc>
+    <lastmod>2025-05-18</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -241,6 +371,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/</loc>
+    <lastmod>2025-05-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/</loc>
     <lastmod>2025-05-17</lastmod>
     <priority>0.6</priority>
@@ -261,6 +396,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/</loc>
+    <lastmod>2025-05-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/</loc>
     <lastmod>2025-05-07</lastmod>
     <priority>0.6</priority>
@@ -278,6 +423,11 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/</loc>
     <lastmod>2025-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/</loc>
+    <lastmod>2025-05-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -303,6 +453,31 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/</loc>
     <lastmod>2025-05-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/</loc>
+    <lastmod>2025-05-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/</loc>
+    <lastmod>2025-05-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/</loc>
+    <lastmod>2025-05-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/</loc>
+    <lastmod>2025-05-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/</loc>
+    <lastmod>2025-05-26</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -336,13 +511,28 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/</loc>
+    <lastmod>2025-05-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/</loc>
     <lastmod>2025-05-09</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/</loc>
+    <lastmod>2025-05-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/</loc>
     <lastmod>2025-05-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/</loc>
+    <lastmod>2025-05-27</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -363,6 +553,11 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/</loc>
     <lastmod>2025-05-09</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/</loc>
+    <lastmod>2025-05-25</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -416,6 +611,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/</loc>
+    <lastmod>2025-05-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/</loc>
     <lastmod>2025-05-06</lastmod>
     <priority>0.6</priority>
@@ -436,6 +636,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://common-sense.com/blog/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/</loc>
+    <lastmod>2025-05-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/</loc>
+    <lastmod>2025-05-21</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://common-sense.com/blog/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/</loc>
     <lastmod>2025-05-16</lastmod>
     <priority>0.6</priority>
@@ -448,6 +658,11 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/</loc>
     <lastmod>2025-05-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/</loc>
+    <lastmod>2025-05-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -468,6 +683,16 @@
   <url>
     <loc>https://common-sense.com/blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/</loc>
     <lastmod>2025-05-08</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/</loc>
+    <lastmod>2025-05-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/</loc>
+    <lastmod>2025-05-22</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
