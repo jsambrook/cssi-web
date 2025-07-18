@@ -190,7 +190,7 @@
 
     <contact_methods>
       <method name="General Email">contact@common-sense.com</method>
-      <method name="Main Telephone">(206) 659-7951</method>
+      <method name="Main Telephone">(425) 979-2282</method>
       <method name="Direct Telephone (John Sambrook)">(425) 501-9074 (Note: Primarily for internal reference or scheduled calls, not initial lead contact)</method>
       <method name="Website Contact Form">Available on common-sense.com/contact/</method>
       <method name="AI Agent">Capable of taking contact info for follow-up.</method>
