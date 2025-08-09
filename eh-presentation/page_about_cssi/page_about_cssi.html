@@ -361,10 +361,12 @@
             justify-content: center;
             align-items: center;
             padding: var(--space-8);
+            height: 100%;
+            min-height: 400px;
         }
         
         .cssi-logo img {
-            max-width: 100%;
+            max-width: 130%;
             height: auto;
             filter: drop-shadow(var(--shadow-md));
         }
@@ -411,6 +413,73 @@
         .highlight {
             color: var(--eh-green);
             font-weight: var(--font-weight-semibold);
+        }
+        
+        .highlight[href] {
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .highlight[href]:hover {
+            color: var(--eh-green-dark);
+            text-decoration: underline;
+        }
+        
+        .highlight[href]:focus {
+            outline: 2px solid var(--eh-green);
+            outline-offset: 2px;
+        }
+        
+        /* Policy hover tooltip */
+        .policy-text {
+            position: relative;
+            cursor: help;
+            border-bottom: 2px dotted var(--eh-green);
+            transition: all var(--transition-fast);
+        }
+        
+        .policy-text:hover {
+            color: var(--eh-green-dark);
+        }
+        
+        .policy-tooltip {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background: var(--eh-grey-dark);
+            color: var(--eh-white);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-normal);
+            line-height: var(--line-height-relaxed);
+            width: 400px;
+            max-width: 90vw;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--eh-grey);
+            z-index: var(--z-tooltip);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            pointer-events: none;
+        }
+        
+        .policy-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        }
+        
+        .policy-text:hover .policy-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-100%) translateY(-5px);
         }
         
         /* Responsive adjustments */
@@ -479,6 +548,12 @@
             .progress-bar {
                 width: 80px;
             }
+            
+            .policy-tooltip {
+                width: 300px;
+                font-size: var(--font-size-xs);
+                padding: var(--space-3);
+            }
         }
     </style>
 </head>
@@ -518,7 +593,7 @@
                         <div class="section-content">
                             <p><span class="highlight">40+ years</span> in technology leadership;</p>
                             <p>Embedded SW Development, Medical Devices;</p>
-                            <p>Former Director of Global Quality at <span class="highlight">FujiFilm / SonoSite</span></p>
+                            <p>Former Director of Global Quality at <a href="https://sonosite.com" target="_blank" rel="noopener noreferrer" class="highlight">FujiFilm / Sonosite</a></p>
                         </div>
                     </div>
                     
@@ -534,7 +609,14 @@
                     <div class="section">
                         <h2 class="section-title">Policy</h2>
                         <div class="section-content">
-                            <p><span class="highlight">It's win-win or it's no deal.</span></p>
+                            <p>
+                                <span class="highlight policy-text">
+                                    It's win-win-win or it's no deal.
+                                    <span class="policy-tooltip">
+                                        In John's experience, any deal he considers must be a win for all stakeholders. This includes his client's customers, his client, and for himself. Deals that are not a win for all parties eventually fall apart. John is usually able to find ways to achieve such deals and this is why he insists on them.
+                                    </span>
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>
