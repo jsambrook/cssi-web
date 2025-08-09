@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Voice Agents In Healthcare: Opportunities for EvergreenHealth - Common Sense Systems">
+    <meta name="description" content="About Common Sense Systems - AI Voice Agents for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>Home - AI Voice Agents for EvergreenHealth</title>
+    <title>About CSSI - AI Voice Agents for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Home - AI Voice Agents for EvergreenHealth">
+    <meta property="og:title" content="About CSSI - AI Voice Agents for EvergreenHealth">
     <meta property="og:description" content="Unlocking Value with Voice Agents: Opportunities for EvergreenHealth">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
@@ -210,8 +210,8 @@
         
         .page-content {
             width: 100%;
-            max-width: var(--content-max-width);
-            text-align: center;
+            max-width: 1000px;
+            text-align: left;
         }
         
         /* Logo */
@@ -333,7 +333,6 @@
             vertical-align: middle;
         }
         
-        
         /* Utility */
         .sr-only {
             position: absolute;
@@ -348,87 +347,116 @@
         }
         
         /* Page-specific styles */
-        .home-title {
-            font-size: var(--font-size-4xl);
+        .about-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--space-16);
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cssi-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-8);
+        }
+        
+        .cssi-logo img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(var(--shadow-md));
+        }
+        
+        .content-sections {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+        }
+        
+        .section {
+            border-bottom: 2px solid var(--eh-grey-light);
+            padding-bottom: var(--space-6);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
-            color: var(--eh-green);
-            line-height: var(--line-height-tight);
-            margin-bottom: var(--space-8);
-            text-align: center;
+            color: var(--eh-grey-dark);
+            margin-bottom: var(--space-4);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
         
-        .home-metadata {
-            margin-bottom: var(--space-12);
-            text-align: center;
-        }
-        
-        .presentation-date {
+        .section-content {
             font-size: var(--font-size-lg);
-            color: var(--eh-grey);
+            color: var(--eh-grey-dark);
+            line-height: var(--line-height-relaxed);
+        }
+        
+        .section-content p {
             margin-bottom: var(--space-3);
-            font-weight: var(--font-weight-medium);
         }
         
-        .presentation-author {
-            font-size: var(--font-size-base);
-            color: var(--eh-grey);
-            margin-bottom: var(--space-2);
+        .section-content p:last-child {
+            margin-bottom: 0;
         }
         
-        .company-link {
-            color: var(--eh-blue);
-            text-decoration: none;
-            font-weight: var(--font-weight-medium);
-            transition: color var(--transition-fast);
-        }
-        
-        .company-link:hover {
-            color: var(--eh-blue-dark);
-            text-decoration: underline;
-        }
-        
-        .company-link:focus {
-            outline: 2px solid var(--eh-blue);
-            outline-offset: 2px;
-        }
-        
-        .navigation-hint {
-            margin-top: var(--space-12);
-            color: var(--eh-grey);
-            font-size: var(--font-size-sm);
-            text-align: center;
-            opacity: 0.8;
+        .highlight {
+            color: var(--eh-green);
+            font-weight: var(--font-weight-semibold);
         }
         
         /* Responsive adjustments */
-        @media (min-width: 768px) {
-            .home-title {
-                font-size: var(--font-size-5xl);
+        @media (max-width: 1024px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-8);
+                text-align: center;
             }
-        }
-        
-        @media (min-width: 1024px) {
-            .home-title {
-                font-size: var(--font-size-6xl);
+            
+            .cssi-logo {
+                padding: var(--space-4);
+            }
+            
+            .content-sections {
+                text-align: left;
             }
         }
         
         @media (max-width: 768px) {
-            .home-title {
-                font-size: var(--font-size-3xl);
-                margin-bottom: var(--space-6);
-            }
-            
-            .home-metadata {
-                margin-bottom: var(--space-8);
-            }
-            
-            .navigation-hint {
-                margin-top: var(--space-8);
-            }
-            
             .presentation-page {
                 padding-bottom: calc(1rem + 60px + 1.5rem);
+            }
+            
+            .page-content {
+                max-width: 100%;
+            }
+            
+            .about-container {
+                gap: var(--space-6);
+            }
+            
+            .content-sections {
+                gap: var(--space-6);
+            }
+            
+            .section {
+                padding-bottom: var(--space-4);
+            }
+            
+            .section-title {
+                font-size: var(--font-size-lg);
+            }
+            
+            .section-content {
+                font-size: var(--font-size-base);
             }
             
             .navigation {
@@ -468,18 +496,48 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="home-title">AI Voice Agents - A Discussion with EvergreenHealth</h1>
-            
-            <div class="home-metadata">
-                <div class="presentation-date">August 27, 2025</div>
-                <div class="presentation-author">John Sambrook, President</div>
-                <div class="presentation-company">
-                    <a href="https://common-sense.com" target="_blank" rel="noopener noreferrer" class="company-link">Common Sense Systems, Inc.</a>
+            <div class="about-container">
+                <!-- Left Column: CSSI Logo -->
+                <div class="cssi-logo">
+                    <img src="../shared/assets/full_logo_5.png" alt="Common Sense Systems Logo" />
                 </div>
-            </div>
-
-            <div class="navigation-hint">
-                Use the navigation controls below to proceed through the presentation
+                
+                <!-- Right Column: Content Sections -->
+                <div class="content-sections">
+                    <!-- Founded Section -->
+                    <div class="section">
+                        <h2 class="section-title">Founded in 1996</h2>
+                        <div class="section-content">
+                            <p>Specializing in value engineering, software, and AI solutions</p>
+                        </div>
+                    </div>
+                    
+                    <!-- John Sambrook Section -->
+                    <div class="section">
+                        <h2 class="section-title">John Sambrook</h2>
+                        <div class="section-content">
+                            <p><span class="highlight">40+ years</span> in technology leadership;</p>
+                            <p>Embedded SW Development, Medical Devices;</p>
+                            <p>Former Director of Global Quality at <span class="highlight">FujiFilm / SonoSite</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Focus Section -->
+                    <div class="section">
+                        <h2 class="section-title">Focus</h2>
+                        <div class="section-content">
+                            <p>Delivering significant and measurable business value through custom business workflow automation and AI applications</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Policy Section -->
+                    <div class="section">
+                        <h2 class="section-title">Policy</h2>
+                        <div class="section-content">
+                            <p><span class="highlight">It's win-win or it's no deal.</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -488,23 +546,23 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <button class="nav-button nav-prev" type="button" aria-label="Previous page" disabled>
+            <a href="../page_home/page_home.html" class="nav-button nav-prev" aria-label="Previous page: Home">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
                 Previous
-            </button>
+            </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="8">
-                <span class="progress-text">Page 1 of 8</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="2" aria-valuemin="1" aria-valuemax="8">
+                <span class="progress-text">Page 2 of 8</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 12.5%"></div>
+                    <div class="progress-fill" style="width: 25%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_about_cssi/page_about_cssi.html" class="nav-button nav-next" aria-label="Next page: About CSSI">
+            <a href="../page_va_architecture/page_va_architecture.html" class="nav-button nav-next" aria-label="Next page: Voice Agent Architecture">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
@@ -512,7 +570,6 @@
             </a>
         </div>
     </nav>
-    
     
     <!-- Shared JavaScript -->
     <script src="../shared/js/navigation.js"></script>
