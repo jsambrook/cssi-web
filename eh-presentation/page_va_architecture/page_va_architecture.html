@@ -11,10 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Shared Styles -->
-    <link rel="stylesheet" href="../shared/css/variables.css">
-    <link rel="stylesheet" href="../shared/css/base.css">
-    <link rel="stylesheet" href="../shared/css/components.css">
+    <!-- Embedded Styles for Safari file:// compatibility -->
     
     <!-- Favicon and icons -->
     <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
@@ -30,6 +27,549 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <!-- All styles embedded for Safari file:// compatibility -->
+    <style>
+        /* CSS Variables */
+        :root {
+            --eh-green: #006633;
+            --eh-green-accent: #4CAF50;
+            --eh-blue: #007BFF;
+            --eh-blue-light: #E3F2FD;
+            --eh-grey: #666666;
+            --eh-red: #DC3545;
+            --eh-white: #FFFFFF;
+            --eh-green-dark: #004d26;
+            --eh-green-light: #e8f5e8;
+            --eh-blue-dark: #0056b3;
+            --eh-grey-light: #f8f9fa;
+            --eh-grey-dark: #333333;
+            
+            --font-family-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+            
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            
+            --line-height-tight: 1.25;
+            --line-height-snug: 1.375;
+            --line-height-normal: 1.5;
+            --line-height-relaxed: 1.625;
+            --line-height-loose: 2;
+            
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            
+            --radius-sm: 0.125rem;
+            --radius: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+            --radius-full: 9999px;
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            
+            --transition-fast: 150ms ease;
+            --transition-base: 250ms ease;
+            --transition-slow: 350ms ease;
+            
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal-backdrop: 1040;
+            --z-modal: 1050;
+            --z-popover: 1060;
+            --z-tooltip: 1070;
+            --z-toast: 1080;
+            
+            --page-max-width: 1200px;
+            --page-padding: 1.5rem;
+            --content-max-width: 800px;
+            --navigation-height: 60px;
+        }
+        
+        /* Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Base styles */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+        
+        @supports (-webkit-touch-callout: none) {
+            html {
+                height: -webkit-fill-available;
+            }
+        }
+        
+        body {
+            font-family: var(--font-family-primary);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-normal);
+            line-height: var(--line-height-normal);
+            color: var(--eh-grey-dark);
+            background-color: var(--eh-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            height: 100%;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-weight-bold);
+            line-height: var(--line-height-tight);
+            letter-spacing: -0.025em;
+            margin-bottom: var(--space-4);
+        }
+        
+        h1 {
+            font-size: var(--font-size-4xl);
+            color: var(--eh-green);
+        }
+        
+        @media (min-width: 768px) {
+            h1 {
+                font-size: var(--font-size-5xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: var(--font-size-6xl);
+            }
+        }
+        
+        /* Links */
+        a {
+            color: var(--eh-blue);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--eh-blue-dark);
+            text-decoration: underline;
+        }
+        
+        a:focus {
+            outline: 2px solid var(--eh-blue);
+            outline-offset: 2px;
+        }
+        
+        /* Layout */
+        .presentation-page {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: var(--page-padding);
+            padding-bottom: calc(var(--page-padding) + var(--navigation-height) + var(--space-4));
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .page-content {
+            width: 100%;
+            max-width: var(--content-max-width);
+            text-align: center;
+        }
+        
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: var(--space-6);
+            left: var(--space-6);
+            z-index: var(--z-sticky);
+        }
+        
+        .logo img {
+            height: 48px;
+            width: auto;
+            filter: drop-shadow(var(--shadow-sm));
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                top: var(--space-4);
+                left: var(--space-4);
+            }
+            
+            .logo img {
+                height: 36px;
+            }
+        }
+        
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 102, 51, 0.1);
+            padding: var(--space-4);
+            z-index: var(--z-fixed);
+            box-sizing: border-box;
+        }
+        
+        .nav-container {
+            max-width: var(--page-max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-4);
+            background: var(--eh-green);
+            color: var(--eh-white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: var(--font-family-primary);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+        
+        .nav-button:hover {
+            background: var(--eh-green-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+            color: var(--eh-white);
+            text-decoration: none;
+        }
+        
+        .nav-button:focus {
+            outline: 2px solid var(--eh-blue);
+            outline-offset: 2px;
+        }
+        
+        .nav-button:disabled {
+            background: var(--eh-grey-light);
+            color: var(--eh-grey);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .progress-indicator {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            color: var(--eh-grey);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .progress-bar {
+            width: 120px;
+            height: 4px;
+            background: var(--eh-grey-light);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--eh-green);
+            border-radius: var(--radius-full);
+            transition: width var(--transition-base);
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            vertical-align: middle;
+        }
+        
+        
+        /* Utility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Page-specific styles */
+        .architecture-title {
+            font-size: var(--font-size-3xl);
+            color: var(--eh-green);
+            text-align: center;
+            margin-bottom: var(--space-8);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        
+        #architecture-diagram {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border: 1px solid var(--eh-grey-light);
+            border-radius: var(--radius-lg);
+            background: var(--eh-white);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Tooltip Styles */
+        .tooltip {
+            position: absolute;
+            background: var(--eh-grey-dark);
+            color: var(--eh-white);
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            font-family: var(--font-family-primary);
+            pointer-events: none;
+            z-index: var(--z-tooltip);
+            display: none;
+            max-width: 250px;
+            line-height: var(--line-height-relaxed);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--eh-grey);
+        }
+        
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .architecture-title {
+                font-size: var(--font-size-4xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .architecture-title {
+                font-size: var(--font-size-5xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .architecture-title {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--space-6);
+            }
+            
+            .diagram-container {
+                margin: var(--space-4) 0;
+            }
+            
+            #architecture-diagram {
+                max-width: calc(100vw - 2rem);
+            }
+            
+            .presentation-page {
+                padding-bottom: calc(1rem + 60px + 1.5rem);
+            }
+            
+            .navigation {
+                padding: var(--space-3);
+            }
+            
+            .nav-container {
+                gap: var(--space-2);
+            }
+            
+            .nav-button {
+                padding: var(--space-2) var(--space-3);
+                font-size: var(--font-size-xs);
+            }
+            
+            .progress-indicator {
+                gap: var(--space-2);
+            }
+            
+            .progress-bar {
+                width: 80px;
+            }
+        }
+        
+        @supports (-webkit-touch-callout: none) {
+            html {
+                height: -webkit-fill-available;
+            }
+            
+            .presentation-page {
+                min-height: -webkit-fill-available;
+            }
+        }
+        
+        body {
+            height: 100%;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+        
+        .presentation-page {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            padding-bottom: calc(1.5rem + 60px + 1rem);
+            box-sizing: border-box;
+        }
+        
+        .navigation {
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .architecture-title {
+            font-size: var(--font-size-3xl);
+            color: var(--eh-green);
+            text-align: center;
+            margin-bottom: var(--space-8);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        
+        #architecture-diagram {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border: 1px solid var(--eh-grey-light);
+            border-radius: var(--radius-lg);
+            background: var(--eh-white);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Tooltip Styles */
+        .tooltip {
+            position: absolute;
+            background: var(--eh-grey-dark);
+            color: var(--eh-white);
+            padding: var(--space-3) var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            font-family: var(--font-family-primary);
+            pointer-events: none;
+            z-index: var(--z-tooltip);
+            display: none;
+            max-width: 250px;
+            line-height: var(--line-height-relaxed);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--eh-grey);
+        }
+        
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .architecture-title {
+                font-size: var(--font-size-4xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .architecture-title {
+                font-size: var(--font-size-5xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .architecture-title {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--space-6);
+            }
+            
+            .diagram-container {
+                margin: var(--space-4) 0;
+            }
+            
+            #architecture-diagram {
+                max-width: calc(100vw - 2rem);
+            }
+            
+            .presentation-page {
+                padding-bottom: calc(1rem + 60px + 1.5rem);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Skip navigation for accessibility -->
@@ -45,7 +585,7 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="page-title">AI Voice Agent Architecture</h1>
+            <h1 class="architecture-title">AI Voice Agent Architecture</h1>
             
             <div class="diagram-container">
                 <svg id="architecture-diagram" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +627,7 @@
                             <stop offset="100%" style="stop-color:#b91c1c"/>
                         </linearGradient>
                         
-                        <!-- Arrow marker -->
+                        <!-- Arrow markers -->
                         <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
                             <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
                         </marker>
@@ -159,11 +699,9 @@
                         .flow-label {
                             font-family: Arial, sans-serif;
                             font-size: 12px;
-                            fill: #333;
+                            fill: #1f2937;
                             text-anchor: middle;
                         }
-                        
-                        
                         ]]>
                     </style>
                     
@@ -311,11 +849,6 @@
         </div>
     </nav>
     
-    <!-- Presentation Footer -->
-    <footer class="presentation-footer">
-        <div class="confidential-mark">Company Confidential</div>
-        <div class="page-counter">2 of 8</div>
-    </footer>
     
     <!-- Shared JavaScript -->
     <script src="../shared/js/navigation.js"></script>
@@ -335,13 +868,13 @@
         
         // Tooltip messages with detailed descriptions
         const tooltips = {
-            'phone': "User's smartphone that initiates the voice call to the AI agent system. This is where the conversation begins and ends for the healthcare professional or patient.",
-            'twilio': "Twilio provides the telephony infrastructure, handling voice calls, WebRTC connections, and audio routing between the phone network and our AI systems.",
-            'elevenlabs': "ElevenLabs hosts the voice agent platform, managing real-time speech-to-text conversion, audio processing, and coordinating the entire conversation flow.",
-            'system-prompt': "The system prompt defines the AI's personality, knowledge boundaries, conversation style, and specific instructions for healthcare interactions.",
-            'claude': "Claude 4 Sonnet is the language model that understands natural language queries, processes context, and generates intelligent, healthcare-appropriate responses.",
-            'knowledge-base': "A vector database containing healthcare-specific information, policies, and data that provides contextual information through RAG (Retrieval-Augmented Generation).",
-            'tts': "The Text-to-Speech model converts Claude's written responses into natural-sounding speech that gets delivered back to the caller."
+            'phone': "User's smartphone initiating voice call",
+            'twilio': "Twilio handles telephony and WebRTC connections",
+            'elevenlabs': "ElevenLabs hosts the voice agent with STT/TTS capabilities",
+            'system-prompt': "System prompt defines LLM behavior, personality, and instructions",
+            'claude': "Claude 4 Sonnet processes natural language and generates responses",
+            'knowledge-base': "Vector database with RAG for contextual information retrieval",
+            'tts': "Text-to-Speech model converts text responses to natural speech"
         };
         
         // Animation sequence
@@ -467,86 +1000,5 @@
         window.addEventListener('load', adjustDiagramSize);
         window.addEventListener('resize', adjustDiagramSize);
     </script>
-    
-    <!-- Page-specific styles -->
-    <style>
-        .page-title {
-            font-size: var(--font-size-3xl);
-            color: var(--eh-green);
-            text-align: center;
-            margin-bottom: var(--space-8);
-            font-weight: var(--font-weight-bold);
-        }
-        
-        .diagram-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            max-width: 100%;
-        }
-        
-        #architecture-diagram {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            border: 1px solid var(--eh-grey-light);
-            border-radius: var(--radius-lg);
-            background: var(--eh-white);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        /* Tooltip Styles */
-        .tooltip {
-            position: absolute;
-            background: #1f2937;
-            color: white;
-            padding: 12px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            pointer-events: none;
-            z-index: 1000;
-            display: none;
-            max-width: 250px;
-            line-height: 1.4;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            border: 1px solid #374151;
-        }
-        
-        .tooltip::before {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #1f2937 transparent transparent transparent;
-        }
-        
-        /* Responsive adjustments */
-        @media (min-width: 768px) {
-            .page-title {
-                font-size: var(--font-size-4xl);
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .page-title {
-                font-size: var(--font-size-5xl);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .diagram-container {
-                margin: var(--space-4) 0;
-            }
-            
-            #architecture-diagram {
-                max-width: calc(100vw - 2rem);
-            }
-        }
-    </style>
 </body>
 </html>

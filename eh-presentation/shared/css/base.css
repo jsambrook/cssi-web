@@ -24,6 +24,14 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* Safari-specific viewport fixes */
+@supports (-webkit-touch-callout: none) {
+  html {
+    height: -webkit-fill-available;
+  }
 }
 
 body {
@@ -35,6 +43,9 @@ body {
   background-color: var(--eh-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 /* Typography Scale */
@@ -170,12 +181,15 @@ li {
 /* Presentation Layout */
 .presentation-page {
   min-height: 100vh;
+  min-height: -webkit-fill-available; /* Safari iOS fix */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: var(--page-padding);
+  padding-bottom: calc(var(--page-padding) + var(--navigation-height) + var(--space-4));
   position: relative;
+  box-sizing: border-box;
 }
 
 .page-content {
