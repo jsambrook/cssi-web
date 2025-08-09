@@ -767,35 +767,35 @@
                     
                     <!-- flow1: Phone → Twilio -->
                     <line id="flow1" class="flow-line" x1="150" y1="330" x2="250" y2="330"/>
-                    <text x="200" y="270" class="flow-label">Voice Call</text>
+                    <text x="200" y="320" class="flow-label">Voice Call</text>
                     
                     <!-- flow2: Twilio → ElevenLabs -->
                     <line id="flow2" class="flow-line" x1="370" y1="330" x2="450" y2="330"/>
-                    <text x="410" y="270" class="flow-label">Audio Stream</text>
+                    <text x="410" y="320" class="flow-label">Audio Stream</text>
                     
                     <!-- flow3: ElevenLabs → Claude -->
-                    <line id="flow3" class="flow-line" x1="590" y1="300" x2="700" y2="320"/>
-                    <text x="645" y="305" class="flow-label">Text Query</text>
+                    <line id="flow3" class="flow-line" x1="590" y1="320" x2="700" y2="320"/>
+                    <text x="645" y="310" class="flow-label">Text Query</text>
                     
                     <!-- flow4: Claude → Knowledge Base -->
-                    <line id="flow4" class="flow-line" x1="840" y1="330" x2="950" y2="330"/>
-                    <text x="895" y="320" class="flow-label">RAG Query</text>
+                    <line id="flow4" class="flow-line" x1="840" y1="320" x2="950" y2="320"/>
+                    <text x="895" y="310" class="flow-label">RAG Query</text>
                     
                     <!-- flow5: Knowledge Base → Claude -->
-                    <line id="flow5" class="flow-line" x1="950" y1="350" x2="840" y2="350"/>
-                    <text x="895" y="365" class="flow-label">Context Data</text>
+                    <line id="flow5" class="flow-line" x1="950" y1="340" x2="840" y2="340"/>
+                    <text x="895" y="355" class="flow-label">Context Data</text>
                     
                     <!-- flow6: Claude → ElevenLabs (text response) -->
-                    <line id="flow6" class="flow-line" x1="700" y1="340" x2="590" y2="320"/>
-                    <text x="645" y="335" class="flow-label">Response Text</text>
+                    <line id="flow6" class="flow-line" x1="700" y1="340" x2="590" y2="340"/>
+                    <text x="645" y="355" class="flow-label">Response Text</text>
                     
                     <!-- flow7: ElevenLabs → Twilio -->
                     <line id="flow7" class="flow-line" x1="450" y1="340" x2="370" y2="340"/>
-                    <text x="410" y="315" class="flow-label">Speech Output</text>
+                    <text x="410" y="355" class="flow-label">Speech Output</text>
                     
                     <!-- flow8: Twilio → Phone -->
                     <line id="flow8" class="flow-line" x1="250" y1="340" x2="150" y2="340"/>
-                    <text x="200" y="315" class="flow-label">Voice Response</text>
+                    <text x="200" y="355" class="flow-label">Voice Response</text>
                 </svg>
             </div>
             
