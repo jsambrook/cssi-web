@@ -622,10 +622,6 @@
                             <stop offset="100%" style="stop-color:#047857"/>
                         </linearGradient>
                         
-                        <linearGradient id="ttsGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#dc2626"/>
-                            <stop offset="100%" style="stop-color:#b91c1c"/>
-                        </linearGradient>
                         
                         <!-- Arrow markers -->
                         <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
@@ -763,14 +759,6 @@
                         <text x="1020" y="350" class="component-text" font-size="10">RAG System</text>
                     </g>
                     
-                    <!-- TTS Model -->
-                    <g id="tts" class="component">
-                        <rect x="700" y="550" width="140" height="120" rx="15" fill="url(#ttsGradient)" stroke="#b91c1c" stroke-width="2"/>
-                        <text x="770" y="580" class="component-icon">🔊</text>
-                        <text x="770" y="605" class="component-text" font-size="12">TTS Model</text>
-                        <text x="770" y="620" class="component-text" font-size="10">Text-to-Speech</text>
-                        <text x="770" y="635" class="component-text" font-size="10">Voice Synthesis</text>
-                    </g>
                     
                     <!-- Flow Lines -->
                     <!-- flow0: System Prompt → Claude -->
@@ -797,20 +785,16 @@
                     <line id="flow5" class="flow-line" x1="950" y1="350" x2="840" y2="350"/>
                     <text x="895" y="365" class="flow-label">Context Data</text>
                     
-                    <!-- flow6: Claude → TTS -->
-                    <line id="flow6" class="flow-line" x1="770" y1="410" x2="770" y2="550"/>
-                    <text x="785" y="480" class="flow-label">Response Text</text>
+                    <!-- flow6: Claude → ElevenLabs (text response) -->
+                    <line id="flow6" class="flow-line" x1="700" y1="340" x2="590" y2="320"/>
+                    <text x="645" y="335" class="flow-label">Response Text</text>
                     
-                    <!-- flow7: TTS → ElevenLabs (curved path) -->
-                    <path id="flow7" class="flow-line" d="M 700 600 Q 600 520 520 360"/>
-                    <text x="600" y="500" class="flow-label">Audio Response</text>
-                    
-                    <!-- flow8: ElevenLabs → Twilio -->
-                    <line id="flow8" class="flow-line" x1="450" y1="300" x2="370" y2="300"/>
+                    <!-- flow7: ElevenLabs → Twilio -->
+                    <line id="flow7" class="flow-line" x1="450" y1="300" x2="370" y2="300"/>
                     <text x="410" y="315" class="flow-label">Speech Output</text>
                     
-                    <!-- flow9: Twilio → Phone -->
-                    <line id="flow9" class="flow-line" x1="250" y1="300" x2="150" y2="300"/>
+                    <!-- flow8: Twilio → Phone -->
+                    <line id="flow8" class="flow-line" x1="250" y1="300" x2="150" y2="300"/>
                     <text x="200" y="315" class="flow-label">Voice Response</text>
                 </svg>
             </div>
@@ -857,28 +841,26 @@
     <script>
         // Flow mapping for component interactions
         const flowMap = {
-            'phone': ['flow1', 'flow9'],
-            'twilio': ['flow1', 'flow2', 'flow8', 'flow9'],
-            'elevenlabs': ['flow2', 'flow3', 'flow7', 'flow8'],
+            'phone': ['flow1', 'flow8'],
+            'twilio': ['flow1', 'flow2', 'flow7', 'flow8'],
+            'elevenlabs': ['flow2', 'flow3', 'flow6', 'flow7'],
             'system-prompt': ['flow0'],
             'claude': ['flow0', 'flow3', 'flow4', 'flow5', 'flow6'],
-            'knowledge-base': ['flow4', 'flow5'],
-            'tts': ['flow6', 'flow7']
+            'knowledge-base': ['flow4', 'flow5']
         };
         
         // Tooltip messages with detailed descriptions
         const tooltips = {
             'phone': "User's smartphone initiating voice call",
             'twilio': "Twilio handles telephony and WebRTC connections",
-            'elevenlabs': "ElevenLabs hosts the voice agent with STT/TTS capabilities",
+            'elevenlabs': "ElevenLabs hosts the voice agent with integrated STT/TTS capabilities, handling audio processing and speech synthesis",
             'system-prompt': "System prompt defines LLM behavior, personality, and instructions",
-            'claude': "Claude 4 Sonnet processes natural language and generates responses",
-            'knowledge-base': "Vector database with RAG for contextual information retrieval",
-            'tts': "Text-to-Speech model converts text responses to natural speech"
+            'claude': "Claude 4 Sonnet processes natural language, generates intelligent responses, and exchanges text directly with the voice agent",
+            'knowledge-base': "Vector database with RAG for contextual information retrieval"
         };
         
         // Animation sequence
-        const flowSequence = ['flow0', 'flow1', 'flow2', 'flow3', 'flow4', 'flow5', 'flow6', 'flow7', 'flow8', 'flow9'];
+        const flowSequence = ['flow0', 'flow1', 'flow2', 'flow3', 'flow4', 'flow5', 'flow6', 'flow7', 'flow8'];
         let animationIndex = 0;
         let animationInterval;
         
