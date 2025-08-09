@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Voice Agents In Healthcare: Opportunities for EvergreenHealth - Common Sense Systems">
+    <meta name="description" content="EvergreenHealth Organizational and Operational Facts - AI Voice Agents Presentation">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>Home - AI Voice Agents for EvergreenHealth</title>
+    <title>EvergreenHealth Facts - AI Voice Agents for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Embedded Styles for Safari file:// compatibility -->
     
     <!-- Favicon and icons -->
     <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Home - AI Voice Agents for EvergreenHealth">
-    <meta property="og:description" content="Unlocking Value with Voice Agents: Opportunities for EvergreenHealth">
+    <meta property="og:title" content="EvergreenHealth Facts - AI Voice Agents for EvergreenHealth">
+    <meta property="og:description" content="Organizational and Operational Facts about EvergreenHealth">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -210,8 +208,8 @@
         
         .page-content {
             width: 100%;
-            max-width: var(--content-max-width);
-            text-align: center;
+            max-width: 1000px;
+            text-align: left;
         }
         
         /* Logo */
@@ -333,7 +331,6 @@
             vertical-align: middle;
         }
         
-        
         /* Utility */
         .sr-only {
             position: absolute;
@@ -348,83 +345,162 @@
         }
         
         /* Page-specific styles */
-        .home-title {
-            font-size: var(--font-size-4xl);
+        .page-title {
+            font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-green);
-            line-height: var(--line-height-tight);
             margin-bottom: var(--space-8);
             text-align: center;
         }
         
-        .home-metadata {
-            margin-bottom: var(--space-12);
-            text-align: center;
+        .facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+            max-width: 900px;
+            margin: 0 auto;
         }
         
-        .presentation-date {
+        .fact-item {
+            background: var(--eh-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--eh-green);
+        }
+        
+        .fact-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--eh-green);
+            color: var(--eh-white);
+            border-radius: var(--radius-full);
+            font-weight: var(--font-weight-bold);
             font-size: var(--font-size-lg);
-            color: var(--eh-grey);
-            margin-bottom: var(--space-3);
-            font-weight: var(--font-weight-medium);
+            margin-right: var(--space-4);
+            flex-shrink: 0;
         }
         
-        .presentation-author {
-            font-size: var(--font-size-base);
-            color: var(--eh-grey);
-            margin-bottom: var(--space-2);
+        .fact-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-4);
         }
         
-        .company-link {
+        .fact-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--eh-grey-dark);
+            margin: 0;
+        }
+        
+        .fact-content {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-relaxed);
+            color: var(--eh-grey-dark);
+            margin-left: 48px;
+        }
+        
+        /* Citation tooltip styles */
+        .citation-link {
+            position: relative;
             color: var(--eh-blue);
             text-decoration: none;
-            font-weight: var(--font-weight-medium);
-            transition: color var(--transition-fast);
+            cursor: help;
+            border-bottom: 1px dotted var(--eh-blue);
+            transition: all var(--transition-fast);
         }
         
-        .company-link:hover {
+        .citation-link:hover {
             color: var(--eh-blue-dark);
-            text-decoration: underline;
         }
         
-        .company-link:focus {
-            outline: 2px solid var(--eh-blue);
-            outline-offset: 2px;
-        }
-        
-        .navigation-hint {
-            margin-top: var(--space-12);
-            color: var(--eh-grey);
+        .citation-tooltip {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background: var(--eh-grey-dark);
+            color: var(--eh-white);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
             font-size: var(--font-size-sm);
-            text-align: center;
-            opacity: 0.8;
+            font-weight: var(--font-weight-normal);
+            line-height: var(--line-height-relaxed);
+            width: 400px;
+            max-width: 90vw;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--eh-grey);
+            z-index: var(--z-tooltip);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            pointer-events: none;
+        }
+        
+        .citation-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        }
+        
+        .citation-link:hover .citation-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-100%) translateY(-5px);
+        }
+        
+        .citation-tooltip a {
+            color: var(--eh-blue-light);
+            word-break: break-all;
+        }
+        
+        .citation-tooltip a:hover {
+            color: var(--eh-white);
         }
         
         /* Responsive adjustments */
-        @media (min-width: 768px) {
-            .home-title {
-                font-size: var(--font-size-5xl);
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .home-title {
-                font-size: var(--font-size-6xl);
-            }
-        }
-        
         @media (max-width: 768px) {
-            .home-title {
-                font-size: var(--font-size-3xl);
+            .page-title {
+                font-size: var(--font-size-2xl);
                 margin-bottom: var(--space-6);
             }
             
-            .home-metadata {
-                margin-bottom: var(--space-8);
+            .facts-list {
+                gap: var(--space-6);
             }
             
-            .navigation-hint {
-                margin-top: var(--space-8);
+            .fact-item {
+                padding: var(--space-4);
+            }
+            
+            .fact-content {
+                margin-left: 0;
+                margin-top: var(--space-3);
+            }
+            
+            .fact-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .fact-number {
+                margin-right: 0;
+                margin-bottom: var(--space-2);
+            }
+            
+            .citation-tooltip {
+                width: 300px;
+                font-size: var(--font-size-xs);
+                padding: var(--space-3);
             }
             
             .presentation-page {
@@ -468,18 +544,68 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="home-title">AI Voice Agents - A Discussion with EvergreenHealth</h1>
+            <h1 class="page-title">Organizational and Operational Facts</h1>
             
-            <div class="home-metadata">
-                <div class="presentation-date">August 27, 2025</div>
-                <div class="presentation-author">John Sambrook, President</div>
-                <div class="presentation-company">
-                    <a href="https://common-sense.com" target="_blank" rel="noopener noreferrer" class="company-link">Common Sense Systems, Inc.</a>
+            <div class="facts-list">
+                <!-- Fact 1: Structure and Ownership -->
+                <div class="fact-item">
+                    <div class="fact-header">
+                        <div class="fact-number">1</div>
+                        <h2 class="fact-title">Structure and Ownership</h2>
+                    </div>
+                    <div class="fact-content">
+                        EH is a community-owned public hospital district, voter-approved in 1972, serving King County's Eastside with an elected Board of Commissioners for local governance.
+                        
+                        <span class="citation-link">
+                            [Citations]
+                            <div class="citation-tooltip">
+                                <strong>Sources:</strong><br>
+                                • EvergreenHealth About Us page: <a href="https://www.evergreenhealth.com/about-us/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/</a><br><br>
+                                • Wikipedia EvergreenHealth: <a href="https://en.wikipedia.org/wiki/EvergreenHealth" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/EvergreenHealth</a> (last updated 2025)
+                            </div>
+                        </span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="navigation-hint">
-                Use the navigation controls below to proceed through the presentation
+                
+                <!-- Fact 2: Facilities and Capacity -->
+                <div class="fact-item">
+                    <div class="fact-header">
+                        <div class="fact-number">2</div>
+                        <h2 class="fact-title">Facilities and Capacity</h2>
+                    </div>
+                    <div class="fact-content">
+                        EH operates a main campus in Kirkland, Monroe hospital, and multiple clinics; 100% occupancy reported in 2024, with expansions planned for 3% population growth to 2029.
+                        
+                        <span class="citation-link">
+                            [Citations]
+                            <div class="citation-tooltip">
+                                <strong>Sources:</strong><br>
+                                • EH 2024 Financial Report: <a href="https://www.evergreenhealth.com/app/files/public/668612f0-1f42-4521-9766-1a52d2cc2e9a/evergreenhealth-monroe-financial-report-2024.pdf" target="_blank" rel="noopener">Financial Report PDF</a><br><br>
+                                • EH Master Campus Plan (Board Minutes): <a href="https://www.evergreenhealth.com/app/files/public/7fa105fd-4467-4d5c-b25f-091819f3e25b/05-02-2025-EHK-Board-Educational-Minutes.pdf" target="_blank" rel="noopener">Board Minutes PDF</a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Fact 3: Quality Ratings -->
+                <div class="fact-item">
+                    <div class="fact-header">
+                        <div class="fact-number">3</div>
+                        <h2 class="fact-title">Quality Ratings</h2>
+                    </div>
+                    <div class="fact-content">
+                        Consistently high ratings: Leapfrog 'A' for safety (9 consecutive years), CMS 5-Star, #2 nationally from Lown Institute for high-value care.
+                        
+                        <span class="citation-link">
+                            [Citations]
+                            <div class="citation-tooltip">
+                                <strong>Sources:</strong><br>
+                                • EH Commitment to Quality page: <a href="https://www.evergreenhealth.com/about-us/commitment-to-quality/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/commitment-to-quality/</a><br><br>
+                                • Leapfrog Group 2025 report: <a href="https://ratings.leapfroggroup.org/facility/details/50-0010/evergreenhealth-medical-center,kirkland,wa" target="_blank" rel="noopener">Leapfrog Rating Details</a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -488,23 +614,23 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <button class="nav-button nav-prev" type="button" aria-label="Previous page" disabled>
+            <a href="../page_about_cssi/page_about_cssi.html" class="nav-button nav-prev" aria-label="Previous page: About CSSI">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
                 Previous
-            </button>
+            </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="9">
-                <span class="progress-text">Page 1 of 9</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="3" aria-valuemin="1" aria-valuemax="9">
+                <span class="progress-text">Page 3 of 9</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 11.1%"></div>
+                    <div class="progress-fill" style="width: 33.3%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_about_cssi/page_about_cssi.html" class="nav-button nav-next" aria-label="Next page: About CSSI">
+            <a href="../page_va_architecture/page_va_architecture.html" class="nav-button nav-next" aria-label="Next page: Voice Agent Architecture">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
@@ -512,7 +638,6 @@
             </a>
         </div>
     </nav>
-    
     
     <!-- Shared JavaScript -->
     <script src="../shared/js/navigation.js"></script>
