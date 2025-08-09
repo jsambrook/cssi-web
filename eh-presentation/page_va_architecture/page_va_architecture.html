@@ -705,28 +705,28 @@
                     <!-- Components -->
                     <!-- User's Phone -->
                     <g id="phone" class="component">
-                        <rect x="50" y="200" width="100" height="160" rx="20" fill="url(#phoneGradient)" stroke="#357abd" stroke-width="2"/>
-                        <text x="100" y="240" class="component-icon">📱</text>
-                        <text x="100" y="270" class="component-text" font-size="12">User's</text>
-                        <text x="100" y="285" class="component-text" font-size="12">Phone</text>
+                        <rect x="50" y="250" width="100" height="160" rx="20" fill="url(#phoneGradient)" stroke="#357abd" stroke-width="2"/>
+                        <text x="100" y="290" class="component-icon">📱</text>
+                        <text x="100" y="320" class="component-text" font-size="12">User's</text>
+                        <text x="100" y="335" class="component-text" font-size="12">Phone</text>
                     </g>
                     
                     <!-- Twilio -->
                     <g id="twilio" class="component">
-                        <rect x="250" y="230" width="120" height="100" rx="15" fill="url(#twilioGradient)" stroke="#c21e3a" stroke-width="2"/>
-                        <text x="310" y="260" class="component-icon">☁️</text>
-                        <text x="310" y="290" class="component-text" font-size="12">Twilio</text>
-                        <text x="310" y="305" class="component-text" font-size="10">Voice API</text>
+                        <rect x="250" y="250" width="120" height="100" rx="15" fill="url(#twilioGradient)" stroke="#c21e3a" stroke-width="2"/>
+                        <text x="310" y="280" class="component-icon">☁️</text>
+                        <text x="310" y="310" class="component-text" font-size="12">Twilio</text>
+                        <text x="310" y="325" class="component-text" font-size="10">Voice API</text>
                     </g>
                     
                     <!-- ElevenLabs Voice Agent -->
                     <g id="elevenlabs" class="component">
-                        <rect x="450" y="200" width="140" height="160" rx="15" fill="url(#elevenlabsGradient)" stroke="#7c3aed" stroke-width="2"/>
-                        <text x="520" y="230" class="component-icon">🎙️</text>
-                        <text x="520" y="255" class="component-text" font-size="12">ElevenLabs</text>
-                        <text x="520" y="270" class="component-text" font-size="11">Voice Agent</text>
-                        <text x="520" y="285" class="component-text" font-size="10">STT Processing</text>
-                        <text x="520" y="300" class="component-text" font-size="10">Audio Handling</text>
+                        <rect x="450" y="250" width="140" height="160" rx="15" fill="url(#elevenlabsGradient)" stroke="#7c3aed" stroke-width="2"/>
+                        <text x="520" y="280" class="component-icon">🎙️</text>
+                        <text x="520" y="305" class="component-text" font-size="12">ElevenLabs</text>
+                        <text x="520" y="320" class="component-text" font-size="11">Voice Agent</text>
+                        <text x="520" y="335" class="component-text" font-size="10">STT Processing</text>
+                        <text x="520" y="350" class="component-text" font-size="10">Audio Handling</text>
                     </g>
                     
                     <!-- System Prompt -->
@@ -790,11 +790,11 @@
                     <text x="645" y="335" class="flow-label">Response Text</text>
                     
                     <!-- flow7: ElevenLabs → Twilio -->
-                    <line id="flow7" class="flow-line" x1="450" y1="300" x2="370" y2="300"/>
+                    <line id="flow7" class="flow-line" x1="450" y1="300" x2="370" y2="290"/>
                     <text x="410" y="315" class="flow-label">Speech Output</text>
                     
                     <!-- flow8: Twilio → Phone -->
-                    <line id="flow8" class="flow-line" x1="250" y1="300" x2="150" y2="300"/>
+                    <line id="flow8" class="flow-line" x1="250" y1="290" x2="150" y2="300"/>
                     <text x="200" y="315" class="flow-label">Voice Response</text>
                 </svg>
             </div>
