@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Voice Agents In Healthcare: Opportunities for EvergreenHealth - Common Sense Systems">
+    <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
+    <title>Voice Agent Architecture - AI Voice Agents for EvergreenHealth</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../shared/css/variables.css">
+    <link rel="stylesheet" href="../shared/css/base.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    
+    <!-- Favicon and icons -->
+    <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
+    <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Voice Agent Architecture - AI Voice Agents for EvergreenHealth">
+    <meta property="og:description" content="Unlocking Value with Voice Agents: Opportunities for EvergreenHealth">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../shared/assets/og-image.png">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+<body>
+    <!-- Skip navigation for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- Company Logo -->
+    <div class="logo">
+        <a href="https://common-sense.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Common Sense Systems website">
+            <img src="../shared/assets/cssi_logo_symbol_1.png" alt="Common Sense Systems, Inc." width="48" height="48">
+        </a>
+    </div>
+    
+    <!-- Main Presentation Content -->
+    <main id="main-content" class="presentation-page" role="main">
+        <div class="page-content">
+            <h1 class="page-title">AI Voice Agent Architecture</h1>
+            
+            <div class="diagram-container">
+                <svg id="architecture-diagram" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Definitions for gradients, filters, and markers -->
+                    <defs>
+                        <!-- Gradient definitions -->
+                        <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4a90e2"/>
+                            <stop offset="100%" style="stop-color:#357abd"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="twilioGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f22f46"/>
+                            <stop offset="100%" style="stop-color:#c21e3a"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="elevenlabsGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#7c3aed"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="systemPromptGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7c2d92"/>
+                            <stop offset="100%" style="stop-color:#5b1a6b"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="claudeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#d97706"/>
+                            <stop offset="100%" style="stop-color:#b45309"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="knowledgeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#059669"/>
+                            <stop offset="100%" style="stop-color:#047857"/>
+                        </linearGradient>
+                        
+                        <linearGradient id="ttsGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#dc2626"/>
+                            <stop offset="100%" style="stop-color:#b91c1c"/>
+                        </linearGradient>
+                        
+                        <!-- Arrow marker -->
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+                        </marker>
+                        
+                        <marker id="arrowheadActive" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+                        </marker>
+                        
+                        <!-- Glow filter -->
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Embedded styles -->
+                    <style>
+                        <![CDATA[
+                        .component {
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            transform-origin: center;
+                        }
+                        
+                        .component:hover {
+                            filter: url(#glow);
+                            transform: scale(1.05);
+                        }
+                        
+                        .component-text {
+                            font-family: Arial, sans-serif;
+                            fill: white;
+                            text-anchor: middle;
+                            font-weight: bold;
+                            pointer-events: none;
+                        }
+                        
+                        .component-icon {
+                            font-size: 24px;
+                            text-anchor: middle;
+                            pointer-events: none;
+                        }
+                        
+                        .flow-line {
+                            stroke: #666;
+                            stroke-width: 2;
+                            fill: none;
+                            marker-end: url(#arrowhead);
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .flow-line.active {
+                            stroke: #4ade80;
+                            stroke-width: 3;
+                            filter: drop-shadow(0 0 5px #4ade80);
+                            marker-end: url(#arrowheadActive);
+                            stroke-dasharray: 8 4;
+                            animation: flowAnimation 2s linear infinite;
+                        }
+                        
+                        @keyframes flowAnimation {
+                            from { stroke-dashoffset: 0; }
+                            to { stroke-dashoffset: 12; }
+                        }
+                        
+                        .flow-label {
+                            font-family: Arial, sans-serif;
+                            font-size: 12px;
+                            fill: #333;
+                            text-anchor: middle;
+                        }
+                        
+                        
+                        ]]>
+                    </style>
+                    
+                    
+                    <!-- Components -->
+                    <!-- User's Phone -->
+                    <g id="phone" class="component">
+                        <rect x="50" y="200" width="100" height="160" rx="20" fill="url(#phoneGradient)" stroke="#357abd" stroke-width="2"/>
+                        <text x="100" y="240" class="component-icon">📱</text>
+                        <text x="100" y="270" class="component-text" font-size="12">User's</text>
+                        <text x="100" y="285" class="component-text" font-size="12">Phone</text>
+                    </g>
+                    
+                    <!-- Twilio -->
+                    <g id="twilio" class="component">
+                        <rect x="250" y="230" width="120" height="100" rx="15" fill="url(#twilioGradient)" stroke="#c21e3a" stroke-width="2"/>
+                        <text x="310" y="260" class="component-icon">☁️</text>
+                        <text x="310" y="290" class="component-text" font-size="12">Twilio</text>
+                        <text x="310" y="305" class="component-text" font-size="10">Voice API</text>
+                    </g>
+                    
+                    <!-- ElevenLabs Voice Agent -->
+                    <g id="elevenlabs" class="component">
+                        <rect x="450" y="200" width="140" height="160" rx="15" fill="url(#elevenlabsGradient)" stroke="#7c3aed" stroke-width="2"/>
+                        <text x="520" y="230" class="component-icon">🎙️</text>
+                        <text x="520" y="255" class="component-text" font-size="12">ElevenLabs</text>
+                        <text x="520" y="270" class="component-text" font-size="11">Voice Agent</text>
+                        <text x="520" y="285" class="component-text" font-size="10">STT Processing</text>
+                        <text x="520" y="300" class="component-text" font-size="10">Audio Handling</text>
+                    </g>
+                    
+                    <!-- System Prompt -->
+                    <g id="system-prompt" class="component">
+                        <rect x="700" y="80" width="140" height="120" rx="15" fill="url(#systemPromptGradient)" stroke="#5b1a6b" stroke-width="2"/>
+                        <text x="770" y="110" class="component-icon">📝</text>
+                        <text x="770" y="135" class="component-text" font-size="12">System</text>
+                        <text x="770" y="150" class="component-text" font-size="12">Prompt</text>
+                        <text x="770" y="165" class="component-text" font-size="10">Instructions</text>
+                        <text x="770" y="180" class="component-text" font-size="10">Personality</text>
+                    </g>
+                    
+                    <!-- Claude 4 Sonnet -->
+                    <g id="claude" class="component">
+                        <rect x="700" y="250" width="140" height="160" rx="15" fill="url(#claudeGradient)" stroke="#b45309" stroke-width="2"/>
+                        <text x="770" y="280" class="component-icon">🧠</text>
+                        <text x="770" y="305" class="component-text" font-size="12">Claude 4</text>
+                        <text x="770" y="320" class="component-text" font-size="12">Sonnet</text>
+                        <text x="770" y="335" class="component-text" font-size="10">Language Model</text>
+                        <text x="770" y="350" class="component-text" font-size="10">Reasoning Engine</text>
+                    </g>
+                    
+                    <!-- Knowledge Base -->
+                    <g id="knowledge-base" class="component">
+                        <rect x="950" y="250" width="140" height="160" rx="15" fill="url(#knowledgeGradient)" stroke="#047857" stroke-width="2"/>
+                        <text x="1020" y="280" class="component-icon">📚</text>
+                        <text x="1020" y="305" class="component-text" font-size="12">Knowledge</text>
+                        <text x="1020" y="320" class="component-text" font-size="12">Base</text>
+                        <text x="1020" y="335" class="component-text" font-size="10">Vector Database</text>
+                        <text x="1020" y="350" class="component-text" font-size="10">RAG System</text>
+                    </g>
+                    
+                    <!-- TTS Model -->
+                    <g id="tts" class="component">
+                        <rect x="700" y="550" width="140" height="120" rx="15" fill="url(#ttsGradient)" stroke="#b91c1c" stroke-width="2"/>
+                        <text x="770" y="580" class="component-icon">🔊</text>
+                        <text x="770" y="605" class="component-text" font-size="12">TTS Model</text>
+                        <text x="770" y="620" class="component-text" font-size="10">Text-to-Speech</text>
+                        <text x="770" y="635" class="component-text" font-size="10">Voice Synthesis</text>
+                    </g>
+                    
+                    <!-- Flow Lines -->
+                    <!-- flow0: System Prompt → Claude -->
+                    <line id="flow0" class="flow-line" x1="770" y1="200" x2="770" y2="250"/>
+                    <text x="785" y="225" class="flow-label">Configuration</text>
+                    
+                    <!-- flow1: Phone → Twilio -->
+                    <line id="flow1" class="flow-line" x1="150" y1="280" x2="250" y2="280"/>
+                    <text x="200" y="270" class="flow-label">Voice Call</text>
+                    
+                    <!-- flow2: Twilio → ElevenLabs -->
+                    <line id="flow2" class="flow-line" x1="370" y1="280" x2="450" y2="280"/>
+                    <text x="410" y="270" class="flow-label">Audio Stream</text>
+                    
+                    <!-- flow3: ElevenLabs → Claude -->
+                    <line id="flow3" class="flow-line" x1="590" y1="300" x2="700" y2="320"/>
+                    <text x="645" y="305" class="flow-label">Text Query</text>
+                    
+                    <!-- flow4: Claude → Knowledge Base -->
+                    <line id="flow4" class="flow-line" x1="840" y1="330" x2="950" y2="330"/>
+                    <text x="895" y="320" class="flow-label">RAG Query</text>
+                    
+                    <!-- flow5: Knowledge Base → Claude -->
+                    <line id="flow5" class="flow-line" x1="950" y1="350" x2="840" y2="350"/>
+                    <text x="895" y="365" class="flow-label">Context Data</text>
+                    
+                    <!-- flow6: Claude → TTS -->
+                    <line id="flow6" class="flow-line" x1="770" y1="410" x2="770" y2="550"/>
+                    <text x="785" y="480" class="flow-label">Response Text</text>
+                    
+                    <!-- flow7: TTS → ElevenLabs (curved path) -->
+                    <path id="flow7" class="flow-line" d="M 700 600 Q 600 520 520 360"/>
+                    <text x="600" y="500" class="flow-label">Audio Response</text>
+                    
+                    <!-- flow8: ElevenLabs → Twilio -->
+                    <line id="flow8" class="flow-line" x1="450" y1="300" x2="370" y2="300"/>
+                    <text x="410" y="315" class="flow-label">Speech Output</text>
+                    
+                    <!-- flow9: Twilio → Phone -->
+                    <line id="flow9" class="flow-line" x1="250" y1="300" x2="150" y2="300"/>
+                    <text x="200" y="315" class="flow-label">Voice Response</text>
+                </svg>
+            </div>
+            
+            <!-- Tooltip element -->
+            <div id="tooltip" class="tooltip"></div>
+        </div>
+    </main>
+    
+    <!-- Navigation Controls -->
+    <nav class="navigation" role="navigation" aria-label="Presentation navigation">
+        <div class="nav-container">
+            <!-- Previous Page Button -->
+            <a href="../page_home/page_home.html" class="nav-button nav-prev" aria-label="Previous page: Home">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m15 18-6-6 6-6"/>
+                </svg>
+                Previous
+            </a>
+            
+            <!-- Progress Indicator -->
+            <div class="progress-indicator" role="progressbar" aria-valuenow="2" aria-valuemin="1" aria-valuemax="8">
+                <span class="progress-text">Page 2 of 8</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 25%"></div>
+                </div>
+            </div>
+            
+            <!-- Next Page Button -->
+            <button class="nav-button nav-next" type="button" aria-label="Next page" disabled>
+                Next
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Presentation Footer -->
+    <footer class="presentation-footer">
+        <div class="confidential-mark">Company Confidential</div>
+        <div class="page-counter">2 of 8</div>
+    </footer>
+    
+    <!-- Shared JavaScript -->
+    <script src="../shared/js/navigation.js"></script>
+    
+    <!-- Page-specific JavaScript for diagram interactivity -->
+    <script>
+        // Flow mapping for component interactions
+        const flowMap = {
+            'phone': ['flow1', 'flow9'],
+            'twilio': ['flow1', 'flow2', 'flow8', 'flow9'],
+            'elevenlabs': ['flow2', 'flow3', 'flow7', 'flow8'],
+            'system-prompt': ['flow0'],
+            'claude': ['flow0', 'flow3', 'flow4', 'flow5', 'flow6'],
+            'knowledge-base': ['flow4', 'flow5'],
+            'tts': ['flow6', 'flow7']
+        };
+        
+        // Tooltip messages with detailed descriptions
+        const tooltips = {
+            'phone': "User's smartphone that initiates the voice call to the AI agent system. This is where the conversation begins and ends for the healthcare professional or patient.",
+            'twilio': "Twilio provides the telephony infrastructure, handling voice calls, WebRTC connections, and audio routing between the phone network and our AI systems.",
+            'elevenlabs': "ElevenLabs hosts the voice agent platform, managing real-time speech-to-text conversion, audio processing, and coordinating the entire conversation flow.",
+            'system-prompt': "The system prompt defines the AI's personality, knowledge boundaries, conversation style, and specific instructions for healthcare interactions.",
+            'claude': "Claude 4 Sonnet is the language model that understands natural language queries, processes context, and generates intelligent, healthcare-appropriate responses.",
+            'knowledge-base': "A vector database containing healthcare-specific information, policies, and data that provides contextual information through RAG (Retrieval-Augmented Generation).",
+            'tts': "The Text-to-Speech model converts Claude's written responses into natural-sounding speech that gets delivered back to the caller."
+        };
+        
+        // Animation sequence
+        const flowSequence = ['flow0', 'flow1', 'flow2', 'flow3', 'flow4', 'flow5', 'flow6', 'flow7', 'flow8', 'flow9'];
+        let animationIndex = 0;
+        let animationInterval;
+        
+        // Get DOM elements
+        const components = document.querySelectorAll('.component');
+        const flowLines = document.querySelectorAll('.flow-line');
+        const tooltip = document.getElementById('tooltip');
+        
+        // Add event listeners to components
+        components.forEach(component => {
+            // Hover effects
+            component.addEventListener('mouseenter', (e) => {
+                showTooltip(e, component.id);
+            });
+            
+            component.addEventListener('mousemove', (e) => {
+                moveTooltip(e);
+            });
+            
+            component.addEventListener('mouseleave', () => {
+                hideTooltip();
+            });
+            
+            // Click highlighting
+            component.addEventListener('click', () => {
+                highlightFlows(component.id);
+            });
+        });
+        
+        // Tooltip functions
+        function showTooltip(event, componentId) {
+            tooltip.textContent = tooltips[componentId];
+            tooltip.style.display = 'block';
+            positionTooltip(event);
+        }
+        
+        function moveTooltip(event) {
+            positionTooltip(event);
+        }
+        
+        function positionTooltip(event) {
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            
+            let left = event.pageX - (tooltipRect.width / 2);
+            let top = event.pageY - tooltipRect.height - 15; // 15px above cursor
+            
+            // Keep tooltip within viewport bounds
+            if (left < 10) left = 10;
+            if (left + tooltipRect.width > viewportWidth - 10) left = viewportWidth - tooltipRect.width - 10;
+            if (top < 10) top = event.pageY + 15; // Show below cursor if no room above
+            
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }
+        
+        function hideTooltip() {
+            tooltip.style.display = 'none';
+        }
+        
+        // Flow highlighting
+        function highlightFlows(componentId) {
+            // Clear all active flows
+            flowLines.forEach(line => line.classList.remove('active'));
+            
+            // Highlight flows connected to this component
+            if (flowMap[componentId]) {
+                flowMap[componentId].forEach(flowId => {
+                    const flowElement = document.getElementById(flowId);
+                    if (flowElement) {
+                        flowElement.classList.add('active');
+                    }
+                });
+            }
+        }
+        
+        // Auto-animation
+        function startAnimation() {
+            animationInterval = setInterval(() => {
+                // Clear all active flows
+                flowLines.forEach(line => line.classList.remove('active'));
+                
+                // Activate current flow
+                const currentFlow = document.getElementById(flowSequence[animationIndex]);
+                if (currentFlow) {
+                    currentFlow.classList.add('active');
+                }
+                
+                // Move to next flow
+                animationIndex = (animationIndex + 1) % flowSequence.length;
+            }, 1000);
+        }
+        
+        // Start animation after 2 seconds
+        setTimeout(startAnimation, 2000);
+        
+        // Pause animation on component interaction, resume after 5 seconds
+        let pauseTimeout;
+        components.forEach(component => {
+            component.addEventListener('click', () => {
+                clearInterval(animationInterval);
+                clearTimeout(pauseTimeout);
+                pauseTimeout = setTimeout(startAnimation, 5000);
+            });
+        });
+        
+        // Responsive SVG sizing
+        function adjustDiagramSize() {
+            const svg = document.getElementById('architecture-diagram');
+            const container = document.querySelector('.diagram-container');
+            const containerWidth = container.offsetWidth;
+            const maxWidth = Math.min(containerWidth - 40, 1200);
+            svg.style.width = maxWidth + 'px';
+            svg.style.height = (maxWidth * 0.75) + 'px';
+        }
+        
+        // Adjust on load and resize
+        window.addEventListener('load', adjustDiagramSize);
+        window.addEventListener('resize', adjustDiagramSize);
+    </script>
+    
+    <!-- Page-specific styles -->
+    <style>
+        .page-title {
+            font-size: var(--font-size-3xl);
+            color: var(--eh-green);
+            text-align: center;
+            margin-bottom: var(--space-8);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        
+        #architecture-diagram {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border: 1px solid var(--eh-grey-light);
+            border-radius: var(--radius-lg);
+            background: var(--eh-white);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Tooltip Styles */
+        .tooltip {
+            position: absolute;
+            background: #1f2937;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+            max-width: 250px;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid #374151;
+        }
+        
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #1f2937 transparent transparent transparent;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .page-title {
+                font-size: var(--font-size-4xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .page-title {
+                font-size: var(--font-size-5xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .diagram-container {
+                margin: var(--space-4) 0;
+            }
+            
+            #architecture-diagram {
+                max-width: calc(100vw - 2rem);
+            }
+        }
+    </style>
+</body>
+</html>
