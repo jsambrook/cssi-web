@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EvergreenHealth Organizational and Operational Facts - AI Voice Agents Presentation">
+    <meta name="description" content="References and Citations - AI Voice Agents for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>EvergreenHealth Facts - AI Voice Agents for EvergreenHealth</title>
+    <title>References - AI Voice Agents for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="EvergreenHealth Facts - AI Voice Agents for EvergreenHealth">
-    <meta property="og:description" content="Organizational and Operational Facts about EvergreenHealth">
+    <meta property="og:title" content="References - AI Voice Agents for EvergreenHealth">
+    <meta property="og:description" content="Citations and References for the Presentation">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -198,9 +198,10 @@
             min-height: -webkit-fill-available;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             padding: var(--page-padding);
+            padding-top: calc(var(--page-padding) + 80px);
             padding-bottom: calc(var(--page-padding) + var(--navigation-height) + var(--space-4));
             position: relative;
             box-sizing: border-box;
@@ -353,139 +354,55 @@
             text-align: center;
         }
         
-        .facts-list {
+        .references-list {
             display: flex;
             flex-direction: column;
-            gap: var(--space-8);
-            max-width: 900px;
+            gap: var(--space-4);
+            max-width: 1000px;
             margin: 0 auto;
         }
         
-        .fact-item {
+        .reference-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+            padding: var(--space-4);
             background: var(--eh-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--eh-green);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-left: 3px solid var(--eh-blue);
         }
         
-        .fact-number {
+        .reference-number {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: var(--eh-green);
+            width: 28px;
+            height: 28px;
+            background: var(--eh-blue);
             color: var(--eh-white);
             border-radius: var(--radius-full);
             font-weight: var(--font-weight-bold);
-            font-size: var(--font-size-lg);
-            margin-right: var(--space-4);
+            font-size: var(--font-size-sm);
             flex-shrink: 0;
+            margin-top: var(--space-1);
         }
         
-        .fact-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: var(--space-4);
-        }
-        
-        .fact-title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--eh-grey-dark);
-            margin: 0;
-        }
-        
-        .fact-content {
-            font-size: var(--font-size-lg);
+        .reference-content {
+            flex: 1;
+            font-size: var(--font-size-base);
             line-height: var(--line-height-relaxed);
             color: var(--eh-grey-dark);
-            margin-left: 48px;
         }
         
-        /* Citation tooltip styles */
-        .citation-link {
-            position: relative;
-            color: var(--eh-blue);
-            text-decoration: none;
-            cursor: help;
-            border-bottom: 1px dotted var(--eh-blue);
-            transition: all var(--transition-fast);
-        }
-        
-        .citation-link:hover {
-            color: var(--eh-blue-dark);
-        }
-        
-        .citation-tooltip {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-100%);
-            background: var(--eh-grey-dark);
-            color: var(--eh-white);
-            padding: var(--space-4);
-            border-radius: var(--radius-md);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-normal);
-            line-height: var(--line-height-relaxed);
-            width: 400px;
-            max-width: 90vw;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--eh-grey);
-            z-index: var(--z-tooltip);
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-            pointer-events: none;
-        }
-        
-        .citation-tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: var(--eh-grey-dark) transparent transparent transparent;
-        }
-        
-        .citation-link:hover .citation-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(-100%) translateY(-5px);
-        }
-        
-        .citation-tooltip a {
-            color: var(--eh-blue-light);
+        .reference-content a {
             word-break: break-all;
-        }
-        
-        .citation-tooltip a:hover {
-            color: var(--eh-white);
-        }
-        
-        /* Footnote styles */
-        .footnote-link {
             color: var(--eh-blue);
-            text-decoration: none;
-            font-size: var(--font-size-sm);
-            vertical-align: super;
-            line-height: 0;
-            margin-left: var(--space-1);
-            transition: color var(--transition-fast);
         }
         
-        .footnote-link:hover {
+        .reference-content a:hover {
             color: var(--eh-blue-dark);
             text-decoration: underline;
-        }
-        
-        .footnote-link:focus {
-            outline: 2px solid var(--eh-blue);
-            outline-offset: 1px;
         }
         
         /* Responsive adjustments */
@@ -495,36 +412,23 @@
                 margin-bottom: var(--space-6);
             }
             
-            .facts-list {
-                gap: var(--space-6);
+            .references-list {
+                gap: var(--space-3);
             }
             
-            .fact-item {
-                padding: var(--space-4);
-            }
-            
-            .fact-content {
-                margin-left: 0;
-                margin-top: var(--space-3);
-            }
-            
-            .fact-header {
+            .reference-item {
+                padding: var(--space-3);
                 flex-direction: column;
                 align-items: flex-start;
             }
             
-            .fact-number {
-                margin-right: 0;
+            .reference-number {
                 margin-bottom: var(--space-2);
-            }
-            
-            .citation-tooltip {
-                width: 300px;
-                font-size: var(--font-size-xs);
-                padding: var(--space-3);
+                margin-top: 0;
             }
             
             .presentation-page {
+                padding-top: calc(1rem + 60px);
                 padding-bottom: calc(1rem + 60px + 1.5rem);
             }
             
@@ -565,66 +469,126 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="page-title">Organizational and Operational Facts</h1>
+            <h1 class="page-title">References</h1>
             
-            <div class="facts-list">
-                <!-- Fact 1: Structure and Ownership -->
-                <div class="fact-item">
-                    <div class="fact-header">
-                        <div class="fact-number">1</div>
-                        <h2 class="fact-title">Structure and Ownership</h2>
-                    </div>
-                    <div class="fact-content">
-                        EH is a community-owned public hospital district, voter-approved in 1972, serving King County's Eastside with an elected Board of Commissioners for local governance.
-                        
-                        <span class="citation-link">
-                            [Citations]
-                            <div class="citation-tooltip">
-                                <strong>Sources:</strong><br>
-                                • EvergreenHealth About Us page: <a href="https://www.evergreenhealth.com/about-us/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/</a><br><br>
-                                • Wikipedia EvergreenHealth: <a href="https://en.wikipedia.org/wiki/EvergreenHealth" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/EvergreenHealth</a> (last updated 2025)
-                            </div>
-                        </span><a href="../page_references/page_references.html#ref-1" class="footnote-link" title="Reference 1">1</a><a href="../page_references/page_references.html#ref-2" class="footnote-link" title="Reference 2">2</a>
+            <div class="references-list">
+                <!-- Reference 1 -->
+                <div class="reference-item" id="ref-1">
+                    <div class="reference-number">1</div>
+                    <div class="reference-content">
+                        EvergreenHealth About Us page. <a href="https://www.evergreenhealth.com/about-us/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/</a>
                     </div>
                 </div>
                 
-                <!-- Fact 2: Facilities and Capacity -->
-                <div class="fact-item">
-                    <div class="fact-header">
-                        <div class="fact-number">2</div>
-                        <h2 class="fact-title">Facilities and Capacity</h2>
-                    </div>
-                    <div class="fact-content">
-                        EH operates a main campus in Kirkland, Monroe hospital, and multiple clinics; 100% occupancy reported in 2024, with expansions planned for 3% population growth to 2029.
-                        
-                        <span class="citation-link">
-                            [Citations]
-                            <div class="citation-tooltip">
-                                <strong>Sources:</strong><br>
-                                • EH 2024 Financial Report: <a href="https://www.evergreenhealth.com/app/files/public/668612f0-1f42-4521-9766-1a52d2cc2e9a/evergreenhealth-monroe-financial-report-2024.pdf" target="_blank" rel="noopener">Financial Report PDF</a><br><br>
-                                • EH Master Campus Plan (Board Minutes): <a href="https://www.evergreenhealth.com/app/files/public/7fa105fd-4467-4d5c-b25f-091819f3e25b/05-02-2025-EHK-Board-Educational-Minutes.pdf" target="_blank" rel="noopener">Board Minutes PDF</a>
-                            </div>
-                        </span><a href="../page_references/page_references.html#ref-3" class="footnote-link" title="Reference 3">3</a><a href="../page_references/page_references.html#ref-4" class="footnote-link" title="Reference 4">4</a>
+                <!-- Reference 2 -->
+                <div class="reference-item" id="ref-2">
+                    <div class="reference-number">2</div>
+                    <div class="reference-content">
+                        Wikipedia EvergreenHealth. <a href="https://en.wikipedia.org/wiki/EvergreenHealth" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/EvergreenHealth</a> (last updated 2025)
                     </div>
                 </div>
                 
-                <!-- Fact 3: Quality Ratings -->
-                <div class="fact-item">
-                    <div class="fact-header">
-                        <div class="fact-number">3</div>
-                        <h2 class="fact-title">Quality Ratings</h2>
+                <!-- Reference 3 -->
+                <div class="reference-item" id="ref-3">
+                    <div class="reference-number">3</div>
+                    <div class="reference-content">
+                        EH 2024 Financial Report. <a href="https://www.evergreenhealth.com/app/files/public/668612f0-1f42-4521-9766-1a52d2cc2e9a/evergreenhealth-monroe-financial-report-2024.pdf" target="_blank" rel="noopener">https://www.evergreenhealth.com/app/files/public/668612f0-1f42-4521-9766-1a52d2cc2e9a/evergreenhealth-monroe-financial-report-2024.pdf</a>
                     </div>
-                    <div class="fact-content">
-                        Consistently high ratings: Leapfrog 'A' for safety (9 consecutive years), CMS 5-Star, #2 nationally from Lown Institute for high-value care.
-                        
-                        <span class="citation-link">
-                            [Citations]
-                            <div class="citation-tooltip">
-                                <strong>Sources:</strong><br>
-                                • EH Commitment to Quality page: <a href="https://www.evergreenhealth.com/about-us/commitment-to-quality/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/commitment-to-quality/</a><br><br>
-                                • Leapfrog Group 2025 report: <a href="https://ratings.leapfroggroup.org/facility/details/50-0010/evergreenhealth-medical-center,kirkland,wa" target="_blank" rel="noopener">Leapfrog Rating Details</a>
-                            </div>
-                        </span><a href="../page_references/page_references.html#ref-5" class="footnote-link" title="Reference 5">5</a><a href="../page_references/page_references.html#ref-6" class="footnote-link" title="Reference 6">6</a>
+                </div>
+                
+                <!-- Reference 4 -->
+                <div class="reference-item" id="ref-4">
+                    <div class="reference-number">4</div>
+                    <div class="reference-content">
+                        EH Master Campus Plan (referenced in board minutes). <a href="https://www.evergreenhealth.com/app/files/public/7fa105fd-4467-4d5c-b25f-091819f3e25b/05-02-2025-EHK-Board-Educational-Minutes.pdf" target="_blank" rel="noopener">https://www.evergreenhealth.com/app/files/public/7fa105fd-4467-4d5c-b25f-091819f3e25b/05-02-2025-EHK-Board-Educational-Minutes.pdf</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 5 -->
+                <div class="reference-item" id="ref-5">
+                    <div class="reference-number">5</div>
+                    <div class="reference-content">
+                        EH Commitment to Quality page. <a href="https://www.evergreenhealth.com/about-us/commitment-to-quality/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/commitment-to-quality/</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 6 -->
+                <div class="reference-item" id="ref-6">
+                    <div class="reference-number">6</div>
+                    <div class="reference-content">
+                        Leapfrog Group 2025 report. <a href="https://ratings.leapfroggroup.org/facility/details/50-0010/evergreenhealth-medical-center,kirkland,wa" target="_blank" rel="noopener">https://ratings.leapfroggroup.org/facility/details/50-0010/evergreenhealth-medical-center,kirkland,wa</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 7 -->
+                <div class="reference-item" id="ref-7">
+                    <div class="reference-number">7</div>
+                    <div class="reference-content">
+                        Chief Healthcare Executive 2024 article on WA hospitals. <a href="https://www.chiefhealthcareexecutive.com/view/washington-state-hospital-system-very-fragile-after-two-years-of-losses" target="_blank" rel="noopener">https://www.chiefhealthcareexecutive.com/view/washington-state-hospital-system-very-fragile-after-two-years-of-losses</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 8 -->
+                <div class="reference-item" id="ref-8">
+                    <div class="reference-number">8</div>
+                    <div class="reference-content">
+                        EH 2024 Financial Report. <a href="https://www.evergreenhealth.com/app/files/public/497bff21-e0d5-4c3d-9e25-f3383e626905/evergreenhealth-financial-report.pdf" target="_blank" rel="noopener">https://www.evergreenhealth.com/app/files/public/497bff21-e0d5-4c3d-9e25-f3383e626905/evergreenhealth-financial-report.pdf</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 9 -->
+                <div class="reference-item" id="ref-9">
+                    <div class="reference-number">9</div>
+                    <div class="reference-content">
+                        Provided document kb_grok_research.md
+                    </div>
+                </div>
+                
+                <!-- Reference 10 -->
+                <div class="reference-item" id="ref-10">
+                    <div class="reference-number">10</div>
+                    <div class="reference-content">
+                        HCA Washington 2025 Cost Board materials. <a href="https://www.hca.wa.gov/assets/program/cost-board-materials-20250123.pdf" target="_blank" rel="noopener">https://www.hca.wa.gov/assets/program/cost-board-materials-20250123.pdf</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 11 -->
+                <div class="reference-item" id="ref-11">
+                    <div class="reference-number">11</div>
+                    <div class="reference-content">
+                        King County Elections ballot measures. <a href="https://info.kingcounty.gov/kcelections/Vote/contests/ballotmeasures.aspx?lang=en-US&cid=101686&groupname=SpecialPurposeDistrict" target="_blank" rel="noopener">https://info.kingcounty.gov/kcelections/Vote/contests/ballotmeasures.aspx?lang=en-US&cid=101686&groupname=SpecialPurposeDistrict</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 12 -->
+                <div class="reference-item" id="ref-12">
+                    <div class="reference-number">12</div>
+                    <div class="reference-content">
+                        WA HCA 2025 report. <a href="https://www.hca.wa.gov/assets/program/cost-board-materials-20250123.pdf" target="_blank" rel="noopener">https://www.hca.wa.gov/assets/program/cost-board-materials-20250123.pdf</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 13 -->
+                <div class="reference-item" id="ref-13">
+                    <div class="reference-number">13</div>
+                    <div class="reference-content">
+                        PMC article on TOC in healthcare. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/" target="_blank" rel="noopener">https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 14 -->
+                <div class="reference-item" id="ref-14">
+                    <div class="reference-number">14</div>
+                    <div class="reference-content">
+                        UPenn LDI research on consolidation. <a href="https://ldi.upenn.edu/our-work/research-updates/hospital-consolidation-continues-to-boost-costs-narrow-patient-choices-and-impact-care-quality/" target="_blank" rel="noopener">https://ldi.upenn.edu/our-work/research-updates/hospital-consolidation-continues-to-boost-costs-narrow-patient-choices-and-impact-care-quality/</a>
+                    </div>
+                </div>
+                
+                <!-- Reference 15 -->
+                <div class="reference-item" id="ref-15">
+                    <div class="reference-number">15</div>
+                    <div class="reference-content">
+                        EH Master Campus Plan in financial report. <a href="https://www.evergreenhealth.com/app/files/public/497bff21-e0d5-4c3d-9e25-f3383e626905/evergreenhealth-financial-report.pdf" target="_blank" rel="noopener">https://www.evergreenhealth.com/app/files/public/497bff21-e0d5-4c3d-9e25-f3383e626905/evergreenhealth-financial-report.pdf</a>
                     </div>
                 </div>
             </div>
@@ -635,7 +599,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_about_cssi/page_about_cssi.html" class="nav-button nav-prev" aria-label="Previous page: About CSSI">
+            <a href="../page_challenges_and_trends/page_challenges_and_trends.html" class="nav-button nav-prev" aria-label="Previous page: Challenges and Trends">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -643,20 +607,20 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="3" aria-valuemin="1" aria-valuemax="7">
-                <span class="progress-text">Page 3 of 7</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="7" aria-valuemin="1" aria-valuemax="7">
+                <span class="progress-text">Page 7 of 7</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 42.9%"></div>
+                    <div class="progress-fill" style="width: 100%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_eh_fin_facts/page_eh_fin_facts.html" class="nav-button nav-next" aria-label="Next page: Financial Facts">
-                Next
+            <button class="nav-button nav-next" type="button" aria-label="End of presentation" disabled>
+                End
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
                 </svg>
-            </a>
+            </button>
         </div>
     </nav>
     

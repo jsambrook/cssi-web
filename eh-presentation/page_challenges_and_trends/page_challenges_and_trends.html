@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EvergreenHealth Organizational and Operational Facts - AI Voice Agents Presentation">
+    <meta name="description" content="EvergreenHealth Challenges and Trends - AI Voice Agents Presentation">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>EvergreenHealth Facts - AI Voice Agents for EvergreenHealth</title>
+    <title>Challenges and Trends - AI Voice Agents for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="EvergreenHealth Facts - AI Voice Agents for EvergreenHealth">
-    <meta property="og:description" content="Organizational and Operational Facts about EvergreenHealth">
+    <meta property="og:title" content="Challenges and Trends - AI Voice Agents for EvergreenHealth">
+    <meta property="og:description" content="Healthcare Industry Challenges and Trends Affecting EvergreenHealth">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -42,6 +42,8 @@
             --eh-blue-dark: #0056b3;
             --eh-grey-light: #f8f9fa;
             --eh-grey-dark: #333333;
+            --eh-purple: #6f42c1;
+            --eh-purple-light: #f3f0ff;
             
             --font-family-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-size-xs: 0.75rem;
@@ -353,7 +355,7 @@
             text-align: center;
         }
         
-        .facts-list {
+        .challenges-list {
             display: flex;
             flex-direction: column;
             gap: var(--space-8);
@@ -361,21 +363,21 @@
             margin: 0 auto;
         }
         
-        .fact-item {
+        .challenge-item {
             background: var(--eh-white);
             border-radius: var(--radius-lg);
             padding: var(--space-6);
             box-shadow: var(--shadow);
-            border-left: 4px solid var(--eh-green);
+            border-left: 4px solid var(--eh-purple);
         }
         
-        .fact-number {
+        .challenge-number {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 32px;
             height: 32px;
-            background: var(--eh-green);
+            background: var(--eh-purple);
             color: var(--eh-white);
             border-radius: var(--radius-full);
             font-weight: var(--font-weight-bold);
@@ -384,87 +386,39 @@
             flex-shrink: 0;
         }
         
-        .fact-header {
+        .challenge-header {
             display: flex;
             align-items: flex-start;
             margin-bottom: var(--space-4);
         }
         
-        .fact-title {
+        .challenge-title {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-grey-dark);
             margin: 0;
         }
         
-        .fact-content {
+        .challenge-content {
             font-size: var(--font-size-lg);
             line-height: var(--line-height-relaxed);
             color: var(--eh-grey-dark);
             margin-left: 48px;
         }
         
-        /* Citation tooltip styles */
-        .citation-link {
-            position: relative;
-            color: var(--eh-blue);
-            text-decoration: none;
-            cursor: help;
-            border-bottom: 1px dotted var(--eh-blue);
-            transition: all var(--transition-fast);
+        /* Challenge highlight styles */
+        .challenge-highlight {
+            font-weight: var(--font-weight-semibold);
+            color: var(--eh-purple);
         }
         
-        .citation-link:hover {
-            color: var(--eh-blue-dark);
+        .challenge-negative {
+            color: var(--eh-red);
         }
         
-        .citation-tooltip {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-100%);
-            background: var(--eh-grey-dark);
-            color: var(--eh-white);
-            padding: var(--space-4);
-            border-radius: var(--radius-md);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-normal);
-            line-height: var(--line-height-relaxed);
-            width: 400px;
-            max-width: 90vw;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--eh-grey);
-            z-index: var(--z-tooltip);
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-            pointer-events: none;
-        }
-        
-        .citation-tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: var(--eh-grey-dark) transparent transparent transparent;
-        }
-        
-        .citation-link:hover .citation-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(-100%) translateY(-5px);
-        }
-        
-        .citation-tooltip a {
-            color: var(--eh-blue-light);
-            word-break: break-all;
-        }
-        
-        .citation-tooltip a:hover {
-            color: var(--eh-white);
+        .challenge-critical {
+            color: var(--eh-red);
+            font-weight: var(--font-weight-bold);
         }
         
         /* Footnote styles */
@@ -495,33 +449,27 @@
                 margin-bottom: var(--space-6);
             }
             
-            .facts-list {
+            .challenges-list {
                 gap: var(--space-6);
             }
             
-            .fact-item {
+            .challenge-item {
                 padding: var(--space-4);
             }
             
-            .fact-content {
+            .challenge-content {
                 margin-left: 0;
                 margin-top: var(--space-3);
             }
             
-            .fact-header {
+            .challenge-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
             
-            .fact-number {
+            .challenge-number {
                 margin-right: 0;
                 margin-bottom: var(--space-2);
-            }
-            
-            .citation-tooltip {
-                width: 300px;
-                font-size: var(--font-size-xs);
-                padding: var(--space-3);
             }
             
             .presentation-page {
@@ -565,66 +513,50 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="page-title">Organizational and Operational Facts</h1>
+            <h1 class="page-title">Challenges and Trends</h1>
             
-            <div class="facts-list">
-                <!-- Fact 1: Structure and Ownership -->
-                <div class="fact-item">
-                    <div class="fact-header">
-                        <div class="fact-number">1</div>
-                        <h2 class="fact-title">Structure and Ownership</h2>
+            <div class="challenges-list">
+                <!-- Challenge 1: Workforce Shortages -->
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <div class="challenge-number">1</div>
+                        <h2 class="challenge-title">Workforce Shortages</h2>
                     </div>
-                    <div class="fact-content">
-                        EH is a community-owned public hospital district, voter-approved in 1972, serving King County's Eastside with an elected Board of Commissioners for local governance.
-                        
-                        <span class="citation-link">
-                            [Citations]
-                            <div class="citation-tooltip">
-                                <strong>Sources:</strong><br>
-                                • EvergreenHealth About Us page: <a href="https://www.evergreenhealth.com/about-us/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/</a><br><br>
-                                • Wikipedia EvergreenHealth: <a href="https://en.wikipedia.org/wiki/EvergreenHealth" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/EvergreenHealth</a> (last updated 2025)
-                            </div>
-                        </span><a href="../page_references/page_references.html#ref-1" class="footnote-link" title="Reference 1">1</a><a href="../page_references/page_references.html#ref-2" class="footnote-link" title="Reference 2">2</a>
+                    <div class="challenge-content">
+                        <span class="challenge-critical">91% of rural WA counties</span> lack primary care; EH faces <span class="challenge-negative">burnout/turnover</span>, with unions negotiating rises (2022-2025 contracts)<a href="../page_references/page_references.html#ref-12" class="footnote-link" title="Reference 12">12</a><a href="../page_references/page_references.html#ref-9" class="footnote-link" title="Reference 9">9</a>.
                     </div>
                 </div>
                 
-                <!-- Fact 2: Facilities and Capacity -->
-                <div class="fact-item">
-                    <div class="fact-header">
-                        <div class="fact-number">2</div>
-                        <h2 class="fact-title">Facilities and Capacity</h2>
+                <!-- Challenge 2: Cyber Risks -->
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <div class="challenge-number">2</div>
+                        <h2 class="challenge-title">Cyber Risks</h2>
                     </div>
-                    <div class="fact-content">
-                        EH operates a main campus in Kirkland, Monroe hospital, and multiple clinics; 100% occupancy reported in 2024, with expansions planned for 3% population growth to 2029.
-                        
-                        <span class="citation-link">
-                            [Citations]
-                            <div class="citation-tooltip">
-                                <strong>Sources:</strong><br>
-                                • EH 2024 Financial Report: <a href="https://www.evergreenhealth.com/app/files/public/668612f0-1f42-4521-9766-1a52d2cc2e9a/evergreenhealth-monroe-financial-report-2024.pdf" target="_blank" rel="noopener">Financial Report PDF</a><br><br>
-                                • EH Master Campus Plan (Board Minutes): <a href="https://www.evergreenhealth.com/app/files/public/7fa105fd-4467-4d5c-b25f-091819f3e25b/05-02-2025-EHK-Board-Educational-Minutes.pdf" target="_blank" rel="noopener">Board Minutes PDF</a>
-                            </div>
-                        </span><a href="../page_references/page_references.html#ref-3" class="footnote-link" title="Reference 3">3</a><a href="../page_references/page_references.html#ref-4" class="footnote-link" title="Reference 4">4</a>
+                    <div class="challenge-content">
+                        Ransomware up <span class="challenge-critical">149% in 2025</span>; Breaches cost millions, disrupting care<a href="../page_references/page_references.html#ref-9" class="footnote-link" title="Reference 9">9</a><a href="../page_references/page_references.html#ref-13" class="footnote-link" title="Reference 13">13</a>.
                     </div>
                 </div>
                 
-                <!-- Fact 3: Quality Ratings -->
-                <div class="fact-item">
-                    <div class="fact-header">
-                        <div class="fact-number">3</div>
-                        <h2 class="fact-title">Quality Ratings</h2>
+                <!-- Challenge 3: Consolidation Trends -->
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <div class="challenge-number">3</div>
+                        <h2 class="challenge-title">Consolidation Trends</h2>
                     </div>
-                    <div class="fact-content">
-                        Consistently high ratings: Leapfrog 'A' for safety (9 consecutive years), CMS 5-Star, #2 nationally from Lown Institute for high-value care.
-                        
-                        <span class="citation-link">
-                            [Citations]
-                            <div class="citation-tooltip">
-                                <strong>Sources:</strong><br>
-                                • EH Commitment to Quality page: <a href="https://www.evergreenhealth.com/about-us/commitment-to-quality/" target="_blank" rel="noopener">https://www.evergreenhealth.com/about-us/commitment-to-quality/</a><br><br>
-                                • Leapfrog Group 2025 report: <a href="https://ratings.leapfroggroup.org/facility/details/50-0010/evergreenhealth-medical-center,kirkland,wa" target="_blank" rel="noopener">Leapfrog Rating Details</a>
-                            </div>
-                        </span><a href="../page_references/page_references.html#ref-5" class="footnote-link" title="Reference 5">5</a><a href="../page_references/page_references.html#ref-6" class="footnote-link" title="Reference 6">6</a>
+                    <div class="challenge-content">
+                        Oligopolistic markets raising prices <span class="challenge-negative">20-30% since 1980s</span>; EH faces pressures from Providence dominance in Seattle<a href="../page_references/page_references.html#ref-14" class="footnote-link" title="Reference 14">14</a><a href="../page_references/page_references.html#ref-9" class="footnote-link" title="Reference 9">9</a>.
+                    </div>
+                </div>
+                
+                <!-- Challenge 4: Population and Demand Growth -->
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <div class="challenge-number">4</div>
+                        <h2 class="challenge-title">Population and Demand Growth</h2>
+                    </div>
+                    <div class="challenge-content">
+                        <span class="challenge-highlight">3% projected growth</span> in King County to 2029, straining <span class="challenge-critical">100% occupancy</span><a href="../page_references/page_references.html#ref-15" class="footnote-link" title="Reference 15">15</a>.
                     </div>
                 </div>
             </div>
@@ -635,7 +567,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_about_cssi/page_about_cssi.html" class="nav-button nav-prev" aria-label="Previous page: About CSSI">
+            <a href="../page_eh_fin_facts/page_eh_fin_facts.html" class="nav-button nav-prev" aria-label="Previous page: Financial Facts">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -643,15 +575,15 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="3" aria-valuemin="1" aria-valuemax="7">
-                <span class="progress-text">Page 3 of 7</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="5" aria-valuemin="1" aria-valuemax="7">
+                <span class="progress-text">Page 5 of 7</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 42.9%"></div>
+                    <div class="progress-fill" style="width: 71.4%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_eh_fin_facts/page_eh_fin_facts.html" class="nav-button nav-next" aria-label="Next page: Financial Facts">
+            <a href="../page_va_architecture/page_va_architecture.html" class="nav-button nav-next" aria-label="Next page: Voice Agent Architecture">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
