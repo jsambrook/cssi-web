@@ -132,3 +132,19 @@ dist/                   # Production build output
 - [ ] Cross-browser compatibility verified
 - [ ] Navigation integration working
 - [ ] Semantic HTML structure maintained
+
+## Fact-Check Documentation
+
+### EvergreenHealth 2025 Levy - VERIFIED FACTS
+- **Proposed levy rate**: 50 cents per $1,000 assessed value (for collection in 2026)
+- **Current levy rate**: ~14 cents per $1,000 assessed value  
+- **Increase amount**: 36 cents per $1,000 (verified from King County Elections)
+- **Source**: King County Elections ballot measures (Reference #11)
+- **Last verified**: January 2025
+- **Note**: Do NOT confuse current rate (14¢) with proposed rate (50¢)
+
+### Content Accuracy Guidelines
+- Always verify financial figures against primary sources
+- Double-check ballot measure details before publication
+- Cross-reference board minutes with official election materials
+- Document all fact-checks in this section to prevent regression
