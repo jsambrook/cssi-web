@@ -143,8 +143,17 @@ dist/                   # Production build output
 - **Last verified**: January 2025
 - **Note**: Do NOT confuse current rate (14¢) with proposed rate (50¢)
 
+### EvergreenHealth Financial Losses - VERIFIED FACTS
+- **2022 Financial Loss**: $87.9 million (calculated from cumulative $158M - 2023 loss of $70.1M)
+- **2023 Financial Loss**: $70.1 million (verified from EH 2023 Annual Report, page 6)
+- **Cumulative 2022-2023**: $158 million total (verified from Chief Healthcare Executive)
+- **Source**: EH 2023 Annual Report + Chief Healthcare Executive article
+- **Last verified**: January 2025
+- **Note**: Individual yearly figures provide more specific context than cumulative totals
+
 ### Content Accuracy Guidelines
 - Always verify financial figures against primary sources
 - Double-check ballot measure details before publication
 - Cross-reference board minutes with official election materials
 - Document all fact-checks in this section to prevent regression
+- Prefer specific yearly breakdowns over cumulative figures when available
