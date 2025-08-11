@@ -188,16 +188,16 @@ Implement targeted strategies to boost your bottom line through optimized pricin
 
 A proven methodology that delivers consistent results for businesses of all sizes.
 
-1. **Discovery**  
+1. **Discovery**
    We start by understanding your business, identifying pain points, and defining clear objectives.
 
-2. **Analysis**  
+2. **Analysis**
    Our experts analyze your current processes and systems to identify optimization opportunities.
 
-3. **Implementation**  
+3. **Implementation**
    We develop and deploy customized solutions tailored to your specific business needs.
 
-4. **Optimization**  
+4. **Optimization**
    Continuous improvement and refinement to ensure long-term success and adaptability.
 
 ## Success Stories
@@ -423,17 +423,17 @@ See how our revenue improvement solutions have transformed businesses across var
 
 > By identifying our key constraints in the production process, Common Sense helped increase our throughput by 35% without additional equipment, resulting in a 28% profit increase within 3 months.
 >
-> **Manufacturing Company**  
+> **Manufacturing Company**
 > Operations Director, Custom Furniture Manufacturer
 
 > The constraints-based pricing strategy Common Sense implemented for our service business increased our average project value by 42% while actually improving our close rate.
 >
-> **Service Business**  
+> **Service Business**
 > Owner, Professional Services Firm
 
 > By restructuring our fulfillment process based on constraints management principles, we reduced delivery times by 65% and increased order volume by 40% with the same staff.
 >
-> **E-commerce Retailer**  
+> **E-commerce Retailer**
 > CEO, Specialty Consumer Products
 
 ## Ready to Unlock Your Business's Full Potential?
@@ -471,7 +471,7 @@ We help businesses leverage automation and AI to work smarter, optimize processe
 
 --- Markdown synthesized from ./va-1.html ---
 <elevenlabs-convai agent-id="EDvK7QNdRFh6fskRA820"></elevenlabs-convai>
-<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
 
 --- Markdown synthesized from ./va.html ---
@@ -717,7 +717,7 @@ This article explains Japanese-style acupuncture as a gentle, precise alternativ
 
 ## Key Concepts
 - **Japanese vs. Chinese Acupuncture**: Japanese acupuncture uses thinner needles, shallower insertion, and fewer needles overall, making it gentler and more comfortable.
-- **Distinctive Characteristics**: 
+- **Distinctive Characteristics**:
   - Gentler technique with hair-thin needles
   - Precise palpation for diagnosis
   - Minimalist approach with fewer needles
@@ -1071,4 +1071,3 @@ No specific author information is provided for individual articles, though the c
 2. **Publication Timeline**: Include a chronological filter or calendar view to help users find content by date range, especially since the site appears to have articles with future dates (2025).
 
 3. **Author Attribution**: Add author information for each article to build credibility and connection with readers, particularly for a consulting business where personal expertise matters.
-
