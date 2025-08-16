@@ -12,6 +12,7 @@ class PresentationNavigator {
       'page_eh_fin_facts/page_eh_fin_facts',
       'page_challenges_and_trends/page_challenges_and_trends',
       'page_compassionate_intermediaries/page_compassionate_intermediaries',
+      'page_workforce_solution/page_workforce_solution',
       'page_va_architecture/page_va_architecture',
       'page_references/page_references'
     ];
