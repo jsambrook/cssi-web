@@ -6,14 +6,14 @@
 class PresentationNavigator {
   constructor() {
     this.pages = [
-      'page_home',
-      'page_challenges', 
-      'page_opportunities',
-      'page_solutions',
-      'page_benefits',
-      'page_implementation',
-      'page_next_steps',
-      'page_contact'
+      'page_home/page_home',
+      'page_about_cssi/page_about_cssi',
+      'page_eh_org_facts/page_eh_org_facts',
+      'page_eh_fin_facts/page_eh_fin_facts',
+      'page_challenges_and_trends/page_challenges_and_trends',
+      'page_compassionate_intermediaries/page_compassionate_intermediaries',
+      'page_va_architecture/page_va_architecture',
+      'page_references/page_references'
     ];
     
     this.currentPageIndex = this.getCurrentPageIndex();
@@ -32,10 +32,18 @@ class PresentationNavigator {
   
   getCurrentPageIndex() {
     const currentPath = window.location.pathname;
-    const currentPage = currentPath.split('/').pop() || 'page_home';
-    const pageWithoutExt = currentPage.replace('.html', '');
-    const index = this.pages.indexOf(pageWithoutExt);
-    return index !== -1 ? index : 0;
+    // Extract the directory and file name (e.g., "page_home/page_home.html")
+    const pathParts = currentPath.split('/');
+    const fileName = pathParts.pop() || '';
+    const directory = pathParts.pop() || '';
+    
+    if (fileName && directory) {
+      const pagePath = `${directory}/${fileName.replace('.html', '')}`;
+      const index = this.pages.indexOf(pagePath);
+      return index !== -1 ? index : 0;
+    }
+    
+    return 0;
   }
   
   setupKeyboardNavigation() {
@@ -108,21 +116,19 @@ class PresentationNavigator {
   setupNavigationButtons() {
     // Previous button
     const prevButton = document.querySelector('.nav-prev');
-    if (prevButton) {
+    if (prevButton && !prevButton.disabled) {
       prevButton.addEventListener('click', () => this.previousPage());
-      prevButton.disabled = this.currentPageIndex === 0;
     }
     
     // Next button
     const nextButton = document.querySelector('.nav-next');
-    if (nextButton) {
+    if (nextButton && !nextButton.disabled) {
       nextButton.addEventListener('click', () => this.nextPage());
-      nextButton.disabled = this.currentPageIndex === this.totalPages - 1;
     }
     
     // Home button
     const homeButton = document.querySelector('.nav-home');
-    if (homeButton) {
+    if (homeButton && !homeButton.disabled) {
       homeButton.addEventListener('click', () => this.goToPage(0));
     }
   }
@@ -143,6 +149,12 @@ class PresentationNavigator {
   }
   
   nextPage() {
+    // Check if next button is disabled in HTML
+    const nextButton = document.querySelector('.nav-next');
+    if (nextButton && nextButton.disabled) {
+      return; // Don't navigate if button is explicitly disabled
+    }
+    
     if (this.currentPageIndex < this.totalPages - 1) {
       this.goToPage(this.currentPageIndex + 1);
     }
@@ -156,8 +168,8 @@ class PresentationNavigator {
   
   goToPage(pageIndex) {
     if (pageIndex >= 0 && pageIndex < this.totalPages) {
-      const pageName = this.pages[pageIndex];
-      const url = `/${pageName}.html`;
+      const pagePath = this.pages[pageIndex];
+      const url = `../${pagePath}.html`;
       
       // Use history API for smooth navigation
       if (window.location.pathname !== url) {
