@@ -501,6 +501,69 @@
             text-decoration: underline;
         }
         
+        /* Citation tooltip styles */
+        .citation-link {
+            position: relative;
+            color: var(--eh-orange);
+            text-decoration: none;
+            cursor: help;
+            border-bottom: 1px dotted var(--eh-orange);
+            transition: all var(--transition-fast);
+        }
+        
+        .citation-link:hover {
+            color: var(--eh-orange);
+        }
+        
+        .citation-tooltip {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background: var(--eh-grey-dark);
+            color: var(--eh-white);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-normal);
+            line-height: var(--line-height-relaxed);
+            width: 450px;
+            max-width: 90vw;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--eh-grey);
+            z-index: var(--z-tooltip);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            pointer-events: none;
+        }
+        
+        .citation-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        }
+        
+        .citation-link:hover .citation-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-100%) translateY(-5px);
+        }
+        
+        .citation-tooltip a {
+            color: var(--eh-blue-light);
+            word-break: break-all;
+        }
+        
+        .citation-tooltip a:hover {
+            color: var(--eh-white);
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .page-title {
@@ -553,6 +616,12 @@
             
             .progress-bar {
                 width: 80px;
+            }
+            
+            .citation-tooltip {
+                width: 300px;
+                font-size: var(--font-size-xs);
+                padding: var(--space-3);
             }
         }
     </style>
