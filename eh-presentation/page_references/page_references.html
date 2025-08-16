@@ -293,11 +293,19 @@
         }
         
         .nav-button:disabled {
-            background: var(--eh-grey-light);
-            color: var(--eh-grey);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
+            background: var(--eh-grey-light) !important;
+            color: var(--eh-grey) !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        
+        .nav-button:disabled:hover {
+            background: var(--eh-grey-light) !important;
+            color: var(--eh-grey) !important;
+            transform: none !important;
+            box-shadow: none !important;
+            text-decoration: none !important;
         }
         
         .progress-indicator {
