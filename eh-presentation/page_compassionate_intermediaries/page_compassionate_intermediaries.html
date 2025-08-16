@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Common Sense Systems - AI Voice Agents for EvergreenHealth">
+    <meta name="description" content="Voice Agents as Compassionate Intermediaries - AI Voice Agents for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>About CSSI - AI Voice Agents for EvergreenHealth</title>
+    <title>Compassionate Intermediaries - AI Voice Agents for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Embedded Styles for Safari file:// compatibility -->
     
     <!-- Favicon and icons -->
     <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="About CSSI - AI Voice Agents for EvergreenHealth">
-    <meta property="og:description" content="Unlocking Value with Voice Agents: Opportunities for EvergreenHealth">
+    <meta property="og:title" content="Compassionate Intermediaries - AI Voice Agents for EvergreenHealth">
+    <meta property="og:description" content="Voice Agents as Neutral Intermediaries for Better Human Interactions">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -44,6 +42,8 @@
             --eh-blue-dark: #0056b3;
             --eh-grey-light: #f8f9fa;
             --eh-grey-dark: #333333;
+            --eh-teal: #20b2aa;
+            --eh-teal-light: #e6f8f8;
             
             --font-family-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-size-xs: 0.75rem;
@@ -347,185 +347,156 @@
         }
         
         /* Page-specific styles */
-        .about-container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: var(--space-16);
-            align-items: start;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .cssi-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: var(--space-8);
-            height: 100%;
-            min-height: 400px;
-        }
-        
-        .cssi-logo img {
-            max-width: 130%;
-            height: auto;
-            filter: drop-shadow(var(--shadow-md));
-        }
-        
-        .content-sections {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-8);
-        }
-        
-        .section {
-            border-bottom: 2px solid var(--eh-grey-light);
-            padding-bottom: var(--space-6);
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
-        .section-title {
-            font-size: var(--font-size-xl);
+        .page-title {
+            font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-bold);
+            color: var(--eh-green);
+            margin-bottom: var(--space-8);
+            text-align: center;
+        }
+        
+        .intro-section {
+            background: var(--eh-teal-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin-bottom: var(--space-8);
+            border-left: 4px solid var(--eh-teal);
+        }
+        
+        .intro-text {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-relaxed);
             color: var(--eh-grey-dark);
             margin-bottom: var(--space-4);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
         }
         
-        .section-content {
-            font-size: var(--font-size-lg);
-            color: var(--eh-grey-dark);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        .section-content p {
-            margin-bottom: var(--space-3);
-        }
-        
-        .section-content p:last-child {
-            margin-bottom: 0;
-        }
-        
-        .highlight {
-            color: var(--eh-green);
+        .intro-highlight {
             font-weight: var(--font-weight-semibold);
+            color: var(--eh-teal);
         }
         
-        .highlight[href] {
-            text-decoration: none;
-            transition: color var(--transition-fast);
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-8);
+            margin-bottom: var(--space-8);
         }
         
-        .highlight[href]:hover {
-            color: var(--eh-green-dark);
-            text-decoration: underline;
+        .benefit-section {
+            background: var(--eh-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow);
         }
         
-        .highlight[href]:focus {
-            outline: 2px solid var(--eh-green);
-            outline-offset: 2px;
+        .benefit-section.staff {
+            border-left: 4px solid var(--eh-blue);
         }
         
-        /* Policy hover tooltip */
-        .policy-text {
-            position: relative;
-            cursor: help;
-            border-bottom: 2px dotted var(--eh-green);
-            transition: all var(--transition-fast);
+        .benefit-section.patients {
+            border-left: 4px solid var(--eh-green);
         }
         
-        .policy-text:hover {
-            color: var(--eh-green-dark);
+        .benefit-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
         }
         
-        .policy-tooltip {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-100%);
-            background: var(--eh-grey-dark);
-            color: var(--eh-white);
-            padding: var(--space-4);
-            border-radius: var(--radius-md);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-normal);
+        .benefit-title.staff {
+            color: var(--eh-blue);
+        }
+        
+        .benefit-title.patients {
+            color: var(--eh-green);
+        }
+        
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-item {
+            padding: var(--space-2) 0;
+            border-bottom: 1px solid var(--eh-grey-light);
+            font-size: var(--font-size-base);
             line-height: var(--line-height-relaxed);
-            width: 400px;
-            max-width: 90vw;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--eh-grey);
-            z-index: var(--z-tooltip);
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-            pointer-events: none;
         }
         
-        .policy-tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        .benefit-item:last-child {
+            border-bottom: none;
         }
         
-        .policy-text:hover .policy-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(-100%) translateY(-5px);
+        .benefit-item strong {
+            color: var(--eh-grey-dark);
+        }
+        
+        .case-study {
+            background: var(--eh-green-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            border-left: 4px solid var(--eh-green);
+        }
+        
+        .case-study-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--eh-green);
+            margin-bottom: var(--space-4);
+        }
+        
+        .case-study-content {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: var(--eh-grey-dark);
+            margin-bottom: var(--space-4);
+        }
+        
+        .case-study-quote {
+            font-style: italic;
+            font-size: var(--font-size-lg);
+            color: var(--eh-green-dark);
+            border-left: 3px solid var(--eh-green);
+            padding-left: var(--space-4);
+            margin: var(--space-4) 0;
+        }
+        
+        .case-study-attribution {
+            font-size: var(--font-size-sm);
+            color: var(--eh-grey);
+            text-align: right;
+            margin-top: var(--space-2);
         }
         
         /* Responsive adjustments */
-        @media (max-width: 1024px) {
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-8);
-                text-align: center;
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--space-6);
             }
             
-            .cssi-logo {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+            
+            .intro-section,
+            .benefit-section,
+            .case-study {
                 padding: var(--space-4);
             }
             
-            .content-sections {
-                text-align: left;
-            }
-        }
-        
-        @media (max-width: 768px) {
             .presentation-page {
                 padding-bottom: calc(1rem + 60px + 1.5rem);
-            }
-            
-            .page-content {
-                max-width: 100%;
-            }
-            
-            .about-container {
-                gap: var(--space-6);
-            }
-            
-            .content-sections {
-                gap: var(--space-6);
-            }
-            
-            .section {
-                padding-bottom: var(--space-4);
-            }
-            
-            .section-title {
-                font-size: var(--font-size-lg);
-            }
-            
-            .section-content {
-                font-size: var(--font-size-base);
             }
             
             .navigation {
@@ -548,12 +519,6 @@
             .progress-bar {
                 width: 80px;
             }
-            
-            .policy-tooltip {
-                width: 300px;
-                font-size: var(--font-size-xs);
-                padding: var(--space-3);
-            }
         }
     </style>
 </head>
@@ -571,55 +536,64 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <div class="about-container">
-                <!-- Left Column: CSSI Logo -->
-                <div class="cssi-logo">
-                    <img src="../shared/assets/full_logo_5.png" alt="Common Sense Systems Logo" />
+            <h1 class="page-title">Voice Agents as Compassionate Intermediaries</h1>
+            
+            <!-- Introduction Section -->
+            <div class="intro-section">
+                <p class="intro-text">
+                    Healthcare interactions can be emotionally charged. Patients face stress from health concerns, financial burdens, and insurance complexities. Staff members arrive at work carrying their own daily pressures. 
+                    <span class="intro-highlight">AI voice agents serve as neutral, professional intermediaries</span>, protecting both sides while ensuring consistent, empathetic communication.
+                </p>
+            </div>
+            
+            <!-- Benefits Grid -->
+            <div class="benefits-grid">
+                <!-- Staff Benefits -->
+                <div class="benefit-section staff">
+                    <h2 class="benefit-title staff">
+                        <svg class="benefit-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7C14.6 7 14.4 7.2 14.2 7.6L13 10L11.5 7.5C11.1 6.6 10.2 6 9.2 6H3V8H9.2L12 14L13.8 17H20V15H15.1L14.2 13.1L15.9 10.3C16.3 9.6 17 9.2 17.8 9.2H21V9H21Z"/>
+                        </svg>
+                        For EH Staff
+                    </h2>
+                    <ul class="benefit-list">
+                        <li class="benefit-item"><strong>Emotional Shield:</strong> Protection from hostile or aggressive calls during stressful workdays</li>
+                        <li class="benefit-item"><strong>Reduced Burnout:</strong> Focus on medical care rather than managing difficult conversations</li>
+                        <li class="benefit-item"><strong>Consistent Performance:</strong> AI handles emotional labor, staff focus on problem-solving</li>
+                        <li class="benefit-item"><strong>24/7 Coverage:</strong> Reduces after-hours call burden on staff</li>
+                    </ul>
                 </div>
                 
-                <!-- Right Column: Content Sections -->
-                <div class="content-sections">
-                    <!-- Founded Section -->
-                    <div class="section">
-                        <h2 class="section-title">Founded in 1996</h2>
-                        <div class="section-content">
-                            <p>Specializing in value engineering, software, and AI solutions</p>
-                        </div>
-                    </div>
-                    
-                    <!-- John Sambrook Section -->
-                    <div class="section">
-                        <h2 class="section-title">John Sambrook</h2>
-                        <div class="section-content">
-                            <p><span class="highlight">40+ years</span> in technology leadership;</p>
-                            <p>Embedded SW Development, Medical Devices;</p>
-                            <p>Former Director of Global Quality at <a href="https://sonosite.com" target="_blank" rel="noopener noreferrer" class="highlight">FujiFilm / Sonosite</a></p>
-                        </div>
-                    </div>
-                    
-                    <!-- Focus Section -->
-                    <div class="section">
-                        <h2 class="section-title">Focus</h2>
-                        <div class="section-content">
-                            <p>Delivering significant and measurable business value through custom business workflow automation and AI applications</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Policy Section -->
-                    <div class="section">
-                        <h2 class="section-title">Policy</h2>
-                        <div class="section-content">
-                            <p>
-                                <span class="highlight policy-text">
-                                    It's win-win-win or it's no deal.
-                                    <span class="policy-tooltip">
-                                        In John's experience, any deal he considers must be a win for all stakeholders. This includes his client's customers, his client, and for himself. Deals that are not a win for all parties eventually fall apart. John is usually able to find ways to achieve such deals and this is why he insists on them.
-                                    </span>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                <!-- Patient Benefits -->
+                <div class="benefit-section patients">
+                    <h2 class="benefit-title patients">
+                        <svg class="benefit-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5M14,17.5H10V16.5C10,15.1 11.1,14 12.5,14C13.9,14 15,15.1 15,16.5M17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8C16.3,8 17,8.7 17,9.5Z"/>
+                        </svg>
+                        For EH Patients
+                    </h2>
+                    <ul class="benefit-list">
+                        <li class="benefit-item"><strong>Always Professional:</strong> Consistent empathy and patience, regardless of time or situation</li>
+                        <li class="benefit-item"><strong>No Bad Days:</strong> AI never has personal stress affecting patient interactions</li>
+                        <li class="benefit-item"><strong>Immediate Response:</strong> 24/7 availability for urgent questions and concerns</li>
+                        <li class="benefit-item"><strong>Emotional Safety:</strong> Non-judgmental environment for sensitive health discussions</li>
+                    </ul>
                 </div>
+            </div>
+            
+            <!-- Case Study -->
+            <div class="case-study">
+                <h2 class="case-study-title">Real-World Success: Ann in Property Management</h2>
+                <p class="case-study-content">
+                    Common Sense Systems deployed "Ann," an AI voice agent, to handle tenant-property manager communications. The results demonstrate the human benefits of AI intermediaries in high-stress service environments.
+                </p>
+                <blockquote class="case-study-quote">
+                    "Since installing Ann, my stress has dropped significantly and my mood has improved. I can focus on solving problems instead of managing emotions."
+                </blockquote>
+                <p class="case-study-attribution">— Susan, Property Manager</p>
+                <p class="case-study-content">
+                    <strong>Healthcare Parallel:</strong> Just as Ann shields property managers from hostile tenant calls while ensuring professional service, voice agents can protect EH staff from difficult patient interactions while maintaining compassionate care standards.
+                </p>
             </div>
         </div>
     </main>
@@ -628,7 +602,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_home/page_home.html" class="nav-button nav-prev" aria-label="Previous page: Home">
+            <a href="../page_challenges_and_trends/page_challenges_and_trends.html" class="nav-button nav-prev" aria-label="Previous page: Challenges and Trends">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -636,15 +610,15 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="2" aria-valuemin="1" aria-valuemax="8">
-                <span class="progress-text">Page 2 of 8</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="6" aria-valuemin="1" aria-valuemax="8">
+                <span class="progress-text">Page 6 of 8</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 25%"></div>
+                    <div class="progress-fill" style="width: 75%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_eh_org_facts/page_eh_org_facts.html" class="nav-button nav-next" aria-label="Next page: EvergreenHealth Facts">
+            <a href="../page_va_architecture/page_va_architecture.html" class="nav-button nav-next" aria-label="Next page: Voice Agent Architecture">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
