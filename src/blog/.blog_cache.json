@@ -1,3 +1,479 @@
 {
-  "_index_last_build": 1755550545.284271
+  "src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md": {
+    "mtime": 1752872272.3083572,
+    "output": "./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html"
+  },
+  "src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md": {
+    "mtime": 1752872272.3217328,
+    "output": "./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html"
+  },
+  "src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md": {
+    "mtime": 1752872272.336743,
+    "output": "./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html"
+  },
+  "src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md": {
+    "mtime": 1752872272.3534002,
+    "output": "./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html"
+  },
+  "src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md": {
+    "mtime": 1752872272.3678565,
+    "output": "./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.html"
+  },
+  "src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md": {
+    "mtime": 1752872272.3942895,
+    "output": "./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html"
+  },
+  "src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md": {
+    "mtime": 1752872272.4099302,
+    "output": "./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md": {
+    "mtime": 1752872272.424479,
+    "output": "./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.html"
+  },
+  "src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md": {
+    "mtime": 1752872272.4403756,
+    "output": "./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.html"
+  },
+  "src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md": {
+    "mtime": 1752872272.4546607,
+    "output": "./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html"
+  },
+  "src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md": {
+    "mtime": 1752872272.4704208,
+    "output": "./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.html"
+  },
+  "src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md": {
+    "mtime": 1752872272.483617,
+    "output": "./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md": {
+    "mtime": 1752872272.5021226,
+    "output": "./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.html"
+  },
+  "src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md": {
+    "mtime": 1752872272.5156274,
+    "output": "./blog/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.html"
+  },
+  "src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.md": {
+    "mtime": 1752872272.5290606,
+    "output": "./blog/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.html"
+  },
+  "src/blog/content/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.md": {
+    "mtime": 1752872272.5472054,
+    "output": "./blog/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.html"
+  },
+  "src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.md": {
+    "mtime": 1752872272.5626657,
+    "output": "./blog/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.html"
+  },
+  "src/blog/content/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.md": {
+    "mtime": 1752872272.5777345,
+    "output": "./blog/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.html"
+  },
+  "src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.md": {
+    "mtime": 1752872272.5964994,
+    "output": "./blog/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.html"
+  },
+  "src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.md": {
+    "mtime": 1752872272.610271,
+    "output": "./blog/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.html"
+  },
+  "src/blog/content/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.md": {
+    "mtime": 1752872272.627155,
+    "output": "./blog/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.html"
+  },
+  "src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md": {
+    "mtime": 1752872272.6435995,
+    "output": "./blog/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.html"
+  },
+  "src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.md": {
+    "mtime": 1752872272.658681,
+    "output": "./blog/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.html"
+  },
+  "src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md": {
+    "mtime": 1752872272.675911,
+    "output": "./blog/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.html"
+  },
+  "src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/index.md": {
+    "mtime": 1752872272.6913292,
+    "output": "./blog/2025/05/the-small-business-owners-playbook-for-ai-success/index.html"
+  },
+  "src/blog/content/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.md": {
+    "mtime": 1752872272.7054057,
+    "output": "./blog/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.html"
+  },
+  "src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md": {
+    "mtime": 1752872272.7221365,
+    "output": "./blog/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.html"
+  },
+  "src/blog/content/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.md": {
+    "mtime": 1752872272.7345243,
+    "output": "./blog/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.html"
+  },
+  "src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md": {
+    "mtime": 1752872272.7496898,
+    "output": "./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html"
+  },
+  "src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md": {
+    "mtime": 1752872272.764402,
+    "output": "./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html"
+  },
+  "src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md": {
+    "mtime": 1752872272.7762802,
+    "output": "./blog/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.html"
+  },
+  "src/blog/content/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.md": {
+    "mtime": 1752872272.789356,
+    "output": "./blog/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.html"
+  },
+  "src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.md": {
+    "mtime": 1752872272.8070855,
+    "output": "./blog/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.html"
+  },
+  "src/blog/content/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.md": {
+    "mtime": 1752872272.8205292,
+    "output": "./blog/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.html"
+  },
+  "src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.md": {
+    "mtime": 1752872272.8329048,
+    "output": "./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.html"
+  },
+  "src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md": {
+    "mtime": 1752872272.8534129,
+    "output": "./blog/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.html"
+  },
+  "src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.md": {
+    "mtime": 1752872272.8678815,
+    "output": "./blog/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.html"
+  },
+  "src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md": {
+    "mtime": 1752872272.8822231,
+    "output": "./blog/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.html"
+  },
+  "src/blog/content/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.md": {
+    "mtime": 1752872272.8997295,
+    "output": "./blog/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.html"
+  },
+  "src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.md": {
+    "mtime": 1752872272.9134965,
+    "output": "./blog/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.html"
+  },
+  "src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.md": {
+    "mtime": 1752872272.9294345,
+    "output": "./blog/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.html"
+  },
+  "src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.md": {
+    "mtime": 1752872272.9450238,
+    "output": "./blog/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.html"
+  },
+  "src/blog/content/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.md": {
+    "mtime": 1752872272.9583516,
+    "output": "./blog/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.html"
+  },
+  "src/blog/content/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.md": {
+    "mtime": 1752872272.971049,
+    "output": "./blog/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.html"
+  },
+  "src/blog/content/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.md": {
+    "mtime": 1752872272.9877796,
+    "output": "./blog/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md": {
+    "mtime": 1752872273.0009756,
+    "output": "./blog/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.html"
+  },
+  "src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.md": {
+    "mtime": 1752872273.016408,
+    "output": "./blog/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.html"
+  },
+  "src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.md": {
+    "mtime": 1752872273.0337784,
+    "output": "./blog/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.html"
+  },
+  "src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.md": {
+    "mtime": 1752872273.0483098,
+    "output": "./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.html"
+  },
+  "src/blog/content/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.md": {
+    "mtime": 1752872273.0656755,
+    "output": "./blog/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.html"
+  },
+  "src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md": {
+    "mtime": 1752872273.1085286,
+    "output": "./blog/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.html"
+  },
+  "src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md": {
+    "mtime": 1752872273.1269135,
+    "output": "./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html"
+  },
+  "src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.md": {
+    "mtime": 1752872273.1384757,
+    "output": "./blog/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.html"
+  },
+  "src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.md": {
+    "mtime": 1752872273.1560094,
+    "output": "./blog/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.html"
+  },
+  "src/blog/content/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.md": {
+    "mtime": 1752872273.1695993,
+    "output": "./blog/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.html"
+  },
+  "src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md": {
+    "mtime": 1752872273.1852424,
+    "output": "./blog/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.html"
+  },
+  "src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.md": {
+    "mtime": 1752872273.2050593,
+    "output": "./blog/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.html"
+  },
+  "src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.md": {
+    "mtime": 1752872273.220296,
+    "output": "./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.html"
+  },
+  "src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.md": {
+    "mtime": 1752872273.233079,
+    "output": "./blog/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.html"
+  },
+  "src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.md": {
+    "mtime": 1752872273.2525945,
+    "output": "./blog/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.html"
+  },
+  "src/blog/content/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.md": {
+    "mtime": 1752872273.2681491,
+    "output": "./blog/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.html"
+  },
+  "src/blog/content/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.md": {
+    "mtime": 1752872273.2833803,
+    "output": "./blog/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.html"
+  },
+  "src/blog/content/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.md": {
+    "mtime": 1752872273.3017747,
+    "output": "./blog/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.html"
+  },
+  "src/blog/content/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.md": {
+    "mtime": 1752872273.3143823,
+    "output": "./blog/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.html"
+  },
+  "src/blog/content/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.md": {
+    "mtime": 1752872273.326943,
+    "output": "./blog/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.html"
+  },
+  "src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.md": {
+    "mtime": 1752872273.3454263,
+    "output": "./blog/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.html"
+  },
+  "src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md": {
+    "mtime": 1752872273.3582222,
+    "output": "./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.html"
+  },
+  "src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md": {
+    "mtime": 1752872273.371735,
+    "output": "./blog/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.html"
+  },
+  "src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md": {
+    "mtime": 1752872273.3911572,
+    "output": "./blog/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.html"
+  },
+  "src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md": {
+    "mtime": 1752872273.4064922,
+    "output": "./blog/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.html"
+  },
+  "src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md": {
+    "mtime": 1752872273.4202025,
+    "output": "./blog/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.html"
+  },
+  "src/blog/content/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.md": {
+    "mtime": 1752872273.439622,
+    "output": "./blog/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.html"
+  },
+  "src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.md": {
+    "mtime": 1752872273.452721,
+    "output": "./blog/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.html"
+  },
+  "src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md": {
+    "mtime": 1752872273.4665573,
+    "output": "./blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.html"
+  },
+  "src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md": {
+    "mtime": 1752872273.48771,
+    "output": "./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html"
+  },
+  "src/blog/content/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.md": {
+    "mtime": 1752872273.4989433,
+    "output": "./blog/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.html"
+  },
+  "src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md": {
+    "mtime": 1752872273.5131662,
+    "output": "./blog/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.html"
+  },
+  "src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md": {
+    "mtime": 1752872273.530828,
+    "output": "./blog/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.html"
+  },
+  "src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.md": {
+    "mtime": 1752872273.5454168,
+    "output": "./blog/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.html"
+  },
+  "src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.md": {
+    "mtime": 1752872273.5594804,
+    "output": "./blog/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.html"
+  },
+  "src/blog/content/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.md": {
+    "mtime": 1752872273.5801587,
+    "output": "./blog/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.html"
+  },
+  "src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.md": {
+    "mtime": 1752872273.5943558,
+    "output": "./blog/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.html"
+  },
+  "src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md": {
+    "mtime": 1752872273.6108413,
+    "output": "./blog/2025/05/the-ultimate-small-business-website-automation-checklist/index.html"
+  },
+  "src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.md": {
+    "mtime": 1752872273.6227257,
+    "output": "./blog/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.html"
+  },
+  "src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.md": {
+    "mtime": 1752872273.6372411,
+    "output": "./blog/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.html"
+  },
+  "src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.md": {
+    "mtime": 1752872273.6525433,
+    "output": "./blog/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.html"
+  },
+  "src/blog/content/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.md": {
+    "mtime": 1752872273.6657822,
+    "output": "./blog/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.html"
+  },
+  "src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.md": {
+    "mtime": 1752872273.6810775,
+    "output": "./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.html"
+  },
+  "src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.md": {
+    "mtime": 1752872273.699226,
+    "output": "./blog/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.html"
+  },
+  "src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.md": {
+    "mtime": 1752872273.7127738,
+    "output": "./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.html"
+  },
+  "src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md": {
+    "mtime": 1752872273.727154,
+    "output": "./blog/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.html"
+  },
+  "src/blog/content/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.md": {
+    "mtime": 1752872273.7436092,
+    "output": "./blog/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.html"
+  },
+  "src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md": {
+    "mtime": 1752872273.7611873,
+    "output": "./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html"
+  },
+  "src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.md": {
+    "mtime": 1752872273.7759829,
+    "output": "./blog/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.md": {
+    "mtime": 1752872273.7899017,
+    "output": "./blog/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.html"
+  },
+  "src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.md": {
+    "mtime": 1752872273.807421,
+    "output": "./blog/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.html"
+  },
+  "src/blog/content/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.md": {
+    "mtime": 1752872273.8213913,
+    "output": "./blog/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.md": {
+    "mtime": 1752872273.83512,
+    "output": "./blog/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.html"
+  },
+  "src/blog/content/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.md": {
+    "mtime": 1752872273.8534253,
+    "output": "./blog/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.html"
+  },
+  "src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md": {
+    "mtime": 1752872273.867155,
+    "output": "./blog/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.html"
+  },
+  "src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.md": {
+    "mtime": 1752872273.8838673,
+    "output": "./blog/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.html"
+  },
+  "src/blog/content/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.md": {
+    "mtime": 1752872273.9020917,
+    "output": "./blog/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.html"
+  },
+  "src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.md": {
+    "mtime": 1752872273.914065,
+    "output": "./blog/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.html"
+  },
+  "src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.md": {
+    "mtime": 1752872273.9272888,
+    "output": "./blog/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.html"
+  },
+  "src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md": {
+    "mtime": 1752872273.9457128,
+    "output": "./blog/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.html"
+  },
+  "src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md": {
+    "mtime": 1752872273.9593363,
+    "output": "./blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.html"
+  },
+  "src/blog/content/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.md": {
+    "mtime": 1752872273.9764092,
+    "output": "./blog/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.html"
+  },
+  "src/blog/content/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.md": {
+    "mtime": 1752872273.9909127,
+    "output": "./blog/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.html"
+  },
+  "src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md": {
+    "mtime": 1752872274.0055184,
+    "output": "./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.html"
+  },
+  "src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md": {
+    "mtime": 1752872274.0247023,
+    "output": "./blog/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.html"
+  },
+  "src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.md": {
+    "mtime": 1752872274.040985,
+    "output": "./blog/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.html"
+  },
+  "src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.md": {
+    "mtime": 1752872274.0545125,
+    "output": "./blog/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.html"
+  },
+  "src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md": {
+    "mtime": 1752872274.0695744,
+    "output": "./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html"
+  },
+  "src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md": {
+    "mtime": 1752872274.0892053,
+    "output": "./blog/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.html"
+  },
+  "src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.md": {
+    "mtime": 1752872274.10327,
+    "output": "./blog/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.html"
+  },
+  "src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md": {
+    "mtime": 1752872274.1165295,
+    "output": "./blog/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.html"
+  },
+  "src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md": {
+    "mtime": 1755362971.934088,
+    "output": "./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html"
+  },
+  "src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md": {
+    "mtime": 1755535462.3557715,
+    "output": "./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html"
+  },
+  "src/blog/content/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.md": {
+    "mtime": 1755549309.8237758,
+    "output": "./blog/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.html"
+  },
+  "_index_last_build": 1755552542.10215
 }
