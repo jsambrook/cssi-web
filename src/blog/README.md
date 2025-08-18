@@ -21,7 +21,7 @@ A simple, static file-based blog system for Common Sense Systems, Inc. This syst
         /2025
           /04
             /post-slug
-              /post-slug.md  # Markdown source
+              /index.md      # Markdown source (always named index.md)
               /assets        # Source assets
 ```
 
@@ -33,9 +33,9 @@ A simple, static file-based blog system for Common Sense Systems, Inc. This syst
    ```
    Example: `src/blog/content/2025/04/ai-transforming-small-business/`
 
-2. Create a Markdown file with the same name as the directory:
+2. Create a Markdown file named `index.md` in the post directory:
    ```
-   src/blog/content/2025/04/ai-transforming-small-business/ai-transforming-small-business.md
+   src/blog/content/2025/04/ai-transforming-small-business/index.md
    ```
 
 3. Add YAML front matter at the top of your Markdown file:

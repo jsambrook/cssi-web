@@ -2,265 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Meet Ann: The Voice Agent Transforming Property Management – Common Sense Systems</title>
+  <title>Meet Ann: The Voice Agent Transforming Property
+Management – Common Sense Systems</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service quality and tenant satisfaction.">
+  <meta name="description" content="Discover how Ann, an intelligent
+voice agent, revolutionized property management by shielding managers
+from tenant hostility while improving service quality and tenant
+satisfaction.">
   <meta name="author" content="Common Sense Systems, Inc.">
   <meta name="date" content="2025-08-16">
-  <meta name="categories" content="Voice Agents, Property Management, AI Solutions">
-  <meta name="tags" content="Voice Agents, Property Management, Customer Service, AI, Business Automation, Stress Reduction">
+  <meta name="categories" content="Voice Agents, Property Management, AI
+Solutions">
+  <meta name="tags" content="Voice Agents, Property Management, Customer
+Service, AI, Business Automation, Stress Reduction">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" />
-  
   <style>
-    /* Enhanced blog post styling inspired by Ann story page */
-    body {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
+    /* Blog post specific styles */
+    .blog-post {
+      margin: 2rem 0;
     }
-    
-    /* Override main container styling for blog posts */
-    .blog-container {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      border-radius: 12px;
-      overflow: hidden;
+
+    .blog-header {
+      margin-bottom: 2rem;
     }
-    
-    /* Enhanced header with gradient */
-    .blog-hero {
-      background: linear-gradient(45deg, #2196F3, #21CBF3);
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      position: relative;
+
+    .blog-title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
-    
-    .blog-hero h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      font-weight: 300;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-      line-height: 1.2;
+
+    .blog-meta {
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
     }
-    
-    .blog-hero .subtitle {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      opacity: 0.9;
-    }
-    
-    .blog-hero .blog-meta {
-      margin-top: 1.5rem;
-      opacity: 0.8;
-      font-size: 0.95rem;
-    }
-    
-    .blog-hero .blog-meta span:not(:last-child):after {
+
+    .blog-meta span:not(:last-child):after {
       content: "•";
       margin: 0 0.5rem;
     }
-    
-    /* Featured image styling */
-    .featured-image {
-      margin: 0;
-      text-align: center;
-    }
-    
-    .featured-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* Enhanced content area */
+
     .blog-content {
-      padding: 3rem;
-      line-height: 1.8;
-      font-size: 1.1rem;
-    }
-    
-    /* Special highlight boxes inspired by Ann story page */
-    .problem-highlight {
-      background: #ffebee;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border-left: 4px solid #f44336;
-      margin: 2rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    .solution-highlight {
-      background: #e8f5e8;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border-left: 4px solid #4caf50;
-      margin: 2rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    .key-insight {
-      background: #fff3e0;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border-left: 4px solid #ff9800;
-      margin: 2rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    /* Benefits grid */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    
-    .benefit-card {
-      background: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .benefit-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-    
-    .benefit-card h3 {
-      color: #2196F3;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-    
-    /* Testimonial styling */
-    .testimonial-box {
-      background: #f8f9fa;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-      margin: 2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #555;
-      position: relative;
-    }
-    
-    .testimonial-box:before {
-      content: '"';
-      font-size: 4rem;
-      position: absolute;
-      top: -10px;
-      left: 1rem;
-      color: #e0e0e0;
-      font-family: serif;
-    }
-    
-    /* Enhanced headings */
-    .blog-content h2 {
-      color: #2196F3;
-      border-bottom: 2px solid #e9ecef;
-      padding-bottom: 0.5rem;
-      margin: 2.5rem 0 1.5rem 0;
-      font-size: 1.8rem;
-    }
-    
-    .blog-content h3 {
-      color: #2196F3;
-      margin: 2rem 0 1rem 0;
-      font-size: 1.4rem;
-    }
-    
-    /* Blog tags with enhanced styling */
-    .blog-tags {
-      margin-top: 3rem;
-      padding: 2rem;
-      border-top: 1px solid #e9ecef;
-      text-align: center;
-    }
-    
-    .blog-tag {
-      background: linear-gradient(45deg, #2196F3, #21CBF3) !important;
-      color: white !important;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      text-decoration: none;
-      display: inline-block;
-      margin-right: 0.75rem;
-      margin-bottom: 0.5rem;
-      transition: transform 0.2s ease;
-    }
-    
-    .blog-tag:hover {
-      transform: translateY(-2px);
-      color: white !important;
-    }
-    
-    /* Navigation between posts */
-    .blog-nav {
-      margin-top: 3rem;
-      padding: 2rem;
-      background: #f8f9fa;
-      border-radius: 8px;
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    
-    .blog-nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--primary-color);
-      font-weight: 500;
-      padding: 0.75rem 1rem;
-      background: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-    
-    .blog-nav-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      text-decoration: none;
+      line-height: 1.7;
     }
 
-    /* Mobile responsive adjustments */
-    @media (max-width: 768px) {
-      .blog-container {
-        margin: 1rem;
-        border-radius: 8px;
-      }
-      
-      .blog-hero {
-        padding: 2rem 1.5rem;
-      }
-      
-      .blog-hero h1 {
-        font-size: 2.2rem;
-      }
-      
-      .blog-content {
-        padding: 2rem 1.5rem;
-      }
-      
-      .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      
-      .blog-nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
+    .blog-tags {
+      margin-top: 2rem;
+    }
+
+    .blog-tag {
+      background-color: #f0f0f0;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: #333;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Code blocks */
+    pre {
+      background-color: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Images */
+    .blog-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+
+    /* Blockquotes */
+    blockquote {
+      border-left: 4px solid #0066cc;
+      padding-left: 1rem;
+      margin-left: 0;
+      color: #333;
+      font-style: italic;
     }
   </style>
 
@@ -270,7 +99,7 @@
     "@type": "BlogPosting",
     "headline": "Meet Ann: The Voice Agent Transforming Property Management",
     "description": "Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service quality and tenant satisfaction.",
-    "image": "https://common-sense.com/blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets/header-image.png",
+    "image": "assets/header-image.png",
     "author": {
       "@type": "Organization",
       "name": "Common Sense Systems, Inc."
@@ -280,15 +109,37 @@
       "name": "Common Sense Systems, Inc.",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://common-sense.com/assets/img/logo.png"
+        "url": "assets/header-image.png"
       }
     },
     "datePublished": "2025-08-16",
-    "dateModified": "2025-08-16",
     "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://common-sense.com/blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html"
-    }
+      "@type": "WebPage"
+    },
+    "keywords": [
+      "Voice Agents",
+      "Property Management",
+      "Customer Service",
+      "AI",
+      "Business Automation",
+      "Stress Reduction",
+      "AI Solutions"
+    ],
+    "articleBody": "Property manager Susan loved her job\u2014until she didn't. What started as rewarding work helping tenants and maintaining beautiful properties had become an emotional nightmare. The constant stream of hostile text messages, aggressive phone calls, and unreasonable demands was taking a devastating toll. This is where Ann stepped in\u2014not just an artificial neural network, but a revolutionary voice agent that would change Susan's life forever. Ann became Susan's shield. Built by Common Sense Systems, this intelligent voice agent serves as the perfect intermediary between frustrated tenants and overwhelmed property managers.",
+    "offers": {
+      "@type": "Offer",
+      "description": "Voice Agent Solutions for property management",
+      "url": "/voice-agents.html"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "(425) 501-9074",
+        "contactType": "customer service",
+        "email": "contact@common-sense.com",
+        "url": "/voice-agents.html"
+      }
+    ]
   }
   </script>
 
@@ -315,125 +166,171 @@
     </div>
   </header>
 
-  <!-- BLOG POST CONTENT IN ENHANCED CONTAINER -->
-  <main class="blog-container">
-    <!-- Hero Header with Gradient -->
-    <div class="blog-hero">
-      <h1>Meet Ann: The Voice Agent Transforming Property Management</h1>
-      <div class="subtitle">Discover how Ann revolutionized property management by shielding managers from tenant hostility while improving service quality</div>
-      <div class="blog-meta">
-        <span class="blog-date">2025-08-16</span>
-        <span class="blog-author">Common Sense Systems, Inc.</span>
-        <span class="blog-categories">Voice Agents, Property Management, AI Solutions</span>
+  <!-- BLOG POST CONTENT -->
+  <main class="container">
+    <article class="blog-post">
+      <div class="blog-header">
+        <h1 class="blog-title">Meet Ann: The Voice Agent Transforming
+Property Management</h1>
+        <div class="blog-meta">
+          <span class="blog-date">2025-08-16</span>
+          <span class="blog-author">Common Sense Systems, Inc.</span>
+                    <span class="blog-categories">Voice Agents, Property
+Management, AI Solutions</span>
+                  </div>
       </div>
-    </div>
 
-    <div class="featured-image">
-      <img src="assets/header-image.png" alt="Meet Ann: The Voice Agent Transforming Property Management">
-    </div>
+            <div class="featured-image">
+        <img src="assets/header-image.png" alt="Meet Ann: The Voice
+Agent Transforming Property Management">
+      </div>
+      
+      <div class="blog-content">
+        <h2 id="the-challenge-that-changed-everything">The Challenge
+        That Changed Everything</h2>
+        <p>Property manager Susan loved her job—until she didn’t. What
+        started as rewarding work helping tenants and maintaining
+        beautiful properties had become an emotional nightmare. The
+        constant stream of hostile text messages, aggressive phone
+        calls, and unreasonable demands was taking a devastating
+        toll.</p>
+        <div class="problem-highlight">
+        <p><strong>The Breaking Point</strong>: Susan found herself
+        dreading her phone buzzing. Tenants could be harsh, demanding,
+        and downright nasty in their communications. The relentless
+        negativity was affecting her mental health, straining
+        relationships with her family, and poisoning her interactions
+        with friends. What should have been manageable work had become
+        an emotional battlefield.</p>
+        </div>
+        <h2 id="enter-ann-more-than-just-technology">Enter Ann: More
+        Than Just Technology</h2>
+        <p>This is where <strong>Ann</strong> stepped in—not just an
+        artificial neural network, but a revolutionary voice agent that
+        would change Susan’s life forever.</p>
+        <div class="solution-highlight">
+        <p><strong>Ann became Susan’s shield.</strong> Built by Common
+        Sense Systems, this intelligent voice agent serves as the
+        perfect intermediary between frustrated tenants and overwhelmed
+        property managers. Available 24/7, Ann handles tenant
+        complaints, questions, and issues with unwavering patience and
+        professionalism.</p>
+        </div>
+        <h2 id="how-ann-works-her-magic">How Ann Works Her Magic</h2>
+        <p>When tenants contact Ann, she doesn’t just deflect
+        problems—she creates actionable solutions:</p>
+        <h3 id="intelligent-problem-processing">Intelligent Problem
+        Processing</h3>
+        <ul>
+        <li><strong>Smart Trouble Tickets</strong>: Ann generates
+        detailed, factual trouble tickets that describe problems clearly
+        and professionally</li>
+        <li><strong>Emotion-Free Documentation</strong>: Every ticket is
+        written calmly and objectively—no insults, no emotional
+        language, just facts</li>
+        <li><strong>AI-Assisted Prioritization</strong>: Additional AI
+        systems can review tickets to suggest the most appropriate
+        course of action</li>
+        </ul>
+        <h3 id="the-human-touch-digitally-delivered">The Human Touch,
+        Digitally Delivered</h3>
+        <p>Ann maintains her composure no matter how unreasonable or
+        aggressive a tenant becomes. She responds with empathy and
+        efficiency, turning hostile interactions into productive
+        problem-solving sessions.</p>
+        <div class="benefits-grid">
+        <section id="for-property-managers" class="benefit-card">
+        <h3>For Property Managers</h3>
+        <p><strong>Reduced stress, improved mental health, and better
+        work-life balance.</strong> Focus on solving problems, not
+        managing emotions. Reclaim your evenings and weekends.</p>
+        </section>
+        <section id="for-tenants" class="benefit-card">
+        <h3>For Tenants</h3>
+        <p><strong>Faster response times and consistent service
+        quality.</strong> Get polite, professional interactions
+        regardless of the hour or complexity of your issue.</p>
+        </section>
+        <section id="for-properties" class="benefit-card">
+        <h3>For Properties</h3>
+        <p><strong>More efficient problem resolution and better
+        documentation.</strong> Improved tenant satisfaction through
+        consistently professional service delivery.</p>
+        </section>
+        </div>
+        <h2 id="the-transformation-real-results">The Transformation:
+        Real Results</h2>
+        <p>The change has been remarkable. Susan reports a dramatic
+        improvement in her quality of life:</p>
+        <div class="testimonial-box">
+        <p><em>“Since installing Ann, my stress has dropped
+        significantly and my mood has improved. Ann is patient and
+        empathetic, even when tenants are not. I can focus on actually
+        solving problems instead of recovering from emotional
+        battles.”</em></p>
+        <p><strong>— Susan, Property Manager</strong></p>
+        </div>
+        <p>Meanwhile, tenants receive <strong>better service than
+        ever</strong>—faster responses, more consistent communication,
+        and quicker problem resolution. It’s a true win-win scenario
+        where technology creates space for more positive human
+        interactions by handling the difficult ones professionally.</p>
+        <h2 id="the-bigger-picture">The Bigger Picture</h2>
+        <p>Ann’s success illustrates something profound about the future
+        of customer service. Technology doesn’t have to replace human
+        connection—it can create conditions where human interactions
+        become more positive and productive.</p>
+        <div class="key-insight">
+        <p><strong>Key Insight</strong>: The best AI solutions don’t
+        eliminate the human element—they protect and enhance it by
+        handling the aspects of work that drain our energy and
+        creativity.</p>
+        </div>
+        <h2 id="ready-to-meet-your-own-ann">Ready to Meet Your Own
+        Ann?</h2>
+        <p>If Susan’s story resonates with your property management
+        challenges, you’re not alone. Common Sense Systems specializes
+        in building customized voice agents tailored to your specific
+        needs and business requirements.</p>
+        <p><strong>What makes our voice agents special:</strong> -
+        Custom-trained on your specific industry and workflows -
+        Seamless integration with your existing systems - 24/7
+        availability with consistent professional demeanor<br />
+        - Intelligent problem categorization and ticket generation -
+        Ongoing optimization based on real usage patterns</p>
+        <p>Whether you’re in property management, customer service,
+        healthcare, or any field requiring frequent client interactions,
+        a customized voice agent could transform your daily experience
+        while improving service quality.</p>
+        <hr />
+        <p><strong>Ready to transform your business operations?</strong>
+        Contact Common Sense Systems today and discover how a
+        personalized voice agent can revolutionize your customer
+        interactions.</p>
+        <p><strong>📞 Call us: (425) 501-9074</strong><br />
+        <strong>✉️ Email: contact@common-sense.com</strong><br />
+        <strong>🌐 Learn more: <a href="/voice-agents.html">Voice Agent
+        Solutions</a></strong></p>
+      </div>
 
-    <article class="blog-content">
-      <h2 id="the-challenge-that-changed-everything">The Challenge That Changed Everything</h2>
-      <p>Property manager Susan loved her job—until she didn't. What started as rewarding work helping tenants and maintaining beautiful properties had become an emotional nightmare. The constant stream of hostile text messages, aggressive phone calls, and unreasonable demands was taking a devastating toll.</p>
-      
-      <div class="problem-highlight">
-      <p><strong>The Breaking Point</strong>: Susan found herself dreading her phone buzzing. Tenants could be harsh, demanding, and downright nasty in their communications. The relentless negativity was affecting her mental health, straining relationships with her family, and poisoning her interactions with friends. What should have been manageable work had become an emotional battlefield.</p>
-      </div>
-      
-      <h2 id="enter-ann-more-than-just-technology">Enter Ann: More Than Just Technology</h2>
-      <p>This is where <strong>Ann</strong> stepped in—not just an artificial neural network, but a revolutionary voice agent that would change Susan's life forever.</p>
-      
-      <div class="solution-highlight">
-      <p><strong>Ann became Susan's shield.</strong> Built by Common Sense Systems, this intelligent voice agent serves as the perfect intermediary between frustrated tenants and overwhelmed property managers. Available 24/7, Ann handles tenant complaints, questions, and issues with unwavering patience and professionalism.</p>
-      </div>
-      
-      <h2 id="how-ann-works-her-magic">How Ann Works Her Magic</h2>
-      <p>When tenants contact Ann, she doesn't just deflect problems—she creates actionable solutions:</p>
-      
-      <h3 id="intelligent-problem-processing">Intelligent Problem Processing</h3>
-      <ul>
-      <li><strong>Smart Trouble Tickets</strong>: Ann generates detailed, factual trouble tickets that describe problems clearly and professionally</li>
-      <li><strong>Emotion-Free Documentation</strong>: Every ticket is written calmly and objectively—no insults, no emotional language, just facts</li>
-      <li><strong>AI-Assisted Prioritization</strong>: Additional AI systems can review tickets to suggest the most appropriate course of action</li>
-      </ul>
-      
-      <h3 id="the-human-touch-digitally-delivered">The Human Touch, Digitally Delivered</h3>
-      <p>Ann maintains her composure no matter how unreasonable or aggressive a tenant becomes. She responds with empathy and efficiency, turning hostile interactions into productive problem-solving sessions.</p>
-      
-      <div class="benefits-grid">
-      <div class="benefit-card">
-      <h3>For Property Managers</h3>
-      <p><strong>Reduced stress, improved mental health, and better work-life balance.</strong> Focus on solving problems, not managing emotions. Reclaim your evenings and weekends.</p>
-      </div>
-      
-      <div class="benefit-card">
-      <h3>For Tenants</h3>
-      <p><strong>Faster response times and consistent service quality.</strong> Get polite, professional interactions regardless of the hour or complexity of your issue.</p>
-      </div>
-      
-      <div class="benefit-card">
-      <h3>For Properties</h3>
-      <p><strong>More efficient problem resolution and better documentation.</strong> Improved tenant satisfaction through consistently professional service delivery.</p>
-      </div>
-      </div>
-      
-      <h2 id="the-transformation-real-results">The Transformation: Real Results</h2>
-      <p>The change has been remarkable. Susan reports a dramatic improvement in her quality of life:</p>
-      
-      <div class="testimonial-box">
-      <p><em>"Since installing Ann, my stress has dropped significantly and my mood has improved. Ann is patient and empathetic, even when tenants are not. I can focus on actually solving problems instead of recovering from emotional battles."</em></p>
-      <p><strong>— Susan, Property Manager</strong></p>
-      </div>
-      
-      <p>Meanwhile, tenants receive <strong>better service than ever</strong>—faster responses, more consistent communication, and quicker problem resolution. It's a true win-win scenario where technology creates space for more positive human interactions by handling the difficult ones professionally.</p>
-      
-      <h2 id="the-bigger-picture">The Bigger Picture</h2>
-      <p>Ann's success illustrates something profound about the future of customer service. Technology doesn't have to replace human connection—it can create conditions where human interactions become more positive and productive.</p>
-      
-      <div class="key-insight">
-      <p><strong>Key Insight</strong>: The best AI solutions don't eliminate the human element—they protect and enhance it by handling the aspects of work that drain our energy and creativity.</p>
-      </div>
-      
-      <h2 id="ready-to-meet-your-own-ann">Ready to Meet Your Own Ann?</h2>
-      <p>If Susan's story resonates with your property management challenges, you're not alone. Common Sense Systems specializes in building customized voice agents tailored to your specific needs and business requirements.</p>
-      
-      <p><strong>What makes our voice agents special:</strong></p>
-      <ul>
-      <li>Custom-trained on your specific industry and workflows</li>
-      <li>Seamless integration with your existing systems</li>
-      <li>24/7 availability with consistent professional demeanor</li>
-      <li>Intelligent problem categorization and ticket generation</li>
-      <li>Ongoing optimization based on real usage patterns</li>
-      </ul>
-      
-      <p>Whether you're in property management, customer service, healthcare, or any field requiring frequent client interactions, a customized voice agent could transform your daily experience while improving service quality.</p>
-      
-      <hr />
-      <p><strong>Ready to transform your business operations?</strong> Contact Common Sense Systems today and discover how a personalized voice agent can revolutionize your customer interactions.</p>
-      
-      <p><strong>📞 Call us: (425) 501-9074</strong><br />
-      <strong>✉️ Email: contact@common-sense.com</strong><br />
-      <strong>🌐 Learn more: <a href="/voice-agents.html">Voice Agent Solutions</a></strong></p>
-    </article>
+            <div class="blog-tags">
+                <a href="/blog/index.html?tags=Voice Agents, Property
+Management, Customer Service, AI, Business Automation, Stress
+Reduction" class="blog-tag">Voice Agents, Property Management, Customer
+Service, AI, Business Automation, Stress Reduction</a>
+              </div>
+          </article>
 
-    <div class="blog-tags">
-      <a href="/blog/index.html?tags=Voice%20Agents" class="blog-tag">Voice Agents</a>
-      <a href="/blog/index.html?tags=Property%20Management" class="blog-tag">Property Management</a>
-      <a href="/blog/index.html?tags=Customer%20Service" class="blog-tag">Customer Service</a>
-      <a href="/blog/index.html?tags=AI" class="blog-tag">AI</a>
-      <a href="/blog/index.html?tags=Business%20Automation" class="blog-tag">Business Automation</a>
-      <a href="/blog/index.html?tags=Stress%20Reduction" class="blog-tag">Stress Reduction</a>
-    </div>
-
-    <!-- Navigation between posts -->
-    <nav class="blog-nav">
-      <a href="/blog/index.html" class="blog-nav-link">
-        ← Back to Blog
-      </a>
-      <a href="/contact.html" class="blog-nav-link">
-        Get Started →
-      </a>
-    </nav>
+    <!-- RELATED POSTS (if available) -->
+    
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Let's discuss how our process automation and AI solutions can help you achieve your business goals.</p>
+        <a href="/contact.html" class="btn">Schedule a Consultation</a>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -455,7 +352,7 @@
         <div class="footer-links">
           <h4>Services</h4>
           <ul>
-            <li><a href="/voice-agents.html">Voice Agents</a></li>
+            <li><a href="/ai-integration.html">AI Integration</a></li>
             <li><a href="/process-automation.html">Process Automation</a></li>
             <li><a href="/revenue-improvement.html">Revenue Improvement</a></li>
             <li><a href="/consulting.html">Consulting</a></li>
@@ -477,7 +374,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript for mobile menu toggle -->
+  <!-- Basic JavaScript for mobile menu toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuToggle = document.querySelector('.menu-toggle');
@@ -491,10 +388,5 @@
       }
     });
   </script>
-
-  <!-- Voice agent -->
-  <elevenlabs-convai agent-id="XRQKG0KZygCOvX9xpVv2"></elevenlabs-convai>
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-
 </body>
 </html>

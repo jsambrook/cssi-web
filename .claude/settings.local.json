@@ -3,7 +3,9 @@
     "allow": [
       "Bash(chmod:*)",
       "Bash(mkdir:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(rm:*)",
+      "Bash(grep:*)"
     ]
   },
   "enableAllProjectMcpServers": false

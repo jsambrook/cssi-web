@@ -819,8 +819,8 @@ def main():
                             content = f.read()
 
                         # Extract metadata from meta tags
-                        title_match = re.search(r'<title>(.*?) – Common Sense Systems</title>', content)
-                        title = title_match.group(1) if title_match else "Untitled"
+                        title_match = re.search(r'<title>(.*?) – Common Sense Systems</title>', content, re.DOTALL)
+                        title = title_match.group(1).strip().replace('\n', ' ') if title_match else "Untitled"
 
                         date_match = re.search(r'<meta name="date" content="(.*?)"', content)
                         date_str = date_match.group(1) if date_match else ""
@@ -838,12 +838,12 @@ def main():
                                 date = datetime.now()
                                 logging.warning(f"Could not determine date for {file_path}, using current date")
 
-                        categories_match = re.search(r'<meta name="categories" content="(.*?)"', content)
-                        categories_str = categories_match.group(1) if categories_match else "Uncategorized"
+                        categories_match = re.search(r'<meta name="categories" content="(.*?)"', content, re.DOTALL)
+                        categories_str = categories_match.group(1).strip().replace('\n', ' ') if categories_match else "Uncategorized"
                         categories = [c.strip() for c in categories_str.split(",")]
 
-                        tags_match = re.search(r'<meta name="tags" content="(.*?)"', content)
-                        tags_str = tags_match.group(1) if tags_match and tags_match.group(1) else ""
+                        tags_match = re.search(r'<meta name="tags" content="(.*?)"', content, re.DOTALL)
+                        tags_str = tags_match.group(1).strip().replace('\n', ' ') if tags_match and tags_match.group(1) else ""
                         tags = [t.strip() for t in tags_str.split(",")] if tags_str else []
 
                         # Get relative path for URLs

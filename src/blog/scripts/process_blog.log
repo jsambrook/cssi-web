@@ -8934,3 +8934,1002 @@ Please fix these errors and run the script again.
 2025-08-18 10:14:57 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
 2025-08-18 10:14:57 - INFO - Generated blog index with 15 posts
 2025-08-18 10:14:57 - INFO - Blog processing completed
+2025-08-18 10:26:27 - INFO - Starting blog processing
+2025-08-18 10:26:27 - DEBUG - Arguments: {'content_root': None, 'output_root': None, 'template_dir': None, 'site_url': None, 'gen_json_ld_path': None, 'post': None, 'year': None, 'month': None, 'rebuild_index': False, 'interactive': False, 'dry_run': True, 'force': False, 'cache_file': None, 'log_file': None, 'log_level': 'DEBUG'}
+2025-08-18 10:26:27 - DEBUG - Loaded cache with 13 entries
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.md
+2025-08-18 10:26:27 - DEBUG - File modified since last build, needs rebuild: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-18 10:26:27 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 10:26:27 - INFO - DRY RUN: Would process 118 out of 118 posts:
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-18 10:26:27 - INFO -   - src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 10:26:27 - INFO - No changes were made (dry run)
+2025-08-18 10:26:27 - INFO - Blog processing completed
+2025-08-18 10:26:53 - INFO - Starting blog processing
+2025-08-18 10:26:53 - DEBUG - Arguments: {'content_root': None, 'output_root': None, 'template_dir': None, 'site_url': None, 'gen_json_ld_path': None, 'post': '10-ai-quick-wins-every-small-business-can-implement-today', 'year': None, 'month': None, 'rebuild_index': False, 'interactive': False, 'dry_run': False, 'force': False, 'cache_file': None, 'log_file': None, 'log_level': 'DEBUG'}
+2025-08-18 10:26:53 - DEBUG - Loaded cache with 13 entries
+2025-08-18 10:26:53 - INFO - Processing posts matching: 10-ai-quick-wins-every-small-business-can-implement-today
+2025-08-18 10:26:53 - DEBUG - File not in cache, needs rebuild: src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:26:53 - INFO - Processing: src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:26:53 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:27:02 - DEBUG - JSON-LD generated: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp_yqp2pa7.html
+2025-08-18 10:27:02 - DEBUG - PANDOC COMMAND: pandoc --include-in-header=/var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp_yqp2pa7.html src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md -o ./blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.html --standalone --template=./src/blog/templates/blog_template.html --css=/css/styles.css --highlight-style=pygments --mathjax --metadata author=Common Sense Systems, Inc. --metadata categories=AI for Business, Small Business Technology --metadata date=2025-05-22 --metadata featuredImage=assets/header-image.png --metadata status=published --metadata summary=Discover practical AI applications that deliver immediate value to your small business without requiring extensive technical expertise or large investments. --metadata tags=AI, Small Business, Productivity Tools, Cost Reduction, Technology Adoption, Efficiency --metadata title=10 AI Quick Wins Every Small Business Can Implement Today --metadata year=2025 --metadata month=05 --metadata slug=10-ai-quick-wins-every-small-business-can-implement-today --metadata url=/blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/ --metadata html_path=/blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.html --metadata categories_display=AI for Business, Small Business Technology --metadata tags_display=AI, Small Business, Productivity Tools, Cost Reduction, Technology Adoption, Efficiency --metadata source_file=src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:27:02 - INFO - Generated HTML: ./blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.html
+2025-08-18 10:27:02 - INFO - Copied assets: src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/assets -> ./blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/assets
+2025-08-18 10:27:02 - DEBUG - Updated cache for src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:27:02 - DEBUG - Cleaned up temporary file: /var/folders/yz/pszs8ry96s586njr72bdk5f00000gn/T/tmp_yqp2pa7.html
+2025-08-18 10:27:02 - INFO - Rebuilding blog index
+2025-08-18 10:27:02 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-18 10:27:02 - INFO - Generated blog index with 1 posts
+2025-08-18 10:27:02 - DEBUG - Saved cache with 14 entries
+2025-08-18 10:27:02 - INFO - Blog processing completed
+2025-08-18 10:27:13 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 10:27:13 - INFO - Starting blog processing
+2025-08-18 10:27:13 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-18 10:27:13 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-18 10:27:21 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-08-18 10:27:21 - INFO - Copied assets: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets -> ./blog/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-08-18 10:27:21 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-18 10:27:21 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-18 10:27:29 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-08-18 10:27:29 - INFO - Copied assets: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets -> ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-08-18 10:27:29 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-18 10:27:29 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-18 10:27:38 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-08-18 10:27:38 - INFO - Copied assets: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets -> ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-08-18 10:27:38 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-18 10:27:38 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-18 10:27:45 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-08-18 10:27:45 - INFO - Copied assets: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets -> ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-08-18 10:27:45 - INFO - Processing: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-18 10:27:45 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-18 10:27:52 - INFO - Generated HTML: ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.html
+2025-08-18 10:27:52 - INFO - Copied assets: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets -> ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets
+2025-08-18 10:27:52 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-18 10:27:52 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-18 10:28:04 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-08-18 10:28:04 - INFO - Copied assets: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets -> ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-08-18 10:28:04 - INFO - Processing: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-18 10:28:04 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-18 10:28:12 - INFO - Generated HTML: ./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.html
+2025-08-18 10:28:12 - INFO - Copied assets: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/assets -> ./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/assets
+2025-08-18 10:28:12 - INFO - Processing: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-18 10:28:12 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-18 10:28:22 - INFO - Generated HTML: ./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.html
+2025-08-18 10:28:22 - INFO - Copied assets: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/assets -> ./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/assets
+2025-08-18 10:28:22 - INFO - Processing: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-18 10:28:22 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-18 10:28:29 - INFO - Generated HTML: ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.html
+2025-08-18 10:28:29 - INFO - Copied assets: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/assets -> ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/assets
+2025-08-18 10:28:29 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-18 10:28:29 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-18 10:28:37 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-08-18 10:28:37 - INFO - Copied assets: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets -> ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-08-18 10:28:37 - INFO - Processing: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-18 10:28:37 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-18 10:28:46 - INFO - Generated HTML: ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.html
+2025-08-18 10:28:46 - INFO - Copied assets: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets -> ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets
+2025-08-18 10:28:46 - INFO - Processing: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-18 10:28:46 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-18 10:28:53 - INFO - Generated HTML: ./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.html
+2025-08-18 10:28:53 - INFO - Copied assets: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/assets -> ./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/assets
+2025-08-18 10:28:53 - INFO - Processing: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-18 10:28:53 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-18 10:29:01 - INFO - Generated HTML: ./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.html
+2025-08-18 10:29:01 - INFO - Copied assets: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/assets -> ./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/assets
+2025-08-18 10:29:01 - INFO - Processing: src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-18 10:29:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-18 10:29:09 - INFO - Generated HTML: ./blog/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.html
+2025-08-18 10:29:09 - INFO - Copied assets: src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/assets -> ./blog/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/assets
+2025-08-18 10:29:09 - INFO - Processing: src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.md
+2025-08-18 10:29:09 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.md
+2025-08-18 10:29:17 - INFO - Generated HTML: ./blog/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.html
+2025-08-18 10:29:17 - INFO - Copied assets: src/blog/content/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/assets -> ./blog/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/assets
+2025-08-18 10:29:17 - INFO - Processing: src/blog/content/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.md
+2025-08-18 10:29:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.md
+2025-08-18 10:29:25 - INFO - Generated HTML: ./blog/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.html
+2025-08-18 10:29:25 - INFO - Copied assets: src/blog/content/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/assets -> ./blog/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/assets
+2025-08-18 10:29:25 - INFO - Processing: src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.md
+2025-08-18 10:29:25 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.md
+2025-08-18 10:29:37 - INFO - Generated HTML: ./blog/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.html
+2025-08-18 10:29:37 - INFO - Copied assets: src/blog/content/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/assets -> ./blog/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/assets
+2025-08-18 10:29:37 - INFO - Processing: src/blog/content/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.md
+2025-08-18 10:29:37 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.md
+2025-08-18 10:29:45 - INFO - Generated HTML: ./blog/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.html
+2025-08-18 10:29:45 - INFO - Copied assets: src/blog/content/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/assets -> ./blog/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/assets
+2025-08-18 10:29:45 - INFO - Processing: src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.md
+2025-08-18 10:29:45 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.md
+2025-08-18 10:29:53 - INFO - Generated HTML: ./blog/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.html
+2025-08-18 10:29:53 - INFO - Copied assets: src/blog/content/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/assets -> ./blog/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/assets
+2025-08-18 10:29:53 - INFO - Processing: src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.md
+2025-08-18 10:29:53 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.md
+2025-08-18 10:30:00 - INFO - Generated HTML: ./blog/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.html
+2025-08-18 10:30:00 - INFO - Copied assets: src/blog/content/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/assets -> ./blog/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/assets
+2025-08-18 10:30:00 - INFO - Processing: src/blog/content/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.md
+2025-08-18 10:30:00 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.md
+2025-08-18 10:30:14 - INFO - Generated HTML: ./blog/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.html
+2025-08-18 10:30:14 - INFO - Copied assets: src/blog/content/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/assets -> ./blog/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/assets
+2025-08-18 10:30:14 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-08-18 10:30:14 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.md
+2025-08-18 10:30:22 - INFO - Generated HTML: ./blog/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.html
+2025-08-18 10:30:22 - INFO - Copied assets: src/blog/content/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/assets -> ./blog/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/assets
+2025-08-18 10:30:22 - INFO - Processing: src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.md
+2025-08-18 10:30:22 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.md
+2025-08-18 10:30:29 - INFO - Generated HTML: ./blog/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.html
+2025-08-18 10:30:29 - INFO - Copied assets: src/blog/content/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/assets -> ./blog/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/assets
+2025-08-18 10:30:29 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-08-18 10:30:29 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.md
+2025-08-18 10:30:36 - INFO - Generated HTML: ./blog/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.html
+2025-08-18 10:30:36 - INFO - Copied assets: src/blog/content/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/assets -> ./blog/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/assets
+2025-08-18 10:30:36 - INFO - Processing: src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/index.md
+2025-08-18 10:30:36 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/index.md
+2025-08-18 10:30:44 - INFO - Generated HTML: ./blog/2025/05/the-small-business-owners-playbook-for-ai-success/index.html
+2025-08-18 10:30:44 - INFO - Copied assets: src/blog/content/2025/05/the-small-business-owners-playbook-for-ai-success/assets -> ./blog/2025/05/the-small-business-owners-playbook-for-ai-success/assets
+2025-08-18 10:30:44 - INFO - Processing: src/blog/content/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.md
+2025-08-18 10:30:44 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.md
+2025-08-18 10:30:54 - INFO - Generated HTML: ./blog/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.html
+2025-08-18 10:30:54 - INFO - Copied assets: src/blog/content/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/assets -> ./blog/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/assets
+2025-08-18 10:30:54 - INFO - Processing: src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-08-18 10:30:54 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.md
+2025-08-18 10:31:01 - INFO - Generated HTML: ./blog/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.html
+2025-08-18 10:31:01 - INFO - Copied assets: src/blog/content/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/assets -> ./blog/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/assets
+2025-08-18 10:31:01 - INFO - Processing: src/blog/content/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.md
+2025-08-18 10:31:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.md
+2025-08-18 10:31:09 - INFO - Generated HTML: ./blog/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.html
+2025-08-18 10:31:09 - INFO - Copied assets: src/blog/content/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/assets -> ./blog/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/assets
+2025-08-18 10:31:09 - INFO - Processing: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-08-18 10:31:09 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.md
+2025-08-18 10:31:17 - INFO - Generated HTML: ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html
+2025-08-18 10:31:17 - INFO - Copied assets: src/blog/content/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets -> ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/assets
+2025-08-18 10:31:17 - INFO - Processing: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-08-18 10:31:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/index.md
+2025-08-18 10:31:26 - INFO - Generated HTML: ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html
+2025-08-18 10:31:26 - INFO - Copied assets: src/blog/content/2025/05/unleash-your-business-automation-potential-with-n8n/assets -> ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/assets
+2025-08-18 10:31:26 - INFO - Processing: src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-08-18 10:31:26 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.md
+2025-08-18 10:31:34 - INFO - Generated HTML: ./blog/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.html
+2025-08-18 10:31:34 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/assets -> ./blog/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/assets
+2025-08-18 10:31:34 - INFO - Processing: src/blog/content/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.md
+2025-08-18 10:31:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.md
+2025-08-18 10:31:42 - INFO - Generated HTML: ./blog/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.html
+2025-08-18 10:31:42 - INFO - Copied assets: src/blog/content/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/assets -> ./blog/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/assets
+2025-08-18 10:31:42 - INFO - Processing: src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.md
+2025-08-18 10:31:42 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.md
+2025-08-18 10:31:50 - INFO - Generated HTML: ./blog/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.html
+2025-08-18 10:31:50 - INFO - Copied assets: src/blog/content/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/assets -> ./blog/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/assets
+2025-08-18 10:31:50 - INFO - Processing: src/blog/content/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.md
+2025-08-18 10:31:50 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.md
+2025-08-18 10:31:57 - INFO - Generated HTML: ./blog/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.html
+2025-08-18 10:31:57 - INFO - Copied assets: src/blog/content/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/assets -> ./blog/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/assets
+2025-08-18 10:31:57 - INFO - Processing: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.md
+2025-08-18 10:31:57 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.md
+2025-08-18 10:32:06 - INFO - Generated HTML: ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.html
+2025-08-18 10:32:06 - INFO - Copied assets: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/assets -> ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/assets
+2025-08-18 10:32:06 - INFO - Processing: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-08-18 10:32:06 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.md
+2025-08-18 10:32:16 - INFO - Generated HTML: ./blog/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.html
+2025-08-18 10:32:16 - INFO - Copied assets: src/blog/content/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/assets -> ./blog/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/assets
+2025-08-18 10:32:16 - INFO - Processing: src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.md
+2025-08-18 10:32:16 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.md
+2025-08-18 10:32:27 - INFO - Generated HTML: ./blog/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.html
+2025-08-18 10:32:27 - INFO - Copied assets: src/blog/content/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/assets -> ./blog/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/assets
+2025-08-18 10:32:27 - INFO - Processing: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-08-18 10:32:27 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.md
+2025-08-18 10:32:34 - INFO - Generated HTML: ./blog/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.html
+2025-08-18 10:32:34 - INFO - Copied assets: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/assets -> ./blog/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/assets
+2025-08-18 10:32:34 - INFO - Processing: src/blog/content/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.md
+2025-08-18 10:32:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.md
+2025-08-18 10:32:45 - INFO - Generated HTML: ./blog/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.html
+2025-08-18 10:32:45 - INFO - Copied assets: src/blog/content/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/assets -> ./blog/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/assets
+2025-08-18 10:32:45 - INFO - Processing: src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.md
+2025-08-18 10:32:45 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.md
+2025-08-18 10:32:52 - INFO - Generated HTML: ./blog/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.html
+2025-08-18 10:32:52 - INFO - Copied assets: src/blog/content/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/assets -> ./blog/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/assets
+2025-08-18 10:32:52 - INFO - Processing: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.md
+2025-08-18 10:32:52 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.md
+2025-08-18 10:33:01 - INFO - Generated HTML: ./blog/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.html
+2025-08-18 10:33:01 - INFO - Copied assets: src/blog/content/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/assets -> ./blog/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/assets
+2025-08-18 10:33:01 - INFO - Processing: src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.md
+2025-08-18 10:33:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.md
+2025-08-18 10:33:09 - INFO - Generated HTML: ./blog/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.html
+2025-08-18 10:33:09 - INFO - Copied assets: src/blog/content/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/assets -> ./blog/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/assets
+2025-08-18 10:33:09 - INFO - Processing: src/blog/content/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.md
+2025-08-18 10:33:09 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.md
+2025-08-18 10:33:17 - INFO - Generated HTML: ./blog/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.html
+2025-08-18 10:33:17 - INFO - Copied assets: src/blog/content/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/assets -> ./blog/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/assets
+2025-08-18 10:33:17 - INFO - Processing: src/blog/content/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.md
+2025-08-18 10:33:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.md
+2025-08-18 10:33:25 - INFO - Generated HTML: ./blog/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.html
+2025-08-18 10:33:25 - INFO - Copied assets: src/blog/content/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/assets -> ./blog/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/assets
+2025-08-18 10:33:25 - INFO - Processing: src/blog/content/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.md
+2025-08-18 10:33:25 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.md
+2025-08-18 10:33:34 - INFO - Generated HTML: ./blog/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.html
+2025-08-18 10:33:34 - INFO - Copied assets: src/blog/content/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/assets -> ./blog/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/assets
+2025-08-18 10:33:34 - INFO - Processing: src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md
+2025-08-18 10:33:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.md
+2025-08-18 10:33:41 - INFO - Generated HTML: ./blog/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.html
+2025-08-18 10:33:41 - INFO - Copied assets: src/blog/content/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/assets -> ./blog/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/assets
+2025-08-18 10:33:41 - INFO - Processing: src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.md
+2025-08-18 10:33:41 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.md
+2025-08-18 10:33:51 - INFO - Generated HTML: ./blog/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.html
+2025-08-18 10:33:51 - INFO - Copied assets: src/blog/content/2025/05/ai-for-small-business-busting-the-too-expensive-myth/assets -> ./blog/2025/05/ai-for-small-business-busting-the-too-expensive-myth/assets
+2025-08-18 10:33:51 - INFO - Processing: src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.md
+2025-08-18 10:33:51 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.md
+2025-08-18 10:34:01 - INFO - Generated HTML: ./blog/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.html
+2025-08-18 10:34:01 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/assets -> ./blog/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/assets
+2025-08-18 10:34:01 - INFO - Processing: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.md
+2025-08-18 10:34:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.md
+2025-08-18 10:34:08 - INFO - Generated HTML: ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.html
+2025-08-18 10:34:08 - INFO - Copied assets: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/assets -> ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/assets
+2025-08-18 10:34:08 - INFO - Processing: src/blog/content/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.md
+2025-08-18 10:34:08 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.md
+2025-08-18 10:34:17 - INFO - Generated HTML: ./blog/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.html
+2025-08-18 10:34:17 - INFO - Copied assets: src/blog/content/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/assets -> ./blog/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/assets
+2025-08-18 10:34:17 - INFO - Processing: src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md
+2025-08-18 10:34:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.md
+2025-08-18 10:34:24 - INFO - Generated HTML: ./blog/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.html
+2025-08-18 10:34:24 - INFO - Copied assets: src/blog/content/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/assets -> ./blog/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/assets
+2025-08-18 10:34:24 - INFO - Processing: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-08-18 10:34:24 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.md
+2025-08-18 10:34:33 - INFO - Generated HTML: ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html
+2025-08-18 10:34:33 - INFO - Copied assets: src/blog/content/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets -> ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/assets
+2025-08-18 10:34:33 - INFO - Processing: src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.md
+2025-08-18 10:34:33 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.md
+2025-08-18 10:34:41 - INFO - Generated HTML: ./blog/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.html
+2025-08-18 10:34:41 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/assets -> ./blog/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/assets
+2025-08-18 10:34:41 - INFO - Processing: src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.md
+2025-08-18 10:34:41 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.md
+2025-08-18 10:34:49 - INFO - Generated HTML: ./blog/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.html
+2025-08-18 10:34:49 - INFO - Copied assets: src/blog/content/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/assets -> ./blog/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/assets
+2025-08-18 10:34:49 - INFO - Processing: src/blog/content/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.md
+2025-08-18 10:34:49 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.md
+2025-08-18 10:34:59 - INFO - Generated HTML: ./blog/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.html
+2025-08-18 10:34:59 - INFO - Copied assets: src/blog/content/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/assets -> ./blog/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/assets
+2025-08-18 10:34:59 - INFO - Processing: src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-08-18 10:34:59 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.md
+2025-08-18 10:35:05 - INFO - Generated HTML: ./blog/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.html
+2025-08-18 10:35:05 - INFO - Copied assets: src/blog/content/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/assets -> ./blog/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/assets
+2025-08-18 10:35:05 - INFO - Processing: src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.md
+2025-08-18 10:35:05 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.md
+2025-08-18 10:35:14 - INFO - Generated HTML: ./blog/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.html
+2025-08-18 10:35:14 - INFO - Copied assets: src/blog/content/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/assets -> ./blog/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/assets
+2025-08-18 10:35:14 - INFO - Processing: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.md
+2025-08-18 10:35:14 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.md
+2025-08-18 10:35:23 - INFO - Generated HTML: ./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.html
+2025-08-18 10:35:23 - INFO - Copied assets: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/assets -> ./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/assets
+2025-08-18 10:35:23 - INFO - Processing: src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.md
+2025-08-18 10:35:23 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.md
+2025-08-18 10:35:33 - INFO - Generated HTML: ./blog/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.html
+2025-08-18 10:35:33 - INFO - Copied assets: src/blog/content/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/assets -> ./blog/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/assets
+2025-08-18 10:35:33 - INFO - Processing: src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.md
+2025-08-18 10:35:33 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.md
+2025-08-18 10:35:40 - INFO - Generated HTML: ./blog/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.html
+2025-08-18 10:35:40 - INFO - Copied assets: src/blog/content/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/assets -> ./blog/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/assets
+2025-08-18 10:35:40 - INFO - Processing: src/blog/content/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.md
+2025-08-18 10:35:40 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.md
+2025-08-18 10:35:48 - INFO - Generated HTML: ./blog/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.html
+2025-08-18 10:35:48 - INFO - Copied assets: src/blog/content/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/assets -> ./blog/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/assets
+2025-08-18 10:35:48 - INFO - Processing: src/blog/content/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.md
+2025-08-18 10:35:48 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.md
+2025-08-18 10:35:56 - INFO - Generated HTML: ./blog/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.html
+2025-08-18 10:35:56 - INFO - Copied assets: src/blog/content/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/assets -> ./blog/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/assets
+2025-08-18 10:35:56 - INFO - Processing: src/blog/content/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.md
+2025-08-18 10:35:56 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.md
+2025-08-18 10:36:06 - INFO - Generated HTML: ./blog/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.html
+2025-08-18 10:36:06 - INFO - Copied assets: src/blog/content/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/assets -> ./blog/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/assets
+2025-08-18 10:36:06 - INFO - Processing: src/blog/content/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.md
+2025-08-18 10:36:06 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.md
+2025-08-18 10:36:17 - INFO - Generated HTML: ./blog/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.html
+2025-08-18 10:36:17 - INFO - Copied assets: src/blog/content/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/assets -> ./blog/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/assets
+2025-08-18 10:36:17 - INFO - Processing: src/blog/content/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.md
+2025-08-18 10:36:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.md
+2025-08-18 10:36:25 - INFO - Generated HTML: ./blog/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.html
+2025-08-18 10:36:25 - INFO - Copied assets: src/blog/content/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/assets -> ./blog/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/assets
+2025-08-18 10:36:25 - INFO - Processing: src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.md
+2025-08-18 10:36:25 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.md
+2025-08-18 10:36:33 - INFO - Generated HTML: ./blog/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.html
+2025-08-18 10:36:33 - INFO - Copied assets: src/blog/content/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/assets -> ./blog/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/assets
+2025-08-18 10:36:33 - INFO - Processing: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-08-18 10:36:33 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.md
+2025-08-18 10:36:40 - INFO - Generated HTML: ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.html
+2025-08-18 10:36:40 - INFO - Copied assets: src/blog/content/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/assets -> ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/assets
+2025-08-18 10:36:40 - INFO - Processing: src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md
+2025-08-18 10:36:40 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.md
+2025-08-18 10:36:51 - INFO - Generated HTML: ./blog/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.html
+2025-08-18 10:36:51 - INFO - Copied assets: src/blog/content/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/assets -> ./blog/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/assets
+2025-08-18 10:36:51 - INFO - Processing: src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md
+2025-08-18 10:36:51 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.md
+2025-08-18 10:36:57 - INFO - Generated HTML: ./blog/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.html
+2025-08-18 10:36:57 - INFO - Copied assets: src/blog/content/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/assets -> ./blog/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/assets
+2025-08-18 10:36:57 - INFO - Processing: src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-08-18 10:36:57 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.md
+2025-08-18 10:37:07 - INFO - Generated HTML: ./blog/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.html
+2025-08-18 10:37:07 - INFO - Copied assets: src/blog/content/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/assets -> ./blog/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/assets
+2025-08-18 10:37:07 - INFO - Processing: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-08-18 10:37:07 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.md
+2025-08-18 10:37:15 - INFO - Generated HTML: ./blog/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.html
+2025-08-18 10:37:15 - INFO - Copied assets: src/blog/content/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/assets -> ./blog/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/assets
+2025-08-18 10:37:15 - INFO - Processing: src/blog/content/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.md
+2025-08-18 10:37:15 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.md
+2025-08-18 10:37:25 - INFO - Generated HTML: ./blog/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.html
+2025-08-18 10:37:25 - INFO - Copied assets: src/blog/content/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/assets -> ./blog/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/assets
+2025-08-18 10:37:25 - INFO - Processing: src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.md
+2025-08-18 10:37:25 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.md
+2025-08-18 10:37:35 - INFO - Generated HTML: ./blog/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.html
+2025-08-18 10:37:35 - INFO - Copied assets: src/blog/content/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/assets -> ./blog/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/assets
+2025-08-18 10:37:35 - INFO - Processing: src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:37:35 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.md
+2025-08-18 10:37:43 - INFO - Generated HTML: ./blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.html
+2025-08-18 10:37:43 - INFO - Assets up to date, skipping: src/blog/content/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/assets
+2025-08-18 10:37:43 - INFO - Processing: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-08-18 10:37:43 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.md
+2025-08-18 10:37:51 - INFO - Generated HTML: ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html
+2025-08-18 10:37:51 - INFO - Copied assets: src/blog/content/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets -> ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/assets
+2025-08-18 10:37:51 - INFO - Processing: src/blog/content/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.md
+2025-08-18 10:37:51 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.md
+2025-08-18 10:38:00 - INFO - Generated HTML: ./blog/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.html
+2025-08-18 10:38:00 - INFO - Copied assets: src/blog/content/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/assets -> ./blog/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/assets
+2025-08-18 10:38:00 - INFO - Processing: src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md
+2025-08-18 10:38:00 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.md
+2025-08-18 10:38:08 - INFO - Generated HTML: ./blog/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.html
+2025-08-18 10:38:08 - INFO - Copied assets: src/blog/content/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/assets -> ./blog/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/assets
+2025-08-18 10:38:08 - INFO - Processing: src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md
+2025-08-18 10:38:08 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.md
+2025-08-18 10:38:19 - INFO - Generated HTML: ./blog/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.html
+2025-08-18 10:38:19 - INFO - Copied assets: src/blog/content/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/assets -> ./blog/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/assets
+2025-08-18 10:38:19 - INFO - Processing: src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.md
+2025-08-18 10:38:19 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.md
+2025-08-18 10:38:29 - INFO - Generated HTML: ./blog/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.html
+2025-08-18 10:38:29 - INFO - Copied assets: src/blog/content/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/assets -> ./blog/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/assets
+2025-08-18 10:38:29 - INFO - Processing: src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.md
+2025-08-18 10:38:29 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.md
+2025-08-18 10:38:39 - INFO - Generated HTML: ./blog/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.html
+2025-08-18 10:38:39 - INFO - Copied assets: src/blog/content/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/assets -> ./blog/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/assets
+2025-08-18 10:38:39 - INFO - Processing: src/blog/content/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.md
+2025-08-18 10:38:39 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.md
+2025-08-18 10:38:56 - INFO - Generated HTML: ./blog/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.html
+2025-08-18 10:38:56 - INFO - Copied assets: src/blog/content/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/assets -> ./blog/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/assets
+2025-08-18 10:38:56 - INFO - Processing: src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.md
+2025-08-18 10:38:56 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.md
+2025-08-18 10:39:05 - INFO - Generated HTML: ./blog/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.html
+2025-08-18 10:39:05 - INFO - Copied assets: src/blog/content/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/assets -> ./blog/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/assets
+2025-08-18 10:39:05 - INFO - Processing: src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-08-18 10:39:05 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/index.md
+2025-08-18 10:39:17 - INFO - Generated HTML: ./blog/2025/05/the-ultimate-small-business-website-automation-checklist/index.html
+2025-08-18 10:39:17 - INFO - Copied assets: src/blog/content/2025/05/the-ultimate-small-business-website-automation-checklist/assets -> ./blog/2025/05/the-ultimate-small-business-website-automation-checklist/assets
+2025-08-18 10:39:17 - INFO - Processing: src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.md
+2025-08-18 10:39:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.md
+2025-08-18 10:39:26 - INFO - Generated HTML: ./blog/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.html
+2025-08-18 10:39:26 - INFO - Copied assets: src/blog/content/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/assets -> ./blog/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/assets
+2025-08-18 10:39:26 - INFO - Processing: src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.md
+2025-08-18 10:39:26 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.md
+2025-08-18 10:39:34 - INFO - Generated HTML: ./blog/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.html
+2025-08-18 10:39:34 - INFO - Copied assets: src/blog/content/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/assets -> ./blog/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/assets
+2025-08-18 10:39:34 - INFO - Processing: src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.md
+2025-08-18 10:39:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.md
+2025-08-18 10:39:40 - INFO - Generated HTML: ./blog/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.html
+2025-08-18 10:39:40 - INFO - Copied assets: src/blog/content/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/assets -> ./blog/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/assets
+2025-08-18 10:39:40 - INFO - Processing: src/blog/content/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.md
+2025-08-18 10:39:40 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.md
+2025-08-18 10:39:48 - INFO - Generated HTML: ./blog/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.html
+2025-08-18 10:39:48 - INFO - Copied assets: src/blog/content/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/assets -> ./blog/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/assets
+2025-08-18 10:39:48 - INFO - Processing: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.md
+2025-08-18 10:39:48 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.md
+2025-08-18 10:39:58 - INFO - Generated HTML: ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.html
+2025-08-18 10:39:58 - INFO - Copied assets: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/assets -> ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/assets
+2025-08-18 10:39:58 - INFO - Processing: src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.md
+2025-08-18 10:39:58 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.md
+2025-08-18 10:40:06 - INFO - Generated HTML: ./blog/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.html
+2025-08-18 10:40:06 - INFO - Copied assets: src/blog/content/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/assets -> ./blog/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/assets
+2025-08-18 10:40:06 - INFO - Processing: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.md
+2025-08-18 10:40:06 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.md
+2025-08-18 10:40:13 - INFO - Generated HTML: ./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.html
+2025-08-18 10:40:13 - INFO - Copied assets: src/blog/content/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/assets -> ./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/assets
+2025-08-18 10:40:13 - INFO - Processing: src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-08-18 10:40:13 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.md
+2025-08-18 10:40:20 - INFO - Generated HTML: ./blog/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.html
+2025-08-18 10:40:20 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/assets -> ./blog/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/assets
+2025-08-18 10:40:20 - INFO - Processing: src/blog/content/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.md
+2025-08-18 10:40:20 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.md
+2025-08-18 10:40:28 - INFO - Generated HTML: ./blog/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.html
+2025-08-18 10:40:28 - INFO - Copied assets: src/blog/content/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/assets -> ./blog/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/assets
+2025-08-18 10:40:28 - INFO - Processing: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-08-18 10:40:28 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.md
+2025-08-18 10:40:37 - INFO - Generated HTML: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-08-18 10:40:37 - INFO - Copied assets: src/blog/content/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets -> ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/assets
+2025-08-18 10:40:37 - INFO - Processing: src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.md
+2025-08-18 10:40:37 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.md
+2025-08-18 10:40:47 - INFO - Generated HTML: ./blog/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.html
+2025-08-18 10:40:47 - INFO - Copied assets: src/blog/content/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/assets -> ./blog/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/assets
+2025-08-18 10:40:47 - INFO - Processing: src/blog/content/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.md
+2025-08-18 10:40:47 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.md
+2025-08-18 10:40:54 - INFO - Generated HTML: ./blog/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.html
+2025-08-18 10:40:54 - INFO - Copied assets: src/blog/content/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/assets -> ./blog/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/assets
+2025-08-18 10:40:54 - INFO - Processing: src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.md
+2025-08-18 10:40:54 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.md
+2025-08-18 10:41:03 - INFO - Generated HTML: ./blog/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.html
+2025-08-18 10:41:03 - INFO - Copied assets: src/blog/content/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/assets -> ./blog/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/assets
+2025-08-18 10:41:03 - INFO - Processing: src/blog/content/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.md
+2025-08-18 10:41:03 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.md
+2025-08-18 10:41:11 - INFO - Generated HTML: ./blog/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.html
+2025-08-18 10:41:11 - INFO - Copied assets: src/blog/content/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/assets -> ./blog/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/assets
+2025-08-18 10:41:11 - INFO - Processing: src/blog/content/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.md
+2025-08-18 10:41:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.md
+2025-08-18 10:41:21 - INFO - Generated HTML: ./blog/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.html
+2025-08-18 10:41:21 - INFO - Copied assets: src/blog/content/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/assets -> ./blog/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/assets
+2025-08-18 10:41:21 - INFO - Processing: src/blog/content/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.md
+2025-08-18 10:41:21 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.md
+2025-08-18 10:41:28 - INFO - Generated HTML: ./blog/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.html
+2025-08-18 10:41:28 - INFO - Copied assets: src/blog/content/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/assets -> ./blog/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/assets
+2025-08-18 10:41:28 - INFO - Processing: src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-08-18 10:41:28 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.md
+2025-08-18 10:41:36 - INFO - Generated HTML: ./blog/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.html
+2025-08-18 10:41:36 - INFO - Copied assets: src/blog/content/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/assets -> ./blog/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/assets
+2025-08-18 10:41:36 - INFO - Processing: src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.md
+2025-08-18 10:41:36 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.md
+2025-08-18 10:41:44 - INFO - Generated HTML: ./blog/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.html
+2025-08-18 10:41:44 - INFO - Copied assets: src/blog/content/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/assets -> ./blog/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/assets
+2025-08-18 10:41:44 - INFO - Processing: src/blog/content/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.md
+2025-08-18 10:41:44 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.md
+2025-08-18 10:41:54 - INFO - Generated HTML: ./blog/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.html
+2025-08-18 10:41:54 - INFO - Copied assets: src/blog/content/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/assets -> ./blog/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/assets
+2025-08-18 10:41:54 - INFO - Processing: src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.md
+2025-08-18 10:41:54 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.md
+2025-08-18 10:42:01 - INFO - Generated HTML: ./blog/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.html
+2025-08-18 10:42:01 - INFO - Copied assets: src/blog/content/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/assets -> ./blog/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/assets
+2025-08-18 10:42:01 - INFO - Processing: src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.md
+2025-08-18 10:42:01 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.md
+2025-08-18 10:42:11 - INFO - Generated HTML: ./blog/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.html
+2025-08-18 10:42:11 - INFO - Copied assets: src/blog/content/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/assets -> ./blog/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/assets
+2025-08-18 10:42:11 - INFO - Processing: src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-08-18 10:42:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.md
+2025-08-18 10:42:18 - INFO - Generated HTML: ./blog/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.html
+2025-08-18 10:42:18 - INFO - Copied assets: src/blog/content/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/assets -> ./blog/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/assets
+2025-08-18 10:42:18 - INFO - Processing: src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-08-18 10:42:18 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.md
+2025-08-18 10:42:25 - INFO - Generated HTML: ./blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.html
+2025-08-18 10:42:25 - INFO - Copied assets: src/blog/content/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/assets -> ./blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/assets
+2025-08-18 10:42:25 - INFO - Processing: src/blog/content/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.md
+2025-08-18 10:42:25 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.md
+2025-08-18 10:42:33 - INFO - Generated HTML: ./blog/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.html
+2025-08-18 10:42:33 - INFO - Copied assets: src/blog/content/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/assets -> ./blog/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/assets
+2025-08-18 10:42:33 - INFO - Processing: src/blog/content/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.md
+2025-08-18 10:42:33 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.md
+2025-08-18 10:42:42 - INFO - Generated HTML: ./blog/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.html
+2025-08-18 10:42:42 - INFO - Copied assets: src/blog/content/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/assets -> ./blog/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/assets
+2025-08-18 10:42:42 - INFO - Processing: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md
+2025-08-18 10:42:42 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.md
+2025-08-18 10:42:50 - INFO - Generated HTML: ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.html
+2025-08-18 10:42:50 - INFO - Copied assets: src/blog/content/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/assets -> ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/assets
+2025-08-18 10:42:50 - INFO - Processing: src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-08-18 10:42:50 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.md
+2025-08-18 10:43:00 - INFO - Generated HTML: ./blog/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.html
+2025-08-18 10:43:00 - INFO - Copied assets: src/blog/content/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/assets -> ./blog/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/assets
+2025-08-18 10:43:00 - INFO - Processing: src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.md
+2025-08-18 10:43:00 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.md
+2025-08-18 10:43:07 - INFO - Generated HTML: ./blog/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.html
+2025-08-18 10:43:07 - INFO - Copied assets: src/blog/content/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/assets -> ./blog/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/assets
+2025-08-18 10:43:07 - INFO - Processing: src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.md
+2025-08-18 10:43:07 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.md
+2025-08-18 10:43:16 - INFO - Generated HTML: ./blog/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.html
+2025-08-18 10:43:16 - INFO - Copied assets: src/blog/content/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/assets -> ./blog/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/assets
+2025-08-18 10:43:16 - INFO - Processing: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-08-18 10:43:16 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.md
+2025-08-18 10:43:22 - INFO - Generated HTML: ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html
+2025-08-18 10:43:22 - INFO - Copied assets: src/blog/content/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets -> ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/assets
+2025-08-18 10:43:22 - INFO - Processing: src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-08-18 10:43:22 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.md
+2025-08-18 10:43:30 - INFO - Generated HTML: ./blog/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.html
+2025-08-18 10:43:30 - INFO - Copied assets: src/blog/content/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/assets -> ./blog/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/assets
+2025-08-18 10:43:30 - INFO - Processing: src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.md
+2025-08-18 10:43:30 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.md
+2025-08-18 10:43:37 - INFO - Generated HTML: ./blog/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.html
+2025-08-18 10:43:37 - INFO - Copied assets: src/blog/content/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/assets -> ./blog/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/assets
+2025-08-18 10:43:37 - INFO - Processing: src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md
+2025-08-18 10:43:37 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md
+2025-08-18 10:43:49 - INFO - Generated HTML: ./blog/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.html
+2025-08-18 10:43:49 - INFO - Copied assets: src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/assets -> ./blog/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/assets
+2025-08-18 10:43:49 - INFO - Processing: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-18 10:43:49 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-18 10:43:58 - INFO - Generated HTML: ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html
+2025-08-18 10:43:58 - INFO - Copied assets: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets -> ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets
+2025-08-18 10:43:58 - INFO - Processing: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 10:43:58 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 10:44:08 - INFO - Generated HTML: ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html
+2025-08-18 10:44:08 - INFO - Copied assets: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/assets -> ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/assets
+2025-08-18 10:44:08 - INFO - Blog index is up to date, skipping rebuild
+2025-08-18 10:44:08 - INFO - Blog processing completed
+2025-08-18 11:11:43 - INFO - Starting blog processing
+2025-08-18 11:11:43 - DEBUG - Arguments: {'content_root': None, 'output_root': None, 'template_dir': None, 'site_url': None, 'gen_json_ld_path': None, 'post': None, 'year': None, 'month': None, 'rebuild_index': True, 'interactive': False, 'dry_run': False, 'force': False, 'cache_file': None, 'log_file': None, 'log_level': 'DEBUG'}
+2025-08-18 11:11:43 - DEBUG - Loaded cache with 119 entries
+2025-08-18 11:11:43 - INFO - Rebuilding index only from existing posts
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/top-5-ai-use-cases-revolutionizing-modern-manufacturing/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/pioneering-the-future-inside-dr-elena-vasquezs-groundbreaking-ai-research/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/optimizing-patient-flow-with-ai-improving-healthcare-efficiency-and-outcomes/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/10-powerful-ai-applications-that-will-transform-your-small-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/why-ai-ethics-matters-building-trust-in-the-age-of-artificial-intelligence/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/building-a-winning-ai-strategy-your-roadmap-to-successful-implementation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-to-choose-the-right-ai-vendor-for-your-small-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-ultimate-small-business-guide-to-implementing-ai-in-2025/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-retail-ai-solutions-that-drive-growth-and-customer-loyalty/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-ultimate-small-business-ai-implementation-roadmap-from-ideation-to-roi/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-small-business-owners-playbook-for-ai-success/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-ai-revolution-exploring-the-future-with-andrew-ng/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/is-your-small-business-ready-for-ai-20-point-checklist-for-success/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-company-x-boosted-sales-25-using-ai-powered-demand-forecasting/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-it-service-providers-can-leverage-ai-for-small-business-automation-in-2025/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/unleash-your-business-automation-potential-with-n8n/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-small-manufacturing-firm-cut-costs-by-30-with-strategic-ai-automation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/responsible-ai-development-essential-practices-for-building-ethical-ai-systems/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/revolutionizing-production-ai-solutions-for-modern-manufacturing/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/protecting-privacy-essential-data-practices-for-ethical-ai-systems/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-implementation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-retail-store-boosted-sales-35-with-smart-customer-service-automation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-we-used-ai-to-personalize-our-website-and-boost-engagement-by-45/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-local-retailer-boosted-sales-by-30-with-ai-inventory-optimization/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-no-nonsense-guide-to-ai-for-small-business-success/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/streamlining-hospital-operations-with-ai-a-practical-implementation-guide/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-local-retailer-boosted-sales-by-25-with-ai-driven-inventory-management/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/ai-implementation-masterclass-scaling-ai-across-your-organization/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-company-x-transformed-sales-with-ai-powered-demand-forecasting/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/why-every-business-must-make-ai-ethics-a-top-priority-today/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-to-select-the-best-ai-tools-for-your-small-business-needs/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-ai-helped-nonprofit-x-boost-fundraising-by-30-a-success-story/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/ai-for-small-business-busting-the-too-expensive-myth/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-small-retail-business-boosted-sales-25-using-ai-predictive-analytics/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-essential-guide-to-ethical-ai-implementation-for-business-leaders/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/preventing-algorithmic-bias-a-small-business-guide-to-ethical-ai/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/streamlining-patient-scheduling-reduce-no-shows-with-automation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-small-retailer-boosted-sales-by-30-with-ai-powered-personalization/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/demystifying-ai-the-ultimate-beginners-guide-for-small-businesses/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/debunking-the-myth-ai-wont-replace-all-human-jobs-after-all/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/from-guesswork-to-growth-client-bs-ai-forecasting-transformation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/business-b-slashes-costs-30-with-ai-process-automation-a-small-business-success-story/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-medical-innovation-resource/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/ai-in-action-how-predictive-analytics-cut-hospital-readmissions-by-25/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-transformative-power-of-ai-in-healthcare-applications-benefits-and-implementation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/revolutionizing-healthcare-how-ai-is-transforming-patient-care-and-operations/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/ai-fundamentals-a-practical-guide-for-small-business-owners/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/measuring-the-roi-of-ai-initiatives-a-practical-guide-for-small-businesses/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/10-best-practices-for-implementing-a-robust-ai-governance-program/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-smart-path-evaluating-and-implementing-ai-for-your-small-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/5-high-impact-ai-use-cases-transforming-modern-healthcare/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-essential-roadmap-for-implementing-ai-in-your-small-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-small-business-guide-to-ai-data-privacy-protect-your-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/top-10-ai-use-cases-that-are-transforming-nonprofit-organizations/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/tackling-algorithmic-bias-in-small-business-ai-a-practical-guide/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/sweet-success-how-a-local-bakery-tripled-production-with-smart-automation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/top-10-ai-use-cases-revolutionizing-healthcare-delivery-in-2025/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-healthcare-ai-solutions-that-deliver-real-results/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/10-ai-quick-wins-every-small-business-can-implement-today/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/self-improving-websites-why-simple-html-beats-wordpress-for-small-business/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/manufacturing-excellence-how-client-a-slashed-costs-30-with-ai-automation/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/ai-implementation-masterclass-assessing-high-impact-opportunities/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-small-retailers-guide-to-ai-powered-inventory-management/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/revolutionizing-medical-diagnosis-how-ai-is-transforming-imaging-and-pathology/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-future-of-retail-how-ai-is-revolutionizing-the-shopping-experience/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/building-a-robust-ai-governance-framework-a-guide-for-forward-thinking-organizations/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/reinventing-retail-with-ai-5-transformative-use-cases-for-2025/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-ultimate-small-business-website-automation-checklist/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-nonprofits-guide-to-getting-started-with-ai-a-practical-roadmap/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-healthcare-with-ai-5-powerful-real-world-applications/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/ai-implementation-masterclass-building-testing-and-maintaining-effective-ai-systems/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/finding-the-perfect-ai-opportunities-for-your-small-business-a-practical-guide/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-outcomes/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/5-game-changing-ai-success-stories-from-small-businesses-you-can-learn-from/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/introducing-the-ai-for-healthcare-content-hub-your-essential-guide-to-healthcare-ai/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-small-manufacturer-slashed-maintenance-costs-25-with-ai/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/revolutionizing-healthcare-operations-with-ai-powered-patient-scheduling/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/finding-balance-the-gentle-power-of-japanese-acupuncture/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/manufacturing-revolution-how-ai-transformed-company-xs-production-line/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-ai-scheduling-helped-a-major-hospital-cut-patient-wait-times-by-30/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-future-of-diagnostics-ais-revolution-in-medical-accuracy-and-speed/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/introducing-the-ai-in-healthcare-content-hub-navigating-the-future-of-care/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-ai-is-transforming-clinical-decision-support-a-new-era-in-diagnosis/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-small-manufacturer-cut-equipment-downtime-by-40-using-ai-predictive-maintenance/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/the-ai-marketing-makeover-that-boosted-company-ys-sales-by-25/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/9-essential-strategies-for-small-business-ai-implementation-success/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-client-b-boosted-csat-by-25-with-strategic-ai-customer-service/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/protecting-user-data-essential-privacy--security-practices-for-ai-systems/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-business-c-transformed-customer-service-with-ai-chatbots-a-small-business-success-story/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/building-trust-in-small-business-ai-transparency-and-accountability-essentials/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/why-small-businesses-need-to-prioritize-ai-ethics-now-not-later/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-client-a-slashed-equipment-downtime-by-38-with-ai-predictive-maintenance/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/case-study-how-ai-reduced-patient-wait-times-by-30-at-city-hospital/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-healthcare-with-ai-applications-driving-better-patient-outcomes/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-a-retail-chain-slashed-customer-churn-by-30-using-ai-personalization/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-hospital-operations-with-ai-smarter-scheduling-workflow-and-resources/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/transforming-healthcare-efficiency-ai-reduces-patient-wait-times-by-30/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/inventory-management-systems-for-small-retail-cut-costs-prevent-stockouts/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/safeguarding-your-business-data-privacy-in-small-business-ai-adoption/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/how-ai-is-transforming-medical-diagnosis-the-future-of-disease-detection/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Extracting metadata from existing post: ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html
+2025-08-18 11:11:43 - DEBUG - Added post to index: Untitled
+2025-08-18 11:11:43 - DEBUG - Index is up to date, skipping rebuild
+2025-08-18 11:11:43 - INFO - Blog index is up to date, skipping rebuild
+2025-08-18 11:11:43 - DEBUG - Saved cache with 119 entries
+2025-08-18 11:11:43 - INFO - Blog processing completed
+2025-08-18 11:12:35 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 11:12:35 - INFO - Starting blog processing
+2025-08-18 11:12:35 - INFO - Rebuilding index only from existing posts
+2025-08-18 11:12:35 - INFO - Blog index is up to date, skipping rebuild
+2025-08-18 11:12:35 - INFO - Blog processing completed
+2025-08-18 11:12:51 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 11:12:51 - INFO - Starting blog processing
+2025-08-18 11:12:51 - INFO - Rebuilding index only from existing posts
+2025-08-18 11:12:51 - INFO - Rebuilding blog index
+2025-08-18 11:12:51 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-18 11:12:51 - INFO - Generated blog index with 118 posts
+2025-08-18 11:12:51 - INFO - Blog processing completed
+2025-08-18 11:13:52 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 11:13:52 - INFO - Starting blog processing
+2025-08-18 11:13:52 - INFO - Rebuilding index only from existing posts
+2025-08-18 11:13:52 - INFO - Rebuilding blog index
+2025-08-18 11:13:52 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-18 11:13:52 - INFO - Generated blog index with 118 posts
+2025-08-18 11:13:52 - INFO - Blog processing completed
