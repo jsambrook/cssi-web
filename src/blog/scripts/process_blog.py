@@ -860,7 +860,7 @@ def main():
                             "tags": tags,
                             "categories_display": categories_display,
                             "tags_display": tags_display,
-                            "html_path": f"/{rel_path}"
+                            "html_path": f"/blog/{rel_path}"
                         })
                         logging.debug(f"Added post to index: {title}")
                     except Exception as e:

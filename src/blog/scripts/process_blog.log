@@ -8735,3 +8735,202 @@ Please fix these errors and run the script again.
 2025-07-18 13:52:24 - INFO - Skipping unchanged file: src/blog/content/2025/05/5-transformative-ways-ai-is-revolutionizing-healthcare-delivery/index.md
 2025-07-18 13:52:24 - INFO - No posts changed, skipping index regeneration
 2025-07-18 13:52:24 - INFO - Blog processing completed
+2025-08-16 09:56:24 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-16 09:56:24 - INFO - Starting blog processing
+2025-08-16 09:56:24 - INFO - Processing posts matching: meet-ann-the-voice-agent-transforming-property-management
+2025-08-16 09:56:24 - INFO - Processing: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-16 09:56:24 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-16 09:56:33 - INFO - Generated HTML: ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html
+2025-08-16 09:56:33 - INFO - Copied assets: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets -> ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets
+2025-08-16 09:56:33 - INFO - Rebuilding blog index
+2025-08-16 09:56:33 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-16 09:56:33 - INFO - Generated blog index with 1 posts
+2025-08-16 09:56:33 - INFO - Blog processing completed
+2025-08-16 09:58:51 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-16 09:58:51 - INFO - Starting blog processing
+2025-08-16 09:58:51 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-16 09:58:51 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-16 09:58:58 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-08-16 09:58:58 - INFO - Copied assets: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets -> ./blog/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-08-16 09:58:58 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-16 09:58:58 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-16 09:59:07 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-08-16 09:59:07 - INFO - Copied assets: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets -> ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-08-16 09:59:07 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-16 09:59:07 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-16 09:59:15 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-08-16 09:59:15 - INFO - Copied assets: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets -> ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-08-16 09:59:15 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-16 09:59:15 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-16 09:59:22 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-08-16 09:59:22 - INFO - Copied assets: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets -> ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-08-16 09:59:22 - INFO - Processing: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-16 09:59:22 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-16 09:59:30 - INFO - Generated HTML: ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.html
+2025-08-16 09:59:30 - INFO - Copied assets: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets -> ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets
+2025-08-16 09:59:30 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-16 09:59:30 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-16 09:59:38 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-08-16 09:59:38 - INFO - Copied assets: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets -> ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-08-16 09:59:38 - INFO - Processing: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-16 09:59:38 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-16 09:59:48 - INFO - Generated HTML: ./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.html
+2025-08-16 09:59:48 - INFO - Copied assets: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/assets -> ./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/assets
+2025-08-16 09:59:48 - INFO - Processing: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-16 09:59:48 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-16 09:59:57 - INFO - Generated HTML: ./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.html
+2025-08-16 09:59:57 - INFO - Copied assets: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/assets -> ./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/assets
+2025-08-16 09:59:57 - INFO - Processing: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-16 09:59:57 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-16 10:00:08 - INFO - Generated HTML: ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.html
+2025-08-16 10:00:08 - INFO - Copied assets: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/assets -> ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/assets
+2025-08-16 10:00:08 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-16 10:00:08 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-16 10:00:17 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-08-16 10:00:17 - INFO - Copied assets: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets -> ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-08-16 10:00:17 - INFO - Processing: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-16 10:00:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-16 10:00:26 - INFO - Generated HTML: ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.html
+2025-08-16 10:00:26 - INFO - Copied assets: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets -> ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets
+2025-08-16 10:00:26 - INFO - Processing: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-16 10:00:26 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-16 10:00:33 - INFO - Generated HTML: ./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.html
+2025-08-16 10:00:33 - INFO - Copied assets: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/assets -> ./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/assets
+2025-08-16 10:00:33 - INFO - Processing: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-16 10:00:33 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-16 10:00:42 - INFO - Generated HTML: ./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.html
+2025-08-16 10:00:42 - INFO - Copied assets: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/assets -> ./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/assets
+2025-08-16 10:00:42 - INFO - Processing: src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-16 10:00:42 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-16 10:02:28 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-16 10:02:28 - INFO - Starting blog processing
+2025-08-16 10:02:28 - INFO - Processing posts matching: meet-ann-the-voice-agent-transforming-property-management
+2025-08-16 10:02:28 - INFO - Processing: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-16 10:02:28 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-16 10:02:38 - INFO - Generated HTML: ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html
+2025-08-16 10:02:38 - INFO - Copied assets: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets -> ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets
+2025-08-16 10:02:38 - INFO - Rebuilding blog index
+2025-08-16 10:02:38 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-16 10:02:38 - INFO - Generated blog index with 1 posts
+2025-08-16 10:02:38 - INFO - Blog processing completed
+2025-08-18 09:44:15 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 09:44:15 - INFO - Starting blog processing
+2025-08-18 09:44:15 - INFO - Processing posts matching: voice-agents-the-business-phone-youve-been-waiting-for
+2025-08-18 09:44:15 - INFO - Processing: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 09:44:15 - ERROR - ERROR: Invalid YAML front matter in src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md: while parsing a block mapping
+  in "<unicode string>", line 1, column 1:
+    author: Common Sense Systems, Inc.
+    ^
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 17, column 46:
+     ...  Agents: The Business Phone You've Been Waiting For'
+                                         ^
+2025-08-18 09:44:15 - ERROR - 
+======== ERROR SUMMARY ========
+2025-08-18 09:44:15 - ERROR - Encountered errors in 1 file(s):
+2025-08-18 09:44:15 - ERROR -   - src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md: Invalid YAML front matter in src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md: while parsing a block mapping
+  in "<unicode string>", line 1, column 1:
+    author: Common Sense Systems, Inc.
+    ^
+expected <block end>, but found '<scalar>'
+  in "<unicode string>", line 17, column 46:
+     ...  Agents: The Business Phone You've Been Waiting For'
+                                         ^
+2025-08-18 09:44:15 - ERROR - 
+Please fix these errors and run the script again.
+2025-08-18 09:44:27 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 09:44:27 - INFO - Starting blog processing
+2025-08-18 09:44:27 - INFO - Processing posts matching: voice-agents-the-business-phone-youve-been-waiting-for
+2025-08-18 09:44:27 - INFO - Processing: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 09:44:27 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-18 09:44:38 - INFO - Generated HTML: ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html
+2025-08-18 09:44:38 - INFO - Copied assets: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/assets -> ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/assets
+2025-08-18 09:44:38 - INFO - Rebuilding blog index
+2025-08-18 09:44:38 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-18 09:44:38 - INFO - Generated blog index with 1 posts
+2025-08-18 09:44:38 - INFO - Blog processing completed
+2025-08-18 09:57:40 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 09:57:40 - INFO - Starting blog processing
+2025-08-18 09:57:40 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-18 09:57:40 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-18 09:57:52 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-08-18 09:57:52 - INFO - Assets up to date, skipping: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-08-18 09:57:52 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-18 09:57:52 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-18 09:58:00 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-08-18 09:58:00 - INFO - Assets up to date, skipping: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-08-18 09:58:00 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-18 09:58:00 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-18 09:58:11 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-08-18 09:58:11 - INFO - Assets up to date, skipping: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-08-18 09:58:11 - INFO - Processing: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-18 09:58:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.md
+2025-08-18 09:58:20 - INFO - Generated HTML: ./blog/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/index.html
+2025-08-18 09:58:20 - INFO - Assets up to date, skipping: src/blog/content/2025/05/using-multiple-llms-as-editors-elevating-ai-generated-content-quality/assets
+2025-08-18 09:58:20 - INFO - Processing: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-18 09:58:20 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.md
+2025-08-18 09:58:30 - INFO - Generated HTML: ./blog/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/index.html
+2025-08-18 09:58:30 - INFO - Assets up to date, skipping: src/blog/content/2025/05/a-practical-guide-to-implementing-ethical-ai-in-your-small-business/assets
+2025-08-18 09:58:30 - INFO - Processing: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-18 09:58:30 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.md
+2025-08-18 09:58:39 - INFO - Generated HTML: ./blog/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/index.html
+2025-08-18 09:58:39 - INFO - Assets up to date, skipping: src/blog/content/2025/05/5-ai-powered-process-automation-solutions-for-it-service-providers-in-2025/assets
+2025-08-18 09:58:39 - INFO - Processing: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-18 09:58:39 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.md
+2025-08-18 09:58:47 - INFO - Generated HTML: ./blog/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/index.html
+2025-08-18 09:58:47 - INFO - Assets up to date, skipping: src/blog/content/2025/05/why-every-business-needs-an-ai-ethics--governance-framework-now/assets
+2025-08-18 09:58:47 - INFO - Processing: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-18 09:58:47 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.md
+2025-08-18 09:58:55 - INFO - Generated HTML: ./blog/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/index.html
+2025-08-18 09:58:55 - INFO - Assets up to date, skipping: src/blog/content/2025/05/how-ai-powered-sentiment-analysis-cut-customer-churn-by-30-a-success-story/assets
+2025-08-18 09:58:55 - INFO - Processing: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-18 09:58:55 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.md
+2025-08-18 09:59:05 - INFO - Generated HTML: ./blog/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/index.html
+2025-08-18 09:59:05 - INFO - Assets up to date, skipping: src/blog/content/2025/05/the-business-leaders-guide-to-ethical--responsible-ai-adoption/assets
+2025-08-18 09:59:05 - INFO - Processing: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-18 09:59:05 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.md
+2025-08-18 09:59:11 - INFO - Generated HTML: ./blog/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/index.html
+2025-08-18 09:59:11 - INFO - Assets up to date, skipping: src/blog/content/2025/05/the-self-improving-website-your-247-digital-marketing-assistant/assets
+2025-08-18 09:59:11 - INFO - Processing: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-18 09:59:11 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.md
+2025-08-18 09:59:17 - INFO - Generated HTML: ./blog/2025/05/the-small-business-roadmap-to-ai-implementation-success/index.html
+2025-08-18 09:59:17 - INFO - Assets up to date, skipping: src/blog/content/2025/05/the-small-business-roadmap-to-ai-implementation-success/assets
+2025-08-18 09:59:17 - INFO - Processing: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-18 09:59:17 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.md
+2025-08-18 09:59:27 - INFO - Generated HTML: ./blog/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/index.html
+2025-08-18 09:59:27 - INFO - Assets up to date, skipping: src/blog/content/2025/05/10-game-changing-ai-personalization-tactics-for-e-commerce-success/assets
+2025-08-18 09:59:27 - INFO - Processing: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-18 09:59:27 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.md
+2025-08-18 09:59:34 - INFO - Generated HTML: ./blog/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/index.html
+2025-08-18 09:59:34 - INFO - Assets up to date, skipping: src/blog/content/2025/05/how-ai-is-transforming-e-commerce-fraud-detection-and-prevention/assets
+2025-08-18 09:59:34 - INFO - Processing: src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-18 09:59:34 - INFO - Generating JSON-LD structured data for src/blog/content/2025/05/how-client-b-boosted-sales-by-25-using-ai-driven-personalization/index.md
+2025-08-18 10:01:54 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 10:01:54 - INFO - Starting blog processing
+2025-08-18 10:01:54 - INFO - Rebuilding index only from existing posts
+2025-08-18 10:01:54 - INFO - Blog index is up to date, skipping rebuild
+2025-08-18 10:01:54 - INFO - Blog processing completed
+2025-08-18 10:02:27 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 10:02:27 - INFO - Starting blog processing
+2025-08-18 10:02:27 - INFO - Rebuilding index only from existing posts
+2025-08-18 10:02:27 - INFO - Rebuilding blog index
+2025-08-18 10:02:27 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-18 10:02:27 - INFO - Generated blog index with 15 posts
+2025-08-18 10:02:27 - INFO - Blog processing completed
+2025-08-18 10:13:18 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 10:13:18 - INFO - Starting blog processing
+2025-08-18 10:13:18 - INFO - Rebuilding index only from existing posts
+2025-08-18 10:13:18 - INFO - Blog index is up to date, skipping rebuild
+2025-08-18 10:13:18 - INFO - Blog processing completed
+2025-08-18 10:14:46 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 10:14:46 - INFO - Starting blog processing
+2025-08-18 10:14:46 - INFO - Rebuilding index only from existing posts
+2025-08-18 10:14:46 - INFO - Blog index is up to date, skipping rebuild
+2025-08-18 10:14:46 - INFO - Blog processing completed
+2025-08-18 10:14:57 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-18 10:14:57 - INFO - Starting blog processing
+2025-08-18 10:14:57 - INFO - Rebuilding index only from existing posts
+2025-08-18 10:14:57 - INFO - Rebuilding blog index
+2025-08-18 10:14:57 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-18 10:14:57 - INFO - Generated blog index with 15 posts
+2025-08-18 10:14:57 - INFO - Blog processing completed
