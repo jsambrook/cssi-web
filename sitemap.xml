@@ -167,32 +167,42 @@
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_home/page_home.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_eh_fin_facts/page_eh_fin_facts.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/eh-presentation/page_compassionate_intermediaries/page_compassionate_intermediaries.html</loc>
+    <lastmod>2025-08-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_references/page_references.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_eh_org_facts/page_eh_org_facts.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_about_cssi/page_about_cssi.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/eh-presentation/page_workforce_solution/page_workforce_solution.html</loc>
+    <lastmod>2025-08-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_va_architecture/page_va_architecture.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -202,12 +212,12 @@
   </url>
   <url>
     <loc>https://common-sense.com/eh-presentation/page_challenges_and_trends/page_challenges_and_trends.html</loc>
-    <lastmod>2025-08-11</lastmod>
+    <lastmod>2025-08-16</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://common-sense.com/blog/</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2025-08-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -278,6 +288,11 @@
   <url>
     <loc>https://common-sense.com/blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/</loc>
     <lastmod>2025-08-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://common-sense.com/blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/</loc>
+    <lastmod>2025-08-18</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
