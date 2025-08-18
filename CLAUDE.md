@@ -10,6 +10,14 @@
 - `make prune-drafts` - Remove draft files older than 30 days
 - `make help` - Show all available commands
 
+### Blog Index Gotcha
+**Important**: When adding new blog posts, the blog index may not update properly due to caching. If a new post doesn't appear at the top of the blog index:
+1. Delete the cache file: `rm src/blog/.blog_cache.json`
+2. Force rebuild the index: `make blog-index`
+3. Commit and push the updated `blog/index.html`
+
+This ensures new posts appear chronologically at the top of the blog list.
+
 ## Code Style Guidelines
 - **Python**: Follow PEP 8 style guide with docstrings for all scripts and functions
 - **M4**: Use consistent macro naming (uppercase for macros) with m4_dnl for clean output
