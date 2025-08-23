@@ -151,9 +151,22 @@ dist/                   # Production build output
 - **Last verified**: January 2025
 - **Note**: Individual yearly figures provide more specific context than cumulative totals
 
+### Healthcare Industry Claims - CORRECTED FACTS (January 2025)
+- **Rural Healthcare Shortages**: 91% of rural counties NATIONALLY lack primary care (NOT Washington-specific)
+- **Washington State Physician Shortage**: Projected short 6,037 doctors; 32.7% within retirement range
+- **King County Population Growth**: 0.3% annual growth (NOT 3% as originally claimed)
+- **Ransomware Increase**: 149% increase in 2025 verified through multiple cybersecurity sources
+- **Hospital Consolidation**: 20-30% price increases since 1980s verified through academic research
+- **Source Attribution**: All statistics now properly attributed to verifiable sources
+- **Last verified**: January 2025
+
 ### Content Accuracy Guidelines
 - Always verify financial figures against primary sources
 - Double-check ballot measure details before publication
 - Cross-reference board minutes with official election materials
+- **CRITICAL**: Verify national vs. state-specific statistics before attribution
+- **MANDATORY**: Test all reference links quarterly for 404 errors
+- **REQUIRED**: Add "Last verified" dates to all statistical claims
 - Document all fact-checks in this section to prevent regression
 - Prefer specific yearly breakdowns over cumulative figures when available
+- Maintain source hierarchy: Government > Academic > Industry reports
