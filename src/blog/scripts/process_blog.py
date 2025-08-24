@@ -955,11 +955,23 @@ def main():
                             json_data = json.loads(json_ld_match.group(1))
                             
                             # Convert to metadata format expected by generate_index
+                            # Handle keywords as comma-separated string, not array
+                            keywords_raw = json_data.get("keywords", "")
+                            categories = [cat.strip() for cat in keywords_raw.split(",")] if isinstance(keywords_raw, str) else (keywords_raw if isinstance(keywords_raw, list) else [])
+                            
+                            # Extract tags from about field or use empty list
+                            about_data = json_data.get("about", {})
+                            if isinstance(about_data, dict):
+                                tags_raw = about_data.get("name", [])
+                                tags = [tag.strip() for tag in tags_raw.split(",")] if isinstance(tags_raw, str) else (tags_raw if isinstance(tags_raw, list) else [])
+                            else:
+                                tags = []
+                            
                             metadata = {
                                 "title": json_data.get("headline", ""),
                                 "date": datetime.fromisoformat(json_data.get("datePublished", "").replace('Z', '+00:00')),
-                                "categories": json_data.get("keywords", []),
-                                "tags": json_data.get("about", {}).get("name", []) if isinstance(json_data.get("about", {}), dict) else [],
+                                "categories": categories,
+                                "tags": tags,
                                 "html_path": os.path.relpath(file_path, CONFIG["output_root"])
                             }
                             
