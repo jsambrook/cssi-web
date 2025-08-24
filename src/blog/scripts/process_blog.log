@@ -2209,3 +2209,33 @@
 2025-08-24 11:31:57 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
 2025-08-24 11:31:57 - INFO - Generated blog index with 120 posts
 2025-08-24 11:31:57 - INFO - Blog processing completed
+2025-08-24 11:46:41 - INFO - Logging to file: /Users/john/git/cssi-web/src/blog/scripts/process_blog.log
+2025-08-24 11:46:41 - INFO - Starting blog processing
+2025-08-24 11:46:41 - INFO - Processing: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-24 11:46:41 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/index.md
+2025-08-24 11:46:50 - INFO - Generated HTML: ./blog/2025/04/increase-your-productivity-with-wispr-flow/index.html
+2025-08-24 11:46:50 - INFO - Copied assets: src/blog/content/2025/04/increase-your-productivity-with-wispr-flow/assets -> ./blog/2025/04/increase-your-productivity-with-wispr-flow/assets
+2025-08-24 11:46:50 - INFO - Processing: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-24 11:46:50 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.md
+2025-08-24 11:46:59 - INFO - Generated HTML: ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html
+2025-08-24 11:46:59 - INFO - Copied assets: src/blog/content/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets -> ./blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/assets
+2025-08-24 11:46:59 - INFO - Processing: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-24 11:46:59 - INFO - Generating JSON-LD structured data for src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.md
+2025-08-24 11:47:07 - INFO - Generated HTML: ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html
+2025-08-24 11:47:07 - INFO - Copied assets: src/blog/content/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets -> ./blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/assets
+2025-08-24 11:47:07 - INFO - Processing: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-24 11:47:07 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.md
+2025-08-24 11:47:19 - INFO - Generated HTML: ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html
+2025-08-24 11:47:19 - INFO - Copied assets: src/blog/content/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets -> ./blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/assets
+2025-08-24 11:47:19 - INFO - Processing: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-24 11:47:19 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.md
+2025-08-24 11:47:27 - INFO - Generated HTML: ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html
+2025-08-24 11:47:27 - INFO - Copied assets: src/blog/content/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/assets -> ./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/assets
+2025-08-24 11:47:27 - INFO - Processing: src/blog/content/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.md
+2025-08-24 11:47:27 - INFO - Generating JSON-LD structured data for src/blog/content/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.md
+2025-08-24 11:47:35 - INFO - Generated HTML: ./blog/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.html
+2025-08-24 11:47:35 - INFO - Copied assets: src/blog/content/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/assets -> ./blog/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/assets
+2025-08-24 11:47:35 - INFO - Rebuilding blog index
+2025-08-24 11:47:35 - INFO - DEBUG: Generating index at absolute path: /Users/john/git/cssi-web/blog/index.html
+2025-08-24 11:47:35 - INFO - Generated blog index with 6 posts
+2025-08-24 11:47:35 - INFO - Blog processing completed
