@@ -471,5 +471,13 @@
     "mtime": 1755535462.3557715,
     "output": "./blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html"
   },
-  "_index_last_build": 1755540832.324261
+  "src/blog/content/2025/08/one-constraint-at-a-time-healthcare-cio-playbook-claude-code/index.md": {
+    "mtime": 1756057491.810045,
+    "output": "./blog/2025/08/one-constraint-at-a-time-healthcare-cio-playbook-claude-code/index.html"
+  },
+  "src/blog/content/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.md": {
+    "mtime": 1755549309.8237758,
+    "output": "./blog/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.html"
+  },
+  "_index_last_build": 1756057534.36076
 }

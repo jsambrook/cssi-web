@@ -10,13 +10,31 @@
 - `make prune-drafts` - Remove draft files older than 30 days
 - `make help` - Show all available commands
 
-### Blog Index Gotcha
-**Important**: When adding new blog posts, the blog index may not update properly due to caching. If a new post doesn't appear at the top of the blog index:
-1. Delete the cache file: `rm src/blog/.blog_cache.json`
-2. Force rebuild the index: `make blog-index`
-3. Commit and push the updated `blog/index.html`
+### Blog Processing Best Practices
 
-This ensures new posts appear chronologically at the top of the blog list.
+#### Efficient Blog Operations (Updated 2025-08-24)
+The blog processing system has been optimized for efficiency. Normal operations now process only changed files:
+
+**✅ Standard Workflow:**
+- `python3 src/blog/scripts/process_blog.py` - Processes only changed posts + smart index rebuild (~8 seconds)
+- `python3 check_links.py` - Validate all 121+ blog links are working
+
+**🔧 Force Options (Use Sparingly):**
+- `--force-posts` - Rebuild all posts but smart index (recommended over `--force`)
+- `--force-index` - Rebuild index only from existing posts (~1 second)  
+- `--force` - Rebuild everything (120+ posts + index, ~18 minutes - use only when templates change)
+
+**🚨 Troubleshooting:**
+- **Posts not appearing**: Check `python3 check_links.py` finds 121+ links
+- **Cache issues**: Delete `src/blog/.blog_cache.json` and retry
+- **Index broken**: Use `--force-index` to rebuild from existing posts
+- **Template changes**: Use `--force` to rebuild everything with new templates
+
+**Performance Expectations:**
+- New post addition: ~8 seconds (1 post + index)
+- No changes: ~2 seconds (dependency check only)
+- Force index rebuild: ~1 second
+- Full rebuild: ~18 minutes (use sparingly)
 
 ## Code Style Guidelines
 - **Python**: Follow PEP 8 style guide with docstrings for all scripts and functions

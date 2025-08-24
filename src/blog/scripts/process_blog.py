@@ -25,8 +25,14 @@ Usage Examples:
     # Process all blog posts with default settings
     python3 process_blog.py
 
-    # Process all blog posts, forcing rebuild regardless of timestamps
+    # Process all blog posts, forcing rebuild of posts AND index regardless of timestamps
     python3 process_blog.py --force
+
+    # Force rebuild all posts but use smart index rebuild (recommended for efficiency)
+    python3 process_blog.py --force-posts
+
+    # Force rebuild only the index without regenerating posts
+    python3 process_blog.py --force-index
 
     # Process only posts containing "my-awesome-post" in their path
     # (typically matches a specific post by its slug directory name)
@@ -515,9 +521,38 @@ def generate_index(posts):
                 # Check if any posts have been modified since the last index build
                 last_index_build = CACHE["_index_last_build"]
 
-                # If no posts have been modified or added since the last index build
-                if all(CACHE.get(str(post["source_file"]), {}).get("mtime", float('inf')) <= last_index_build
-                       for post in posts if "source_file" in post):
+                # Check ALL markdown files in content directory, not just processed ones
+                # This ensures comprehensive dependency tracking
+                posts_newer_than_index = False
+                content_root = Path(CONFIG["content_root"])
+                all_md_files = list(content_root.glob('**/*.md'))
+                
+                for md_file in all_md_files:
+                    try:
+                        post_mtime = os.path.getmtime(md_file)
+                        if post_mtime > last_index_build:
+                            posts_newer_than_index = True
+                            logging.debug(f"Post {md_file} is newer than index")
+                            break
+                    except OSError:
+                        # If we can't get the file time, rebuild to be safe
+                        posts_newer_than_index = True
+                        logging.debug(f"Could not get mtime for {md_file}, forcing rebuild")
+                        break
+                
+                if not posts_newer_than_index:
+                    # Also check if the blog index template has changed
+                    index_template_path = os.path.join(CONFIG["template_dir"], "blog_index_template.html")
+                    try:
+                        template_mtime = os.path.getmtime(index_template_path)
+                        if template_mtime > last_index_build:
+                            logging.debug("Index template is newer than last build")
+                            posts_newer_than_index = True
+                    except OSError:
+                        logging.debug("Could not check index template mtime, forcing rebuild")
+                        posts_newer_than_index = True
+                
+                if not posts_newer_than_index:
                     index_needs_rebuild = False
                     logging.debug("Index is up to date, skipping rebuild")
         except OSError as e:
@@ -591,7 +626,7 @@ def generate_index(posts):
     logging.info(f"Generated blog index with {len(posts)} posts")
     return output_file
 
-def process_blog(posts_filter=None, interactive=False, dry_run=False, force=False):
+def process_blog(posts_filter=None, interactive=False, dry_run=False, force=False, force_index=False):
     """Process all blog articles and generate index
 
     Args:
@@ -599,6 +634,7 @@ def process_blog(posts_filter=None, interactive=False, dry_run=False, force=Fals
         interactive: If True, prompt for confirmation before processing each post
         dry_run: If True, only show what would be processed without making changes
         force: If True, rebuild all posts regardless of timestamps
+        force_index: If True, force rebuild index even if posts haven't changed (used with --force)
     """
     content_root = Path(CONFIG["content_root"])
     posts_metadata = []
@@ -717,17 +753,19 @@ def process_blog(posts_filter=None, interactive=False, dry_run=False, force=Fals
         logging.error("\nPlease fix these errors and run the script again.")
         sys.exit(1)
 
-    # Generate index if any posts were changed or if specifically forced
-    if any_posts_changed or force or posts_filter:
+    # Save the updated cache BEFORE index generation
+    # This ensures index dependency checking uses current file timestamps
+    save_cache()
+
+    # Generate index if any posts were changed, forced, or filtered
+    # force_index (used with --force) forces index rebuild regardless of post changes
+    if any_posts_changed or force_index or posts_filter:
         if posts_metadata:
             generate_index(posts_metadata)
         else:
             logging.warning("No posts to index")
     else:
         logging.info("No posts changed, skipping index regeneration")
-
-    # Save the updated cache
-    save_cache()
 
 def main():
     """Main entry point with command line argument parsing"""
@@ -747,6 +785,10 @@ def main():
                       help='Show what would be processed without making any changes')
     parser.add_argument('--force', action='store_true',
                       help='Force rebuild of all posts regardless of timestamps')
+    parser.add_argument('--force-posts', action='store_true',
+                      help='Force rebuild of all posts, but use smart index rebuild')
+    parser.add_argument('--force-index', action='store_true',
+                      help='Force rebuild of index only, without regenerating posts')
     parser.add_argument('--cache-file', help='Path to dependency cache file')
 
     # Add logging arguments
@@ -764,6 +806,12 @@ def main():
     # Log the start of execution with key parameters
     logging.info("Starting blog processing")
     logging.debug(f"Arguments: {vars(args)}")
+
+    # Validate force options - only one can be specified
+    force_options = [args.force, args.force_posts, args.force_index]
+    if sum(bool(x) for x in force_options) > 1:
+        logging.error("Only one of --force, --force-posts, or --force-index can be specified")
+        sys.exit(1)
 
     # Update config from command line args
     if args.content_root:
@@ -875,6 +923,61 @@ def main():
             save_cache()
         else:
             logging.warning("No existing posts found to rebuild index")
+    elif args.force_index:
+        # Force rebuild index only (like --rebuild-index but forces it)
+        logging.info("Force rebuilding index only from existing posts")
+
+        # Show dry run message if applicable
+        if args.dry_run:
+            logging.info("DRY RUN: Would force rebuild the index only")
+            logging.info("No changes were made (dry run)")
+            return
+
+        # Clear the index cache entry to force rebuild
+        if "_index_last_build" in CACHE:
+            del CACHE["_index_last_build"]
+
+        all_posts = []
+        for root, dirs, files in os.walk(CONFIG["output_root"]):
+            for file in files:
+                if file == "index.html" and root != CONFIG["output_root"]:
+                    # This is a blog post, read its metadata
+                    try:
+                        file_path = os.path.join(root, file)
+                        logging.debug(f"Extracting metadata from existing post: {file_path}")
+
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        # Extract JSON-LD metadata from existing HTML
+                        json_ld_match = re.search(r'<script type="application/ld\+json">(.*?)</script>', content, re.DOTALL)
+                        if json_ld_match:
+                            json_data = json.loads(json_ld_match.group(1))
+                            
+                            # Convert to metadata format expected by generate_index
+                            metadata = {
+                                "title": json_data.get("headline", ""),
+                                "date": datetime.fromisoformat(json_data.get("datePublished", "").replace('Z', '+00:00')),
+                                "categories": json_data.get("keywords", []),
+                                "tags": json_data.get("about", {}).get("name", []) if isinstance(json_data.get("about", {}), dict) else [],
+                                "html_path": os.path.relpath(file_path, CONFIG["output_root"])
+                            }
+                            
+                            all_posts.append(metadata)
+                            title = metadata["title"]
+                            logging.debug(f"Added post to index: {title}")
+                    except Exception as e:
+                        logging.error(f"Error processing existing post {os.path.join(root, file)}: {e}")
+                        continue
+
+        if all_posts:
+            generate_index(all_posts)
+
+            # Update index build timestamp in cache
+            CACHE["_index_last_build"] = datetime.now().timestamp()
+            save_cache()
+        else:
+            logging.warning("No existing posts found to rebuild index")
     else:
         # Process posts with filters
         filter_func = None
@@ -899,11 +1002,15 @@ def main():
                 logging.info(f"Processing posts from year: {args.year}")
 
         # Interactive mode is ignored in dry-run mode
+        # Determine force level: --force rebuilds all + forces index, --force-posts rebuilds posts with smart index
+        force_rebuild = args.force or args.force_posts
+        force_index_rebuild = args.force  # Only --force forces index rebuild
         process_blog(
             filter_func,
             args.interactive and not args.dry_run,
             args.dry_run,
-            args.force
+            force_rebuild,
+            force_index_rebuild
         )
 
     logging.info("Blog processing completed")
