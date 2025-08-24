@@ -3,7 +3,7 @@
 ## Project Overview
 Web-based presentation: "Unlocking Value with Voice Agents: Opportunities for EvergreenHealth"
 - **Target Audience**: EvergreenHealth executives (COO, CTO, Director of Innovation)  
-- **Duration**: 10-15 minutes (8 pages total)
+- **Duration**: 12-18 minutes (10 pages total)
 - **Deployment**: Digital Ocean droplet at test.common-sense.com
 - **Technology**: Modern HTML5/CSS3/JavaScript web presentation
 
@@ -158,6 +158,16 @@ dist/                   # Production build output
 - **Ransomware Increase**: 149% increase in 2025 verified through multiple cybersecurity sources
 - **Hospital Consolidation**: 20-30% price increases since 1980s verified through academic research
 - **Source Attribution**: All statistics now properly attributed to verifiable sources
+- **Last verified**: January 2025
+
+### Healthcare Challenge Page - VERIFIED STATISTICS (January 2025)
+- **Call Abandonment**: 7% abandonment rate for healthcare call centers (140 patients/day for 2,000 call centers)
+- **Staff Burnout**: 56% of nurses report burnout, 41% plan to leave within 2 years
+- **Physician Burnout**: 47.3% of physicians report burnout, down from 63% peak in 2021
+- **Wait Time Impact**: 60% of patients abandon calls after 1 minute wait, costing $45,000 daily per practice
+- **Patient Experience Gap**: 7.7-point satisfaction gap between age groups (18-34 vs 65-79)
+- **Financial Impact**: Healthcare burnout costs $4.6B annually; $500K-$1M per physician turnover
+- **Source Attribution**: AMA 2024, Press Ganey 2024, Dialog Health 2025, KLAS Research 2024
 - **Last verified**: January 2025
 
 ### Content Accuracy Guidelines
