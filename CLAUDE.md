@@ -15,9 +15,14 @@
 #### Efficient Blog Operations (Updated 2025-08-24)
 The blog processing system has been optimized for efficiency. Normal operations now process only changed files:
 
-**✅ Standard Workflow:**
-- `python3 src/blog/scripts/process_blog.py` - Processes only changed posts + smart index rebuild (~8 seconds)
-- `python3 check_links.py` - Validate all 121+ blog links are working
+**✅ Standard Workflow (Complete Process):**
+1. `python3 src/blog/scripts/process_blog.py` - Processes only changed posts + smart index rebuild (~8 seconds)
+2. `python3 check_links.py` - Validate all 121+ blog links are working  
+3. `git add .` - **CRITICAL**: Add ALL files (includes updated HTML files from blog processing)
+4. `git commit -m "descriptive message"` - Commit both source and generated HTML files
+5. `git push` - Push to remote (droplet auto-pulls hourly and serves pre-built HTML)
+
+**⚠️ IMPORTANT**: Always use `git add .` after blog processing. The script updates existing HTML files with latest templates/metadata, and these MUST be committed for the droplet to serve the complete website.
 
 **🔧 Force Options (Use Sparingly):**
 - `--force-posts` - Rebuild all posts but smart index (recommended over `--force`)
@@ -35,6 +40,27 @@ The blog processing system has been optimized for efficiency. Normal operations 
 - No changes: ~2 seconds (dependency check only)
 - Force index rebuild: ~1 second
 - Full rebuild: ~18 minutes (use sparingly)
+
+## Deployment Workflow
+
+### Blog Development & Deployment Process
+**Development Machine (karuna) → Production (test.common-sense.com droplet):**
+
+1. **Create/Edit Content**: Add new blog posts or modify existing content
+2. **Build Locally**: `python3 src/blog/scripts/process_blog.py` (generates HTML from markdown)
+3. **Validate**: `python3 check_links.py` (ensures no broken links)
+4. **Commit Everything**: `git add . && git commit -m "message"` (includes ALL generated files)
+5. **Deploy**: `git push` (droplet pulls automatically every hour)
+
+### Why This Works
+- **Local Build**: All HTML generation happens on development machine
+- **Complete Commit**: Both source files AND generated HTML files are versioned
+- **Auto-Deploy**: Droplet serves pre-built HTML files without rebuilding
+- **Fast & Reliable**: No server-side processing delays or build failures
+
+### Common Mistake to Avoid
+❌ **Never** commit only source files - always use `git add .` to include generated HTML
+✅ **Always** commit the complete generated website for seamless deployment
 
 ## Code Style Guidelines
 - **Python**: Follow PEP 8 style guide with docstrings for all scripts and functions
