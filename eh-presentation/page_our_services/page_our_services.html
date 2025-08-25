@@ -291,6 +291,41 @@
             font-style: italic;
         }
 
+        .expertise-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-6) 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .expertise-list li {
+            color: var(--eh-grey-dark);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+            position: relative;
+        }
+
+        .expertise-list li:before {
+            content: "⚡";
+            color: var(--eh-green);
+            font-size: var(--font-size-lg);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .expertise-list li strong {
+            color: var(--eh-green-dark);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .expertise-list li:last-child {
+            margin-bottom: 0;
+        }
+
         /* Partnership Promise */
         .partnership-section {
             text-align: center;
@@ -552,11 +587,19 @@
                 </div>
             </div>
             
-            <!-- Full-Service AI Expertise -->
+            <!-- Sharing AI Engineering Experience -->
             <div class="ai-expertise-section">
-                <h2 class="ai-expertise-title">Full-Service AI Expertise</h2>
-                <p class="ai-expertise-message">Beyond voice agents: Our comprehensive AI capabilities include process automation, data analytics, and intelligent workflow optimization</p>
-                <p class="ai-expertise-benefit">One partner for all your AI transformation needs</p>
+                <h2 class="ai-expertise-title">Sharing AI Engineering Experience with Your Teams</h2>
+                <p class="ai-expertise-message">We believe deeply in EvergreenHealth's mission and want to share our hard-won AI engineering experience with your teams.</p>
+                
+                <ul class="expertise-list">
+                    <li><strong>Context Engineering:</strong> Optimizing AI interactions for healthcare workflows and patient communications</li>
+                    <li><strong>Prompt Engineering:</strong> Crafting precise AI instructions for reliable, compliant patient interactions</li>
+                    <li><strong>Agent Framework Development:</strong> Building robust AI systems using tools like Claude Code and modern frameworks</li>
+                    <li><strong>AI Integration Patterns:</strong> Sharing proven approaches for integrating AI into existing healthcare systems</li>
+                </ul>
+                
+                <p class="ai-expertise-benefit">Our goal is knowledge transfer—helping your teams build internal AI capabilities while respecting your expertise in healthcare operations.</p>
             </div>
             
             <!-- Partnership Promise -->
