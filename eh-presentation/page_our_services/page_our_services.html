@@ -211,17 +211,24 @@
             border-color: var(--eh-blue-light);
         }
 
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
         .service-icon {
             font-size: var(--font-size-4xl);
-            margin-bottom: var(--space-4);
             color: var(--eh-blue);
+            flex-shrink: 0;
         }
 
         .service-title {
             font-size: var(--font-size-2xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-grey-dark);
-            margin-bottom: var(--space-4);
+            margin: 0;
         }
 
         .service-description {
@@ -246,47 +253,6 @@
             font-size: var(--font-size-sm);
         }
 
-        /* Customization Section */
-        .customization-section {
-            background: var(--eh-blue-light);
-            border-radius: var(--radius-xl);
-            padding: var(--space-12);
-            margin-bottom: var(--space-16);
-            border: 2px solid var(--eh-blue);
-        }
-
-        .customization-title {
-            font-size: var(--font-size-3xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--eh-blue-dark);
-            text-align: center;
-            margin-bottom: var(--space-8);
-        }
-
-        .customization-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-6);
-        }
-
-        .customization-item {
-            background: var(--eh-white);
-            padding: var(--space-6);
-            border-radius: var(--radius-lg);
-            border-left: 4px solid var(--eh-green);
-        }
-
-        .customization-item h3 {
-            font-size: var(--font-size-lg);
-            font-weight: var(--font-weight-semibold);
-            color: var(--eh-green-dark);
-            margin-bottom: var(--space-3);
-        }
-
-        .customization-item p {
-            color: var(--eh-grey);
-            line-height: var(--line-height-relaxed);
-        }
 
         /* Full-Service AI Section */
         .ai-expertise-section {
@@ -454,11 +420,6 @@
                 gap: var(--space-6);
             }
             
-            .customization-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-4);
-            }
-            
             .differentiators-grid {
                 grid-template-columns: 1fr;
                 gap: var(--space-4);
@@ -480,10 +441,6 @@
             
             .service-card {
                 padding: var(--space-6);
-            }
-            
-            .customization-section {
-                padding: var(--space-8);
             }
             
             .partnership-section {
@@ -529,7 +486,7 @@
         <div class="page-content">
             <!-- Hero Section -->
             <div class="hero-section">
-                <h1 class="page-title">Your Partner in AI Voice Agent Success</h1>
+                <h1 class="page-title">Common Sense: Your Reliable AI Voice Agent Partner</h1>
                 <p class="page-subtitle">From pilot to full deployment, we'll co-design solutions that fit your needs.</p>
             </div>
             
@@ -537,8 +494,10 @@
             <div class="services-grid">
                 <!-- Consulting & Strategy -->
                 <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h2 class="service-title">Consulting & Strategy</h2>
+                    <div class="service-header">
+                        <div class="service-icon">🎯</div>
+                        <h2 class="service-title">Consulting & Strategy</h2>
+                    </div>
                     <p class="service-description">Workflow analysis, ROI modeling, implementation roadmapping</p>
                     <div class="service-eh-specific">We'll map your current patient journey and identify optimal automation points</div>
                     <p class="service-collaboration">Seamless collaboration from day one</p>
@@ -546,8 +505,10 @@
                 
                 <!-- Custom Implementation -->
                 <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h2 class="service-title">Custom Implementation</h2>
+                    <div class="service-header">
+                        <div class="service-icon">⚙️</div>
+                        <h2 class="service-title">Custom Implementation</h2>
+                    </div>
                     <p class="service-description">System integration, business system connectivity, custom AI voice flows</p>
                     <div class="service-eh-specific">Trouble-free integration with your business systems and existing workflows</div>
                     <p class="service-collaboration">Leveraging our full-service AI expertise</p>
@@ -555,8 +516,10 @@
                 
                 <!-- Compliance & Security -->
                 <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h2 class="service-title">Compliance & Security</h2>
+                    <div class="service-header">
+                        <div class="service-icon">🛡️</div>
+                        <h2 class="service-title">Compliance & Security</h2>
+                    </div>
                     <p class="service-description">HIPAA compliance, SOC 2 certification, audit trails</p>
                     <div class="service-eh-specific">Full HIPAA compliance with audit trails for all patient interactions</div>
                     <p class="service-collaboration">Smooth regulatory approval process</p>
@@ -564,34 +527,13 @@
                 
                 <!-- Training & Support -->
                 <div class="service-card">
-                    <div class="service-icon">🤝</div>
-                    <h2 class="service-title">Training & Support</h2>
+                    <div class="service-header">
+                        <div class="service-icon">🤝</div>
+                        <h2 class="service-title">Training & Support</h2>
+                    </div>
                     <p class="service-description">Staff training, 24/7 monitoring, continuous optimization</p>
                     <div class="service-eh-specific">Ongoing support with dedicated account management and performance analytics</div>
                     <p class="service-collaboration">Frictionless knowledge transfer and support</p>
-                </div>
-            </div>
-            
-            <!-- EvergreenHealth-Specific Customizations -->
-            <div class="customization-section">
-                <h2 class="customization-title">EvergreenHealth-Specific Customizations</h2>
-                <div class="customization-grid">
-                    <div class="customization-item">
-                        <h3>Business System Integration</h3>
-                        <p>Trouble-free integration with your EHR and business systems</p>
-                    </div>
-                    <div class="customization-item">
-                        <h3>Workflow Mapping</h3>
-                        <p>Smooth adaptation to your specific department protocols (ED, Heart Care, Primary Care)</p>
-                    </div>
-                    <div class="customization-item">
-                        <h3>Regulatory Compliance</h3>
-                        <p>Seamless HIPAA, SOC 2, and Washington State healthcare compliance</p>
-                    </div>
-                    <div class="customization-item">
-                        <h3>Phased Rollout</h3>
-                        <p>Pilot program → Department rollout → System-wide deployment with continuous collaboration</p>
-                    </div>
                 </div>
             </div>
             
