@@ -231,26 +231,33 @@
             margin: 0;
         }
 
-        .service-description {
-            color: var(--eh-grey);
-            margin-bottom: var(--space-4);
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-list li {
+            color: var(--eh-grey-dark);
             line-height: var(--line-height-relaxed);
-        }
-
-        .service-eh-specific {
-            background: var(--eh-green-light);
-            padding: var(--space-4);
-            border-radius: var(--radius-md);
-            color: var(--eh-green-dark);
-            font-weight: var(--font-weight-medium);
-            font-style: italic;
             margin-bottom: var(--space-3);
+            padding-left: var(--space-6);
+            position: relative;
+            font-weight: var(--font-weight-medium);
         }
 
-        .service-collaboration {
+        .service-list li:before {
+            content: "•";
             color: var(--eh-blue);
-            font-weight: var(--font-weight-medium);
-            font-size: var(--font-size-sm);
+            font-size: var(--font-size-lg);
+            position: absolute;
+            left: var(--space-2);
+            top: 0;
+            font-weight: var(--font-weight-bold);
+        }
+
+        .service-list li:last-child {
+            margin-bottom: 0;
         }
 
 
@@ -498,9 +505,11 @@
                         <div class="service-icon">🎯</div>
                         <h2 class="service-title">Consulting & Strategy</h2>
                     </div>
-                    <p class="service-description">Workflow analysis, ROI modeling, implementation roadmapping</p>
-                    <div class="service-eh-specific">We'll map your current patient journey and identify optimal automation points</div>
-                    <p class="service-collaboration">Seamless collaboration from day one</p>
+                    <ul class="service-list">
+                        <li>Identify voice agent opportunities</li>
+                        <li>Determine expected results</li>
+                        <li>Collaborate on implementation roadmaps</li>
+                    </ul>
                 </div>
                 
                 <!-- Custom Implementation -->
@@ -509,9 +518,11 @@
                         <div class="service-icon">⚙️</div>
                         <h2 class="service-title">Custom Implementation</h2>
                     </div>
-                    <p class="service-description">System integration, business system connectivity, custom AI voice flows</p>
-                    <div class="service-eh-specific">Trouble-free integration with your business systems and existing workflows</div>
-                    <p class="service-collaboration">Leveraging our full-service AI expertise</p>
+                    <ul class="service-list">
+                        <li>Voice agent definition</li>
+                        <li>Integration with business systems</li>
+                        <li>Development of V&V protocols</li>
+                    </ul>
                 </div>
                 
                 <!-- Compliance & Security -->
@@ -520,9 +531,11 @@
                         <div class="service-icon">🛡️</div>
                         <h2 class="service-title">Compliance & Security</h2>
                     </div>
-                    <p class="service-description">HIPAA compliance, SOC 2 certification, audit trails</p>
-                    <div class="service-eh-specific">Full HIPAA compliance with audit trails for all patient interactions</div>
-                    <p class="service-collaboration">Smooth regulatory approval process</p>
+                    <ul class="service-list">
+                        <li>Identify compliance requirements</li>
+                        <li>Plan testing and audit protocols</li>
+                        <li>Collaborate with system audits</li>
+                    </ul>
                 </div>
                 
                 <!-- Training & Support -->
@@ -531,9 +544,11 @@
                         <div class="service-icon">🤝</div>
                         <h2 class="service-title">Training & Support</h2>
                     </div>
-                    <p class="service-description">Staff training, 24/7 monitoring, continuous optimization</p>
-                    <div class="service-eh-specific">Ongoing support with dedicated account management and performance analytics</div>
-                    <p class="service-collaboration">Frictionless knowledge transfer and support</p>
+                    <ul class="service-list">
+                        <li>Collaborate with development partners</li>
+                        <li>Suggest monitoring and support strategies</li>
+                        <li>Provide system optimization and training as requested</li>
+                    </ul>
                 </div>
             </div>
             
