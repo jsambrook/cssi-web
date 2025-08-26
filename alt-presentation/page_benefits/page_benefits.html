@@ -4,302 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Benefits - AI Strategy for EvergreenHealth</title>
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-green: #006633;
-            --accent-blue: #007BFF;
-            --light-gray: #f8f9fa;
-            --medium-gray: #6c757d;
-            --dark-gray: #343a40;
-            --white: #ffffff;
-            --success-green: #28a745;
-            --warning-orange: #fd7e14;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header */
-        .header {
-            background: var(--primary-green);
-            color: var(--white);
-            padding: 1rem 2rem;
-            margin: -1rem -1rem 2rem -1rem;
-            position: relative;
-        }
-
-        .header h1 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-        }
-
-        .progress-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            background: var(--accent-blue);
-            width: 73%; /* 10/15 slides = 66.67% */
-            transition: width 0.3s ease;
-        }
-
-        /* Main content */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem 0;
-        }
-
-        .headline {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.2;
-            color: var(--primary-green);
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .benefit {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 8px 24px rgba(0, 102, 51, 0.1);
-            border-top: 6px solid var(--success-green);
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .benefit:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(0, 102, 51, 0.15);
-        }
-
-        .benefit:nth-child(2) {
-            border-top-color: var(--accent-blue);
-        }
-
-        .benefit:nth-child(3) {
-            border-top-color: var(--warning-orange);
-        }
-
-        .benefit-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-        }
-
-        .benefit:nth-child(1) .benefit-icon {
-            background: var(--success-green);
-        }
-
-        .benefit:nth-child(2) .benefit-icon {
-            background: var(--accent-blue);
-        }
-
-        .benefit:nth-child(3) .benefit-icon {
-            background: var(--warning-orange);
-        }
-
-        .benefit h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-        }
-
-        .benefit p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            margin-bottom: 1rem;
-        }
-
-        .benefit-details {
-            background: rgba(0, 102, 51, 0.05);
-            border-radius: 8px;
-            padding: 1rem;
-            border-left: 4px solid var(--primary-green);
-        }
-
-        .benefit-details ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .benefit-details li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark-gray);
-        }
-
-        .benefit-details li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success-green);
-            font-weight: bold;
-        }
-
-        .visual-summary {
-            text-align: center;
-            margin: 3rem 0;
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(0, 102, 51, 0.05) 0%, rgba(0, 123, 255, 0.05) 100%);
-            border-radius: 16px;
-            border: 2px solid rgba(0, 102, 51, 0.2);
-        }
-
-        .summary-text {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            font-style: italic;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--light-gray);
-            padding: 1rem 2rem;
-            margin: 2rem -1rem -1rem -1rem;
-            text-align: center;
-            border-top: 3px solid var(--primary-green);
-        }
-
-        .page-number {
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-button {
-            background: var(--primary-green);
-            color: var(--white);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-button:hover {
-            background: #004d26;
-            transform: translateY(-1px);
-        }
-
-        .nav-button:disabled {
-            background: var(--medium-gray);
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0.5rem;
-            }
-            
-            .header {
-                padding: 1rem;
-                margin: -0.5rem -0.5rem 1rem -0.5rem;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .benefit {
-                padding: 2rem 1.5rem;
-            }
-            
-            .footer {
-                padding: 1rem;
-                margin: 1rem -0.5rem -0.5rem -0.5rem;
-            }
-            
-            .nav-buttons {
-                flex-direction: column;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            body {
-                background: white;
-            }
-            
-            .nav-buttons, .progress-bar {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/deck.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <h1 class="headline">This approach delivers competitive advantage, risk management, and future readiness</h1>
-            <div class="progress-bar"></div>
+            <div class="progress">
+                <div class="bar" style="width: 73%"></div>
+            </div>
         </header>
 
-        <main class="main-content">
+        <main class="slide">
             <div class="content">
                 <div class="benefits-grid">
                     <div class="benefit">
@@ -354,13 +70,13 @@
         </main>
 
         <footer class="footer">
-            <div class="page-number">Page 11 of 15</div>
+            <div class="page-number"><span class="page">Page 11 of 15</span></div>
             <nav class="navigation">
                 <div class="nav-container">
-                    <a href="../page_prudent_path/page_prudent_path.html" class="nav-button nav-prev">
+                    <a href="../page_prudent_path/page_prudent_path.html" class="nav-button nav-prev btn btn-secondary" aria-label="Previous page: A Prudent Path Forward">
                         ← Previous: A Prudent Path Forward
                     </a>
-                    <a href="../page_call_to_action/page_call_to_action.html" class="nav-button nav-next">
+                    <a href="../page_call_to_action/page_call_to_action.html" class="nav-button nav-next btn btn-primary" aria-label="Next page: Call to Action">
                         Next: Call to Action →
                     </a>
                 </div>

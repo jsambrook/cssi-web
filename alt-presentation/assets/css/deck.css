@@ -1,0 +1,38 @@
+/* === EvergreenHealth deck.css (styling-first) === */
+:root{
+  --container-max:64rem; --fg:#0b1221; --muted:#5b6476; --bg:#fff;
+  --brand:#1f7afc; --brand-strong:#0b5ed7; --accent:#12b886;
+  --s1:.25rem; --s2:.5rem; --s3:.75rem; --s4:1rem; --s6:1.5rem; --s8:2rem; --s12:3rem;
+  --radius:.75rem; --radius-lg:1rem;
+  --shadow:0 6px 20px rgba(16,24,40,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji',sans-serif;line-height:1.5}
+.container{max-width:var(--container-max);margin:0 auto;padding:0 var(--s4)}
+main.slide{display:block;padding:var(--s12) 0}
+.headline{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.2;margin:var(--s8) 0 var(--s4);font-weight:700;color:var(--fg)}
+.subtitle,.meta{color:var(--muted);margin-bottom:var(--s6)}
+.lede{font-size:1.125rem;color:var(--fg);margin-bottom:var(--s8)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);margin-top:var(--s8);flex-wrap:wrap}
+.btn{display:inline-block;padding:.625rem 1rem;border-radius:var(--radius);text-decoration:none;box-shadow:var(--shadow);transition:transform .06s ease,box-shadow .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-strong)}
+.btn-secondary{background:#e9ecf3;color:var(--fg)}
+.page{color:var(--muted);font-variant-numeric:tabular-nums}
+.progress{height:.5rem;background:#f0f3f8;border-radius:.5rem;overflow:hidden;margin-top:var(--s4)}
+.progress .bar{height:100%;background:var(--brand);width:0%;transition:width .3s ease}
+footer.slide-footer{margin-top:var(--s12);color:var(--muted);font-size:.95rem}
+:focus-visible{outline:3px solid #a4c8ff;outline-offset:2px}
+@media (max-width:640px){
+  .nav{gap:var(--s2)}
+  .btn{padding:.5rem .875rem}
+  .headline{margin:var(--s6) 0 var(--s3)}
+}
+@media (max-width:360px){
+  .container{padding:0 var(--s3)}
+  .nav{gap:var(--s1)}
+  .btn{padding:.4rem .75rem;font-size:.85rem}
+  .headline{font-size:clamp(1.6rem,4vw,2.2rem)}
+}
+/* === end deck.css === */
