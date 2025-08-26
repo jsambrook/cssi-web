@@ -209,7 +209,7 @@
         }
         
         .page-content {
-            width: 100%;
+            width: 7%;
             max-width: var(--content-max-width);
             text-align: center;
         }
@@ -245,7 +245,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            width: 100%;
+            width: 7%;
             background: rgba(255, 255, 255, 0.95);
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -348,11 +348,20 @@
         }
         
         /* Page-specific styles */
-        .home-title {
+        .headline {
             font-size: var(--font-size-4xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-green);
             line-height: var(--line-height-tight);
+            margin-bottom: var(--space-6);
+            text-align: center;
+        }
+        
+        .presentation-subtitle {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--eh-grey-dark);
+            line-height: var(--line-height-snug);
             margin-bottom: var(--space-8);
             text-align: center;
         }
@@ -402,20 +411,25 @@
         
         /* Responsive adjustments */
         @media (min-width: 768px) {
-            .home-title {
+            .headline {
                 font-size: var(--font-size-5xl);
             }
         }
         
         @media (min-width: 1024px) {
-            .home-title {
+            .headline {
                 font-size: var(--font-size-6xl);
             }
         }
         
         @media (max-width: 768px) {
-            .home-title {
+            .headline {
                 font-size: var(--font-size-3xl);
+                margin-bottom: var(--space-4);
+            }
+            
+            .presentation-subtitle {
+                font-size: var(--font-size-xl);
                 margin-bottom: var(--space-6);
             }
             
@@ -468,7 +482,9 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="home-title">AI Strategy for EvergreenHealth</h1>
+            <h1 class="headline">EvergreenHealth faces a critical AI decision in 2025</h1>
+            
+            <div class="presentation-subtitle">AI Strategy for EvergreenHealth</div>
             
             <div class="home-metadata">
                 <div class="presentation-date">August 27, 2025</div>
@@ -496,10 +512,10 @@
             </button>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="10">
-                <span class="progress-text">Page 1 of 10</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="15">
+                <span class="progress-text">Page 1 of 15</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 10%"></div>
+                    <div class="progress-fill" style="width: 7%"></div>
                 </div>
             </div>
             
