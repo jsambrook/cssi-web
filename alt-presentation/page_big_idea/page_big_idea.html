@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Inciting Incident - AI Strategy for EvergreenHealth">
+    <meta name="description" content="The Big Idea - AI Strategy for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>The Inciting Incident - AI Strategy for EvergreenHealth</title>
+    <title>The Big Idea - AI Strategy for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="The Inciting Incident - AI Strategy for EvergreenHealth">
-    <meta property="og:description" content="The Risk of Falling Behind in AI Innovation">
+    <meta property="og:title" content="The Big Idea - AI Strategy for EvergreenHealth">
+    <meta property="og:description" content="Voice Agents as AI Gateway Strategy">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -345,10 +345,10 @@
         }
         
         /* Page-specific styles */
-        .incident-headline {
+        .big-idea-headline {
             font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-bold);
-            color: var(--eh-red);
+            color: var(--eh-green);
             line-height: var(--line-height-tight);
             margin-bottom: var(--space-8);
             text-align: center;
@@ -357,126 +357,189 @@
             margin-right: auto;
         }
         
-        .threat-container {
+        .gateway-visual {
             display: flex;
             flex-direction: column;
-            gap: var(--space-6);
+            align-items: center;
+            gap: var(--space-8);
             margin-top: var(--space-8);
         }
         
-        .threat-item {
-            background: linear-gradient(135deg, var(--eh-grey-light) 0%, var(--eh-white) 100%);
+        .gateway-icon-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gateway-icon {
+            font-size: var(--font-size-6xl);
+            color: var(--eh-green);
+            background: var(--eh-green-light);
+            padding: var(--space-6);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .gateway-arrow {
+            position: absolute;
+            font-size: var(--font-size-2xl);
+            color: var(--eh-blue);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        
+        .gateway-arrow--right {
+            right: -60px;
+        }
+        
+        .gateway-arrow--left {
+            left: -60px;
+        }
+        
+        .proven-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .proven-point {
+            background: var(--eh-white);
             border-radius: var(--radius-lg);
             padding: var(--space-6);
             box-shadow: var(--shadow);
-            border-left: 4px solid var(--eh-red);
-            text-align: left;
+            text-align: center;
+            border-left: 4px solid var(--eh-green);
+            transition: all var(--transition-base);
         }
         
-        .threat-title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--eh-red);
+        .proven-point:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .proven-icon {
+            font-size: var(--font-size-3xl);
+            color: var(--eh-green);
             margin-bottom: var(--space-3);
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
+            display: block;
         }
         
-        .threat-icon {
-            font-size: var(--font-size-2xl);
-            color: var(--eh-red);
+        .proven-title {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--eh-green);
+            margin-bottom: var(--space-2);
         }
         
-        .threat-description {
-            font-size: var(--font-size-base);
+        .proven-description {
+            font-size: var(--font-size-sm);
             color: var(--eh-grey-dark);
             line-height: var(--line-height-relaxed);
         }
         
-        .risk-callout {
-            background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%);
-            border: 2px solid var(--eh-red);
-            border-radius: var(--radius-lg);
+        .strategy-flow {
+            background: linear-gradient(135deg, var(--eh-blue-light) 0%, var(--eh-white) 100%);
+            border: 2px solid var(--eh-blue);
+            border-radius: var(--radius-xl);
             padding: var(--space-6);
             margin-top: var(--space-8);
             text-align: center;
         }
         
-        .risk-title {
+        .strategy-title {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
-            color: var(--eh-red);
+            color: var(--eh-blue);
             margin-bottom: var(--space-4);
         }
         
-        .risk-consequences {
+        .flow-steps {
             display: flex;
-            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
             gap: var(--space-4);
-            margin-top: var(--space-4);
+            flex-wrap: wrap;
         }
         
-        .consequence-item {
-            text-align: center;
-            flex: 1;
-        }
-        
-        .consequence-icon {
-            font-size: var(--font-size-2xl);
-            color: var(--eh-red);
-            margin-bottom: var(--space-2);
-        }
-        
-        .consequence-label {
+        .flow-step {
+            background: var(--eh-white);
+            border: 2px solid var(--eh-blue);
+            border-radius: var(--radius-lg);
+            padding: var(--space-3) var(--space-4);
             font-size: var(--font-size-sm);
-            color: var(--eh-grey-dark);
             font-weight: var(--font-weight-medium);
+            color: var(--eh-blue);
+        }
+        
+        .flow-arrow {
+            font-size: var(--font-size-lg);
+            color: var(--eh-blue);
         }
         
         /* Responsive adjustments */
         @media (min-width: 768px) {
-            .incident-headline {
+            .big-idea-headline {
                 font-size: var(--font-size-4xl);
             }
         }
         
         @media (min-width: 1024px) {
-            .incident-headline {
+            .big-idea-headline {
                 font-size: var(--font-size-5xl);
             }
         }
         
         @media (max-width: 768px) {
-            .incident-headline {
+            .big-idea-headline {
                 font-size: var(--font-size-2xl);
                 margin-bottom: var(--space-6);
             }
             
-            .threat-container {
+            .gateway-icon {
+                font-size: var(--font-size-4xl);
+                padding: var(--space-4);
+            }
+            
+            .gateway-arrow {
+                display: none;
+            }
+            
+            .proven-points {
+                grid-template-columns: 1fr;
                 gap: var(--space-4);
                 margin-top: var(--space-6);
             }
             
-            .threat-item {
+            .proven-point {
                 padding: var(--space-4);
             }
             
-            .threat-title {
-                font-size: var(--font-size-lg);
-                flex-direction: column;
-                text-align: center;
-                gap: var(--space-2);
+            .proven-icon {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--space-2);
             }
             
-            .risk-callout {
+            .strategy-flow {
                 padding: var(--space-4);
                 margin-top: var(--space-6);
             }
             
-            .risk-consequences {
+            .flow-steps {
                 flex-direction: column;
                 gap: var(--space-3);
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
             }
             
             .presentation-page {
@@ -520,43 +583,47 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="incident-headline">The risk: falling behind, losing market share and influence</h1>
+            <h1 class="big-idea-headline">Voice agents are the gateway to a broader AI strategy</h1>
             
-            <div class="threat-container">
-                <!-- AI Deployment -->
-                <div class="threat-item">
-                    <div class="threat-title">
-                        <span class="threat-icon">🚀</span>
-                        AI is here: early adopters are deploying voice agents and other tools
-                    </div>
-                    <p class="threat-description">Healthcare AI implementations are moving from pilot to production across the industry.</p>
-                </div>
-                
-                <!-- Competitor Movement -->
-                <div class="threat-item">
-                    <div class="threat-title">
-                        <span class="threat-icon">⚡</span>
-                        Larger health systems are moving fast
-                    </div>
-                    <p class="threat-description">Providence and similar systems have resources to invest heavily in AI infrastructure and gain competitive advantages.</p>
+            <div class="gateway-visual">
+                <div class="gateway-icon-container">
+                    <div class="gateway-arrow gateway-arrow--left">⭐</div>
+                    <span class="gateway-icon">🗣️</span>
+                    <div class="gateway-arrow gateway-arrow--right">➡️</div>
                 </div>
             </div>
             
-            <div class="risk-callout">
-                <div class="risk-title">The Stakes</div>
-                <div class="risk-consequences">
-                    <div class="consequence-item">
-                        <div class="consequence-icon">📉</div>
-                        <div class="consequence-label">Market Share Loss</div>
-                    </div>
-                    <div class="consequence-item">
-                        <div class="consequence-icon">🏃‍♂️</div>
-                        <div class="consequence-label">Patient Migration</div>
-                    </div>
-                    <div class="consequence-item">
-                        <div class="consequence-icon">🔊</div>
-                        <div class="consequence-label">Reduced Influence</div>
-                    </div>
+            <div class="proven-points">
+                <!-- Already Proven -->
+                <div class="proven-point">
+                    <span class="proven-icon">✅</span>
+                    <h2 class="proven-title">Already Proven</h2>
+                    <p class="proven-description">Levy-lid-lift win demonstrates community support for innovation</p>
+                </div>
+                
+                <!-- Natural Fit -->
+                <div class="proven-point">
+                    <span class="proven-icon">🎯</span>
+                    <h2 class="proven-title">Natural Fit</h2>
+                    <p class="proven-description">Patient access, call centers, and staff support are ideal starting points</p>
+                </div>
+                
+                <!-- AI Literacy -->
+                <div class="proven-point">
+                    <span class="proven-icon">📚</span>
+                    <h2 class="proven-title">Builds AI Literacy</h2>
+                    <p class="proven-description">Controlled, impactful way to develop organizational AI capabilities</p>
+                </div>
+            </div>
+            
+            <div class="strategy-flow">
+                <div class="strategy-title">Strategic Progression</div>
+                <div class="flow-steps">
+                    <div class="flow-step">Voice Agents</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">AI Literacy</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">Broader AI Strategy</div>
                 </div>
             </div>
         </div>
@@ -566,7 +633,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_cast_context/page_cast_context.html" class="nav-button nav-prev" aria-label="Previous page: The Cast & Context">
+            <a href="../page_turning_point/page_turning_point.html" class="nav-button nav-prev" aria-label="Previous page: The Turning Point">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -574,15 +641,15 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="4" aria-valuemin="1" aria-valuemax="10">
-                <span class="progress-text">Page 4 of 10</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="9" aria-valuemin="1" aria-valuemax="13">
+                <span class="progress-text">Page 9 of 13</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 40%"></div>
+                    <div class="progress-fill" style="width: 69%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_temptations/page_temptations.html" class="nav-button nav-next" aria-label="Next page: The Temptations">
+            <a href="../page_prudent_path/page_prudent_path.html" class="nav-button nav-next" aria-label="Next page: A Prudent Path Forward">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
@@ -594,7 +661,7 @@
     <!-- Presentation Footer -->
     <footer class="presentation-footer">
         <div class="confidential-mark">Company Confidential</div>
-        <div class="page-counter">4 of 10</div>
+        <div class="page-counter">9 of 13</div>
     </footer>
     
     <!-- Shared JavaScript -->

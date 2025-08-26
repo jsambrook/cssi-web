@@ -10,6 +10,15 @@ class PresentationNavigator {
       'page_orientation/page_orientation',
       'page_cast_context/page_cast_context',
       'page_inciting_incident/page_inciting_incident',
+      'page_temptations/page_temptations',
+      'page_obstacles/page_obstacles',
+      'page_core_dilemma/page_core_dilemma',
+      'page_turning_point/page_turning_point',
+      'page_big_idea/page_big_idea',
+      'page_prudent_path/page_prudent_path',
+      'page_benefits/page_benefits',
+      'page_call_to_action/page_call_to_action',
+      'page_future_vision/page_future_vision',
       'page_about_cssi/page_about_cssi',
       'page_references/page_references'
     ];

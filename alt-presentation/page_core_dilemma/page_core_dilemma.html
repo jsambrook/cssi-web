@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Inciting Incident - AI Strategy for EvergreenHealth">
+    <meta name="description" content="The Core Dilemma - AI Strategy for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>The Inciting Incident - AI Strategy for EvergreenHealth</title>
+    <title>The Core Dilemma - AI Strategy for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="The Inciting Incident - AI Strategy for EvergreenHealth">
-    <meta property="og:description" content="The Risk of Falling Behind in AI Innovation">
+    <meta property="og:title" content="The Core Dilemma - AI Strategy for EvergreenHealth">
+    <meta property="og:description" content="Balancing Caution with Innovation">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -345,138 +345,134 @@
         }
         
         /* Page-specific styles */
-        .incident-headline {
+        .dilemma-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .dilemma-question {
             font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-bold);
-            color: var(--eh-red);
+            color: var(--eh-green);
             line-height: var(--line-height-tight);
-            margin-bottom: var(--space-8);
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: var(--space-12);
+            padding: var(--space-8);
+            background: linear-gradient(135deg, var(--eh-green-light) 0%, var(--eh-white) 100%);
+            border-radius: var(--radius-xl);
+            border: 3px solid var(--eh-green);
+            position: relative;
         }
         
-        .threat-container {
+        .dilemma-question::before {
+            content: '"';
+            font-size: var(--font-size-6xl);
+            color: var(--eh-green);
+            position: absolute;
+            top: var(--space-2);
+            left: var(--space-4);
+            opacity: 0.3;
+        }
+        
+        .dilemma-question::after {
+            content: '"';
+            font-size: var(--font-size-6xl);
+            color: var(--eh-green);
+            position: absolute;
+            bottom: var(--space-2);
+            right: var(--space-4);
+            opacity: 0.3;
+        }
+        
+        .balance-visual {
             display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
-            margin-top: var(--space-8);
+            align-items: center;
+            justify-content: center;
+            margin: var(--space-12) auto;
+            max-width: 800px;
         }
         
-        .threat-item {
-            background: linear-gradient(135deg, var(--eh-grey-light) 0%, var(--eh-white) 100%);
-            border-radius: var(--radius-lg);
+        .balance-side {
+            flex: 1;
+            text-align: center;
             padding: var(--space-6);
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--eh-red);
-            text-align: left;
         }
         
-        .threat-title {
+        .balance-center {
+            flex-shrink: 0;
+            margin: 0 var(--space-6);
+        }
+        
+        .balance-icon {
+            font-size: var(--font-size-6xl);
+            color: var(--eh-grey);
+            margin-bottom: var(--space-4);
+        }
+        
+        .balance-label {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-red);
             margin-bottom: var(--space-3);
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
         }
         
-        .threat-icon {
-            font-size: var(--font-size-2xl);
-            color: var(--eh-red);
-        }
-        
-        .threat-description {
+        .balance-description {
             font-size: var(--font-size-base);
-            color: var(--eh-grey-dark);
+            color: var(--eh-grey);
             line-height: var(--line-height-relaxed);
         }
         
-        .risk-callout {
-            background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%);
-            border: 2px solid var(--eh-red);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            margin-top: var(--space-8);
-            text-align: center;
-        }
-        
-        .risk-title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--eh-red);
-            margin-bottom: var(--space-4);
-        }
-        
-        .risk-consequences {
-            display: flex;
-            justify-content: space-around;
-            gap: var(--space-4);
-            margin-top: var(--space-4);
-        }
-        
-        .consequence-item {
-            text-align: center;
-            flex: 1;
-        }
-        
-        .consequence-icon {
-            font-size: var(--font-size-2xl);
-            color: var(--eh-red);
-            margin-bottom: var(--space-2);
-        }
-        
-        .consequence-label {
-            font-size: var(--font-size-sm);
-            color: var(--eh-grey-dark);
-            font-weight: var(--font-weight-medium);
+        .scale-icon {
+            font-size: var(--font-size-5xl);
+            color: var(--eh-green);
         }
         
         /* Responsive adjustments */
         @media (min-width: 768px) {
-            .incident-headline {
+            .dilemma-question {
                 font-size: var(--font-size-4xl);
             }
         }
         
         @media (min-width: 1024px) {
-            .incident-headline {
-                font-size: var(--font-size-5xl);
+            .dilemma-question {
+                font-size: var(--font-size-4xl);
             }
         }
         
         @media (max-width: 768px) {
-            .incident-headline {
-                font-size: var(--font-size-2xl);
-                margin-bottom: var(--space-6);
+            .dilemma-question {
+                font-size: var(--font-size-xl);
+                padding: var(--space-6);
+                margin-bottom: var(--space-8);
             }
             
-            .threat-container {
-                gap: var(--space-4);
-                margin-top: var(--space-6);
+            .dilemma-question::before,
+            .dilemma-question::after {
+                font-size: var(--font-size-4xl);
             }
             
-            .threat-item {
+            .balance-visual {
+                flex-direction: column;
+                margin: var(--space-8) auto;
+            }
+            
+            .balance-center {
+                margin: var(--space-4) 0;
+                order: -1;
+            }
+            
+            .balance-side {
                 padding: var(--space-4);
             }
             
-            .threat-title {
-                font-size: var(--font-size-lg);
-                flex-direction: column;
-                text-align: center;
-                gap: var(--space-2);
+            .balance-icon {
+                font-size: var(--font-size-4xl);
+                margin-bottom: var(--space-3);
             }
             
-            .risk-callout {
-                padding: var(--space-4);
-                margin-top: var(--space-6);
-            }
-            
-            .risk-consequences {
-                flex-direction: column;
-                gap: var(--space-3);
+            .scale-icon {
+                font-size: var(--font-size-4xl);
             }
             
             .presentation-page {
@@ -520,42 +516,33 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="incident-headline">The risk: falling behind, losing market share and influence</h1>
-            
-            <div class="threat-container">
-                <!-- AI Deployment -->
-                <div class="threat-item">
-                    <div class="threat-title">
-                        <span class="threat-icon">🚀</span>
-                        AI is here: early adopters are deploying voice agents and other tools
-                    </div>
-                    <p class="threat-description">Healthcare AI implementations are moving from pilot to production across the industry.</p>
+            <div class="dilemma-container">
+                <div class="dilemma-question">
+                    How can EvergreenHealth act prudently — neither paralyzed by caution, nor reckless with hype?
                 </div>
                 
-                <!-- Competitor Movement -->
-                <div class="threat-item">
-                    <div class="threat-title">
-                        <span class="threat-icon">⚡</span>
-                        Larger health systems are moving fast
+                <div class="balance-visual">
+                    <!-- Left Side: Paralyzed by Caution -->
+                    <div class="balance-side">
+                        <div class="balance-icon">😰</div>
+                        <div class="balance-label">Paralyzed by Caution</div>
+                        <div class="balance-description">
+                            Fear-based inaction leads to competitive obsolescence
+                        </div>
                     </div>
-                    <p class="threat-description">Providence and similar systems have resources to invest heavily in AI infrastructure and gain competitive advantages.</p>
-                </div>
-            </div>
-            
-            <div class="risk-callout">
-                <div class="risk-title">The Stakes</div>
-                <div class="risk-consequences">
-                    <div class="consequence-item">
-                        <div class="consequence-icon">📉</div>
-                        <div class="consequence-label">Market Share Loss</div>
+                    
+                    <!-- Center: Balance Scale -->
+                    <div class="balance-center">
+                        <div class="scale-icon">⚖️</div>
                     </div>
-                    <div class="consequence-item">
-                        <div class="consequence-icon">🏃‍♂️</div>
-                        <div class="consequence-label">Patient Migration</div>
-                    </div>
-                    <div class="consequence-item">
-                        <div class="consequence-icon">🔊</div>
-                        <div class="consequence-label">Reduced Influence</div>
+                    
+                    <!-- Right Side: Reckless with Hype -->
+                    <div class="balance-side">
+                        <div class="balance-icon">🤯</div>
+                        <div class="balance-label">Reckless with Hype</div>
+                        <div class="balance-description">
+                            Hype-driven decisions waste resources and risk patient safety
+                        </div>
                     </div>
                 </div>
             </div>
@@ -566,7 +553,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_cast_context/page_cast_context.html" class="nav-button nav-prev" aria-label="Previous page: The Cast & Context">
+            <a href="../page_obstacles/page_obstacles.html" class="nav-button nav-prev" aria-label="Previous page: The Obstacles">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -574,15 +561,15 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="4" aria-valuemin="1" aria-valuemax="10">
-                <span class="progress-text">Page 4 of 10</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="7" aria-valuemin="1" aria-valuemax="10">
+                <span class="progress-text">Page 7 of 10</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 40%"></div>
+                    <div class="progress-fill" style="width: 70%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_temptations/page_temptations.html" class="nav-button nav-next" aria-label="Next page: The Temptations">
+            <a href="../page_turning_point/page_turning_point.html" class="nav-button nav-next" aria-label="Next page: The Turning Point">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
@@ -594,7 +581,7 @@
     <!-- Presentation Footer -->
     <footer class="presentation-footer">
         <div class="confidential-mark">Company Confidential</div>
-        <div class="page-counter">4 of 10</div>
+        <div class="page-counter">7 of 10</div>
     </footer>
     
     <!-- Shared JavaScript -->

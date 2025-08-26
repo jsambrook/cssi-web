@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Prudent Path Forward - AI Strategy for EvergreenHealth</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #006633;
+            --accent-blue: #007BFF;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 2rem;
+            margin: -1rem -1rem 2rem -1rem;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: var(--accent-blue);
+            width: 60%; /* 9/15 slides = 60% */
+            transition: width 0.3s ease;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        .headline {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .path-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .step {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 102, 51, 0.1);
+            border-left: 5px solid var(--accent-blue);
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 102, 51, 0.15);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--accent-blue);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            padding-top: 0.5rem;
+        }
+
+        .step p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--dark-gray);
+        }
+
+        .visual-element {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.05) 0%, rgba(0, 123, 255, 0.05) 100%);
+            border-radius: 12px;
+            border: 2px dashed var(--medium-gray);
+        }
+
+        .arrow-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: var(--accent-blue);
+        }
+
+        .flow-item {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--light-gray);
+            padding: 1rem 2rem;
+            margin: 2rem -1rem -1rem -1rem;
+            text-align: center;
+            border-top: 3px solid var(--primary-green);
+        }
+
+        .page-number {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-button:hover {
+            background: #004d26;
+            transform: translateY(-1px);
+        }
+
+        .nav-button:disabled {
+            background: var(--medium-gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .header {
+                padding: 1rem;
+                margin: -0.5rem -0.5rem 1rem -0.5rem;
+            }
+            
+            .path-steps {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .step {
+                padding: 1.5rem;
+            }
+            
+            .arrow-flow {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+            
+            .footer {
+                padding: 1rem;
+                margin: 1rem -0.5rem -0.5rem -0.5rem;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .nav-buttons, .progress-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>A four-step prudent path manages risk while enabling progress</h1>
+            <div class="progress-bar"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="content">
+                <div class="path-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Pilot with voice agents</h3>
+                        <p>Start with a focused, measurable pilot program to test AI capabilities in a controlled environment with clear success metrics.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Build internal capabilities</h3>
+                        <p>Develop staff expertise, establish governance frameworks, and create the organizational foundation for broader AI adoption.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Scale proven solutions</h3>
+                        <p>Expand successful pilot programs across departments while maintaining quality and compliance standards.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Integrate strategically</h3>
+                        <p>Connect AI solutions into broader digital health strategy, ensuring sustainable growth and competitive advantage.</p>
+                    </div>
+                </div>
+
+                <div class="visual-element">
+                    <div class="arrow-flow">
+                        <div class="flow-item">Pilot</div>
+                        <div class="arrow">→</div>
+                        <div class="flow-item">Build</div>
+                        <div class="arrow">→</div>
+                        <div class="flow-item">Scale</div>
+                        <div class="arrow">→</div>
+                        <div class="flow-item">Integrate</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="page-number">Page 9 of 15</div>
+            <nav class="nav-buttons">
+                <a href="../page_big_idea/page_big_idea.html" class="nav-button">
+                    ← Previous: The Big Idea
+                </a>
+                <a href="../page_benefits/page_benefits.html" class="nav-button">
+                    Next: The Benefits →
+                </a>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                window.location.href = '../page_big_idea/page_big_idea.html';
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                window.location.href = '../page_benefits/page_benefits.html';
+            } else if (e.key === 'Home') {
+                window.location.href = '../page_home/page_home.html';
+            }
+        });
+
+        // Touch gestures for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - next page
+                    window.location.href = '../page_benefits/page_benefits.html';
+                } else {
+                    // Swipe right - previous page
+                    window.location.href = '../page_big_idea/page_big_idea.html';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

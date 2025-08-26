@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Inciting Incident - AI Strategy for EvergreenHealth">
+    <meta name="description" content="The Temptations - AI Strategy for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>The Inciting Incident - AI Strategy for EvergreenHealth</title>
+    <title>The Temptations - AI Strategy for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="The Inciting Incident - AI Strategy for EvergreenHealth">
-    <meta property="og:description" content="The Risk of Falling Behind in AI Innovation">
+    <meta property="og:title" content="The Temptations - AI Strategy for EvergreenHealth">
+    <meta property="og:description" content="Two Tempting But Flawed Approaches">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -345,7 +345,7 @@
         }
         
         /* Page-specific styles */
-        .incident-headline {
+        .temptations-headline {
             font-size: var(--font-size-3xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-red);
@@ -357,126 +357,138 @@
             margin-right: auto;
         }
         
-        .threat-container {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-8);
             margin-top: var(--space-8);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .threat-item {
-            background: linear-gradient(135deg, var(--eh-grey-light) 0%, var(--eh-white) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--eh-red);
-            text-align: left;
-        }
-        
-        .threat-title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
-            color: var(--eh-red);
-            margin-bottom: var(--space-3);
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-        }
-        
-        .threat-icon {
-            font-size: var(--font-size-2xl);
-            color: var(--eh-red);
-        }
-        
-        .threat-description {
-            font-size: var(--font-size-base);
-            color: var(--eh-grey-dark);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        .risk-callout {
-            background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%);
-            border: 2px solid var(--eh-red);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            margin-top: var(--space-8);
+        .option-card {
+            background: var(--eh-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
             text-align: center;
+            border: 3px solid transparent;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
         }
         
-        .risk-title {
-            font-size: var(--font-size-xl);
-            font-weight: var(--font-weight-bold);
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--eh-red);
+        }
+        
+        .option-card--ignore::before {
+            background: linear-gradient(90deg, var(--eh-red) 0%, #ff6b6b 100%);
+        }
+        
+        .option-card--dive::before {
+            background: linear-gradient(90deg, #ff8c00 0%, var(--eh-red) 100%);
+        }
+        
+        .option-icon {
+            font-size: var(--font-size-6xl);
+            margin-bottom: var(--space-6);
+            display: block;
+        }
+        
+        .option-card--ignore .option-icon {
             color: var(--eh-red);
+        }
+        
+        .option-card--dive .option-icon {
+            color: #ff8c00;
+        }
+        
+        .option-title {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--eh-grey-dark);
             margin-bottom: var(--space-4);
         }
         
-        .risk-consequences {
+        .option-approach {
+            font-size: var(--font-size-lg);
+            color: var(--eh-grey-dark);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-6);
+            font-style: italic;
+        }
+        
+        .consequences {
             display: flex;
-            justify-content: space-around;
-            gap: var(--space-4);
-            margin-top: var(--space-4);
+            flex-direction: column;
+            gap: var(--space-3);
         }
         
         .consequence-item {
-            text-align: center;
-            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3);
+            background: var(--eh-grey-light);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            color: var(--eh-grey-dark);
         }
         
         .consequence-icon {
-            font-size: var(--font-size-2xl);
+            font-size: var(--font-size-lg);
             color: var(--eh-red);
-            margin-bottom: var(--space-2);
-        }
-        
-        .consequence-label {
-            font-size: var(--font-size-sm);
-            color: var(--eh-grey-dark);
-            font-weight: var(--font-weight-medium);
+            flex-shrink: 0;
         }
         
         /* Responsive adjustments */
         @media (min-width: 768px) {
-            .incident-headline {
+            .temptations-headline {
                 font-size: var(--font-size-4xl);
             }
         }
         
         @media (min-width: 1024px) {
-            .incident-headline {
+            .temptations-headline {
                 font-size: var(--font-size-5xl);
             }
         }
         
         @media (max-width: 768px) {
-            .incident-headline {
+            .temptations-headline {
                 font-size: var(--font-size-2xl);
                 margin-bottom: var(--space-6);
             }
             
-            .threat-container {
-                gap: var(--space-4);
+            .options-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
                 margin-top: var(--space-6);
             }
             
-            .threat-item {
-                padding: var(--space-4);
+            .option-card {
+                padding: var(--space-6);
             }
             
-            .threat-title {
-                font-size: var(--font-size-lg);
-                flex-direction: column;
-                text-align: center;
-                gap: var(--space-2);
+            .option-icon {
+                font-size: var(--font-size-4xl);
+                margin-bottom: var(--space-4);
             }
             
-            .risk-callout {
-                padding: var(--space-4);
-                margin-top: var(--space-6);
+            .option-title {
+                font-size: var(--font-size-xl);
             }
             
-            .risk-consequences {
-                flex-direction: column;
-                gap: var(--space-3);
+            .option-approach {
+                font-size: var(--font-size-base);
             }
             
             .presentation-page {
@@ -520,42 +532,50 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <h1 class="incident-headline">The risk: falling behind, losing market share and influence</h1>
+            <h1 class="temptations-headline">Two tempting options both lead to problems</h1>
             
-            <div class="threat-container">
-                <!-- AI Deployment -->
-                <div class="threat-item">
-                    <div class="threat-title">
-                        <span class="threat-icon">🚀</span>
-                        AI is here: early adopters are deploying voice agents and other tools
+            <div class="options-container">
+                <!-- Option 1: Ignore AI -->
+                <div class="option-card option-card--ignore">
+                    <span class="option-icon">🙈</span>
+                    <h2 class="option-title">Option 1</h2>
+                    <p class="option-approach">Ignore AI completely</p>
+                    
+                    <div class="consequences">
+                        <div class="consequence-item">
+                            <span class="consequence-icon">💰</span>
+                            <span>Short-term cost savings</span>
+                        </div>
+                        <div class="consequence-item">
+                            <span class="consequence-icon">⚠️</span>
+                            <span>Risk of becoming irrelevant</span>
+                        </div>
+                        <div class="consequence-item">
+                            <span class="consequence-icon">📉</span>
+                            <span>Competitive disadvantage</span>
+                        </div>
                     </div>
-                    <p class="threat-description">Healthcare AI implementations are moving from pilot to production across the industry.</p>
                 </div>
                 
-                <!-- Competitor Movement -->
-                <div class="threat-item">
-                    <div class="threat-title">
-                        <span class="threat-icon">⚡</span>
-                        Larger health systems are moving fast
-                    </div>
-                    <p class="threat-description">Providence and similar systems have resources to invest heavily in AI infrastructure and gain competitive advantages.</p>
-                </div>
-            </div>
-            
-            <div class="risk-callout">
-                <div class="risk-title">The Stakes</div>
-                <div class="risk-consequences">
-                    <div class="consequence-item">
-                        <div class="consequence-icon">📉</div>
-                        <div class="consequence-label">Market Share Loss</div>
-                    </div>
-                    <div class="consequence-item">
-                        <div class="consequence-icon">🏃‍♂️</div>
-                        <div class="consequence-label">Patient Migration</div>
-                    </div>
-                    <div class="consequence-item">
-                        <div class="consequence-icon">🔊</div>
-                        <div class="consequence-label">Reduced Influence</div>
+                <!-- Option 2: Dive in Blindly -->
+                <div class="option-card option-card--dive">
+                    <span class="option-icon">🏃‍♂️</span>
+                    <h2 class="option-title">Option 2</h2>
+                    <p class="option-approach">Dive in blindly</p>
+                    
+                    <div class="consequences">
+                        <div class="consequence-item">
+                            <span class="consequence-icon">💸</span>
+                            <span>Waste valuable resources</span>
+                        </div>
+                        <div class="consequence-item">
+                            <span class="consequence-icon">🚨</span>
+                            <span>Risk patient safety</span>
+                        </div>
+                        <div class="consequence-item">
+                            <span class="consequence-icon">⚡</span>
+                            <span>Implementation failures</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -566,7 +586,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_cast_context/page_cast_context.html" class="nav-button nav-prev" aria-label="Previous page: The Cast & Context">
+            <a href="../page_inciting_incident/page_inciting_incident.html" class="nav-button nav-prev" aria-label="Previous page: The Inciting Incident">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -574,15 +594,15 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="4" aria-valuemin="1" aria-valuemax="10">
-                <span class="progress-text">Page 4 of 10</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="5" aria-valuemin="1" aria-valuemax="10">
+                <span class="progress-text">Page 5 of 10</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 40%"></div>
+                    <div class="progress-fill" style="width: 50%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_temptations/page_temptations.html" class="nav-button nav-next" aria-label="Next page: The Temptations">
+            <a href="../page_obstacles/page_obstacles.html" class="nav-button nav-next" aria-label="Next page: The Obstacles">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
@@ -594,7 +614,7 @@
     <!-- Presentation Footer -->
     <footer class="presentation-footer">
         <div class="confidential-mark">Company Confidential</div>
-        <div class="page-counter">4 of 10</div>
+        <div class="page-counter">5 of 10</div>
     </footer>
     
     <!-- Shared JavaScript -->
