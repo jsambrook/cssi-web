@@ -76,29 +76,13 @@
   background: var(--eh-green-light);
 }
 
-/* Progress Indicator */
-.progress-indicator {
+/* Page Counter */
+.page-counter {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
   color: var(--eh-grey);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-}
-
-.progress-bar {
-  width: 120px;
-  height: 4px;
-  background: var(--eh-grey-light);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background: var(--eh-green);
-  border-radius: var(--radius-full);
-  transition: width var(--transition-base);
 }
 
 /* Logo Component */
@@ -337,11 +321,4 @@
     font-size: var(--font-size-xs);
   }
   
-  .progress-indicator {
-    gap: var(--space-2);
-  }
-  
-  .progress-bar {
-    width: 80px;
-  }
 }

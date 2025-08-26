@@ -15,9 +15,7 @@ class PresentationNavigator {
       'page_compassionate_intermediaries/page_compassionate_intermediaries',
       'page_workforce_solution/page_workforce_solution',
       'page_our_services/page_our_services',
-      'page_about_cssi/page_about_cssi',
-      'page_references/page_references',
-      'page_va_architecture/page_va_architecture'
+      'page_about_cssi/page_about_cssi'
     ];
     
     this.currentPageIndex = this.getCurrentPageIndex();
@@ -29,7 +27,6 @@ class PresentationNavigator {
   init() {
     this.setupKeyboardNavigation();
     this.setupTouchNavigation();
-    this.setupProgressIndicator();
     this.setupNavigationButtons();
     this.updatePageCounter();
   }
@@ -137,13 +134,6 @@ class PresentationNavigator {
     }
   }
   
-  setupProgressIndicator() {
-    const progressFill = document.querySelector('.progress-fill');
-    if (progressFill) {
-      const progress = ((this.currentPageIndex + 1) / this.totalPages) * 100;
-      progressFill.style.width = `${progress}%`;
-    }
-  }
   
   updatePageCounter() {
     const pageCounter = document.querySelector('.page-counter');
