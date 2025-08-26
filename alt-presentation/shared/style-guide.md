@@ -281,7 +281,7 @@ Use CSS custom properties for consistent spacing:
 ```html
 <footer class="presentation-footer">
   <div class="confidential-mark">Company Confidential</div>
-  <div class="page-counter">1 of 8</div>
+  <div class="page-counter">1 of 15</div>
 </footer>
 ```
 

@@ -46,12 +46,12 @@ The home page serves as the title slide for the presentation, creating a profess
 ### Interactive Elements
 - **Navigation Hint**: Subtle indication that this is a navigable presentation
 - **Next Page**: Clear way to proceed to next page (arrow, button, or swipe hint)
-- **Progress Indicator**: Show this is page 1 of 8 total pages
+- **Progress Indicator**: Show this is page 1 of 15 total pages
 
 ## Navigation Requirements
 
 ### Page Position
-- **Current Page**: 1 of 8
+- **Current Page**: 1 of 15
 - **Progress**: 12.5% (1/8 * 100)
 
 ### Navigation Links
