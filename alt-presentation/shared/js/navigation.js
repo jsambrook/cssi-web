@@ -7,20 +7,17 @@ class PresentationNavigator {
   constructor() {
     this.pages = [
       'page_home/page_home',
-      'page_orientation/page_orientation',
-      'page_cast_context/page_cast_context',
-      'page_inciting_incident/page_inciting_incident',
-      'page_temptations/page_temptations',
-      'page_obstacles/page_obstacles',
-      'page_core_dilemma/page_core_dilemma',
-      'page_turning_point/page_turning_point',
-      'page_big_idea/page_big_idea',
-      'page_prudent_path/page_prudent_path',
-      'page_benefits/page_benefits',
-      'page_call_to_action/page_call_to_action',
-      'page_future_vision/page_future_vision',
+      'page_healthcare_challenge/page_healthcare_challenge',
+      'page_eh_org_facts/page_eh_org_facts',
+      'page_eh_fin_facts/page_eh_fin_facts',
+      'page_challenges_and_trends/page_challenges_and_trends',
+      'page_introducing_voice_agents/page_introducing_voice_agents',
+      'page_compassionate_intermediaries/page_compassionate_intermediaries',
+      'page_workforce_solution/page_workforce_solution',
+      'page_our_services/page_our_services',
       'page_about_cssi/page_about_cssi',
-      'page_references/page_references'
+      'page_references/page_references',
+      'page_va_architecture/page_va_architecture'
     ];
     
     this.currentPageIndex = this.getCurrentPageIndex();
