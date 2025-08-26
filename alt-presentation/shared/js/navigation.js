@@ -7,17 +7,11 @@ class PresentationNavigator {
   constructor() {
     this.pages = [
       'page_home/page_home',
-      'page_healthcare_challenge/page_healthcare_challenge',
-      'page_eh_org_facts/page_eh_org_facts',
-      'page_eh_fin_facts/page_eh_fin_facts',
-      'page_challenges_and_trends/page_challenges_and_trends',
-      'page_introducing_voice_agents/page_introducing_voice_agents',
-      'page_compassionate_intermediaries/page_compassionate_intermediaries',
-      'page_workforce_solution/page_workforce_solution',
-      'page_our_services/page_our_services',
+      'page_orientation/page_orientation',
+      'page_cast_context/page_cast_context',
+      'page_inciting_incident/page_inciting_incident',
       'page_about_cssi/page_about_cssi',
-      'page_references/page_references',
-      'page_va_architecture/page_va_architecture'
+      'page_references/page_references'
     ];
     
     this.currentPageIndex = this.getCurrentPageIndex();

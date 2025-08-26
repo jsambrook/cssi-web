@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Common Sense Systems - AI Voice Agents for EvergreenHealth">
+    <meta name="description" content="The Inciting Incident - AI Strategy for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
-    <title>About CSSI - AI Voice Agents for EvergreenHealth</title>
+    <title>The Inciting Incident - AI Strategy for EvergreenHealth</title>
     
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Embedded Styles for Safari file:// compatibility -->
     
     <!-- Favicon and icons -->
     <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
     
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="About CSSI - AI Voice Agents for EvergreenHealth">
-    <meta property="og:description" content="Unlocking Value with Voice Agents: Opportunities for EvergreenHealth">
+    <meta property="og:title" content="The Inciting Incident - AI Strategy for EvergreenHealth">
+    <meta property="og:description" content="The Risk of Falling Behind in AI Innovation">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
     
@@ -210,8 +208,8 @@
         
         .page-content {
             width: 100%;
-            max-width: 1000px;
-            text-align: left;
+            max-width: var(--content-max-width);
+            text-align: center;
         }
         
         /* Logo */
@@ -347,185 +345,142 @@
         }
         
         /* Page-specific styles */
-        .about-container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: var(--space-16);
-            align-items: start;
-            max-width: 1200px;
-            margin: 0 auto;
+        .incident-headline {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--eh-red);
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--space-8);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .cssi-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: var(--space-8);
-            height: 100%;
-            min-height: 400px;
-        }
-        
-        .cssi-logo img {
-            max-width: 130%;
-            height: auto;
-            filter: drop-shadow(var(--shadow-md));
-        }
-        
-        .content-sections {
+        .threat-container {
             display: flex;
             flex-direction: column;
-            gap: var(--space-8);
+            gap: var(--space-6);
+            margin-top: var(--space-8);
         }
         
-        .section {
-            border-bottom: 2px solid var(--eh-grey-light);
-            padding-bottom: var(--space-6);
+        .threat-item {
+            background: linear-gradient(135deg, var(--eh-grey-light) 0%, var(--eh-white) 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--eh-red);
+            text-align: left;
         }
         
-        .section:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        
-        .section-title {
+        .threat-title {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
-            color: var(--eh-grey-dark);
-            margin-bottom: var(--space-4);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        
-        .section-content {
-            font-size: var(--font-size-lg);
-            color: var(--eh-grey-dark);
-            line-height: var(--line-height-relaxed);
-        }
-        
-        .section-content p {
+            color: var(--eh-red);
             margin-bottom: var(--space-3);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
         }
         
-        .section-content p:last-child {
-            margin-bottom: 0;
+        .threat-icon {
+            font-size: var(--font-size-2xl);
+            color: var(--eh-red);
         }
         
-        .highlight {
-            color: var(--eh-green);
-            font-weight: var(--font-weight-semibold);
-        }
-        
-        .highlight[href] {
-            text-decoration: none;
-            transition: color var(--transition-fast);
-        }
-        
-        .highlight[href]:hover {
-            color: var(--eh-green-dark);
-            text-decoration: underline;
-        }
-        
-        .highlight[href]:focus {
-            outline: 2px solid var(--eh-green);
-            outline-offset: 2px;
-        }
-        
-        /* Policy hover tooltip */
-        .policy-text {
-            position: relative;
-            cursor: help;
-            border-bottom: 2px dotted var(--eh-green);
-            transition: all var(--transition-fast);
-        }
-        
-        .policy-text:hover {
-            color: var(--eh-green-dark);
-        }
-        
-        .policy-tooltip {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-100%);
-            background: var(--eh-grey-dark);
-            color: var(--eh-white);
-            padding: var(--space-4);
-            border-radius: var(--radius-md);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-normal);
+        .threat-description {
+            font-size: var(--font-size-base);
+            color: var(--eh-grey-dark);
             line-height: var(--line-height-relaxed);
-            width: 400px;
-            max-width: 90vw;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--eh-grey);
-            z-index: var(--z-tooltip);
-            opacity: 0;
-            visibility: hidden;
-            transition: all var(--transition-base);
-            pointer-events: none;
         }
         
-        .policy-tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: var(--eh-grey-dark) transparent transparent transparent;
+        .risk-callout {
+            background: linear-gradient(135deg, #ffe6e6 0%, #fff0f0 100%);
+            border: 2px solid var(--eh-red);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin-top: var(--space-8);
+            text-align: center;
         }
         
-        .policy-text:hover .policy-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(-100%) translateY(-5px);
+        .risk-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--eh-red);
+            margin-bottom: var(--space-4);
+        }
+        
+        .risk-consequences {
+            display: flex;
+            justify-content: space-around;
+            gap: var(--space-4);
+            margin-top: var(--space-4);
+        }
+        
+        .consequence-item {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .consequence-icon {
+            font-size: var(--font-size-2xl);
+            color: var(--eh-red);
+            margin-bottom: var(--space-2);
+        }
+        
+        .consequence-label {
+            font-size: var(--font-size-sm);
+            color: var(--eh-grey-dark);
+            font-weight: var(--font-weight-medium);
         }
         
         /* Responsive adjustments */
-        @media (max-width: 1024px) {
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-8);
-                text-align: center;
+        @media (min-width: 768px) {
+            .incident-headline {
+                font-size: var(--font-size-4xl);
             }
-            
-            .cssi-logo {
-                padding: var(--space-4);
-            }
-            
-            .content-sections {
-                text-align: left;
+        }
+        
+        @media (min-width: 1024px) {
+            .incident-headline {
+                font-size: var(--font-size-5xl);
             }
         }
         
         @media (max-width: 768px) {
+            .incident-headline {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--space-6);
+            }
+            
+            .threat-container {
+                gap: var(--space-4);
+                margin-top: var(--space-6);
+            }
+            
+            .threat-item {
+                padding: var(--space-4);
+            }
+            
+            .threat-title {
+                font-size: var(--font-size-lg);
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-2);
+            }
+            
+            .risk-callout {
+                padding: var(--space-4);
+                margin-top: var(--space-6);
+            }
+            
+            .risk-consequences {
+                flex-direction: column;
+                gap: var(--space-3);
+            }
+            
             .presentation-page {
                 padding-bottom: calc(1rem + 60px + 1.5rem);
-            }
-            
-            .page-content {
-                max-width: 100%;
-            }
-            
-            .about-container {
-                gap: var(--space-6);
-            }
-            
-            .content-sections {
-                gap: var(--space-6);
-            }
-            
-            .section {
-                padding-bottom: var(--space-4);
-            }
-            
-            .section-title {
-                font-size: var(--font-size-lg);
-            }
-            
-            .section-content {
-                font-size: var(--font-size-base);
             }
             
             .navigation {
@@ -548,12 +503,6 @@
             .progress-bar {
                 width: 80px;
             }
-            
-            .policy-tooltip {
-                width: 300px;
-                font-size: var(--font-size-xs);
-                padding: var(--space-3);
-            }
         }
     </style>
 </head>
@@ -571,53 +520,42 @@
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
-            <div class="about-container">
-                <!-- Left Column: CSSI Logo -->
-                <div class="cssi-logo">
-                    <img src="../shared/assets/full_logo_5.png" alt="Common Sense Systems Logo" />
+            <h1 class="incident-headline">The risk: falling behind, losing market share and influence</h1>
+            
+            <div class="threat-container">
+                <!-- AI Deployment -->
+                <div class="threat-item">
+                    <div class="threat-title">
+                        <span class="threat-icon">🚀</span>
+                        AI is here: early adopters are deploying voice agents and other tools
+                    </div>
+                    <p class="threat-description">Healthcare AI implementations are moving from pilot to production across the industry.</p>
                 </div>
                 
-                <!-- Right Column: Content Sections -->
-                <div class="content-sections">
-                    <!-- Founded Section -->
-                    <div class="section">
-                        <h2 class="section-title">Founded in 1996</h2>
-                        <div class="section-content">
-                            <p>Specializing in value engineering, software, and AI solutions</p>
-                        </div>
+                <!-- Competitor Movement -->
+                <div class="threat-item">
+                    <div class="threat-title">
+                        <span class="threat-icon">⚡</span>
+                        Larger health systems are moving fast
                     </div>
-                    
-                    <!-- John Sambrook Section -->
-                    <div class="section">
-                        <h2 class="section-title">John Sambrook</h2>
-                        <div class="section-content">
-                            <p><span class="highlight">40+ years</span> in technology leadership;</p>
-                            <p>Embedded SW Development, Medical Devices;</p>
-                            <p>Former Director of Global Quality at <a href="https://sonosite.com" target="_blank" rel="noopener noreferrer" class="highlight">FujiFilm / Sonosite</a></p>
-                        </div>
+                    <p class="threat-description">Providence and similar systems have resources to invest heavily in AI infrastructure and gain competitive advantages.</p>
+                </div>
+            </div>
+            
+            <div class="risk-callout">
+                <div class="risk-title">The Stakes</div>
+                <div class="risk-consequences">
+                    <div class="consequence-item">
+                        <div class="consequence-icon">📉</div>
+                        <div class="consequence-label">Market Share Loss</div>
                     </div>
-                    
-                    <!-- Focus Section -->
-                    <div class="section">
-                        <h2 class="section-title">Focus</h2>
-                        <div class="section-content">
-                            <p>Delivering significant and measurable business value through custom business workflow automation and AI applications</p>
-                        </div>
+                    <div class="consequence-item">
+                        <div class="consequence-icon">🏃‍♂️</div>
+                        <div class="consequence-label">Patient Migration</div>
                     </div>
-                    
-                    <!-- Policy Section -->
-                    <div class="section">
-                        <h2 class="section-title">Policy</h2>
-                        <div class="section-content">
-                            <p>
-                                <span class="highlight policy-text">
-                                    It's win-win-win or it's no deal.
-                                    <span class="policy-tooltip">
-                                        In John's experience, any deal he considers must be a win for all stakeholders. This includes his client's customers, his client, and for himself. Deals that are not a win for all parties eventually fall apart. John is usually able to find ways to achieve such deals and this is why he insists on them.
-                                    </span>
-                                </span>
-                            </p>
-                        </div>
+                    <div class="consequence-item">
+                        <div class="consequence-icon">🔊</div>
+                        <div class="consequence-label">Reduced Influence</div>
                     </div>
                 </div>
             </div>
@@ -628,7 +566,7 @@
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
             <!-- Previous Page Button -->
-            <a href="../page_inciting_incident/page_inciting_incident.html" class="nav-button nav-prev" aria-label="Previous page: The Inciting Incident">
+            <a href="../page_cast_context/page_cast_context.html" class="nav-button nav-prev" aria-label="Previous page: The Cast & Context">
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m15 18-6-6 6-6"/>
                 </svg>
@@ -636,15 +574,15 @@
             </a>
             
             <!-- Progress Indicator -->
-            <div class="progress-indicator" role="progressbar" aria-valuenow="5" aria-valuemin="1" aria-valuemax="6">
-                <span class="progress-text">Page 5 of 6</span>
+            <div class="progress-indicator" role="progressbar" aria-valuenow="4" aria-valuemin="1" aria-valuemax="6">
+                <span class="progress-text">Page 4 of 6</span>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: 83%"></div>
+                    <div class="progress-fill" style="width: 67%"></div>
                 </div>
             </div>
             
             <!-- Next Page Button -->
-            <a href="../page_references/page_references.html" class="nav-button nav-next" aria-label="Next page: References">
+            <a href="../page_about_cssi/page_about_cssi.html" class="nav-button nav-next" aria-label="Next page: About CSSI">
                 Next
                 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="m9 18 6-6-6-6"/>
@@ -652,6 +590,12 @@
             </a>
         </div>
     </nav>
+    
+    <!-- Presentation Footer -->
+    <footer class="presentation-footer">
+        <div class="confidential-mark">Company Confidential</div>
+        <div class="page-counter">4 of 6</div>
+    </footer>
     
     <!-- Shared JavaScript -->
     <script src="../shared/js/navigation.js"></script>
