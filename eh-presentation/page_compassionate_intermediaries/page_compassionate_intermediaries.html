@@ -6,21 +6,21 @@
     <meta name="description" content="Voice Agents as Compassionate Intermediaries - AI Voice Agents for EvergreenHealth">
     <meta name="author" content="John Sambrook, Common Sense Systems, Inc.">
     <title>Compassionate Intermediaries - AI Voice Agents for EvergreenHealth</title>
-    
+
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Favicon and icons -->
     <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
     <link rel="icon" type="image/png" href="../shared/assets/favicon.png">
-    
+
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Compassionate Intermediaries - AI Voice Agents for EvergreenHealth">
     <meta property="og:description" content="Voice Agents as Neutral Intermediaries for Better Human Interactions">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../shared/assets/og-image.png">
-    
+
     <!-- Security headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -44,7 +44,7 @@
             --eh-grey-dark: #333333;
             --eh-teal: #20b2aa;
             --eh-teal-light: #e6f8f8;
-            
+
             --font-family-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-size-xs: 0.75rem;
             --font-size-sm: 0.875rem;
@@ -56,19 +56,19 @@
             --font-size-4xl: 2.25rem;
             --font-size-5xl: 3rem;
             --font-size-6xl: 3.75rem;
-            
+
             --font-weight-light: 300;
             --font-weight-normal: 400;
             --font-weight-medium: 500;
             --font-weight-semibold: 600;
             --font-weight-bold: 700;
-            
+
             --line-height-tight: 1.25;
             --line-height-snug: 1.375;
             --line-height-normal: 1.5;
             --line-height-relaxed: 1.625;
             --line-height-loose: 2;
-            
+
             --space-1: 0.25rem;
             --space-2: 0.5rem;
             --space-3: 0.75rem;
@@ -81,7 +81,7 @@
             --space-16: 4rem;
             --space-20: 5rem;
             --space-24: 6rem;
-            
+
             --radius-sm: 0.125rem;
             --radius: 0.25rem;
             --radius-md: 0.375rem;
@@ -89,17 +89,17 @@
             --radius-xl: 0.75rem;
             --radius-2xl: 1rem;
             --radius-full: 9999px;
-            
+
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            
+
             --transition-fast: 150ms ease;
             --transition-base: 250ms ease;
             --transition-slow: 350ms ease;
-            
+
             --z-dropdown: 1000;
             --z-sticky: 1020;
             --z-fixed: 1030;
@@ -108,36 +108,36 @@
             --z-popover: 1060;
             --z-tooltip: 1070;
             --z-toast: 1080;
-            
+
             --page-max-width: 1200px;
             --page-padding: 1.5rem;
             --content-max-width: 800px;
             --navigation-height: 60px;
         }
-        
+
         /* Reset */
         *, *::before, *::after {
             box-sizing: border-box;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
         }
-        
+
         /* Base styles */
         html {
             font-size: 16px;
             scroll-behavior: smooth;
             height: 100%;
         }
-        
+
         @supports (-webkit-touch-callout: none) {
             html {
                 height: -webkit-fill-available;
             }
         }
-        
+
         body {
             font-family: var(--font-family-primary);
             font-size: var(--font-size-base);
@@ -151,7 +151,7 @@
             min-height: 100vh;
             min-height: -webkit-fill-available;
         }
-        
+
         /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-weight: var(--font-weight-bold);
@@ -159,41 +159,41 @@
             letter-spacing: -0.025em;
             margin-bottom: var(--space-4);
         }
-        
+
         h1 {
             font-size: var(--font-size-4xl);
             color: var(--eh-green);
         }
-        
+
         @media (min-width: 768px) {
             h1 {
                 font-size: var(--font-size-5xl);
             }
         }
-        
+
         @media (min-width: 1024px) {
             h1 {
                 font-size: var(--font-size-6xl);
             }
         }
-        
+
         /* Links */
         a {
             color: var(--eh-blue);
             text-decoration: none;
             transition: color var(--transition-fast);
         }
-        
+
         a:hover {
             color: var(--eh-blue-dark);
             text-decoration: underline;
         }
-        
+
         a:focus {
             outline: 2px solid var(--eh-blue);
             outline-offset: 2px;
         }
-        
+
         /* Layout */
         .presentation-page {
             min-height: 100vh;
@@ -207,13 +207,13 @@
             position: relative;
             box-sizing: border-box;
         }
-        
+
         .page-content {
             width: 100%;
             max-width: 1000px;
             text-align: left;
         }
-        
+
         /* Logo */
         .logo {
             position: absolute;
@@ -221,24 +221,24 @@
             left: var(--space-6);
             z-index: var(--z-sticky);
         }
-        
+
         .logo img {
             height: 48px;
             width: auto;
             filter: drop-shadow(var(--shadow-sm));
         }
-        
+
         @media (max-width: 768px) {
             .logo {
                 top: var(--space-4);
                 left: var(--space-4);
             }
-            
+
             .logo img {
                 height: 36px;
             }
         }
-        
+
         /* Navigation */
         .navigation {
             position: fixed;
@@ -254,7 +254,7 @@
             z-index: var(--z-fixed);
             box-sizing: border-box;
         }
-        
+
         .nav-container {
             max-width: var(--page-max-width);
             margin: 0 auto;
@@ -262,7 +262,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .nav-button {
             display: inline-flex;
             align-items: center;
@@ -279,7 +279,7 @@
             transition: all var(--transition-fast);
             text-decoration: none;
         }
-        
+
         .nav-button:hover {
             background: var(--eh-green-dark);
             transform: translateY(-1px);
@@ -287,12 +287,12 @@
             color: var(--eh-white);
             text-decoration: none;
         }
-        
+
         .nav-button:focus {
             outline: 2px solid var(--eh-blue);
             outline-offset: 2px;
         }
-        
+
         .nav-button:disabled {
             background: var(--eh-grey-light);
             color: var(--eh-grey);
@@ -300,7 +300,7 @@
             transform: none;
             box-shadow: none;
         }
-        
+
         .progress-indicator {
             display: flex;
             align-items: center;
@@ -309,7 +309,7 @@
             font-size: var(--font-size-sm);
             font-weight: var(--font-weight-medium);
         }
-        
+
         .progress-bar {
             width: 120px;
             height: 4px;
@@ -317,14 +317,14 @@
             border-radius: var(--radius-full);
             overflow: hidden;
         }
-        
+
         .progress-fill {
             height: 100%;
             background: var(--eh-green);
             border-radius: var(--radius-full);
             transition: width var(--transition-base);
         }
-        
+
         .icon {
             display: inline-block;
             width: 1em;
@@ -332,7 +332,7 @@
             fill: currentColor;
             vertical-align: middle;
         }
-        
+
         /* Utility */
         .sr-only {
             position: absolute;
@@ -345,7 +345,7 @@
             white-space: nowrap;
             border: 0;
         }
-        
+
         /* Page-specific styles */
         .page-title {
             font-size: var(--font-size-3xl);
@@ -354,7 +354,7 @@
             margin-bottom: var(--space-8);
             text-align: center;
         }
-        
+
         .intro-section {
             background: var(--eh-teal-light);
             border-radius: var(--radius-lg);
@@ -362,41 +362,41 @@
             margin-bottom: var(--space-8);
             border-left: 4px solid var(--eh-teal);
         }
-        
+
         .intro-text {
             font-size: var(--font-size-lg);
             line-height: var(--line-height-relaxed);
             color: var(--eh-grey-dark);
             margin-bottom: var(--space-4);
         }
-        
+
         .intro-highlight {
             font-weight: var(--font-weight-semibold);
             color: var(--eh-teal);
         }
-        
+
         .benefits-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: var(--space-8);
             margin-bottom: var(--space-8);
         }
-        
+
         .benefit-section {
             background: var(--eh-white);
             border-radius: var(--radius-lg);
             padding: var(--space-6);
             box-shadow: var(--shadow);
         }
-        
+
         .benefit-section.staff {
             border-left: 4px solid var(--eh-blue);
         }
-        
+
         .benefit-section.patients {
             border-left: 4px solid var(--eh-green);
         }
-        
+
         .benefit-title {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
@@ -405,62 +405,62 @@
             align-items: center;
             gap: var(--space-3);
         }
-        
+
         .benefit-title.staff {
             color: var(--eh-blue);
         }
-        
+
         .benefit-title.patients {
             color: var(--eh-green);
         }
-        
+
         .benefit-icon {
             width: 24px;
             height: 24px;
             flex-shrink: 0;
         }
-        
+
         .benefit-list {
             list-style: none;
             padding: 0;
         }
-        
+
         .benefit-item {
             padding: var(--space-2) 0;
             border-bottom: 1px solid var(--eh-grey-light);
             font-size: var(--font-size-base);
             line-height: var(--line-height-relaxed);
         }
-        
+
         .benefit-item:last-child {
             border-bottom: none;
         }
-        
+
         .benefit-item strong {
             color: var(--eh-grey-dark);
         }
-        
+
         .case-study {
             background: var(--eh-green-light);
             border-radius: var(--radius-lg);
             padding: var(--space-6);
             border-left: 4px solid var(--eh-green);
         }
-        
+
         .case-study-title {
             font-size: var(--font-size-xl);
             font-weight: var(--font-weight-bold);
             color: var(--eh-green);
             margin-bottom: var(--space-4);
         }
-        
+
         .case-study-content {
             font-size: var(--font-size-base);
             line-height: var(--line-height-relaxed);
             color: var(--eh-grey-dark);
             margin-bottom: var(--space-4);
         }
-        
+
         .case-study-quote {
             font-style: italic;
             font-size: var(--font-size-lg);
@@ -469,53 +469,53 @@
             padding-left: var(--space-4);
             margin: var(--space-4) 0;
         }
-        
+
         .case-study-attribution {
             font-size: var(--font-size-sm);
             color: var(--eh-grey);
             text-align: right;
             margin-top: var(--space-2);
         }
-        
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .page-title {
                 font-size: var(--font-size-2xl);
                 margin-bottom: var(--space-6);
             }
-            
+
             .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: var(--space-6);
             }
-            
+
             .intro-section,
             .benefit-section,
             .case-study {
                 padding: var(--space-4);
             }
-            
+
             .presentation-page {
                 padding-bottom: calc(1rem + 60px + 1.5rem);
             }
-            
+
             .navigation {
                 padding: var(--space-3);
             }
-            
+
             .nav-container {
                 gap: var(--space-2);
             }
-            
+
             .nav-button {
                 padding: var(--space-2) var(--space-3);
                 font-size: var(--font-size-xs);
             }
-            
+
             .progress-indicator {
                 gap: var(--space-2);
             }
-            
+
             .progress-bar {
                 width: 80px;
             }
@@ -525,27 +525,27 @@
 <body>
     <!-- Skip navigation for accessibility -->
     <a href="#main-content" class="sr-only">Skip to main content</a>
-    
+
     <!-- Company Logo -->
     <div class="logo">
         <a href="https://common-sense.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Common Sense Systems website">
             <img src="../shared/assets/cssi_logo_symbol_1.png" alt="Common Sense Systems, Inc." width="48" height="48">
         </a>
     </div>
-    
+
     <!-- Main Presentation Content -->
     <main id="main-content" class="presentation-page" role="main">
         <div class="page-content">
             <h1 class="page-title">Voice Agents as Compassionate Intermediaries</h1>
-            
+
             <!-- Introduction Section -->
             <div class="intro-section">
                 <p class="intro-text">
-                    Healthcare interactions can be emotionally charged. Patients face stress from health concerns, financial burdens, and insurance complexities. Staff members arrive at work carrying their own daily pressures. 
-                    <span class="intro-highlight">AI voice agents serve as neutral, professional intermediaries</span>, protecting both sides while ensuring consistent, empathetic communication.
+                    Healthcare interactions can be emotionally charged. Patients face stress from health concerns, financial burdens, and insurance complexities. Staff members arrive at work carrying their own daily pressures.
+                    <span class="intro-highlight">AI voice agents can serve as neutral, professional intermediaries</span>, protecting both sides while ensuring consistent, empathetic communication.
                 </p>
             </div>
-            
+
             <!-- Benefits Grid -->
             <div class="benefits-grid">
                 <!-- Staff Benefits -->
@@ -563,7 +563,7 @@
                         <li class="benefit-item"><strong>24/7 Coverage:</strong> Reduces after-hours call burden on staff</li>
                     </ul>
                 </div>
-                
+
                 <!-- Patient Benefits -->
                 <div class="benefit-section patients">
                     <h2 class="benefit-title patients">
@@ -580,7 +580,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Case Study -->
             <div class="case-study">
                 <h2 class="case-study-title">Real-World Success: Ann in Property Management</h2>
@@ -597,7 +597,7 @@
             </div>
         </div>
     </main>
-    
+
     <!-- Navigation Controls -->
     <nav class="navigation" role="navigation" aria-label="Presentation navigation">
         <div class="nav-container">
@@ -608,7 +608,7 @@
                 </svg>
                 Previous
             </a>
-            
+
             <!-- Progress Indicator -->
             <div class="progress-indicator" role="progressbar" aria-valuenow="7" aria-valuemin="1" aria-valuemax="12">
                 <span class="progress-text">Page 7 of 12</span>
@@ -616,7 +616,7 @@
                     <div class="progress-fill" style="width: 58%"></div>
                 </div>
             </div>
-            
+
             <!-- Next Page Button -->
             <a href="../page_workforce_solution/page_workforce_solution.html" class="nav-button nav-next" aria-label="Next page: Workforce Solution">
                 Next
@@ -626,7 +626,7 @@
             </a>
         </div>
     </nav>
-    
+
     <!-- Shared JavaScript -->
     <script src="../shared/js/navigation.js"></script>
 </body>
