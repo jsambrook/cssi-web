@@ -1,313 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Consent - Common Sense Systems</title>
-    <meta name="description" content="SMS messaging consent and opt-out information for Common Sense Systems communications. Learn how we obtain consent and manage your preferences.">
-
-    <!-- Favicon Support -->
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-
-    <!-- Web App Manifest Support -->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <link rel="stylesheet" href="/css/styles.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWXX5J9NWB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MWXX5J9NWB');
-    </script>
-
- <!-- Schema Markup Start -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Common Sense Systems, Inc.",
-        "url": "https://common-sense.com/",
-        "logo": "https://common-sense.com/assets/img/logo.png",
-        "description": "Business process optimization, AI integration, workflow development, and custom software development. In business since 1996.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "11227 NE 128th St, #I-102",
-          "addressLocality": "Kirkland",
-          "addressRegion": "WA",
-          "postalCode": "98034",
-          "addressCountry": "US"
-        },
-        "telephone": "+1 (425) 979-2282",
-        "email": "info@common-sense.com",
-        "foundingDate": "1996",
-        "sameAs": [
-          "https://www.linkedin.com/company/common-sense-systems-inc",
-          "https://github.com/jsambrook"
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://common-sense.com/sms-consent.html",
-        "url": "https://common-sense.com/sms-consent.html",
-        "name": "SMS Consent - Common Sense Systems",
-        "isPartOf": {
-          "@id": "https://common-sense.com/"
-        },
-        "about": {
-          "@id": "https://common-sense.com/#organization"
-        },
-        "description": "SMS messaging consent and opt-out information for Common Sense Systems communications."
-      }
-    ]
-  }
-  </script>
-  <!-- Schema Markup End -->
-
+  <meta charset="utf-8">
+  <title>SMS Consent & Privacy – Common Sense Systems, Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#111}
+    .container{max-width:880px;margin:40px auto;padding:0 16px}
+    h1{font-size:2rem;margin:.5rem 0 1rem}
+    h2{margin:2rem 0 .5rem}
+    h3{margin:1.5rem 0 .25rem}
+    blockquote{background:#f7f7fb;border-left:4px solid #4453ff;padding:12px 16px;margin:.75rem 0;border-radius:6px}
+    .card{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:16px;margin:1rem 0}
+    .muted{color:#555}
+    .pill{display:inline-block;background:#eef;border:1px solid #dde;border-radius:999px;padding:2px 10px;font-size:.85rem}
+    footer{margin:3rem 0 1rem;color:#666}
+    code{background:#f0f0f0;padding:2px 6px;border-radius:4px}
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <span>Common Sense Systems, Inc.</span>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#process">Our Process</a></li>
-                    <li><a href="index.html#testimonials">Success Stories</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <main class="container">
+    <h1>SMS Consent & Privacy</h1>
+    <p class="muted">How we obtain consent for SMS communications, what we send, and how to opt out.</p>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>SMS Consent & Privacy</h1>
-                    <p>How we obtain consent for SMS communications, what we send, and how to opt out</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="card">
+      <h2>How We Obtain SMS Consent</h2>
+      <p>We only send text messages to clients and prospects who have clearly agreed to receive them. Our primary consent methods are:</p>
 
-    <!-- SMS Consent Content Section -->
-    <section class="about-content">
-        <div class="container">
-            <div class="about-section">
-                <p><strong>We offer helpful text message reminders and updates, but only if you want them.</strong> Here's how it works and how you stay in control.</p>
+      <h3>Verbal Consent</h3>
+      <p>During a phone call with one of our voice agents, we use the following script:</p>
+      <blockquote>
+        “Hi [Name], this is [Agent] from Common Sense Systems, Inc. We’d like to send you text messages about your services, such as scheduling, reminders, and important updates, from our toll-free number +1 (833) 570-5023. Message and data rates may apply, and frequency varies. You can reply STOP to opt out anytime and HELP for help. Do I have your permission to send these text messages?”
+      </blockquote>
+      <p>If you agree, our agent records your consent in our <strong>Postgres DB</strong>, including phone number, name (if provided), date/time, agent name/initials, call recording ID (when available), and consent source (Verbal or Keyword). A confirmation SMS is sent immediately.</p>
 
-                <h2>How to Sign Up</h2>
-                <p>There are two easy ways to get our text messages:</p>
+      <h3>Keyword Opt-In</h3>
+      <p>You may also opt in by texting an explicit keyword (e.g., <strong>YES</strong>) to our toll-free number <strong>+1 (833) 570-5023</strong>.</p>
 
-                <div class="about-grid">
-                    <div class="about-section">
-                        <h3>📞 Option 1: During a Phone Call</h3>
-                        <p>When you receive a call from Common Sense (either from a team member or our AI voice agent), you might be asked if you would like to receive helpful text messages about your appointments and updates.</p>
-                        <p><strong>Simply say "Yes"</strong> and you're all set! If you're not interested, just say "No" and we won't send you any text messages.</p>
-                    </div>
+      <p class="muted"><em>We do not send marketing or promotional texts without explicit prior agreement.</em></p>
+    </div>
 
-                    <div class="about-section">
-                        <h3>💬 Option 2: Text Us Directly</h3>
-                        <p>You can sign up anytime by sending a text message:</p>
-                        <p><strong>Text the word "YES"</strong> to <strong>+1 (833) 570-5023</strong></p>
-                        <p>You'll be signed up immediately!</p>
-                    </div>
-                </div>
+    <div class="card">
+      <h2>Types of Messages You May Receive</h2>
+      <ul>
+        <li>Appointment confirmations and reminders</li>
+        <li>Service updates and notifications</li>
+        <li>Contact information or follow-up details from a call</li>
+        <li>Responses to your inquiries</li>
+      </ul>
+    </div>
 
-                <hr>
+    <div class="card">
+      <h2>How to Revoke Your Consent</h2>
 
-                <h2>How We Obtain SMS Consent</h2>
-                <p>We only send text messages to clients and prospects who have clearly agreed to receive them. Our consent methods are:</p>
+      <h3>Text STOP <span class="pill">Fastest</span></h3>
+      <p>Reply <strong>STOP</strong> to any message from <strong>+1 (833) 570-5023</strong>. You will <strong>immediately</strong> receive a confirmation that you’ve been unsubscribed. For assistance, reply <strong>HELP</strong> to receive our support contact details. To resume messages after opting out, reply <strong>UNSTOP</strong>.</p>
 
-                <h3>• Verbal Consent</h3>
-                <p>During a phone call with one of our voice agents, we use the following script:</p>
-                <blockquote>
-                    <p>"Hi [Name], this is [Agent] from Common Sense Systems, Inc. We'd like to send you text messages about your services, such as scheduling, reminders, and important updates, from our toll-free number +1 (833) 570-5023. Message and data rates may apply, and frequency varies. You can reply STOP to opt out anytime and HELP for help. Do I have your permission to send these text messages?"</p>
-                </blockquote>
-                <p>If the person agrees, our agent records the consent in our CRM (phone number, name, date/time, agent name/initials, and call recording ID where available). A confirmation SMS is sent immediately.</p>
+      <h3>Contact Us</h3>
+      <ul>
+        <li><strong>Call us (voice only):</strong> (425) 979-2282</li>
+        <li><strong>Email:</strong> <a href="mailto:info@common-sense.com">info@common-sense.com</a></li>
+        <li><a href="/contact">Contact form</a></li>
+      </ul>
+    </div>
 
-                <h3>• Keyword Opt-In</h3>
-                <p>You may also opt in by texting an explicit keyword (e.g., YES) to our toll-free number +1 (833) 570-5023.</p>
+    <div class="card">
+      <h2>Important Information</h2>
+      <p><strong>Message Frequency.</strong> Typically 1–4 messages per month, unless you request additional updates.</p>
+      <p><strong>Message and Data Rates.</strong> Standard carrier message and data rates may apply. We do not charge for SMS messages.</p>
+      <p><strong>Supported Carriers.</strong> We work with all major U.S. carriers. Delivery and timing may vary by provider.</p>
+      <p><strong>Privacy.</strong> Your phone number and SMS preferences are protected under our privacy practices. We do not share your information with third parties without your consent.</p>
+      <p class="muted">Last updated: <span id="last-updated">2025-09-17</span></p>
+    </div>
 
-                <p><em>We do not send marketing or promotional texts without explicit prior agreement.</em></p>
+    <div class="card">
+      <h2>Questions or Concerns?</h2>
+      <p>If you have any questions about our SMS consent practices or need help with your preferences, please contact us:</p>
+      <ul>
+        <li><strong>Phone (voice only):</strong> (425) 979-2282</li>
+        <li><strong>Email:</strong> <a href="mailto:info@common-sense.com">info@common-sense.com</a></li>
+        <li><a href="/contact">Contact Us Online</a></li>
+      </ul>
+    </div>
 
-                <hr>
-
-                <h2>What Happens Next</h2>
-                <p><strong>Once you say yes to text messages:</strong></p>
-                <ol>
-                    <li><strong>You'll get a confirmation text</strong> letting you know you're signed up</li>
-                    <li><strong>We'll start sending you helpful messages</strong> such as:
-                        <ul>
-                            <li>Appointment confirmations and reminders</li>
-                            <li>Service updates and notifications</li>
-                            <li>Contact information or follow-up details from a call</li>
-                            <li>Responses to your inquiries</li>
-                        </ul>
-                    </li>
-                </ol>
-
-                <hr>
-
-                <h2>How to Revoke Your Consent</h2>
-                <p><strong>You can change your mind anytime.</strong> You can stop SMS messages from us using any of these methods:</p>
-
-                <h3>• Text STOP (Fastest)</h3>
-                <p>Reply <strong>STOP</strong> to any message from +1 (833) 570-5023. You will receive a confirmation that you've been unsubscribed. For assistance, reply <strong>HELP</strong>. To resume messages after opting out, reply <strong>UNSTOP</strong>.</p>
-
-                <h3>• Contact Us</h3>
-                <ul>
-                    <li>Call us (voice only) at <a href="tel:+14259792282">(425) 979-2282</a></li>
-                    <li>Email us at <a href="mailto:support@common-sense.com">support@common-sense.com</a></li>
-                    <li>Use our <a href="contact.html">contact form</a></li>
-                </ul>
-
-                <hr>
-
-                <h2>Important Information</h2>
-
-                <h3>Our Promise to You</h3>
-                <ul>
-                    <li><strong>We only text people who ask for it</strong> - No surprise messages</li>
-                    <li><strong>We respect your choice</strong> - Easy to stop anytime</li>
-                    <li><strong>We confirm everything</strong> - You'll always know when something changes</li>
-                    <li><strong>Help is available</strong> - Text "HELP" or call (425) 979-2282 (voice only)</li>
-                </ul>
-
-                <h3>The Details</h3>
-                <ul>
-                    <li><strong>Our text number:</strong> +1 (833) 570-5023</li>
-                    <li><strong>Message frequency:</strong> Typically 1–4 messages per month, unless you request additional updates</li>
-                    <li><strong>Message and data rates:</strong> Standard carrier message and data rates may apply. We do not charge for SMS messages</li>
-                    <li><strong>Supported carriers:</strong> We work with all major U.S. carriers. Delivery and timing may vary by provider</li>
-                    <li><strong>Privacy:</strong> Your phone number and SMS preferences are protected under our privacy practices. We do not share your information with third parties without your consent</li>
-                </ul>
-
-                <hr>
-
-                <h2>Questions About Text Messages?</h2>
-
-                <div class="about-grid">
-                    <div class="about-section">
-                        <h3>"What if I'm not sure I said yes?"</h3>
-                        <p>Don't worry! We keep records of all opt-ins. If you're getting messages you don't want, just text "STOP" and we'll stop immediately.</p>
-
-                        <h3>"Can I sign up again if I change my mind?"</h3>
-                        <p>Absolutely! Just text "YES" to +1 (833) 570-5023 anytime.</p>
-                    </div>
-
-                    <div class="about-section">
-                        <h3>"What if the messages aren't helpful?"</h3>
-                        <p>Text "HELP" to get our contact information, or call us at (425) 979-2282 (voice only). We want to make sure our messages are useful to you.</p>
-
-                        <h3>"Will you sell my phone number?"</h3>
-                        <p>No. We only use your phone number to send you the messages you've requested. We don't share or sell your contact information.</p>
-                    </div>
-                </div>
-
-                <hr>
-
-                <h2>Questions or Concerns?</h2>
-                <p>If you have any questions about our SMS consent practices or need help with your preferences, please contact us:</p>
-
-                <ul>
-                    <li><strong>Phone (voice only):</strong> <a href="tel:+14259792282">(425) 979-2282</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:support@common-sense.com">support@common-sense.com</a></li>
-                    <li><strong>Contact Form:</strong> <a href="contact.html">Contact Us Online</a></li>
-                </ul>
-
-                <p>We're committed to respectful, transparent communication at all times.</p>
-
-                <p class="small">Last updated: <time datetime="2025-09-17">September 17, 2025</time>.</p>
-
-                <p style="text-align: center; font-style: italic; color: #666; margin-top: 40px;">
-                    This text message service helps us keep you informed about important appointments and updates. You're always in control of what messages you receive.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-company">
-                    <h3>Common Sense</h3>
-                    <p>We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="payments.html">Payments</a></li>
-                        <li><a href="sms-consent.html">SMS Consent</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="ai-integration.html">AI Integration</a></li>
-                        <li><a href="process-automation.html">Process Automation</a></li>
-                        <li><a href="revenue-improvement.html">Revenue Improvement</a></li>
-                        <li><a href="consulting.html">Consulting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:contact@common-sense.com">contact@common-sense.com</a></li>
-                        <li><a href="tel:+14259792282">main: (425) 979-2282</a></li>
-                        <li><a href="tel:+14255019074">john: (425) 501-9074</a></li>
-                        <li><a href="https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034">11227 NE 128 ST, Unit I-102</a></li>
-                        <li><a href="https://maps.google.com/?q=Kirkland,+WA+98034">Kirkland, WA 98034</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 1996-2025 Common Sense Systems, Inc. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Navigation Toggle Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-
-            menuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-
-            // Close mobile menu when clicking on a link
-            const navLinkItems = document.querySelectorAll('.nav-links a');
-            navLinkItems.forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                });
-            });
-        });
-    </script>
+    <footer>© 1996–2025 Common Sense Systems, Inc.</footer>
+  </main>
 </body>
 </html>
