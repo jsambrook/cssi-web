@@ -1,0 +1,9 @@
+STOP: Common Sense Systems: You’re unsubscribed and will no longer receive texts from +1 (833) 570-5023. For help reply HELP. To resume later, reply UNSTOP.
+
+HELP: Common Sense Systems support:
+- Email: info@common-sense.com
+- Voice (no SMS): (425) 979-2282
+- Consent details: https://common-sense.com/sms-consent.html
+Msg&Data Rates May Apply. Reply STOP to opt out.
+
+UNSTOP: Common Sense Systems: You’re opted back in. You will resume receiving texts from +1 (833) 570-5023. Reply STOP to opt out, HELP for help.
