@@ -5,7 +5,13 @@
       "Bash(mkdir:*)",
       "Bash(python:*)",
       "Bash(rm:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Read(//Users/john/git/cssi-twilio/**)",
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "WebFetch(domain:common-sense.com)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   },
   "enableAllProjectMcpServers": false
