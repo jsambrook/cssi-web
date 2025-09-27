@@ -42,137 +42,7 @@
     }
     </script>
     <!-- Schema Markup End -->
-
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="/index.html" class="logo">
-                    <span>Common Sense Systems, Inc.</span>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="/index.html#services">Services</a></li>
-                    <li><a href="/index.html#process">Our Process</a></li>
-                    <li><a href="/index.html#testimonials">Success Stories</a></li>
-                    <li><a href="/index.html#contact">Contact</a></li>
-                </ul>
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Understanding Voice Agents</h1>
-                    <p>Discover the power of AI-powered conversational technology through interactive demonstrations and expert insights.</p>
-                    <div class="hero-buttons">
-                        <a href="#voice-agent-demo" class="btn">Try Voice Agent</a>
-                        <a href="/voice-agents.html" class="btn secondary">Explore All Solutions</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="/assets/img/business_automation_1_500x400.jpg" alt="Voice agent technology demonstration">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Voice Agents Section -->
-    <section id="voice-agent-demo" class="voice-agents">
-        <div class="container">
-            <div class="section-title">
-                <h2>Interactive Voice Agent Demonstration</h2>
-                <p>Experience voice agent technology firsthand while learning about its capabilities and applications.</p>
-            </div>
-
-            <div class="voice-agent-container">
-                <h3>Voice Agent Advisor</h3>
-                <p>Experience a voice agent while learning about voice agents. Eric demonstrates the technology while sharing insights about what makes voice agents valuable, what companies are achieving with them, and what foundations need to be in place for success.</p>
-
-                <p>This is both a demonstration and an educational conversation about the possibilities of voice agent technology. Ask Eric about:</p>
-                <ul>
-                    <li>How voice agents work and what makes them effective</li>
-                    <li>Real-world applications and success stories</li>
-                    <li>Implementation considerations and best practices</li>
-                    <li>The technology foundations needed for success</li>
-                    <li>Cost considerations and ROI expectations</li>
-                </ul>
-
-                <div class="agent-widget">
-                    <div class="cta-section">
-                        <h4>Try Me Now!</h4>
-                        <p>Click the "Start a call" button to experience voice agent technology firsthand. Ask Eric about voice agents, implementation strategies, or anything you'd like to know!</p>
-                        <span class="arrow">→</span>
-                    </div>
-                    <div class="widget-section">
-                        <iframe src="va-advisor.html" width="100%" height="150" frameborder="0"></iframe>
-                    </div>
-                </div>
-
-                <p>After speaking with Eric, you'll have a clear understanding of how voice agents can benefit your organization. The conversation is designed to be both informative and interactive, giving you firsthand experience with the technology while learning about its practical applications.</p>
-            </div>
-
-            <div class="voice-agent-container">
-                <h3>What Are Voice Agents?</h3>
-                <p>Voice agents are AI-powered conversational interfaces that can engage in natural, spoken dialogue with users. Unlike traditional chatbots that rely on text, voice agents use speech recognition and synthesis to create more natural, accessible interactions.</p>
-
-                <p>Key capabilities include:</p>
-                <ul>
-                    <li><strong>Natural Language Understanding:</strong> Comprehend complex questions and requests</li>
-                    <li><strong>Contextual Conversations:</strong> Maintain context throughout extended dialogues</li>
-                    <li><strong>Domain Expertise:</strong> Provide specialized knowledge in specific fields</li>
-                    <li><strong>24/7 Availability:</strong> Offer consistent service without breaks or downtime</li>
-                    <li><strong>Scalable Support:</strong> Handle multiple conversations simultaneously</li>
-                </ul>
-            </div>
-
-            <div class="voice-agent-container">
-                <h3>Business Applications</h3>
-                <p>Voice agents are transforming how organizations interact with customers, employees, and stakeholders:</p>
-
-                <h4>Customer Service</h4>
-                <p>Handle routine inquiries, provide product information, troubleshoot issues, and escalate complex cases to human agents when needed.</p>
-
-                <h4>Sales Support</h4>
-                <p>Qualify leads, provide product demonstrations, answer pricing questions, and guide prospects through the sales process.</p>
-
-                <h4>Internal Operations</h4>
-                <p>Assist employees with HR policies, IT support, training resources, and internal procedures.</p>
-
-                <h4>Public Engagement</h4>
-                <p>Provide information about services, answer frequently asked questions, and engage with community members for government and non-profit organizations.</p>
-            </div>
-
-            <div class="voice-agent-container">
-                <h3>Implementation Considerations</h3>
-                <p>Successful voice agent deployment requires careful planning and the right technical foundations:</p>
-
-                <h4>Content Strategy</h4>
-                <p>Developing comprehensive knowledge bases and conversation flows tailored to your specific domain and audience needs.</p>
-
-                <h4>Voice Design</h4>
-                <p>Creating natural, engaging conversational experiences that reflect your brand personality and communication style.</p>
-
-                <h4>Integration Planning</h4>
-                <p>Ensuring seamless integration with existing systems, workflows, and customer service processes.</p>
-
-                <h4>Performance Monitoring</h4>
-                <p>Establishing metrics and feedback loops to continuously improve agent performance and user satisfaction.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <style>
+<style>
       /* Voice agent specific styles */
       .voice-agent-container {
         max-width: 800px;
@@ -294,8 +164,225 @@
         }
       }
     </style>
+<style>
+  #cssi-sam-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    color: #333;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 15px;
+    border-radius: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 10000;
+    transition: background-color 0.3s ease;
+  }
 
-    <!-- CTA Section -->
+  #cssi-sam-toggle:hover {
+    background-color: #f5f5f5;
+  }
+
+  #cssi-sam-toggle span {
+    white-space: nowrap;
+  }
+
+  #cssi-sam-modal {
+    display: none;
+  }
+
+  #cssi-sam-modal.active {
+    display: block;
+  }
+
+  #cssi-sam-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10001;
+  }
+
+  #cssi-sam-frame-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 800px;
+    height: 85vh;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index: 10002;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #cssi-sam-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+  }
+
+  #cssi-sam-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10003;
+  }
+</style>
+<style>
+  .agent-widget iframe,
+  .widget-section iframe,
+  iframe.responsive-iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/index.html" class="logo">
+                    <span>Common Sense Systems, Inc.</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/index.html#services">Services</a></li>
+                    <li><a href="/index.html#process">Our Process</a></li>
+                    <li><a href="/index.html#testimonials">Success Stories</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Understanding Voice Agents</h1>
+                    <p>Discover the power of AI-powered conversational technology through interactive demonstrations and expert insights.</p>
+                    <div class="hero-buttons">
+                        <a href="#voice-agent-demo" class="btn">Try Voice Agent</a>
+                        <a href="/voice-agents.html" class="btn secondary">Explore All Solutions</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/assets/img/business_automation_1_500x400.jpg" alt="Voice agent technology demonstration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Agents Section -->
+    <section id="voice-agent-demo" class="voice-agents">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interactive Voice Agent Demonstration</h2>
+                <p>Experience voice agent technology firsthand while learning about its capabilities and applications.</p>
+            </div>
+
+            <div class="voice-agent-container">
+                <h3>Voice Agent Advisor</h3>
+                <p>Experience a voice agent while learning about voice agents. Eric demonstrates the technology while sharing insights about what makes voice agents valuable, what companies are achieving with them, and what foundations need to be in place for success.</p>
+
+                <p>This is both a demonstration and an educational conversation about the possibilities of voice agent technology. Ask Eric about:</p>
+                <ul>
+                    <li>How voice agents work and what makes them effective</li>
+                    <li>Real-world applications and success stories</li>
+                    <li>Implementation considerations and best practices</li>
+                    <li>The technology foundations needed for success</li>
+                    <li>Cost considerations and ROI expectations</li>
+                </ul>
+
+                <div class="agent-widget">
+                    <div class="cta-section">
+                        <h4>Try Me Now!</h4>
+                        <p>Click the "Start a call" button to experience voice agent technology firsthand. Ask Eric about voice agents, implementation strategies, or anything you'd like to know!</p>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="widget-section">
+                        <iframe src="va-advisor.html" height="150"></iframe>
+                    </div>
+                </div>
+
+                <p>After speaking with Eric, you'll have a clear understanding of how voice agents can benefit your organization. The conversation is designed to be both informative and interactive, giving you firsthand experience with the technology while learning about its practical applications.</p>
+            </div>
+
+            <div class="voice-agent-container">
+                <h3>What Are Voice Agents?</h3>
+                <p>Voice agents are AI-powered conversational interfaces that can engage in natural, spoken dialogue with users. Unlike traditional chatbots that rely on text, voice agents use speech recognition and synthesis to create more natural, accessible interactions.</p>
+
+                <p>Key capabilities include:</p>
+                <ul>
+                    <li><strong>Natural Language Understanding:</strong> Comprehend complex questions and requests</li>
+                    <li><strong>Contextual Conversations:</strong> Maintain context throughout extended dialogues</li>
+                    <li><strong>Domain Expertise:</strong> Provide specialized knowledge in specific fields</li>
+                    <li><strong>24/7 Availability:</strong> Offer consistent service without breaks or downtime</li>
+                    <li><strong>Scalable Support:</strong> Handle multiple conversations simultaneously</li>
+                </ul>
+            </div>
+
+            <div class="voice-agent-container">
+                <h3>Business Applications</h3>
+                <p>Voice agents are transforming how organizations interact with customers, employees, and stakeholders:</p>
+
+                <h4>Customer Service</h4>
+                <p>Handle routine inquiries, provide product information, troubleshoot issues, and escalate complex cases to human agents when needed.</p>
+
+                <h4>Sales Support</h4>
+                <p>Qualify leads, provide product demonstrations, answer pricing questions, and guide prospects through the sales process.</p>
+
+                <h4>Internal Operations</h4>
+                <p>Assist employees with HR policies, IT support, training resources, and internal procedures.</p>
+
+                <h4>Public Engagement</h4>
+                <p>Provide information about services, answer frequently asked questions, and engage with community members for government and non-profit organizations.</p>
+            </div>
+
+            <div class="voice-agent-container">
+                <h3>Implementation Considerations</h3>
+                <p>Successful voice agent deployment requires careful planning and the right technical foundations:</p>
+
+                <h4>Content Strategy</h4>
+                <p>Developing comprehensive knowledge bases and conversation flows tailored to your specific domain and audience needs.</p>
+
+                <h4>Voice Design</h4>
+                <p>Creating natural, engaging conversational experiences that reflect your brand personality and communication style.</p>
+
+                <h4>Integration Planning</h4>
+                <p>Ensuring seamless integration with existing systems, workflows, and customer service processes.</p>
+
+                <h4>Performance Monitoring</h4>
+                <p>Establishing metrics and feedback loops to continuously improve agent performance and user satisfaction.</p>
+            </div>
+
+        </div>
+    </section>
+<!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Implement Voice Agents?</h2>
@@ -406,89 +493,6 @@
 </div>
 
 <!-- Chatbot Styles -->
-<style>
-  #cssi-sam-toggle {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background-color: #ffffff;
-    color: #333;
-    font-weight: 500;
-    font-family: sans-serif;
-    font-size: 15px;
-    border-radius: 24px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 10000;
-    transition: background-color 0.3s ease;
-  }
-
-  #cssi-sam-toggle:hover {
-    background-color: #f5f5f5;
-  }
-
-  #cssi-sam-toggle span {
-    white-space: nowrap;
-  }
-
-  #cssi-sam-modal {
-    display: none;
-  }
-
-  #cssi-sam-modal.active {
-    display: block;
-  }
-
-  #cssi-sam-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10001;
-  }
-
-  #cssi-sam-frame-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    max-width: 800px;
-    height: 85vh;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    overflow: hidden;
-    z-index: 10002;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #cssi-sam-iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-  }
-
-  #cssi-sam-close {
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    background: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10003;
-  }
-</style>
-
 <!-- Chatbot Script -->
 <script>
   const toggleBtn = document.getElementById('cssi-sam-toggle');
