@@ -1,7 +1,7 @@
 
 
 --- Markdown synthesized from ./www/about.html ---
-# About Us - Common Sense Systems
+# About Common Sense Systems
 
 ## Innovating with AI & Business Intelligence
 
@@ -17,25 +17,23 @@ Please contact us anytime to arrange a meeting.
 
 ---
 
-## Footer
+## Company
 
-### Common Sense
-We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.
-
-### Company
 - [About Us](about.html)
 - [Team](team.html)
 - [Payments](payments.html)
 - [SMS Consent](sms-consent.html)
 - [Privacy Policy](privacy.html)
 
-### Services
+## Services
+
 - [AI Integration](ai-integration.html)
 - [Process Automation](process-automation.html)
 - [Revenue Improvement](revenue-improvement.html)
 - [Consulting](consulting.html)
 
-### Contact
+## Contact
+
 - [contact@common-sense.com](mailto:contact@common-sense.com)
 - main: [(425) 979-2282](tel:+14259792282)
 - john: [(425) 501-9074](tel:+14255019074)
@@ -54,13 +52,10 @@ We help businesses leverage automation and AI to work smarter, optimize processe
 
 ## Additional HTML Elements
 
-- **Favicon Support**: Multiple favicon formats provided (ICO, PNG 96×96, SVG, Apple-touch-icon 180×180) with corresponding `<link>` tags.
-- **Web App Manifest**: A `manifest.json` file is linked for PWA support, and a theme-color meta tag is set to `#ffffff`.
-- **Google Analytics**: Global site tag (gtag.js) with tracking ID `G-MWXX5J9NWB` is loaded asynchronously.
-- **Schema Markup**: JSON-LD structured data describing the organization, website, and services (Business Process Optimization, AI Integration, Custom Software Development) is embedded.
-- **Voice Agent**: An ElevenLabs conversational AI widget (`<elevenlabs-convai>`) is included with agent-id `XRQKG0KZygCOvX9xpVv2`.
-- **CSSI-SAM Chatbot Widget**: A custom toggle button and modal containing an iframe that loads `https://common-sense.com/cssi-sam`, allowing microphone and fullscreen permissions.
-- **Mobile Menu Toggle**: JavaScript toggles an `.active` class on `.nav-links` and animates hamburger spans into an “X” on click; menu closes when a link is clicked.
+- **Voice agent widget**: Embedded ElevenLabs conversational AI (`<elevenlabs-convai>`) appears in the bottom-left of the page.
+- **CSSI-SAM chatbot**: A fixed-position toggle button labeled “Chat with Sam” opens a modal iframe containing an interactive chatbot.
+- **Mobile hamburger menu**: JavaScript-controlled navigation that transforms three spans into an “X” icon when activated.
+- **Structured data**: JSON-LD schema for Organization, WebSite, and WebPage entities is injected in the `<head>`.
 
 
 --- Markdown synthesized from ./www/contact.html ---
@@ -81,15 +76,6 @@ Book a one-on-one consultation to discuss your business needs and explore how we
 
 ---
 
-## Contact Details
-
-- **Email:** [contact@common-sense.com](mailto:contact@common-sense.com)  
-- **Main:** [(425) 979-2282](tel:+14259792282)  
-- **John:** [(425) 501-9074](tel:+14255019074)  
-- **Address:** [11227 NE 128 ST, Unit I-102, Kirkland, WA 98034](https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034)
-
----
-
 ## Company
 
 - [About Us](about.html)  
@@ -105,7 +91,13 @@ Book a one-on-one consultation to discuss your business needs and explore how we
 - [Revenue Improvement](revenue-improvement.html)  
 - [Consulting](consulting.html)
 
----
+## Contact
+
+- [contact@common-sense.com](mailto:contact@common-sense.com)  
+- main: [(425) 979-2282](tel:+14259792282)  
+- john: [(425) 501-9074](tel:+14255019074)  
+- [11227 NE 128 ST, Unit I-102](https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034)  
+- [Kirkland, WA 98034](https://maps.google.com/?q=Kirkland,+WA+98034)
 
 © 1996-2025 Common Sense Systems, Inc. All rights reserved.
 
@@ -119,29 +111,24 @@ Book a one-on-one consultation to discuss your business needs and explore how we
 
 ## Additional HTML Elements
 
-- **Favicon & Web-App Manifest:** Multiple favicon formats and a `manifest.json` for PWA support.  
-- **Google Analytics:** Global site tag (gtag.js) with ID `G-MWXX5J9NWB`.  
-- **Schema Markup:** JSON-LD structured data for Organization, WebSite, and WebPage entities, including services, address, and contact points.  
-- **CSSI-SAM Chatbot Widget:** Fixed-position toggle button and modal iframe embedding `https://common-sense.com/cssi-sam` with microphone/fullscreen permissions.  
-- **ElevenLabs Voice Agent:** Embedded `<elevenlabs-convai>` widget with agent-id `XRQKG0KZygCOvX9xpVv2`.
+- **Favicon & Web-App Manifest**: Multiple favicon formats and a `manifest.json` for PWA support.  
+- **Google Analytics**: Global site tag (gtag.js) with ID `G-MWXX5J9NWB`.  
+- **Schema Markup**: JSON-LD structured data for Organization, WebSite, and WebPage entities, including services, address, and contact details.  
+- **ElevenLabs Voice Agent**: Embedded `<elevenlabs-convai>` widget with agent-id `XRQKG0KZygCOvX9xpVv2`.  
+- **CSSI-SAM Chatbot**: Custom toggle button and modal containing an iframe to `https://common-sense.com/cssi-sam`; allows microphone and fullscreen.
 
 
 --- Markdown synthesized from ./www/index.html ---
-# Common Sense Systems, Inc. | Process Automation & AI Solutions
+# Common Sense Systems, Inc. | Process Automation & AI Solutions for Your Business
 
-## Hero Section
-
-### Process Automation & AI Solutions for Your Business
 We help businesses streamline operations and leverage artificial intelligence to work smarter, not harder.
 
-[Get Started](#contact)  
-[Our Services](#services)
-
-![Business process automation solutions for increased efficiency](/assets/img/business_automation_1_500x400.jpg)
+[Get Started](#contact) [Our Services](#services)
 
 ---
 
 ## Our Services
+
 We offer tailored solutions to optimize your business processes and integrate AI to drive growth.
 
 ### Voice Agents
@@ -159,6 +146,7 @@ Implement targeted strategies to boost your bottom line through optimized pricin
 ---
 
 ## Our Process
+
 A proven methodology that delivers consistent results for businesses of all sizes.
 
 1. **Discovery**  
@@ -176,6 +164,7 @@ A proven methodology that delivers consistent results for businesses of all size
 ---
 
 ## Success Stories
+
 Hear from businesses that have transformed their operations with our solutions.
 
 > Common Sense helped us automate our customer onboarding process, reducing the time from days to minutes while improving accuracy.  
@@ -190,90 +179,11 @@ Hear from businesses that have transformed their operations with our solutions.
 ---
 
 ## Ready to Transform Your Business?
+
 Let's discuss how our process automation and AI solutions can help you achieve your business goals.  
 [Schedule a Consultation](contact.html)
 
 ---
-
-## Footer
-
-### Common Sense
-We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.
-
-#### Company
-- [About Us](about.html)
-- [Team](team.html)
-- [Payments](payments.html)
-- [SMS Consent](sms-consent.html)
-- [Privacy Policy](privacy.html)
-
-#### Services
-- [Voice Agents](voice-agents.html)
-- [Process Automation](process-automation.html)
-- [Revenue Improvement](revenue-improvement.html)
-- [Consulting](consulting.html)
-
-#### Contact
-- [contact@common-sense.com](mailto:contact@common-sense.com)
-- main: [(425) 979-2282](tel:+14259792282)
-- john: [(425) 501-9074](tel:+14255019074)
-- [11227 NE 128 ST, Unit I-102](https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034)
-- [Kirkland, WA 98034](https://maps.google.com/?q=Kirkland,+WA+98034)
-
-© 1996-2025 Common Sense Systems, Inc. All rights reserved.
-
----
-
-## Untranslated Content
-- “Common Sense helped us automate our customer onboarding process, reducing the time from days to minutes while improving accuracy.”
-- “The AI solution they implemented has simplified our day to day workload a lot. Things run more smoothly, the chaos is reduced, and people are happier.”
-- “Working with Common Sense was seamless. They understood our unique challenges and delivered solutions that exceeded our expectations.”
-
----
-
-## Additional HTML Elements
-- **Favicon & Web-App Manifest**: Multiple favicon formats and a web-app manifest for PWA support.
-- **Google Analytics**: Global site tag (gtag.js) with tracking ID G-MWXX5J9NWB.
-- **JSON-LD Schema Markup**: Comprehensive structured data for Organization, WebSite, and WebPage entities, including address, contact points, and service descriptions.
-- **CSSI-SAM Chatbot Widget**: A fixed-position toggle button and modal iframe embedding a chatbot from `https://common-sense.com/cssi-sam`.
-- **ElevenLabs Voice Agent**: Embedded `<elevenlabs-convai>` widget with agent-id “XRQKG0KZygCOvX9xpVv2”.
-- **Mobile Menu Toggle**: Hamburger button with inline JavaScript for animated open/close behavior.
-- **Responsive Image**: Hero image with descriptive alt text for accessibility.
-
-
---- Markdown synthesized from ./www/payments.html ---
-# Make a Payment
-
-Select the appropriate payment option below for services rendered. All payments are securely processed through Stripe.
-
-## Payment Options
-
-### 60 Minute Business Consultation
-Payment for a 60 minute business consultation meeting.  
-[Pay](https://buy.stripe.com/9AQeYKgas19D2di000)
-
-### 30 Minute Business Consultation
-Payment for a 30 minute business consultation meeting.  
-[Pay](https://buy.stripe.com/aEUg2ObUc2dHg48fZ0)
-
-### 60 Minute Personal Consultation
-Payment for 60 minute personal consultation meeting.  
-[Pay](https://buy.stripe.com/aEUaIu3nG6tX3hmfZ3)
-
-### 30 Minute Personal Consultation
-Payment for 30 minute personal consultation meeting.  
-[Pay](https://buy.stripe.com/28ocQCaQ8bOhcRWfZ2)
-
-### Manage Your Subscription
-View and manage your subscription details, update payment methods, or download invoices.  
-[Customer Portal](https://billing.stripe.com/p/login/bIYeVX1khda6axa3cc)
-
----
-
-## Footer
-
-**Common Sense**  
-We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.
 
 ### Company
 - [About Us](about.html)
@@ -283,7 +193,7 @@ We help businesses leverage automation and AI to work smarter, optimize processe
 - [Privacy Policy](privacy.html)
 
 ### Services
-- [AI Integration](ai-integration.html)
+- [Voice Agents](voice-agents.html)
 - [Process Automation](process-automation.html)
 - [Revenue Improvement](revenue-improvement.html)
 - [Consulting](consulting.html)
@@ -292,25 +202,76 @@ We help businesses leverage automation and AI to work smarter, optimize processe
 - [contact@common-sense.com](mailto:contact@common-sense.com)
 - main: [(425) 979-2282](tel:+14259792282)
 - john: [(425) 501-9074](tel:+14255019074)
-- [11227 NE 128 ST, Unit I-102](https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034)
-- [Kirkland, WA 98034](https://maps.google.com/?q=Kirkland,+WA+98034)
+- [11227 NE 128 ST, Unit I-102](https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034)  
+  [Kirkland, WA 98034](https://maps.google.com/?q=Kirkland,+WA+98034)
 
 © 1996-2025 Common Sense Systems, Inc. All rights reserved.
 
 ---
 
 ## Untranslated Content
-(All content above is presented verbatim as it appeared in the HTML.)
+
+> “Common Sense helped us automate our customer onboarding process, reducing the time from days to minutes while improving accuracy.”  
+> “The AI solution they implemented has simplified our day to day workload a lot. Things run more smoothly, the chaos is reduced, and people are happier.”  
+> “Working with Common Sense was seamless. They understood our unique challenges and delivered solutions that exceeded our expectations.”
 
 ---
 
 ## Additional HTML Elements
-- Embedded SVG icons accompany each payment option card.
-- A fixed-position “Chat with Sam” toggle button and modal iframe are injected at the bottom-left of the page.
-- An ElevenLabs voice-agent widget (`<elevenlabs-convai>`) is loaded in the footer.
-- Mobile-menu hamburger animation and toggle behavior are controlled via inline JavaScript.
-- JSON-LD schema markup for Organization, WebSite, and WebPage is present in the `<head>`.
-- Google Analytics (gtag) and multiple favicon/apple-touch-icon/manifest links are included in the `<head>`.
+
+- **Favicon & Web-App Manifest**: Multiple favicon formats and a web-app manifest for PWA support.  
+- **Google Analytics**: Global site tag (gtag.js) with tracking ID G-MWXX5J9NWB.  
+- **JSON-LD Schema**: Comprehensive structured data for Organization, WebSite, and WebPage entities, including services, contact info, and social profiles.  
+- **CSSI-SAM Chatbot Widget**: Fixed-position toggle button and modal iframe embedding “https://common-sense.com/cssi-sam” with microphone/fullscreen permissions.  
+- **ElevenLabs Voice Agent**: Embedded `<elevenlabs-convai>` widget with agent-id “XRQKG0KZygCOvX9xpVv2”.  
+- **Mobile Menu Toggle**: Animated hamburger-to-X navigation for small screens.
+
+
+--- Markdown synthesized from ./www/payments.html ---
+# Payments - Common Sense Systems
+
+## Make a Payment
+
+Select the appropriate payment option below for services rendered. All payments are securely processed through Stripe.
+
+### Payment Options
+
+#### 60 Minute Business Consultation
+Payment for a 60 minute business consultation meeting.  
+[Pay](https://buy.stripe.com/9AQeYKgas19D2di000)
+
+#### 30 Minute Business Consultation
+Payment for a 30 minute business consultation meeting.  
+[Pay](https://buy.stripe.com/aEUg2ObUc2dHg48fZ0)
+
+#### 60 Minute Personal Consultation
+Payment for 60 minute personal consultation meeting.  
+[Pay](https://buy.stripe.com/aEUaIu3nG6tX3hmfZ3)
+
+#### 30 Minute Personal Consultation
+Payment for 30 minute personal consultation meeting.  
+[Pay](https://buy.stripe.com/28ocQCaQ8bOhcRWfZ2)
+
+#### Manage Your Subscription
+View and manage your subscription details, update payment methods, or download invoices.  
+[Customer Portal](https://billing.stripe.com/p/login/bIYeVX1khda6axa3cc)
+
+---
+
+## Untranslated Content
+
+All textual content has been preserved verbatim.
+
+---
+
+## Additional HTML Elements
+
+- **Favicon & Web App Manifest**: Multiple favicon formats and a web-app manifest for PWA support.  
+- **Google Analytics**: Global site tag (gtag.js) with tracking ID G-MWXX5J9NWB.  
+- **JSON-LD Schema Markup**: Structured data for Organization, WebSite, and WebPage entities.  
+- **CSSI-SAM Chatbot Widget**: Fixed-position toggle button and modal iframe embedding the chatbot at `https://common-sense.com/cssi-sam`.  
+- **ElevenLabs Voice Agent**: Embedded via `<elevenlabs-convai>` with agent-id “XRQKG0KZygCOvX9xpVv2”.  
+- **Mobile Menu Toggle**: Hamburger icon that animates to an “X” and toggles visibility of the navigation links.
 
 
 --- Markdown synthesized from ./www/privacy.html ---
@@ -384,19 +345,21 @@ If you have questions about this Privacy Policy or our data practices, please co
 - **Phone (voice only):** [(425) 979-2282](tel:+14259792282)
 - **Contact form:** [Contact Us Online](contact.html)
 
-*Last updated: September 17, 2025.*
+Last updated: September 17, 2025.
 
 ---
 
 ## Untranslated Content
 
-None – all visible text has been rendered.
+None – all visible text has been rendered in Markdown.
 
 ## Additional HTML Elements
 
-- Structured data (JSON-LD) blocks describing the organization and the privacy-policy page
-- Google Analytics script tag
-- Mobile navigation toggle script
+- Structured data (JSON-LD) blocks describing the organization and the privacy-policy page itself.
+- Google Analytics script tag and accompanying inline configuration script.
+- Mobile-navigation toggle script that adds/removes an “active” class on the menu button and navigation list.
+- Favicon and web-app-manifest link elements in the `<head>`.
+- Decorative `<hr>` elements used as visual separators inside the policy text (rendered above as “---”).
 
 
 --- Markdown synthesized from ./www/process-automation.html ---
@@ -424,35 +387,61 @@ Develop custom automation solutions that adapt to changing conditions and make i
 See how our automation solutions have transformed businesses across various industries.
 
 > Common Sense automated our invoice-processing system, reducing processing time by 85 % and eliminating data-entry errors that were costing us thousands monthly.  
-> — CFO at mid-sized financial institution
+> **Financial Services Company** – CFO at mid-sized financial institution
 
 > By automating our customer-onboarding process, we reduced the time from application to account setup from 2 days to just 15 minutes, dramatically improving customer satisfaction.  
-> — VP of Operations at regional insurance company
+> **Insurance Provider** – VP of Operations at regional insurance company
 
 > The workflow-automation solution implemented across our 12 departments has freed up over 5 000 employee hours monthly, allowing our team to focus on strategic initiatives instead of repetitive tasks.  
-> — Director of Operations at regional hospital
+> **Healthcare Organization** – Director of Operations at regional hospital
 
 ## Ready to Automate Your Processes?
 
-Let's discuss how our business process-automation solutions can help you reduce costs, eliminate errors, and boost productivity.
+Let’s discuss how our business-process-automation solutions can help you reduce costs, eliminate errors, and boost productivity.
 
 [Schedule a Consultation](../index.html#contact)
 
 ---
 
+### Company
+
+- [About Us](about.html)
+- [Team](team.html)
+- [Payments](payments.html)
+- [SMS Consent](sms-consent.html)
+- [Privacy Policy](privacy.html)
+
+### Services
+
+- [Voice Agents](voice-agents.html)
+- [Process Automation](process-automation.html)
+- [Revenue Improvement](revenue-improvement.html)
+- [Consulting](consulting.html)
+
+### Contact
+
+- [contact@common-sense.com](mailto:contact@common-sense.com)
+- main: [(425) 979-2282](tel:+14259792282)
+- john: [(425) 501-9074](tel:+14255019074)
+- [11227 NE 128 ST, Unit I-102, Kirkland, WA 98034](https://maps.google.com/?q=11227+NE+128+ST,+Unit+I-102,+Kirkland,+WA+98034)
+
+© 1996-2025 Common Sense Systems, Inc. All rights reserved.
+
+---
+
 ## Untranslated Content
 
-(All textual content above is presented verbatim from the original HTML.)
+(All textual content above is preserved verbatim from the original HTML.)
 
 ## Additional HTML Elements
 
 - Fixed-position “Chat with Sam” toggle button (bottom-left) that opens a modal iframe to `https://common-sense.com/cssi-sam`
-- ElevenLabs voice-agent widget (`<elevenlabs-convai>`) embedded site-wide
-- Mobile hamburger menu with animated span transforms
-- Structured-data JSON-LD blocks for Organization, WebSite, and WebPage
+- Embedded ElevenLabs voice-agent widget (`<elevenlabs-convai agent-id="XRQKG0KZygCOvX9xpVv2">`)
+- Mobile hamburger-menu toggle with animated span transforms
+- JSON-LD schema markup for Organization, WebSite, and WebPage entities
 - Google Analytics gtag script
 - Favicon and web-app-manifest links
-- Responsive hero and testimonial images served via `/api/placeholder`
+- External stylesheets (`/css/styles.css`) and responsive-iframe width constraints
 
 
 --- Markdown synthesized from ./www/revenue-improvement.html ---
@@ -518,16 +507,13 @@ Let's identify and eliminate the constraints that are limiting your revenue and 
 
 ## Additional HTML Elements
 
-- **Navigation bar** – responsive header with logo, main menu items (Services, Our Process, Success Stories, Contact) and animated hamburger toggle for mobile.
-- **Hero image** – decorative placeholder (`/api/placeholder/500/400`) illustrating revenue improvement.
-- **Service & testimonial avatars** – placeholder images (`/api/placeholder/100/100`) for company logos.
-- **Schema.org JSON-LD** – structured data for Organization, WebSite, WebPage, services, contact info, founding date, social links.
-- **Analytics** – Google tag (G-MWXX5J9NWB) injected via gtag.js.
-- **Voice-agent widget** – ElevenLabs convai embed for conversational AI.
-- **Custom chatbot toggle & modal** – fixed “Chat with Sam” button that opens an iframe-based modal containing the CSSI-SAM assistant.
-- **Footer map links** – Google Maps query URLs for office address.
-- **Copyright date range** – 1996-2025.
-- **Favicon & PWA manifest** – multiple favicon formats and web-app manifest for installability.
+- **Favicon & Web-App Manifest**: Multiple favicon formats and a PWA manifest are declared in `<head>`.
+- **Google Analytics**: Global site tag (gtag.js) with tracking ID G-MWXX5J9NWB is loaded.
+- **JSON-LD Schema**: Comprehensive structured data for Organization, WebSite, and WebPage entities.
+- **CSSI-SAM Chatbot Widget**: Fixed-position toggle button and modal iframe that loads `https://common-sense.com/cssi-sam`.
+- **ElevenLabs Voice Agent**: Embedded conversational AI widget (`<elevenlabs-convai>`).
+- **Responsive Menu**: Animated hamburger-to-X mobile navigation (JavaScript-controlled).
+- **Placeholder Images**: Several `/api/placeholder/` images are used for hero and testimonial visuals.
 
 
 --- Markdown synthesized from ./www/sms-consent.html ---
@@ -612,7 +598,7 @@ If you have any questions about our SMS consent practices or need help with your
 # Additional HTML Elements
 
 - Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01jzxp5jwae5xvrqwwvkjbedw8"`
-- External script reference: `https://unpkg.com/@elevenlabs/convai-widget-embed` loaded asynchronously
+- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
 
 
 --- Markdown synthesized from ./www/va-cherishkirkland.html ---
@@ -625,19 +611,20 @@ If you have any questions about our SMS consent practices or need help with your
 
 
 --- Markdown synthesized from ./www/va-eghlidlift.html ---
-```markdown
 # Additional HTML Elements
 
 - Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01k09yyratew1ary8neh5gsdgr"`
-- External script reference: `https://unpkg.com/@elevenlabs/convai-widget-embed` loaded asynchronously
-```
+- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
 
 
 --- Markdown synthesized from ./www/va-hoaxtalk.html ---
-## Additional HTML Elements
+# Additional HTML Elements
 
-- A custom HTML element `<elevenlabs-convai>` with the attribute `agent-id="agent_6701k2jpmg99f0gvdfyxs9yrr2vr"` was present.
-- An external script is loaded from `https://unpkg.com/@elevenlabs/convai-widget-embed` with the attributes `async` and `type="text/javascript"`.
+- **Custom element**: `<elevenlabs-convai>` with attribute `agent-id="agent_6701k2jpmg99f0gvdfyxs9zrr2vr"`  
+  (Embeds an ElevenLabs conversational AI widget.)
+
+- **External script**: `<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`  
+  (Loads the ElevenLabs ConvAI widget embed script asynchronously.)
 
 
 --- Markdown synthesized from ./www/va-hosseini.html ---
@@ -658,18 +645,15 @@ If you have any questions about our SMS consent practices or need help with your
 # Additional HTML Elements
 
 - `<elevenlabs-convai>` custom element with attribute `agent-id="agent_01k031ycdredqbemkewga2tn01"`
-- `<script>` tag loading the external script `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously
+- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
 
 
 --- Markdown synthesized from ./www/va-jungo.html ---
 ```markdown
 # Additional HTML Elements
 
-- **Custom element**: `<elevenlabs-convai>` with attribute `agent-id="agent_01jvweqw90f809aezpk3aw7cj5"`  
-  (Embeds an ElevenLabs conversational AI widget.)
-
-- **External script**: `<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`  
-  (Loads the ElevenLabs ConvAI widget embed script asynchronously.)
+- Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01jvweqw90f809aezpk3aw7cj5"`
+- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
 ```
 
 
@@ -678,14 +662,14 @@ If you have any questions about our SMS consent practices or need help with your
 # Additional HTML Elements
 
 - **Custom Element**: `<elevenlabs-convai>`  
-  - Attribute: `agent-id="agent_01k052k8hxey9v7x4bjjkhqtg7"`  
-  - Purpose: Embeds an ElevenLabs conversational AI widget tied to the specified agent.
+  Attributes: `agent-id="agent_01k052k8hxey9v7x4bjjkhqtg7"`  
+  Purpose: Embeds an ElevenLabs conversational AI widget.
 
 - **Script Element**: `<script>`  
-  - Source: `https://unpkg.com/@elevenlabs/convai-widget-embed`  
-  - Loading: Asynchronous (`async`)  
-  - Type: `text/javascript`  
-  - Purpose: Loads the JavaScript bundle required to render and operate the ElevenLabs ConvAI widget.
+  Source: `https://unpkg.com/@elevenlabs/convai-widget-embed`  
+  Loading: Asynchronous (`async`)  
+  Type: `text/javascript`  
+  Purpose: Loads the JavaScript required to power the ElevenLabs conversational AI widget.
 ```
 
 
@@ -693,17 +677,15 @@ If you have any questions about our SMS consent practices or need help with your
 ## Additional HTML Elements
 
 - A custom HTML element `<elevenlabs-convai>` with the attribute `agent-id="agent_9401k2j6cwxzfgka1jqj1gejwczp"` was present.
-- A script tag loading the external JavaScript file `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously.
+- A script tag loading the external JavaScript bundle `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously.
 
 
 --- Markdown synthesized from ./www/va-reddirection.html ---
 ```markdown
-# ElevenLabs ConvaI Widget
-
-## Additional HTML Elements
+# Additional HTML Elements
 
 - Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01k00h6592ewar0rgx942nhh0b"`
-- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` loaded asynchronously
+- External script reference: `https://unpkg.com/@elevenlabs/convai-widget-embed` loaded asynchronously
 ```
 
 
@@ -711,51 +693,48 @@ If you have any questions about our SMS consent practices or need help with your
 ```markdown
 # Additional HTML Elements
 
-- Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01zzr2r0afjz9jphgn556g038"`
-- External script embed: `<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`
+- Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01jzzr2r0afjz9jphgn556g038"`
+- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` loaded asynchronously
 ```
 
 
 --- Markdown synthesized from ./www/va-skibot.html ---
 ## Additional HTML Elements
 
-- Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01k0cnakksfmq8mtyn6h16my8c"`
-- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
+- A custom HTML element `<elevenlabs-convai>` with the attribute `agent-id="agent_01k0cnakksfmq8mtyn6h16my8c"` was present.
+- A script tag loading the external JavaScript file `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously.
 
 
 --- Markdown synthesized from ./www/va-sundays.html ---
 # Additional HTML Elements
 
 - Custom element `<elevenlabs-convai>` with attribute `agent-id="4irC6VBRKtKG87rKTS0t"`
-- External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
+- External script tag loading `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously
 
 
 --- Markdown synthesized from ./www/va-theblock.html ---
 ```markdown
 # Additional HTML Elements
 
-- **Custom Element**: `<elevenlabs-convai>` with attribute `agent-id="agent_01zxgb9a8ebpss9dtrc6dfrj2"`  
-  Purpose: Embeds an ElevenLabs conversational AI widget identified by the given agent ID.
-
-- **Script Element**: `<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>`  
-  Purpose: Asynchronously loads the ElevenLabs conversational AI widget embed script from the specified CDN URL.
-```
-
-
---- Markdown synthesized from ./www/va-truenorth.html ---
-```markdown
-# Additional HTML Elements
-
-- Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01k07ycqppf4jstzs8wfahrj63"`
+- Custom element `<elevenlabs-convai>` with attribute `agent-id="agent_01zxgb9a8ebpss9dtrc6dfrj2"`
 - External script embed: `https://unpkg.com/@elevenlabs/convai-widget-embed` (loaded asynchronously)
 ```
 
 
---- Markdown synthesized from ./www/va-vemedicine.html ---
+--- Markdown synthesized from ./www/va-truenorth.html ---
 # Additional HTML Elements
 
-- A custom element `<elevenlabs-convai>` with the attribute `agent-id="WlLfAVX2WhbjgOa31sU1"` was present.
-- An external script is loaded from `https://unpkg.com/@elevenlabs/convai-widget-embed` with the attributes `async` and `type="text/javascript"`.
+- A custom element `<elevenlabs-convai>` with the attribute `agent-id="agent_01k07ycqppf4jstzs8wfahrj63"` was present.
+- A script tag loading the external JavaScript file `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously.
+
+
+--- Markdown synthesized from ./www/va-vemedicine.html ---
+```markdown
+# Additional HTML Elements
+
+- Custom element `<elevenlabs-convai>` with attribute `agent-id="WlLfAVX2WhbjgOa31sU1"`
+- External script tag loading `https://unpkg.com/@elevenlabs/convai-widget-embed` asynchronously
+```
 
 
 --- Markdown synthesized from ./www/va-yourbesthealth.html ---
@@ -819,7 +798,7 @@ This is a sample voice agent for Sundays Acupuncture. It is for experimentation 
 
 ## Ready to Implement AI in Your Business?
 
-Let’s discuss how our AI integration solutions can address your specific challenges and opportunities.
+Let's discuss how our AI integration solutions can address your specific challenges and opportunities.
 
 [Schedule a Consultation](../index.html#contact)
 
@@ -853,13 +832,14 @@ We help businesses leverage automation and AI to work smarter, optimize processe
 ---
 
 ## Untranslated Content  
-None – all visible text is in English.
+None – all visible text is preserved verbatim above.
 
 ---
 
 ## Additional HTML Elements  
-- Each voice-agent widget is embedded via an `<iframe>` pointing to a dedicated HTML file (e.g., `va-advisor.html`).  
-- A `<style>` block immediately after the agent list overrides iframe backgrounds to white and adds minor layout tweaks.
+- Each voice-agent demo is embedded via an `<iframe>` pointing to its own HTML file (e.g., `va-advisor.html`, `va-jonpascal.html`, etc.).  
+- A `<style>` block immediately after the agent list overrides default iframe styling to remove gradients and shadows.  
+- Mobile-navigation JavaScript toggles an `.active` class on `.nav-links` and animates the hamburger icon into an “X”.
 
 
 --- Markdown synthesized from ./www/voice-agents-business.html ---
@@ -883,7 +863,7 @@ The True North agent is an AI-powered voice agent designed to demonstrate how co
 
 **Talk to True North!**  
 Learn about strategic consulting services and organizational development directly from this AI advisor.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Try asking the True North agent about their strategic alignment approach, leadership development programs, or how they help organizations achieve sustainable growth. This fictional example demonstrates how voice agents can articulate complex consulting methodologies in an accessible, conversational format.
 
@@ -893,7 +873,7 @@ The SKI agent represents Jeff 'SKI' Kinsey of RhinoIsland Media 2.0, a certified
 
 **Chat with SKI!**  
 Discover Theory of Constraints methodology, AI-powered marketing systems, and business transformation strategies.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Ask SKI about his signature "Weakest Link ReFORGE™" methodology, the Theory of Constraints five-step process, AI-powered lead generation with RhinoGATOR_ai, or his hospitality consulting expertise. This agent demonstrates how complex business transformation concepts can be made accessible through conversational AI while maintaining the depth needed for serious business applications.
 
@@ -909,7 +889,7 @@ The Silver Age Care agent is an AI-powered voice agent designed to help prospect
 
 **Connect with Silver Age Care!**  
 Get compassionate guidance about senior living options and care planning services.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Engage with the Silver Age Care agent to learn about their personalized approach to senior living guidance, care assessments, and family support services. This example illustrates how voice agents can handle sensitive topics with appropriate tone and expertise.
 
@@ -925,7 +905,7 @@ The Atekro agent is an AI-powered voice agent designed to help prospective custo
 
 **Speak with Atekro!**  
 Discover IT solutions and technical support services tailored to your business needs.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Ask the Atekro agent about different IT services, support options, or technology solutions. This example demonstrates how voice agents can bridge the gap between complex technical capabilities and clear business value propositions.
 
@@ -941,7 +921,7 @@ The Hosseini Law Office agent is an AI-powered voice agent designed to help pros
 
 **Consult with Hosseini Law!**  
 Learn about legal services and get guidance on your legal questions from experienced attorneys.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Interact with the Hosseini Law Office agent to learn about their practice areas, approach to client service, and legal expertise. This example shows how voice agents in legal services must balance accessibility with professional responsibility and appropriate limitations.
 
@@ -957,7 +937,7 @@ The Block agent is an AI-powered voice agent designed to help prospective custom
 
 **Chat with The Block!**  
 Explore business services and discover how they can support your organization's goals.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Explore The Block agent's capabilities by asking about their services, approach, and how they support business clients. This example shows how voice agents can effectively represent professional service organizations with clarity and professionalism.
 
@@ -973,7 +953,7 @@ The Live By UW agent is an AI-powered tenant support agent designed to provide r
 
 **Connect with Ann!**  
 Report maintenance issues, safety concerns, or general complaints any time of day or night. Ann will guide you through the process and create a support ticket for management review.  
-[Interactive Voice Agent Widget]
+→ [Interactive Voice Agent]
 
 Try reporting a maintenance issue to Ann or asking about the support process. This agent demonstrates how property management companies can provide consistent, empathetic tenant support while maintaining professional standards and proper emergency protocols. The agent follows a systematic three-step process: understanding the complaint, gathering tenant information, and creating detailed support tickets for management follow-up.
 
@@ -983,23 +963,22 @@ Try reporting a maintenance issue to Ann or asking about the support process. Th
 
 Let's discuss how custom voice agents can enhance your customer engagement and operational efficiency across your specific industry.
 
-[Schedule a Consultation](#)
+[Schedule a Consultation](/index.html#contact)
 
 ---
 
-### Untranslated Content
+## Untranslated Content
 
-All content has been translated to Markdown.
+All original wording has been preserved verbatim within the main sections above.
 
-### Additional HTML Elements
+## Additional HTML Elements
 
-- **Interactive Voice Agent Widgets**: Each business example includes an embedded `<iframe>` (height 150 px) that loads a dedicated voice-agent HTML page (e.g., `va-truenorth.html`, `va-skibot.html`, etc.). These iframes are wrapped in styled containers with hover effects and a call-to-action arrow that pulses continuously.
-- **Floating Chat Toggle**: A fixed-position button (`#cssi-sam-toggle`) appears at the bottom-left of the viewport, labeled “🤖 Chat with Sam”. Clicking it opens a modal containing another iframe that loads `https://common-sense.com/cssi-sam`.
-- **ElevenLabs Voice Agent**: A separate `<elevenlabs-convai>` widget (agent-id “XRQKG0KZygC9xpVv2”) is embedded at the bottom of the page, activated via the ElevenLabs Convai embed script.
-- **Schema Markup**: JSON-LD structured data for the page is present in the original HTML but is not rendered in Markdown.
-- **Google Analytics**: Global site tag (gtag.js) is included in the original HTML but is not rendered in Markdown.
-- **Responsive Navigation**: A hamburger menu with animated spans is used for mobile navigation; the JavaScript toggles an `.active` class and rotates the spans into an “X” shape.
-- **Favicon & Web App Manifest**: Multiple favicon formats and a `manifest.json` are linked in the `<head>` but are not rendered in Markdown.
+- **Fixed-position chat toggle**: A bottom-left floating button labeled “Chat with Sam” that opens a modal chat window.  
+- **Modal chat window**: Full-screen backdrop with a centered, rounded container holding an iframe that loads `https://common-sense.com/cssi-sam`.  
+- **Responsive iframe wrappers**: Each voice-agent demo is embedded inside a flex-layout card that adapts from side-by-side to stacked on small screens.  
+- **Schema.org JSON-LD**: Structured data describing the page as a WebPage entity.  
+- **Google Analytics**: Global site tag (gtag.js) with ID G-MWXX5J9NWB.  
+- **ElevenLabs Convai widget**: Embedded via `<elevenlabs-convai>` tag for site-wide voice assistance.
 
 
 --- Markdown synthesized from ./www/voice-agents-campaigns.html ---
@@ -1034,10 +1013,10 @@ Community groups benefit from voice agents by creating more inclusive engagement
 
 Cherish Kirkland is a grassroots community advocacy organization focused on balanced growth and community character preservation in Kirkland, Washington. This voice agent provides residents with factual information about local development issues, infrastructure concerns, and the organization's advocacy efforts.
 
-> **Learn About Cherish Kirkland!**  
-> Discover how this community group advocates for balanced development and neighborhood character preservation.  
-> →  
-> [Embedded voice agent iframe]
+**Learn About Cherish Kirkland!**  
+Discover how this community group advocates for balanced development and neighborhood character preservation.  
+→  
+[Interactive Voice Agent Widget]
 
 Try asking the Cherish Kirkland agent about their community advocacy approach, concerns about local development, infrastructure capacity issues, or ways to get involved in community engagement. This example shows how community organizations can use voice technology to educate residents about complex local issues while maintaining a balanced, informative tone.
 
@@ -1057,10 +1036,10 @@ Political candidates use voice agents to extend their reach beyond traditional c
 
 Jon Pascal is a member of the Kirkland City Council and is running for re-election in 2025. This voice agent strives to provide interested parties with factual information about Jon and his service to the City. The agent demonstrates how local political candidates can use voice technology to make themselves more accessible to constituents.
 
-> **Meet Jon Pascal!**  
-> Learn about Jon's experience on Kirkland City Council and his vision for the community's future.  
-> →  
-> [Embedded voice agent iframe]
+**Meet Jon Pascal!**  
+Learn about Jon's experience on Kirkland City Council and his vision for the community's future.  
+→  
+[Interactive Voice Agent Widget]
 
 Try asking the Jon Pascal agent about his experience on the city council, his positions on local issues, his background and qualifications, or his vision for Kirkland's future. This example shows how voice agents can provide voters with comprehensive information about candidates while maintaining an authentic, conversational tone.
 
@@ -1076,10 +1055,10 @@ Key features of this political voice agent include:
 
 Kurt Dresner is running for election to the Kirkland City Council in 2025. This voice agent strives to provide interested parties with factual information about Kurt and his accomplishments. The agent demonstrates how local political candidates can use voice technology to make themselves more accessible to constituents.
 
-> **Meet Kurt Dresner!**  
-> Learn about Kurt's background and his vision for the community's future.  
-> →  
-> [Embedded voice agent iframe]
+**Meet Kurt Dresner!**  
+Learn about Kurt's background and his vision for the community's future.  
+→  
+[Interactive Voice Agent Widget]
 
 Try asking the Kurt Dresner agent about his experience, his positions on local issues, his background and qualifications, or his vision for Kirkland's future. This example shows how voice agents can provide voters with comprehensive information about candidates while maintaining an authentic, conversational tone.
 
@@ -1099,12 +1078,12 @@ Educational voice agents help citizens develop critical thinking skills for eval
 
 Hoax Talk is an educational voice agent designed to help callers understand how hoaxes and misinformation are created, spread, and identified. Eric, the educational voice agent, teaches critical thinking skills for media literacy through objective analysis of manipulation techniques, providing real-world examples and evidence-based detection methods.
 
-**Call Eric directly at [(425) 598-0177](tel:+14255980177)** to learn about hoax detection techniques and media literacy.
+**Call Eric directly at (425) 598-0177** to learn about hoax detection techniques and media literacy.
 
-> **Learn from Eric!**  
-> Discover how hoaxes work, learn detection techniques, and develop critical thinking skills for evaluating media claims and political information.  
-> →  
-> [Embedded voice agent iframe]
+**Learn from Eric!**  
+Discover how hoaxes work, learn detection techniques, and develop critical thinking skills for evaluating media claims and political information.  
+→  
+[Interactive Voice Agent Widget]
 
 Try asking Eric about specific hoax techniques like selective editing, out-of-context quotes, or circular reporting. You can also inquire about famous case studies or learn the 5-step detection framework for evaluating claims. This agent demonstrates how educational tools can help citizens develop the analytical skills needed to navigate complex political information environments.
 
@@ -1204,27 +1183,26 @@ These applications would require careful attention to nonpartisan presentation a
 
 Let's discuss how custom voice agents can enhance your political campaign, advocacy efforts, or community outreach initiatives.
 
-[Schedule a Consultation](/index.html#contact)
+[Schedule a Consultation](index.html#contact)
 
 ---
 
 ## Untranslated Content
 
-All original wording has been preserved verbatim within the main sections above.
-
----
+(All content has been translated into Markdown format while preserving the original meaning and intent.)
 
 ## Additional HTML Elements
 
-- **Favicon & Web-App Manifest**: Multiple favicon formats and a manifest for PWA support.
-- **Google Analytics**: Global site tag (gtag.js) with tracking ID G-MWXX5J9NWB.
-- **Schema Markup**: JSON-LD structured data for the page (WebPage & Organization).
-- **CSSI-SAM Chatbot Widget**: Fixed-position toggle button and modal containing an iframe to `/cssi-sam`.
-- **ElevenLabs Voice Agent**: Embedded via `<elevenlabs-convai>` tag with agent-id “XRQKG0KZygCOvX9xpVv2”.
-- **Responsive Navigation**: Hamburger menu with JavaScript-driven open/close animations.
-- **Hero & CTA Sections**: Full-width promotional banners with background images and call-to-action buttons.
-- **Footer Grid**: Multi-column footer with company info, services, and contact details.
-- **Custom CSS Animations**: Keyframe pulse animation on arrow indicators; hover transitions on agent widgets.
+- **Favicon Support**: Multiple favicon formats (ICO, PNG, SVG) and Apple touch icon for various devices
+- **Web App Manifest**: PWA manifest file with theme color specification
+- **Google Analytics**: Global site tag implementation with tracking ID G-MWXX5J9NWB
+- **Schema Markup**: JSON-LD structured data for WebPage type with organization information
+- **CSSI-SAM Chatbot Widget**: Custom toggle button and modal implementation for chatbot interaction
+- **ElevenLabs Voice Agent**: Embedded conversational AI widget with agent ID XRQKG0KZygCOvX9xpVv2
+- **Responsive Design**: Mobile menu toggle functionality with hamburger-to-X animation
+- **Custom CSS Animations**: Pulse animation for arrow indicators and hover effects for agent widgets
+- **Iframe Embeds**: Multiple voice agent widgets embedded as responsive iframes
+- **Telephone Links**: Clickable phone numbers for direct calling functionality
 
 
 --- Markdown synthesized from ./www/voice-agents-government.html ---
@@ -1232,7 +1210,7 @@ All original wording has been preserved verbatim within the main sections above.
 
 Enhance public services and citizen engagement with AI-powered voice agents that provide accessible government information and services 24/7.
 
-[Explore Examples](#government-examples) [All Voice Agent Solutions](/voice-agents.html)
+[Explore Examples](#government-examples) | [All Voice Agent Solutions](/voice-agents.html)
 
 ---
 
@@ -1270,7 +1248,7 @@ EvergreenHealth (King County Public Hospital District No. 2) is seeking its firs
 > **Learn About the EvergreenHealth Levy!**  
 > Get factual information about the levy proposal, cost impacts, and EvergreenHealth's services.  
 > →  
-> *[Interactive voice agent iframe]*
+> [Interactive Voice Agent Widget]
 
 Try asking the EvergreenHealth agent about the levy cost impacts for different home values, how the funds would be used, EvergreenHealth's services and history, or voting information and deadlines. This example demonstrates how public institutions can use voice technology to provide neutral, educational information about ballot measures and community services.
 
@@ -1373,18 +1351,20 @@ Let’s discuss how custom voice agents can enhance your government services, im
 
 ## Untranslated Content
 
-*All content above is presented verbatim from the original HTML source.*
+(All content above is presented verbatim from the original HTML.)
 
 ---
 
 ## Additional HTML Elements
 
-- **Navigation header & footer** – standard site chrome with links to Services, Process, Testimonials, Contact, About, Privacy, etc.  
-- **Hero image** – `/assets/img/business_automation_1_500x400.jpg` labeled “Government voice agent solutions”  
-- **Embedded interactive widgets** – multiple `<iframe>` containers (e.g., `va-eghlidlift.html`) that render live voice-agent chat interfaces; these are described in Markdown but cannot be replicated in plain text.  
-- **Third-party scripts** – Google Analytics gtag, ElevenLabs conversational agent, and a custom “Chat with Sam” toggle/modal widget (fixed-position button + iframe modal).  
-- **Schema.org JSON-LD** – structured data for SEO (WebPage & Organization).  
-- **Responsive CSS animations** – hamburger-to-X mobile menu, pulse arrow, hover lifts, and gradient card backgrounds.
+- **Navigation header** with logo “Common Sense Systems, Inc.” and menu items: Services, Our Process, Success Stories, Contact.  
+- **Hero image** (`/assets/img/business_automation_1_500x400.jpg`) labeled “Government voice agent solutions.”  
+- **Interactive voice-agent widgets** (iframes) embedded within styled containers; these render live conversational agents.  
+- **Footer** containing company description, quick links (About, Team, Payments, SMS Consent, Privacy), services links, and full contact details including physical address and phone numbers.  
+- **Two embedded chat widgets**:  
+  – ElevenLabs conversational agent (`XRQKG0KZygCOvX9xpVv2`) fixed to the page.  
+  – “Chat with Sam” toggle button (fixed bottom-left) that opens a modal iframe to `https://common-sense.com/cssi-sam`.  
+- **Mobile-menu hamburger** with animated transform to “X” on open/close.
 
 
 --- Markdown synthesized from ./www/voice-agents-health.html ---
@@ -1570,30 +1550,30 @@ These advanced applications would require careful development to ensure they mee
 
 ---
 
-**Ready to Deploy Health & Wellness Voice Agents?**  
-Let's discuss how custom voice agents can enhance patient education, improve accessibility, and support your healthcare or wellness practice.  
+## Ready to Deploy Health & Wellness Voice Agents?
+
+Let's discuss how custom voice agents can enhance patient education, improve accessibility, and support your healthcare or wellness practice.
+
 [Schedule a Consultation]
 
 ---
 
 ## Untranslated Content
 
-*All content has been translated from HTML to Markdown format while preserving the original meaning and structure.*
+*All content has been preserved in its original form as provided in the HTML source.*
 
 ## Additional HTML Elements
 
-The following HTML elements were present but do not have direct Markdown equivalents:
-
-- **Favicon and Web App Manifest Support:** Multiple favicon formats and manifest file for web app functionality
-- **Google Analytics Script:** Tracking code for website analytics
-- **Schema Markup:** JSON-LD structured data for SEO purposes
-- **CSS Styles:** Extensive styling for voice agent containers, widgets, and responsive design
-- **JavaScript Functionality:** Mobile menu toggle, chatbot widget controls, and ElevenLabs voice agent integration
-- **Header Navigation:** Responsive navigation menu with mobile hamburger toggle
-- **Footer Structure:** Multi-column footer with company information, services, and contact details
-- **Interactive Widgets:** Embedded iframe voice agents for Japanese Acupuncture, Sundays Acupuncture, and Your Best Health Naturopathic Clinic
-- **Chatbot Widget:** CSSI-SAM chatbot with toggle button and modal overlay
-- **Voice Agent Integration:** ElevenLabs conversational AI widget embedded in the page
+- **Favicon Support:** Multiple favicon formats provided for various devices and browsers
+- **Web App Manifest:** Enables installation as a progressive web app
+- **Google Analytics:** Global site tag implementation for tracking
+- **Schema Markup:** Structured data for SEO optimization
+- **ElevenLabs Voice Agent:** Embedded conversational AI widget
+- **CSSI-SAM Chatbot:** Custom chatbot widget with toggle button and modal overlay
+- **Mobile Navigation:** Hamburger menu with JavaScript toggle functionality
+- **Responsive Design:** Media queries for mobile optimization
+- **Animation Effects:** Pulse animation for CTA arrows and smooth transitions
+- **Shadow Effects:** Box shadows for visual depth on widgets and containers
 
 
 --- Markdown synthesized from ./www/voice-agents-intro.html ---
@@ -1678,22 +1658,17 @@ Let's discuss how voice agents can enhance your customer engagement and operatio
 
 ## Untranslated Content
 
-- Common Sense Systems, Inc.
-- Learn about voice agent technology through interactive demonstrations. Understand how AI-powered conversational agents can transform your business operations.
-- Voice Agents Introduction - Common Sense Systems
-- We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.
-- © 1996-2025 Common Sense Systems, Inc. All rights reserved.
+> "Experience a voice agent while learning about voice agents. Eric demonstrates the technology while sharing insights about what makes voice agents valuable, what companies are achieving with them, and what foundations need to be in place for success."
+
+---
 
 ## Additional HTML Elements
 
-- **Favicon & Web App Assets**: Multiple favicon formats (ICO, PNG, SVG) and an Apple-touch-icon, plus a web-app manifest for PWA support.
-- **Google Analytics**: Global site tag (gtag.js) with tracking ID G-MWXX5J9NWB.
-- **Schema.org Structured Data**: JSON-LD markup describing the page as a WebPage entity published by Common Sense Systems, Inc.
-- **CSSI-SAM Chatbot Widget**: A fixed-position toggle button and modal iframe that embeds the “Sam” chatbot from `https://common-sense.com/cssi-sam`.
-- **ElevenLabs Voice Agent Embed**: An `<elevenlabs-convai>` custom element (agent-id “XRQKG0KZygCOvX9xpVv2”) plus its async embed script.
-- **Responsive Navigation**: Animated hamburger menu that transforms into an “X” on mobile, with JavaScript to toggle visibility and reset icon state.
-- **Hero Image**: `<img src="/assets/img/business_automation_1_500x400.jpg" alt="Voice agent technology demonstration">` inside the hero section.
-- **External Stylesheets**: `/css/styles.css` and multiple inline `<style>` blocks for layout, voice-agent theming, widget styling, and mobile responsiveness.
+- **Embedded iframe widget** (`va-advisor.html`, 150 px high) providing the live “Start a call” voice-agent interface.
+- **Fixed-position toggle button** (“🤖 Chat with Sam”) that opens a modal containing another iframe (`https://common-sense.com/cssi-sam`) for text-based chat support.
+- **ElevenLabs conversational agent** (`<elevenlabs-convai agent-id="XRQKG0KZygCOvX9xpVv2">`) injected via external script for site-wide voice assistance.
+- **Mobile-menu hamburger** with animated transform-to-X behavior controlled by inline JavaScript.
+- **Structured data block** (JSON-LD) declaring the page as a Schema.org WebPage entity.
 
 
 --- Markdown synthesized from ./www/voice-agents.html ---
@@ -1751,8 +1726,7 @@ A proven methodology for creating effective voice agents tailored to your specif
 
 ## Ready to Deploy Voice Agents?
 
-Let's discuss how custom voice agents can enhance your customer engagement and operational efficiency.
-
+Let's discuss how custom voice agents can enhance your customer engagement and operational efficiency.  
 [Schedule a Consultation](#contact)
 
 ---
@@ -1785,17 +1759,17 @@ Let's discuss how custom voice agents can enhance your customer engagement and o
 
 ## Untranslated Content
 
-*None – all visible copy is already in English.*
+> “We help businesses leverage automation and AI to work smarter, optimize processes, and achieve sustainable growth.”
 
 ---
 
 ## Additional HTML Elements
 
-- **Favicon & Web-App Manifest**: Multiple favicon formats (ICO, PNG, SVG) and a `manifest.json` for PWA support.  
+- **Favicon & Web-App Manifest**: Multiple favicon formats and a `manifest.json` for PWA support.  
 - **Google Analytics**: Global site tag (gtag.js) with tracking ID `G-MWXX5J9NWB`.  
-- **Schema.org JSON-LD**: Comprehensive structured data for Organization, WebSite, WebPage, and Service entities.  
-- **CSSI-SAM Chatbot Widget**: Fixed-position toggle button and modal iframe that loads `https://common-sense.com/cssi-sam`; allows microphone and fullscreen permissions.  
-- **ElevenLabs ConvaI Widget**: Embedded voice agent with agent-id `XRQKG0KZygCOvX9xpVv2`.
+- **JSON-LD Schema**: Comprehensive structured data for Organization, WebSite, WebPage, and Service entities.  
+- **ElevenLabs Conversational AI Widget**: Embedded voice agent (`<elevenlabs-convai>`) with agent-id `XRQKG0KZygCOvX9xpVv2`.  
+- **CSSI-SAM Chatbot**: Custom toggle-button modal that loads an iframe from `https://common-sense.com/cssi-sam`; includes microphone and fullscreen permissions.
 
 
 --- Blog summary synthesized from ./www/blog/2025/04/improve-your-online-meetings-with-fathom-note-taking-software/index.html ---
@@ -1804,224 +1778,251 @@ Main topic: Fathom AI Note Taker, a meeting-assistant tool that records, transcr
 Key message: By automating note-taking, Fathom frees participants to engage fully, saves ~20 min per meeting, and integrates summaries directly into everyday business tools.
 
 Major sections  
-1. Meeting pain-point & Fathom overview  
-2. Core strengths (instant summaries, AI highlights, sharing, interactive assistant)  
-3. Business impact (time savings, better engagement, ROI)  
-4. SMB implementation (free/team plans, 2-minute setup, HIPAA/SOC2/GDPR compliance)  
-5. Workflow integration (CRM, Slack, Notion, project-mgmt) & cross-department use cases  
-6. Competitive landscape vs Otter, Fireflies, tl;dv  
-7. Best-practice adoption tips  
-8. Conclusion: Fathom as an accessible productivity multiplier for distributed teams.
+- Pain of manual note-taking in Zoom/Teams/Meet  
+- Core Fathom features: instant summaries, searchable transcripts, highlight clips, AI Q&A  
+- Business impact: 1.5 weeks reclaimed yearly, better sales/CS presence  
+- SMB implementation: free personal tier, 2-user minimum team plan, HIPAA-SOC2-GDPR compliant  
+- Workflow integration: CRM, Slack, Notion, Google Docs; use-cases for sales, CS, leadership, training  
+- Competitive edge vs Otter, Fireflies, tl;dv: faster processing, richer UX, generous free tier  
+- Best-practice checklist for rollout
 
 Key concepts & keywords  
-AI meeting assistant, automated transcription, instant summary, video clips, CRM sync, productivity, remote work, small-business technology, meeting efficiency, 20-min time saving, security compliance.
+AI meeting assistant, automated transcription, instant summary, highlight clips, CRM sync, productivity gain, remote-work efficiency, small-business technology, data security
 
 Geographical relevance  
-None specified; cloud tool usable worldwide.  
-Author: Common Sense Systems, Inc. (Kirkland, WA), published 30 Apr 2025.
+Author based in Kirkland, WA; tool works globally with major video-conferencing platforms.
+
+Author  
+Common Sense Systems, Inc. (process-automation & AI consultancy)
 
 Improvement Suggestions  
-1. Add quantitative benchmarks: include accuracy-rate comparisons, average summary length vs. competitors, and hard ROI case studies with dollar figures.  
-2. Expand pricing detail: show exact feature limits on the free plan and tiered team pricing to help readers judge cost vs. value.  
-3. Address limitations: discuss language support, maximum meeting duration, storage caps, and offline access to give a balanced view and reduce buyer hesitation.
+1. Add quantitative ROI examples (e.g., dollar savings per sales rep) and short customer case studies to strengthen credibility.  
+2. Include a feature-limitation or “when not to use Fathom” section to give readers balanced decision-making data.  
+3. Provide a quick-start checklist or 2-minute video demo link so prospects can experience the value before signing up.
 
 
 --- Blog summary synthesized from ./www/blog/2025/04/increase-your-productivity-with-wispr-flow/index.html ---
 Summary  
-Main topic: Wispr Flow, an AI-powered voice-dictation tool that lets professionals speak naturally and see perfectly formatted text appear in any application at roughly 3× typing speed.  
-Key message: Removing the “keyboard bottleneck” reclaims hours, improves content quality, and makes documentation friction-free for small-business teams.
+Main topic: Wispr Flow, an AI-powered voice-dictation tool that lets professionals speak naturally and see perfectly formatted text appear in any application at roughly triple typing speed.  
+Key message: Removing the “keyboard bottleneck” unlocks measurable productivity gains, better documentation quality, and more inclusive workflows for small-business teams.
 
 Major sections  
 1. The typing productivity drain  
 2. Wispr Flow overview & differentiators  
-3. Feature deep-dive (universal app support, auto-formatting, context awareness, 100-language auto-detect, tone-matching)  
+3. Core features (universal app support, smart punctuation, context awareness, 100+ languages, tone matching)  
 4. Small-business use-cases (email, reporting, project updates, content creation)  
 5. Workflow integrations (task managers, AI assistants, live documentation)  
-6. ROI case (time saved, less context-switching, accessibility, richer content)  
-7. Quick-start guide & best-practice rollout tips  
+6. ROI & accessibility benefits  
+7. 5-step rollout guide & best-practice tips  
 8. Conclusion: voice as competitive advantage
 
 Key concepts  
-Voice-first documentation, real-time AI formatting, universal compatibility, multilingual auto-detection, personalized tone, accessibility, productivity ROI.
+Voice-first productivity, real-time auto-formatting, context-aware AI, reduced context-switching, accessibility, multilingual support, documentation-as-you-go, ROI via reclaimed hours.
 
 Keywords/themes  
-AI dictation, productivity tools, small-business technology, time-saving, digital efficiency, voice workflow.
+AI dictation, productivity tools, time-saving, small-business technology, efficiency, voice recognition, workflow automation.
 
 Geographical relevance  
-None specific; tool is Mac/Windows desktop software used globally.
+None specific; tool is platform-agnostic (Mac/Windows).
 
 Author  
 Common Sense Systems, Inc. (Kirkland, WA), published 29 Apr 2025.
 
 Improvement Suggestions  
-1. Add quantitative evidence: include benchmark data, customer case studies, or before/after time-tracking results to substantiate the “3× faster” claim.  
-2. Address limitations: briefly discuss accuracy in noisy environments, privacy/security of voice data, and recommended microphone hardware.  
-3. Provide pricing and team-licensing details so small-business readers can evaluate cost against projected ROI.
+1. Add quantitative evidence: include case studies or data showing actual hours saved and error rates versus typing.  
+2. Address security & privacy: clarify how sensitive business data is handled, encrypted, and stored to reassure corporate buyers.  
+3. Provide pricing and scalability details: outline subscription tiers, team licensing, and admin controls so readers can evaluate true adoption cost.
 
 
 --- Blog summary synthesized from ./www/blog/2025/04/transform-website-ai-voice-agents-24-7-engagement/index.html ---
 Article Summary  
-Main topic & key message  
-Small-business websites can convert more visitors by deploying AI voice agents that offer instant, multilingual, 24/7 conversational help, guiding users toward booking, buying or leaving contact details.
+Main topic: How small-business websites can boost engagement, leads, and sales by deploying AI voice agents that talk with visitors 24/7 in multiple languages.  
+Key message: Affordable voice technology now lets any small firm turn static pages into interactive, always-on sales assistants that answer questions, qualify leads, and book appointments while you sleep.
 
-Major sections / headings  
-- Why 2025 websites need voice agents (54-second engagement window)  
-- Core benefits: zero-navigation answers, multilingual trust, round-the-clock lead capture, higher conversion via guided dialogue  
-- Industry use-cases: service contractors, e-commerce boutiques, professional practices  
-- Implementation roadmap: audit traffic, map FAQs, pick low-code platform, start small, iterate  
-- Optimization tips: brand-matched personality, educational scripts, CRM-linked data capture  
-- Tech stack: NLP, ML, TTS/STT, contextual memory  
-- Conclusion & CTA: ensure traffic first, then deploy with expert help
+Major sections  
+1. Why 2025 visitors leave in < 1 min and how voice stops the exit  
+2. Core benefits – instant answers, multilingual rapport, round-the-clock availability, higher conversion  
+3. Industry use-cases – service contractors, e-commerce boutiques, professional practices  
+4. Implementation roadmap – traffic check, FAQ mapping, platform choice, launch & iterate  
+5. Tech primer – NLP, ML, TTS/STT, context memory  
+6. Conclusion & next-step CTA
 
 Key concepts  
-Voice-first UX, frictionless engagement, lead qualification outside business hours, global reach without extra staff, ROI preconditioned on existing site traffic.
+- Friction-free engagement: speak instead of navigate  
+- Language auto-detection = global + local inclusivity  
+- Guided dialogue funnels visitors to forms, bookings, purchases  
+- Lead-capture integration with CRM/email sequences  
+- Start small, expand with analytics
 
-Important keywords / themes  
-AI voice agent, 24/7 customer engagement, multilingual support, small-business digital transformation, website conversion optimization, natural-language processing.
+Important keywords/themes  
+AI voice agent, small business, 24/7 customer engagement, multilingual support, website conversion, lead qualification, natural-language processing, digital transformation
 
 Geographical relevance  
-Universal applicability; examples assume U.S. small firms but emphasize multilingual reach for diverse/local and international audiences.
+Written for U.S. small businesses; example vendor Common Sense Systems, Inc. (Kirkland, WA)
 
-Author / publisher  
-Common Sense Systems, Inc. (Kirkland, WA) – April 30, 2025.
+Author  
+Common Sense Systems, Inc. – April 30, 2025
 
 -------------------------------------------------
 Improvement Suggestions  
-1. Add concrete data: include average conversion-rate lifts, typical setup cost, and payback period from real small-business case studies.  
-2. Provide a decision checklist or simple calculator so readers can objectively decide if their traffic volume justifies investment.  
-3. Offer a downloadable implementation template (scripts, FAQ map, integration steps) to reduce perceived complexity and encourage action.
+1. Add concrete metrics: include average conversion-rate lifts, implementation cost ranges, or mini case studies to turn promises into credible ROI.  
+2. Provide a decision checklist or calculator: let readers self-score traffic volume, FAQ complexity, and follow-up capacity to decide “yes/no/maybe” before the sales call.  
+3. Offer a downloadable script template: give readers sample voice-dialogue flows for the three verticals (service, retail, professional) so they can visualize and test content before purchase.
 
 
 --- Blog summary synthesized from ./www/blog/2025/08/meet-ann-the-voice-agent-transforming-property-management/index.html ---
 Summary  
-Main topic: How “Ann,” a 24/7 AI voice agent built by Common Sense Systems, shields property managers from hostile tenant communications while raising service quality and tenant satisfaction.  
+Main topic: Common Sense Systems’ AI voice agent “Ann” shields property managers from hostile tenant communications while improving service quality.  
+Key message: Purpose-built AI can absorb emotional toxicity, generate calm, factual trouble tickets, and free humans to focus on problem-solving, creating a win-win for staff, tenants, and property owners.
 
-Key sections  
-- The Challenge – manager Susan burned-out by abusive tenant calls/texts.  
-- Enter Ann – AI voice intermediary that never loses patience.  
-- How It Works – creates calm, factual trouble tickets; AI ranks priorities.  
-- Benefits – less stress for staff, faster consistent help for tenants, cleaner records for owners.  
-- Real Results – Susan’s mood and response times improve; tenants get better service.  
-- Bigger Picture – AI protects humans so their remaining interactions are more positive.  
-- Next Steps – custom voice agents offered for property, healthcare, CS, etc.; contact details provided.  
+Major sections  
+1. The Challenge – manager Susan overwhelmed by aggressive tenant contact.  
+2. Enter Ann – 24/7 voice agent acts as professional buffer.  
+3. How Ann Works – smart ticket creation, emotion-free documentation, AI-assisted prioritization.  
+4. Benefits – stress reduction for managers, faster consistent service for tenants, cleaner records for properties.  
+5. Real Results – Susan’s improved mood and quicker resolutions.  
+6. Bigger Picture – AI protects/enhances human interaction.  
+7. Call to Action – invitation to deploy custom voice agents.
 
-Core concepts & keywords  
-Voice agent, property-management automation, emotional shield, 24/7 professional response, AI ticket generation, stress reduction, tenant satisfaction, human-AI collaboration.  
+Key concepts & keywords  
+Voice agent, property management, tenant hostility, emotional shield, automated trouble tickets, stress reduction, 24/7 customer service, AI-human collaboration, business automation.
 
-Geography  
-Company located Kirkland, WA; case study appears U.S.-based but no specific property locale given.  
+Geographical relevance  
+Kirkland, WA (company HQ); solution applicable to any North-American property portfolio.
 
-Author  
-Common Sense Systems, Inc. (published 16 Aug 2025).  
+Author / Publisher  
+Common Sense Systems, Inc., published 16 Aug 2025.
 
 Improvement Suggestions  
-1. Add quantitative data—average response-time reduction, ticket volume, stress-level surveys—to move the story from anecdotal to evidence-based.  
-2. Include a brief “how-it-works” diagram or 60-second demo video so readers quickly grasp call flow and system integration.  
-3. Address common objections (cost, setup time, privacy, escalation path to live manager) in a short FAQ to build trust and shorten sales cycle.
+1. Add quantitative data (e.g., % drop in manager overtime, average ticket-resolution time before vs. after Ann) to strengthen credibility.  
+2. Include a brief “how-it-works” diagram or 60-second demo video so technical and non-technical readers can visualize the hand-off between tenant, Ann, and manager.  
+3. Present a balanced mini-case: one example where Ann misunderstood a complex request and how the system was re-trained, illustrating continuous improvement and transparency.
 
 
 --- Blog summary synthesized from ./www/blog/2025/08/the-burnout-antidote-voice-agents-transform-healthcare/index.html ---
 Summary  
-Main topic: AI-powered voice agents are positioned as a “burnout antidote” that removes emotional friction from the most stressful healthcare conversations—insurance denials, patient billing, and prior-authorization fights—benefiting staff, patients, and hospitals alike.
+Main topic: AI-powered voice agents are positioned as a “burnout antidote” that removes emotional friction from the most stressful healthcare conversations—insurance denials, billing disputes, and prior-authorization fights—benefiting staff, patients, and hospitals alike.  
 
 Key sections  
-- The Breaking Point – daily toll on claims staff.  
-- The Hidden Crisis – 2:1 admin-to-care time ratio; toxic three-way conflict among providers, patients, insurers.  
-- Enter the Mediator – voice agents supply instant policy, regulation, appeal data.  
-- New Conversations – sample dialogues show staff strategizing instead of fighting, patients met with calm 24/7 guidance.  
-- Multiplication Effect – lower turnover, higher appeal-win rate, reduced complaints, preserved dignity.  
-- Beyond Healthcare – same model fits government benefits, property claims, student loans, legal aid.  
+- The Breaking Point – daily toll on claims processor Sarah Martinez illustrates systemic human cost.  
+- The Hidden Crisis – providers, patients, and insurers locked in a no-win, high-stress triangle.  
+- Enter the Mediator – voice agents as always-available, policy-savvy mediators that absorb conflict.  
+- New Conversations – side-by-side dialogues showing how agents help staff strategize and calm frightened patients 24/7.  
+- Multiplication Effect – grid of benefits: lower turnover, higher appeal-win rates, dignified patient experience.  
+- Beyond Healthcare – same model applicable to government benefits, property insurance, student loans, legal-aid.  
 - Implementation Reality – HIPAA-compliant RAG systems exist; accuracy & trust hurdles are solvable.  
-- Future of Human Work – humans provide compassion while agents absorb confrontation and complexity.
+- Future of Human Work – re-centering humans on compassion while agents handle confrontation and complexity.  
+- Call to Action – Common Sense Systems offers custom voice-agent builds; phone number provided.
 
-Core concepts & keywords  
-Voice agents, emotional friction removal, claims appeals automation, staff burnout, patient financial experience, RAG policy lookup, HIPAA compliance, healthcare administration sustainability.
+Key concepts & keywords  
+Voice agents, emotional friction removal, claims appeals, prior authorization, staff burnout, patient financial experience, RAG policy lookup, HIPAA compliance, healthcare administration cost, human sustainability.
 
-Geography  
-U.S. healthcare system (insurers, regional hospitals, state/federal regs).
+Geographical relevance  
+United States (referencing state/federal regs, US-style insurance model); company located Kirkland, WA.
 
-Author  
-Common Sense Systems, Inc. (Kirkland, WA), published 18 Aug 2025.
+Author / publisher  
+Common Sense Systems, Inc., published 18 Aug 2025.
 
+-------------------------------------------------
 Improvement Suggestions  
-1. Add quantitative evidence: include actual pilot data (appeal-success uplift %, FTE hours saved, staff-turnover delta) instead of illustrative stats.  
-2. Address risks & ethics: discuss potential hallucinations, bias in training data, and patient consent when AI handles sensitive financial/health data.  
-3. Provide implementation roadmap: outline integration steps, IT requirements, staff change-management plan, and estimated timeline/cost to move from concept to production.
+1. Add quantitative evidence: include a mini-case study with actual before/after metrics (appeal turnaround time, denial-reversal rate, staff-turnover reduction %) to move the argument from anecdotal to data-driven.  
+2. Address risks & ethics: dedicate a short section to potential pitfalls—AI hallucinations, bias in training data, patient consent for AI interaction, and how the hospital maintains oversight—so the piece feels balanced and trustworthy.  
+3. Clarify deployment roadmap: provide a high-level timeline (week 1-2 integration, week 3 pilot, week 4-6 refinement) and typical budget range so interested administrators can judge feasibility next to the emotional appeal.
 
 
 --- Blog summary synthesized from ./www/blog/2025/08/voice-agents-the-business-phone-youve-been-waiting-for/index.html ---
 Summary  
-Main topic: Voice agents for business are positioned as the next “must-have” technology, priced and budgeted exactly like a cell-phone plan (≈ $800–$1,200 setup + $60–$200 / mo) but delivering 24/7 AI staff that handles email, calendar, research, and support tickets.  
+Main topic: Voice agents are positioned as the next “must-have” business tool, priced and budgeted exactly like a cell-phone plan (≈ $800–$1,200 setup + $60–$200/mo) but delivering 24/7 AI staff that handles email, calendar, research, and support tickets.  
 Key sections:  
-1. The familiar investment model (cell-phone analogy)  
-2. Side-by-side cost table  
-3. Core “plan features” – email, calendar, research, ticket management  
-4. Everyday use-case scenarios  
-5. Upgrade / growth path  
-6. Competitive necessity & early-adopter advantage  
-7. Call-to-action for Common Sense Systems builds  
-
-Key concepts & keywords: Voice agent, AI assistant, business automation, predictable SaaS pricing, competitive advantage, 24/7 productivity, email & calendar integration, support-ticket automation.  
-Geography: Kirkland, WA (author’s base) but article is industry-agnostic.  
-Author: Common Sense Systems, Inc. (published 16 Aug 2025).
+1. The Investment You Already Understand – cost parity with mobile plans.  
+2. Feature “Plan” Options – email mgmt, calendar coordination, web research, ticket integration.  
+3. Real-World Scenarios – voice commands for rescheduling, ticket updates, priority triage.  
+4. Upgrade Path – add features, integrations, capacity as the business grows.  
+5. Competitive Urgency – early-adopter advantage; operating without an AI agent soon = competitive disadvantage.  
+Core concepts: Predictable SaaS budgeting, immediate ROI, scalable AI automation, competitive necessity in 2025.  
+Keywords: Voice agents, business automation, AI assistant, cost analysis, productivity, monthly plan.  
+Author / Publisher: Common Sense Systems, Inc. (Kirkland, WA).  
+Geo relevance: United States; phone/email contact in WA state.
 
 Improvement Suggestions  
-1. Add concrete ROI examples (e.g., “saved 8 hrs/week → $1,200/mo value vs. $150/mo cost”).  
-2. Include mini-case-study or testimonial with measurable KPIs to move the pitch from hypothetical to proven.  
-3. Provide a simple interactive calculator or downloadable spreadsheet so prospects can plug in their own labor costs and see pay-back period.
+1. Add quantified ROI: include real customer case studies showing hours saved or revenue gained per month versus the $60–$200 spend.  
+2. Provide a transparent pricing calculator or tier table (starter/pro/enterprise) so readers can map features to exact dollars without a sales call.  
+3. Address security & compliance (SOC-2, HIPAA, call recording laws) to reassure businesses handling sensitive data.
 
 
 --- Blog summary synthesized from ./www/blog/2025/09/explaining-spikingbrain-brain-inspired-large-models-for-long-context-efficiency/index.html ---
 Summary  
-Main topic: SpikingBrain – a family of brain-inspired LLMs that trade quadratic self-attention for linear/hybrid attention plus a spiking-activation scheme to slash compute and energy on very long sequences (128 k–4 M tokens).
+Main topic: SpikingBrain – a family of brain-inspired LLMs that trade quadratic self-attention for linear/hybrid attention plus a spiking-activation scheme to slash compute and energy on very long contexts (128 k–4 M tokens).
 
 Key ideas & sections  
-- Architecture: 7 B pure-linear-attention model; 76 B MoE (12 B active) hybrid model; intra-layer mixing; weights converted from existing Transformers in <2 % of full-training cost.  
-- Spiking activations: adaptive thresholds turn activations into sparse integer spike trains → ~69 % activation sparsity, addition-dominated math, large MAC-energy savings.  
-- Training: 150–160 B-token continual pre-training on MetaX C550 non-NVIDIA GPUs; 128 k context during training; chat variants via SFT.  
-- Quality: competitive but not SOTA—7 B MMLU ~65.8, 76 B MMLU ~73.6; Chinese benchmarks (CMMLU/CEval) included.  
-- Efficiency claims: 26× faster TTFT at 1 M tokens, >100× at 4 M; near-constant ~1 s TTFT when GPU count scales; 5× training throughput gain at 128 k; 15× CPU decoding speed-up for 1 B compressed variant.  
-- Platform: first large-scale demonstration on MetaX C550 GPUs with custom kernels and vLLM-like serving stack.  
-- Caveats: baselines partly disadvantaged on Chinese data; >2 M-token baselines extrapolated; conversion approach lags best fully-trained models.
+- Architecture: 7 B pure-linear-attention model; 76 B MoE (12 B active) hybrid model; intra-layer mixing; activations converted to sparse integer “spikes” for add-only math.  
+- Training: “conversion” of existing Transformer weights instead of from-scratch pre-training (~2 % compute); 150–160 B tokens continual pre-train + SFT; stable multi-GPU runs on non-NVIDIA MetaX C550.  
+- Quality: competitive but not SOTA—MMLU ~65–74 across variants; Chinese benchmarks (CMMLU/CEval) included.  
+- Efficiency claims: 26× faster TTFT at 1 M tokens, >100× at 4 M; ~69 % activation sparsity; 15× CPU decode speed-up for 1 B compressed model; large MAC-energy savings vs FP16.  
+- Limitations: baselines partly mismatched; >2 M-token numbers extrapolated; quality still slightly behind best fully-trained models.
 
 Author & date: John Sambrook, 27 Sept 2025.
 
-Keywords: linear attention, spiking neural networks, long context, energy efficiency, non-NVIDIA training, conversion-based training, MoE, sequence parallelism.
+Keywords/themes: linear attention, spiking neural networks, long-context efficiency, conversion-based training, non-NVIDIA hardware, energy-efficient inference.
 
 Improvement Suggestions  
-1. Add rigorous ablations: isolate gains from linear attention vs. spiking vs. MoE to clarify which components drive efficiency and where quality drops occur.  
-2. Expand baseline comparisons: evaluate against latest efficient-attention models (e.g., Mamba, Griffin, Performer) on identical hardware and data mixes to substantiate claimed speed-ups.  
-3. Release reproducibility kit: open-source training code, conversion scripts, and MetaX-optimized kernels so independent researchers can verify throughput, energy, and scaling numbers.
+1. Add head-to-head comparisons with leading linear-attention models (e.g., Mamba, Performer) on identical data and hardware to validate quality/efficiency trade-offs.  
+2. Release open-source code, checkpoints and reproducible benchmarks so third parties can verify extreme-sequence claims and measure real-world energy use.  
+3. Expand evaluation beyond Chinese-centric tasks—include standard long-context benchmarks (e.g., L-Eval, ZeroSCROLLS) and English-only baselines for balanced assessment.
+
+
+--- Blog summary synthesized from ./www/blog/2025/10/is-non-value-added-work-really-neutral-rethinking-value-in-lean/index.html ---
+Summary  
+Main topic: Lean’s “value-added vs. non-value-added” dichotomy is too blunt; some “non-value” tasks are essential enabling conditions, not waste.  
+Key message: No work is neutral—every activity either creates customer-perceived value, enables that value (compliance, safety, regulatory), or subtracts value as pure waste.  
+
+Major sections  
+1. Beyond Value-Added vs. Non-Value-Added  
+2. The Hidden Middle: Enabling Conditions  
+3. Reconciling Purist Lean with Pragmatic Reality (comparison table)  
+4. Why This Matters (focus improvement on waste, not on necessary enablers)  
+5. Closing Thought  
+
+Key concepts  
+Customer-defined value, enabling conditions, necessary non-value-added, waste elimination, regulated industries (healthcare, aerospace, med-device).  
+
+Keywords/themes  
+Lean, value stream, compliance, regulatory submission, safety checks, TOC, process improvement, waste vs. enabler.  
+
+Geographical relevance  
+None explicitly; author firm located in Kirkland, WA, USA.  
+
+Author  
+Common Sense Systems, Inc. (no individual author named).  
+
+Improvement Suggestions  
+1. Add real-world case: show before/after metrics from a med-device firm that separated enabling conditions from waste.  
+2. Include a decision tree or checklist readers can use to classify their own activities.  
+3. Expand on how Theory of Constraints complements this view—explain which enabling conditions might actually be system constraints.
 
 
 --- Blog summary synthesized from ./www/blog/index.html ---
 Article Summary
 Main topic  
-The page is the blog index for Common Sense Systems, Inc., a Kirkland, WA-based consultancy that helps businesses adopt AI and process-automation solutions. It lists seven recent posts (Apr–Sept 2025) and provides interactive filters so visitors can narrow articles by category or tag.
+The page is the blog index for Common Sense Systems, Inc., a Kirkland, WA-based consultancy that helps small and mid-size businesses adopt AI, process automation, and lean techniques to boost productivity and revenue.
 
-Major sections / headings  
-- Blog Articles (main heading)  
-- Filter Posts panel (toggle-able on mobile)  
-  – Categories (12 options)  
-  – Tags (29 options)  
-- Chronological post list (7 items)  
-- Ready-to-Transform-Your-Business? CTA  
-- Site footer with company, services, and contact info
+Key sections & features  
+- Filterable article list – posts can be narrowed by 14 business-relevant categories (AI Solutions, Healthcare, Property Management, Lean, etc.) and 30+ tags (Voice Agents, Automation, Cost Analysis, etc.).  
+- Eight recent posts (Apr–Oct 2025) showcase practical use-cases: voice AI for healthcare & property management, meeting note-taking tools, GPU-efficient long-context models, and lean-process re-thinking.  
+- Persistent “Schedule a Consultation” CTA and full company footer with contact details.
 
-Key concepts discussed in the posts  
-Brain-inspired long-context AI (SpikingBrain), voice AI agents for healthcare and property management, meeting-productivity tools (Fathom), website voice engagement, and voice dictation (Wispr Flow).
-
-Important keywords / themes  
-AI Solutions, Voice Agents, Productivity Tools, Small Business Technology, Healthcare, Property Management, Process Automation, Digital Transformation.
+Core concepts & keywords  
+AI integration, voice agents, process automation, lean/TOC, healthcare burnout, property-management customer service, small-business technology, productivity tools, cost saving, digital transformation.
 
 Geographical relevance  
-Company headquartered in Kirkland, Washington, USA; blog content is industry-agnostic but aimed at North-American small-to-mid-size businesses.
+Company headquarters: Kirkland, Washington, USA (serves North-American SMBs).
 
-Author information  
-No individual author credits appear on the index page.
+Author  
+No individual author credited; content published by Common Sense Systems, Inc.
 
+––––––––––––––––––––––––––––––––––
 Improvement Suggestions
-1. Add short descriptive excerpts (1–2 sentences) under each post title so readers can gauge relevance without clicking through.  
-2. Surface author names and estimated read-times to boost credibility and help users pick articles that fit their schedule.  
-3. Offer an “All / None” accordion for tag clusters and a search box so power users can combine keyword search with filters instead of hunting through 29 tags.
+1. Add concise post excerpts (1–2 lines) under each title so visitors can gauge relevance without clicking through.  
+2. Offer an “All / AI / Lean / Voice Agents” quick-tab bar above the fold; many users will never open the filter panel on mobile.  
+3. Include publication author and estimated read-time to strengthen E-E-A-T signals and help readers choose articles that match their expertise level.
 
