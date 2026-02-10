@@ -1,11 +1,13 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import Section from "../components/Section.astro";
+import CTASection from "../components/CTASection.astro";
 import { footerContact } from "../data/site";
-import { pageTitle, pageDescription, header, availability } from "../data/pages/contact";
+import { pageTitle, pageDescription, header, availability, cta } from "../data/pages/contact";
 import { buildContactPageSchema } from "../data/schema";
 
 const contactSchema = buildContactPageSchema(pageDescription);
+const [addressStreet, addressCity] = footerContact.address.split("\n");
 ---
 
 <PageLayout pageTitle={pageTitle} description={pageDescription} jsonLd={[contactSchema]}>
@@ -19,20 +21,35 @@ const contactSchema = buildContactPageSchema(pageDescription);
   </Section>
 
   <Section>
-    <div class="max-w-3xl mx-auto space-y-6 text-sm text-muted-foreground">
-      <div class="space-y-2">
-        <h2 class="text-xl">Email</h2>
-        <a href={`mailto:${footerContact.email}`} class="text-primary hover:text-primary/80">{footerContact.email}</a>
+    <div class="max-w-3xl mx-auto space-y-10 text-sm text-muted-foreground">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="space-y-2">
+          <h2 class="text-xl text-foreground">Phone</h2>
+          <a href={`tel:${footerContact.phones[0].replace(/\D/g, "")}`} class="text-primary hover:text-primary/80">
+            {footerContact.phones[0]}
+          </a>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-xl text-foreground">Email</h2>
+          <a href={`mailto:${footerContact.email}`} class="text-primary hover:text-primary/80">{footerContact.email}</a>
+        </div>
+        <div class="space-y-2">
+          <h2 class="text-xl text-foreground">Location</h2>
+          <p>{addressStreet}<br />{addressCity}</p>
+        </div>
       </div>
       <div class="space-y-2">
-        <h2 class="text-xl">Availability</h2>
+        <h2 class="text-xl text-foreground">Availability</h2>
         <p>{availability}</p>
-      </div>
-      <div class="space-y-2">
-        <h2 class="text-xl">Location</h2>
-        <p>{footerContact.address}</p>
       </div>
     </div>
   </Section>
+
+  <CTASection
+    headline={cta.headline}
+    description={cta.description}
+    primaryCta={cta.primaryCta}
+    secondaryCta={cta.secondaryCta}
+  />
 
 </PageLayout>

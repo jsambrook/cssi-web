@@ -1,4 +1,4 @@
-import type { PageHeader } from "../types";
+import type { PageHeader, CTAContent } from "../types";
 
 export const pageTitle = "Contact Us in Kirkland, WA";
 export const pageDescription =
@@ -13,3 +13,11 @@ export const header: PageHeader = {
 
 export const availability =
   "We respond within one business day and can typically schedule an initial conversation within a week.";
+
+export const cta: CTAContent = {
+  headline: "Not Sure Where to Start?",
+  description:
+    "Book a free 30-minute call. We\u2019ll listen to what\u2019s going on and tell you honestly whether we can help.",
+  primaryCta: { text: "Schedule a Call", href: "mailto:contact@common-sense.com" },
+  secondaryCta: { text: "Our Approach", href: "/approach" },
+};
