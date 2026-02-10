@@ -58,7 +58,6 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       addressCountry: 'US',
     },
     description: siteConfig.defaultDescription,
-    priceRange: '$',
     areaServed: 'US',
   };
 }
@@ -67,6 +66,7 @@ export function buildArticleSchema(options: {
   title: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   author: string;
   url: string;
 }): Record<string, unknown> {
@@ -76,6 +76,7 @@ export function buildArticleSchema(options: {
     headline: options.title,
     description: options.description,
     datePublished: options.datePublished,
+    dateModified: options.dateModified ?? options.datePublished,
     url: options.url,
     author: {
       '@type': 'Person',
@@ -101,5 +102,21 @@ export function buildBreadcrumbSchema(
       name: item.name,
       item: `${siteConfig.siteUrl}${item.href}`,
     })),
+  };
+}
+
+export function buildContactPageSchema(description: string): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: `Contact ${siteConfig.name}`,
+    description,
+    url: `${siteConfig.siteUrl}/contact`,
+    mainEntity: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      telephone: footerContact.phones[0],
+      email: footerContact.email,
+    },
   };
 }

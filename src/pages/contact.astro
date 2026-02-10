@@ -1,15 +1,14 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 import Section from "../components/Section.astro";
-import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
 import { footerContact } from "../data/site";
 import { pageTitle, pageDescription, header, availability } from "../data/pages/contact";
+import { buildContactPageSchema } from "../data/schema";
+
+const contactSchema = buildContactPageSchema(pageDescription);
 ---
 
-<BaseLayout title={getPageTitle(pageTitle)} description={pageDescription}>
-  <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
+<PageLayout pageTitle={pageTitle} description={pageDescription} jsonLd={[contactSchema]}>
 
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">
@@ -36,5 +35,4 @@ import { pageTitle, pageDescription, header, availability } from "../data/pages/
     </div>
   </Section>
 
-  <Footer slot="footer" {...footerDefaults} />
-</BaseLayout>
+</PageLayout>

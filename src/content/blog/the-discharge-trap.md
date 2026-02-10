@@ -1,6 +1,6 @@
 ---
 title: "The discharge trap"
-description: "Why hospital discharge processes fail and how to fix them."
+description: "Hospital discharge planning fails because it treats a complex logistics problem as a last-minute task. This three-part series introduces the Post-Acute Care Directive — moving planning from the hospital bed to the primary care clinic."
 date: 2025-09-04
 author: "John Sambrook"
 tags: ["Healthcare", "Operations"]

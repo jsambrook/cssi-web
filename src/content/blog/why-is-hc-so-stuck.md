@@ -1,6 +1,6 @@
 ---
 title: "Why healthcare is so stuck"
-description: "Exploring structural reasons behind stagnation in hospital systems."
+description: "Six chronic healthcare frustrations — long wait times, expensive insurance, claim denials, hiring difficulties, tax levies, and burnout — traced to a single root cause using Theory of Constraints analysis."
 date: 2025-09-17
 author: "John Sambrook"
 tags: ["Healthcare", "Analysis"]

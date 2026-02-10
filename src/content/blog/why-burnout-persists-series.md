@@ -1,6 +1,6 @@
 ---
 title: "Why burnout persists"
-description: "Analyzing why healthcare teams remain chronically burned out."
+description: "Healthcare protects staff from radiation but expects unlimited psychological trauma absorption. This four-part series maps the structural conflict behind provider burnout using Theory of Constraints and proposes systemic solutions beyond resilience training."
 date: 2025-09-14
 author: "John Sambrook"
 tags: ["Healthcare", "Wellbeing"]

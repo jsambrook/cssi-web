@@ -2,7 +2,7 @@ import type { PageHeader, ContentBlock, CTAContent } from "../types";
 
 export const pageTitle = "About";
 export const pageDescription =
-  "A healthcare consulting practice helping community hospital leaders make progress on complex, divisive problems.";
+  "Founded by John Sambrook, Common Sense Systems helps community hospital leaders in Washington, Oregon, Idaho, and Montana resolve complex operational problems using Theory of Constraints and systems thinking.";
 
 export const header: PageHeader = {
   label: "About",

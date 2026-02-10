@@ -13,6 +13,7 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
   jsonLd?: Record<string, unknown>[];
 }
 
@@ -25,6 +26,7 @@ const {
   title,
   description = siteConfig.defaultDescription,
   ogImage = siteConfig.defaultOgImage,
+  ogType = "website",
   jsonLd = [],
 } = Astro.props;
 
@@ -53,7 +55,8 @@ const ogImageURL = Astro.site
   <link rel="canonical" href={canonicalURL} />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />

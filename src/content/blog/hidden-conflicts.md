@@ -1,6 +1,6 @@
 ---
 title: "Hidden conflicts in healthcare"
-description: "How unspoken conflicts in healthcare organizations stall progress and erode trust."
+description: "Give me any healthcare policy document and I will show you embedded structural conflicts. A real hospital financial assistance policy analyzed using Theory of Constraints to reveal three critical dilemmas and paths to resolution."
 date: 2025-08-31
 author: "John Sambrook"
 tags: ["Leadership", "Strategy"]

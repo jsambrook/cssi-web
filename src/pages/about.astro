@@ -1,15 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 import Section from "../components/Section.astro";
 import CTASection from "../components/CTASection.astro";
-import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
 import { pageTitle, pageDescription, header, content, cta } from "../data/pages/about";
 ---
 
-<BaseLayout title={getPageTitle(pageTitle)} description={pageDescription}>
-  <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
+<PageLayout pageTitle={pageTitle} description={pageDescription}>
 
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">
@@ -34,5 +30,4 @@ import { pageTitle, pageDescription, header, content, cta } from "../data/pages/
     secondaryCta={cta.secondaryCta}
   />
 
-  <Footer slot="footer" {...footerDefaults} />
-</BaseLayout>
+</PageLayout>
