@@ -82,13 +82,30 @@ const ogImageURL = Astro.site
   <!-- Structured Data -->
   <JsonLd schemas={[buildOrganizationSchema(), ...jsonLd]} />
 
+  <!-- Dark mode: apply before render to prevent FOUC -->
+  <script is:inline>
+    (function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
 </head>
 <body class="min-h-screen flex flex-col">
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:p-4 focus:bg-primary focus:text-primary-foreground"
+  >
+    Skip to content
+  </a>
+
   <slot name="header">
     <!-- Default header - can be overridden -->
   </slot>
 
-  <main class="flex-1">
+  <main id="main-content" class="flex-1">
     <slot />
   </main>
 
