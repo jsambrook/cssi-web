@@ -10,6 +10,7 @@ interface Props {
   pageTitle: string;
   description?: string;
   ogType?: string;
+  noindex?: boolean;
   jsonLd?: Record<string, unknown>[];
 }
 
@@ -19,7 +20,7 @@ import Footer from "../components/Footer.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
 import { buildBreadcrumbSchema } from "../data/schema";
 
-const { pageTitle, description, ogType, jsonLd = [] } = Astro.props;
+const { pageTitle, description, ogType, noindex, jsonLd = [] } = Astro.props;
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
@@ -29,7 +30,7 @@ const breadcrumb = buildBreadcrumbSchema([
 const allJsonLd = [breadcrumb, ...jsonLd];
 ---
 
-<BaseLayout title={getPageTitle(pageTitle)} description={description} ogType={ogType} jsonLd={allJsonLd}>
+<BaseLayout title={getPageTitle(pageTitle)} description={description} ogType={ogType} noindex={noindex} jsonLd={allJsonLd}>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <slot />
