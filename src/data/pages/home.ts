@@ -49,5 +49,5 @@ export const cta: CTAContent = {
     "Start with a 30-minute conversation. No pitch, no obligation. Just a practical discussion about what's actually blocking progress.",
   primaryCta: { text: "Schedule a Call", href: "/contact" },
   secondaryCta: { text: "Learn More", href: "/approach" },
-  footnote: "Serving community hospitals across Washington, Oregon, Idaho, and Montana",
+  footnote: "Serving hospitals, health systems, and healthcare organizations across Washington, Oregon, Idaho, and Montana",
 };

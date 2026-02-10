@@ -57,9 +57,99 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       ...address,
       addressCountry: 'US',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 47.6769,
+      longitude: -122.2060,
+    },
     logo: `${siteConfig.siteUrl}/images/logo.png`,
     description: siteConfig.defaultDescription,
-    areaServed: 'US',
+    priceRange: '$',
+    foundingDate: '1996',
+    founder: {
+      '@type': 'Person',
+      name: 'John Sambrook',
+      jobTitle: 'Healthcare Systems Architect',
+      knowsAbout: [
+        'Theory of Constraints',
+        'Healthcare Operations',
+        'Systems Engineering',
+        'Hospital Discharge Processes',
+        'Medical Device Development',
+        'AI-Assisted Analysis',
+      ],
+    },
+    areaServed: [
+      {
+        '@type': 'Place',
+        name: 'Puget Sound / Seattle Metro Area',
+      },
+      {
+        '@type': 'Place',
+        name: 'Washington State',
+      },
+      {
+        '@type': 'Place',
+        name: 'Oregon',
+      },
+      {
+        '@type': 'Place',
+        name: 'Idaho',
+      },
+      {
+        '@type': 'Place',
+        name: 'Montana',
+      },
+    ],
+    serviceType: [
+      'Healthcare Systems Consulting',
+      'Hospital Operations Consulting',
+      'Theory of Constraints Consulting',
+      'Healthcare AI Consulting',
+      'Complex Discharge Analysis',
+      'Operational Constraint Analysis',
+    ],
+    knowsAbout: [
+      'Theory of Constraints',
+      'Healthcare Operations',
+      'Systems Engineering',
+      'Hospital Discharge Processes',
+      'Medical Device Development',
+      'AI-Assisted Analysis',
+    ],
+  };
+}
+
+export function buildFounderSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'John Sambrook',
+    jobTitle: 'Healthcare Systems Architect',
+    worksFor: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteConfig.siteUrl,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      ...address,
+      addressCountry: 'US',
+    },
+    knowsAbout: [
+      'Theory of Constraints',
+      'Systems Engineering',
+      'Healthcare Operations',
+      'Eli Goldratt Thinking Processes',
+      'Medical Device Software',
+      'Embedded Systems Engineering',
+      'AI-Assisted Policy Analysis',
+    ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Washington State University',
+    },
+    url: `${siteConfig.siteUrl}/about`,
   };
 }
 

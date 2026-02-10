@@ -2,12 +2,12 @@ export const siteConfig = {
   name: "Common Sense Systems",
   tagline: "Delivering real business value since 1996",
   siteUrl: "https://common-sense.com",
-  defaultDescription: "Healthcare systems consulting for community hospitals. Common Sense Systems helps hospital leaders resolve operational conflicts, improve discharge processes, and address provider burnout through Theory of Constraints methodology and systems thinking.",
+  defaultDescription: "Healthcare systems architecture and consulting based in Kirkland, Washington. Common Sense Systems helps hospital and health system leaders resolve operational bottlenecks, complex discharge problems, and cross-functional gridlock using Theory of Constraints methodology and AI-assisted analysis. Serving healthcare organizations across the Puget Sound region and Washington State since 1996.",
   defaultOgImage: "/images/og-default.png",
   headerCta: { text: "Book a Consultation", href: "/contact" },
   footerContactHeading: "Contact Us",
   footerTagline:
-    "Identify opportunities for transformation that enhance both operational excellence and meaningful business outcomes through systematic analysis.",
+    "Healthcare systems architecture and operational consulting. Helping hospital and health system leaders in Kirkland, the Puget Sound region, and throughout Washington State identify constraints and make real progress since 1996.",
   font: {
     family: "Instrument Sans",
     googleFontsUrl: "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",

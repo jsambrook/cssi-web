@@ -1,14 +1,14 @@
 import type { PageHeader, GridItem, CTAContent } from "../types";
 
-export const pageTitle = "Approach";
+export const pageTitle = "Our Approach to Healthcare Consulting";
 export const pageDescription =
-  "A practical, fixed-fee consulting approach for community hospitals: problem framing, joint fact-finding, decision design, and short feedback cycles. No scope creep, no dependency.";
+  "A practical, fixed-fee consulting approach for healthcare organizations in Washington State. We use Theory of Constraints methodology to frame problems, build shared facts, and design decisions that resolve operational bottlenecks -- not reports that gather dust.";
 
 export const header: PageHeader = {
   label: "Approach",
   heading: "A Different Way to Work Together",
   subheading:
-    "A practical, low-risk approach designed around what actually creates progress\u2014not what maximizes billable hours.",
+    "A practical, low-risk approach designed around what actually creates progress in healthcare organizations -- not what maximizes billable hours.",
 };
 
 export const steps: GridItem[] = [
@@ -40,5 +40,5 @@ export const cta: CTAContent = {
     "Start with a focused discovery call. No pitch, just clarity about what's actually blocking progress.",
   primaryCta: { text: "Schedule a Call", href: "/contact" },
   secondaryCta: { text: "About Us", href: "/about" },
-  footnote: "Serving community hospitals across Washington, Oregon, Idaho, and Montana",
+  footnote: "Serving hospitals, health systems, and healthcare organizations across Washington, Oregon, Idaho, and Montana",
 };

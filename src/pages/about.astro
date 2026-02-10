@@ -3,9 +3,10 @@ import PageLayout from "../layouts/PageLayout.astro";
 import Section from "../components/Section.astro";
 import CTASection from "../components/CTASection.astro";
 import { pageTitle, pageDescription, header, content, cta } from "../data/pages/about";
+import { buildFounderSchema } from "../data/schema";
 ---
 
-<PageLayout pageTitle={pageTitle} description={pageDescription}>
+<PageLayout pageTitle={pageTitle} description={pageDescription} jsonLd={[buildFounderSchema()]}>
 
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">

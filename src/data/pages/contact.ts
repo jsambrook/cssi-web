@@ -1,8 +1,8 @@
 import type { PageHeader } from "../types";
 
-export const pageTitle = "Contact";
+export const pageTitle = "Contact Us in Kirkland, WA";
 export const pageDescription =
-  "Schedule a free 30-minute consultation with Common Sense Systems. Healthcare operations consulting for community hospitals in the Pacific Northwest. No obligation, no sales pitch.";
+  "Schedule a free 30-minute consultation with John Sambrook at Common Sense Systems in Kirkland, Washington. Healthcare operations consulting for hospitals and health systems across the Puget Sound region and Washington State.";
 
 export const header: PageHeader = {
   label: "Contact",
