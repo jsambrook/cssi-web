@@ -38,7 +38,7 @@ export const cta: CTAContent = {
   headline: "Ready to move forward?",
   description:
     "Start with a focused discovery call. No pitch, just clarity about what's actually blocking progress.",
-  primaryCta: { text: "Schedule a Call", href: "/contact" },
+  primaryCta: { text: "Schedule a Call", href: "https://calendar.app.google/wgWnth98gdaNvN5aA" },
   secondaryCta: { text: "About Us", href: "/about" },
   footnote: "Serving hospitals, health systems, and healthcare organizations across Washington, Oregon, Idaho, and Montana",
 };

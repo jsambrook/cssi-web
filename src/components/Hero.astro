@@ -92,6 +92,7 @@ const hasTwoColumns = !!intakeForm;
                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap
                        rounded-button transition-all bg-primary text-primary-foreground
                        hover:bg-primary/90 shadow-sm h-[54px] px-10 py-5 text-sm"
+                {...(primaryCta.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
                 {primaryCta.text}
                 <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">

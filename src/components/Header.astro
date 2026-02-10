@@ -93,6 +93,7 @@ function isActive(href: string): boolean {
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap
                    rounded-button transition-all bg-primary text-primary-foreground
                    hover:bg-primary/90 shadow-sm h-[42px] px-6 py-2"
+            {...(ctaHref.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           >
             {ctaText}
           </a>
@@ -166,6 +167,7 @@ function isActive(href: string): boolean {
           href={ctaHref}
           class="block mt-4 text-center rounded-button bg-primary text-primary-foreground
                  py-3 px-6 hover:bg-primary/90"
+          {...(ctaHref.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         >
           {ctaText}
         </a>

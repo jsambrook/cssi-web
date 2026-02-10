@@ -37,6 +37,6 @@ export const cta: CTAContent = {
   headline: "Want to learn more?",
   description:
     "Let us know what you are trying to solve and we will propose a path forward.",
-  primaryCta: { text: "Start a Conversation", href: "/contact" },
+  primaryCta: { text: "Start a Conversation", href: "https://calendar.app.google/wgWnth98gdaNvN5aA" },
   secondaryCta: { text: "Our Approach", href: "/approach" },
 };

@@ -3,7 +3,7 @@ import PageLayout from "../layouts/PageLayout.astro";
 import Section from "../components/Section.astro";
 import CTASection from "../components/CTASection.astro";
 import { footerContact } from "../data/site";
-import { pageTitle, pageDescription, header, availability, cta } from "../data/pages/contact";
+import { pageTitle, pageDescription, header, discoveryCall, availability, cta } from "../data/pages/contact";
 import { buildContactPageSchema } from "../data/schema";
 
 const contactSchema = buildContactPageSchema(pageDescription);
@@ -22,7 +22,25 @@ const [addressStreet, addressCity] = footerContact.address.split("\n");
 
   <Section>
     <div class="max-w-3xl mx-auto space-y-10 text-sm text-muted-foreground">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div class="space-y-2">
+          <h2 class="text-xl text-foreground">{discoveryCall.heading}</h2>
+          <p>{discoveryCall.description}</p>
+          <a
+            href={discoveryCall.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-medium"
+          >
+            {discoveryCall.linkText}
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+          </a>
+        </div>
         <div class="space-y-2">
           <h2 class="text-xl text-foreground">Phone</h2>
           <a href={`tel:${footerContact.phones[0].replace(/\D/g, "")}`} class="text-primary hover:text-primary/80">
