@@ -97,6 +97,10 @@
   --feature-purple: #9333ea;
   --feature-purple-bg: #f3e8ff;
 
+  /* ===== Footer ===== */
+  --footer-bg: #292929;
+  --footer-foreground: #fff;
+
   /* ===== Sidebar (if used) ===== */
   --sidebar: #292929;
   --sidebar-foreground: #fff;
@@ -154,6 +158,9 @@
   --feature-blue-bg: rgba(37, 99, 235, 0.15);
   --feature-green-bg: rgba(22, 163, 74, 0.15);
   --feature-purple-bg: rgba(147, 51, 234, 0.15);
+
+  --footer-bg: #1f1f1f;
+  --footer-foreground: #fff;
 
   --sidebar: #1f1f1f;
   --sidebar-foreground: #fff;
