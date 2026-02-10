@@ -18,6 +18,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Section from "../components/Section.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
+import { buildArticleSchema } from "../data/schema";
+import { siteConfig } from "../data/site";
 
 const { title, description, date, author } = Astro.props;
 const formattedDate = date.toLocaleDateString("en-US", {
@@ -25,9 +27,17 @@ const formattedDate = date.toLocaleDateString("en-US", {
   month: "long",
   day: "numeric",
 });
+const articleUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).href;
+const articleSchema = buildArticleSchema({
+  title,
+  description,
+  datePublished: date.toISOString(),
+  author,
+  url: articleUrl,
+});
 ---
 
-<BaseLayout title={getPageTitle(title)} description={description}>
+<BaseLayout title={getPageTitle(title)} description={description} jsonLd={[articleSchema]}>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Section>

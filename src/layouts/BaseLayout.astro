@@ -13,15 +13,19 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
 import "../assets/css/tokens.css";
 import { siteConfig } from "../data/site";
+import JsonLd from "../components/JsonLd.astro";
+import { buildOrganizationSchema } from "../data/schema";
 
 const {
   title,
   description = siteConfig.defaultDescription,
-  ogImage = siteConfig.defaultOgImage
+  ogImage = siteConfig.defaultOgImage,
+  jsonLd = [],
 } = Astro.props;
 
 const canonicalURL = Astro.site
@@ -63,6 +67,9 @@ const ogImageURL = Astro.site
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Structured Data -->
+  <JsonLd schemas={[buildOrganizationSchema(), ...jsonLd]} />
 
 </head>
 <body class="min-h-screen flex flex-col">
