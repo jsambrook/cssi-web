@@ -31,7 +31,7 @@ export function buildOrganizationSchema(): Record<string, unknown> {
       '@type': 'Person',
       name: 'John Sambrook',
     },
-    logo: `${siteConfig.siteUrl}/favicon.svg`, // TODO: replace with proper logo image
+    logo: `${siteConfig.siteUrl}/images/logo.png`,
   };
 }
 
@@ -57,6 +57,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       ...address,
       addressCountry: 'US',
     },
+    logo: `${siteConfig.siteUrl}/images/logo.png`,
     description: siteConfig.defaultDescription,
     areaServed: 'US',
   };
