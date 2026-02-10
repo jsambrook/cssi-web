@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import Section from "../../components/Section.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../../data/pageDefaults";
 import { footerContact } from "../../data/site";
-import { pageTitle, pageDescription, paragraphs } from "../../data/pages/terms";
+import { pageTitle, pageDescription, lastUpdated, content } from "../../data/pages/terms";
 ---
 
 <BaseLayout title={getPageTitle(pageTitle)} description={pageDescription}>
@@ -14,7 +14,23 @@ import { pageTitle, pageDescription, paragraphs } from "../../data/pages/terms";
   <Section>
     <div class="max-w-3xl mx-auto space-y-6 text-sm text-muted-foreground">
       <h1 class="text-4xl sm:text-5xl text-foreground">{pageTitle}</h1>
-      {paragraphs.map((p) => <p>{p}</p>)}
+      <p>Last updated: {lastUpdated}</p>
+
+      {content.map((block) => {
+        if (block.type === "heading" && block.level === 2)
+          return <h2 class="text-2xl text-foreground pt-4">{block.text}</h2>;
+        if (block.type === "heading" && block.level === 3)
+          return <h3 class="text-lg font-medium text-foreground pt-2">{block.text}</h3>;
+        if (block.type === "text")
+          return <p set:html={block.html} />;
+        if (block.type === "list")
+          return (
+            <ul class="list-disc pl-6 space-y-1">
+              {block.items.map((item) => <li>{item}</li>)}
+            </ul>
+          );
+      })}
+
       <p>Contact {footerContact.email} with any questions about these terms.</p>
     </div>
   </Section>

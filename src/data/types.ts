@@ -46,6 +46,11 @@ export interface CTAContent {
   footnote?: string;
 }
 
+export type LegalBlock =
+  | { type: "heading"; text: string; level: 2 | 3 }
+  | { type: "text"; html: string }
+  | { type: "list"; items: string[] };
+
 export interface IntakeFormOption {
   id: string;
   icon: string;
