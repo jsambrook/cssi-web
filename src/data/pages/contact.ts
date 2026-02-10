@@ -13,14 +13,14 @@ export const header: PageHeader = {
 
 export const contactGrid = {
   discoveryCall: {
-    heading: "Discovery Call",
-    description: "Book a free call to discuss your situation and whether we can help.",
+    heading: "Discovery Meeting",
+    description: "Schedule a meeting with John to discuss your situation and whether we can help.",
     linkText: "Schedule a Call",
     href: "https://calendar.app.google/wgWnth98gdaNvN5aA",
   },
   phone: {
-    heading: "Phone",
-    description: "Available Monday through Friday, 9 AM to 5 PM Pacific.",
+    heading: "Telephone Call",
+    description: "Call Mark, our AI voice agent, to discuss options or schedule a meeting.",
   },
   email: {
     heading: "Email",
@@ -28,18 +28,15 @@ export const contactGrid = {
   },
   location: {
     heading: "Location",
-    description: "Kirkland, WA \u2014 serving healthcare systems throughout Washington State.",
+    description:
+      "We serve organizations throughout Washington State. Located in the Totem Lake area, near I-405 and NE 128th Street.",
+    linkText: "Open in Google Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=11227+NE+128+ST+Kirkland+WA+98034",
   },
   availability: {
     heading: "Availability",
     description:
-      "We respond within one business day and can typically schedule an initial conversation within a week.",
-  },
-  directions: {
-    heading: "Directions",
-    description: "Located in the Totem Lake area of Kirkland, near I-405 and NE 128th Street.",
-    linkText: "Open in Google Maps",
-    href: "https://www.google.com/maps/search/?api=1&query=11227+NE+128+ST+Kirkland+WA+98034",
+      "We typically respond within one business day to inquiries.",
   },
 };
 

@@ -44,44 +44,40 @@ const [addressStreet, addressCity] = footerContact.address.split("\n");
         </div>
         <div class="space-y-2">
           <h2 class="text-xl text-foreground">{contactGrid.phone.heading}</h2>
+          <p>{contactGrid.phone.description}</p>
           <a href={`tel:${footerContact.phones[0].replace(/\D/g, "")}`} class="text-primary hover:text-primary/80">
             {footerContact.phones[0]}
           </a>
-          <p>{contactGrid.phone.description}</p>
         </div>
 
         <!-- Row 2 -->
         <div class="space-y-2">
           <h2 class="text-xl text-foreground">{contactGrid.email.heading}</h2>
-          <a href={`mailto:${footerContact.email}`} class="text-primary hover:text-primary/80">{footerContact.email}</a>
           <p>{contactGrid.email.description}</p>
+          <a href={`mailto:${footerContact.email}`} class="text-primary hover:text-primary/80">{footerContact.email}</a>
         </div>
         <div class="space-y-2">
           <h2 class="text-xl text-foreground">{contactGrid.location.heading}</h2>
           <p>{addressStreet}<br />{addressCity}</p>
           <p>{contactGrid.location.description}</p>
+          <a
+            href={contactGrid.location.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-medium"
+          >
+            {contactGrid.location.linkText}
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </a>
         </div>
 
         <!-- Row 3 -->
         <div class="space-y-2">
           <h2 class="text-xl text-foreground">{contactGrid.availability.heading}</h2>
           <p>{contactGrid.availability.description}</p>
-        </div>
-        <div class="space-y-2">
-          <h2 class="text-xl text-foreground">{contactGrid.directions.heading}</h2>
-          <p>{contactGrid.directions.description}</p>
-          <a
-            href={contactGrid.directions.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-medium"
-          >
-            {contactGrid.directions.linkText}
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </a>
         </div>
       </div>
     </div>
