@@ -11,15 +11,37 @@ export const header: PageHeader = {
     "Let's discuss your situation. No obligation, no sales pitch\u2014just a conversation about whether we can help.",
 };
 
-export const discoveryCall = {
-  heading: "Discovery Call",
-  description: "Book a free call to discuss your situation and whether we can help.",
-  linkText: "Schedule a Call",
-  href: "https://calendar.app.google/wgWnth98gdaNvN5aA",
+export const contactGrid = {
+  discoveryCall: {
+    heading: "Discovery Call",
+    description: "Book a free call to discuss your situation and whether we can help.",
+    linkText: "Schedule a Call",
+    href: "https://calendar.app.google/wgWnth98gdaNvN5aA",
+  },
+  phone: {
+    heading: "Phone",
+    description: "Available Monday through Friday, 9 AM to 5 PM Pacific.",
+  },
+  email: {
+    heading: "Email",
+    description: "For general inquiries or to share background before a call.",
+  },
+  location: {
+    heading: "Location",
+    description: "Kirkland, WA \u2014 serving healthcare systems throughout Washington State.",
+  },
+  availability: {
+    heading: "Availability",
+    description:
+      "We respond within one business day and can typically schedule an initial conversation within a week.",
+  },
+  linkedin: {
+    heading: "Connect on LinkedIn",
+    description: "Follow our healthcare systems insights and updates.",
+    linkText: "View Profile",
+    href: "https://www.linkedin.com/in/johnsambrook/",
+  },
 };
-
-export const availability =
-  "We respond within one business day and can typically schedule an initial conversation within a week.";
 
 export const cta: CTAContent = {
   headline: "Not Sure Where to Start?",
