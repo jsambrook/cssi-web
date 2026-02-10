@@ -264,30 +264,42 @@ const totalSteps = config.steps.length;
 
     function submitForm() {
       collectCurrentStep();
-      console.log('Intake form responses:', responses);
-
-      if (actionUrl) {
-        const hiddenForm = document.createElement('form');
-        hiddenForm.method = 'POST';
-        hiddenForm.action = actionUrl;
-        hiddenForm.target = 'intake-form-target';
-        hiddenForm.style.display = 'none';
-
-        for (const [key, value] of Object.entries(responses)) {
-          const entryName = fieldMappings[key];
-          if (entryName) {
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = entryName;
-            input.value = value;
-            hiddenForm.appendChild(input);
-          }
-        }
-
-        form.appendChild(hiddenForm);
-        hiddenForm.submit();
-        hiddenForm.remove();
+      if (import.meta.env.DEV) {
+        console.log('Intake form responses:', responses);
       }
+
+      if (!actionUrl) {
+        steps.forEach(s => s.classList.add('hidden'));
+        navDiv.classList.add('hidden');
+        footerDiv?.classList.add('hidden');
+        successDiv.innerHTML =
+          '<div class="text-4xl mb-3">⚠</div>' +
+          '<p class="text-lg font-semibold text-red-600">Form submission is not configured.</p>' +
+          '<p class="text-sm text-muted-foreground mt-2">Please contact us directly instead.</p>';
+        successDiv.classList.remove('hidden');
+        return;
+      }
+
+      const hiddenForm = document.createElement('form');
+      hiddenForm.method = 'POST';
+      hiddenForm.action = actionUrl;
+      hiddenForm.target = 'intake-form-target';
+      hiddenForm.style.display = 'none';
+
+      for (const [key, value] of Object.entries(responses)) {
+        const entryName = fieldMappings[key];
+        if (entryName) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = entryName;
+          input.value = value;
+          hiddenForm.appendChild(input);
+        }
+      }
+
+      form.appendChild(hiddenForm);
+      hiddenForm.submit();
+      hiddenForm.remove();
 
       // Show success
       steps.forEach(s => s.classList.add('hidden'));
