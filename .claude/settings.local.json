@@ -1,18 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(chmod:*)",
-      "Bash(mkdir:*)",
-      "Bash(python:*)",
-      "Bash(rm:*)",
-      "Bash(grep:*)",
-      "Read(//Users/john/git/cssi-twilio/**)",
-      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(echo:*)",
+      "Bash(npm install:*)",
       "Bash(git add:*)",
-      "WebFetch(domain:common-sense.com)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "Bash(npm run build:*)"
     ]
-  },
-  "enableAllProjectMcpServers": false
+  }
 }

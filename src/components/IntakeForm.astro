@@ -1,0 +1,332 @@
+---
+/*
+ * IntakeForm.astro
+ *
+ * Multi-step intake form rendered as a card. Steps are defined in a data file.
+ * Supports card-style radio selection and text/email inputs.
+ * Submits to Google Forms via hidden iframe (or logs to console in demo mode).
+ *
+ * Props:
+ *   config: IntakeFormConfig from src/data/intakeForm.ts
+ */
+
+import type { IntakeFormConfig } from "../data/types";
+
+interface Props {
+  config: IntakeFormConfig;
+}
+
+const { config } = Astro.props;
+const totalSteps = config.steps.length;
+---
+
+<div
+  class="intake-form rounded-[var(--radius)] border-2 border-border bg-background shadow-[var(--elevation-lg)] p-6 sm:p-8"
+  data-total-steps={totalSteps}
+  data-action-url={config.googleForms.actionUrl}
+  data-field-mappings={JSON.stringify(config.googleForms.fieldMappings)}
+  data-success-message={config.successMessage}
+>
+  <!-- Progress -->
+  <div class="flex items-center justify-between mb-6">
+    <span class="text-sm text-muted-foreground">
+      Step <span class="intake-current-step font-semibold text-foreground">1</span> of {totalSteps}
+    </span>
+    <div class="flex gap-1.5">
+      {config.steps.map((_, i) => (
+        <div
+          class:list={[
+            "intake-dot w-2.5 h-2.5 rounded-full transition-colors",
+            i === 0 ? "bg-primary" : "bg-border/30",
+          ]}
+          data-dot={i}
+        />
+      ))}
+    </div>
+  </div>
+
+  <!-- Steps -->
+  {config.steps.map((step, i) => (
+    <div
+      class:list={["intake-step", i === 0 ? "" : "hidden"]}
+      data-step={i}
+    >
+      <h3 class="text-xl sm:text-2xl font-semibold mb-1">{step.question}</h3>
+      {step.subtitle && (
+        <p class="text-sm text-muted-foreground mb-5">{step.subtitle}</p>
+      )}
+
+      {step.inputType === "select" && step.options && (
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {step.options.map((opt) => (
+            <label
+              class="intake-option group cursor-pointer rounded-[var(--radius-sm)] border-2 border-border/30
+                     p-4 transition-all hover:border-primary/50 hover:shadow-sm
+                     has-[:checked]:border-primary has-[:checked]:bg-primary/5"
+              data-option-id={opt.id}
+            >
+              <input
+                type="radio"
+                name={`step-${step.id}`}
+                value={opt.id}
+                class="sr-only"
+              />
+              <div class="flex items-start gap-3">
+                <span class="text-2xl leading-none mt-0.5" aria-hidden="true">{opt.icon}</span>
+                <div>
+                  <div class="font-semibold text-sm">{opt.title}</div>
+                  <div class="text-xs text-muted-foreground mt-0.5">{opt.description}</div>
+                </div>
+              </div>
+            </label>
+          ))}
+        </div>
+      )}
+
+      {step.inputType === "email" && (
+        <div class="space-y-4">
+          <div>
+            <label for="intake-name" class="block text-sm font-medium mb-1.5">Name</label>
+            <input
+              type="text"
+              id="intake-name"
+              name="contact_name"
+              required
+              placeholder="Your name"
+              class="intake-input w-full rounded-[var(--radius-input)] border-2 border-border/30
+                     bg-[var(--input-background)] px-4 py-3 text-sm
+                     focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20
+                     transition-colors"
+            />
+          </div>
+          <div>
+            <label for="intake-email" class="block text-sm font-medium mb-1.5">Email</label>
+            <input
+              type="email"
+              id="intake-email"
+              name="contact_email"
+              required
+              placeholder={step.placeholder || "you@company.com"}
+              class="intake-input w-full rounded-[var(--radius-input)] border-2 border-border/30
+                     bg-[var(--input-background)] px-4 py-3 text-sm
+                     focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20
+                     transition-colors"
+            />
+          </div>
+        </div>
+      )}
+
+      {step.inputType === "text" && (
+        <div>
+          <textarea
+            name={`step-${step.id}`}
+            placeholder={step.placeholder || ""}
+            rows={3}
+            class="intake-input w-full rounded-[var(--radius-sm)] border-2 border-border/30
+                   bg-[var(--input-background)] px-4 py-3 text-sm
+                   focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20
+                   transition-colors resize-none"
+          />
+        </div>
+      )}
+    </div>
+  ))}
+
+  <!-- Success message (hidden) -->
+  <div class="intake-success hidden text-center py-8">
+    <div class="text-4xl mb-3">✓</div>
+    <p class="text-lg font-semibold">{config.successMessage}</p>
+  </div>
+
+  <!-- Navigation -->
+  <div class="intake-nav flex items-center justify-between mt-6 pt-4 border-t border-border/20">
+    <button
+      type="button"
+      class="intake-back hidden text-sm text-muted-foreground hover:text-foreground transition-colors"
+    >
+      ← Back
+    </button>
+    <div class="ml-auto">
+      <button
+        type="button"
+        class="intake-next inline-flex items-center justify-center gap-2 whitespace-nowrap
+               rounded-button transition-all bg-primary text-primary-foreground
+               hover:bg-primary/90 shadow-sm h-[42px] px-6 py-2 text-sm
+               disabled:opacity-40 disabled:cursor-not-allowed"
+        disabled
+      >
+        Next →
+      </button>
+      <button
+        type="button"
+        class="intake-submit hidden inline-flex items-center justify-center gap-2 whitespace-nowrap
+               rounded-button transition-all bg-primary text-primary-foreground
+               hover:bg-primary/90 shadow-sm h-[42px] px-6 py-2 text-sm
+               disabled:opacity-40 disabled:cursor-not-allowed"
+        disabled
+      >
+        {config.submitButtonText}
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer text -->
+  {config.footerText && (
+    <p class="intake-footer text-xs text-muted-foreground text-center mt-4">{config.footerText}</p>
+  )}
+
+  <!-- Hidden iframe for Google Forms submission -->
+  <iframe name="intake-form-target" class="hidden" tabindex="-1" aria-hidden="true"></iframe>
+</div>
+
+<script>
+  const form = document.querySelector('.intake-form') as HTMLElement;
+  if (form) {
+    const totalSteps = Number(form.dataset.totalSteps);
+    const actionUrl = form.dataset.actionUrl || '';
+    const fieldMappings: Record<string, string> = JSON.parse(form.dataset.fieldMappings || '{}');
+    const successMessage = form.dataset.successMessage || 'Thank you!';
+
+    let currentStep = 0;
+    const responses: Record<string, string> = {};
+
+    const steps = form.querySelectorAll<HTMLElement>('.intake-step');
+    const dots = form.querySelectorAll<HTMLElement>('.intake-dot');
+    const stepLabel = form.querySelector('.intake-current-step') as HTMLElement;
+    const backBtn = form.querySelector('.intake-back') as HTMLButtonElement;
+    const nextBtn = form.querySelector('.intake-next') as HTMLButtonElement;
+    const submitBtn = form.querySelector('.intake-submit') as HTMLButtonElement;
+    const successDiv = form.querySelector('.intake-success') as HTMLElement;
+    const navDiv = form.querySelector('.intake-nav') as HTMLElement;
+    const footerDiv = form.querySelector('.intake-footer') as HTMLElement | null;
+
+    function showStep(index: number) {
+      steps.forEach((s, i) => s.classList.toggle('hidden', i !== index));
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-primary', i <= index);
+        d.classList.toggle('bg-border/30', i > index);
+      });
+      stepLabel.textContent = String(index + 1);
+      backBtn.classList.toggle('hidden', index === 0);
+
+      const isLast = index === totalSteps - 1;
+      nextBtn.classList.toggle('hidden', isLast);
+      submitBtn.classList.toggle('hidden', !isLast);
+
+      updateValidation();
+    }
+
+    function updateValidation() {
+      const step = steps[currentStep];
+      const stepEl = step;
+      const radio = stepEl.querySelector<HTMLInputElement>('input[type="radio"]:checked');
+      const textInputs = stepEl.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('.intake-input');
+
+      let valid = false;
+
+      if (radio) {
+        valid = true;
+      } else if (textInputs.length > 0) {
+        valid = Array.from(textInputs).every(input => {
+          if (input.type === 'email') {
+            return input.value.trim() !== '' && input.value.includes('@');
+          }
+          return input.value.trim() !== '';
+        });
+      } else if (stepEl.querySelector('input[type="radio"]')) {
+        // Has radio options but none selected
+        valid = false;
+      } else {
+        valid = true;
+      }
+
+      const isLast = currentStep === totalSteps - 1;
+      if (isLast) {
+        submitBtn.disabled = !valid;
+      } else {
+        nextBtn.disabled = !valid;
+      }
+    }
+
+    function collectCurrentStep() {
+      const stepEl = steps[currentStep];
+      const radio = stepEl.querySelector<HTMLInputElement>('input[type="radio"]:checked');
+      if (radio) {
+        const name = radio.name.replace('step-', '');
+        responses[name] = radio.value;
+      }
+
+      const textInputs = stepEl.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('.intake-input');
+      textInputs.forEach(input => {
+        responses[input.name] = input.value.trim();
+      });
+    }
+
+    function submitForm() {
+      collectCurrentStep();
+      console.log('Intake form responses:', responses);
+
+      if (actionUrl) {
+        const hiddenForm = document.createElement('form');
+        hiddenForm.method = 'POST';
+        hiddenForm.action = actionUrl;
+        hiddenForm.target = 'intake-form-target';
+        hiddenForm.style.display = 'none';
+
+        for (const [key, value] of Object.entries(responses)) {
+          const entryName = fieldMappings[key];
+          if (entryName) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = entryName;
+            input.value = value;
+            hiddenForm.appendChild(input);
+          }
+        }
+
+        form.appendChild(hiddenForm);
+        hiddenForm.submit();
+        hiddenForm.remove();
+      }
+
+      // Show success
+      steps.forEach(s => s.classList.add('hidden'));
+      navDiv.classList.add('hidden');
+      footerDiv?.classList.add('hidden');
+      successDiv.classList.remove('hidden');
+    }
+
+    // Event: radio selection
+    form.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', updateValidation);
+    });
+
+    // Event: text/email input
+    form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('.intake-input').forEach(input => {
+      input.addEventListener('input', updateValidation);
+    });
+
+    // Event: next
+    nextBtn.addEventListener('click', () => {
+      collectCurrentStep();
+      if (currentStep < totalSteps - 1) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+
+    // Event: back
+    backBtn.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    // Event: submit
+    submitBtn.addEventListener('click', submitForm);
+
+    // Initialize
+    showStep(0);
+  }
+</script>

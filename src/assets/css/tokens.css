@@ -1,0 +1,204 @@
+/*
+ * Common Sense Systems Design Tokens
+ * Extracted from common-sense.com (January 2026)
+ * 
+ * These CSS custom properties define the visual language for all
+ * Common Sense Systems websites. Adjust values here to create
+ * variant themes while maintaining structural consistency.
+ */
+
+:root {
+  /* ===== Typography ===== */
+  --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 
+               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+               'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
+  --font-size: 16px;
+  --text-h1: 60px;
+  --text-h2: 34px;
+  --text-h3: 30px;
+  --text-h4: 18px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ===== Colors - Light Mode ===== */
+  --background: #fff;
+  --foreground: #292929;
+
+  --card: transparent;
+  --card-foreground: #292929;
+
+  --popover: transparent;
+  --popover-foreground: #292929;
+
+  --primary: #fe811b;
+  --primary-foreground: #fff;
+
+  --secondary: #155dfc;
+  --secondary-foreground: #fff;
+
+  --muted: rgba(41, 41, 41, 0.05);
+  --muted-foreground: #666;
+
+  --accent: #fe811b;
+  --accent-foreground: #fff;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #fff;
+
+  --border: #fe811b;
+  --input: #fff;
+  --input-background: #fff;
+  --ring: #fe811b;
+
+  /* ===== Chart Colors ===== */
+  --chart-1: #fe811b;
+  --chart-2: #d75e00;
+  --chart-3: #ffc08d;
+  --chart-4: #155dfc;
+  --chart-5: #666;
+
+  /* ===== Border Radius ===== */
+  --radius: 20px;
+  --radius-button: 70px;
+  --radius-input: 70px;
+  --radius-badge: 18px;
+  --radius-sm: calc(var(--radius) - 8px);
+
+  /* ===== Shadows ===== */
+  --elevation-sm: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+                  0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --elevation-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+                  0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --elevation-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+                  0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  /* ===== CTA Gradient ===== */
+  --cta-gradient-from: #FFF9F5;
+  --cta-gradient-to: #FFF5ED;
+
+  /* ===== Feature Card Colors ===== */
+  --feature-red: #dc2626;
+  --feature-red-bg: #fee2e2;
+  --feature-orange: #ea580c;
+  --feature-orange-bg: #ffedd5;
+  --feature-amber: #d97706;
+  --feature-amber-bg: #fef3c7;
+  --feature-blue: #2563eb;
+  --feature-blue-bg: #dbeafe;
+  --feature-green: #16a34a;
+  --feature-green-bg: #dcfce7;
+  --feature-purple: #9333ea;
+  --feature-purple-bg: #f3e8ff;
+
+  /* ===== Sidebar (if used) ===== */
+  --sidebar: #292929;
+  --sidebar-foreground: #fff;
+  --sidebar-primary: #fe811b;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: rgba(255, 255, 255, 0.75);
+  --sidebar-accent-foreground: #292929;
+  --sidebar-border: rgba(255, 255, 255, 0.5);
+  --sidebar-ring: #fe811b;
+}
+
+/* ===== Dark Mode ===== */
+.dark {
+  --background: #292929;
+  --foreground: #fff;
+
+  --card: #333;
+  --card-foreground: #fff;
+
+  --popover: #333;
+  --popover-foreground: #fff;
+
+  --primary: #fe811b;
+  --primary-foreground: #fff;
+
+  --secondary: #155dfc;
+  --secondary-foreground: #fff;
+
+  --muted: rgba(255, 255, 255, 0.05);
+  --muted-foreground: #b4b4b4;
+
+  --accent: #fe811b;
+  --accent-foreground: #fff;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #fff;
+
+  --border: #fe811b;
+  --input: #333;
+  --input-background: #333;
+  --ring: #fe811b;
+
+  --chart-1: #fe811b;
+  --chart-2: #d75e00;
+  --chart-3: #ffc08d;
+  --chart-4: #155dfc;
+  --chart-5: #b4b4b4;
+
+  --sidebar: #1f1f1f;
+  --sidebar-foreground: #fff;
+  --sidebar-primary: #fe811b;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: rgba(255, 255, 255, 0.75);
+  --sidebar-accent-foreground: #fff;
+  --sidebar-border: rgba(255, 255, 255, 0.2);
+  --sidebar-ring: #fe811b;
+}
+
+/* ===== Base Styles ===== */
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+/* ===== Typography Defaults ===== */
+h1 {
+  font-size: var(--text-h1);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: var(--text-h3);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--text-h4);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+p {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}

@@ -1,0 +1,68 @@
+---
+/*
+ * Section.astro
+ * 
+ * Generic section wrapper with consistent padding and optional styling.
+ * 
+ * Props:
+ *   id: Optional section ID for anchor links
+ *   background: Background variant (default, muted, accent)
+ *   border: Show top border
+ *   label: Optional small label above heading
+ *   heading: Section heading
+ *   subheading: Optional subheading
+ */
+
+interface Props {
+  id?: string;
+  background?: 'default' | 'muted' | 'accent';
+  border?: boolean;
+  label?: string;
+  heading?: string;
+  subheading?: string;
+}
+
+const { 
+  id, 
+  background = 'default', 
+  border = false,
+  label,
+  heading,
+  subheading
+} = Astro.props;
+
+const bgClasses = {
+  default: '',
+  muted: 'bg-accent/10',
+  accent: 'bg-gradient-to-b from-background to-accent/5',
+};
+---
+
+<section 
+  id={id}
+  class:list={[
+    "py-16 lg:py-20",
+    bgClasses[background],
+    border && "border-t border-border"
+  ]}
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    {(label || heading || subheading) && (
+      <div class="text-center space-y-4 mb-12 max-w-3xl mx-auto">
+        {label && (
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs uppercase tracking-wider">
+            {label}
+          </div>
+        )}
+        {heading && (
+          <h2 class="text-3xl sm:text-4xl">{heading}</h2>
+        )}
+        {subheading && (
+          <p class="text-lg text-muted-foreground">{subheading}</p>
+        )}
+      </div>
+    )}
+    
+    <slot />
+  </div>
+</section>

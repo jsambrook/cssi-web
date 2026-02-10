@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import CTASection from "../components/CTASection.astro";
+import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
+import { hero, featuresSection, features, testimonialsSection, testimonials, cta } from "../data/pages/home";
+import { intakeFormConfig } from "../data/intakeForm";
+---
+
+<BaseLayout title={getPageTitle()}>
+  <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
+
+  <Hero
+    headline={hero.headline}
+    subheadline={hero.subheadline}
+    bullets={hero.bullets}
+    primaryCta={hero.primaryCta}
+    secondaryCta={hero.secondaryCta}
+    intakeForm={intakeFormConfig}
+  />
+
+  <Section
+    background="muted"
+    label={featuresSection.label}
+    heading={featuresSection.heading}
+    subheading={featuresSection.subheading}
+  >
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {features.map((f) => (
+        <FeatureCard title={f.title} description={f.description} />
+      ))}
+    </div>
+  </Section>
+
+  {/* Testimonials section — commented out for now, data preserved in home.ts
+  <Section
+    label={testimonialsSection.label}
+    heading={testimonialsSection.heading}
+  >
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {testimonials.map((t) => (
+        <TestimonialCard
+          quote={t.quote}
+          author={t.author}
+          company={t.company}
+        />
+      ))}
+    </div>
+  </Section>
+  */}
+
+  <CTASection
+    headline={cta.headline}
+    description={cta.description}
+    primaryCta={cta.primaryCta}
+    secondaryCta={cta.secondaryCta}
+    footnote={cta.footnote}
+  />
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

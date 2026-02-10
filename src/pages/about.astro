@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import CTASection from "../components/CTASection.astro";
+import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
+import { pageTitle, pageDescription, header, content, cta } from "../data/pages/about";
+---
+
+<BaseLayout title={getPageTitle(pageTitle)} description={pageDescription}>
+  <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
+
+  <Section background="muted">
+    <div class="max-w-3xl mx-auto text-center space-y-4">
+      <p class="text-xs uppercase tracking-wider text-accent">{header.label}</p>
+      <h1 class="text-4xl sm:text-5xl">{header.heading}</h1>
+      <p class="text-muted-foreground">{header.subheading}</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="max-w-3xl mx-auto space-y-6 text-sm text-muted-foreground">
+      {content.map((block) => (
+        <p class:list={[block.lead && "text-foreground text-base"]}>{block.text}</p>
+      ))}
+    </div>
+  </Section>
+
+  <CTASection
+    headline={cta.headline}
+    description={cta.description}
+    primaryCta={cta.primaryCta}
+    secondaryCta={cta.secondaryCta}
+  />
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

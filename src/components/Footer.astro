@@ -1,0 +1,125 @@
+---
+/*
+ * Footer.astro
+ *
+ * Multi-column footer with logo, navigation, and contact info.
+ * Dark background with white text.
+ *
+ * Props:
+ *   columns: Array of {title, links: [{label, href}]}
+ *   contact: {phones: [], email, address}
+ *   contactHeading: Heading for contact column (default: "Contact Us")
+ *   copyright: Copyright text
+ *   legalLinks: Array of {label, href}
+ */
+
+import Logo from "./Logo.astro";
+
+interface FooterLink {
+  label: string;
+  href?: string;
+}
+
+interface FooterColumn {
+  title: string;
+  links: FooterLink[];
+}
+
+interface ContactInfo {
+  phones?: string[];
+  email?: string;
+  address?: string;
+}
+
+interface Props {
+  columns: FooterColumn[];
+  contact: ContactInfo;
+  contactHeading?: string;
+  tagline?: string;
+  copyright: string;
+  legalLinks: FooterLink[];
+}
+
+const { columns, contact, contactHeading = "Contact Us", tagline, copyright, legalLinks } = Astro.props;
+---
+
+<footer class="bg-foreground text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <!-- Logo & Tagline -->
+      <div>
+        <a href="/" class="inline-block">
+          <Logo variant="dark" />
+        </a>
+        {tagline && (
+          <p class="mt-4 text-sm text-white/65 leading-relaxed">{tagline}</p>
+        )}
+      </div>
+
+      <!-- Navigation Columns -->
+      {columns.map((column, colIndex) => (
+        <div key={`col-${colIndex}`} class="space-y-4">
+          <h4 class="font-medium text-white/75">{column.title}</h4>
+          <ul class="space-y-3 text-sm">
+            {column.links.map((link, linkIndex) => (
+              <li key={`link-${colIndex}-${linkIndex}`}>
+                {link.href ? (
+                  <a href={link.href} class="text-white hover:text-primary transition-colors">
+                    {link.label}
+                  </a>
+                ) : (
+                  <span class="text-white">{link.label}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h4 class="font-medium text-white/75">{contactHeading}</h4>
+        <ul class="space-y-3 text-sm">
+          {contact.phones && contact.phones.length > 0 && (
+            <li class="flex items-start gap-2">
+              <span>📞</span>
+              <div>
+                {contact.phones.map((phone, index) => (
+                  <div key={`phone-${index}`}>{phone}</div>
+                ))}
+              </div>
+            </li>
+          )}
+          {contact.email && (
+            <li class="flex items-start gap-2">
+              <span>✉️</span>
+              <a href={`mailto:${contact.email}`} class="text-white hover:text-primary transition-colors">
+                {contact.email}
+              </a>
+            </li>
+          )}
+          {contact.address && (
+            <li class="flex items-start gap-2">
+              <span>📍</span>
+              <div class="whitespace-pre-line">{contact.address}</div>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t border-white/50">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/65 text-sm">{copyright}</p>
+        <div class="flex gap-8 text-sm">
+          {legalLinks.map((link, index) => (
+            <a key={`legal-${index}`} href={link.href} class="text-white/75 hover:text-white transition-colors">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
