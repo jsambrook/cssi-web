@@ -2,7 +2,7 @@ import type { PageHeader } from "../types";
 
 export const pageTitle = "Contact";
 export const pageDescription =
-  "Get in touch with Common Sense Systems. No obligation, no sales pitch.";
+  "Schedule a free 30-minute consultation with Common Sense Systems. Healthcare operations consulting for community hospitals in the Pacific Northwest. No obligation, no sales pitch.";
 
 export const header: PageHeader = {
   label: "Contact",

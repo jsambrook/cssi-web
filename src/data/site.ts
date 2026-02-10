@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Common Sense Systems",
   tagline: "Delivering real business value since 1996",
   siteUrl: "https://common-sense.com",
-  defaultDescription: "Common Sense Systems - Delivering real business value since 1996",
+  defaultDescription: "Healthcare systems consulting for community hospitals. Common Sense Systems helps hospital leaders resolve operational conflicts, improve discharge processes, and address provider burnout through Theory of Constraints methodology and systems thinking.",
   defaultOgImage: "/images/og-default.png",
   headerCta: { text: "Book a Consultation", href: "/contact" },
   footerContactHeading: "Contact Us",

@@ -2,7 +2,7 @@ import type { PageHeader, GridItem, CTAContent } from "../types";
 
 export const pageTitle = "Approach";
 export const pageDescription =
-  "A practical, low-risk approach to making progress on complex problems in community hospitals.";
+  "A practical, fixed-fee consulting approach for community hospitals: problem framing, joint fact-finding, decision design, and short feedback cycles. No scope creep, no dependency.";
 
 export const header: PageHeader = {
   label: "Approach",

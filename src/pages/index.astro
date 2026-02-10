@@ -12,7 +12,7 @@ import { intakeFormConfig } from "../data/intakeForm";
 import { buildWebSiteSchema, buildProfessionalServiceSchema } from "../data/schema";
 ---
 
-<BaseLayout title={getPageTitle()} jsonLd={[buildWebSiteSchema(), buildProfessionalServiceSchema()]}>
+<BaseLayout title="Common Sense Systems | Healthcare Consulting for Community Hospitals" jsonLd={[buildWebSiteSchema(), buildProfessionalServiceSchema()]}>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Hero

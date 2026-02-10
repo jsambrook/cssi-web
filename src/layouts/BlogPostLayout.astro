@@ -18,7 +18,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Section from "../components/Section.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
-import { buildArticleSchema } from "../data/schema";
+import { buildArticleSchema, buildBreadcrumbSchema } from "../data/schema";
 import { siteConfig } from "../data/site";
 
 const { title, description, date, author } = Astro.props;
@@ -32,12 +32,18 @@ const articleSchema = buildArticleSchema({
   title,
   description,
   datePublished: date.toISOString(),
+  dateModified: date.toISOString(),
   author,
   url: articleUrl,
 });
+const breadcrumb = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Insights", href: "/insights" },
+  { name: title, href: Astro.url.pathname },
+]);
 ---
 
-<BaseLayout title={getPageTitle(title)} description={description} jsonLd={[articleSchema]}>
+<BaseLayout title={getPageTitle(title)} description={description} ogType="article" jsonLd={[articleSchema, breadcrumb]}>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Section>

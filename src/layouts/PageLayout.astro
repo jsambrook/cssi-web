@@ -1,0 +1,38 @@
+---
+/*
+ * PageLayout.astro
+ *
+ * Layout for inner pages (About, Approach, Contact, Insights).
+ * Wraps BaseLayout with Header, Footer, and breadcrumb schema.
+ */
+
+interface Props {
+  pageTitle: string;
+  description?: string;
+  ogType?: string;
+  jsonLd?: Record<string, unknown>[];
+}
+
+import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
+import { buildBreadcrumbSchema } from "../data/schema";
+
+const { pageTitle, description, ogType, jsonLd = [] } = Astro.props;
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: pageTitle, href: Astro.url.pathname },
+]);
+
+const allJsonLd = [breadcrumb, ...jsonLd];
+---
+
+<BaseLayout title={getPageTitle(pageTitle)} description={description} ogType={ogType} jsonLd={allJsonLd}>
+  <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
+
+  <slot />
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>
