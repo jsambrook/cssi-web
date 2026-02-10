@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  safelist: [
-    // FeatureCard dynamic color classes
-    { pattern: /^bg-(red|orange|amber|blue|green|purple)-100$/ },
-    { pattern: /^text-(red|orange|amber|blue|green|purple)-600$/ },
-  ],
+  safelist: [],
   theme: {
     extend: {
       fontFamily: {

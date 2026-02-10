@@ -5,10 +5,9 @@ import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import FeatureCard from "../components/FeatureCard.astro";
-import TestimonialCard from "../components/TestimonialCard.astro";
 import CTASection from "../components/CTASection.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
-import { hero, featuresSection, features, testimonialsSection, testimonials, cta } from "../data/pages/home";
+import { hero, featuresSection, features, cta } from "../data/pages/home";
 import { intakeFormConfig } from "../data/intakeForm";
 ---
 
@@ -36,23 +35,6 @@ import { intakeFormConfig } from "../data/intakeForm";
       ))}
     </div>
   </Section>
-
-  {/* Testimonials section — commented out for now, data preserved in home.ts
-  <Section
-    label={testimonialsSection.label}
-    heading={testimonialsSection.heading}
-  >
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      {testimonials.map((t) => (
-        <TestimonialCard
-          quote={t.quote}
-          author={t.author}
-          company={t.company}
-        />
-      ))}
-    </div>
-  </Section>
-  */}
 
   <CTASection
     headline={cta.headline}

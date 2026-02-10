@@ -1,4 +1,4 @@
-import type { HeroBullet, FeatureItem, TestimonialItem, CTAContent } from "../types";
+import type { HeroBullet, FeatureItem, CTAContent } from "../types";
 
 export const hero = {
   headline: "Make Progress on the Issues That Matter",
@@ -40,35 +40,6 @@ export const features: FeatureItem[] = [
     title: "Ship & Learn",
     description:
       "Run short cycles, measure outcomes, adjust course. Fast feedback prevents drift.",
-  },
-];
-
-export const testimonialsSection = {
-  label: "What Leaders Say",
-  heading: "Trusted by Healthcare Executives",
-};
-
-export const testimonials: TestimonialItem[] = [
-  {
-    quote:
-      "John cuts through the complexity. He helped us make a decision we'd been stalling on for months.",
-    author: "SM",
-    company: "COO, 180-bed community hospital, Eastern Washington",
-    initials: "SM",
-  },
-  {
-    quote:
-      "Finally, a consultant who understands that we don't need another strategic plan. We needed someone to help us execute.",
-    author: "RK",
-    company: "CEO, rural healthcare system, Oregon",
-    initials: "RK",
-  },
-  {
-    quote:
-      "He asked better questions than our last three consultants combined. We saved six months of committee meetings.",
-    author: "JL",
-    company: "Board Chair, critical access hospital, Idaho",
-    initials: "JL",
   },
 ];
 
