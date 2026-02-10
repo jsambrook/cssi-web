@@ -35,11 +35,11 @@ export const contactGrid = {
     description:
       "We respond within one business day and can typically schedule an initial conversation within a week.",
   },
-  linkedin: {
-    heading: "Connect on LinkedIn",
-    description: "Follow our healthcare systems insights and updates.",
-    linkText: "View Profile",
-    href: "https://www.linkedin.com/in/johnsambrook/",
+  directions: {
+    heading: "Directions",
+    description: "Located in the Totem Lake area of Kirkland, near I-405 and NE 128th Street.",
+    linkText: "Open in Google Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=11227+NE+128+ST+Kirkland+WA+98034",
   },
 };
 
