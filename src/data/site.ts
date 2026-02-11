@@ -32,6 +32,18 @@ export const footerColumns = [
       { label: "Contact", href: "/contact" },
     ],
   },
+  {
+    title: "Topics",
+    links: [
+      { label: "Healthcare", href: "/insights/tag/healthcare" },
+      { label: "AI", href: "/insights/tag/ai" },
+      { label: "Voice Agents", href: "/insights/tag/voice-agents" },
+      { label: "Strategy", href: "/insights/tag/strategy" },
+      { label: "Leadership", href: "/insights/tag/leadership" },
+      { label: "Operations", href: "/insights/tag/operations" },
+      { label: "Decision-Making", href: "/insights/tag/decision-making" },
+    ],
+  },
 ];
 
 export const footerContact = {
