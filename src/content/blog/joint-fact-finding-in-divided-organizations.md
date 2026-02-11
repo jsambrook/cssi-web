@@ -3,7 +3,7 @@ title: "Joint fact-finding in divided organizations"
 description: "How to establish a shared baseline when different departments see fundamentally different realities—and why this matters more than elegant solutions."
 date: 2025-08-27
 author: "John Sambrook"
-tags: ["Decision-making"]
+tags: ["Decision-Making"]
 draft: true
 ---
 
