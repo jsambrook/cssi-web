@@ -51,6 +51,21 @@ export function buildWebSiteSchema(): Record<string, unknown> {
   };
 }
 
+export function buildWebPageSchema(options: {
+  name: string;
+  description: string;
+  url: string;
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: options.name,
+    description: options.description,
+    url: options.url,
+    isPartOf: { '@type': 'WebSite', name: siteConfig.name, url: siteConfig.siteUrl },
+  };
+}
+
 export function buildProfessionalServiceSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
