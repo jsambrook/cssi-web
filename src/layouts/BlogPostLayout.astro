@@ -11,6 +11,7 @@ interface Props {
   description: string;
   date: Date;
   author: string;
+  tags?: string[];
   ogImage?: string;
 }
 
@@ -21,8 +22,9 @@ import Section from "../components/Section.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
 import { buildArticleSchema, buildBreadcrumbSchema } from "../data/schema";
 import { siteConfig } from "../data/site";
+import { tagHref } from "../utils/tags";
 
-const { title, description, date, author, ogImage } = Astro.props;
+const { title, description, date, author, tags = [], ogImage } = Astro.props;
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -56,6 +58,13 @@ const breadcrumb = buildBreadcrumbSchema([
         <div class="text-sm text-muted-foreground">
           <span>{author}</span> &middot; <time datetime={date.toISOString()}>{formattedDate}</time>
         </div>
+        {tags.length > 0 && (
+          <div class="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <a href={tagHref(tag)} class="text-xs border border-primary/30 text-primary rounded-full px-3 py-0.5 hover:bg-primary/10 transition-colors">{tag}</a>
+            ))}
+          </div>
+        )}
       </header>
       <div class="prose prose-lg max-w-none">
         <slot />
