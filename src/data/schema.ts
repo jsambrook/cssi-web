@@ -181,6 +181,10 @@ export function buildArticleSchema(options: {
       '@type': 'Organization',
       name: siteConfig.name,
       url: siteConfig.siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.siteUrl}/images/logo.png`,
+      },
     },
   };
   if (options.image) {

@@ -10,6 +10,7 @@ interface Props {
   title: string;
   description: string;
   date: Date;
+  updatedDate?: Date;
   author: string;
   tags?: string[];
   ogImage?: string;
@@ -24,7 +25,7 @@ import { buildArticleSchema, buildBreadcrumbSchema } from "../data/schema";
 import { siteConfig } from "../data/site";
 import { tagHref } from "../utils/tags";
 
-const { title, description, date, author, tags = [], ogImage } = Astro.props;
+const { title, description, date, updatedDate, author, tags = [], ogImage } = Astro.props;
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -36,7 +37,7 @@ const articleSchema = buildArticleSchema({
   title,
   description,
   datePublished: date.toISOString(),
-  dateModified: date.toISOString(),
+  dateModified: (updatedDate ?? date).toISOString(),
   author,
   url: articleUrl,
   image: imageUrl,
