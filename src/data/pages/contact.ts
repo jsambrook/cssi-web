@@ -20,11 +20,11 @@ export const contactGrid = {
   },
   phone: {
     heading: "Telephone Call",
-    description: "Call Mark, our AI voice agent, to discuss options or schedule a meeting.",
+    description: "Call Mark, our AI voice agent. Mark can answer questions about our services, help you get oriented, or schedule a meeting with John.",
   },
   email: {
     heading: "Email",
-    description: "For general inquiries or to share background before a call.",
+    description: "For general inquiries, to share background information, or to send materials ahead of a scheduled meeting.",
   },
   location: {
     heading: "Location",
