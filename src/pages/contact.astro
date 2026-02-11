@@ -4,13 +4,14 @@ import Section from "../components/Section.astro";
 import CTASection from "../components/CTASection.astro";
 import { footerContact } from "../data/site";
 import { pageTitle, pageDescription, header, contactGrid, cta } from "../data/pages/contact";
-import { buildContactPageSchema } from "../data/schema";
+import { buildContactPageSchema, buildProfessionalServiceSchema } from "../data/schema";
 
 const contactSchema = buildContactPageSchema(pageDescription);
+const professionalServiceSchema = buildProfessionalServiceSchema();
 const [addressStreet, addressCity] = footerContact.address.split("\n");
 ---
 
-<PageLayout pageTitle={pageTitle} description={pageDescription} jsonLd={[contactSchema]}>
+<PageLayout pageTitle={pageTitle} description={pageDescription} jsonLd={[contactSchema, professionalServiceSchema]}>
 
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">
