@@ -31,7 +31,10 @@ export function buildOrganizationSchema(): Record<string, unknown> {
       '@type': 'Person',
       name: 'John Sambrook',
     },
-    logo: `${siteConfig.siteUrl}/images/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.siteUrl}/images/logo.png`,
+    },
   };
 }
 
@@ -62,7 +65,10 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       latitude: 47.6769,
       longitude: -122.2060,
     },
-    logo: `${siteConfig.siteUrl}/images/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.siteUrl}/images/logo.png`,
+    },
     description: siteConfig.defaultDescription,
     priceRange: '$$',
     foundingDate: '1996',
