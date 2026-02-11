@@ -1,9 +1,9 @@
 import type { HeroBullet, FeatureItem, CTAContent } from "../types";
 
 export const hero = {
-  headline: "Make Progress on the Issues That Matter",
+  headline: "Make Rapid Progress on What Matters Most",
   subheadline:
-    "When division, stalled decisions, and cross-functional deadlocks consume your leadership bandwidth\u2014there's a different approach.",
+    "When critical problems persist despite everyone\u2019s best efforts, the issue is structural, not personal. We resolve these situations quickly and get things moving again.",
   bullets: [
     { bold: "No comprehensive decks.", text: "Decision-ready artifacts instead of reports." },
     { bold: "No scope creep.", text: "Fixed fees, clear deliverables, explicit timelines." },
