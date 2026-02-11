@@ -35,6 +35,7 @@ export function buildOrganizationSchema(): Record<string, unknown> {
       '@type': 'ImageObject',
       url: `${siteConfig.siteUrl}/images/logo.png`,
     },
+    image: `${siteConfig.siteUrl}/images/logo.png`,
     sameAs: [
       'https://www.linkedin.com/company/common-sense-systems',
       'https://www.linkedin.com/in/johnsambrook',
@@ -191,6 +192,7 @@ export function buildArticleSchema(options: {
     author: {
       '@type': 'Person',
       name: options.author,
+      url: `${siteConfig.siteUrl}/about`,
     },
     publisher: {
       '@type': 'Organization',
