@@ -24,7 +24,7 @@ export const contactGrid = {
   },
   email: {
     heading: "Email",
-    description: "For general inquiries, to share background information, or to send materials ahead of a scheduled meeting.",
+    description: "For general inquiries, to share background information, or to send materials ahead of a scheduled meeting. We typically respond within one business day.",
   },
   location: {
     heading: "Location",
@@ -32,11 +32,6 @@ export const contactGrid = {
       "We serve organizations throughout Washington State. Located in the Totem Lake area, near I-405 and NE 128th Street.",
     linkText: "Open in Google Maps",
     href: "https://www.google.com/maps/search/?api=1&query=11227+NE+128+ST+Kirkland+WA+98034",
-  },
-  availability: {
-    heading: "Availability",
-    description:
-      "We typically respond within one business day to inquiries.",
   },
 };
 
