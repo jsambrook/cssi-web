@@ -2,7 +2,7 @@
 title: "AI-facilitated constraint resolution for healthcare systems"
 description: "How AI can dissolve complex multi-stakeholder conflicts by surfacing hidden assumptions, not by replacing human judgment."
 date: 2026-02-09
-author: "Common Sense Systems"
+author: "John Sambrook"
 tags: ["AI", "Healthcare", "Constraint Resolution", "Strategy"]
 ---
 

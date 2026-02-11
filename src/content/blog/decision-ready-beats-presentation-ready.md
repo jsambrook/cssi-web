@@ -2,7 +2,7 @@
 title: "Decision-ready beats presentation-ready"
 description: "A framework for turning complex inputs into choices stakeholders can act on."
 date: 2026-01-15
-author: "Common Sense Systems"
+author: "John Sambrook"
 tags: ["Decision-Making", "Frameworks"]
 ---
 
