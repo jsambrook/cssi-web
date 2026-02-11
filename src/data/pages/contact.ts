@@ -13,9 +13,9 @@ export const header: PageHeader = {
 
 export const contactGrid = {
   discoveryCall: {
-    heading: "Discovery Meeting",
-    description: "Schedule a meeting with John to discuss your situation and whether we can help.",
-    linkText: "Schedule a Call",
+    heading: "Schedule a Meeting",
+    description: "Schedule a meeting with John. It might be an initial conversation to explore your situation, or a regular ongoing meeting.",
+    linkText: "Schedule a Meeting",
     href: "https://calendar.app.google/wgWnth98gdaNvN5aA",
   },
   phone: {
@@ -43,7 +43,7 @@ export const contactGrid = {
 export const cta: CTAContent = {
   headline: "Not Sure Where to Start?",
   description:
-    "Book a free call. We\u2019ll listen to what\u2019s going on and tell you honestly whether we can help.",
-  primaryCta: { text: "Schedule a Call", href: "https://calendar.app.google/wgWnth98gdaNvN5aA" },
+    "Book a free meeting. We\u2019ll listen to what\u2019s going on and tell you honestly whether we can help.",
+  primaryCta: { text: "Schedule a Meeting", href: "https://calendar.app.google/wgWnth98gdaNvN5aA" },
   secondaryCta: { text: "Our Approach", href: "/approach" },
 };

@@ -47,7 +47,7 @@ export const cta: CTAContent = {
   headline: "Ready to Move Forward?",
   description:
     "Start with a conversation. No pitch, no obligation. Just a practical discussion about what's actually blocking progress.",
-  primaryCta: { text: "Schedule a Call", href: "https://calendar.app.google/wgWnth98gdaNvN5aA" },
+  primaryCta: { text: "Schedule a Meeting", href: "https://calendar.app.google/wgWnth98gdaNvN5aA" },
   secondaryCta: { text: "Learn More", href: "/approach" },
   footnote: "Serving hospitals, health systems, and healthcare organizations across Washington, Oregon, Idaho, and Montana",
 };
