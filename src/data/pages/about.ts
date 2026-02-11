@@ -8,7 +8,7 @@ export const header: PageHeader = {
   label: "About",
   heading: "John Sambrook",
   subheading:
-    "Healthcare systems architect helping hospital and health system leaders identify and resolve the operational constraints that stall progress, drain staff, and erode margins.",
+    "Practical, focused, effective expertise. Helping organizations rapidly identify and resolve the constraints that stall progress, drain staff, and erode margins.",
 };
 
 export const content: ContentBlock[] = [
