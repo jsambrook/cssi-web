@@ -31,6 +31,7 @@ const formattedDate = date.toLocaleDateString("en-US", {
   day: "numeric",
 });
 const articleUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).href;
+const imageUrl = ogImage ? `${siteConfig.siteUrl}${ogImage}` : undefined;
 const articleSchema = buildArticleSchema({
   title,
   description,
@@ -38,6 +39,7 @@ const articleSchema = buildArticleSchema({
   dateModified: date.toISOString(),
   author,
   url: articleUrl,
+  image: imageUrl,
 });
 const breadcrumb = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
@@ -66,6 +68,9 @@ const breadcrumb = buildBreadcrumbSchema([
           </div>
         )}
       </header>
+      {ogImage && (
+        <img src={ogImage} alt={title} loading="lazy" class="w-full rounded-lg mb-8" />
+      )}
       <div class="prose prose-lg max-w-none">
         <slot />
       </div>

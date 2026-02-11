@@ -160,8 +160,9 @@ export function buildArticleSchema(options: {
   dateModified?: string;
   author: string;
   url: string;
+  image?: string;
 }): Record<string, unknown> {
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: options.title,
@@ -179,6 +180,10 @@ export function buildArticleSchema(options: {
       url: siteConfig.siteUrl,
     },
   };
+  if (options.image) {
+    schema.image = options.image;
+  }
+  return schema;
 }
 
 export function buildBreadcrumbSchema(
