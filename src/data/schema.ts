@@ -96,14 +96,18 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     founder: {
       '@type': 'Person',
       name: 'John Sambrook',
-      jobTitle: 'Healthcare Systems Architect',
+      jobTitle: 'Systems Architect & Constraint Analyst',
       knowsAbout: [
         'Theory of Constraints',
-        'Healthcare Operations',
         'Systems Engineering',
-        'Hospital Discharge Processes',
-        'Medical Device Development',
-        'AI-Assisted Analysis',
+        'Healthcare Operations',
+        'Eli Goldratt Thinking Processes',
+        'Sales Process Engineering',
+        'Business Process Improvement',
+        'Operational Constraint Analysis',
+        'Medical Device Software',
+        'Embedded Systems Engineering',
+        'AI-Assisted Policy Analysis',
       ],
     },
     areaServed: [
@@ -135,6 +139,9 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       'Healthcare AI Consulting',
       'Complex Discharge Analysis',
       'Operational Constraint Analysis',
+      'Sales Process Engineering',
+      'Business Process Improvement',
+      'Organizational Constraint Analysis',
     ],
   };
 }
@@ -144,7 +151,7 @@ export function buildFounderSchema(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'John Sambrook',
-    jobTitle: 'Healthcare Systems Architect',
+    jobTitle: 'Systems Architect & Constraint Analyst',
     worksFor: {
       '@type': 'Organization',
       name: siteConfig.name,
@@ -160,6 +167,9 @@ export function buildFounderSchema(): Record<string, unknown> {
       'Systems Engineering',
       'Healthcare Operations',
       'Eli Goldratt Thinking Processes',
+      'Sales Process Engineering',
+      'Business Process Improvement',
+      'Operational Constraint Analysis',
       'Medical Device Software',
       'Embedded Systems Engineering',
       'AI-Assisted Policy Analysis',

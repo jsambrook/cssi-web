@@ -2,7 +2,7 @@ import type { PageHeader, ContentBlock, CTAContent } from "../types";
 
 export const pageTitle = "About John Sambrook";
 export const pageDescription =
-  "John Sambrook is a healthcare systems architect based in Kirkland, Washington, with 30+ years of systems engineering experience including medical device development. He applies Theory of Constraints methodology to help healthcare organizations across Washington State resolve operational bottlenecks.";
+  "Systems architect applying Theory of Constraints to help organizations across healthcare, manufacturing, and technology resolve operational bottlenecks.";
 
 export const header: PageHeader = {
   label: "About",
