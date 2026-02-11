@@ -35,6 +35,10 @@ export function buildOrganizationSchema(): Record<string, unknown> {
       '@type': 'ImageObject',
       url: `${siteConfig.siteUrl}/images/logo.png`,
     },
+    sameAs: [
+      'https://www.linkedin.com/company/common-sense-systems',
+      'https://www.linkedin.com/in/johnsambrook',
+    ],
   };
 }
 
@@ -148,6 +152,7 @@ export function buildFounderSchema(): Record<string, unknown> {
       name: 'Washington State University',
     },
     url: `${siteConfig.siteUrl}/about`,
+    sameAs: ['https://www.linkedin.com/in/johnsambrook'],
   };
 }
 
