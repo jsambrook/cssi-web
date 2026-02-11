@@ -64,7 +64,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     },
     logo: `${siteConfig.siteUrl}/images/logo.png`,
     description: siteConfig.defaultDescription,
-    priceRange: '$',
+    priceRange: '$$',
     foundingDate: '1996',
     founder: {
       '@type': 'Person',
@@ -108,14 +108,6 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       'Healthcare AI Consulting',
       'Complex Discharge Analysis',
       'Operational Constraint Analysis',
-    ],
-    knowsAbout: [
-      'Theory of Constraints',
-      'Healthcare Operations',
-      'Systems Engineering',
-      'Hospital Discharge Processes',
-      'Medical Device Development',
-      'AI-Assisted Analysis',
     ],
   };
 }
