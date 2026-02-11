@@ -7,3 +7,4 @@ dist/
 !.env.example
 .blog_cache.json
 /*.png
+public/images/blog/
