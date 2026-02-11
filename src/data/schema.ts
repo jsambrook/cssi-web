@@ -89,6 +89,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       '@type': 'ImageObject',
       url: `${siteConfig.siteUrl}/images/logo.png`,
     },
+    image: `${siteConfig.siteUrl}/images/logo.png`,
     description: siteConfig.defaultDescription,
     priceRange: '$$',
     foundingDate: '1996',
