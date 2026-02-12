@@ -1,7 +1,7 @@
 import type { HeroBullet, FeatureItem, CTAContent } from "../types";
 
 export const hero = {
-  headline: "Make Rapid Progress on What Matters Most",
+  headline: "Fast Solutions to Tough Problems",
   subheadline:
     "When critical problems persist despite everyone\u2019s best efforts, the issue is structural, not personal. We resolve these situations quickly and get things moving again.",
   bullets: [
