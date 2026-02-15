@@ -27,7 +27,7 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
           <article class:list={["group", i < posts.length - 1 && "border-b border-border pb-6"]}>
             <div class="flex gap-4">
               <a href={`/insights/${post.id}`} class="shrink-0 hidden sm:block">
-                <img src={thumb} alt="" loading="lazy" class="w-20 h-20 rounded-lg object-cover" />
+                <img src={thumb} alt="" loading="lazy" class="w-20 h-20 rounded-lg object-contain" />
               </a>
               <div class="space-y-1">
                 <a href={`/insights/${post.id}`} class="block">

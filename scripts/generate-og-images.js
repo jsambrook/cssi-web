@@ -21,7 +21,7 @@ const LOGO_PATH = join(ROOT, 'public/favicon.svg');
 // Design tokens (matching og-default.png)
 const WIDTH = 1200;
 const HEIGHT = 630;
-const BG_COLOR = '#292929';
+const BG_COLOR = '#f5f5f5';
 const ACCENT_COLOR = '#fe811b';
 const ACCENT_BAR_HEIGHT = 8;
 const PADDING_X = 60;
@@ -137,7 +137,7 @@ async function main() {
     ctx.fillRect(0, 0, WIDTH, ACCENT_BAR_HEIGHT);
 
     // Title text (white, bold, centered)
-    ctx.fillStyle = '#ffffff';
+    ctx.fillStyle = '#1a1a1a';
     ctx.font = `bold ${TITLE_FONT_SIZE}px sans-serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
