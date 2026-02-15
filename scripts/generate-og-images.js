@@ -18,6 +18,9 @@ const BLOG_DIR = join(ROOT, 'src/content/blog');
 const OUTPUT_DIR = join(ROOT, 'public/images/blog');
 const LOGO_PATH = join(ROOT, 'public/favicon.svg');
 
+// Bump to force regeneration of all images (e.g. after design token changes)
+const DESIGN_VERSION = '2';
+
 // Design tokens (matching og-default.png)
 const WIDTH = 1200;
 const HEIGHT = 630;
@@ -90,8 +93,14 @@ async function main() {
 
   const logo = await loadImage(LOGO_PATH);
 
-  // Track script mtime so design token changes trigger regeneration
-  const scriptMtimeMs = statSync(new URL(import.meta.url)).mtimeMs;
+  // Check if design version changed — if so, regenerate everything
+  const versionFile = join(OUTPUT_DIR, '.design-version');
+  let forceAll = false;
+  try {
+    forceAll = readFileSync(versionFile, 'utf-8').trim() !== DESIGN_VERSION;
+  } catch {
+    forceAll = true;
+  }
 
   let generated = 0;
   let skipped = 0;
@@ -112,16 +121,18 @@ async function main() {
 
     assert(title, `Missing title in ${file}`);
 
-    // Skip if output exists and is newer than both source and this script
-    try {
-      const mdStat = statSync(mdPath);
-      const pngStat = statSync(outPath);
-      if (pngStat.mtimeMs > mdStat.mtimeMs && pngStat.mtimeMs > scriptMtimeMs) {
-        skipped++;
-        continue;
+    // Skip if output exists and is newer than source (unless design version changed)
+    if (!forceAll) {
+      try {
+        const mdStat = statSync(mdPath);
+        const pngStat = statSync(outPath);
+        if (pngStat.mtimeMs > mdStat.mtimeMs) {
+          skipped++;
+          continue;
+        }
+      } catch {
+        // Output doesn't exist yet — generate it
       }
-    } catch {
-      // Output doesn't exist yet — generate it
     }
 
     // -----------------------------------------------------------------------
@@ -186,6 +197,7 @@ async function main() {
     console.log(`  ✓ ${slug}.png`);
   }
 
+  writeFileSync(versionFile, DESIGN_VERSION);
   console.log(`\nDone. Generated: ${generated}, Skipped: ${skipped}`);
 }
 
