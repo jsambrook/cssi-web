@@ -7,6 +7,7 @@ import { slugifyTag, tagHref } from "../utils/tags";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const cacheBust = Date.now();
 ---
 
 <PageLayout pageTitle={pageTitle} description={pageDescription}>
@@ -22,7 +23,7 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft))
   <Section>
     <div class="max-w-3xl mx-auto space-y-6">
       {posts.map((post, i) => {
-        const thumb = `/images/blog/${post.id}.png`;
+        const thumb = `/images/blog/${post.id}.png?v=${cacheBust}`;
         return (
           <article class:list={["group", i < posts.length - 1 && "border-b border-border pb-6"]}>
             <div class="flex gap-4">
