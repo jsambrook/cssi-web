@@ -90,6 +90,9 @@ async function main() {
 
   const logo = await loadImage(LOGO_PATH);
 
+  // Track script mtime so design token changes trigger regeneration
+  const scriptMtimeMs = statSync(new URL(import.meta.url)).mtimeMs;
+
   let generated = 0;
   let skipped = 0;
 
@@ -109,11 +112,11 @@ async function main() {
 
     assert(title, `Missing title in ${file}`);
 
-    // Skip if output exists and is newer than source
+    // Skip if output exists and is newer than both source and this script
     try {
       const mdStat = statSync(mdPath);
       const pngStat = statSync(outPath);
-      if (pngStat.mtimeMs > mdStat.mtimeMs) {
+      if (pngStat.mtimeMs > mdStat.mtimeMs && pngStat.mtimeMs > scriptMtimeMs) {
         skipped++;
         continue;
       }
