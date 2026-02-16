@@ -123,4 +123,4 @@ If you budget for a cell phone, you can budget for a voice agent. The setup cost
 
 **Call us: (425) 501-9074**
 **Email: [contact@common-sense.com](mailto:contact@common-sense.com)**
-**Learn more: [Voice Agent Solutions](/voice-agents.html)**
+**Learn more: [Voice Agent Solutions](/insights/tag/voice-agents)**

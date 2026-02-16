@@ -81,4 +81,4 @@ Whether you're in property management, customer service, healthcare, or any fiel
 
 **Call us: (425) 501-9074**
 **Email: [contact@common-sense.com](mailto:contact@common-sense.com)**
-**Learn more: [Voice Agent Solutions](/voice-agents.html)**
+**Learn more: [Voice Agent Solutions](/insights/tag/voice-agents)**

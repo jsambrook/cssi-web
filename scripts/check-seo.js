@@ -6,7 +6,7 @@ import { parse } from 'parse5';
 
 const DIST_DIR = join(process.cwd(), 'dist');
 const TITLE_MIN = 15;
-const TITLE_MAX = 60;
+const TITLE_MAX = 70;
 const DESCRIPTION_MIN = 50;
 const DESCRIPTION_MAX = 160;
 

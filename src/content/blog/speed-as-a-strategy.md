@@ -150,7 +150,7 @@ The question for healthcare leaders is not whether to compete on speed, but whet
 
 If your organization is struggling with slow cycle times in critical processes like patient discharges, or if you're interested in exploring how systems architecture can resolve conflicts that impede operational tempo, I'd welcome a conversation.
 
-[Schedule a Consultation](/book-consultation)
+[Schedule a Consultation](/contact)
 
 **John Sambrook**
 Common Sense Systems
