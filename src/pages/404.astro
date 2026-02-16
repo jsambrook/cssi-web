@@ -6,7 +6,11 @@ import Section from "../components/Section.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
 ---
 
-<BaseLayout title={getPageTitle("Page Not Found")} description="The page you requested could not be found. Return to the Common Sense Systems homepage to explore healthcare consulting insights and services.">
+<BaseLayout
+  title={getPageTitle("Page Not Found")}
+  description="The page you requested could not be found. Return to the Common Sense Systems homepage to explore healthcare consulting insights and services."
+  noindex={true}
+>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Section>

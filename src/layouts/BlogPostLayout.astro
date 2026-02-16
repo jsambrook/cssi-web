@@ -42,15 +42,30 @@ const articleSchema = buildArticleSchema({
   author,
   url: articleUrl,
   image: imageUrl,
+  tags,
 });
 const breadcrumb = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Insights", href: "/insights" },
   { name: title, href: Astro.url.pathname },
 ]);
+const articleMeta = {
+  publishedTime: pacificDateIso,
+  modifiedTime: pacificModifiedIso,
+  author,
+  tags,
+};
 ---
 
-<BaseLayout title={metaTitle ?? getPageTitle(title)} description={metaDescription ?? description} ogImage={ogImage} ogType="article" jsonLd={[articleSchema, breadcrumb]}>
+<BaseLayout
+  title={metaTitle ?? getPageTitle(title)}
+  description={metaDescription ?? description}
+  ogImage={ogImage}
+  ogImageAlt={`Open Graph image for ${title}`}
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={[articleSchema, breadcrumb]}
+>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Section>

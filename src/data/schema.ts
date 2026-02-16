@@ -13,6 +13,10 @@ function parseAddress(raw: string) {
 }
 
 const address = parseAddress(footerContact.address);
+const organizationSameAs = [
+  'https://www.linkedin.com/company/common-sense-systems',
+  siteConfig.xProfileUrl,
+];
 
 export function buildOrganizationSchema(): Record<string, unknown> {
   return {
@@ -36,10 +40,7 @@ export function buildOrganizationSchema(): Record<string, unknown> {
       url: `${siteConfig.siteUrl}/images/logo.png`,
     },
     image: `${siteConfig.siteUrl}/images/logo.png`,
-    sameAs: [
-      'https://www.linkedin.com/company/common-sense-systems',
-      'https://www.linkedin.com/in/johnsambrook',
-    ],
+    sameAs: [...organizationSameAs, 'https://www.linkedin.com/in/johnsambrook'],
   };
 }
 
@@ -143,6 +144,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       'Business Process Improvement',
       'Organizational Constraint Analysis',
     ],
+    sameAs: organizationSameAs,
   };
 }
 
@@ -191,12 +193,15 @@ export function buildArticleSchema(options: {
   author: string;
   url: string;
   image?: string;
+  tags?: string[];
 }): Record<string, unknown> {
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: options.title,
     description: options.description,
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
     datePublished: options.datePublished,
     dateModified: options.dateModified ?? options.datePublished,
     url: options.url,
@@ -219,7 +224,16 @@ export function buildArticleSchema(options: {
         url: `${siteConfig.siteUrl}/images/logo.png`,
       },
     },
+    isPartOf: {
+      '@type': 'Blog',
+      name: `${siteConfig.name} Insights`,
+      url: `${siteConfig.siteUrl}/insights`,
+    },
   };
+  if (options.tags && options.tags.length > 0) {
+    schema.keywords = options.tags;
+    schema.articleSection = options.tags[0];
+  }
   if (options.image) {
     schema.image = options.image;
   }

@@ -1,6 +1,8 @@
 ---
 title: "How to align teams on the minimum dataset"
 description: "Practical steps for establishing shared facts before debating solutions."
+metaTitle: "How to align teams on the minimum dataset"
+metaDescription: "Practical steps for establishing shared facts before debating solutions."
 date: 2026-01-08
 author: "John Sambrook"
 tags: ["Alignment", "Data", "Teams"]

@@ -1,6 +1,8 @@
 ---
 title: "Is non-value-added work really neutral? Rethinking value in Lean"
 description: "A reflection on Lean's definition of value, arguing that no work is neutral—activities either create value, enable it through necessary conditions, or subtract it as waste."
+metaTitle: "Is non-value-added work really neutral? Rethinking value..."
+metaDescription: "A reflection on Lean's definition of value, arguing that no work is neutral—activities either create value, enable it through necessary conditions, or..."
 date: 2025-10-01
 author: "John Sambrook"
 tags: ["Lean", "Systems"]

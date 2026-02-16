@@ -1,6 +1,8 @@
 ---
 title: "Architecting hospital care"
 description: "Why an outsider's perspective is a healthcare system architect's greatest asset — how decades in embedded systems engineering, Theory of Constraints, and AI provide a different lens on hospital operational challenges."
+metaTitle: "Architecting hospital care"
+metaDescription: "Why an outsider's perspective is a healthcare system architect's greatest asset — how decades in embedded systems engineering, Theory of Constraints,..."
 date: 2025-08-09
 author: "John Sambrook"
 tags: ["Healthcare", "Architecture"]

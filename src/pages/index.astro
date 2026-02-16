@@ -9,10 +9,24 @@ import CTASection from "../components/CTASection.astro";
 import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
 import { hero, featuresSection, features, cta } from "../data/pages/home";
 import { intakeFormConfig } from "../data/intakeForm";
-import { buildWebSiteSchema, buildProfessionalServiceSchema } from "../data/schema";
+import {
+  buildWebSiteSchema,
+  buildProfessionalServiceSchema,
+  buildWebPageSchema,
+} from "../data/schema";
+import { siteConfig } from "../data/site";
+
+const homeWebPage = buildWebPageSchema({
+  name: "Home",
+  description: siteConfig.defaultDescription,
+  url: `${siteConfig.siteUrl}/`,
+});
 ---
 
-<BaseLayout title={getPageTitle("Operational Improvement Consulting, Kirkland WA")} jsonLd={[buildWebSiteSchema(), buildProfessionalServiceSchema()]}>
+<BaseLayout
+  title={getPageTitle("Operational Improvement Consulting, Kirkland WA")}
+  jsonLd={[buildWebSiteSchema(), homeWebPage, buildProfessionalServiceSchema()]}
+>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Hero

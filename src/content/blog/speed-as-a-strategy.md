@@ -1,6 +1,8 @@
 ---
 title: "Speed as a strategy"
 description: "Why moving fast is an undervalued strategic advantage for community hospitals."
+metaTitle: "Speed as a strategy"
+metaDescription: "Why moving fast is an undervalued strategic advantage for community hospitals."
 date: 2025-09-09
 author: "John Sambrook"
 tags: ["Strategy", "Leadership"]
