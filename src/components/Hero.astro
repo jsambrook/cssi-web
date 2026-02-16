@@ -15,8 +15,8 @@
  *   intakeForm: IntakeFormConfig (optional — enables 2-column layout)
  */
 
-import type { IntakeFormConfig } from "../data/types";
-import IntakeForm from "./IntakeForm.astro";
+import type { IntakeFormConfig, AmbitionCard } from '../data/types';
+import IntakeForm from './IntakeForm.astro';
 
 interface Bullet {
   bold: string;
@@ -36,24 +36,42 @@ interface Props {
   primaryCta?: CTA;
   secondaryCta?: CTA;
   intakeForm?: IntakeFormConfig;
+  ambitionCards?: AmbitionCard[];
 }
 
-const { headline, subheadline, bullets = [], primaryCta, secondaryCta, intakeForm } = Astro.props;
+const {
+  headline,
+  subheadline,
+  bullets = [],
+  primaryCta,
+  secondaryCta,
+  intakeForm,
+  ambitionCards = [],
+} = Astro.props;
 const hasTwoColumns = !!intakeForm;
 ---
 
 <section class="relative py-10 sm:py-12 lg:py-16 overflow-hidden">
   <!-- Background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-accent/10 via-background to-primary/5 -z-10"></div>
-  <div class="absolute top-20 right-0 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 bg-accent/5 rounded-full blur-3xl -z-10"></div>
-  <div class="absolute bottom-0 left-0 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-accent/10 via-background to-primary/5 -z-10">
+  </div>
+  <div
+    class="absolute top-20 right-0 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 bg-accent/5 rounded-full blur-3xl -z-10"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 bg-primary/5 rounded-full blur-3xl -z-10"
+  >
+  </div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class:list={[
-      hasTwoColumns
-        ? "lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start"
-        : "max-w-4xl mx-auto lg:mx-0",
-    ]}>
+    <div
+      class:list={[
+        hasTwoColumns
+          ? 'lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start'
+          : 'max-w-4xl mx-auto lg:mx-0',
+      ]}
+    >
       <!-- Hero content (left column when 2-col) -->
       <div class="space-y-5 lg:pt-4">
         <!-- Headline -->
@@ -66,61 +84,119 @@ const hasTwoColumns = !!intakeForm;
           {subheadline}
         </p>
 
+        <!-- Ambition Selector -->
+        {
+          ambitionCards.length > 0 && (
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              {ambitionCards.map((card) => (
+                <a
+                  href={`#${card.scrollTarget}`}
+                  class="ambition-card group cursor-pointer rounded-[var(--radius-sm)] border-2 border-border/30
+                         p-4 transition-all hover:border-primary/50 hover:shadow-sm bg-card/50"
+                >
+                  <span class="block text-xs font-semibold uppercase tracking-wider text-primary mb-1">
+                    {card.label}
+                  </span>
+                  <span class="block text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    {card.text}
+                  </span>
+                </a>
+              ))}
+            </div>
+          )
+        }
+
         <!-- Bullet Points -->
-        {bullets.length > 0 && (
-          <div class="space-y-3 pt-2">
-            {bullets.map((bullet) => (
-              <div class="flex items-start gap-3">
-                <svg class="h-5 w-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-                <p class="text-muted-foreground text-sm sm:text-base">
-                  <strong class="text-foreground">{bullet.bold}</strong> {bullet.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        )}
+        {
+          bullets.length > 0 && (
+            <div class="space-y-3 pt-2">
+              {bullets.map((bullet) => (
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="h-5 w-5 text-accent flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                  <p class="text-muted-foreground text-sm sm:text-base">
+                    <strong class="text-foreground">{bullet.bold}</strong> {bullet.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )
+        }
 
         <!-- CTAs -->
-        {(primaryCta || secondaryCta) && (
-          <div class="flex flex-col sm:flex-row gap-3 pt-4">
-            {primaryCta && (
-              <a
-                href={primaryCta.href}
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap
+        {
+          (primaryCta || secondaryCta) && (
+            <div class="flex flex-col sm:flex-row gap-3 pt-4">
+              {primaryCta && (
+                <a
+                  href={primaryCta.href}
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap
                        rounded-button transition-all bg-primary text-primary-foreground
                        hover:bg-primary/90 shadow-sm h-[54px] px-10 py-5 text-sm"
-                {...(primaryCta.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              >
-                {primaryCta.text}
-                <svg class="ml-1.5 h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            )}
-            {secondaryCta && (
-              <a
-                href={secondaryCta.href}
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap
+                  {...(primaryCta.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                >
+                  {primaryCta.text}
+                  <svg
+                    class="ml-1.5 h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              )}
+              {secondaryCta && (
+                <a
+                  href={secondaryCta.href}
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap
                        rounded-button transition-all border border-border bg-background
                        text-foreground hover:bg-accent/10 h-[54px] px-10 py-5 text-sm"
-              >
-                {secondaryCta.text}
-              </a>
-            )}
-          </div>
-        )}
+                >
+                  {secondaryCta.text}
+                </a>
+              )}
+            </div>
+          )
+        }
       </div>
 
       <!-- Intake form (right column) -->
-      {intakeForm && (
-        <div class="mt-8 lg:mt-0">
-          <IntakeForm config={intakeForm} />
-        </div>
-      )}
+      {
+        intakeForm && (
+          <div class="mt-8 lg:mt-0">
+            <IntakeForm config={intakeForm} />
+          </div>
+        )
+      }
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.ambition-card').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      const href = card.getAttribute('href');
+      if (!href?.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+</script>

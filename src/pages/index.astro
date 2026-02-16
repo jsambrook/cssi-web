@@ -1,31 +1,44 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Hero from "../components/Hero.astro";
-import Section from "../components/Section.astro";
-import FeatureCard from "../components/FeatureCard.astro";
-import CTASection from "../components/CTASection.astro";
-import { getPageTitle, headerDefaults, footerDefaults } from "../data/pageDefaults";
-import { hero, featuresSection, features, cta } from "../data/pages/home";
-import { intakeFormConfig } from "../data/intakeForm";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import IndustryToggle from '../components/IndustryToggle.astro';
+import CTASection from '../components/CTASection.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../data/pageDefaults';
+import {
+  hero,
+  ambitionCards,
+  featuresSection,
+  serviceCards,
+  defaultIndustry,
+  cta,
+} from '../data/pages/home';
+import { intakeFormConfig } from '../data/intakeForm';
 import {
   buildWebSiteSchema,
   buildProfessionalServiceSchema,
   buildWebPageSchema,
-} from "../data/schema";
-import { siteConfig } from "../data/site";
+  buildOfferCatalogSchema,
+} from '../data/schema';
+import { siteConfig } from '../data/site';
 
 const homeWebPage = buildWebPageSchema({
-  name: "Home",
+  name: 'Home',
   description: siteConfig.defaultDescription,
   url: `${siteConfig.siteUrl}/`,
 });
 ---
 
 <BaseLayout
-  title={getPageTitle("Operational Improvement Consulting, Kirkland WA")}
-  jsonLd={[buildWebSiteSchema(), homeWebPage, buildProfessionalServiceSchema()]}
+  title={getPageTitle('Operational Improvement & Constraint Analysis')}
+  jsonLd={[
+    buildWebSiteSchema(),
+    homeWebPage,
+    buildProfessionalServiceSchema(),
+    buildOfferCatalogSchema(),
+  ]}
 >
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
@@ -36,6 +49,7 @@ const homeWebPage = buildWebPageSchema({
     primaryCta={hero.primaryCta}
     secondaryCta={hero.secondaryCta}
     intakeForm={intakeFormConfig}
+    ambitionCards={ambitionCards}
   />
 
   <Section
@@ -44,11 +58,7 @@ const homeWebPage = buildWebPageSchema({
     heading={featuresSection.heading}
     subheading={featuresSection.subheading}
   >
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      {features.map((f) => (
-        <FeatureCard title={f.title} description={f.description} />
-      ))}
-    </div>
+    <IndustryToggle cards={serviceCards} defaultIndustry={defaultIndustry} />
   </Section>
 
   <CTASection

@@ -27,7 +27,7 @@ export interface ContentBlock {
 export interface FeatureItem {
   title: string;
   description: string;
-  color?: "default" | "red" | "orange" | "amber" | "blue" | "green" | "purple";
+  color?: 'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple';
   href?: string;
 }
 
@@ -47,9 +47,9 @@ export interface CTAContent {
 }
 
 export type LegalBlock =
-  | { type: "heading"; text: string; level: 2 | 3 }
-  | { type: "text"; html: string }
-  | { type: "list"; items: string[] };
+  | { type: 'heading'; text: string; level: 2 | 3 }
+  | { type: 'text'; html: string }
+  | { type: 'list'; items: string[] };
 
 export interface IntakeFormOption {
   id: string;
@@ -62,7 +62,7 @@ export interface IntakeFormStep {
   id: string;
   question: string;
   subtitle?: string;
-  inputType: "select" | "text" | "email";
+  inputType: 'select' | 'text' | 'email';
   options?: IntakeFormOption[];
   placeholder?: string;
   required?: boolean;
@@ -73,8 +73,27 @@ export interface IntakeFormConfig {
   footerText?: string;
   submitButtonText: string;
   successMessage: string;
-  googleForms: {
-    actionUrl: string;
-    fieldMappings: Record<string, string>;
+  formspree: {
+    endpoint: string;
+    fieldNames: Record<string, string>;
   };
+}
+
+export interface AmbitionCard {
+  label: string;
+  text: string;
+  scrollTarget: string;
+}
+
+export type Industry = 'healthcare' | 'tech';
+
+export interface IndustryVariant {
+  title: string;
+  description: string;
+}
+
+export interface ServiceCardItem {
+  id: string;
+  color?: 'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple';
+  variants: Record<Industry, IndustryVariant>;
 }
