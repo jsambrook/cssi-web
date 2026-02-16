@@ -10,7 +10,7 @@ import type {
 export const hero = {
   headline: 'Break the Constraint. Scale the Flow.',
   subheadline:
-    "We architect 'Unrefusable Offers' and operational velocity for organizations that are tired of incremental growth. Serving Healthcare, MedTech, and Embedded Systems.",
+    'We architect Unrefusable Offers and operational velocity for ambitious leaders who are tired of incremental growth. Serving scaling companies and complex systems in Healthcare, MedTech, and Embedded Software.',
   bullets: [
     { bold: 'No comprehensive decks.', text: 'Decision-ready artifacts instead of reports.' },
     { bold: 'No scope creep.', text: 'Fixed fees, clear deliverables, explicit timelines.' },
@@ -25,17 +25,17 @@ export const hero = {
 
 export const ambitionCards: AmbitionCard[] = [
   {
-    label: 'Velocity',
-    text: 'We need to move 2x faster (The Drum-Buffer-Rope).',
+    label: 'ACCELERATE',
+    text: 'We need to move 2x faster in R&D and Ops (The Drum-Buffer-Rope).',
     scrollTarget: 'service-flow-dynamics',
   },
   {
-    label: 'Strategy',
+    label: 'DOMINATE',
     text: 'We need to change the rules of our market (The Mafia Offer).',
     scrollTarget: 'service-market-offer',
   },
   {
-    label: 'Alignment',
+    label: 'UNIFY',
     text: 'We need Sales, Ops, and R&D to stop fighting (The Thinking Processes).',
     scrollTarget: 'service-synchronization',
   },

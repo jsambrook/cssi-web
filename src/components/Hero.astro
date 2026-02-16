@@ -91,14 +91,18 @@ const hasTwoColumns = !!intakeForm;
               {ambitionCards.map((card) => (
                 <a
                   href={`#${card.scrollTarget}`}
-                  class="ambition-card group cursor-pointer rounded-[var(--radius-sm)] border-2 border-border/30
-                         p-4 transition-all hover:border-primary/50 hover:shadow-sm bg-card/50"
+                  class="ambition-card group relative cursor-pointer rounded-[var(--radius-sm)] border-2 border-border/30
+                         p-4 pb-6 transition-all duration-200 hover:border-primary/60 hover:shadow-md
+                         hover:-translate-y-0.5 bg-card/50"
                 >
                   <span class="block text-xs font-semibold uppercase tracking-wider text-primary mb-1">
                     {card.label}
                   </span>
                   <span class="block text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                     {card.text}
+                  </span>
+                  <span class="absolute bottom-2 right-3 text-muted-foreground/40 group-hover:text-primary transition-colors text-sm">
+                    &rarr;
                   </span>
                 </a>
               ))}
@@ -109,22 +113,21 @@ const hasTwoColumns = !!intakeForm;
         <!-- Bullet Points -->
         {
           bullets.length > 0 && (
-            <div class="space-y-3 pt-2">
+            <div class="space-y-2 pt-2">
               {bullets.map((bullet) => (
-                <div class="flex items-start gap-3">
+                <div class="flex items-start gap-2">
                   <svg
-                    class="h-5 w-5 text-accent flex-shrink-0 mt-0.5"
+                    class="h-4 w-4 text-muted-foreground/50 flex-shrink-0 mt-0.5"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
                   >
-                    <circle cx="12" cy="12" r="10" />
                     <path d="m9 12 2 2 4-4" />
                   </svg>
-                  <p class="text-muted-foreground text-sm sm:text-base">
-                    <strong class="text-foreground">{bullet.bold}</strong> {bullet.text}
+                  <p class="text-muted-foreground/70 text-xs sm:text-sm">
+                    <strong class="text-muted-foreground">{bullet.bold}</strong> {bullet.text}
                   </p>
                 </div>
               ))}

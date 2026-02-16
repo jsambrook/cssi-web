@@ -35,7 +35,7 @@ export const intakeFormConfig: IntakeFormConfig = {
         {
           id: 'governance',
           icon: '🏛️',
-          title: 'Board Governance',
+          title: 'Governance & Decision Rights',
           description: 'Board-level decision processes or oversight frameworks',
         },
         {
