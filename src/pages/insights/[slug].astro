@@ -23,6 +23,8 @@ const ogImage = post.data.ogImage ?? `/images/blog/${post.id}.png`;
   author={post.data.author}
   tags={post.data.tags}
   ogImage={ogImage}
+  metaTitle={post.data.metaTitle}
+  metaDescription={post.data.metaDescription}
 >
   <Content />
 </BlogPostLayout>

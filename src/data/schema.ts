@@ -200,9 +200,14 @@ export function buildArticleSchema(options: {
     datePublished: options.datePublished,
     dateModified: options.dateModified ?? options.datePublished,
     url: options.url,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': options.url,
+    },
     author: {
       '@type': 'Person',
       name: options.author,
+      jobTitle: 'Founder & President',
       url: `${siteConfig.siteUrl}/about`,
     },
     publisher: {
