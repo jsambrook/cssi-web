@@ -1,8 +1,8 @@
 ---
-title: 'The discharge trap'
-description: 'Hospital discharge planning fails because it treats a complex logistics problem as a last-minute task. This three-part series introduces the Post-Acute Care Directive — moving planning from the hospital bed to the primary care clinic.'
-metaTitle: 'The discharge trap'
-metaDescription: 'Hospital discharge breaks down when complex planning starts at the bedside. This series explains how to move planning upstream into primary care.'
+title: "The Physics of Patient Flow: Why 'Discharge Planning' is a Mathematical Impossibility"
+description: 'Trying to plan a complex discharge at the moment of exit violates the basic physics of flow. Here is why the process must move upstream.'
+metaTitle: "The Physics of Patient Flow: Why 'Discharge Planning' Fails"
+metaDescription: 'Trying to plan a complex discharge at the moment of exit violates the basic physics of flow. Here is why the process must move upstream.'
 date: 2025-09-04
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations']
@@ -10,7 +10,7 @@ tags: ['Healthcare', 'Operations']
 
 Why hospital discharge processes fail and how to fix them.
 
-## The Discharge Trap: Why We Wait Until the Worst Possible Moment
+## The Physics of Patient Flow: Why We Wait Until the Worst Possible Moment
 
 It's a scene that plays out in hospitals every day. A patient--let's call her Mary--is medically ready for discharge after a serious illness. The doctor has signed off. The bed is needed for another patient.
 
