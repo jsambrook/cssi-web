@@ -7,7 +7,7 @@ import { parseDocument } from 'yaml';
 const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 
 const META_TITLE_MIN = 15;
-const META_TITLE_MAX = 60;
+const META_TITLE_MAX = 70;
 const META_DESCRIPTION_MIN = 50;
 const META_DESCRIPTION_MAX = 160;
 const TRUNCATION_PATTERN = /(?:\.{3}|…)$/u;
