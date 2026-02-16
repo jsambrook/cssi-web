@@ -138,22 +138,86 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       name: 'John Sambrook',
       jobTitle: 'Systems Architect & Constraint Analyst',
       knowsAbout: [
-        'Theory of Constraints',
-        'Systems Engineering',
-        'Healthcare Operations',
-        'Eli Goldratt Thinking Processes',
-        'Sales Process Engineering',
-        'Business Process Improvement',
-        'Operational Constraint Analysis',
-        'Medical Device Software',
-        'Embedded Systems Engineering',
-        'AI-Assisted Policy Analysis',
-        'Patient Flow Optimization',
-        'Length of Stay Reduction',
-        'Direct-to-Employer Healthcare Contracting',
-        'R&D Pipeline Acceleration',
-        'Risk-Shared Licensing',
-        'Cross-Functional Organizational Alignment',
+        {
+          '@type': 'DefinedTerm',
+          name: 'Theory of Constraints (TOC)',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/Theory_of_constraints',
+            'https://www.tocico.org/',
+            'https://www.wikidata.org/wiki/Q27857',
+          ],
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'TOC Thinking Processes',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/Thinking_processes_(theory_of_constraints)',
+            'https://www.tocico.org/page/TP_Committee',
+          ],
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'IEC 62304 - Medical Device Software',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/IEC_62304',
+            'https://www.iso.org/standard/38421.html',
+          ],
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'IEC 60601 - Medical Electrical Equipment',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/IEC_60601',
+            'https://www.iso.org/standard/65529.html',
+          ],
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Throughput Accounting',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/Throughput_accounting',
+            'https://www.wikidata.org/wiki/Q1056501',
+          ],
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Medical Ultrasound',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/Medical_ultrasound',
+            'https://www.wikidata.org/wiki/Q171442',
+          ],
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Defibrillation',
+          sameAs: [
+            'https://en.wikipedia.org/wiki/Defibrillation',
+            'https://www.wikidata.org/wiki/Q380299',
+          ],
+        },
+      ],
+      hasCredential: [
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'TOC Jonah (Thinking Processes Implementer)',
+          recognizedBy: {
+            '@type': 'Organization',
+            name: 'TOCICO',
+            url: 'https://www.tocico.org/',
+          },
+          about: {
+            '@type': 'DefinedTerm',
+            name: 'TOC Thinking Processes',
+            url: 'https://www.tocico.org/page/Jonah',
+          },
+        },
+      ],
+      alumniOf: [
+        {
+          '@type': 'CollegeOrUniversity',
+          name: 'Washington State University',
+          url: 'https://wsu.edu/',
+        },
       ],
     },
     areaServed: [
@@ -210,27 +274,87 @@ export function buildFounderSchema(): Record<string, unknown> {
       addressCountry: 'US',
     },
     knowsAbout: [
-      'Theory of Constraints',
-      'Systems Engineering',
-      'Healthcare Operations',
-      'Eli Goldratt Thinking Processes',
-      'Sales Process Engineering',
-      'Business Process Improvement',
-      'Operational Constraint Analysis',
-      'Medical Device Software',
-      'Embedded Systems Engineering',
-      'AI-Assisted Policy Analysis',
-      'Patient Flow Optimization',
-      'Length of Stay Reduction',
-      'Direct-to-Employer Healthcare Contracting',
-      'R&D Pipeline Acceleration',
-      'Risk-Shared Licensing',
-      'Cross-Functional Organizational Alignment',
+      {
+        '@type': 'DefinedTerm',
+        name: 'Theory of Constraints (TOC)',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/Theory_of_constraints',
+          'https://www.tocico.org/',
+          'https://www.wikidata.org/wiki/Q27857',
+        ],
+      },
+      {
+        '@type': 'DefinedTerm',
+        name: 'TOC Thinking Processes',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/Thinking_processes_(theory_of_constraints)',
+          'https://www.tocico.org/page/TP_Committee',
+        ],
+      },
+      {
+        '@type': 'DefinedTerm',
+        name: 'IEC 62304 - Medical Device Software',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/IEC_62304',
+          'https://www.iso.org/standard/38421.html',
+        ],
+      },
+      {
+        '@type': 'DefinedTerm',
+        name: 'IEC 60601 - Medical Electrical Equipment',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/IEC_60601',
+          'https://www.iso.org/standard/65529.html',
+        ],
+      },
+      {
+        '@type': 'DefinedTerm',
+        name: 'Throughput Accounting',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/Throughput_accounting',
+          'https://www.wikidata.org/wiki/Q1056501',
+        ],
+      },
+      {
+        '@type': 'DefinedTerm',
+        name: 'Medical Ultrasound',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/Medical_ultrasound',
+          'https://www.wikidata.org/wiki/Q171442',
+        ],
+      },
+      {
+        '@type': 'DefinedTerm',
+        name: 'Defibrillation',
+        sameAs: [
+          'https://en.wikipedia.org/wiki/Defibrillation',
+          'https://www.wikidata.org/wiki/Q380299',
+        ],
+      },
     ],
-    alumniOf: {
-      '@type': 'CollegeOrUniversity',
-      name: 'Washington State University',
-    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'TOC Jonah (Thinking Processes Implementer)',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'TOCICO',
+          url: 'https://www.tocico.org/',
+        },
+        about: {
+          '@type': 'DefinedTerm',
+          name: 'TOC Thinking Processes',
+          url: 'https://www.tocico.org/page/Jonah',
+        },
+      },
+    ],
+    alumniOf: [
+      {
+        '@type': 'CollegeOrUniversity',
+        name: 'Washington State University',
+        url: 'https://wsu.edu/',
+      },
+    ],
     url: `${siteConfig.siteUrl}/about`,
     sameAs: ['https://www.linkedin.com/in/johnsambrook'],
   };
