@@ -1,8 +1,8 @@
 ---
 title: "The post-acute care plan: a proactive approach to discharge readiness"
 description: "A concept for addressing the complex discharge problem at its source—by capturing discharge-relevant information during routine primary care, before any hospitalization occurs."
-metaTitle: "The post-acute care plan: a proactive approach to..."
-metaDescription: "A concept for addressing the complex discharge problem at its source—by capturing discharge-relevant information during routine primary care, before..."
+metaTitle: "Post-acute care planning before hospitalization"
+metaDescription: "The Post-Acute Care Plan concept captures discharge-critical data in primary care so patients and hospitals can avoid crisis-driven discharge delays."
 date: 2025-12-15
 author: "John Sambrook"
 tags: ["Healthcare", "Operations", "Strategy"]

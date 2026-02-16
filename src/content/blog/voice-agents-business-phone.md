@@ -2,7 +2,7 @@
 title: "Voice agents: the business phone you've been waiting for"
 description: "Discover why investing in a voice agent makes as much sense as your cell phone plan. Same familiar investment model, same monthly costs, but with 24/7 AI assistance that transforms your business operations."
 metaTitle: "Voice agents: the business phone you've been waiting for"
-metaDescription: "Discover why investing in a voice agent makes as much sense as your cell phone plan. Same familiar investment model, same monthly costs, but with 24/7..."
+metaDescription: "Voice agents follow a familiar phone-plan model: predictable monthly cost with 24/7 AI support that handles calls, tasks, and customer interactions."
 date: 2025-08-15
 author: "John Sambrook"
 tags: ["Voice Agents", "Business Investment"]

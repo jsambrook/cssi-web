@@ -2,7 +2,7 @@
 title: "The biggest satisficing trap AI breaks isn't what you think"
 description: "Matt Shumer is right that AI is about to change everything. But the real transformation isn't about job loss -- it's about discovering that most of the limits you've been working within were never real."
 metaTitle: "The biggest satisficing trap AI breaks isn't what you think"
-metaDescription: "Matt Shumer is right that AI is about to change everything. But the real transformation isn't about job loss -- it's about discovering that most of the..."
+metaDescription: "AI's biggest disruption is not job loss. It is exposing self-imposed limits and enabling people to build capabilities they once assumed required larger teams."
 date: 2026-02-12
 author: "John Sambrook"
 tags: ["AI", "Agency", "Strategy"]

@@ -2,7 +2,7 @@
 title: "Meet Ann: the voice agent transforming property management"
 description: "Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service quality and tenant satisfaction."
 metaTitle: "Meet Ann: the voice agent transforming property management"
-metaDescription: "Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service..."
+metaDescription: "Meet Ann, a voice agent that buffers tenant hostility, supports 24/7 service, and helps property managers improve response quality and satisfaction."
 date: 2025-08-15
 author: "John Sambrook"
 tags: ["Voice Agents", "Property Management"]

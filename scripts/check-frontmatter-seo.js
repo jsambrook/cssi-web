@@ -2,6 +2,7 @@
 
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { parseDocument } from 'yaml';
 
 const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 
@@ -9,29 +10,64 @@ const META_TITLE_MIN = 15;
 const META_TITLE_MAX = 60;
 const META_DESCRIPTION_MIN = 50;
 const META_DESCRIPTION_MAX = 160;
+const TRUNCATION_PATTERN = /(?:\.{3}|…)$/u;
 
-function parseFrontmatter(text) {
-  const match = text.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) {
+function extractFrontmatter(raw) {
+  const text = raw.replace(/\r\n/g, '\n');
+  const lines = text.split('\n');
+  if (lines[0]?.trim() !== '---') {
     return null;
   }
 
-  const data = new Map();
-  for (const line of match[1].split('\n')) {
-    const parsed = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
-    if (!parsed) {
-      continue;
+  for (let index = 1; index < lines.length; index += 1) {
+    const line = lines[index].trim();
+    if (line === '---' || line === '...') {
+      return lines.slice(1, index).join('\n');
     }
-    let value = parsed[2].trim();
-    if (
-      (value.startsWith('"') && value.endsWith('"')) ||
-      (value.startsWith("'") && value.endsWith("'"))
-    ) {
-      value = value.slice(1, -1);
-    }
-    data.set(parsed[1], value);
   }
-  return data;
+  return null;
+}
+
+function parseFrontmatter(raw) {
+  const frontmatter = extractFrontmatter(raw);
+  if (!frontmatter) {
+    return { data: null, error: 'missing frontmatter block' };
+  }
+
+  const doc = parseDocument(frontmatter, { prettyErrors: true });
+  if (doc.errors.length > 0) {
+    const messages = doc.errors.map((error) => error.message).join('; ');
+    return { data: null, error: `invalid frontmatter YAML (${messages})` };
+  }
+
+  const data = doc.toJS();
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    return { data: null, error: 'frontmatter is not a key/value mapping' };
+  }
+
+  return { data, error: null };
+}
+
+function normalizeString(value) {
+  if (typeof value === 'string') {
+    return value.trim();
+  }
+  return '';
+}
+
+function isDraft(frontmatter) {
+  const draft = frontmatter.draft;
+  if (typeof draft === 'boolean') {
+    return draft;
+  }
+  if (typeof draft === 'string') {
+    return draft.trim().toLowerCase() === 'true';
+  }
+  return false;
+}
+
+function looksMachineTrimmed(value) {
+  return TRUNCATION_PATTERN.test(value);
 }
 
 const files = readdirSync(BLOG_DIR)
@@ -43,20 +79,19 @@ const issues = [];
 for (const file of files) {
   const fullPath = join(BLOG_DIR, file);
   const text = readFileSync(fullPath, 'utf8');
-  const frontmatter = parseFrontmatter(text);
+  const { data: frontmatter, error } = parseFrontmatter(text);
 
-  if (!frontmatter) {
-    issues.push(`${file}: missing frontmatter block`);
+  if (error || !frontmatter) {
+    issues.push(`${file}: ${error ?? 'missing frontmatter block'}`);
     continue;
   }
 
-  const isDraft = (frontmatter.get('draft') ?? '').toLowerCase() === 'true';
-  if (isDraft) {
+  if (isDraft(frontmatter)) {
     continue;
   }
 
-  const metaTitle = (frontmatter.get('metaTitle') ?? '').trim();
-  const metaDescription = (frontmatter.get('metaDescription') ?? '').trim();
+  const metaTitle = normalizeString(frontmatter.metaTitle);
+  const metaDescription = normalizeString(frontmatter.metaDescription);
 
   if (!metaTitle) {
     issues.push(`${file}: missing metaTitle`);
@@ -66,6 +101,10 @@ for (const file of files) {
   ) {
     issues.push(
       `${file}: metaTitle length ${metaTitle.length} outside ${META_TITLE_MIN}-${META_TITLE_MAX}`
+    );
+  } else if (looksMachineTrimmed(metaTitle)) {
+    issues.push(
+      `${file}: metaTitle appears machine-trimmed (trailing ellipsis)`
     );
   }
 
@@ -77,6 +116,10 @@ for (const file of files) {
   ) {
     issues.push(
       `${file}: metaDescription length ${metaDescription.length} outside ${META_DESCRIPTION_MIN}-${META_DESCRIPTION_MAX}`
+    );
+  } else if (looksMachineTrimmed(metaDescription)) {
+    issues.push(
+      `${file}: metaDescription appears machine-trimmed (trailing ellipsis)`
     );
   }
 }

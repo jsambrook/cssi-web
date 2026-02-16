@@ -2,7 +2,7 @@
 title: "The discharge trap"
 description: "Hospital discharge planning fails because it treats a complex logistics problem as a last-minute task. This three-part series introduces the Post-Acute Care Directive — moving planning from the hospital bed to the primary care clinic."
 metaTitle: "The discharge trap"
-metaDescription: "Hospital discharge planning fails because it treats a complex logistics problem as a last-minute task. This three-part series introduces the Post-Acute..."
+metaDescription: "Hospital discharge breaks down when complex planning starts at the bedside. This series explains how to move planning upstream into primary care."
 date: 2025-09-04
 author: "John Sambrook"
 tags: ["Healthcare", "Operations"]

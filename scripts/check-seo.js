@@ -2,6 +2,7 @@
 
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { parse } from 'parse5';
 
 const DIST_DIR = join(process.cwd(), 'dist');
 const TITLE_MIN = 15;
@@ -28,34 +29,127 @@ function walkHtmlFiles(dir, files = []) {
   return files;
 }
 
-function decodeHtmlEntities(value) {
-  const named = value
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
-  return named.replace(/&#(\d+);/g, (_, code) =>
-    String.fromCodePoint(Number(code))
+function walkNodes(node, visit) {
+  visit(node);
+  for (const child of node.childNodes ?? []) {
+    walkNodes(child, visit);
+  }
+}
+
+function getAttr(node, name) {
+  const attr = node.attrs?.find((item) => item.name.toLowerCase() === name);
+  return attr?.value ?? '';
+}
+
+function firstElement(root, predicate) {
+  let found = null;
+  walkNodes(root, (node) => {
+    if (found || !node.tagName) {
+      return;
+    }
+    if (predicate(node)) {
+      found = node;
+    }
+  });
+  return found;
+}
+
+function allElements(root, predicate) {
+  const matches = [];
+  walkNodes(root, (node) => {
+    if (!node.tagName) {
+      return;
+    }
+    if (predicate(node)) {
+      matches.push(node);
+    }
+  });
+  return matches;
+}
+
+function textContent(node) {
+  let text = '';
+  walkNodes(node, (current) => {
+    if (current.nodeName === '#text') {
+      text += current.value ?? '';
+    }
+  });
+  return text.trim();
+}
+
+function getMetaContent(root, { name, property }) {
+  const meta = firstElement(root, (node) => {
+    if (node.tagName !== 'meta') {
+      return false;
+    }
+    if (name) {
+      return getAttr(node, 'name').toLowerCase() === name.toLowerCase();
+    }
+    if (property) {
+      return getAttr(node, 'property').toLowerCase() === property.toLowerCase();
+    }
+    return false;
+  });
+  return meta ? getAttr(meta, 'content').trim() : '';
+}
+
+function getCanonicalHref(root) {
+  const canonical = firstElement(root, (node) => {
+    if (node.tagName !== 'link') {
+      return false;
+    }
+    const rel = getAttr(node, 'rel')
+      .toLowerCase()
+      .split(/\s+/)
+      .filter(Boolean);
+    return rel.includes('canonical');
+  });
+  return canonical ? getAttr(canonical, 'href').trim() : '';
+}
+
+function collectJsonLdTypes(value, types = []) {
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      collectJsonLdTypes(item, types);
+    }
+    return types;
+  }
+
+  if (!value || typeof value !== 'object') {
+    return types;
+  }
+
+  const rawType = value['@type'];
+  if (typeof rawType === 'string') {
+    types.push(rawType);
+  } else if (Array.isArray(rawType)) {
+    for (const item of rawType) {
+      if (typeof item === 'string') {
+        types.push(item);
+      }
+    }
+  }
+
+  if (Array.isArray(value['@graph'])) {
+    collectJsonLdTypes(value['@graph'], types);
+  }
+
+  return types;
+}
+
+function parseJsonLdTypes(documentRoot) {
+  const scripts = allElements(
+    documentRoot,
+    (node) =>
+      node.tagName === 'script' &&
+      getAttr(node, 'type').toLowerCase() === 'application/ld+json'
   );
-}
 
-function extract(html, regex) {
-  const match = html.match(regex);
-  return match ? match[1] : '';
-}
-
-function parseJsonLdTypes(html) {
-  const scripts = [
-    ...html.matchAll(
-      /<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi
-    ),
-  ];
   const types = [];
   for (const script of scripts) {
     try {
-      const parsed = JSON.parse(script[1]);
-      types.push(parsed?.['@type'] ?? 'UNKNOWN');
+      const parsed = JSON.parse(textContent(script));
+      collectJsonLdTypes(parsed, types);
     } catch {
       types.push('INVALID_JSON');
     }
@@ -69,45 +163,60 @@ const errors = [];
 for (const file of htmlFiles) {
   const relPath = relative(DIST_DIR, file).replaceAll('\\', '/');
   const html = readFileSync(file, 'utf8');
+  const documentRoot = parse(html);
 
   const requiredMeta = [
-    ['title', /<title>[^<]+<\/title>/i],
-    ['description', /<meta\s+name="description"\s+content="[^"]+"/i],
-    ['robots', /<meta\s+name="robots"\s+content="[^"]+"/i],
-    ['canonical', /<link\s+rel="canonical"\s+href="[^"]+"/i],
-    ['og:type', /<meta\s+property="og:type"\s+content="[^"]+"/i],
-    ['og:url', /<meta\s+property="og:url"\s+content="[^"]+"/i],
-    ['og:title', /<meta\s+property="og:title"\s+content="[^"]+"/i],
-    ['og:description', /<meta\s+property="og:description"\s+content="[^"]+"/i],
-    ['og:image', /<meta\s+property="og:image"\s+content="[^"]+"/i],
-    ['og:image:alt', /<meta\s+property="og:image:alt"\s+content="[^"]+"/i],
-    ['twitter:card', /<meta\s+name="twitter:card"\s+content="[^"]+"/i],
-    ['twitter:site', /<meta\s+name="twitter:site"\s+content="[^"]+"/i],
-    ['twitter:creator', /<meta\s+name="twitter:creator"\s+content="[^"]+"/i],
-    ['twitter:title', /<meta\s+name="twitter:title"\s+content="[^"]+"/i],
+    ['description', () => getMetaContent(documentRoot, { name: 'description' })],
+    ['robots', () => getMetaContent(documentRoot, { name: 'robots' })],
+    ['canonical', () => getCanonicalHref(documentRoot)],
+    ['og:type', () => getMetaContent(documentRoot, { property: 'og:type' })],
+    ['og:url', () => getMetaContent(documentRoot, { property: 'og:url' })],
+    ['og:title', () => getMetaContent(documentRoot, { property: 'og:title' })],
+    [
+      'og:description',
+      () => getMetaContent(documentRoot, { property: 'og:description' }),
+    ],
+    ['og:image', () => getMetaContent(documentRoot, { property: 'og:image' })],
+    [
+      'og:image:alt',
+      () => getMetaContent(documentRoot, { property: 'og:image:alt' }),
+    ],
+    ['twitter:card', () => getMetaContent(documentRoot, { name: 'twitter:card' })],
+    ['twitter:site', () => getMetaContent(documentRoot, { name: 'twitter:site' })],
+    [
+      'twitter:creator',
+      () => getMetaContent(documentRoot, { name: 'twitter:creator' }),
+    ],
+    ['twitter:title', () => getMetaContent(documentRoot, { name: 'twitter:title' })],
     [
       'twitter:description',
-      /<meta\s+name="twitter:description"\s+content="[^"]+"/i,
+      () => getMetaContent(documentRoot, { name: 'twitter:description' }),
     ],
-    ['twitter:image', /<meta\s+name="twitter:image"\s+content="[^"]+"/i],
-    ['twitter:image:alt', /<meta\s+name="twitter:image:alt"\s+content="[^"]+"/i],
+    ['twitter:image', () => getMetaContent(documentRoot, { name: 'twitter:image' })],
+    [
+      'twitter:image:alt',
+      () => getMetaContent(documentRoot, { name: 'twitter:image:alt' }),
+    ],
   ];
 
-  for (const [label, regex] of requiredMeta) {
-    if (!regex.test(html)) {
+  const titleNode = firstElement(documentRoot, (node) => node.tagName === 'title');
+  const titleText = titleNode ? textContent(titleNode) : '';
+
+  if (!titleText) {
+    errors.push(`${relPath}: missing title`);
+  }
+
+  for (const [label, getValue] of requiredMeta) {
+    if (!getValue()) {
       errors.push(`${relPath}: missing ${label}`);
     }
   }
 
-  const title = decodeHtmlEntities(
-    extract(html, /<title>([^<]*)<\/title>/i)
-  ).trim();
-  const description = decodeHtmlEntities(
-    extract(html, /<meta\s+name="description"\s+content="([^"]*)"/i)
-  ).trim();
-  const canonical = extract(html, /<link\s+rel="canonical"\s+href="([^"]*)"/i);
-  const ogUrl = extract(html, /<meta\s+property="og:url"\s+content="([^"]*)"/i);
-  const robots = extract(html, /<meta\s+name="robots"\s+content="([^"]*)"/i);
+  const title = titleText;
+  const description = getMetaContent(documentRoot, { name: 'description' });
+  const canonical = getCanonicalHref(documentRoot);
+  const ogUrl = getMetaContent(documentRoot, { property: 'og:url' });
+  const robots = getMetaContent(documentRoot, { name: 'robots' });
 
   if (canonical && !canonical.startsWith('http://') && !canonical.startsWith('https://')) {
     errors.push(`${relPath}: canonical is not an absolute URL`);
@@ -145,18 +254,26 @@ for (const file of htmlFiles) {
   }
 
   const requiredArticleMeta = [
-    ['article:published_time', /<meta\s+property="article:published_time"\s+content="[^"]+"/i],
-    ['article:modified_time', /<meta\s+property="article:modified_time"\s+content="[^"]+"/i],
-    ['article:author', /<meta\s+property="article:author"\s+content="[^"]+"/i],
+    [
+      'article:published_time',
+      () =>
+        getMetaContent(documentRoot, { property: 'article:published_time' }),
+    ],
+    [
+      'article:modified_time',
+      () =>
+        getMetaContent(documentRoot, { property: 'article:modified_time' }),
+    ],
+    ['article:author', () => getMetaContent(documentRoot, { property: 'article:author' })],
   ];
 
-  for (const [label, regex] of requiredArticleMeta) {
-    if (!regex.test(html)) {
+  for (const [label, getValue] of requiredArticleMeta) {
+    if (!getValue()) {
       errors.push(`${relPath}: missing ${label}`);
     }
   }
 
-  const jsonLdTypes = parseJsonLdTypes(html);
+  const jsonLdTypes = parseJsonLdTypes(documentRoot);
   if (!jsonLdTypes.includes('Organization')) {
     errors.push(`${relPath}: missing Organization JSON-LD`);
   }

@@ -2,7 +2,7 @@
 title: "Hidden conflicts in healthcare"
 description: "Give me any healthcare policy document and I will show you embedded structural conflicts. A real hospital financial assistance policy analyzed using Theory of Constraints to reveal three critical dilemmas and paths to resolution."
 metaTitle: "Hidden conflicts in healthcare"
-metaDescription: "Give me any healthcare policy document and I will show you embedded structural conflicts. A real hospital financial assistance policy analyzed using..."
+metaDescription: "A Theory of Constraints analysis of a hospital financial assistance policy reveals three structural conflicts and practical paths to resolution."
 date: 2025-08-31
 author: "John Sambrook"
 tags: ["Leadership", "Strategy"]
