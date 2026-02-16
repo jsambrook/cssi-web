@@ -1,0 +1,235 @@
+---
+/*
+ * pacp.astro
+ *
+ * Standalone insight page: The Post-Acute Care Plan (PACP).
+ * Treats discharge delays as an input quality problem.
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
+import { buildArticleSchema, buildBreadcrumbSchema } from '../../data/schema';
+import { siteConfig } from '../../data/site';
+
+const title = 'The Post-Acute Care Plan (PACP)';
+const description =
+  'A proactive approach to discharge readiness that treats discharge delays as an input quality problem, not a process problem.';
+const author = 'John Sambrook';
+const publishedDate = '2026-02-16';
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Insights', href: '/insights' },
+  { name: title, href: '/insights/pacp' },
+]);
+
+const articleUrl = `${siteConfig.siteUrl}/insights/pacp`;
+const articleSchema = buildArticleSchema({
+  title,
+  description,
+  datePublished: publishedDate,
+  author,
+  url: articleUrl,
+  tags: ['Healthcare', 'Patient Flow', 'Theory of Constraints'],
+});
+
+const articleMeta = {
+  publishedTime: publishedDate,
+  modifiedTime: publishedDate,
+  author,
+  tags: ['Healthcare', 'Patient Flow', 'Theory of Constraints'],
+};
+---
+
+<BaseLayout
+  title={getPageTitle(title)}
+  description={description}
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={[articleSchema, breadcrumb]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/insights/pacp" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-12 space-y-4">
+        <a href="/insights" class="text-sm text-primary hover:text-primary/80">
+          &larr; Back to Insights
+        </a>
+        <h1 class="text-4xl sm:text-5xl">{title}</h1>
+        <p class="text-xl text-muted-foreground">A Proactive Approach to Discharge Readiness</p>
+        <p class="text-lg italic text-muted-foreground">
+          "Treating discharge delays as an input quality problem, not a process problem."
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- Executive Summary -->
+        <div class="rounded-[var(--radius)] bg-accent/10 p-6 sm:p-8 mb-10 not-prose">
+          <h2 class="text-2xl mb-4">Executive Summary</h2>
+          <p class="text-base leading-relaxed mb-4">
+            According to Advisory Board data, <strong class="text-primary"
+              >25% of hospital days are avoidable</strong
+            >. These aren't days consumed by clinical care&mdash;they're days lost to waiting:
+            waiting for paperwork, waiting for insurance verification, waiting for family decisions
+            that should have been made long ago.
+          </p>
+          <p class="text-base leading-relaxed">
+            The core problem isn't that hospitals discharge poorly. It's that the information
+            required for a smooth discharge&mdash;legal authority, financial eligibility, placement
+            preferences, social support&mdash;is treated as something to be <em
+              >discovered during a crisis</em
+            > rather than <em>captured in advance</em>.
+          </p>
+        </div>
+
+        <!-- Key Insight -->
+        <h2>The Structural Barrier</h2>
+        <p>
+          Hospitals have spent decades trying to optimize their internal discharge processes.
+          They've added case managers, created discharge checklists, implemented daily huddles, and
+          invested in care coordination platforms. Yet discharge delays persist.
+        </p>
+        <p>
+          The reason is structural: <strong
+            >discharge depends on external constraints that hospitals cannot control operationally.</strong
+          > Power of Attorney status isn't a hospital process. Medicaid eligibility isn't determined by
+          the care team. Family dynamics and SNF preferences don't originate within hospital walls.
+        </p>
+        <p>
+          This creates what clinicians experience as <strong>moral distress</strong>. Case managers
+          are tasked with resolving problems that are, by design, structurally unsolvable within the
+          hospital context. They burn out not from laziness or incompetence, but because the system
+          asks them to produce outputs from inputs they don't have and cannot create.
+        </p>
+
+        <!-- The Solution -->
+        <h2>The Input Analogy</h2>
+        <p>
+          Manufacturing understood this decades ago: <strong
+            >if a factory wants to improve output quality, it improves input quality.</strong
+          > You don't fix defects at the end of the line&mdash;you prevent them at the beginning.
+        </p>
+        <p>
+          The Post-Acute Care Plan applies this principle to hospital discharge. Rather than asking
+          case managers to assemble critical information under time pressure during an acute stay,
+          the PACP captures this data <em>before admission</em>&mdash;during routine primary care
+          encounters when patients and families can make considered decisions without the stress of
+          a health crisis.
+        </p>
+        <p>
+          The result: discharge transforms from <strong>"crisis management"</strong> into
+          <strong>"coordinated execution."</strong> When a patient is admitted, the discharge plan is
+          already substantially complete.
+        </p>
+
+        <!-- Data Model -->
+        <h2>The PACP Data Model</h2>
+        <p>
+          The PACP organizes discharge-critical information into four domains, each capturing data
+          that is routinely unavailable at the point of need:
+        </p>
+      </div>
+
+      <!-- Data Model Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-10">
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-red-bg text-feature-red text-xs uppercase tracking-wider mb-3"
+          >
+            Legal
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Legal Authority</h3>
+          <ul class="text-sm text-muted-foreground space-y-1">
+            <li>Power of Attorney status &amp; documentation</li>
+            <li>Guardianship arrangements</li>
+            <li>Advance directives on file</li>
+            <li>Healthcare proxy designation</li>
+          </ul>
+        </div>
+
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-blue-bg text-feature-blue text-xs uppercase tracking-wider mb-3"
+          >
+            Financial
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Financial Eligibility</h3>
+          <ul class="text-sm text-muted-foreground space-y-1">
+            <li>Insurance verification &amp; coverage limits</li>
+            <li>Medicaid eligibility (current or pending)</li>
+            <li>Long-term care insurance</li>
+            <li>Out-of-pocket capacity</li>
+          </ul>
+        </div>
+
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-amber-bg text-feature-amber text-xs uppercase tracking-wider mb-3"
+          >
+            Placement
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Placement Preferences</h3>
+          <ul class="text-sm text-muted-foreground space-y-1">
+            <li>Ranked SNF / rehab facility preferences</li>
+            <li>Geographic constraints &amp; proximity needs</li>
+            <li>Facility-specific requirements (memory care, etc.)</li>
+            <li>Prior facility experience &amp; satisfaction</li>
+          </ul>
+        </div>
+
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-green-bg text-feature-green text-xs uppercase tracking-wider mb-3"
+          >
+            Social
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Social Support</h3>
+          <ul class="text-sm text-muted-foreground space-y-1">
+            <li>Home environment assessment</li>
+            <li>Caregiver availability &amp; capacity</li>
+            <li>Transportation arrangements</li>
+            <li>Community support resources</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <p>
+          When these four domains are populated before an acute event, the hospital's role shifts
+          from <em>information gathering</em> to <em>plan activation</em>&mdash;a fundamentally
+          different and far more efficient operation.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div
+        class="mt-12 rounded-[var(--radius)] bg-gradient-to-b from-[var(--cta-gradient-from)] to-[var(--cta-gradient-to)] p-8 sm:p-10 text-center"
+      >
+        <h2 class="text-2xl mb-3">Ready to Explore the PACP?</h2>
+        <p class="text-muted-foreground mb-6 max-w-xl mx-auto">
+          Learn how pre-admission data capture can transform your discharge outcomes.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-[var(--radius-button)] bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors"
+          >
+            Discuss a Pilot Implementation
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-[var(--radius-button)] border-2 border-foreground bg-background hover:bg-muted text-foreground font-medium transition-colors"
+          >
+            Download the Concept Paper
+          </a>
+        </div>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

@@ -1,0 +1,250 @@
+---
+/*
+ * nursing-conflict.astro
+ *
+ * Standalone insight page: Structural Conflicts in WA State Nursing CBAs.
+ * Applies Theory of Constraints to labor agreements.
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
+import { buildArticleSchema, buildBreadcrumbSchema } from '../../data/schema';
+import { siteConfig } from '../../data/site';
+
+const title = 'Structural Conflicts in WA State Nursing Agreements';
+const description =
+  "Analysis of 134 structural conflicts across 10 Washington State nursing CBAs reveals why higher wages aren't fixing nurse burnout.";
+const author = 'John Sambrook';
+const publishedDate = '2026-02-16';
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Insights', href: '/insights' },
+  { name: title, href: '/insights/nursing-conflict' },
+]);
+
+const articleUrl = `${siteConfig.siteUrl}/insights/nursing-conflict`;
+const articleSchema = buildArticleSchema({
+  title,
+  description,
+  datePublished: publishedDate,
+  author,
+  url: articleUrl,
+  tags: ['Labor Relations', 'Healthcare', 'Theory of Constraints'],
+});
+
+const articleMeta = {
+  publishedTime: publishedDate,
+  modifiedTime: publishedDate,
+  author,
+  tags: ['Labor Relations', 'Healthcare', 'Theory of Constraints'],
+};
+---
+
+<BaseLayout
+  title={getPageTitle(title)}
+  description={description}
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={[articleSchema, breadcrumb]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/insights/nursing-conflict" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-12 space-y-4">
+        <a href="/insights" class="text-sm text-primary hover:text-primary/80">
+          &larr; Back to Insights
+        </a>
+        <h1 class="text-4xl sm:text-5xl">{title}</h1>
+        <p class="text-xl text-muted-foreground">Why higher wages aren't fixing nurse burnout.</p>
+        <p class="text-sm text-muted-foreground">
+          Analysis of 10 Collective Bargaining Agreements across Washington State&mdash;from large
+          urban medical centers to critical access hospitals.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- Core Discovery -->
+        <div class="rounded-[var(--radius)] bg-accent/10 p-6 sm:p-8 mb-10 not-prose">
+          <h2 class="text-2xl mb-4">The Core Discovery</h2>
+          <p class="text-base leading-relaxed mb-4">
+            Across 10 nursing collective bargaining agreements, we identified
+            <strong class="text-primary">134 distinct structural conflicts</strong>&mdash;clauses
+            that create impossible dilemmas for nurses, managers, or both. These aren't ambiguities
+            or edge cases. They're built-in contradictions where complying with one provision
+            necessarily violates another.
+          </p>
+          <p class="text-base leading-relaxed">
+            Of these 134 conflicts, <strong>four appear in every single agreement analyzed.</strong>
+            They are not hospital-specific. They are structural features of how nursing work is contracted
+            in Washington State.
+          </p>
+        </div>
+
+        <h2>The 4 Universal Conflicts</h2>
+        <p>
+          These conflicts were present in all 10 agreements&mdash;across union locals, hospital
+          sizes, and geographic regions. Each represents a genuine dilemma with no clean resolution
+          under the current contract structure.
+        </p>
+      </div>
+
+      <!-- Conflict Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-red-bg text-feature-red text-xs uppercase tracking-wider mb-3"
+          >
+            Conflict 1
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Meal/Rest Breaks vs. Patient Care</h3>
+          <p class="text-sm text-muted-foreground mb-3">
+            Contract guarantees uninterrupted meal and rest breaks. Patient care standards require
+            continuous monitoring. No relief nurse is guaranteed.
+          </p>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>The dilemma:</strong> Skip the break and violate labor law, or leave the patient
+              and violate the standard of care?
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-blue-bg text-feature-blue text-xs uppercase tracking-wider mb-3"
+          >
+            Conflict 2
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Low Census vs. Income Security</h3>
+          <p class="text-sm text-muted-foreground mb-3">
+            Hospitals need the ability to reduce staffing when patient volume drops. Nurses need
+            predictable income to pay rent and plan their lives.
+          </p>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>The dilemma:</strong> The hospital needs cost control; the nurse needs rent money.
+              The contract tries to serve both and satisfies neither.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-amber-bg text-feature-amber text-xs uppercase tracking-wider mb-3"
+          >
+            Conflict 3
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Floating vs. Competency</h3>
+          <p class="text-sm text-muted-foreground mb-3">
+            Management can reassign (float) nurses to understaffed units. Nurses have the right to
+            refuse assignments outside their competency.
+          </p>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>The dilemma:</strong> "Staff the hole" vs. "Don't work unsafe." Both positions are
+              contractually defensible.
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-[var(--radius)] border border-primary/20 p-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-purple-bg text-feature-purple text-xs uppercase tracking-wider mb-3"
+          >
+            Conflict 4
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Schedule Stability vs. Operational Flex</h3>
+          <p class="text-sm text-muted-foreground mb-3">
+            Nurses are guaranteed predictable schedules and adequate notice of changes. Operations
+            require the flexibility to adjust staffing in real time.
+          </p>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>The dilemma:</strong> "My life schedule" vs. "The unit's needs." The contract creates
+              a zero-sum game between personal stability and operational agility.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- Premium Pay Fallacy -->
+        <h2>The "Premium Pay" Fallacy</h2>
+        <p>
+          The most common contractual response to these conflicts is money. Missed a break? Here's
+          premium pay. Got floated? Here's a differential. Called in on your day off? Here's
+          overtime.
+        </p>
+        <p>
+          This pattern appeared across virtually every agreement we analyzed. It reveals a
+          fundamental misunderstanding of the problem:
+        </p>
+        <blockquote>
+          <p>Premium pay monetizes the conflict rather than evaporating it.</p>
+        </blockquote>
+        <p>
+          Paying a nurse extra for a missed meal break doesn't solve the problem of the missed meal
+          break. It compensates for the harm while leaving the structural cause intact. The nurse is
+          still exhausted. The patient safety risk is still real. The conflict recurs on the next
+          shift.
+        </p>
+        <p>
+          Worse, premium pay creates a perverse incentive: the <em>contract itself</em> becomes more expensive
+          to honor than to violate, which encourages systematic non-compliance masked by financial settlements.
+        </p>
+
+        <!-- Strategic Implication -->
+        <h2>The Strategic Implication</h2>
+        <p>
+          Every health system in Washington is competing for the same nursing workforce. Most
+          compete on wages. The data from this analysis suggests a different strategy:
+        </p>
+        <p>
+          <strong
+            >A health system that structurally resolves even one of these four universal conflicts
+            will differentiate itself more than one offering a 2% higher wage.</strong
+          >
+        </p>
+        <p>
+          For example: a hospital that implements <em>guaranteed break relief</em>&mdash;not as a
+          policy aspiration but as a staffed, funded, operationally real program&mdash;would
+          eliminate Conflict&nbsp;1 entirely. Nurses wouldn't face the daily dilemma. The grievance
+          pipeline around missed breaks would dry up. And the hospital would become known as the
+          place where breaks actually happen.
+        </p>
+        <p>That's a structural advantage no wage premium can replicate.</p>
+      </div>
+
+      <!-- CTA -->
+      <div
+        class="mt-12 rounded-[var(--radius)] bg-gradient-to-b from-[var(--cta-gradient-from)] to-[var(--cta-gradient-to)] p-8 sm:p-10 text-center"
+      >
+        <h2 class="text-2xl mb-3">Get the Full Analysis</h2>
+        <p class="text-muted-foreground mb-6 max-w-xl mx-auto">
+          134 conflicts. 10 agreements. Actionable strategies for structural resolution.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-[var(--radius-button)] bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-colors"
+          >
+            Request the Full Analysis
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-[var(--radius-button)] border-2 border-foreground bg-background hover:bg-muted text-foreground font-medium transition-colors"
+          >
+            Schedule a Labor Strategy Briefing
+          </a>
+        </div>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>
