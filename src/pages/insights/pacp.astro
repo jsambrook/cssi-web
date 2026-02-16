@@ -135,65 +135,89 @@ const articleMeta = {
       </div>
 
       <!-- Data Model Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
         <div class="rounded-[var(--radius)] border border-primary/20 p-6">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-red-bg text-feature-red text-xs uppercase tracking-wider mb-3"
           >
-            Legal
+            Domain 1
           </div>
-          <h3 class="text-lg font-semibold mb-2">Legal Authority</h3>
-          <ul class="text-sm text-muted-foreground space-y-1">
-            <li>Power of Attorney status &amp; documentation</li>
-            <li>Guardianship arrangements</li>
-            <li>Advance directives on file</li>
-            <li>Healthcare proxy designation</li>
-          </ul>
+          <h3 class="text-lg font-semibold mb-3">Legal &amp; Decision Making</h3>
+          <dl class="text-sm space-y-2 mb-4">
+            <dt class="font-semibold text-foreground">Target Data Points</dt>
+            <dd class="text-muted-foreground ml-4">
+              Healthcare POA status, Agent contact info, Backup agent, Guardianship status, POLST
+            </dd>
+          </dl>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>Why:</strong> To resolve authority constraints before they become legal delays.
+            </p>
+          </div>
         </div>
 
         <div class="rounded-[var(--radius)] border border-primary/20 p-6">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-blue-bg text-feature-blue text-xs uppercase tracking-wider mb-3"
           >
-            Financial
+            Domain 2
           </div>
-          <h3 class="text-lg font-semibold mb-2">Financial Eligibility</h3>
-          <ul class="text-sm text-muted-foreground space-y-1">
-            <li>Insurance verification &amp; coverage limits</li>
-            <li>Medicaid eligibility (current or pending)</li>
-            <li>Long-term care insurance</li>
-            <li>Out-of-pocket capacity</li>
-          </ul>
+          <h3 class="text-lg font-semibold mb-3">Insurance &amp; Financial</h3>
+          <dl class="text-sm space-y-2 mb-4">
+            <dt class="font-semibold text-foreground">Target Data Points</dt>
+            <dd class="text-muted-foreground ml-4">
+              Current verification, MA plan specific coverage, Medicaid eligibility likelihood,
+              Long-term care insurance
+            </dd>
+          </dl>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>Why:</strong> To prevent "retroactive denial" surprises.
+            </p>
+          </div>
         </div>
 
         <div class="rounded-[var(--radius)] border border-primary/20 p-6">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-amber-bg text-feature-amber text-xs uppercase tracking-wider mb-3"
           >
-            Placement
+            Domain 3
           </div>
-          <h3 class="text-lg font-semibold mb-2">Placement Preferences</h3>
-          <ul class="text-sm text-muted-foreground space-y-1">
-            <li>Ranked SNF / rehab facility preferences</li>
-            <li>Geographic constraints &amp; proximity needs</li>
-            <li>Facility-specific requirements (memory care, etc.)</li>
-            <li>Prior facility experience &amp; satisfaction</li>
-          </ul>
+          <h3 class="text-lg font-semibold mb-3">Placement Preferences</h3>
+          <dl class="text-sm space-y-2 mb-4">
+            <dt class="font-semibold text-foreground">Target Data Points</dt>
+            <dd class="text-muted-foreground ml-4">
+              Ranked preferred SNFs (3&ndash;5), Geographic constraints (&ldquo;within 30 mins of
+              daughter&rdquo;), Explicit exclusions (&ldquo;Not Facility X&rdquo;)
+            </dd>
+          </dl>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>Why:</strong> To convert crisis decision-making into informed execution.
+            </p>
+          </div>
         </div>
 
         <div class="rounded-[var(--radius)] border border-primary/20 p-6">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-feature-green-bg text-feature-green text-xs uppercase tracking-wider mb-3"
           >
-            Social
+            Domain 4
           </div>
-          <h3 class="text-lg font-semibold mb-2">Social Support</h3>
-          <ul class="text-sm text-muted-foreground space-y-1">
-            <li>Home environment assessment</li>
-            <li>Caregiver availability &amp; capacity</li>
-            <li>Transportation arrangements</li>
-            <li>Community support resources</li>
-          </ul>
+          <h3 class="text-lg font-semibold mb-3">Social &amp; Practical</h3>
+          <dl class="text-sm space-y-2 mb-4">
+            <dt class="font-semibold text-foreground">Target Data Points</dt>
+            <dd class="text-muted-foreground ml-4">
+              Physical environment (stairs/ramps), Primary caregiver availability (24/7 vs.
+              evenings), Pet care arrangements
+            </dd>
+          </dl>
+          <div class="rounded-[var(--radius-sm)] bg-muted p-3">
+            <p class="text-sm italic">
+              <strong>Why:</strong> Practical barriers (like pets) delay discharge as often as medical
+              ones.
+            </p>
+          </div>
         </div>
       </div>
 
