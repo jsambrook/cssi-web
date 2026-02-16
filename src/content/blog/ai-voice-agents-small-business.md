@@ -1,11 +1,11 @@
 ---
-title: "Transform your website with AI voice agents: 24/7 engagement for small businesses"
-description: "Discover how AI voice agents can transform your small business website by providing 24/7 customer engagement, multilingual support, and improved conversion rates."
-metaTitle: "AI voice agents for small business websites"
-metaDescription: "Learn how AI voice agents improve website engagement with 24/7 responses, multilingual conversations, and stronger lead conversion for small businesses."
+title: 'Transform your website with AI voice agents: 24/7 engagement for small businesses'
+description: 'Discover how AI voice agents can transform your small business website by providing 24/7 customer engagement, multilingual support, and improved conversion rates.'
+metaTitle: 'AI voice agents for small business websites'
+metaDescription: 'Learn how AI voice agents improve website engagement with 24/7 responses, multilingual conversations, and stronger lead conversion for small businesses.'
 date: 2025-04-29
-author: "John Sambrook"
-tags: ["AI", "Voice Agents"]
+author: 'John Sambrook'
+tags: ['AI', 'Voice Agents']
 ---
 
 Discover how AI voice agents can transform your small business website by providing 24/7 customer engagement, multilingual support, and improved conversion rates.

@@ -1,11 +1,11 @@
 ---
-title: "Increase your productivity with Wispr Flow"
+title: 'Increase your productivity with Wispr Flow'
 description: "Discover how Wispr Flow's AI-powered voice dictation tool can help busy professionals write three times faster across all applications."
-metaTitle: "Increase your productivity with Wispr Flow"
+metaTitle: 'Increase your productivity with Wispr Flow'
 metaDescription: "Discover how Wispr Flow's AI-powered voice dictation tool can help busy professionals write three times faster across all applications."
 date: 2025-04-28
-author: "John Sambrook"
-tags: ["AI", "Voice Dictation"]
+author: 'John Sambrook'
+tags: ['AI', 'Voice Dictation']
 ---
 
 Discover how Wispr Flow's AI-powered voice dictation tool can help busy professionals write three times faster across all applications.

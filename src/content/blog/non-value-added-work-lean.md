@@ -1,11 +1,11 @@
 ---
-title: "Is non-value-added work really neutral? Rethinking value in Lean"
+title: 'Is non-value-added work really neutral? Rethinking value in Lean'
 description: "A reflection on Lean's definition of value, arguing that no work is neutral—activities either create value, enable it through necessary conditions, or subtract it as waste."
-metaTitle: "Rethinking value in Lean: no work is neutral"
-metaDescription: "A practical argument that work is never neutral in Lean: it either creates value, enables value through required conditions, or subtracts value as waste."
+metaTitle: 'Rethinking value in Lean: no work is neutral'
+metaDescription: 'A practical argument that work is never neutral in Lean: it either creates value, enables value through required conditions, or subtracts value as waste.'
 date: 2025-10-01
-author: "John Sambrook"
-tags: ["Lean", "Systems"]
+author: 'John Sambrook'
+tags: ['Lean', 'Systems']
 ---
 
 A reflection on Lean's definition of value, arguing that no work is neutral—activities either create value, enable it through necessary conditions, or subtract it as waste.
@@ -16,7 +16,7 @@ That definition has been enormously influential. But in practice—especially in
 
 ## Beyond "Value-Added" vs. "Non-Value-Added"
 
-When most people hear *non-value-added work*, they assume the activity is simply *neutral*. After all, it's "not value-added"—so maybe it doesn't help, but it doesn't hurt either.
+When most people hear _non-value-added work_, they assume the activity is simply _neutral_. After all, it's "not value-added"—so maybe it doesn't help, but it doesn't hurt either.
 
 In reality, no activity is neutral. Every task consumes resources, time, and attention. That means every task either:
 
@@ -28,22 +28,22 @@ In reality, no activity is neutral. Every task consumes resources, time, and att
 
 Here's where practice diverges from theory. Lean is right to insist that customers define value. But if you're bringing a medical device to market, regulatory compliance is not optional. Customers don't buy the giant submission binder—but without it, they can't buy the product at all.
 
-That makes compliance, safety checks, and other "necessary non-value-added" activities a different category. They are *enabling conditions*. They don't add value in the customer's eyes, but they are essential for the business to remain a going concern and to deliver value safely.
+That makes compliance, safety checks, and other "necessary non-value-added" activities a different category. They are _enabling conditions_. They don't add value in the customer's eyes, but they are essential for the business to remain a going concern and to deliver value safely.
 
 ## Reconciling Purist Lean with Pragmatic Reality
 
 Let's compare the two views:
 
-| **LEI Lexicon (Purist Lean)** | **Pragmatic Lean / TOC View** |
-|---|---|
-| Value = only what the customer perceives and will pay for | Value = what the customer perceives *plus* what enables safe, legal, reliable delivery |
-| Value-Creating = activities judged by customer as worth paying for | Direct Value = same as LEI |
-| Nonvalue-Creating = all else; adds cost without value | Split into: 1. Enabling Conditions (compliance, safety, regulatory) 2. Waste (rework, delays, unnecessary motion) |
-| Goal: eliminate nonvalue-creating work | Goal: eliminate *waste*, streamline *enabling conditions*, and maximize *direct value* |
+| **LEI Lexicon (Purist Lean)**                                      | **Pragmatic Lean / TOC View**                                                                                     |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| Value = only what the customer perceives and will pay for          | Value = what the customer perceives _plus_ what enables safe, legal, reliable delivery                            |
+| Value-Creating = activities judged by customer as worth paying for | Direct Value = same as LEI                                                                                        |
+| Nonvalue-Creating = all else; adds cost without value              | Split into: 1. Enabling Conditions (compliance, safety, regulatory) 2. Waste (rework, delays, unnecessary motion) |
+| Goal: eliminate nonvalue-creating work                             | Goal: eliminate _waste_, streamline _enabling conditions_, and maximize _direct value_                            |
 
 ## Why This Matters
 
-In highly regulated environments, treating all non-value-added work as waste is misleading. It obscures the difference between activities that are *essential conditions of market access* and those that are *truly wasteful*.
+In highly regulated environments, treating all non-value-added work as waste is misleading. It obscures the difference between activities that are _essential conditions of market access_ and those that are _truly wasteful_.
 
 By making this distinction explicit, leaders can direct improvement efforts more effectively:
 
@@ -59,4 +59,4 @@ The challenge is to tell the difference—and to focus your energy accordingly.
 
 ---
 
-*Written by Common Sense Systems, Inc.*
+_Written by Common Sense Systems, Inc._

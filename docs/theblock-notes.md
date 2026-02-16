@@ -5,18 +5,23 @@
 This template was restructured to support spinning up multiple business websites from a single codebase. The main changes:
 
 ### Content extraction
+
 All page text that was previously hardcoded in `.astro` component files has been moved to TypeScript data files in `src/data/pages/`. The `.astro` files are now pure layout templates. This means you can create a new site by editing data files rather than digging through component markup.
 
 ### Centralized brand config
+
 `src/data/site.ts` is the single source of truth for the brand: name, tagline, logo, nav items, contact info, CTA text, font, and site URL. Changing values here propagates everywhere.
 
 ### Design token system
+
 Colors, typography, spacing, and radii are all CSS custom properties in `src/assets/css/tokens.css`. Changing `--primary` re-themes the entire site. Feature card colors, CTA gradients, and other visual elements all reference tokens.
 
 ### Blog/Insights system
+
 The hardcoded article stubs on the Insights page are now a real content collection. Blog posts are markdown files in `src/content/blog/` with frontmatter for metadata. The listing page and individual post pages are generated automatically.
 
 ### SEO infrastructure
+
 Sitemap generation (`@astrojs/sitemap`), dynamic `robots.txt`, canonical URLs, and a custom 404 page are now built in.
 
 ## How to use this for client sites
@@ -29,6 +34,7 @@ Sitemap generation (`@astrojs/sitemap`), dynamic `robots.txt`, canonical URLs, a
 ## What the template provides vs. what you own
 
 **Template provides:**
+
 - Component library (Header, Footer, Hero, Section, FeatureCard, TestimonialCard, CTASection)
 - Design token system
 - Layout templates
@@ -37,6 +43,7 @@ Sitemap generation (`@astrojs/sitemap`), dynamic `robots.txt`, canonical URLs, a
 - Build toolchain (Astro + Tailwind)
 
 **You own per-site:**
+
 - Brand config (`src/data/site.ts`)
 - Color tokens (`src/assets/css/tokens.css`)
 - Page content (`src/data/pages/`)

@@ -1,9 +1,9 @@
 ---
-title: "Decision-making frameworks for hospital leaders"
-description: "Why conventional decision frameworks fail in community hospitals, and what actually works when the stakes are high and the data is messy."
+title: 'Decision-making frameworks for hospital leaders'
+description: 'Why conventional decision frameworks fail in community hospitals, and what actually works when the stakes are high and the data is messy.'
 date: 2025-09-14
-author: "John Sambrook"
-tags: ["Governance"]
+author: 'John Sambrook'
+tags: ['Governance']
 draft: true
 ---
 

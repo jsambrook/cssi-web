@@ -1,11 +1,11 @@
 ---
-title: "Speed as a strategy"
-description: "Why moving fast is an undervalued strategic advantage for community hospitals."
-metaTitle: "Speed as a strategy"
-metaDescription: "Why moving fast is an undervalued strategic advantage for community hospitals."
+title: 'Speed as a strategy'
+description: 'Why moving fast is an undervalued strategic advantage for community hospitals.'
+metaTitle: 'Speed as a strategy'
+metaDescription: 'Why moving fast is an undervalued strategic advantage for community hospitals.'
 date: 2025-09-09
-author: "John Sambrook"
-tags: ["Strategy", "Leadership"]
+author: 'John Sambrook'
+tags: ['Strategy', 'Leadership']
 ---
 
 In competitive healthcare markets, strategic advantage increasingly belongs to organizations that can observe, decide, and act faster than their rivals. This article examines how Col. John Boyd's OODA Loop framework--developed for aerial combat--applies to healthcare operations, particularly complex patient discharges.
@@ -28,21 +28,21 @@ Let's examine how the OODA Loop manifests in a specific healthcare challenge: co
 
 **Traditional System -- Total: 2-4 Days**
 
-| Phase | Time | Description |
-|---|---|---|
+| Phase   | Time       | Description                                                                        |
+| ------- | ---------- | ---------------------------------------------------------------------------------- |
 | Observe | Hours-Days | Manual calls to facilities, waiting for responses, gathering scattered information |
-| Orient | Hours-Days | Interpreting facility capabilities, translating between organizational languages |
-| Decide | 1+ Days | Coordinating stakeholders, negotiating preferences, obtaining approvals |
-| Act | 1+ Days | Coordinating transfer, arranging transportation, completing paperwork |
+| Orient  | Hours-Days | Interpreting facility capabilities, translating between organizational languages   |
+| Decide  | 1+ Days    | Coordinating stakeholders, negotiating preferences, obtaining approvals            |
+| Act     | 1+ Days    | Coordinating transfer, arranging transportation, completing paperwork              |
 
 **High-Tempo System -- Total: 4-12 Hours**
 
-| Phase | Time | Description |
-|---|---|---|
+| Phase   | Time    | Description                                                           |
+| ------- | ------- | --------------------------------------------------------------------- |
 | Observe | Seconds | Real-time data platform shows availability and capabilities instantly |
-| Orient | Instant | Automated matching of patient needs to facility capabilities |
-| Decide | Hours | Pre-aligned stakeholders, clear options, streamlined approvals |
-| Act | Hours | Platform-coordinated execution, pre-arranged logistics |
+| Orient  | Instant | Automated matching of patient needs to facility capabilities          |
+| Decide  | Hours   | Pre-aligned stakeholders, clear options, streamlined approvals        |
+| Act     | Hours   | Platform-coordinated execution, pre-arranged logistics                |
 
 The high-tempo system completes its OODA Loop **6-12x faster** than the traditional system. This isn't just efficiency--it's a sustainable competitive advantage. While the slow system occupies beds for days at $2,000-$3,000 per day, the fast system maintains throughput, captures more referrals, and builds loyal networks.
 

@@ -1,11 +1,11 @@
 ---
-title: "The Cath Lab Is Empty at 2 AM"
-description: "Why smart, well-run organizations reliably get stuck on solvable problems, and what tribal dynamics and cognitive limits have to do with it."
-metaTitle: "The Cath Lab Is Empty at 2 AM"
-metaDescription: "Why smart, well-run organizations reliably get stuck on solvable problems, and what tribal dynamics and cognitive limits have to do with it."
+title: 'The Cath Lab Is Empty at 2 AM'
+description: 'Why smart, well-run organizations reliably get stuck on solvable problems, and what tribal dynamics and cognitive limits have to do with it.'
+metaTitle: 'The Cath Lab Is Empty at 2 AM'
+metaDescription: 'Why smart, well-run organizations reliably get stuck on solvable problems, and what tribal dynamics and cognitive limits have to do with it.'
 date: 2026-02-15
-author: "John Sambrook"
-tags: ["Healthcare", "Strategy", "Theory of Constraints"]
+author: 'John Sambrook'
+tags: ['Healthcare', 'Strategy', 'Theory of Constraints']
 ---
 
 Last Friday at 7 AM, I sat in on an educational meeting at a community health system in the Pacific Northwest. Three clinical service lines presented to the governing board: cardiology, musculoskeletal, and gastroenterology. Each brought data. Each brought sharp leadership. Each delivered the same message.
@@ -34,7 +34,7 @@ Cath labs are similar. MedAxiom, the ACC-affiliated benchmarking group, targets 
 
 Endoscopy suites may be worse. A study of actual room activity found that non-procedure time consumed two-thirds of the staffed day.[^5]
 
-A 2011 paper in the *Journal of General Internal Medicine* said it directly: hospitals suffer from inefficient use of capital investments during nights and weekends, with procedural spaces at or above capacity during the week but underutilized on weekends.[^6]
+A 2011 paper in the _Journal of General Internal Medicine_ said it directly: hospitals suffer from inefficient use of capital investments during nights and weekends, with procedural spaces at or above capacity during the week but underutilized on weekends.[^6]
 
 These are multimillion-dollar clinical spaces sitting dark for roughly three-quarters of every week. That is the fact. Three service lines are asking for tens of millions in new construction to solve a problem that might be addressed, at least in part, by using what they already have.
 
@@ -52,7 +52,7 @@ Here is why I think that happens.
 
 ## Tribes
 
-Years ago I read a book called *Great Boss, Dead Boss* by Ray Immelman. It changed how I see organizations in a way that was comparable to what Eli Goldratt's *The Goal* did for how I see systems. Immelman's argument is that organizations are tribal structures. Not metaphorically. Literally. Human beings form tribes, and organizations are layered hierarchies of tribes.
+Years ago I read a book called _Great Boss, Dead Boss_ by Ray Immelman. It changed how I see organizations in a way that was comparable to what Eli Goldratt's _The Goal_ did for how I see systems. Immelman's argument is that organizations are tribal structures. Not metaphorically. Literally. Human beings form tribes, and organizations are layered hierarchies of tribes.
 
 A hospital has many tribes. The cardiologists are a tribe. The nurses are a tribe. The OR staff, the facilities team, the finance department, the board of commissioners, each one is a tribe with its own shared assumptions, its own norms, its own sense of what is settled and what is open for discussion.
 
@@ -102,6 +102,6 @@ You can reach me at john@common-sense.com.
 
 [^4]: Calculated from typical staffed hours of 45/week at 65% utilization = ~29 hours, or 17.4% of 168 total weekly hours.
 
-[^5]: Yang et al., "A Patient Flow Analysis: Identification of Process Inefficiencies and Workflow Metrics at an Ambulatory Endoscopy Unit," *Endoscopy International Open* (2016). [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4904661/)
+[^5]: Yang et al., "A Patient Flow Analysis: Identification of Process Inefficiencies and Workflow Metrics at an Ambulatory Endoscopy Unit," _Endoscopy International Open_ (2016). [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4904661/)
 
-[^6]: Wong and Morra, "Excellent Hospital Care for All: Open and Operating 24/7," *Journal of General Internal Medicine* (2011). [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC3157523/)
+[^6]: Wong and Morra, "Excellent Hospital Care for All: Open and Operating 24/7," _Journal of General Internal Medicine_ (2011). [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC3157523/)

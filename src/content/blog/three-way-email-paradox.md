@@ -1,11 +1,11 @@
 ---
-title: "The three-way email paradox: why warm introductions beat your entire LinkedIn network"
-description: "The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert."
+title: 'The three-way email paradox: why warm introductions beat your entire LinkedIn network'
+description: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert.'
 date: 2026-02-16
-author: "John Sambrook"
-tags: ["networking", "sales", "small-business", "practical-tips"]
-metaTitle: "Three-way email intros beat cold outreach"
-metaDescription: "The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert."
+author: 'John Sambrook'
+tags: ['networking', 'sales', 'small-business', 'practical-tips']
+metaTitle: 'Three-way email intros beat cold outreach'
+metaDescription: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert.'
 draft: false
 ---
 

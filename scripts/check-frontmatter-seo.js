@@ -95,17 +95,12 @@ for (const file of files) {
 
   if (!metaTitle) {
     issues.push(`${file}: missing metaTitle`);
-  } else if (
-    metaTitle.length < META_TITLE_MIN ||
-    metaTitle.length > META_TITLE_MAX
-  ) {
+  } else if (metaTitle.length < META_TITLE_MIN || metaTitle.length > META_TITLE_MAX) {
     issues.push(
       `${file}: metaTitle length ${metaTitle.length} outside ${META_TITLE_MIN}-${META_TITLE_MAX}`
     );
   } else if (looksMachineTrimmed(metaTitle)) {
-    issues.push(
-      `${file}: metaTitle appears machine-trimmed (trailing ellipsis)`
-    );
+    issues.push(`${file}: metaTitle appears machine-trimmed (trailing ellipsis)`);
   }
 
   if (!metaDescription) {
@@ -118,9 +113,7 @@ for (const file of files) {
       `${file}: metaDescription length ${metaDescription.length} outside ${META_DESCRIPTION_MIN}-${META_DESCRIPTION_MAX}`
     );
   } else if (looksMachineTrimmed(metaDescription)) {
-    issues.push(
-      `${file}: metaDescription appears machine-trimmed (trailing ellipsis)`
-    );
+    issues.push(`${file}: metaDescription appears machine-trimmed (trailing ellipsis)`);
   }
 }
 
@@ -132,6 +125,4 @@ if (issues.length > 0) {
   process.exit(1);
 }
 
-console.log(
-  `Frontmatter SEO check passed for ${files.length} blog markdown file(s).`
-);
+console.log(`Frontmatter SEO check passed for ${files.length} blog markdown file(s).`);

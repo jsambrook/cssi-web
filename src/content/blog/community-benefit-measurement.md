@@ -1,9 +1,9 @@
 ---
-title: "Community benefit beyond compliance"
-description: "Moving from checkbox community benefit reporting to genuine strategic alignment with community health needs."
+title: 'Community benefit beyond compliance'
+description: 'Moving from checkbox community benefit reporting to genuine strategic alignment with community health needs.'
 date: 2025-05-07
-author: "John Sambrook"
-tags: ["Community"]
+author: 'John Sambrook'
+tags: ['Community']
 draft: true
 ---
 

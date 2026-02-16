@@ -1,9 +1,9 @@
 ---
-title: "Financial transparency and board governance"
-description: "How to present financial realities to boards in ways that enable good decisions instead of creating performative oversight theater."
+title: 'Financial transparency and board governance'
+description: 'How to present financial realities to boards in ways that enable good decisions instead of creating performative oversight theater.'
 date: 2025-06-19
-author: "John Sambrook"
-tags: ["Finance"]
+author: 'John Sambrook'
+tags: ['Finance']
 draft: true
 ---
 

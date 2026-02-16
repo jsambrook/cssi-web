@@ -1,11 +1,11 @@
 ---
-title: "Decision-ready beats presentation-ready"
-description: "A framework for turning complex inputs into choices stakeholders can act on."
-metaTitle: "Decision-ready beats presentation-ready"
-metaDescription: "A framework for turning complex inputs into choices stakeholders can act on."
+title: 'Decision-ready beats presentation-ready'
+description: 'A framework for turning complex inputs into choices stakeholders can act on.'
+metaTitle: 'Decision-ready beats presentation-ready'
+metaDescription: 'A framework for turning complex inputs into choices stakeholders can act on.'
 date: 2026-01-15
-author: "John Sambrook"
-tags: ["Decision-Making", "Frameworks"]
+author: 'John Sambrook'
+tags: ['Decision-Making', 'Frameworks']
 ---
 
 Most consulting deliverables are built to impress, not to decide. They're comprehensive, polished, and structurally designed to delay commitment. The deck gets longer. The options multiply. The audience nods, then schedules another meeting.

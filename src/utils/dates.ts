@@ -16,9 +16,7 @@ const PACIFIC = 'America/Los_Angeles';
  *          2026-07-04 (PDT) → "2026-07-04T07:00:00.000Z"
  */
 export function toPacificIso(d: Date): string {
-  const noon = new Date(
-    Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), 12),
-  );
+  const noon = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), 12));
   const isPDT = new Intl.DateTimeFormat('en-US', {
     timeZone: PACIFIC,
     timeZoneName: 'short',
@@ -27,7 +25,7 @@ export function toPacificIso(d: Date): string {
     .includes('PDT');
   const offsetHours = isPDT ? 7 : 8;
   return new Date(
-    Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), offsetHours),
+    Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), offsetHours)
   ).toISOString();
 }
 

@@ -1,11 +1,11 @@
 ---
-title: "The post-acute care plan: a proactive approach to discharge readiness"
-description: "A concept for addressing the complex discharge problem at its source—by capturing discharge-relevant information during routine primary care, before any hospitalization occurs."
-metaTitle: "Post-acute care planning before hospitalization"
-metaDescription: "The Post-Acute Care Plan concept captures discharge-critical data in primary care so patients and hospitals can avoid crisis-driven discharge delays."
+title: 'The post-acute care plan: a proactive approach to discharge readiness'
+description: 'A concept for addressing the complex discharge problem at its source—by capturing discharge-relevant information during routine primary care, before any hospitalization occurs.'
+metaTitle: 'Post-acute care planning before hospitalization'
+metaDescription: 'The Post-Acute Care Plan concept captures discharge-critical data in primary care so patients and hospitals can avoid crisis-driven discharge delays.'
 date: 2025-12-15
-author: "John Sambrook"
-tags: ["Healthcare", "Operations", "Strategy"]
+author: 'John Sambrook'
+tags: ['Healthcare', 'Operations', 'Strategy']
 ---
 
 Every day across the United States, thousands of patients occupy acute care hospital beds despite being medically ready for discharge. They remain hospitalized not because they need hospital-level care, but because the information and arrangements required for safe discharge were never gathered in advance. Legal documents are missing. Family support networks are unknown. Preferences for post-acute care facilities have never been discussed. Insurance coverage for rehabilitation has not been verified.
@@ -36,14 +36,14 @@ In Washington State, the Complex Discharge Task Force reported in 2025 that on a
 
 Complex discharges arise from the convergence of multiple barriers. The Bree Collaborative's 2024 guidelines on complex patient discharge categorize these barriers into several domains:[^5]
 
-| Category | Examples |
-|---|---|
+| Category                 | Examples                                                                                                                         |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
 | **Legal/Administrative** | Patient lacks decision-making capacity; no healthcare power of attorney; guardianship proceedings required (can take 3–6 months) |
-| **Insurance/Payment** | Prior authorization delays; Medicaid eligibility determination; coverage gaps for specific services |
-| **Capacity/Placement** | Skilled nursing facilities at capacity; no beds for patients with specific needs (bariatric, behavioral health) |
-| **Medical Complexity** | Wound care requirements; ventilator dependence; IV antibiotics; specialized equipment needs |
-| **Behavioral Health** | Co-occurring mental illness; substance use history; behaviors that facilities decline to accept |
-| **Social/Practical** | Homelessness; no family support; unsafe home environment; transportation barriers |
+| **Insurance/Payment**    | Prior authorization delays; Medicaid eligibility determination; coverage gaps for specific services                              |
+| **Capacity/Placement**   | Skilled nursing facilities at capacity; no beds for patients with specific needs (bariatric, behavioral health)                  |
+| **Medical Complexity**   | Wound care requirements; ventilator dependence; IV antibiotics; specialized equipment needs                                      |
+| **Behavioral Health**    | Co-occurring mental illness; substance use history; behaviors that facilities decline to accept                                  |
+| **Social/Practical**     | Homelessness; no family support; unsafe home environment; transportation barriers                                                |
 
 Critically, these barriers frequently co-occur. A single patient may lack decision-making capacity (requiring guardianship), have complex wound care needs (limiting facility options), and have no family support (eliminating home discharge). Each barrier compounds the others, and sequential resolution fails because resolved barriers can re-emerge while waiting for others to be addressed.
 
@@ -159,14 +159,14 @@ The PACP data model is designed around the barriers that cause discharge delays.
 
 When patients lack decision-making capacity and no one has legal authority to make healthcare decisions, guardianship proceedings can delay discharge for months.
 
-| Data Element | Purpose |
-|---|---|
-| Healthcare Power of Attorney status | Identifies whether legal decision-maker exists |
-| POA agent name and contact information | Enables immediate contact if patient cannot decide |
-| Backup agent designation | Provides alternative if primary agent unavailable |
-| Existing guardianship (if any) | Documents existing legal arrangements |
-| POLST on file | Links to existing physician orders for life-sustaining treatment |
-| Family conflict indicators | Alerts care team to potential decision-making complications |
+| Data Element                           | Purpose                                                          |
+| -------------------------------------- | ---------------------------------------------------------------- |
+| Healthcare Power of Attorney status    | Identifies whether legal decision-maker exists                   |
+| POA agent name and contact information | Enables immediate contact if patient cannot decide               |
+| Backup agent designation               | Provides alternative if primary agent unavailable                |
+| Existing guardianship (if any)         | Documents existing legal arrangements                            |
+| POLST on file                          | Links to existing physician orders for life-sustaining treatment |
+| Family conflict indicators             | Alerts care team to potential decision-making complications      |
 
 Importantly, the PACP conversation is an opportunity to prompt creation of missing documents. If no POA exists, the system can provide resources and encourage completion, converting an information gap into a resolved issue.
 
@@ -174,26 +174,26 @@ Importantly, the PACP conversation is an opportunity to prompt creation of missi
 
 Prior authorization delays and coverage gaps cause significant discharge delays, particularly for Medicare Advantage patients.
 
-| Data Element | Purpose |
-|---|---|
-| Current insurance verification | Confirms coverage is active and details are current |
-| Medicare Advantage plan details | MA plans vary significantly in post-acute coverage |
-| Medicaid eligibility likelihood | Anticipates potential Medicaid conversion during long stays |
-| Long-term care insurance | Identifies supplemental coverage for extended care |
-| Private pay capacity (sensitive) | Informs options if coverage gaps exist |
-| Prior authorization history | Flags patients who have experienced authorization issues |
+| Data Element                     | Purpose                                                     |
+| -------------------------------- | ----------------------------------------------------------- |
+| Current insurance verification   | Confirms coverage is active and details are current         |
+| Medicare Advantage plan details  | MA plans vary significantly in post-acute coverage          |
+| Medicaid eligibility likelihood  | Anticipates potential Medicaid conversion during long stays |
+| Long-term care insurance         | Identifies supplemental coverage for extended care          |
+| Private pay capacity (sensitive) | Informs options if coverage gaps exist                      |
+| Prior authorization history      | Flags patients who have experienced authorization issues    |
 
 ### Placement preferences
 
 Patients and families make better decisions when they have time to consider options thoughtfully, rather than under the pressure of an acute hospitalization.
 
-| Data Element | Purpose |
-|---|---|
-| Ranked preferred SNFs (3–5 facilities) | Documents considered preferences after review or visits |
-| Geographic constraints | "Within 30 minutes of daughter in [city]" |
-| Explicit exclusions | "Will not go to Facility X under any circumstances" |
-| Openness to alternatives | Willingness to consider facilities farther away, CAH swing beds, etc. |
-| Prior facility experiences | History of stays at specific facilities and outcomes |
+| Data Element                           | Purpose                                                               |
+| -------------------------------------- | --------------------------------------------------------------------- |
+| Ranked preferred SNFs (3–5 facilities) | Documents considered preferences after review or visits               |
+| Geographic constraints                 | "Within 30 minutes of daughter in [city]"                             |
+| Explicit exclusions                    | "Will not go to Facility X under any circumstances"                   |
+| Openness to alternatives               | Willingness to consider facilities farther away, CAH swing beds, etc. |
+| Prior facility experiences             | History of stays at specific facilities and outcomes                  |
 
 Ideally, patients would have an opportunity to tour or virtually visit preferred facilities before making these selections, converting an abstract choice into an informed decision.
 
@@ -201,37 +201,37 @@ Ideally, patients would have an opportunity to tour or virtually visit preferred
 
 Social and practical barriers cause many discharge delays that have nothing to do with medical complexity.
 
-| Data Element | Purpose |
-|---|---|
-| Current living situation | Own home, rental, assisted living, with family, unstable/homeless |
-| Physical environment | Stairs to enter, stairs inside, bathroom accessibility, doorway widths |
-| Household composition | Who lives with patient; capability to provide care |
-| Primary caregiver | Name, relationship, contact, availability (24/7, daytime, limited) |
-| Backup caregiver | Alternative support if primary unavailable |
-| Transportation resources | Own vehicle, family transport, requires medical transport |
-| Pet care arrangements | Unresolved pet care actually delays discharges |
+| Data Element             | Purpose                                                                |
+| ------------------------ | ---------------------------------------------------------------------- |
+| Current living situation | Own home, rental, assisted living, with family, unstable/homeless      |
+| Physical environment     | Stairs to enter, stairs inside, bathroom accessibility, doorway widths |
+| Household composition    | Who lives with patient; capability to provide care                     |
+| Primary caregiver        | Name, relationship, contact, availability (24/7, daytime, limited)     |
+| Backup caregiver         | Alternative support if primary unavailable                             |
+| Transportation resources | Own vehicle, family transport, requires medical transport              |
+| Pet care arrangements    | Unresolved pet care actually delays discharges                         |
 
 ### Preferences and values
 
 Patient and family preferences should guide discharge planning, but these preferences are rarely documented in advance.
 
-| Data Element | Purpose |
-|---|---|
-| Home vs. facility philosophy | "I want to go home no matter what" vs. preference for professional care |
-| Hospice/palliative awareness | Has patient considered comfort-focused care? |
-| Cultural or religious considerations | Factors affecting care preferences |
-| Language preferences | Interpreter needs for care coordination |
-| Family dynamics notes | Key decision-makers; potential conflicts |
+| Data Element                         | Purpose                                                                 |
+| ------------------------------------ | ----------------------------------------------------------------------- |
+| Home vs. facility philosophy         | "I want to go home no matter what" vs. preference for professional care |
+| Hospice/palliative awareness         | Has patient considered comfort-focused care?                            |
+| Cultural or religious considerations | Factors affecting care preferences                                      |
+| Language preferences                 | Interpreter needs for care coordination                                 |
+| Family dynamics notes                | Key decision-makers; potential conflicts                                |
 
 ### Risk flags
 
 Some information is sensitive but essential for realistic discharge planning.
 
-| Data Element | Purpose |
-|---|---|
-| Prior facility refusals | History of being declined by facilities |
-| Behavioral considerations | Factors that may affect placement options |
-| History of placement difficulties | Patterns that predict future challenges |
+| Data Element                      | Purpose                                   |
+| --------------------------------- | ----------------------------------------- |
+| Prior facility refusals           | History of being declined by facilities   |
+| Behavioral considerations         | Factors that may affect placement options |
+| History of placement difficulties | Patterns that predict future challenges   |
 
 This category requires particular sensitivity. The information is useful for planning but could stigmatize patients if handled poorly. The PCP's role in gathering this information, within an established trust relationship, is especially important here.
 
@@ -249,7 +249,7 @@ Over time, as high-risk patients complete their PACP, the program expands to bro
 
 Patient outreach emphasizes education and choice. The initial contact, likely through the patient portal, explains the program's purpose and benefits:
 
-> *"We have an important service for you to review. [Health System] is offering a new program to help you prepare for any future hospital stay. By sharing some information about your preferences and circumstances now, you can help ensure that if you ever need care after a hospitalization, the process goes smoothly and your wishes are honored."*
+> _"We have an important service for you to review. [Health System] is offering a new program to help you prepare for any future hospital stay. By sharing some information about your preferences and circumstances now, you can help ensure that if you ever need care after a hospitalization, the process goes smoothly and your wishes are honored."_
 
 Patients are given time to absorb the concept before being asked to act. Links to educational materials, FAQs, and testimonials help patients understand why investing time in the program benefits them and their families.
 
@@ -321,7 +321,7 @@ When complications arise (the patient's first-choice facility has no beds, insur
 
 The post-acute care landscape changes. Facilities go out of network, close, or change their capabilities. When these changes affect patients with documented preferences, the system can notify them proactively:
 
-> *"Your preferred care facility, [Facility Name], is no longer in our network. We will use your second choice, [Alternate Facility], should you become hospitalized and need post-acute care. You can update your preferences at any time through [Portal/Phone]."*
+> _"Your preferred care facility, [Facility Name], is no longer in our network. We will use your second choice, [Alternate Facility], should you become hospitalized and need post-acute care. You can update your preferences at any time through [Portal/Phone]."_
 
 This proactive communication keeps PACP data current and maintains patient engagement with the program.
 
@@ -512,14 +512,14 @@ The structural analysis in this article identified why the problem persists: dis
 
 [^5]: Dr. Robert Bree Collaborative. "Complex Patient Discharge Report and Guidelines." January 2024. [qualityhealth.org](https://www.qualityhealth.org/bree/wp-content/uploads/sites/8/2024/01/Bree-Complex-Discharge-Recommendations-FINAL-0124.pdf)
 
-[^6]: Mukamel DB, et al. "Hospital discharge and selecting a skilled nursing facility." *Journal of the American Geriatrics Society.* 2018. [PMC5796431](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5796431/)
+[^6]: Mukamel DB, et al. "Hospital discharge and selecting a skilled nursing facility." _Journal of the American Geriatrics Society._ 2018. [PMC5796431](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5796431/)
 
-[^7]: Prusaczyk B, et al. "Selecting a Skilled Nursing Facility for Post-Acute Care: The Patient and Family Perspective." *Journal of Applied Gerontology.* 2017. [PMC5681373](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5681373/)
+[^7]: Prusaczyk B, et al. "Selecting a Skilled Nursing Facility for Post-Acute Care: The Patient and Family Perspective." _Journal of Applied Gerontology._ 2017. [PMC5681373](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5681373/)
 
-[^8]: Roberts LW, et al. "Post-acute care discharge delays for neurology inpatients." *Neurology: Clinical Practice.* 2018. [PMC6105059](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6105059/)
+[^8]: Roberts LW, et al. "Post-acute care discharge delays for neurology inpatients." _Neurology: Clinical Practice._ 2018. [PMC6105059](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6105059/)
 
 [^9]: American Hospital Association. "The Cost of Caring: Challenges Facing America's Hospitals in 2025." April 2025. [aha.org](https://www.aha.org/costsofcaring)
 
 [^10]: National Institute on Aging. "Advance Care Planning: Advance Directives for Health Care." [nia.nih.gov](https://www.nia.nih.gov/health/advance-care-planning/advance-care-planning-advance-directives-health-care). See also: [PREPARE for Your Care](https://prepareforyourcare.org), a model for patient-centered advance care planning.
 
-[^11]: Naylor MD, et al. "Care Transitions Between Hospitals and Skilled Nursing Facilities: Perspectives of Sending and Receiving Providers." *Journal of Hospital Medicine.* 2017. [PMC5693352](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5693352/)
+[^11]: Naylor MD, et al. "Care Transitions Between Hospitals and Skilled Nursing Facilities: Perspectives of Sending and Receiving Providers." _Journal of Hospital Medicine._ 2017. [PMC5693352](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5693352/)

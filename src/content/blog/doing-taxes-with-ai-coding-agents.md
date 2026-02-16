@@ -1,11 +1,11 @@
 ---
-title: "Doing my taxes with Claude Code and Codex"
+title: 'Doing my taxes with Claude Code and Codex'
 description: "A small business owner's account of automating tax preparation with AI coding agents, and what it suggests about the near future of knowledge work."
-metaTitle: "Doing my taxes with Claude Code and Codex"
+metaTitle: 'Doing my taxes with Claude Code and Codex'
 metaDescription: "A small business owner's account of automating tax preparation with AI coding agents, and what it suggests about the near future of knowledge work."
 date: 2026-02-15
-author: "John Sambrook"
-tags: ["AI", "Practical Tips", "Small Business"]
+author: 'John Sambrook'
+tags: ['AI', 'Practical Tips', 'Small Business']
 ---
 
 I'm doing my business taxes this year with AI coding agents. Not conceptually. Not as an experiment. I mean the actual tax forms, schedules, and filings for my S-Corp.
@@ -58,7 +58,7 @@ Quarterly tax filings that used to cause dread now run from playbooks. Website a
 
 If you're a knowledge worker reading this, I want to be clear about what I think is happening. This isn't a story about jobs disappearing. It's a story about the skills that matter changing.
 
-For thirty years, knowing *how to operate specific software* was a valuable skill. Knowing QuickBooks, knowing Excel, knowing Photoshop -- these were resume items. They still have value, but the balance is shifting. What matters more now is knowing *what needs to happen*: understanding the domain, being able to describe a problem clearly, and evaluating whether a solution is correct.
+For thirty years, knowing _how to operate specific software_ was a valuable skill. Knowing QuickBooks, knowing Excel, knowing Photoshop -- these were resume items. They still have value, but the balance is shifting. What matters more now is knowing _what needs to happen_: understanding the domain, being able to describe a problem clearly, and evaluating whether a solution is correct.
 
 I'm 66. I've been writing software for over thirty years. And I'm more capable today than I was five years ago. Not because I'm smarter, but because AI coding agents multiply the value of experience and judgment. If you can describe what you need and tell whether the result is right, you can build things that would have required a team a few years ago.
 

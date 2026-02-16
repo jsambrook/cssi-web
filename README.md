@@ -87,11 +87,11 @@ Markdown blog posts in `src/content/blog/` with frontmatter:
 
 ```md
 ---
-title: "Post Title"
-description: "Short description"
+title: 'Post Title'
+description: 'Short description'
 date: 2026-01-15
-author: "Author Name"
-tags: ["tag1"]
+author: 'Author Name'
+tags: ['tag1']
 draft: false
 ---
 ```

@@ -1,11 +1,4 @@
-import {
-  siteConfig,
-  navItems,
-  footerColumns,
-  footerContact,
-  legalLinks,
-  copyright,
-} from "./site";
+import { siteConfig, navItems, footerColumns, footerContact, legalLinks, copyright } from './site';
 
 export function getPageTitle(pageTitle?: string): string {
   return pageTitle ? `${pageTitle} | ${siteConfig.name}` : siteConfig.name;

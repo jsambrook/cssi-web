@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/check-frontmatter-seo.js && node scripts/generate-og-images.js",
+    "prebuild": "prettier --check . && node scripts/check-frontmatter-seo.js && node scripts/generate-og-images.js",
     "build": "astro build",
     "postbuild": "node scripts/check-seo.js",
     "preview": "astro preview",

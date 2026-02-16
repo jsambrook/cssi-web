@@ -84,7 +84,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 47.6769,
-      longitude: -122.2060,
+      longitude: -122.206,
     },
     logo: {
       '@type': 'ImageObject',
@@ -241,7 +241,7 @@ export function buildArticleSchema(options: {
 }
 
 export function buildBreadcrumbSchema(
-  items: { name: string; href: string }[],
+  items: { name: string; href: string }[]
 ): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
