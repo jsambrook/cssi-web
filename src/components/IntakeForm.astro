@@ -18,6 +18,7 @@ interface Props {
 
 const { config } = Astro.props;
 const totalSteps = config.steps.length;
+const formId = `intake-${crypto.randomUUID().slice(0, 8)}`;
 ---
 
 <div
@@ -81,12 +82,12 @@ const totalSteps = config.steps.length;
         {step.inputType === 'email' && (
           <div class="space-y-4">
             <div>
-              <label for="intake-name" class="block text-sm font-medium mb-1.5">
+              <label for={`${formId}-name`} class="block text-sm font-medium mb-1.5">
                 Name
               </label>
               <input
                 type="text"
-                id="intake-name"
+                id={`${formId}-name`}
                 name="contact_name"
                 required
                 placeholder="Your name"
@@ -97,12 +98,12 @@ const totalSteps = config.steps.length;
               />
             </div>
             <div>
-              <label for="intake-email" class="block text-sm font-medium mb-1.5">
+              <label for={`${formId}-email`} class="block text-sm font-medium mb-1.5">
                 Email
               </label>
               <input
                 type="email"
-                id="intake-email"
+                id={`${formId}-email`}
                 name="contact_email"
                 required
                 placeholder={step.placeholder || 'you@company.com'}
@@ -184,8 +185,7 @@ const totalSteps = config.steps.length;
 </div>
 
 <script>
-  const form = document.querySelector('.intake-form') as HTMLElement;
-  if (form) {
+  document.querySelectorAll<HTMLElement>('.intake-form').forEach((form) => {
     const totalSteps = Number(form.dataset.totalSteps);
     const formspreeEndpoint = form.dataset.formspreeEndpoint || '';
     const fieldNames: Record<string, string> = JSON.parse(form.dataset.fieldNames || '{}');
@@ -364,5 +364,5 @@ const totalSteps = config.steps.length;
 
     // Initialize
     showStep(0);
-  }
+  });
 </script>

@@ -8,3 +8,4 @@ dist/
 .blog_cache.json
 /*.png
 public/images/blog/
+.deploy.lock

@@ -160,6 +160,21 @@ for (const file of htmlFiles) {
   const relPath = relative(DIST_DIR, file).replaceAll('\\', '/');
   const html = readFileSync(file, 'utf8');
   const documentRoot = parse(html);
+  const ids = new Map();
+  const duplicateIds = new Set();
+
+  allElements(documentRoot, (node) => Boolean(getAttr(node, 'id'))).forEach((node) => {
+    const id = getAttr(node, 'id');
+    if (ids.has(id)) {
+      duplicateIds.add(id);
+    } else {
+      ids.set(id, true);
+    }
+  });
+
+  for (const duplicateId of duplicateIds) {
+    errors.push(`${relPath}: duplicate id "${duplicateId}"`);
+  }
 
   const requiredMeta = [
     ['description', () => getMetaContent(documentRoot, { name: 'description' })],

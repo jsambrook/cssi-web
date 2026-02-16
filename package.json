@@ -12,6 +12,7 @@
     "astro": "astro",
     "check:frontmatter-seo": "node scripts/check-frontmatter-seo.js",
     "lint": "eslint .",
+    "lint:shell": "scripts/check-shell.sh",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
