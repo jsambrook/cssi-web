@@ -2,49 +2,48 @@
 
 ## Scope and Validation
 
-- Reviewed runtime and build/SEO code in `src/` and `scripts/`.
+- Reviewed `src/` pages/layouts/components, content, and build/lint scripts.
 - Commands run:
-- `npm run lint` (passed)
-- `npm run build` (passed, including `prebuild` and `postbuild`)
-- Additional reproducibility check:
-- Built twice with no source changes and compared `dist/insights/index.html` checksums; they changed between builds.
+  - `npm run lint` (passed)
+  - `npm run build` (passed: `prebuild`, `build`, `postbuild`)
+  - `npm run lint:shell` (failed: missing `shellcheck`)
+  - Internal local link/asset check across `dist/**/*.html` (`href/src` starting with `/`) (no broken local targets found)
 
 ## Findings (ordered by severity)
 
-1. Medium: Insights listing is non-deterministic and busts all thumbnail caches on every build.
+1. Medium: Content pipeline is inconsistent for nested blog posts; SEO checks and OG generation miss files that Astro includes.
 
 - Evidence:
-- `src/pages/insights.astro:12` defines `const cacheBust = Date.now();`
-- `src/pages/insights.astro:28` appends `?v=${cacheBust}` to every thumbnail URL
-- Two consecutive builds produced different checksums for `dist/insights/index.html` with no source edits
+  - Collection loader is recursive: `src/content.config.ts:6` (`pattern: '**/*.md'`).
+  - Frontmatter SEO check is non-recursive: `scripts/check-frontmatter-seo.js:73`.
+  - OG image generation is non-recursive: `scripts/generate-og-images.js:91`.
 - Impact:
-- Every deploy invalidates browser/CDN caches for all insight thumbnails, increasing bandwidth and reducing cache hit rate.
+  - A post in a subfolder would publish via Astro but skip frontmatter QA and likely miss generated OG assets, causing silent quality regressions.
 - Recommendation:
-- Remove `Date.now()` query params and use stable asset URLs (or deterministic per-file hashes/mtimes).
+  - Make both scripts recursive (match `**/*.md` behavior) so validation and asset generation cover the same content set as the site build.
 
-2. Medium: Build-critical scripts rely on transitive dependencies that are not declared directly.
+2. Medium: Two published insights bypass the blog collection pipeline and are excluded from `Insights` listing + RSS.
 
 - Evidence:
-- `scripts/check-frontmatter-seo.js:5` imports `yaml`
-- `scripts/check-seo.js:5` imports `parse5`
-- `package.json:19`-`package.json:35` does not list `yaml` or `parse5` as direct dependencies
-- `npm ls parse5 yaml --depth=0` returns no direct install
+  - Standalone pages: `src/pages/insights/pacp.astro:1`, `src/pages/insights/nursing-conflict.astro:1`.
+  - Insights index only pulls collection posts: `src/pages/insights.astro:9`.
+  - RSS feed only pulls collection posts: `src/pages/rss.xml.ts:6`.
 - Impact:
-- Dependency-tree changes in upstream packages can break `prebuild`/`postbuild` unexpectedly.
+  - `/insights/pacp` and `/insights/nursing-conflict` are not discoverable in the main archive or RSS feed, which can reduce content visibility and distribution.
 - Recommendation:
-- Add `yaml` and `parse5` as direct dependencies (or devDependencies) with explicit version ranges.
+  - Either migrate these pages into `src/content/blog` (preferred for consistency) or explicitly inject them into both `insights.astro` and `rss.xml.ts`.
 
-3. Low: `noindex` legal pages are still included in the generated sitemap.
+3. Low: Shell linting is not runnable in a default local setup and is undocumented in onboarding.
 
 - Evidence:
-- `src/pages/legal/privacy.astro:11` and `src/pages/legal/terms.astro:11` set `noindex={true}`
-- `astro.config.mjs:7` enables sitemap generation with no exclusions
-- Generated sitemap includes both legal URLs (`dist/sitemap-0.xml:1`)
+  - Script hard-fails if `shellcheck` is missing: `scripts/check-shell.sh:4`.
+  - README quick-start does not mention this dependency: `README.md:6`.
+  - Observed failure: `npm run lint:shell` exited `127` with “shellcheck is not installed.”
 - Impact:
-- Mixed indexing signals (`noindex` plus sitemap inclusion) can waste crawl budget and make indexing behavior less predictable.
+  - Contributors/CI may assume lint passes while shell checks are effectively skipped unless the environment is preconfigured.
 - Recommendation:
-- Exclude legal/noindex routes from sitemap output.
+  - Document `shellcheck` in setup docs and/or run shell lint in a pinned CI image where the tool is guaranteed.
 
 ## Residual Risks / Gaps
 
-- No automated test suite is configured (`package.json:6`-`package.json:18` has no `test` script); regressions are mainly caught during full builds.
+- No automated test suite is configured (`package.json` has no `test` script), so behavior regressions rely on lint/build plus manual review.

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { readdirSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
 import { parseDocument } from 'yaml';
 
 const BLOG_DIR = join(process.cwd(), 'src/content/blog');
@@ -70,8 +70,22 @@ function looksMachineTrimmed(value) {
   return TRUNCATION_PATTERN.test(value);
 }
 
-const files = readdirSync(BLOG_DIR)
-  .filter((file) => file.endsWith('.md'))
+function walkMarkdownFiles(dir, files = []) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      walkMarkdownFiles(fullPath, files);
+      continue;
+    }
+    if (entry.isFile() && entry.name.endsWith('.md')) {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
+const files = walkMarkdownFiles(BLOG_DIR)
+  .map((file) => relative(BLOG_DIR, file).replaceAll('\\', '/'))
   .sort();
 
 const issues = [];

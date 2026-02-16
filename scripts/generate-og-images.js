@@ -11,7 +11,7 @@
 
 import { createCanvas, loadImage, GlobalFonts } from '@napi-rs/canvas';
 import { readFileSync, statSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const BLOG_DIR = join(ROOT, 'src/content/blog');
@@ -85,10 +85,24 @@ function assert(condition, message) {
   }
 }
 
+function walkMarkdownFiles(dir, files = []) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      walkMarkdownFiles(fullPath, files);
+      continue;
+    }
+    if (entry.isFile() && entry.name.endsWith('.md')) {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
 async function main() {
   mkdirSync(OUTPUT_DIR, { recursive: true });
 
-  const mdFiles = readdirSync(BLOG_DIR).filter((f) => f.endsWith('.md'));
+  const mdFiles = walkMarkdownFiles(BLOG_DIR);
   assert(mdFiles.length > 0, `No markdown files found in ${BLOG_DIR}`);
 
   const logo = await loadImage(LOGO_PATH);
@@ -105,9 +119,9 @@ async function main() {
   let generated = 0;
   let skipped = 0;
 
-  for (const file of mdFiles) {
-    const mdPath = join(BLOG_DIR, file);
-    const slug = file.replace(/\.md$/, '');
+  for (const mdPath of mdFiles) {
+    const relativePath = relative(BLOG_DIR, mdPath).replaceAll('\\', '/');
+    const slug = relativePath.replace(/\.md$/, '');
     const outPath = join(OUTPUT_DIR, `${slug}.png`);
 
     // Parse frontmatter
@@ -119,7 +133,7 @@ async function main() {
       continue;
     }
 
-    assert(title, `Missing title in ${file}`);
+    assert(title, `Missing title in ${relativePath}`);
 
     // Skip if output exists and is newer than source (unless design version changed)
     if (!forceAll) {
@@ -191,6 +205,7 @@ async function main() {
     ctx.fillText(URL_TEXT, startX + logoWidth + gap, bottomY);
 
     // Write PNG
+    mkdirSync(dirname(outPath), { recursive: true });
     const buffer = canvas.toBuffer('image/png');
     writeFileSync(outPath, buffer);
     generated++;

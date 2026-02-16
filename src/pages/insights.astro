@@ -3,10 +3,23 @@ import { getCollection } from 'astro:content';
 import PageLayout from '../layouts/PageLayout.astro';
 import Section from '../components/Section.astro';
 import { pageTitle, pageDescription, header } from '../data/pages/insights';
+import { manualInsights } from '../data/manualInsights';
 import { slugifyTag, tagHref } from '../utils/tags';
 import { toPacificIso, formatDate } from '../utils/dates';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+const manualPosts = manualInsights.map((insight) => ({
+  id: insight.slug,
+  data: {
+    title: insight.title,
+    description: insight.description,
+    date: insight.date,
+    tags: insight.tags,
+    ogImage: insight.ogImage,
+  },
+}));
+
+const posts = [...blogPosts, ...manualPosts].sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 ---
@@ -24,7 +37,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
     <div class="max-w-3xl mx-auto space-y-6">
       {
         posts.map((post, i) => {
-          const thumb = `/images/blog/${post.id}.png`;
+          const thumb = post.data.ogImage ?? `/images/blog/${post.id}.png`;
           return (
             <article class:list={['group', i < posts.length - 1 && 'border-b border-border pb-6']}>
               <div class="flex gap-4">

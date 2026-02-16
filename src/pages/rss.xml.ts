@@ -1,9 +1,20 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../data/site';
+import { manualInsights } from '../data/manualInsights';
 
 export async function GET(context: { site: URL }) {
-  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+  const manualPosts = manualInsights.map((insight) => ({
+    id: insight.slug,
+    data: {
+      title: insight.title,
+      description: insight.description,
+      date: insight.date,
+    },
+  }));
+
+  const posts = [...blogPosts, ...manualPosts].sort(
     (a, b) => b.data.date.getTime() - a.data.date.getTime()
   );
 

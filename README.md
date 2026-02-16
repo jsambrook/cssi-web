@@ -10,6 +10,12 @@ npm install
 npm run dev
 ```
 
+## Tooling Requirements
+
+- `shellcheck` is required for `npm run lint:shell`
+- macOS: `brew install shellcheck`
+- Ubuntu/Debian: `sudo apt-get install shellcheck`
+
 For a complete guide to creating a new site, see **[docs/site-builder-guide.md](docs/site-builder-guide.md)**.
 
 ## Technology Stack
