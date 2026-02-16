@@ -1,37 +1,40 @@
 ---
-title: "Why 'Agile' Fails in Hardware (And What Actually Works)"
-description: "You cannot 'sprint' a circuit board design. How to apply Critical Chain Project Management to physical engineering challenges."
-metaTitle: 'Why Agile Fails in Medical Device Hardware Development'
-metaDescription: "Software methodologies break when applied to physics and FDA regulations. A systems architect's view on Critical Chain for MedTech."
-date: 2026-02-16
+title: 'Short cycles, real outcomes'
+description: 'Why small, measurable releases outperform big-bang delivery.'
+metaTitle: 'Short cycles, real outcomes'
+metaDescription: 'Why small, measurable releases outperform big-bang delivery.'
+date: 2025-12-20
 author: 'John Sambrook'
-tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Delivery']
+tags: ['Delivery', 'Agile', 'Outcomes']
 ---
 
-I have sat in countless engineering reviews where a well-meaning consultant tries to force a hardware team to work in two-week "Sprints."
+The biggest risk in any initiative isn't building the wrong thing. It's building the right thing too slowly to matter.
 
-The tension in the room is palpable. The firmware engineers are game—they can recompile in minutes. But the electrical engineers and mechanical designers are staring at their shoes.
+Large programs fail for a predictable reason: they defer learning. The plan is set, the timeline is long, and by the time something ships, the context has changed. The work is technically complete but practically irrelevant.
 
-They know something the consultant doesn't: **Physics doesn't sprint.**
+## The case for short cycles
 
-You cannot iterate a printed circuit board (PCB) in two weeks. Fabrication takes time. Assembly takes time. Signal integrity testing takes time. FDA validation takes time.
+Short cycles—two to four weeks of focused work ending in something measurable—solve this problem by compressing the feedback loop. Instead of planning for six months and delivering once, you plan for two weeks and deliver continuously.
 
-When you force "Agile" on hardware, you don't get speed. You get **fragmentation**. Engineers break work into artificial "stories" just to feed the Jira beast, losing sight of the integrated system.
+This isn't just an engineering practice. It applies to strategy, operations, and organizational change.
 
-## The Alternative: Critical Chain
+## What a short cycle looks like
 
-In the physical world, the constraint isn't usually "engineering hours." It is **integration latency**.
+A well-run short cycle has four elements:
 
-The solution isn't Scrum. It's **Critical Chain Project Management (CCPM)**.
+1. **A clear outcome.** Not "make progress on the initiative." A specific, measurable result: "Reduce ticket backlog by 15%" or "Ship the revised onboarding flow to 10% of users."
+2. **A bounded scope.** The work fits in the cycle. If it doesn't, the scope is wrong—not the timeline.
+3. **A review at the end.** Did we hit the outcome? If yes, what did we learn? If no, why not? This takes 30 minutes, not a half-day retrospective.
+4. **An adjustment.** Based on what you learned, what changes for the next cycle?
 
-1. **Identify the Longest Path:** In MedTech, this is almost always the "Design-Build-Test" cycle of the physical hardware.
-2. **Buffer the Project, Not the Task:** Engineers pad their estimates because they are afraid of being late. CCPM strips that safety buffer from individual tasks and aggregates it at the end of the project.
-3. **The Relay Runner Mindset:** When a task is on the Critical Chain, it is the only priority. The engineer works it like a relay race—full speed, hand off the baton, then rest. No multitasking.
+## Why organizations resist this
 
-## Stopping the "Student Syndrome"
+Short cycles feel uncomfortable because they surface problems early. A two-week cycle that misses its target is visible in a way that a six-month program drifting off course is not.
 
-Agile Sprints often encourage "Student Syndrome"—waiting until the end of the sprint to integrate. In hardware, this is fatal.
+That visibility is the point. Problems you see early are problems you can fix. Problems you discover at the end of a long program are expensive, demoralizing, and often unfixable.
 
-By shifting from "Sprints" (artificial timeboxes) to "Flow" (managing the Critical Chain buffers), we align the methodology with the physics of the product.
+## Getting started
 
-We don't need to pretend hardware is software. We need to respect the constraints of the physical world and architect our workflow to move through them, not pretend they don't exist.
+Pick one initiative. Define a two-week outcome. Execute. Review. Adjust. Repeat.
+
+You don't need a framework or a methodology. You need the discipline to ship something real every two weeks and the honesty to evaluate whether it mattered.
