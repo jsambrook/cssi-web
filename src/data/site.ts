@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Common Sense Systems',
-  tagline: 'Delivering real business value since 1996',
+  tagline: 'Leading with value since 1996',
   siteUrl: 'https://common-sense.com',
   defaultDescription:
     "Break bottlenecks and accelerate throughput in Healthcare, MedTech, and Embedded Systems. We design 'Mafia Offers' and operational interventions for ambitious leaders. Based in Kirkland, WA.",
