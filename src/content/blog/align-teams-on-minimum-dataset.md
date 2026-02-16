@@ -1,35 +1,45 @@
 ---
-title: 'How to align teams on the minimum dataset'
-description: 'Practical steps for establishing shared facts before debating solutions.'
-metaTitle: 'How to align teams on the minimum dataset'
-metaDescription: 'Practical steps for establishing shared facts before debating solutions.'
-date: 2026-01-08
+title: 'The Metrics Trap: Why Hospitals Drown in Data but Starve for Wisdom'
+description: 'Most dashboards measure local efficiency at the expense of global throughput. Here is how to define the minimum dataset that actually drives system performance.'
+metaTitle: 'The Metrics Trap: Moving from Local Optima to System Throughput'
+metaDescription: "Why 'more data' often leads to worse decisions in complex systems, and how to define the few metrics that actually matter."
+date: 2026-02-16
 author: 'John Sambrook'
-tags: ['Alignment', 'Data', 'Teams']
+tags: ['Strategy', 'Theory of Constraints', 'Decision-Making']
 ---
 
 Most organizational arguments aren't about strategy. They're about facts. Two leaders in the same room, looking at different dashboards, drawing different conclusions, and talking past each other.
 
-The fix isn't more data. It's agreeing on less.
+The conventional fix is "Data Governance" or "Business Intelligence." Build a bigger warehouse. Visualize it better.
 
-## What is a minimum dataset?
+But from a systems perspective, the problem isn't a lack of data. It's a lack of **Theory**.
 
-A minimum dataset is the smallest set of facts that everyone in the room trusts enough to make decisions from. It's not a dashboard. It's not a data warehouse. It's a short, curated list of numbers that answer the questions that actually matter.
+## The Theory of the Business
 
-## Why teams resist it
+Without a clear theory of how your system generates value (e.g., Theory of Constraints), every metric looks equally important.
 
-Building a minimum dataset forces uncomfortable conversations:
+- The Lab Manager optimizes for "Test Cost per Unit."
+- The OR Director optimizes for "Room Utilization."
+- The CFO optimizes for "Days Cash on Hand."
 
-- **"Which metrics actually matter?"** Most teams track too many things and act on too few.
-- **"Do we trust this number?"** Often the answer is no, and no one has said it out loud.
-- **"What are we willing to stop measuring?"** Letting go of a metric feels like losing visibility, even when the metric drives no decisions.
+These are **Local Optima**. And as Goldratt taught us, a system composed of efficient parts is rarely an efficient system. In fact, maximizing local efficiency often _destroys_ global throughput. (If the Lab cuts costs by batching tests, they delay the ED, which boards patients, which blocks the OR).
 
-## How to build one
+## The Minimum Dataset
 
-1. **Start with the decision.** What are you trying to decide in the next 30 days? That frames which facts matter.
-2. **List candidate metrics.** Ask each stakeholder: "What would you need to see to feel confident deciding?"
-3. **Negotiate down.** The goal is five to seven metrics, not fifty. Every metric on the list should change a decision if it moves.
-4. **Validate sources.** For each metric, confirm: where does this number come from? Do we trust it? If not, fix the source before proceeding.
-5. **Publish and review.** Make the minimum dataset visible to everyone involved. Review it weekly. Update it only when the decision context changes.
+A "Minimum Dataset" isn't just a shorter list of numbers. It is the specific set of metrics that tell you if the **Global Constraint** is healthy.
 
-The minimum dataset isn't a permanent artifact. It's a tool for the current moment. When the decision changes, the dataset changes too.
+For a hospital, that might not be 50 KPIs. It might be three:
+
+1. **Throughput:** How many patients are successfully completing their care journey today?
+2. **Inventory:** How many patients are stuck in the system (waiting for beds, labs, or discharge)?
+3. **Operating Expense:** What is the actual run-rate cost of keeping the doors open?
+
+## How to Align the Room
+
+To stop the dashboard wars, we stop asking "What can we measure?" and start asking "What is the Constraint?"
+
+1. **Identify the Constraint:** Is it the ED? The OR? Staffing?
+2. **Subordinate the Data:** If a metric doesn't tell us about the Constraint, it is secondary. Move it to the appendix.
+3. **Kill the Vanity Metrics:** Any number that looks good but doesn't drive a decision is noise.
+
+The shift from "Presentation Ready" (looking thorough) to "Decision Ready" (looking clear) requires the courage to ignore 90% of the data. You don't need a better dashboard. You need a better theory.
