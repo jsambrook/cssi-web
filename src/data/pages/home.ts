@@ -10,7 +10,7 @@ import type {
 export const hero = {
   headline: 'Break the Constraint. Scale the Flow.',
   subheadline:
-    'We architect Unrefusable Offers and operational velocity for ambitious leaders who are tired of incremental growth. Serving scaling companies and complex systems in Healthcare, MedTech, and Embedded Software.',
+    'We architect Unrefusable Offers and operational velocity for organizations that are tired of incremental growth. Serving Healthcare, MedTech, and Embedded Systems.',
   bullets: [
     { bold: 'No comprehensive decks.', text: 'Decision-ready artifacts instead of reports.' },
     { bold: 'No scope creep.', text: 'Fixed fees, clear deliverables, explicit timelines.' },

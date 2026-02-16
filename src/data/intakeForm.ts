@@ -23,7 +23,7 @@ export const intakeFormConfig: IntakeFormConfig = {
         {
           id: 'alignment',
           icon: '🎯',
-          title: 'Strategic Alignment',
+          title: 'Alignment & Thinking Processes',
           description: 'Leadership team not aligned on priorities or direction',
         },
         {

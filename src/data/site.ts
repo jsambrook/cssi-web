@@ -8,7 +8,7 @@ export const siteConfig = {
   headerCta: { text: 'Book a Consultation', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
   footerContactHeading: 'Contact Us',
   footerTagline:
-    'Healthcare systems architecture and operational consulting. Helping hospital and health system leaders in Kirkland, the Puget Sound region, and throughout Washington State identify constraints and make real progress since 1996.',
+    'Operational architecture and constraint analysis for complex systems. Serving Healthcare, MedTech, and Embedded Software leaders in the Pacific Northwest since 1996.',
   font: {
     family: 'Instrument Sans',
     googleFontsUrl:
