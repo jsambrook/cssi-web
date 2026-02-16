@@ -8,7 +8,7 @@ import { footerContact } from '../../data/site';
 import { pageTitle, pageDescription, lastUpdated, content } from '../../data/pages/privacy';
 ---
 
-<BaseLayout title={getPageTitle(pageTitle)} description={pageDescription} noindex={true}>
+<BaseLayout title={getPageTitle(pageTitle)} description={pageDescription}>
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
   <Section>
