@@ -1,9 +1,16 @@
-import type { HeroBullet, FeatureItem, CTAContent } from '../types';
+import type {
+  HeroBullet,
+  FeatureItem,
+  CTAContent,
+  ServiceCardItem,
+  Industry,
+  AmbitionCard,
+} from '../types';
 
 export const hero = {
-  headline: 'Fast Solutions to Tough Problems',
+  headline: 'Break the Constraint. Scale the Flow.',
   subheadline:
-    'When critical problems persist despite everyone\u2019s best efforts, the issue is structural, not personal. We resolve these situations quickly and get things moving again.',
+    "We architect 'Unrefusable Offers' and operational velocity for organizations that are tired of incremental growth. Serving Healthcare, MedTech, and Embedded Systems.",
   bullets: [
     { bold: 'No comprehensive decks.', text: 'Decision-ready artifacts instead of reports.' },
     { bold: 'No scope creep.', text: 'Fixed fees, clear deliverables, explicit timelines.' },
@@ -15,6 +22,24 @@ export const hero = {
   },
   secondaryCta: { text: 'Learn More', href: '/approach' },
 };
+
+export const ambitionCards: AmbitionCard[] = [
+  {
+    label: 'Velocity',
+    text: 'We need to move 2x faster (The Drum-Buffer-Rope).',
+    scrollTarget: 'service-flow-dynamics',
+  },
+  {
+    label: 'Strategy',
+    text: 'We need to change the rules of our market (The Mafia Offer).',
+    scrollTarget: 'service-market-offer',
+  },
+  {
+    label: 'Alignment',
+    text: 'We need Sales, Ops, and R&D to stop fighting (The Thinking Processes).',
+    scrollTarget: 'service-synchronization',
+  },
+];
 
 export const featuresSection = {
   label: 'Our Approach',
@@ -42,6 +67,59 @@ export const features: FeatureItem[] = [
   {
     title: 'Ship & Learn',
     description: 'Run short cycles, measure outcomes, adjust course. Fast feedback prevents drift.',
+  },
+];
+
+export const defaultIndustry: Industry = 'healthcare';
+
+export const serviceCards: ServiceCardItem[] = [
+  {
+    id: 'flow-dynamics',
+    color: 'orange',
+    variants: {
+      healthcare: {
+        title: 'Accelerate Patient Flow & Slash Length of Stay',
+        description:
+          'Identify the hidden constraints in your patient pathway. We help you unlock inpatient capacity and eliminate ED boarding without adding staff.',
+      },
+      tech: {
+        title: 'Accelerate R&D & Slash Time-to-Market',
+        description:
+          "Stop managing the backlog; eliminate it. We identify the bottleneck in your dev cycle to shrink the time from 'commit' to 'cash'.",
+      },
+    },
+  },
+  {
+    id: 'market-offer',
+    color: 'blue',
+    variants: {
+      healthcare: {
+        title: 'Direct-to-Employer Contracting & Network Integrity',
+        description:
+          "Stop competing on commoditized rates. We design 'Unrefusable Offers' for local employers that bypass insurance friction and secure volume.",
+      },
+      tech: {
+        title: 'Risk-Shared Licensing & Recurring Revenue Models',
+        description:
+          'Move beyond feature wars. We structure licensing and pricing models that align perfectly with customer utility, making your product the obvious financial choice.',
+      },
+    },
+  },
+  {
+    id: 'synchronization',
+    color: 'green',
+    variants: {
+      healthcare: {
+        title: 'Unify ED, Inpatient, and Discharge Teams',
+        description:
+          'Eliminate the friction between departments. We align clinical and operational incentives so the entire hospital moves as one synchronized system.',
+      },
+      tech: {
+        title: 'Align Product Roadmaps with Sales Promises',
+        description:
+          'End the war between Sales and Engineering. We implement the operational handshake that ensures you can actually deliver what you sell, every time.',
+      },
+    },
   },
 ];
 

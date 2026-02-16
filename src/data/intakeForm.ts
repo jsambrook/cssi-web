@@ -122,15 +122,14 @@ export const intakeFormConfig: IntakeFormConfig = {
   footerText: 'Get immediate insights tailored to your challenge',
   submitButtonText: 'Get My Insights',
   successMessage: 'Thanks! Check your inbox for personalized insights.',
-  googleForms: {
-    actionUrl:
-      'https://docs.google.com/forms/d/e/1FAIpQLScv0GYTkiB2wffTYC92j19beeTOh0WwavffN9emIxM2Qs7HZg/formResponse',
-    fieldMappings: {
-      challenge: 'entry.30079526',
-      situation: 'entry.1531028930',
-      timeline: 'entry.920652470',
-      contact_name: 'entry.150014715',
-      contact_email: 'entry.31659718',
+  formspree: {
+    endpoint: 'https://formspree.io/f/xwpkdjkl',
+    fieldNames: {
+      challenge: 'Primary Challenge',
+      situation: 'Situation',
+      timeline: 'Timeline',
+      contact_name: 'Name',
+      contact_email: 'Email',
     },
   },
 };

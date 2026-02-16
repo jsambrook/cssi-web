@@ -15,7 +15,7 @@
  *   intakeForm: IntakeFormConfig (optional — enables 2-column layout)
  */
 
-import type { IntakeFormConfig } from '../data/types';
+import type { IntakeFormConfig, AmbitionCard } from '../data/types';
 import IntakeForm from './IntakeForm.astro';
 
 interface Bullet {
@@ -36,9 +36,18 @@ interface Props {
   primaryCta?: CTA;
   secondaryCta?: CTA;
   intakeForm?: IntakeFormConfig;
+  ambitionCards?: AmbitionCard[];
 }
 
-const { headline, subheadline, bullets = [], primaryCta, secondaryCta, intakeForm } = Astro.props;
+const {
+  headline,
+  subheadline,
+  bullets = [],
+  primaryCta,
+  secondaryCta,
+  intakeForm,
+  ambitionCards = [],
+} = Astro.props;
 const hasTwoColumns = !!intakeForm;
 ---
 
@@ -74,6 +83,28 @@ const hasTwoColumns = !!intakeForm;
         <p class="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
           {subheadline}
         </p>
+
+        <!-- Ambition Selector -->
+        {
+          ambitionCards.length > 0 && (
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              {ambitionCards.map((card) => (
+                <a
+                  href={`#${card.scrollTarget}`}
+                  class="ambition-card group cursor-pointer rounded-[var(--radius-sm)] border-2 border-border/30
+                         p-4 transition-all hover:border-primary/50 hover:shadow-sm bg-card/50"
+                >
+                  <span class="block text-xs font-semibold uppercase tracking-wider text-primary mb-1">
+                    {card.label}
+                  </span>
+                  <span class="block text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    {card.text}
+                  </span>
+                </a>
+              ))}
+            </div>
+          )
+        }
 
         <!-- Bullet Points -->
         {
@@ -155,3 +186,17 @@ const hasTwoColumns = !!intakeForm;
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.ambition-card').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      const href = card.getAttribute('href');
+      if (!href?.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+</script>

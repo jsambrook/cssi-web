@@ -4,7 +4,7 @@
  *
  * Multi-step intake form rendered as a card. Steps are defined in a data file.
  * Supports card-style radio selection and text/email inputs.
- * Submits to Google Forms via hidden iframe (or logs to console in demo mode).
+ * Submits to Formspree via async fetch (or logs to console in dev mode).
  *
  * Props:
  *   config: IntakeFormConfig from src/data/intakeForm.ts
@@ -23,8 +23,8 @@ const totalSteps = config.steps.length;
 <div
   class="intake-form rounded-[var(--radius)] border-2 border-border bg-background shadow-[var(--elevation-lg)] p-6 sm:p-8"
   data-total-steps={totalSteps}
-  data-action-url={config.googleForms.actionUrl}
-  data-field-mappings={JSON.stringify(config.googleForms.fieldMappings)}
+  data-formspree-endpoint={config.formspree.endpoint}
+  data-field-names={JSON.stringify(config.formspree.fieldNames)}
   data-success-message={config.successMessage}
 >
   <!-- Progress -->
@@ -134,9 +134,12 @@ const totalSteps = config.steps.length;
 
   <!-- Success message (hidden) -->
   <div class="intake-success hidden text-center py-8">
-    <div class="text-4xl mb-3">✓</div>
+    <div class="text-4xl mb-3">&#x2713;</div>
     <p class="text-lg font-semibold">{config.successMessage}</p>
   </div>
+
+  <!-- Error message (hidden) -->
+  <div class="intake-error hidden text-center text-sm text-red-600 mt-3"></div>
 
   <!-- Navigation -->
   <div class="intake-nav flex items-center justify-between mt-6 pt-4 border-t border-border/20">
@@ -144,7 +147,7 @@ const totalSteps = config.steps.length;
       type="button"
       class="intake-back hidden text-sm text-muted-foreground hover:text-foreground transition-colors"
     >
-      ← Back
+      &larr; Back
     </button>
     <div class="ml-auto">
       <button
@@ -155,7 +158,7 @@ const totalSteps = config.steps.length;
                disabled:opacity-40 disabled:cursor-not-allowed"
         disabled
       >
-        Next →
+        Next &rarr;
       </button>
       <button
         type="button"
@@ -178,18 +181,14 @@ const totalSteps = config.steps.length;
       </p>
     )
   }
-
-  <!-- Hidden iframe for Google Forms submission -->
-  <iframe name="intake-form-target" class="hidden" tabindex="-1" aria-hidden="true"></iframe>
 </div>
 
 <script>
   const form = document.querySelector('.intake-form') as HTMLElement;
   if (form) {
     const totalSteps = Number(form.dataset.totalSteps);
-    const actionUrl = form.dataset.actionUrl || '';
-    const fieldMappings: Record<string, string> = JSON.parse(form.dataset.fieldMappings || '{}');
-    const successMessage = form.dataset.successMessage || 'Thank you!';
+    const formspreeEndpoint = form.dataset.formspreeEndpoint || '';
+    const fieldNames: Record<string, string> = JSON.parse(form.dataset.fieldNames || '{}');
 
     let currentStep = 0;
     const responses: Record<string, string> = {};
@@ -201,6 +200,7 @@ const totalSteps = config.steps.length;
     const nextBtn = form.querySelector('.intake-next') as HTMLButtonElement;
     const submitBtn = form.querySelector('.intake-submit') as HTMLButtonElement;
     const successDiv = form.querySelector('.intake-success') as HTMLElement;
+    const errorDiv = form.querySelector('.intake-error') as HTMLElement;
     const navDiv = form.querySelector('.intake-nav') as HTMLElement;
     const footerDiv = form.querySelector('.intake-footer') as HTMLElement | null;
 
@@ -240,7 +240,6 @@ const totalSteps = config.steps.length;
           return input.value.trim() !== '';
         });
       } else if (stepEl.querySelector('input[type="radio"]')) {
-        // Has radio options but none selected
         valid = false;
       } else {
         valid = true;
@@ -270,50 +269,65 @@ const totalSteps = config.steps.length;
       });
     }
 
-    function submitForm() {
+    async function submitForm() {
       collectCurrentStep();
-      if (import.meta.env.DEV) {
-        console.log('Intake form responses:', responses);
-      }
 
-      if (!actionUrl) {
-        steps.forEach((s) => s.classList.add('hidden'));
-        navDiv.classList.add('hidden');
-        footerDiv?.classList.add('hidden');
-        successDiv.innerHTML =
-          '<div class="text-4xl mb-3">⚠</div>' +
-          '<p class="text-lg font-semibold text-red-600">Form submission is not configured.</p>' +
-          '<p class="text-sm text-muted-foreground mt-2">Please contact us directly instead.</p>';
-        successDiv.classList.remove('hidden');
-        return;
-      }
-
-      const hiddenForm = document.createElement('form');
-      hiddenForm.method = 'POST';
-      hiddenForm.action = actionUrl;
-      hiddenForm.target = 'intake-form-target';
-      hiddenForm.style.display = 'none';
-
+      // Build payload using human-readable field names
+      const payload: Record<string, string> = {};
       for (const [key, value] of Object.entries(responses)) {
-        const entryName = fieldMappings[key];
-        if (entryName) {
-          const input = document.createElement('input');
-          input.type = 'hidden';
-          input.name = entryName;
-          input.value = value;
-          hiddenForm.appendChild(input);
+        const fieldName = fieldNames[key];
+        if (fieldName) {
+          payload[fieldName] = value;
         }
       }
 
-      form.appendChild(hiddenForm);
-      hiddenForm.submit();
-      hiddenForm.remove();
+      if (import.meta.env.DEV) {
+        console.log('Intake form responses:', responses);
+        console.log('Formspree payload:', payload);
+      }
 
-      // Show success
-      steps.forEach((s) => s.classList.add('hidden'));
-      navDiv.classList.add('hidden');
-      footerDiv?.classList.add('hidden');
-      successDiv.classList.remove('hidden');
+      if (!formspreeEndpoint) {
+        showError('Form submission is not configured. Please contact us directly.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      errorDiv.classList.add('hidden');
+
+      try {
+        const res = await fetch(formspreeEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+
+        if (data.ok) {
+          steps.forEach((s) => s.classList.add('hidden'));
+          navDiv.classList.add('hidden');
+          footerDiv?.classList.add('hidden');
+          errorDiv.classList.add('hidden');
+          successDiv.classList.remove('hidden');
+        } else {
+          const message =
+            data.errors?.map((e: { message: string }) => e.message).join(', ') ||
+            'Submission failed. Please try again.';
+          showError(message);
+          submitBtn.disabled = false;
+        }
+      } catch {
+        showError('Network error. Please check your connection and try again.');
+        submitBtn.disabled = false;
+      }
+    }
+
+    function showError(message: string) {
+      errorDiv.textContent = message;
+      errorDiv.classList.remove('hidden');
     }
 
     // Event: radio selection

@@ -6,5 +6,5 @@ import { siteConfig } from './src/data/site.ts';
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   site: siteConfig.siteUrl,
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
 });

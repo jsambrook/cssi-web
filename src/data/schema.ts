@@ -94,6 +94,45 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     description: siteConfig.defaultDescription,
     priceRange: '$$',
     foundingDate: '1996',
+    knowsAbout: [
+      'Theory of Constraints',
+      'Throughput Accounting',
+      'Healthcare Patient Flow',
+      'Medical Device Commercialization',
+      'Embedded Systems Engineering',
+      'Mafia Offers (Strategy)',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Operational Interventions',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Flow Dynamics & Throughput',
+            description:
+              'Rapid intervention for gridlocked systems (Patient Flow or R&D Pipelines).',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Market Offer Architecture',
+            description: "Designing 'Mafia Offers' that competitors cannot replicate.",
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Cross-Functional Synchronization',
+            description: 'Aligning Sales, Ops, and Engineering to a single constraint.',
+          },
+        },
+      ],
+    },
     founder: {
       '@type': 'Person',
       name: 'John Sambrook',
@@ -109,6 +148,12 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
         'Medical Device Software',
         'Embedded Systems Engineering',
         'AI-Assisted Policy Analysis',
+        'Patient Flow Optimization',
+        'Length of Stay Reduction',
+        'Direct-to-Employer Healthcare Contracting',
+        'R&D Pipeline Acceleration',
+        'Risk-Shared Licensing',
+        'Cross-Functional Organizational Alignment',
       ],
     },
     areaServed: [
@@ -175,6 +220,12 @@ export function buildFounderSchema(): Record<string, unknown> {
       'Medical Device Software',
       'Embedded Systems Engineering',
       'AI-Assisted Policy Analysis',
+      'Patient Flow Optimization',
+      'Length of Stay Reduction',
+      'Direct-to-Employer Healthcare Contracting',
+      'R&D Pipeline Acceleration',
+      'Risk-Shared Licensing',
+      'Cross-Functional Organizational Alignment',
     ],
     alumniOf: {
       '@type': 'CollegeOrUniversity',
@@ -182,6 +233,83 @@ export function buildFounderSchema(): Record<string, unknown> {
     },
     url: `${siteConfig.siteUrl}/about`,
     sameAs: ['https://www.linkedin.com/in/johnsambrook'],
+  };
+}
+
+export function buildOfferCatalogSchema(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: `${siteConfig.name} Services`,
+    description: 'Constraint-based consulting for healthcare and technology leaders.',
+    itemListElement: [
+      {
+        '@type': 'OfferCatalog',
+        name: 'Healthcare Leadership Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Flow Dynamics & Throughput',
+              description:
+                'Accelerate patient flow, slash length of stay, and eliminate ED boarding without adding staff.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Market Offer Architecture',
+              description:
+                'Direct-to-employer contracting and network integrity strategies that bypass insurance friction.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Synchronization & Alignment',
+              description:
+                'Unify ED, inpatient, and discharge teams so the entire hospital moves as one synchronized system.',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Tech & Product Leadership Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Flow Dynamics & Throughput',
+              description:
+                'Accelerate R&D and slash time-to-market by identifying the bottleneck in your dev cycle.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Market Offer Architecture',
+              description:
+                'Risk-shared licensing and recurring revenue models that align with customer utility.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Synchronization & Alignment',
+              description:
+                'Align product roadmaps with sales promises through operational handshakes.',
+            },
+          },
+        ],
+      },
+    ],
   };
 }
 

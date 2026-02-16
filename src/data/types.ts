@@ -73,8 +73,27 @@ export interface IntakeFormConfig {
   footerText?: string;
   submitButtonText: string;
   successMessage: string;
-  googleForms: {
-    actionUrl: string;
-    fieldMappings: Record<string, string>;
+  formspree: {
+    endpoint: string;
+    fieldNames: Record<string, string>;
   };
+}
+
+export interface AmbitionCard {
+  label: string;
+  text: string;
+  scrollTarget: string;
+}
+
+export type Industry = 'healthcare' | 'tech';
+
+export interface IndustryVariant {
+  title: string;
+  description: string;
+}
+
+export interface ServiceCardItem {
+  id: string;
+  color?: 'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple';
+  variants: Record<Industry, IndustryVariant>;
 }
