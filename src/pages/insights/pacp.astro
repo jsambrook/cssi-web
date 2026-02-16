@@ -13,12 +13,11 @@ import Section from '../../components/Section.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
 import { buildArticleSchema, buildBreadcrumbSchema } from '../../data/schema';
 import { siteConfig } from '../../data/site';
+import { getManualInsight } from '../../data/manualInsights';
 
-const title = 'The Post-Acute Care Plan (PACP)';
-const description =
-  'A proactive approach to discharge readiness that treats discharge delays as an input quality problem, not a process problem.';
-const author = 'John Sambrook';
-const publishedDate = '2026-02-16';
+const insight = getManualInsight('pacp');
+const { title, description, author, tags } = insight;
+const publishedDate = insight.date.toISOString().slice(0, 10);
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Home', href: '/' },
@@ -33,14 +32,14 @@ const articleSchema = buildArticleSchema({
   datePublished: publishedDate,
   author,
   url: articleUrl,
-  tags: ['Healthcare', 'Patient Flow', 'Theory of Constraints'],
+  tags,
 });
 
 const articleMeta = {
   publishedTime: publishedDate,
   modifiedTime: publishedDate,
   author,
-  tags: ['Healthcare', 'Patient Flow', 'Theory of Constraints'],
+  tags,
 };
 ---
 

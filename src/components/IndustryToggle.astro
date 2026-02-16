@@ -119,8 +119,7 @@ const categoryLabels: Record<string, string> = {
 </div>
 
 <script>
-  const container = document.querySelector('.industry-toggle') as HTMLElement;
-  if (container) {
+  document.querySelectorAll<HTMLElement>('.industry-toggle').forEach((container) => {
     const buttons = container.querySelectorAll<HTMLButtonElement>('.toggle-btn');
     const cards = container.querySelectorAll<HTMLElement>('.service-card');
 
@@ -149,5 +148,5 @@ const categoryLabels: Record<string, string> = {
         switchIndustry(btn.dataset.industry || 'healthcare');
       });
     });
-  }
+  });
 </script>

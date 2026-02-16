@@ -13,12 +13,11 @@ import Section from '../../components/Section.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
 import { buildArticleSchema, buildBreadcrumbSchema } from '../../data/schema';
 import { siteConfig } from '../../data/site';
+import { getManualInsight } from '../../data/manualInsights';
 
-const title = 'Structural Conflicts in WA State Nursing Agreements';
-const description =
-  "Analysis of 134 structural conflicts across 10 Washington State nursing CBAs reveals why higher wages aren't fixing nurse burnout.";
-const author = 'John Sambrook';
-const publishedDate = '2026-02-16';
+const insight = getManualInsight('nursing-conflict');
+const { title, description, author, tags } = insight;
+const publishedDate = insight.date.toISOString().slice(0, 10);
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Home', href: '/' },
@@ -33,14 +32,14 @@ const articleSchema = buildArticleSchema({
   datePublished: publishedDate,
   author,
   url: articleUrl,
-  tags: ['Labor Relations', 'Healthcare', 'Theory of Constraints'],
+  tags,
 });
 
 const articleMeta = {
   publishedTime: publishedDate,
   modifiedTime: publishedDate,
   author,
-  tags: ['Labor Relations', 'Healthcare', 'Theory of Constraints'],
+  tags,
 };
 ---
 

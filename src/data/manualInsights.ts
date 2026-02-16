@@ -8,6 +8,12 @@ export interface ManualInsight {
   ogImage?: string;
 }
 
+export function getManualInsight(slug: string): ManualInsight {
+  const insight = manualInsights.find((i) => i.slug === slug);
+  if (!insight) throw new Error(`No manual insight with slug "${slug}"`);
+  return insight;
+}
+
 export const manualInsights: ManualInsight[] = [
   {
     slug: 'pacp',

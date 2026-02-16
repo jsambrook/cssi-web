@@ -1,16 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 import Section from '../../components/Section.astro';
-import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
 import { footerContact } from '../../data/site';
 import { pageTitle, pageDescription, lastUpdated, content } from '../../data/pages/privacy';
 ---
 
-<BaseLayout title={getPageTitle(pageTitle)} description={pageDescription}>
-  <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
-
+<PageLayout pageTitle={pageTitle} description={pageDescription}>
   <Section>
     <div class="max-w-3xl mx-auto space-y-6 text-sm text-muted-foreground">
       <h1 class="text-4xl sm:text-5xl text-foreground">{pageTitle}</h1>
@@ -37,6 +32,4 @@ import { pageTitle, pageDescription, lastUpdated, content } from '../../data/pag
       <p>Contact {footerContact.email} with any privacy-related questions.</p>
     </div>
   </Section>
-
-  <Footer slot="footer" {...footerDefaults} />
-</BaseLayout>
+</PageLayout>

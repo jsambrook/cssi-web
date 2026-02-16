@@ -15,24 +15,13 @@
  *   intakeForm: IntakeFormConfig (optional — enables 2-column layout)
  */
 
-import type { IntakeFormConfig, AmbitionCard } from '../data/types';
+import type { CTA, HeroBullet, IntakeFormConfig, AmbitionCard } from '../data/types';
 import IntakeForm from './IntakeForm.astro';
-
-interface Bullet {
-  bold: string;
-  text: string;
-}
-
-interface CTA {
-  text: string;
-  href: string;
-  icon?: string;
-}
 
 interface Props {
   headline: string;
   subheadline: string;
-  bullets?: Bullet[];
+  bullets?: HeroBullet[];
   primaryCta?: CTA;
   secondaryCta?: CTA;
   intakeForm?: IntakeFormConfig;

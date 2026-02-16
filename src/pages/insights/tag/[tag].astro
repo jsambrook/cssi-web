@@ -2,9 +2,9 @@
 import { getCollection } from 'astro:content';
 import PageLayout from '../../../layouts/PageLayout.astro';
 import Section from '../../../components/Section.astro';
+import PostCard from '../../../components/PostCard.astro';
 import { manualInsights } from '../../../data/manualInsights';
-import { slugifyTag, tagHref } from '../../../utils/tags';
-import { toPacificIso, formatDate } from '../../../utils/dates';
+import { slugifyTag } from '../../../utils/tags';
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -63,52 +63,7 @@ const { tagName, posts } = Astro.props;
 
   <Section>
     <div class="max-w-3xl mx-auto space-y-6">
-      {
-        posts.map((post, i) => {
-          const thumb = post.data.ogImage ?? `/images/blog/${post.id}.png`;
-          return (
-            <article class:list={['group', i < posts.length - 1 && 'border-b border-border pb-6']}>
-              <div class="flex gap-4">
-                <a href={`/insights/${post.id}`} class="shrink-0 hidden sm:block">
-                  <img
-                    src={thumb}
-                    alt={post.data.title}
-                    width="80"
-                    height="80"
-                    loading="lazy"
-                    class="w-20 h-20 rounded-lg object-contain"
-                  />
-                </a>
-                <div class="space-y-1">
-                  <a href={`/insights/${post.id}`} class="block">
-                    <h2 class="text-xl group-hover:text-primary transition-colors">
-                      {post.data.title}
-                    </h2>
-                  </a>
-                  <p class="text-sm text-muted-foreground">{post.data.description}</p>
-                  <div class="flex items-center gap-3 text-xs text-muted-foreground">
-                    <time datetime={toPacificIso(post.data.date)}>
-                      {formatDate(post.data.date)}
-                    </time>
-                    {post.data.tags.length > 0 && (
-                      <span class="flex gap-1.5">
-                        {post.data.tags.map((t) => (
-                          <a
-                            href={tagHref(t)}
-                            class="text-primary/70 hover:text-primary transition-colors"
-                          >
-                            #{slugifyTag(t)}
-                          </a>
-                        ))}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </article>
-          );
-        })
-      }
+      {posts.map((post, i) => <PostCard post={post} isLast={i === posts.length - 1} />)}
     </div>
   </Section>
 

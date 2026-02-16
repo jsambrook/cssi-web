@@ -1,0 +1,70 @@
+---
+/*
+ * PostCard.astro
+ *
+ * Blog post summary card with thumbnail, title, description, date, and tags.
+ *
+ * Props:
+ *   post: { id, data: { title, description, date, tags, ogImage? } }
+ *   isLast: Whether this is the last card (omits bottom border)
+ */
+
+import { slugifyTag, tagHref } from '../utils/tags';
+import { toPacificIso, formatDate } from '../utils/dates';
+
+interface Props {
+  post: {
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      date: Date;
+      tags: string[];
+      ogImage?: string;
+    };
+  };
+  isLast?: boolean;
+}
+
+const { post, isLast = false } = Astro.props;
+const thumb = post.data.ogImage ?? `/images/blog/${post.id}.png`;
+---
+
+<article class:list={['group', !isLast && 'border-b border-border pb-6']}>
+  <div class="flex gap-4">
+    <a href={`/insights/${post.id}`} class="shrink-0 hidden sm:block">
+      <img
+        src={thumb}
+        alt={post.data.title}
+        width="80"
+        height="80"
+        loading="lazy"
+        class="w-20 h-20 rounded-lg object-contain"
+      />
+    </a>
+    <div class="space-y-1">
+      <a href={`/insights/${post.id}`} class="block">
+        <h2 class="text-xl group-hover:text-primary transition-colors">
+          {post.data.title}
+        </h2>
+      </a>
+      <p class="text-sm text-muted-foreground">{post.data.description}</p>
+      <div class="flex items-center gap-3 text-xs text-muted-foreground">
+        <time datetime={toPacificIso(post.data.date)}>
+          {formatDate(post.data.date)}
+        </time>
+        {
+          post.data.tags.length > 0 && (
+            <span class="flex gap-1.5">
+              {post.data.tags.map((t) => (
+                <a href={tagHref(t)} class="text-primary/70 hover:text-primary transition-colors">
+                  #{slugifyTag(t)}
+                </a>
+              ))}
+            </span>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</article>
