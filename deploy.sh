@@ -27,10 +27,11 @@ fi
 
 export GIT_SSH_COMMAND='ssh -i /home/john/.ssh/id_ed25519_gh_np'
 
-# Ensure tracked-file mutations from previous runs do not block fast-forward updates.
-if ! git diff --quiet || ! git diff --cached --quiet; then
-  log "Working tree is dirty; resetting tracked files to HEAD."
+# Ensure local drift (tracked or untracked) does not block update/build.
+if [ -n "$(git status --porcelain --untracked-files=normal)" ]; then
+  log "Working tree has local changes; resetting tracked files and cleaning untracked files."
   git reset --hard HEAD
+  git clean -fd
 fi
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
