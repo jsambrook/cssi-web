@@ -5,6 +5,11 @@
  * "Results & Impact" showcase linking to standalone insight pages.
  * Features the Cabletron/IPO case study and two insight cards (PACP, CBA conflicts).
  */
+
+import { getManualInsight } from '../data/manualInsights';
+
+const pacp = getManualInsight('pacp');
+const nursingConflict = getManualInsight('nursing-conflict');
 ---
 
 <section class="py-16 lg:py-24 bg-background relative overflow-hidden" id="impact">
@@ -105,6 +110,7 @@
       >
         <div
           class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center mb-6 text-2xl"
+          aria-hidden="true"
         >
           &#x1F3E5;
         </div>
@@ -119,7 +125,7 @@
           transforming discharge from crisis management to coordinated execution.
         </p>
         <a
-          href="/insights/pacp"
+          href={`/insights/${pacp.slug}`}
           class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
         >
           Read the Concept Paper &rarr;
@@ -131,6 +137,7 @@
       >
         <div
           class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center mb-6 text-2xl"
+          aria-hidden="true"
         >
           &#x2696;&#xFE0F;
         </div>
@@ -146,7 +153,7 @@
           are evaporated, not just monetized.
         </p>
         <a
-          href="/insights/nursing-conflict"
+          href={`/insights/${nursingConflict.slug}`}
           class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
         >
           View the Analysis &rarr;

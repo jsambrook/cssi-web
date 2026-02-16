@@ -235,7 +235,7 @@ const formId = `intake-${crypto.randomUUID().slice(0, 8)}`;
       } else if (textInputs.length > 0) {
         valid = Array.from(textInputs).every((input) => {
           if (input.type === 'email') {
-            return input.value.trim() !== '' && input.value.includes('@');
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
           }
           return input.value.trim() !== '';
         });
@@ -304,18 +304,22 @@ const formId = `intake-${crypto.randomUUID().slice(0, 8)}`;
           body: JSON.stringify(payload),
         });
 
-        const data = await res.json();
-
-        if (data.ok) {
+        if (res.ok) {
           steps.forEach((s) => s.classList.add('hidden'));
           navDiv.classList.add('hidden');
           footerDiv?.classList.add('hidden');
           errorDiv.classList.add('hidden');
           successDiv.classList.remove('hidden');
         } else {
-          const message =
-            data.errors?.map((e: { message: string }) => e.message).join(', ') ||
-            'Submission failed. Please try again.';
+          let message = 'Submission failed. Please try again.';
+          try {
+            const data = await res.json();
+            if (data.errors?.length) {
+              message = data.errors.map((e: { message: string }) => e.message).join(', ');
+            }
+          } catch {
+            // Non-JSON response — use generic message
+          }
           showError(message);
           submitBtn.disabled = false;
         }

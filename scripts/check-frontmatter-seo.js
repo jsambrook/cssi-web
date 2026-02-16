@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { parseDocument } from 'yaml';
 
 const BLOG_DIR = join(process.cwd(), 'src/content/blog');
+const PUBLIC_DIR = join(process.cwd(), 'public');
 
 const META_TITLE_MIN = 15;
 const META_TITLE_MAX = 70;
@@ -128,6 +129,13 @@ for (const file of files) {
     );
   } else if (looksMachineTrimmed(metaDescription)) {
     issues.push(`${file}: metaDescription appears machine-trimmed (trailing ellipsis)`);
+  }
+
+  const ogImage = normalizeString(frontmatter.ogImage);
+  const slug = file.replace(/\.md$/, '');
+  const ogPath = ogImage ? ogImage.replace(/^\//, '') : `images/blog/${slug}.png`;
+  if (!existsSync(join(PUBLIC_DIR, ogPath))) {
+    issues.push(`${file}: OG image not found at public/${ogPath}`);
   }
 }
 

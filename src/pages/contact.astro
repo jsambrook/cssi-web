@@ -4,11 +4,17 @@ import Section from '../components/Section.astro';
 import CTASection from '../components/CTASection.astro';
 import { footerContact } from '../data/site';
 import { pageTitle, pageDescription, header, contactGrid, cta } from '../data/pages/contact';
-import { buildContactPageSchema, buildProfessionalServiceSchema } from '../data/schema';
+import {
+  buildContactPageSchema,
+  buildProfessionalServiceSchema,
+  parseAddress,
+} from '../data/schema';
 
 const contactSchema = buildContactPageSchema(pageDescription);
 const professionalServiceSchema = buildProfessionalServiceSchema();
-const [addressStreet, addressCity] = footerContact.address.split('\n');
+const addr = parseAddress(footerContact.address);
+const addressStreet = addr.streetAddress;
+const addressCity = `${addr.addressLocality}, ${addr.addressRegion} ${addr.postalCode}`;
 ---
 
 <PageLayout

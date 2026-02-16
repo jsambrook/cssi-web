@@ -92,7 +92,7 @@ const {
           {
             contact.phones && contact.phones.length > 0 && (
               <li class="flex items-start gap-2">
-                <span>📞</span>
+                <span aria-hidden="true">📞</span>
                 <div>
                   {contact.phones.map((phone, index) => (
                     <div>{phone}</div>
@@ -104,7 +104,7 @@ const {
           {
             contact.email && (
               <li class="flex items-start gap-2">
-                <span>✉️</span>
+                <span aria-hidden="true">✉️</span>
                 <a
                   href={`mailto:${contact.email}`}
                   class="text-white hover:text-primary transition-colors"
@@ -117,7 +117,7 @@ const {
           {
             contact.address && (
               <li class="flex items-start gap-2">
-                <span>📍</span>
+                <span aria-hidden="true">📍</span>
                 <div class="whitespace-pre-line">{contact.address}</div>
               </li>
             )

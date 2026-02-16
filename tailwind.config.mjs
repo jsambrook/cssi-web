@@ -34,7 +34,6 @@ export default {
           foreground: 'var(--destructive-foreground)',
         },
         border: 'var(--border)',
-        input: 'var(--input)',
         ring: 'var(--ring)',
         card: {
           DEFAULT: 'var(--card)',

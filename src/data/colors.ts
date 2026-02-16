@@ -1,4 +1,8 @@
-export const colorClasses: Record<string, string> = {
+import type { FeatureItem } from './types';
+
+type ColorVariant = NonNullable<FeatureItem['color']>;
+
+export const colorClasses: Record<ColorVariant, string> = {
   default: 'bg-accent/10 text-accent',
   red: 'bg-[var(--feature-red-bg)] text-[var(--feature-red)]',
   orange: 'bg-[var(--feature-orange-bg)] text-[var(--feature-orange)]',

@@ -11,7 +11,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Section from '../../components/Section.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
-import { buildArticleSchema, buildBreadcrumbSchema } from '../../data/schema';
+import { buildArticleSchema, buildBreadcrumbSchema, buildWebPageSchema } from '../../data/schema';
 import { siteConfig } from '../../data/site';
 import { getManualInsight } from '../../data/manualInsights';
 
@@ -35,6 +35,12 @@ const articleSchema = buildArticleSchema({
   tags,
 });
 
+const webPage = buildWebPageSchema({
+  name: title,
+  description,
+  url: articleUrl,
+});
+
 const articleMeta = {
   publishedTime: publishedDate,
   modifiedTime: publishedDate,
@@ -48,7 +54,7 @@ const articleMeta = {
   description={description}
   ogType="article"
   articleMeta={articleMeta}
-  jsonLd={[articleSchema, breadcrumb]}
+  jsonLd={[articleSchema, breadcrumb, webPage]}
 >
   <Header slot="header" {...headerDefaults} currentPath="/insights/nursing-conflict" />
 

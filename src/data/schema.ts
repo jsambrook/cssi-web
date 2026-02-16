@@ -1,14 +1,23 @@
 import { siteConfig, footerContact } from './site';
 
-function parseAddress(raw: string) {
+export function parseAddress(raw: string) {
   // "11227 NE 128 ST, Unit I-102\nKirkland, WA 98034"
-  const [streetLine, cityLine] = raw.split('\n');
-  const cityMatch = cityLine?.match(/^(.+),\s*([A-Z]{2})\s+(\d{5})/);
+  const parts = raw.split('\n');
+  if (parts.length !== 2) {
+    throw new Error(`parseAddress: expected "street\\ncity, ST ZIP", got ${JSON.stringify(raw)}`);
+  }
+  const [streetLine, cityLine] = parts;
+  const cityMatch = cityLine.match(/^(.+),\s*([A-Z]{2})\s+(\d{5})/);
+  if (!cityMatch) {
+    throw new Error(
+      `parseAddress: city line must match "City, ST ZIP", got ${JSON.stringify(cityLine)}`
+    );
+  }
   return {
-    streetAddress: streetLine?.trim() ?? '',
-    addressLocality: cityMatch?.[1] ?? '',
-    addressRegion: cityMatch?.[2] ?? '',
-    postalCode: cityMatch?.[3] ?? '',
+    streetAddress: streetLine.trim(),
+    addressLocality: cityMatch[1],
+    addressRegion: cityMatch[2],
+    postalCode: cityMatch[3],
   };
 }
 
@@ -16,6 +25,85 @@ const address = parseAddress(footerContact.address);
 const organizationSameAs = [
   'https://www.linkedin.com/company/common-sense-systems',
   siteConfig.xProfileUrl,
+];
+
+const founderKnowsAbout = [
+  {
+    '@type': 'DefinedTerm',
+    name: 'Theory of Constraints (TOC)',
+    sameAs: [
+      'https://en.wikipedia.org/wiki/Theory_of_constraints',
+      'https://www.tocico.org/',
+      'https://www.wikidata.org/wiki/Q27857',
+    ],
+  },
+  {
+    '@type': 'DefinedTerm',
+    name: 'TOC Thinking Processes',
+    sameAs: [
+      'https://en.wikipedia.org/wiki/Thinking_processes_(theory_of_constraints)',
+      'https://www.tocico.org/page/TP_Committee',
+    ],
+  },
+  {
+    '@type': 'DefinedTerm',
+    name: 'IEC 62304 - Medical Device Software',
+    sameAs: ['https://en.wikipedia.org/wiki/IEC_62304', 'https://www.iso.org/standard/38421.html'],
+  },
+  {
+    '@type': 'DefinedTerm',
+    name: 'IEC 60601 - Medical Electrical Equipment',
+    sameAs: ['https://en.wikipedia.org/wiki/IEC_60601', 'https://www.iso.org/standard/65529.html'],
+  },
+  {
+    '@type': 'DefinedTerm',
+    name: 'Throughput Accounting',
+    sameAs: [
+      'https://en.wikipedia.org/wiki/Throughput_accounting',
+      'https://www.wikidata.org/wiki/Q1056501',
+    ],
+  },
+  {
+    '@type': 'DefinedTerm',
+    name: 'Medical Ultrasound',
+    sameAs: [
+      'https://en.wikipedia.org/wiki/Medical_ultrasound',
+      'https://www.wikidata.org/wiki/Q171442',
+    ],
+  },
+  {
+    '@type': 'DefinedTerm',
+    name: 'Defibrillation',
+    sameAs: [
+      'https://en.wikipedia.org/wiki/Defibrillation',
+      'https://www.wikidata.org/wiki/Q380299',
+    ],
+  },
+];
+
+const founderCredentials = [
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'TOC Jonah (Thinking Processes Implementer)',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
+    },
+    about: {
+      '@type': 'DefinedTerm',
+      name: 'TOC Thinking Processes',
+      url: 'https://www.tocico.org/page/Jonah',
+    },
+  },
+];
+
+const founderAlumni = [
+  {
+    '@type': 'CollegeOrUniversity',
+    name: 'Washington State University',
+    url: 'https://wsu.edu/',
+  },
 ];
 
 export function buildOrganizationSchema(): Record<string, unknown> {
@@ -137,88 +225,9 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       '@type': 'Person',
       name: 'John Sambrook',
       jobTitle: 'Systems Architect & Constraint Analyst',
-      knowsAbout: [
-        {
-          '@type': 'DefinedTerm',
-          name: 'Theory of Constraints (TOC)',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/Theory_of_constraints',
-            'https://www.tocico.org/',
-            'https://www.wikidata.org/wiki/Q27857',
-          ],
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'TOC Thinking Processes',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/Thinking_processes_(theory_of_constraints)',
-            'https://www.tocico.org/page/TP_Committee',
-          ],
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'IEC 62304 - Medical Device Software',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/IEC_62304',
-            'https://www.iso.org/standard/38421.html',
-          ],
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'IEC 60601 - Medical Electrical Equipment',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/IEC_60601',
-            'https://www.iso.org/standard/65529.html',
-          ],
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Throughput Accounting',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/Throughput_accounting',
-            'https://www.wikidata.org/wiki/Q1056501',
-          ],
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Medical Ultrasound',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/Medical_ultrasound',
-            'https://www.wikidata.org/wiki/Q171442',
-          ],
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Defibrillation',
-          sameAs: [
-            'https://en.wikipedia.org/wiki/Defibrillation',
-            'https://www.wikidata.org/wiki/Q380299',
-          ],
-        },
-      ],
-      hasCredential: [
-        {
-          '@type': 'EducationalOccupationalCredential',
-          name: 'TOC Jonah (Thinking Processes Implementer)',
-          recognizedBy: {
-            '@type': 'Organization',
-            name: 'TOCICO',
-            url: 'https://www.tocico.org/',
-          },
-          about: {
-            '@type': 'DefinedTerm',
-            name: 'TOC Thinking Processes',
-            url: 'https://www.tocico.org/page/Jonah',
-          },
-        },
-      ],
-      alumniOf: [
-        {
-          '@type': 'CollegeOrUniversity',
-          name: 'Washington State University',
-          url: 'https://wsu.edu/',
-        },
-      ],
+      knowsAbout: founderKnowsAbout,
+      hasCredential: founderCredentials,
+      alumniOf: founderAlumni,
     },
     areaServed: [
       {
@@ -273,88 +282,9 @@ export function buildFounderSchema(): Record<string, unknown> {
       ...address,
       addressCountry: 'US',
     },
-    knowsAbout: [
-      {
-        '@type': 'DefinedTerm',
-        name: 'Theory of Constraints (TOC)',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/Theory_of_constraints',
-          'https://www.tocico.org/',
-          'https://www.wikidata.org/wiki/Q27857',
-        ],
-      },
-      {
-        '@type': 'DefinedTerm',
-        name: 'TOC Thinking Processes',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/Thinking_processes_(theory_of_constraints)',
-          'https://www.tocico.org/page/TP_Committee',
-        ],
-      },
-      {
-        '@type': 'DefinedTerm',
-        name: 'IEC 62304 - Medical Device Software',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/IEC_62304',
-          'https://www.iso.org/standard/38421.html',
-        ],
-      },
-      {
-        '@type': 'DefinedTerm',
-        name: 'IEC 60601 - Medical Electrical Equipment',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/IEC_60601',
-          'https://www.iso.org/standard/65529.html',
-        ],
-      },
-      {
-        '@type': 'DefinedTerm',
-        name: 'Throughput Accounting',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/Throughput_accounting',
-          'https://www.wikidata.org/wiki/Q1056501',
-        ],
-      },
-      {
-        '@type': 'DefinedTerm',
-        name: 'Medical Ultrasound',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/Medical_ultrasound',
-          'https://www.wikidata.org/wiki/Q171442',
-        ],
-      },
-      {
-        '@type': 'DefinedTerm',
-        name: 'Defibrillation',
-        sameAs: [
-          'https://en.wikipedia.org/wiki/Defibrillation',
-          'https://www.wikidata.org/wiki/Q380299',
-        ],
-      },
-    ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'TOC Jonah (Thinking Processes Implementer)',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'TOCICO',
-          url: 'https://www.tocico.org/',
-        },
-        about: {
-          '@type': 'DefinedTerm',
-          name: 'TOC Thinking Processes',
-          url: 'https://www.tocico.org/page/Jonah',
-        },
-      },
-    ],
-    alumniOf: [
-      {
-        '@type': 'CollegeOrUniversity',
-        name: 'Washington State University',
-        url: 'https://wsu.edu/',
-      },
-    ],
+    knowsAbout: founderKnowsAbout,
+    hasCredential: founderCredentials,
+    alumniOf: founderAlumni,
     url: `${siteConfig.siteUrl}/about`,
     sameAs: ['https://www.linkedin.com/in/johnsambrook'],
   };
