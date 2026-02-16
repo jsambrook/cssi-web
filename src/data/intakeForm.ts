@@ -123,7 +123,7 @@ export const intakeFormConfig: IntakeFormConfig = {
   submitButtonText: 'Get My Insights',
   successMessage: 'Thanks! Check your inbox for personalized insights.',
   formspree: {
-    endpoint: 'https://formspree.io/f/xwpkdjkl',
+    endpoint: 'https://formspree.io/f/mdalzzrn',
     fieldNames: {
       challenge: 'Primary Challenge',
       situation: 'Situation',
