@@ -3,10 +3,9 @@ title: 'The Three-Way Email Paradox: Why Warm Introductions Beat Your Entire Lin
 description: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert.'
 date: 2026-02-16
 author: 'John Sambrook'
-tags: ['networking', 'sales', 'small-business', 'practical-tips']
+tags: ['Networking', 'Sales', 'Small Business', 'Practical Tips']
 metaTitle: 'Three-Way Email Intros Beat Cold Outreach'
 metaDescription: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert.'
-draft: false
 ---
 
 Let's say Jim is a consultant in Bellevue. He has 2,400 LinkedIn connections and can't figure out why his phone isn't ringing. He's been posting content, commenting on other people's posts, sending connection requests to everyone he meets at networking events. He's doing everything the "build your personal brand" crowd tells you to do. And it isn't working.
