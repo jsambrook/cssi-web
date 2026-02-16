@@ -1,7 +1,7 @@
 ---
-title: 'Doing my taxes with Claude Code and Codex'
+title: 'Doing My Taxes with Claude Code and Codex'
 description: "A small business owner's account of automating tax preparation with AI coding agents, and what it suggests about the near future of knowledge work."
-metaTitle: 'Doing my taxes with Claude Code and Codex'
+metaTitle: 'Doing My Taxes with Claude Code and Codex'
 metaDescription: "A small business owner's account of automating tax preparation with AI coding agents, and what it suggests about the near future of knowledge work."
 date: 2026-02-15
 author: 'John Sambrook'

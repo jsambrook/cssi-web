@@ -1,5 +1,5 @@
 ---
-title: "The Physics of Patient Flow: Why 'Discharge Planning' is a Mathematical Impossibility"
+title: "The Physics of Patient Flow: Why 'Discharge Planning' Is a Mathematical Impossibility"
 description: 'Trying to plan a complex discharge at the moment of exit violates the basic physics of flow. Here is why the process must move upstream.'
 metaTitle: "The Physics of Patient Flow: Why 'Discharge Planning' Fails"
 metaDescription: 'Trying to plan a complex discharge at the moment of exit violates the basic physics of flow. Here is why the process must move upstream.'

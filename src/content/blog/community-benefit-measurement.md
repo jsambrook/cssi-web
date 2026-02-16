@@ -1,5 +1,5 @@
 ---
-title: 'Community benefit beyond compliance'
+title: 'Community Benefit Beyond Compliance'
 description: 'Moving from checkbox community benefit reporting to genuine strategic alignment with community health needs.'
 date: 2025-05-07
 author: 'John Sambrook'

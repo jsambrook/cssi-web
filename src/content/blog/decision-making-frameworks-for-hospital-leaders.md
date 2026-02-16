@@ -1,5 +1,5 @@
 ---
-title: 'Decision-making frameworks for hospital leaders'
+title: 'Decision-Making Frameworks for Hospital Leaders'
 description: 'Why conventional decision frameworks fail in community hospitals, and what actually works when the stakes are high and the data is messy.'
 date: 2025-09-14
 author: 'John Sambrook'

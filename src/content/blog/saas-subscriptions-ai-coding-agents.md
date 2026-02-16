@@ -1,7 +1,7 @@
 ---
-title: 'Cancel your SaaS, keep your data: how AI coding agents change the economics'
+title: 'Cancel Your SaaS, Keep Your Data: How AI Coding Agents Change the Economics'
 description: 'When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically.'
-metaTitle: 'Cancel SaaS and keep your data with AI agents'
+metaTitle: 'Cancel SaaS and Keep Your Data with AI Agents'
 metaDescription: 'When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically.'
 date: 2026-02-12
 author: 'John Sambrook'

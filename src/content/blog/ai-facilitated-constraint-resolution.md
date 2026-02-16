@@ -1,7 +1,7 @@
 ---
-title: 'AI-facilitated constraint resolution for healthcare systems'
+title: 'AI-Facilitated Constraint Resolution for Healthcare Systems'
 description: 'How AI can dissolve complex multi-stakeholder conflicts by surfacing hidden assumptions, not by replacing human judgment.'
-metaTitle: 'AI-facilitated constraint resolution for healthcare systems'
+metaTitle: 'AI-Facilitated Constraint Resolution for Healthcare Systems'
 metaDescription: 'How AI can dissolve complex multi-stakeholder conflicts by surfacing hidden assumptions, not by replacing human judgment.'
 date: 2026-02-09
 author: 'John Sambrook'

@@ -1,7 +1,7 @@
 ---
-title: 'Why burnout persists'
+title: 'Why Burnout Persists'
 description: 'Healthcare protects staff from radiation but expects unlimited psychological trauma absorption. This four-part series maps the structural conflict behind provider burnout using Theory of Constraints and proposes systemic solutions beyond resilience training.'
-metaTitle: 'Why burnout persists'
+metaTitle: 'Why Burnout Persists'
 metaDescription: 'Healthcare rigorously controls radiation exposure but ignores psychological trauma load. This series maps the structural conflict driving burnout.'
 date: 2025-09-14
 author: 'John Sambrook'

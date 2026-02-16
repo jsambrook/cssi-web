@@ -1,7 +1,7 @@
 ---
-title: "The 'Perfect' Product that Killed the Company"
+title: "The 'Perfect' Product That Killed the Company"
 description: "Why 'Scope Creep' is usually a symptom of a deeper strategic failure—in software, in hardware, and in healthcare."
-metaTitle: "The 'Perfect' Product that Killed the Company: A Warning for R&D"
+metaTitle: "The 'Perfect' Product That Killed the Company: A Warning for R&D"
 metaDescription: "When organizations try to optimize for everything, they optimize for nothing. A systems architect's view on why great teams fail."
 date: 2026-02-16
 author: 'John Sambrook'

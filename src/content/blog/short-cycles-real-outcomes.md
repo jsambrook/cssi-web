@@ -1,7 +1,7 @@
 ---
-title: 'Short cycles, real outcomes'
+title: 'Short Cycles, Real Outcomes'
 description: 'Why small, measurable releases outperform big-bang delivery.'
-metaTitle: 'Short cycles, real outcomes'
+metaTitle: 'Short Cycles, Real Outcomes'
 metaDescription: 'Why small, measurable releases outperform big-bang delivery.'
 date: 2025-12-20
 author: 'John Sambrook'

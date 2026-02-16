@@ -1,7 +1,7 @@
 ---
-title: 'Stop blaming people'
+title: 'Stop Blaming People'
 description: 'Why blame cultures destroy healthcare organizations and how to build accountability instead.'
-metaTitle: 'Stop blaming people'
+metaTitle: 'Stop Blaming People'
 metaDescription: 'Why blame cultures destroy healthcare organizations and how to build accountability instead.'
 date: 2025-08-21
 author: 'John Sambrook'

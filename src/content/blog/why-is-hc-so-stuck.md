@@ -1,7 +1,7 @@
 ---
-title: 'Why healthcare is so stuck'
+title: 'Why Healthcare Is So Stuck'
 description: 'Six chronic healthcare frustrations — long wait times, expensive insurance, claim denials, hiring difficulties, tax levies, and burnout — traced to a single root cause using Theory of Constraints analysis.'
-metaTitle: 'Why healthcare is so stuck'
+metaTitle: 'Why Healthcare Is So Stuck'
 metaDescription: 'Six chronic healthcare frustrations can be traced to one systemic conflict, using a Theory of Constraints lens to map root cause and leverage points.'
 date: 2025-09-17
 author: 'John Sambrook'

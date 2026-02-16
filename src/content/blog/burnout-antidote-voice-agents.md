@@ -1,7 +1,7 @@
 ---
-title: "The burnout antidote: voice agents transform healthcare's most painful conversations"
+title: "The Burnout Antidote: Voice Agents Transform Healthcare's Most Painful Conversations"
 description: "Discover how voice agents transform healthcare's most painful conversations by removing emotional friction from insurance claims, patient billing, and administrative battles that burn out staff and traumatize patients."
-metaTitle: 'Voice agents as a burnout antidote in healthcare'
+metaTitle: 'Voice Agents as a Burnout Antidote in Healthcare'
 metaDescription: 'Voice agents reduce friction in claims, billing, and admin calls, helping healthcare teams protect staff well-being while improving patient interactions.'
 date: 2025-08-17
 author: 'John Sambrook'
