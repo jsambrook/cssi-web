@@ -1,6 +1,5 @@
 import type {
   HeroBullet,
-  FeatureItem,
   CTAContent,
   ServiceCardItem,
   Industry,
@@ -47,28 +46,6 @@ export const featuresSection = {
   subheading:
     'We focus on decision-making processes and organizational capability\u2014not comprehensive reports that gather dust.',
 };
-
-export const features: FeatureItem[] = [
-  {
-    title: 'Frame the Problem',
-    description:
-      'Co-author the real problem, decision boundaries, and stakeholders before jumping to solutions.',
-  },
-  {
-    title: 'Build Shared Facts',
-    description:
-      'Establish a minimum dataset everyone trusts. Joint fact-finding beats premature solutions.',
-  },
-  {
-    title: 'Design Decisions',
-    description:
-      'Map options, trade-offs, and owners. Make the implicit explicit with clear accountability.',
-  },
-  {
-    title: 'Ship & Learn',
-    description: 'Run short cycles, measure outcomes, adjust course. Fast feedback prevents drift.',
-  },
-];
 
 export const defaultIndustry: Industry = 'healthcare';
 

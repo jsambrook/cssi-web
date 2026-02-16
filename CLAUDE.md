@@ -64,4 +64,4 @@ Configured in `tsconfig.json`:
 
 ## Environment
 
-Set `SITE_URL` in `.env` before deploying (used for sitemap generation). See `.env.example`.
+The site URL is hardcoded in `src/data/site.ts` as the single source of truth.
