@@ -123,13 +123,14 @@ export const intakeFormConfig: IntakeFormConfig = {
   submitButtonText: "Get My Insights",
   successMessage: "Thanks! Check your inbox for personalized insights.",
   googleForms: {
-    actionUrl: "",
+    actionUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLScv0GYTkiB2wffTYC92j19beeTOh0WwavffN9emIxM2Qs7HZg/formResponse",
     fieldMappings: {
-      challenge: "entry.1000000001",
-      situation: "entry.1000000002",
-      timeline: "entry.1000000003",
-      contact_name: "entry.1000000004",
-      contact_email: "entry.1000000005",
+      challenge: "entry.30079526",
+      situation: "entry.1531028930",
+      timeline: "entry.920652470",
+      contact_name: "entry.150014715",
+      contact_email: "entry.31659718",
     },
   },
 };
