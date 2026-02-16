@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
 import IndustryToggle from '../components/IndustryToggle.astro';
+import ResultsSection from '../components/ResultsSection.astro';
 import CTASection from '../components/CTASection.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../data/pageDefaults';
 import {
@@ -51,6 +52,8 @@ const homeWebPage = buildWebPageSchema({
     intakeForm={intakeFormConfig}
     ambitionCards={ambitionCards}
   />
+
+  <ResultsSection />
 
   <Section
     background="muted"

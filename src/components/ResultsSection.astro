@@ -1,0 +1,157 @@
+---
+/*
+ * ResultsSection.astro
+ *
+ * "Results & Impact" showcase linking to standalone insight pages.
+ * Features the Cabletron/IPO case study and two insight cards (PACP, CBA conflicts).
+ */
+---
+
+<section class="py-16 lg:py-24 bg-background relative overflow-hidden" id="impact">
+  <div
+    class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl -z-10"
+  >
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs uppercase tracking-wider font-semibold mb-4"
+      >
+        Proven Impact & Proprietary Frameworks
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+        We fix the systems<br class="hidden md:block" />
+        that others just "manage."
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        From saving IPOs to re-architecting hospital labor relations, we apply the <strong
+          >Theory of Constraints</strong
+        > to break the bottlenecks that money and staffing can't solve.
+      </p>
+    </div>
+
+    <div
+      class="rounded-[var(--radius)] border-2 border-primary/20 bg-card shadow-lg overflow-hidden mb-12"
+    >
+      <div class="grid lg:grid-cols-2">
+        <div class="p-8 lg:p-12 flex flex-col justify-center">
+          <div class="flex items-center gap-2 mb-4">
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-primary border border-primary/30 px-2 py-1 rounded"
+              >Proven Execution</span
+            >
+          </div>
+          <h3 class="text-2xl font-bold text-foreground mb-4">The $4.8M IPO Standoff</h3>
+          <p class="text-muted-foreground mb-6">
+            <strong>The Crisis:</strong> A key client (Cabletron) demanded a software update that didn't
+            exist. Refusal meant a $4.8M return that would derail our IPO. Compliance meant an engineering
+            mutiny.
+          </p>
+          <p class="text-muted-foreground mb-6">
+            <strong>The Breakthrough:</strong> Using the <em>Evaporating Cloud</em>, we challenged
+            the core assumption that the new software required the old, bloated framework. We
+            stripped the framework and shipped the solution in 36 hours.
+          </p>
+          <div class="flex gap-6 border-t border-border/50 pt-6">
+            <div>
+              <div class="text-2xl font-bold text-primary">0%</div>
+              <div class="text-xs text-muted-foreground uppercase">Staff Turnover</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-primary">100%</div>
+              <div class="text-xs text-muted-foreground uppercase">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-muted/30 p-8 lg:p-12 flex items-center justify-center border-t lg:border-t-0 lg:border-l border-border relative"
+        >
+          <div
+            class="relative w-full max-w-sm p-6 bg-background rounded-xl border border-border shadow-sm"
+          >
+            <div
+              class="absolute -top-3 left-4 bg-background px-2 text-xs font-mono text-muted-foreground"
+            >
+              FIG 1.0: THE CONFLICT
+            </div>
+            <div class="space-y-4 text-center">
+              <div
+                class="p-3 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded text-sm font-medium"
+              >
+                Assumption: "Must use Masterworks"
+              </div>
+              <div class="text-2xl text-muted-foreground">&darr;</div>
+              <div
+                class="p-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded text-sm font-medium border border-green-200"
+              >
+                Reality: "Masterworks is a pig."<br /><span class="text-xs opacity-75"
+                  >Strip it out. Run standalone.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div
+        class="group relative rounded-[var(--radius)] border border-border bg-card p-8 transition-all hover:shadow-xl hover:border-primary/50"
+      >
+        <div
+          class="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 flex items-center justify-center mb-6 text-2xl"
+        >
+          &#x1F3E5;
+        </div>
+        <h4 class="text-xl font-bold mb-3">The Post-Acute Care Plan (PACP)</h4>
+        <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+          <strong>The Problem:</strong> 25% of hospital days are avoidable, costing billions. Hospitals
+          try to fix this with "better discharge planning," but they are solving the wrong problem.
+        </p>
+        <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+          <strong>Our Solution:</strong> We treat discharge delays as an <em>input quality</em> problem.
+          The PACP Protocol captures legal, financial, and preference data <em>before</em> admission,
+          transforming discharge from crisis management to coordinated execution.
+        </p>
+        <a
+          href="/insights/pacp"
+          class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
+        >
+          Read the Concept Paper &rarr;
+        </a>
+      </div>
+
+      <div
+        class="group relative rounded-[var(--radius)] border border-border bg-card p-8 transition-all hover:shadow-xl hover:border-primary/50"
+      >
+        <div
+          class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center mb-6 text-2xl"
+        >
+          &#x2696;&#xFE0F;
+        </div>
+        <h4 class="text-xl font-bold mb-3">Structural Labor Conflict Analysis</h4>
+        <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+          <strong>The Problem:</strong> Wage hikes aren't fixing nurse burnout. We analyzed 10 WA State
+          CBAs and identified 4 "Universal Conflicts" (like Break Rights vs. Patient Continuity) that
+          place nurses in impossible situations.
+        </p>
+        <p class="text-sm text-muted-foreground leading-relaxed mb-6">
+          <strong>Our Solution:</strong> We help health systems differentiate not by paying more, but
+          by resolving these structural contradictions, offering a workplace where fundamental dilemmas
+          are evaporated, not just monetized.
+        </p>
+        <a
+          href="/insights/nursing-conflict"
+          class="inline-flex items-center text-sm font-semibold text-primary hover:underline"
+        >
+          View the Analysis &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
