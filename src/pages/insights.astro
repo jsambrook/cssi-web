@@ -44,7 +44,9 @@ const posts = [...blogPosts, ...manualPosts].sort(
                 <a href={`/insights/${post.id}`} class="shrink-0 hidden sm:block">
                   <img
                     src={thumb}
-                    alt=""
+                    alt={post.data.title}
+                    width="80"
+                    height="80"
                     loading="lazy"
                     class="w-20 h-20 rounded-lg object-contain"
                   />

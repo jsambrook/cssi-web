@@ -62,26 +62,28 @@ const {
       </div>
 
       <!-- Navigation Columns -->
-      {
-        columns.map((column, colIndex) => (
-          <div key={`col-${colIndex}`} class="space-y-4">
-            <h4 class="font-medium text-white/75">{column.title}</h4>
-            <ul class="space-y-3 text-sm">
-              {column.links.map((link, linkIndex) => (
-                <li key={`link-${colIndex}-${linkIndex}`}>
-                  {link.href ? (
-                    <a href={link.href} class="text-white hover:text-primary transition-colors">
-                      {link.label}
-                    </a>
-                  ) : (
-                    <span class="text-white">{link.label}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      <nav aria-label="Footer navigation">
+        {
+          columns.map((column, colIndex) => (
+            <div class="space-y-4">
+              <h4 class="font-medium text-white/75">{column.title}</h4>
+              <ul class="space-y-3 text-sm">
+                {column.links.map((link, linkIndex) => (
+                  <li>
+                    {link.href ? (
+                      <a href={link.href} class="text-white hover:text-primary transition-colors">
+                        {link.label}
+                      </a>
+                    ) : (
+                      <span class="text-white">{link.label}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </nav>
 
       <!-- Contact Info -->
       <div class="space-y-4">
@@ -93,7 +95,7 @@ const {
                 <span>📞</span>
                 <div>
                   {contact.phones.map((phone, index) => (
-                    <div key={`phone-${index}`}>{phone}</div>
+                    <div>{phone}</div>
                   ))}
                 </div>
               </li>
@@ -131,11 +133,7 @@ const {
         <div class="flex gap-8 text-sm">
           {
             legalLinks.map((link, index) => (
-              <a
-                key={`legal-${index}`}
-                href={link.href}
-                class="text-white/75 hover:text-white transition-colors"
-              >
+              <a href={link.href} class="text-white/75 hover:text-white transition-colors">
                 {link.label}
               </a>
             ))

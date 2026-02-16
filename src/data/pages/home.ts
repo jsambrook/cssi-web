@@ -1,10 +1,4 @@
-import type {
-  HeroBullet,
-  CTAContent,
-  ServiceCardItem,
-  Industry,
-  AmbitionCard,
-} from '../types';
+import type { HeroBullet, CTAContent, ServiceCardItem, Industry, AmbitionCard } from '../types';
 
 export const hero = {
   headline: 'Break the Constraint. Scale the Flow.',

@@ -51,7 +51,6 @@ function isActive(href: string): boolean {
           {
             navItems.map((item, index) => (
               <a
-                key={`nav-${index}`}
                 href={item.href}
                 class:list={[
                   'font-medium transition-colors hover:text-primary',
@@ -153,7 +152,6 @@ function isActive(href: string): boolean {
       {
         navItems.map((item, index) => (
           <a
-            key={`mobile-nav-${index}`}
             href={item.href}
             class:list={[
               'block py-2 font-medium hover:text-primary',
