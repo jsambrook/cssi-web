@@ -21,17 +21,18 @@ Edit the site config to set your brand:
 
 ```ts
 export const siteConfig = {
-  name: "Your Company Name",
-  tagline: "Your company tagline",
-  logoSrc: "/images/logo.png",
-  siteUrl: "https://your-domain.com",
-  defaultDescription: "Your Company - Your tagline",
-  defaultOgImage: "/images/og-default.png",
-  headerCta: { text: "Get Started", href: "/contact" },
-  footerContactHeading: "Contact Us",
+  name: 'Your Company Name',
+  tagline: 'Your company tagline',
+  logoSrc: '/images/logo.png',
+  siteUrl: 'https://your-domain.com',
+  defaultDescription: 'Your Company - Your tagline',
+  defaultOgImage: '/images/og-default.png',
+  headerCta: { text: 'Get Started', href: '/contact' },
+  footerContactHeading: 'Contact Us',
   font: {
-    family: "Instrument Sans",
-    googleFontsUrl: "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap",
+    family: 'Instrument Sans',
+    googleFontsUrl:
+      'https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
   },
 };
 ```
@@ -70,17 +71,17 @@ Replace these files with your own:
 
 Each page has a corresponding data file:
 
-| Page | Data file |
-|------|-----------|
-| Home | `src/data/pages/home.ts` |
-| About | `src/data/pages/about.ts` |
-| Approach | `src/data/pages/approach.ts` |
+| Page       | Data file                      |
+| ---------- | ------------------------------ |
+| Home       | `src/data/pages/home.ts`       |
+| About      | `src/data/pages/about.ts`      |
+| Approach   | `src/data/pages/approach.ts`   |
 | Consulting | `src/data/pages/consulting.ts` |
-| Advisory | `src/data/pages/advisory.ts` |
-| Insights | `src/data/pages/insights.ts` |
-| Contact | `src/data/pages/contact.ts` |
-| Privacy | `src/data/pages/privacy.ts` |
-| Terms | `src/data/pages/terms.ts` |
+| Advisory   | `src/data/pages/advisory.ts`   |
+| Insights   | `src/data/pages/insights.ts`   |
+| Contact    | `src/data/pages/contact.ts`    |
+| Privacy    | `src/data/pages/privacy.ts`    |
+| Terms      | `src/data/pages/terms.ts`      |
 
 Edit the data files to change page content. The `.astro` page files are layout templates and generally don't need editing.
 
@@ -90,11 +91,11 @@ Add markdown files with this frontmatter format:
 
 ```md
 ---
-title: "Your Post Title"
-description: "A short description for the listing page."
+title: 'Your Post Title'
+description: 'A short description for the listing page.'
 date: 2026-01-15
-author: "Your Name"
-tags: ["tag1", "tag2"]
+author: 'Your Name'
+tags: ['tag1', 'tag2']
 ---
 
 Post content in markdown...

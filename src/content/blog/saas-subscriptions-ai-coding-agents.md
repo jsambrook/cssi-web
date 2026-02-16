@@ -1,11 +1,11 @@
 ---
-title: "Cancel your SaaS, keep your data: how AI coding agents change the economics"
-description: "When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically."
-metaTitle: "Cancel SaaS and keep your data with AI agents"
-metaDescription: "When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically."
+title: 'Cancel your SaaS, keep your data: how AI coding agents change the economics'
+description: 'When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically.'
+metaTitle: 'Cancel SaaS and keep your data with AI agents'
+metaDescription: 'When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically.'
 date: 2026-02-12
-author: "John Sambrook"
-tags: ["AI", "Practical Tips", "Cost Reduction"]
+author: 'John Sambrook'
+tags: ['AI', 'Practical Tips', 'Cost Reduction']
 ---
 
 My business costs are going down. My workload is going down. And my capabilities are going up. All at the same time.
@@ -18,7 +18,7 @@ I canceled ProtonMail today. Not because it's a bad service -- it's excellent, a
 
 Most SaaS tools today offer some kind of data export. That's good. What's less good is what you get: a zip file full of structured data in formats that are technically open but practically opaque. MBOX files. JSON dumps. CSV files with dozens of columns. EML archives.
 
-For years, the implicit bargain was: *you can leave anytime, and here's your data to prove it.* But "here's your data" often meant "here's a pile of bits you'll never actually use." The export existed to check a box, not to give you real agency.
+For years, the implicit bargain was: _you can leave anytime, and here's your data to prove it._ But "here's your data" often meant "here's a pile of bits you'll never actually use." The export existed to check a box, not to give you real agency.
 
 I used to be able to get by with `grep` and `strings` and a few shell scripts. Those days are over. The volume and structure of exported data from modern tools is beyond what command-line text utilities can reasonably handle.
 
@@ -49,7 +49,7 @@ Step 3 used to be the hard part. It used to mean days or weeks of work, reading 
 
 I'm not going to pretend every SaaS tool can be replaced this way. Some provide ongoing value that's hard to replicate: collaboration features, real-time sync across teams, integrations with other services you depend on. Those are worth paying for.
 
-But a surprising number of subscriptions persist simply because leaving feels too costly. Not emotionally costly. *Practically* costly. The switching cost is high because your data is trapped in a format you can't easily use elsewhere.
+But a surprising number of subscriptions persist simply because leaving feels too costly. Not emotionally costly. _Practically_ costly. The switching cost is high because your data is trapped in a format you can't easily use elsewhere.
 
 AI coding agents compress that switching cost dramatically. When you can build a custom data migration tool in fifteen minutes, you start asking a different question. Not "can I afford to leave?" but "can I justify staying?"
 

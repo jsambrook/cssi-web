@@ -1,12 +1,12 @@
 ---
-import { getCollection } from "astro:content";
-import PageLayout from "../../../layouts/PageLayout.astro";
-import Section from "../../../components/Section.astro";
-import { slugifyTag, tagHref } from "../../../utils/tags";
-import { toPacificIso, formatDate } from "../../../utils/dates";
+import { getCollection } from 'astro:content';
+import PageLayout from '../../../layouts/PageLayout.astro';
+import Section from '../../../components/Section.astro';
+import { slugifyTag, tagHref } from '../../../utils/tags';
+import { toPacificIso, formatDate } from '../../../utils/dates';
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
 
   // Build a map of slugified-tag → { display name, posts[] }
   const tagMap = new Map<string, { display: string; posts: typeof posts }>();
@@ -36,53 +36,68 @@ export async function getStaticPaths() {
 const { tagName, posts } = Astro.props;
 ---
 
-<PageLayout pageTitle={`Posts tagged "${tagName}"`} description={`All insights tagged with "${tagName}" from Common Sense Systems.`}>
-
+<PageLayout
+  pageTitle={`Posts tagged "${tagName}"`}
+  description={`All insights tagged with "${tagName}" from Common Sense Systems.`}
+>
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">
       <p class="text-xs uppercase tracking-wider text-accent">Tag</p>
       <h1 class="text-4xl sm:text-5xl">{tagName}</h1>
-      <p class="text-muted-foreground">{posts.length} post{posts.length !== 1 && "s"}</p>
+      <p class="text-muted-foreground">{posts.length} post{posts.length !== 1 && 's'}</p>
     </div>
   </Section>
 
   <Section>
     <div class="max-w-3xl mx-auto space-y-6">
-      {posts.map((post, i) => {
-        const thumb = `/images/blog/${post.id}.png`;
-        return (
-          <article class:list={["group", i < posts.length - 1 && "border-b border-border pb-6"]}>
-            <div class="flex gap-4">
-              <a href={`/insights/${post.id}`} class="shrink-0 hidden sm:block">
-                <img src={thumb} alt="" loading="lazy" class="w-20 h-20 rounded-lg object-cover" />
-              </a>
-              <div class="space-y-1">
-                <a href={`/insights/${post.id}`} class="block">
-                  <h2 class="text-xl group-hover:text-primary transition-colors">{post.data.title}</h2>
+      {
+        posts.map((post, i) => {
+          const thumb = `/images/blog/${post.id}.png`;
+          return (
+            <article class:list={['group', i < posts.length - 1 && 'border-b border-border pb-6']}>
+              <div class="flex gap-4">
+                <a href={`/insights/${post.id}`} class="shrink-0 hidden sm:block">
+                  <img
+                    src={thumb}
+                    alt=""
+                    loading="lazy"
+                    class="w-20 h-20 rounded-lg object-cover"
+                  />
                 </a>
-                <p class="text-sm text-muted-foreground">{post.data.description}</p>
-                <div class="flex items-center gap-3 text-xs text-muted-foreground">
-                  <time datetime={toPacificIso(post.data.date)}>
-                    {formatDate(post.data.date)}
-                  </time>
-                  {post.data.tags.length > 0 && (
-                    <span class="flex gap-1.5">
-                      {post.data.tags.map((t) => (
-                        <a href={tagHref(t)} class="text-primary/70 hover:text-primary transition-colors">#{slugifyTag(t)}</a>
-                      ))}
-                    </span>
-                  )}
+                <div class="space-y-1">
+                  <a href={`/insights/${post.id}`} class="block">
+                    <h2 class="text-xl group-hover:text-primary transition-colors">
+                      {post.data.title}
+                    </h2>
+                  </a>
+                  <p class="text-sm text-muted-foreground">{post.data.description}</p>
+                  <div class="flex items-center gap-3 text-xs text-muted-foreground">
+                    <time datetime={toPacificIso(post.data.date)}>
+                      {formatDate(post.data.date)}
+                    </time>
+                    {post.data.tags.length > 0 && (
+                      <span class="flex gap-1.5">
+                        {post.data.tags.map((t) => (
+                          <a
+                            href={tagHref(t)}
+                            class="text-primary/70 hover:text-primary transition-colors"
+                          >
+                            #{slugifyTag(t)}
+                          </a>
+                        ))}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-        );
-      })}
+            </article>
+          );
+        })
+      }
     </div>
   </Section>
 
   <div class="text-center py-8">
     <a href="/insights" class="text-sm text-primary hover:text-primary/80">&larr; All Insights</a>
   </div>
-
 </PageLayout>

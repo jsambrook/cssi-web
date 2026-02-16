@@ -49,6 +49,7 @@ All theming uses CSS custom properties in `src/assets/css/tokens.css`. Primary b
 ## Path Aliases
 
 Configured in `tsconfig.json`:
+
 - `@/*` → `src/*`
 - `@components/*` → `src/components/*`
 - `@layouts/*` → `src/layouts/*`

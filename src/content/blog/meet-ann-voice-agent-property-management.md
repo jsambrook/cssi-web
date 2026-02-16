@@ -1,11 +1,11 @@
 ---
-title: "Meet Ann: the voice agent transforming property management"
-description: "Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service quality and tenant satisfaction."
-metaTitle: "Meet Ann: the voice agent transforming property management"
-metaDescription: "Meet Ann, a voice agent that buffers tenant hostility, supports 24/7 service, and helps property managers improve response quality and satisfaction."
+title: 'Meet Ann: the voice agent transforming property management'
+description: 'Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service quality and tenant satisfaction.'
+metaTitle: 'Meet Ann: the voice agent transforming property management'
+metaDescription: 'Meet Ann, a voice agent that buffers tenant hostility, supports 24/7 service, and helps property managers improve response quality and satisfaction.'
 date: 2025-08-15
-author: "John Sambrook"
-tags: ["Voice Agents", "Property Management"]
+author: 'John Sambrook'
+tags: ['Voice Agents', 'Property Management']
 ---
 
 Discover how Ann, an intelligent voice agent, revolutionized property management by shielding managers from tenant hostility while improving service quality and tenant satisfaction.
@@ -49,7 +49,7 @@ Ann maintains her composure no matter how unreasonable or aggressive a tenant be
 
 The change has been remarkable. Susan reports a dramatic improvement in her quality of life:
 
-> *"Since installing Ann, my stress has dropped significantly and my mood has improved. Ann is patient and empathetic, even when tenants are not. I can focus on actually solving problems instead of recovering from emotional battles."*
+> _"Since installing Ann, my stress has dropped significantly and my mood has improved. Ann is patient and empathetic, even when tenants are not. I can focus on actually solving problems instead of recovering from emotional battles."_
 >
 > **--- Susan, Property Manager**
 

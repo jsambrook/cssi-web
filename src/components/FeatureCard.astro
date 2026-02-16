@@ -37,20 +37,35 @@ const Tag = href ? 'a' : 'div';
 <Tag
   href={href}
   class:list={[
-    "bg-card text-card-foreground flex flex-col gap-6 rounded-[var(--radius)]",
-    "border-2 border-border shadow-sm relative overflow-hidden",
-    "hover:shadow-xl transition-all duration-300 group",
-    href && "cursor-pointer"
+    'bg-card text-card-foreground flex flex-col gap-6 rounded-[var(--radius)]',
+    'border-2 border-border shadow-sm relative overflow-hidden',
+    'hover:shadow-xl transition-all duration-300 group',
+    href && 'cursor-pointer',
   ]}
 >
-  <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
+  </div>
 
   <div class="p-6 space-y-4 relative">
     <!-- Icon -->
-    <div class:list={["inline-flex items-center justify-center w-14 h-14 rounded-xl", colorClasses[color]]}>
+    <div
+      class:list={[
+        'inline-flex items-center justify-center w-14 h-14 rounded-xl',
+        colorClasses[color],
+      ]}
+    >
       <slot name="icon">
         <!-- Default icon placeholder -->
-        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <svg
+          class="h-7 w-7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
           <circle cx="12" cy="12" r="10"></circle>
           <circle cx="12" cy="12" r="6"></circle>
           <circle cx="12" cy="12" r="2"></circle>

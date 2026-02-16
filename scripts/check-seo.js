@@ -98,10 +98,7 @@ function getCanonicalHref(root) {
     if (node.tagName !== 'link') {
       return false;
     }
-    const rel = getAttr(node, 'rel')
-      .toLowerCase()
-      .split(/\s+/)
-      .filter(Boolean);
+    const rel = getAttr(node, 'rel').toLowerCase().split(/\s+/).filter(Boolean);
     return rel.includes('canonical');
   });
   return canonical ? getAttr(canonical, 'href').trim() : '';
@@ -141,8 +138,7 @@ function parseJsonLdTypes(documentRoot) {
   const scripts = allElements(
     documentRoot,
     (node) =>
-      node.tagName === 'script' &&
-      getAttr(node, 'type').toLowerCase() === 'application/ld+json'
+      node.tagName === 'script' && getAttr(node, 'type').toLowerCase() === 'application/ld+json'
   );
 
   const types = [];
@@ -172,31 +168,16 @@ for (const file of htmlFiles) {
     ['og:type', () => getMetaContent(documentRoot, { property: 'og:type' })],
     ['og:url', () => getMetaContent(documentRoot, { property: 'og:url' })],
     ['og:title', () => getMetaContent(documentRoot, { property: 'og:title' })],
-    [
-      'og:description',
-      () => getMetaContent(documentRoot, { property: 'og:description' }),
-    ],
+    ['og:description', () => getMetaContent(documentRoot, { property: 'og:description' })],
     ['og:image', () => getMetaContent(documentRoot, { property: 'og:image' })],
-    [
-      'og:image:alt',
-      () => getMetaContent(documentRoot, { property: 'og:image:alt' }),
-    ],
+    ['og:image:alt', () => getMetaContent(documentRoot, { property: 'og:image:alt' })],
     ['twitter:card', () => getMetaContent(documentRoot, { name: 'twitter:card' })],
     ['twitter:site', () => getMetaContent(documentRoot, { name: 'twitter:site' })],
-    [
-      'twitter:creator',
-      () => getMetaContent(documentRoot, { name: 'twitter:creator' }),
-    ],
+    ['twitter:creator', () => getMetaContent(documentRoot, { name: 'twitter:creator' })],
     ['twitter:title', () => getMetaContent(documentRoot, { name: 'twitter:title' })],
-    [
-      'twitter:description',
-      () => getMetaContent(documentRoot, { name: 'twitter:description' }),
-    ],
+    ['twitter:description', () => getMetaContent(documentRoot, { name: 'twitter:description' })],
     ['twitter:image', () => getMetaContent(documentRoot, { name: 'twitter:image' })],
-    [
-      'twitter:image:alt',
-      () => getMetaContent(documentRoot, { name: 'twitter:image:alt' }),
-    ],
+    ['twitter:image:alt', () => getMetaContent(documentRoot, { name: 'twitter:image:alt' })],
   ];
 
   const titleNode = firstElement(documentRoot, (node) => node.tagName === 'title');
@@ -229,14 +210,9 @@ for (const file of htmlFiles) {
   const isNoindex = robots.toLowerCase().includes('noindex');
   if (!isNoindex) {
     if (title.length < TITLE_MIN || title.length > TITLE_MAX) {
-      errors.push(
-        `${relPath}: title length ${title.length} outside ${TITLE_MIN}-${TITLE_MAX}`
-      );
+      errors.push(`${relPath}: title length ${title.length} outside ${TITLE_MIN}-${TITLE_MAX}`);
     }
-    if (
-      description.length < DESCRIPTION_MIN ||
-      description.length > DESCRIPTION_MAX
-    ) {
+    if (description.length < DESCRIPTION_MIN || description.length > DESCRIPTION_MAX) {
       errors.push(
         `${relPath}: description length ${description.length} outside ${DESCRIPTION_MIN}-${DESCRIPTION_MAX}`
       );
@@ -256,13 +232,11 @@ for (const file of htmlFiles) {
   const requiredArticleMeta = [
     [
       'article:published_time',
-      () =>
-        getMetaContent(documentRoot, { property: 'article:published_time' }),
+      () => getMetaContent(documentRoot, { property: 'article:published_time' }),
     ],
     [
       'article:modified_time',
-      () =>
-        getMetaContent(documentRoot, { property: 'article:modified_time' }),
+      () => getMetaContent(documentRoot, { property: 'article:modified_time' }),
     ],
     ['article:author', () => getMetaContent(documentRoot, { property: 'article:author' })],
   ];
@@ -277,10 +251,7 @@ for (const file of htmlFiles) {
   if (!jsonLdTypes.includes('Organization')) {
     errors.push(`${relPath}: missing Organization JSON-LD`);
   }
-  if (
-    !jsonLdTypes.includes('BlogPosting') &&
-    !jsonLdTypes.includes('Article')
-  ) {
+  if (!jsonLdTypes.includes('BlogPosting') && !jsonLdTypes.includes('Article')) {
     errors.push(`${relPath}: missing BlogPosting/Article JSON-LD`);
   }
   if (!jsonLdTypes.includes('BreadcrumbList')) {

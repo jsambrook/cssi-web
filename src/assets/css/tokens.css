@@ -9,10 +9,10 @@
 
 :root {
   /* ===== Typography ===== */
-  --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 
-               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-               'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  
+  --font-sans:
+    'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
   --font-size: 16px;
   --text-h1: 60px;
   --text-h2: 34px;
@@ -72,16 +72,13 @@
   --radius-sm: calc(var(--radius) - 8px);
 
   /* ===== Shadows ===== */
-  --elevation-sm: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
-                  0px 1px 2px -1px rgba(0, 0, 0, 0.1);
-  --elevation-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
-                  0px 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --elevation-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
-                  0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --elevation-sm: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --elevation-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --elevation-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
 
   /* ===== CTA Gradient ===== */
-  --cta-gradient-from: #FFF9F5;
-  --cta-gradient-to: #FFF5ED;
+  --cta-gradient-from: #fff9f5;
+  --cta-gradient-to: #fff5ed;
 
   /* ===== Feature Card Colors ===== */
   --feature-red: #dc2626;

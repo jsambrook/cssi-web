@@ -1,10 +1,10 @@
 ---
 /*
  * CTASection.astro
- * 
+ *
  * Call-to-action section with headline, description, and buttons.
  * Warm gradient background with decorative corner elements.
- * 
+ *
  * Props:
  *   headline: Main CTA headline
  *   description: Supporting text
@@ -32,20 +32,40 @@ const { headline, description, primaryCta, secondaryCta, footnote } = Astro.prop
 <section class="py-16 lg:py-20">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
-      <div class="relative overflow-hidden rounded-[var(--radius)] border-2 border-primary bg-gradient-to-br from-[var(--cta-gradient-from)] to-[var(--cta-gradient-to)] p-8 lg:p-12">
+      <div
+        class="relative overflow-hidden rounded-[var(--radius)] border-2 border-primary bg-gradient-to-br from-[var(--cta-gradient-from)] to-[var(--cta-gradient-to)] p-8 lg:p-12"
+      >
         <!-- Decorative corners -->
-        <svg class="absolute top-0 left-0 w-40 h-40 text-primary/10" fill="none" viewBox="0 0 200 200" aria-hidden="true">
-          <path d="M0 0 L200 200 M10 0 L200 190 M20 0 L200 180 M30 0 L200 170 M40 0 L200 160 M50 0 L200 150 M60 0 L200 140 M70 0 L200 130 M80 0 L200 120" opacity="0.3" stroke="currentColor" stroke-width="1"></path>
+        <svg
+          class="absolute top-0 left-0 w-40 h-40 text-primary/10"
+          fill="none"
+          viewBox="0 0 200 200"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 0 L200 200 M10 0 L200 190 M20 0 L200 180 M30 0 L200 170 M40 0 L200 160 M50 0 L200 150 M60 0 L200 140 M70 0 L200 130 M80 0 L200 120"
+            opacity="0.3"
+            stroke="currentColor"
+            stroke-width="1"></path>
         </svg>
-        <svg class="absolute bottom-0 right-0 w-40 h-40 text-primary/10" fill="none" viewBox="0 0 200 200" aria-hidden="true">
-          <path d="M200 200 L0 0 M190 200 L0 10 M180 200 L0 20 M170 200 L0 30 M160 200 L0 40 M150 200 L0 50 M140 200 L0 60 M130 200 L0 70 M120 200 L0 80" opacity="0.3" stroke="currentColor" stroke-width="1"></path>
+        <svg
+          class="absolute bottom-0 right-0 w-40 h-40 text-primary/10"
+          fill="none"
+          viewBox="0 0 200 200"
+          aria-hidden="true"
+        >
+          <path
+            d="M200 200 L0 0 M190 200 L0 10 M180 200 L0 20 M170 200 L0 30 M160 200 L0 40 M150 200 L0 50 M140 200 L0 60 M130 200 L0 70 M120 200 L0 80"
+            opacity="0.3"
+            stroke="currentColor"
+            stroke-width="1"></path>
         </svg>
-        
+
         <!-- Content -->
         <div class="relative z-10 text-center space-y-6">
           <h2 class="text-primary">{headline}</h2>
           <p class="text-muted-foreground max-w-2xl mx-auto">{description}</p>
-          
+
           <!-- Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <a
@@ -53,9 +73,18 @@ const { headline, description, primaryCta, secondaryCta, footnote } = Astro.prop
               class="inline-flex items-center justify-center whitespace-nowrap rounded-button
                      transition-all shadow-sm h-[54px] px-10 py-5
                      bg-primary hover:bg-primary/90 text-primary-foreground gap-2"
-              {...(primaryCta.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              {...primaryCta.href.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {}}
             >
-              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
                 <path d="M8 2v4"></path>
                 <path d="M16 2v4"></path>
                 <rect height="18" rx="2" width="18" x="3" y="4"></rect>
@@ -63,26 +92,33 @@ const { headline, description, primaryCta, secondaryCta, footnote } = Astro.prop
               </svg>
               {primaryCta.text}
             </a>
-            
-            {secondaryCta && (
-              <a 
-                href={secondaryCta.href}
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-button 
+
+            {
+              secondaryCta && (
+                <a
+                  href={secondaryCta.href}
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-button 
                        transition-all h-[54px] px-10 py-5 
                        border-2 border-foreground bg-background hover:bg-muted text-foreground gap-2"
-              >
-                {secondaryCta.text}
-                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </a>
-            )}
+                >
+                  {secondaryCta.text}
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              )
+            }
           </div>
-          
-          {footnote && (
-            <p class="text-muted-foreground pt-4 text-xs">{footnote}</p>
-          )}
+
+          {footnote && <p class="text-muted-foreground pt-4 text-xs">{footnote}</p>}
         </div>
       </div>
     </div>

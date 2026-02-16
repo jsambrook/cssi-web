@@ -4,8 +4,8 @@ description: "Matt Shumer is right that AI is about to change everything. But th
 metaTitle: "The biggest satisficing trap AI breaks isn't what you think"
 metaDescription: "AI's biggest disruption is not job loss. It is exposing self-imposed limits and enabling people to build capabilities they once assumed required larger teams."
 date: 2026-02-12
-author: "John Sambrook"
-tags: ["AI", "Agency", "Strategy"]
+author: 'John Sambrook'
+tags: ['AI', 'Agency', 'Strategy']
 ---
 
 Matt Shumer recently published an article called [Something big is happening in AI -- and most people will be blindsided](https://fortune.com/2026/02/11/something-big-is-happening-ai-february-2020-moment-matt-shumer/). If you haven't read it, you should. He's a startup founder and investor, and his description of what current AI models can do is accurate. When he says the ground is shifting under knowledge work, he's not exaggerating.
@@ -14,7 +14,7 @@ But his article misses something important. Not the facts -- he has those right.
 
 ## The Conversation Everyone Is Having
 
-Shumer's article, like most AI commentary right now, centers on a question: *What will AI take away?* Jobs, roles, career paths, entire industries. The tone is urgent and the evidence is real. He describes telling AI what to build, walking away for four hours, and coming back to finished work. I've had the same experience. It's not hypothetical.
+Shumer's article, like most AI commentary right now, centers on a question: _What will AI take away?_ Jobs, roles, career paths, entire industries. The tone is urgent and the evidence is real. He describes telling AI what to build, walking away for four hours, and coming back to finished work. I've had the same experience. It's not hypothetical.
 
 The natural response to that story is anxiety. If AI can do what I do, what happens to me?
 
@@ -64,9 +64,9 @@ The young Stanford grad and the 66-year-old systems engineer are both going to u
 
 Shumer opens his article with a Covid analogy. He wants people to take this seriously, and they should. But the analogy does real harm.
 
-Covid was something that happened *to* people. You couldn't outrun it. You couldn't build your way through it. All you could do was hunker down and wait.
+Covid was something that happened _to_ people. You couldn't outrun it. You couldn't build your way through it. All you could do was hunker down and wait.
 
-AI is the opposite. It's something you can work *with*. The people who engage with it actively, who use it to build capabilities and solve real problems, aren't just surviving the disruption. They're using it to become more capable, more independent, and more resilient.
+AI is the opposite. It's something you can work _with_. The people who engage with it actively, who use it to build capabilities and solve real problems, aren't just surviving the disruption. They're using it to become more capable, more independent, and more resilient.
 
 The right posture isn't anxiety. It's agency.
 

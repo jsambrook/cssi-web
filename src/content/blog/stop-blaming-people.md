@@ -1,16 +1,16 @@
 ---
-title: "Stop blaming people"
-description: "Why blame cultures destroy healthcare organizations and how to build accountability instead."
-metaTitle: "Stop blaming people"
-metaDescription: "Why blame cultures destroy healthcare organizations and how to build accountability instead."
+title: 'Stop blaming people'
+description: 'Why blame cultures destroy healthcare organizations and how to build accountability instead.'
+metaTitle: 'Stop blaming people'
+metaDescription: 'Why blame cultures destroy healthcare organizations and how to build accountability instead.'
 date: 2025-08-21
-author: "John Sambrook"
-tags: ["Leadership", "Culture"]
+author: 'John Sambrook'
+tags: ['Leadership', 'Culture']
 ---
 
 We've all felt it. You're in a hospital, watching dedicated, brilliant, and caring professionals work themselves to exhaustion. Yet, the process is agonizingly slow. The cost is astronomical. Patients are stuck in beds waiting for discharge. Clinicians are burning out at record rates.
 
-*How can a system filled with such good-hearted, experienced professionals produce so much friction, waste, and frustration?*
+_How can a system filled with such good-hearted, experienced professionals produce so much friction, waste, and frustration?_
 
 ## The Blame Game (Our Flawed Response)
 
@@ -22,7 +22,7 @@ Our default response is to find someone to blame.
 - "Doctors are ordering too many tests."
 - "Nurses aren't being efficient."
 
-We blame *people* or *organizations*. We assume bad intent or incompetence. This is the "blame game," and it's why the problems never get solved.
+We blame _people_ or _organizations_. We assume bad intent or incompetence. This is the "blame game," and it's why the problems never get solved.
 
 ## The Real Problem: Good People in a Bad System
 
@@ -45,7 +45,7 @@ We see epidemic levels of burnout and moral injury, costing billions in turnover
 We respond with individual "resilience training" or "mindfulness apps," which is like blaming the worker for not being strong enough.
 
 **The Real Conflict:**
-The system *needs* clinicians to "meet all patient care demands" AND "protect the workforce from harm." But it gives them no tools to do both, expecting them to absorb unlimited psychological trauma in a way it would never allow with physical hazards like radiation.
+The system _needs_ clinicians to "meet all patient care demands" AND "protect the workforce from harm." But it gives them no tools to do both, expecting them to absorb unlimited psychological trauma in a way it would never allow with physical hazards like radiation.
 
 **Goal A:** Meet all patient care demands
 
@@ -70,9 +70,9 @@ The system has stakeholders working at cross-purposes. The hospital's metric is 
 
 **Lose-Lose Outcome:** Patients stuck in expensive acute-care beds, blocked access for new patients, and frustrated staff---while we blame case managers and post-acute facilities.
 
-## The Path Forward: You Don't Manage Conflicts, You *Solve* Them
+## The Path Forward: You Don't Manage Conflicts, You _Solve_ Them
 
-Here's the good news: These conflicts are not permanent. They are not laws of nature. They are the result of *assumptions* we've made about how the system *must* work.
+Here's the good news: These conflicts are not permanent. They are not laws of nature. They are the result of _assumptions_ we've made about how the system _must_ work.
 
 And if you can identify those assumptions, you can challenge them---and make the conflict "evaporate."
 

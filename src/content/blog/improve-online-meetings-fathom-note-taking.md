@@ -1,11 +1,11 @@
 ---
-title: "Improve your online meetings with Fathom note taking software"
-description: "Discover how Fathom AI Note Taker transforms virtual meetings by automating transcription, highlighting key points, and generating instant summaries."
-metaTitle: "Improve online meetings with Fathom AI notes"
-metaDescription: "Discover how Fathom AI Note Taker transforms virtual meetings by automating transcription, highlighting key points, and generating instant summaries."
+title: 'Improve your online meetings with Fathom note taking software'
+description: 'Discover how Fathom AI Note Taker transforms virtual meetings by automating transcription, highlighting key points, and generating instant summaries.'
+metaTitle: 'Improve online meetings with Fathom AI notes'
+metaDescription: 'Discover how Fathom AI Note Taker transforms virtual meetings by automating transcription, highlighting key points, and generating instant summaries.'
 date: 2025-04-29
-author: "John Sambrook"
-tags: ["AI", "Remote Work"]
+author: 'John Sambrook'
+tags: ['AI', 'Remote Work']
 ---
 
 Discover how Fathom AI Note Taker transforms virtual meetings by automating transcription, highlighting key points, and generating instant summaries.

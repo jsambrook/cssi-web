@@ -1,11 +1,11 @@
 ---
 title: "Voice agents: the business phone you've been waiting for"
-description: "Discover why investing in a voice agent makes as much sense as your cell phone plan. Same familiar investment model, same monthly costs, but with 24/7 AI assistance that transforms your business operations."
+description: 'Discover why investing in a voice agent makes as much sense as your cell phone plan. Same familiar investment model, same monthly costs, but with 24/7 AI assistance that transforms your business operations.'
 metaTitle: "Voice agents: the business phone you've been waiting for"
-metaDescription: "Voice agents follow a familiar phone-plan model: predictable monthly cost with 24/7 AI support that handles calls, tasks, and customer interactions."
+metaDescription: 'Voice agents follow a familiar phone-plan model: predictable monthly cost with 24/7 AI support that handles calls, tasks, and customer interactions.'
 date: 2025-08-15
-author: "John Sambrook"
-tags: ["Voice Agents", "Business Investment"]
+author: 'John Sambrook'
+tags: ['Voice Agents', 'Business Investment']
 ---
 
 Discover why investing in a voice agent makes as much sense as your cell phone plan. Same familiar investment model, same monthly costs, but with 24/7 AI assistance that transforms your business operations.
@@ -20,11 +20,11 @@ Think about your cell phone for a moment. You paid for the device, you pay a mon
 
 The numbers might surprise you with how familiar they are:
 
-| Investment Type | Cell Phone | Voice Agent |
-|---|---|---|
-| **Initial Purchase** | $800 - $1,200 for premium device | $800 - $1,200 for custom agent creation |
-| **Monthly Service** | $60 - $200 based on plan and usage | $60 - $200 based on features and usage |
-| **What You Get** | Communication, apps, internet access | AI assistant, automation, business integration |
+| Investment Type      | Cell Phone                           | Voice Agent                                    |
+| -------------------- | ------------------------------------ | ---------------------------------------------- |
+| **Initial Purchase** | $800 - $1,200 for premium device     | $800 - $1,200 for custom agent creation        |
+| **Monthly Service**  | $60 - $200 based on plan and usage   | $60 - $200 based on features and usage         |
+| **What You Get**     | Communication, apps, internet access | AI assistant, automation, business integration |
 
 **The Bottom Line**: Just like your cell phone, your voice agent is a one-time setup cost followed by predictable monthly operation fees. The investment model you already understand and budget for.
 

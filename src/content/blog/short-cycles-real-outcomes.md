@@ -1,11 +1,11 @@
 ---
-title: "Short cycles, real outcomes"
-description: "Why small, measurable releases outperform big-bang delivery."
-metaTitle: "Short cycles, real outcomes"
-metaDescription: "Why small, measurable releases outperform big-bang delivery."
+title: 'Short cycles, real outcomes'
+description: 'Why small, measurable releases outperform big-bang delivery.'
+metaTitle: 'Short cycles, real outcomes'
+metaDescription: 'Why small, measurable releases outperform big-bang delivery.'
 date: 2025-12-20
-author: "John Sambrook"
-tags: ["Delivery", "Agile", "Outcomes"]
+author: 'John Sambrook'
+tags: ['Delivery', 'Agile', 'Outcomes']
 ---
 
 The biggest risk in any initiative isn't building the wrong thing. It's building the right thing too slowly to matter.

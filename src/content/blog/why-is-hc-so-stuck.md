@@ -1,11 +1,11 @@
 ---
-title: "Why healthcare is so stuck"
-description: "Six chronic healthcare frustrations — long wait times, expensive insurance, claim denials, hiring difficulties, tax levies, and burnout — traced to a single root cause using Theory of Constraints analysis."
-metaTitle: "Why healthcare is so stuck"
-metaDescription: "Six chronic healthcare frustrations can be traced to one systemic conflict, using a Theory of Constraints lens to map root cause and leverage points."
+title: 'Why healthcare is so stuck'
+description: 'Six chronic healthcare frustrations — long wait times, expensive insurance, claim denials, hiring difficulties, tax levies, and burnout — traced to a single root cause using Theory of Constraints analysis.'
+metaTitle: 'Why healthcare is so stuck'
+metaDescription: 'Six chronic healthcare frustrations can be traced to one systemic conflict, using a Theory of Constraints lens to map root cause and leverage points.'
 date: 2025-09-17
-author: "John Sambrook"
-tags: ["Healthcare", "Analysis"]
+author: 'John Sambrook'
+tags: ['Healthcare', 'Analysis']
 ---
 
 Exploring structural reasons behind stagnation in hospital systems.
@@ -50,7 +50,7 @@ Let's trace the causal chains.
 
 ### Tracing Chain 1: The Administrative Engine of Burnout
 
-We must start with the administrative burden because the numbers are staggering. In the U.S., administrative costs are estimated to account for 20-30% of all healthcare spending. One recent analysis was even more stark, finding that for every dollar hospitals spent on direct patient care in 2023, they spent nearly *two dollars* on administrative and operational costs.
+We must start with the administrative burden because the numbers are staggering. In the U.S., administrative costs are estimated to account for 20-30% of all healthcare spending. One recent analysis was even more stark, finding that for every dollar hospitals spent on direct patient care in 2023, they spent nearly _two dollars_ on administrative and operational costs.
 
 This is not just paperwork. This is the engine of our first causal chain.
 
@@ -70,13 +70,13 @@ The second causal chain starts with the same root but focuses on the flow of mon
 
 This is a critical symptom. For a provider, a claim denial is not a simple administrative correction; it is a direct assault on their cash flow. Nearly 90% of medical groups report an increase in claim denials, which directly erodes their financial stability.
 
-Providers must now invest *more* money to fight for the money they are already owed. The cost to appeal a single claim averages over $43, and providers spend nearly $20 billion per year in this fight. This is pure, non-value-added waste.
+Providers must now invest _more_ money to fight for the money they are already owed. The cost to appeal a single claim averages over $43, and providers spend nearly $20 billion per year in this fight. This is pure, non-value-added waste.
 
 This fight, combined with the massive overhead from Chain 1, creates a condition of chronic **Provider Financial Strain**. Hospitals, particularly non-profit and rural ones, operate on razor-thin margins. They are financially fragile.
 
 This fragility leads directly to **UDE 5: Local hospitals require tax benefits**. A hospital that is financially sound does not need to ask for local tax levies. This request is a symptom of a business model that is broken—a model where the cost of administrative conflict and uncompensated care (which we will see next) exceeds revenue.
 
-But what about the rest of us? This financial strain on the provider side has to be balanced. Providers cannot survive on low reimbursements and high administrative costs. They compensate by aggressively negotiating higher rates from the payers they *can* charge more: private insurers. This "cost-shifting" to make up for financial shortfalls, along with the high administrative costs *within the insurance companies themselves*, are passed directly to the customer.
+But what about the rest of us? This financial strain on the provider side has to be balanced. Providers cannot survive on low reimbursements and high administrative costs. They compensate by aggressively negotiating higher rates from the payers they _can_ charge more: private insurers. This "cost-shifting" to make up for financial shortfalls, along with the high administrative costs _within the insurance companies themselves_, are passed directly to the customer.
 
 The result is **UDE 2: Insurance is very expensive and has high deductibles**.
 
@@ -86,7 +86,7 @@ The system's cruelty is that these two chains create a vicious, self-reinforcing
 
 High deductibles (UDE 2) cause patients to delay or forego care. When they finally do seek care, they are sicker (making UDE 1 worse) and often cannot pay their high deductible bill. This creates "uncompensated care," which lands as another massive blow to the provider's finances, reinforcing their financial strain (and need for UDE 5).
 
-Simultaneously, the administrative fight over claims and prior authorizations (UDE 3) directly *also* causes care delays (UDE 1). A patient's diagnosis is delayed not by a medical reason, but by an administrative one.
+Simultaneously, the administrative fight over claims and prior authorizations (UDE 3) directly _also_ causes care delays (UDE 1). A patient's diagnosis is delayed not by a medical reason, but by an administrative one.
 
 All six UDEs are locked in a feedback loop, driven by the same core logic.
 
@@ -120,7 +120,7 @@ Our focus must shift from firefighting to redesign. We must ask:
 
 - What if we could create trust between payers and providers, replacing the "deny-and-appeal" chassis with one of shared data and common goals?
 
-- What if we measured "throughput" as *patient wellness achieved* rather than *billable codes submitted*?
+- What if we measured "throughput" as _patient wellness achieved_ rather than _billable codes submitted_?
 
 These are not pipe dreams. They are engineering and systems architecture challenges. The tools from Theory of Constraints and Lean, accelerated by modern AI, provide a path. But it requires that we first stop, look at the diagram, and agree on the nature of the problem.
 
@@ -134,22 +134,22 @@ Founder, Common Sense Systems
 
 ---
 
-The Commonwealth Fund (2023). *High U.S. Health Care Spending: Where Is It All Going?* [https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going](https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going)
+The Commonwealth Fund (2023). _High U.S. Health Care Spending: Where Is It All Going?_ [https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going](https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going)
 
-Trilliant Health (2025). *Hospital Administrative Expenditures Exceed Direct Patient Care by Nearly 2x*. [https://www.trillianthealth.com/market-research/studies/hospital-administrative-expenditures-exceed-direct-patient-care-by-nearly-2x](https://www.trillianthealth.com/market-research/studies/hospital-administrative-expenditures-exceed-direct-patient-care-by-nearly-2x)
+Trilliant Health (2025). _Hospital Administrative Expenditures Exceed Direct Patient Care by Nearly 2x_. [https://www.trillianthealth.com/market-research/studies/hospital-administrative-expenditures-exceed-direct-patient-care-by-nearly-2x](https://www.trillianthealth.com/market-research/studies/hospital-administrative-expenditures-exceed-direct-patient-care-by-nearly-2x)
 
-The Commonwealth Fund (2025). *Administrative Burden in Primary Care: Causes, Potential Solutions*. [https://www.commonwealthfund.org/publications/issue-briefs/2025/oct/administrative-burden-primary-care-causes-potential-solutions](https://www.commonwealthfund.org/publications/issue-briefs/2025/oct/administrative-burden-primary-care-causes-potential-solutions)
+The Commonwealth Fund (2025). _Administrative Burden in Primary Care: Causes, Potential Solutions_. [https://www.commonwealthfund.org/publications/issue-briefs/2025/oct/administrative-burden-primary-care-causes-potential-solutions](https://www.commonwealthfund.org/publications/issue-briefs/2025/oct/administrative-burden-primary-care-causes-potential-solutions)
 
-GHX (2023). *Healthcare Burnout: Impact, Consequences & Administrative Burden*. [https://www.ghx.com/the-healthcare-hub/healthcare-burnout/](https://www.ghx.com/the-healthcare-hub/healthcare-burnout/)
+GHX (2023). _Healthcare Burnout: Impact, Consequences & Administrative Burden_. [https://www.ghx.com/the-healthcare-hub/healthcare-burnout/](https://www.ghx.com/the-healthcare-hub/healthcare-burnout/)
 
-Glenwood Systems (2024). *The Impact of Claim Denials on Billing Processes*. [https://www.glenwoodsystems.com/post/impact-of-billing-denials](https://www.glenwoodsystems.com/post/impact-of-billing-denials)
+Glenwood Systems (2024). _The Impact of Claim Denials on Billing Processes_. [https://www.glenwoodsystems.com/post/impact-of-billing-denials](https://www.glenwoodsystems.com/post/impact-of-billing-denials)
 
-Premier Inc. (2024). *Trend Alert: Private Payers Retain Profits by Refusing or Delaying Legitimate Medical Claims*. [https://premierinc.com/newsroom/blog/trend-alert-private-payers-retain-profits-by-refusing-or-delaying-legitimate-medical-claims](https://premierinc.com/newsroom/blog/trend-alert-private-payers-retain-profits-by-refusing-or-delaying-legitimate-medical-claims)
+Premier Inc. (2024). _Trend Alert: Private Payers Retain Profits by Refusing or Delaying Legitimate Medical Claims_. [https://premierinc.com/newsroom/blog/trend-alert-private-payers-retain-profits-by-refusing-or-delaying-legitimate-medical-claims](https://premierinc.com/newsroom/blog/trend-alert-private-payers-retain-profits-by-refusing-or-delaying-legitimate-medical-claims)
 
-InsuranceNewsNet (2025). *How Medicaid cuts threaten rural hospitals*. [https://insurancenewsnet.com/oarticle/how-medicaid-cuts-threaten-rural-hospitals](https://insurancenewsnet.com/oarticle/how-medicaid-cuts-threaten-rural-hospitals)
+InsuranceNewsNet (2025). _How Medicaid cuts threaten rural hospitals_. [https://insurancenewsnet.com/oarticle/how-medicaid-cuts-threaten-rural-hospitals](https://insurancenewsnet.com/oarticle/how-medicaid-cuts-threaten-rural-hospitals)
 
-American Hospital Association (AHA) (2020). *Fact Sheet: Uncompensated Hospital Care Cost*. [https://www.aha.org/fact-sheets/2020-01-06-fact-sheet-uncompensated-hospital-care-cost](https://www.aha.org/fact-sheets/2020-01-06-fact-sheet-uncompensated-hospital-care-cost)
+American Hospital Association (AHA) (2020). _Fact Sheet: Uncompensated Hospital Care Cost_. [https://www.aha.org/fact-sheets/2020-01-06-fact-sheet-uncompensated-hospital-care-cost](https://www.aha.org/fact-sheets/2020-01-06-fact-sheet-uncompensated-hospital-care-cost)
 
-National Institutes of Health (NIH) PMC (2021). *Health care administrative burdens: Centering patient experiences*. [https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/](https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/)
+National Institutes of Health (NIH) PMC (2021). _Health care administrative burdens: Centering patient experiences_. [https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/](https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/)
 
-AJMC (2025). *How Insurance Claim Denials Harm Patients' Health, Finances*. [https://www.ajmc.com/view/how-insurance-claim-denials-harm-patients-health-finances](https://www.ajmc.com/view/how-insurance-claim-denials-harm-patients-health-finances)
+AJMC (2025). _How Insurance Claim Denials Harm Patients' Health, Finances_. [https://www.ajmc.com/view/how-insurance-claim-denials-harm-patients-health-finances](https://www.ajmc.com/view/how-insurance-claim-denials-harm-patients-health-finances)

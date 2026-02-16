@@ -27,8 +27,5 @@ export function toSeoTitle(title: string): string {
 }
 
 export function toSeoDescription(description: string): string {
-  return truncateAtWord(
-    collapseWhitespace(description),
-    DESCRIPTION_MAX_LENGTH
-  );
+  return truncateAtWord(collapseWhitespace(description), DESCRIPTION_MAX_LENGTH);
 }

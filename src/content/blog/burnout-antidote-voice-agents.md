@@ -1,11 +1,11 @@
 ---
 title: "The burnout antidote: voice agents transform healthcare's most painful conversations"
 description: "Discover how voice agents transform healthcare's most painful conversations by removing emotional friction from insurance claims, patient billing, and administrative battles that burn out staff and traumatize patients."
-metaTitle: "Voice agents as a burnout antidote in healthcare"
-metaDescription: "Voice agents reduce friction in claims, billing, and admin calls, helping healthcare teams protect staff well-being while improving patient interactions."
+metaTitle: 'Voice agents as a burnout antidote in healthcare'
+metaDescription: 'Voice agents reduce friction in claims, billing, and admin calls, helping healthcare teams protect staff well-being while improving patient interactions.'
 date: 2025-08-17
-author: "John Sambrook"
-tags: ["Voice Agents", "Healthcare"]
+author: 'John Sambrook'
+tags: ['Voice Agents', 'Healthcare']
 ---
 
 Discover how voice agents transform healthcare's most painful conversations by removing emotional friction from insurance claims, patient billing, and administrative battles that burn out staff and traumatize patients.
@@ -68,18 +68,21 @@ The agent never gets frustrated. Never sounds rushed. Never implies the patient 
 ## The Multiplication Effect
 
 **For Staff:**
+
 - Reduces daily emotional friction
 - Provides expert-level support instantly
 - Transforms role from warrior to advocate
 - Creates space for meaningful patient interaction
 
 **For Patients:**
+
 - 24/7 availability for questions
 - Consistent, accurate information
 - Judgment-free assistance
 - Dignified resolution of financial concerns
 
 **For Hospitals:**
+
 - Reduced staff turnover ($75,000+ saved per retention)
 - Improved claim approval rates
 - Decreased patient complaints

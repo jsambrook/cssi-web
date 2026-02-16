@@ -12,7 +12,7 @@
  *   currentPath: Current page path for active nav highlighting
  */
 
-import Logo from "./Logo.astro";
+import Logo from './Logo.astro';
 
 interface NavItem {
   label: string;
@@ -30,7 +30,7 @@ const { navItems, ctaText, ctaHref, currentPath } = Astro.props;
 
 function isActive(href: string): boolean {
   if (!currentPath) return false;
-  if (href === "/") return currentPath === "/";
+  if (href === '/') return currentPath === '/';
   return currentPath.startsWith(href);
 }
 ---
@@ -46,19 +46,21 @@ function isActive(href: string): boolean {
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-8">
         <nav class="flex items-center gap-8">
-          {navItems.map((item, index) => (
-            <a
-              key={`nav-${index}`}
-              href={item.href}
-              class:list={[
-                "font-medium transition-colors hover:text-primary",
-                isActive(item.href) ? "text-primary" : "text-foreground/80",
-              ]}
-              aria-current={isActive(item.href) ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          ))}
+          {
+            navItems.map((item, index) => (
+              <a
+                key={`nav-${index}`}
+                href={item.href}
+                class:list={[
+                  'font-medium transition-colors hover:text-primary',
+                  isActive(item.href) ? 'text-primary' : 'text-foreground/80',
+                ]}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
         </nav>
 
         <!-- Dark Mode Toggle (Desktop) -->
@@ -70,34 +72,52 @@ function isActive(href: string): boolean {
                  hover:bg-accent/10 size-[42px] text-foreground/80 hover:text-primary"
         >
           <!-- Sun icon (shown in dark mode) -->
-          <svg class="hidden dark:block h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="5" />
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          <svg
+            class="hidden dark:block h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
           <!-- Moon icon (shown in light mode) -->
-          <svg class="block dark:hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          <svg
+            class="block dark:hidden h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        {ctaText && ctaHref && (
-          <a
-            href={ctaHref}
-            class="inline-flex items-center justify-center gap-2 whitespace-nowrap
+        {
+          ctaText && ctaHref && (
+            <a
+              href={ctaHref}
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap
                    rounded-button transition-all bg-primary text-primary-foreground
                    hover:bg-primary/90 shadow-sm h-[42px] px-6 py-2"
-            {...(ctaHref.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-          >
-            {ctaText}
-          </a>
-        )}
+              {...(ctaHref.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {ctaText}
+            </a>
+          )
+        }
       </div>
 
       <!-- Mobile Menu Button -->
@@ -109,7 +129,14 @@ function isActive(href: string): boolean {
         class="inline-flex items-center justify-center rounded-button transition-all
                hover:bg-accent/10 size-[54px] md:hidden"
       >
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <svg
+          class="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
           <line x1="4" x2="20" y1="12" y2="12"></line>
           <line x1="4" x2="20" y1="6" y2="6"></line>
           <line x1="4" x2="20" y1="18" y2="18"></line>
@@ -121,19 +148,21 @@ function isActive(href: string): boolean {
   <!-- Mobile Menu (hidden by default) -->
   <div id="mobile-menu" class="hidden md:hidden border-t border-border/20">
     <div class="container mx-auto px-4 py-4 space-y-2">
-      {navItems.map((item, index) => (
-        <a
-          key={`mobile-nav-${index}`}
-          href={item.href}
-          class:list={[
-            "block py-2 font-medium hover:text-primary",
-            isActive(item.href) ? "text-primary" : "text-foreground/80",
-          ]}
-          aria-current={isActive(item.href) ? "page" : undefined}
-        >
-          {item.label}
-        </a>
-      ))}
+      {
+        navItems.map((item, index) => (
+          <a
+            key={`mobile-nav-${index}`}
+            href={item.href}
+            class:list={[
+              'block py-2 font-medium hover:text-primary',
+              isActive(item.href) ? 'text-primary' : 'text-foreground/80',
+            ]}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
 
       <!-- Dark Mode Toggle (Mobile) -->
       <button
@@ -143,35 +172,53 @@ function isActive(href: string): boolean {
         class="flex items-center gap-3 w-full py-2 font-medium text-foreground/80 hover:text-primary transition-colors"
       >
         <!-- Sun icon (shown in dark mode) -->
-        <svg class="hidden dark:block h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="5" />
-          <line x1="12" y1="1" x2="12" y2="3" />
-          <line x1="12" y1="21" x2="12" y2="23" />
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-          <line x1="1" y1="12" x2="3" y2="12" />
-          <line x1="21" y1="12" x2="23" y2="12" />
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        <svg
+          class="hidden dark:block h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
         <!-- Moon icon (shown in light mode) -->
-        <svg class="block dark:hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        <svg
+          class="block dark:hidden h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
         <span class="dark:hidden">Dark mode</span>
         <span class="hidden dark:inline">Light mode</span>
       </button>
 
-      {ctaText && ctaHref && (
-        <a
-          href={ctaHref}
-          class="block mt-4 text-center rounded-button bg-primary text-primary-foreground
+      {
+        ctaText && ctaHref && (
+          <a
+            href={ctaHref}
+            class="block mt-4 text-center rounded-button bg-primary text-primary-foreground
                  py-3 px-6 hover:bg-primary/90"
-          {...(ctaHref.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        >
-          {ctaText}
-        </a>
-      )}
+            {...(ctaHref.startsWith('http')
+              ? { target: '_blank', rel: 'noopener noreferrer' }
+              : {})}
+          >
+            {ctaText}
+          </a>
+        )
+      }
     </div>
   </div>
 </header>
@@ -193,7 +240,7 @@ function isActive(href: string): boolean {
     }
   });
 
-  menuLinks?.forEach(link => {
+  menuLinks?.forEach((link) => {
     link.addEventListener('click', () => {
       menu?.classList.add('hidden');
       toggle?.setAttribute('aria-expanded', 'false');

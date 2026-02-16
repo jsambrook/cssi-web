@@ -1,9 +1,9 @@
 ---
 /*
  * TestimonialCard.astro
- * 
+ *
  * Card for displaying a customer testimonial/quote.
- * 
+ *
  * Props:
  *   quote: The testimonial text
  *   author: Author name or title
@@ -21,30 +21,39 @@ interface Props {
 const { quote, author, company, initials } = Astro.props;
 
 // Generate initials from author name if not provided
-const displayInitials = initials || author.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+const displayInitials =
+  initials ||
+  author
+    .split(' ')
+    .map((n) => n[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
 ---
 
-<div class="bg-background rounded-[var(--radius)] border border-primary/50 shadow-sm p-6 lg:p-8 flex flex-col gap-4">
+<div
+  class="bg-background rounded-[var(--radius)] border border-primary/50 shadow-sm p-6 lg:p-8 flex flex-col gap-4"
+>
   <!-- Quote -->
   <div class="min-h-[60px]">
     <p class="text-sm italic leading-relaxed">"{quote}"</p>
   </div>
-  
+
   <!-- Attribution -->
   <div class="flex items-center gap-3">
     <!-- Avatar -->
     <span class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10">
-      <span class="flex size-full items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-medium">
+      <span
+        class="flex size-full items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-medium"
+      >
         {displayInitials}
       </span>
     </span>
-    
+
     <!-- Author Info -->
     <div class="flex flex-col gap-0.5">
       <p class="text-xs text-foreground">{author}</p>
-      {company && (
-        <p class="text-xs text-muted-foreground">{company}</p>
-      )}
+      {company && <p class="text-xs text-muted-foreground">{company}</p>}
     </div>
   </div>
 </div>
