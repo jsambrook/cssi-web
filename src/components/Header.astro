@@ -260,6 +260,32 @@ function isActive(href: string): boolean {
       });
     });
 
+    header.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (toggle?.getAttribute('aria-expanded') !== 'true') return;
+
+      const focusable = menu?.querySelectorAll<HTMLElement>('a, button');
+      if (!focusable?.length) return;
+      const lastItem = focusable[focusable.length - 1];
+
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        menu?.classList.add('hidden');
+        toggle?.setAttribute('aria-expanded', 'false');
+        toggle?.focus();
+        return;
+      }
+
+      if (e.key !== 'Tab') return;
+
+      if (e.shiftKey && document.activeElement === toggle) {
+        e.preventDefault();
+        lastItem.focus();
+      } else if (!e.shiftKey && document.activeElement === lastItem) {
+        e.preventDefault();
+        toggle?.focus();
+      }
+    });
+
     updateThemeLabels(themeToggles, document.documentElement.classList.contains('dark'));
     themeToggles.forEach((button) =>
       button.addEventListener('click', () => toggleTheme(themeToggles))

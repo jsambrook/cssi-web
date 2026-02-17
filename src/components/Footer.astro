@@ -95,7 +95,12 @@ const {
                 <span aria-hidden="true">📞</span>
                 <div>
                   {contact.phones.map((phone) => (
-                    <div>{phone}</div>
+                    <a
+                      href={`tel:${phone.replace(/\D/g, '')}`}
+                      class="text-white hover:text-primary transition-colors"
+                    >
+                      {phone}
+                    </a>
                   ))}
                 </div>
               </li>

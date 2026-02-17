@@ -5,8 +5,9 @@ import Section from '../components/Section.astro';
 import PostCard from '../components/PostCard.astro';
 import { pageTitle, pageDescription, header } from '../data/pages/insights';
 import { manualInsights } from '../data/manualInsights';
+import { isPublished } from '../utils/dates';
 
-const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+const blogPosts = await getCollection('blog', ({ data }) => !data.draft && isPublished(data.date));
 const manualPosts = manualInsights.map((insight) => ({
   id: insight.slug,
   data: {
@@ -18,7 +19,7 @@ const manualPosts = manualInsights.map((insight) => ({
   },
 }));
 
-const posts = [...blogPosts, ...manualPosts].sort(
+const posts = [...blogPosts, ...manualPosts.filter((p) => isPublished(p.data.date))].sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 ---

@@ -2,9 +2,13 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../data/site';
 import { manualInsights } from '../data/manualInsights';
+import { isPublished } from '../utils/dates';
 
 export async function GET(context: { site: URL }) {
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+  const blogPosts = await getCollection(
+    'blog',
+    ({ data }) => !data.draft && isPublished(data.date)
+  );
   const manualPosts = manualInsights.map((insight) => ({
     id: insight.slug,
     data: {
@@ -14,7 +18,7 @@ export async function GET(context: { site: URL }) {
     },
   }));
 
-  const posts = [...blogPosts, ...manualPosts].sort(
+  const posts = [...blogPosts, ...manualPosts.filter((p) => isPublished(p.data.date))].sort(
     (a, b) => b.data.date.getTime() - a.data.date.getTime()
   );
 

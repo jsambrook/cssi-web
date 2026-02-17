@@ -3,167 +3,154 @@
 **Date:** 2026-02-16
 **Reviewer:** Claude Opus 4.6
 **Scope:** Full codebase review of cssi-web (Astro 5 static site)
-**Previous reviews:** 2 prior rounds (18 findings fixed, 13 findings in last round)
+**Build:** Clean — 66 pages, zero lint errors, zero format violations
 
 ---
 
-## High
+## Fixed Since Last Review
 
-### 1. Dead components: FeatureCard and TestimonialCard
-
-**Files:**
-- `src/components/FeatureCard.astro` (entire file, never rendered)
-- `src/components/TestimonialCard.astro` (entire file, never rendered)
-- `src/data/types.ts:27-39` (`FeatureItem`, `TestimonialItem` interfaces)
-
-Neither `<FeatureCard>` nor `<TestimonialCard>` is rendered anywhere in the codebase. `TestimonialItem` is never imported. `FeatureItem` is imported only in `src/data/colors.ts:1` solely to extract the `ColorVariant` type.
-
-**Fix:** Export `ColorVariant` as a standalone type in `types.ts`. Remove both unused components and their interfaces.
-
-### 2. ColorVariant type duplicated in three places
-
-**Files:**
-- `src/data/types.ts:30` (inside `FeatureItem.color`)
-- `src/data/types.ts:97` (inside `ServiceCardItem.color`)
-- `src/components/FeatureCard.astro:19` (inline in Props)
-
-The union `'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple'` appears three times. Adding or removing a color requires updating all three independently.
-
-**Fix:** Export `ColorVariant` from `types.ts` and reference it in `ServiceCardItem` and `colors.ts`. (Subsumes the FeatureCard fix from finding #1 since that component should be removed.)
-
-### 3. Inconsistent date handling in manual insight pages
-
-**Files:**
-- `src/pages/insights/pacp.astro:20`
-- `src/pages/insights/nursing-conflict.astro:20`
-
-Both use `insight.date.toISOString().slice(0, 10)` for schema.org `datePublished`, producing a bare date string (`"2026-02-16"`). The rest of the codebase uses `toPacificIso()` from `src/utils/dates.ts`, which produces a full Pacific-anchored ISO timestamp (`"2026-02-16T08:00:00.000Z"`). This means structured data has inconsistent date formats between markdown blog posts and manual insight pages.
-
-**Fix:** Import and use `toPacificIso` in both manual insight pages.
-
-### 4. Misleading CTA and duplicate destinations on PACP page
-
-**File:** `src/pages/insights/pacp.astro:245-257`
-
-Two issues:
-1. The secondary CTA reads "Download the Concept Paper" but links to `/contact`. There is no downloadable document. Users expect a PDF download.
-2. Both CTAs ("Discuss a Pilot Implementation" and "Download the Concept Paper") link to the same URL (`/contact`), making the two-button layout misleading.
-
-**Fix:** Either create an actual downloadable concept paper, change the button text to "Request the Concept Paper", or consolidate into a single CTA.
+| Finding                                | Fixed In                                         |
+| -------------------------------------- | ------------------------------------------------ |
+| Footer phone numbers not clickable     | `Footer.astro:98-103` — now `<a href="tel:...">` |
+| IntakeForm placeholder hospital-specific | `intakeForm.ts:118` — now `you@example.com`    |
+| Unused `--input` CSS variable          | Removed from `tokens.css`                        |
+| ManualInsight type not in types.ts     | `types.ts:98-106` — imported in manualInsights   |
+| Orphaned OG image (the-discharge-trap) | Deleted from `public/images/blog/`               |
 
 ---
 
 ## Medium
 
-### 5. Missing type annotation on contactGrid
+### 1. Future-dated posts accessible via direct URL
 
-**File:** `src/data/pages/contact.ts:14`
+**File:** `src/pages/insights/[slug].astro:6`
 
-`contactGrid` is an untyped export with a complex nested shape (four sections with varying optional properties). Every other page data export in the project has an explicit type annotation (`PageHeader`, `CTAContent`, `LegalBlock[]`, etc.). This is inconsistent and loses compile-time safety.
+The slug route filters only `!data.draft`, not `isPublished()`. Three posts dated 2026-02-17 are excluded from listings, tag pages, and RSS (those all call `isPublished()`), but their individual pages are built and reachable at:
 
-**Fix:** Define a `ContactGridItem` interface and `ContactGrid` type in `types.ts`, then annotate the export.
+- `/insights/quality-illusion-medtech`
+- `/insights/why-agile-fails-in-hardware-and-what-actually-works`
+- `/insights/workforce-planning-beyond-ftes`
 
-### 6. `parseAddress` in schema.ts silently produces empty strings on malformed input
+Anyone with the URL can read them before the intended publish date.
 
-**File:** `src/data/schema.ts:3-12`
+**Fix:** Add `isPublished(data.date)` to the `getStaticPaths` filter:
 
-If `footerContact.address` in `site.ts` doesn't match the expected `"street\ncity, ST ZIP"` format, the regex fails silently and all address fields in JSON-LD become empty strings. This produces invalid structured data with no build error.
-
-**Fix:** Add assertions to fail loudly on malformed input.
-
-### 7. Schema.ts duplicates founder data arrays
-
-**Files:** `src/data/schema.ts` (`buildProfessionalServiceSchema` and `buildFounderSchema`)
-
-The `knowsAbout`, `hasCredential`, and `alumniOf` arrays are copy-pasted between these two functions. Updating one without the other creates inconsistent structured data.
-
-**Fix:** Extract to shared constants.
-
-### 8. ResultsSection hardcodes links to standalone insight pages
-
-**File:** `src/components/ResultsSection.astro:122, 149`
-
-URLs `/insights/pacp` and `/insights/nursing-conflict` are baked into the component markup, not imported from `manualInsights.ts`. If either page is renamed or removed, the links break silently.
-
-**Fix:** Import slugs from `manualInsights.ts` and construct URLs.
-
-### 9. IntakeForm email validation too lenient
-
-**File:** `src/components/IntakeForm.astro:238`
-
-```javascript
-return input.value.trim() !== '' && input.value.includes('@');
+```typescript
+const posts = await getCollection('blog', ({ data }) => !data.draft && isPublished(data.date));
 ```
 
-Accepts `"@"`, `"a@"`, `"@b"` as valid emails. The browser's native `type="email"` validation catches some of these, but the custom JS validation runs first.
+**Trade-off:** This prevents preview-by-URL for scheduled posts. If preview is needed, keep the current behavior and treat it as intentional.
 
-**Fix:** Use `/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())`.
+### 2. Blog post uses personal email address
+
+**File:** `src/content/blog/the-cath-lab-is-empty-at-2am.md:93`
+
+Post says "You can reach me at john@common-sense.com" but the canonical contact email is `contact@common-sense.com` (defined in `src/data/site.ts`).
+
+**Fix:** Change to `contact@common-sense.com`, or confirm `john@` is intentional for this personal post.
+
+### 3. Logo SVG fill colors don't match --primary
+
+**File:** `src/components/Logo.astro:36,41`
+
+The SVG uses two hardcoded fills (`#ff821c` and `#ff7628`) while `--primary` in `tokens.css` is `#fe811b`. Three different oranges for the same brand.
+
+In dark mode the SVG uses `fill-current` (correct), but in light mode the hardcoded values drift from the design token.
+
+**Fix:** Unify the SVG fills with the `--primary` value. SVG `fill` attributes don't support CSS variables, so either:
+
+- Replace the hardcoded hex values with `#fe811b`, or
+- Use `class="fill-primary"` (Tailwind maps to `--primary`)
 
 ---
 
 ## Low
 
-### 10. Footer emoji icons lack `aria-hidden="true"`
+### 4. IntakeForm textarea code path has no visible label
 
-**File:** `src/components/Footer.astro:95, 107, 120`
+**File:** `src/components/IntakeForm.astro:119-131`
 
-The phone, email, and location emoji spans are decorative but will be announced by screen readers.
+The `inputType === 'text'` branch renders a `<textarea>` with `aria-label` but no visible `<label>` element. The email step (lines 85-101) has visible labels. Currently unreachable — no step in `intakeForm.ts` uses `inputType: 'text'` — but inconsistent if activated.
 
-**Fix:** Add `aria-hidden="true"` to each span.
+**Fix:** Add a visible `<label>` before the textarea, or remove the dead code path.
 
-### 11. Contact page duplicates address parsing from schema.ts
+### 5. Footer address not in semantic element
 
-**File:** `src/pages/contact.astro:11`
+**File:** `src/components/Footer.astro:126`
 
-`footerContact.address.split('\n')` duplicates the same split done in `src/data/schema.ts:5`.
+The address renders inside a `<div class="whitespace-pre-line">`. Semantic HTML would use `<address>`.
 
-**Fix:** Export parsed address from a shared location.
+**Fix:** Change `<div>` to `<address>` (retaining the class).
 
-### 12. `deploy.sh` hardcodes absolute path
+### 6. og:image:type hardcoded as PNG
 
-**File:** `deploy.sh:12`
+**File:** `src/layouts/BaseLayout.astro:82`
 
-```bash
-REPO_DIR="/git/cssi-web"
+```html
+<meta property="og:image:type" content="image/png" />
 ```
 
-**Fix:** Derive from script location: `REPO_DIR="$(cd "$(dirname "$0")" && pwd)"`.
+All OG images are currently PNG (generated by `scripts/generate-og-images.js`), so this is correct today. Would be wrong if a page ever passes a JPG `ogImage` prop.
 
-### 13. Blog OG image fallback path not validated at build time
+**Fix:** Derive the type from the image extension, or remove the line (the tag is optional).
 
-**File:** `src/pages/insights/[slug].astro:15`
+### 7. Tag page breadcrumb missing Insights level
 
-If a blog post lacks `ogImage` and the auto-generated PNG doesn't exist, the OG meta tag points to a 404.
+**File:** `src/layouts/PageLayout.astro:26-29`
+
+PageLayout always builds a 2-level breadcrumb: Home -> Current Page. Tag pages at `/insights/tag/healthcare` get Home -> `Posts tagged "Healthcare"`, missing the intermediate Insights breadcrumb.
+
+BlogPostLayout correctly builds a 3-level breadcrumb (Home -> Insights -> Post title).
+
+**Fix:** Accept an optional `breadcrumbItems` prop in PageLayout, or add Insights as an intermediate item for the tag route.
+
+### 8. IntakeForm redundant variable assignment
+
+**File:** `src/components/IntakeForm.astro:226`
+
+```javascript
+const stepEl = step;  // step is already the element
+```
+
+`stepEl` is identical to `step`. Minor dead assignment.
+
+### 9. Four draft posts have empty body content
+
+**Files:**
+- `decision-making-frameworks-for-hospital-leaders.md`
+- `community-benefit-measurement.md`
+- `financial-transparency-governance.md`
+- `joint-fact-finding-in-divided-organizations.md`
+
+Correctly filtered from all listings (`draft: true`). Housekeeping note only.
 
 ---
 
 ## Summary
 
-| # | Finding | Severity | Effort |
-|---|---------|----------|--------|
-| 1 | Dead FeatureCard/TestimonialCard components | High | Small |
-| 2 | ColorVariant type duplication | High | Small |
-| 3 | Inconsistent date handling in manual insights | High | Small |
-| 4 | Misleading/duplicate PACP CTA | High | Small |
-| 5 | Missing contactGrid type annotation | Medium | Small |
-| 6 | parseAddress silent failure | Medium | Small |
-| 7 | Schema.ts duplicate founder data | Medium | Small |
-| 8 | ResultsSection hardcoded links | Medium | Small |
-| 9 | IntakeForm email validation | Medium | Small |
-| 10 | Footer emoji accessibility | Low | Small |
-| 11 | Contact page address parsing DRY | Low | Small |
-| 12 | deploy.sh hardcoded path | Low | Small |
-| 13 | Blog OG image fallback not validated | Low | Small |
+| #   | Finding                                    | Severity | Effort  |
+| --- | ------------------------------------------ | -------- | ------- |
+| 1   | Future-dated posts accessible via URL      | Medium   | Trivial |
+| 2   | Blog post personal email vs canonical      | Medium   | Trivial |
+| 3   | Logo SVG fills drift from --primary        | Medium   | Small   |
+| 4   | IntakeForm textarea missing visible label  | Low      | Small   |
+| 5   | Footer address not semantic `<address>`    | Low      | Trivial |
+| 6   | og:image:type hardcoded as PNG             | Low      | Trivial |
+| 7   | Tag page breadcrumb missing Insights level | Low      | Small   |
+| 8   | IntakeForm redundant variable assignment   | Low      | Trivial |
+| 9   | Empty draft posts                          | Low      | Trivial |
 
 ---
 
-## Positive Patterns
+## False Positives Eliminated
 
-- **Data-driven architecture** is well-executed. Content lives in TypeScript data files with shared types, `.astro` files are pure templates.
-- **SEO infrastructure** is thorough: automated postbuild SEO checker, frontmatter SEO linter in prebuild, canonical URLs, Open Graph, Twitter cards, structured data, robots.txt, sitemap, RSS feed.
-- **Accessibility** is solid: skip-to-content link, `aria-current="page"`, `aria-expanded` on mobile menu, `aria-hidden` on decorative SVGs, semantic heading hierarchy, dark mode toggle.
-- **CSS custom properties** provide complete theming with dark mode support.
-- **TypeScript strict mode** with Zod schema validation on blog frontmatter.
-- **Shared utilities** (`dates.ts`, `tags.ts`, `seo.ts`) keep logic DRY across pages.
-- **Deploy script** has file locking, atomic rollback, conditional `npm ci`, and syslog logging.
-- **metaTitle/metaDescription** frontmatter fields are properly wired through `[slug].astro` to `BlogPostLayout.astro` for per-post SEO overrides.
+These were raised by explore agents but verified as incorrect or by-design:
+
+- **Section.astro heading always h2** — All Section usages appear after an `<h1>` in the page template, so `<h2>` is the correct heading level in every case.
+- **IntakeForm not wrapped in `<form>` element** — By design. It's a client-side multi-step wizard that submits via `fetch()`, not a traditional form. No `<form>` element is needed.
+- **IntakeForm email regex too permissive** — The regex `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` is standard for client-side pre-validation. The `type="email"` attribute adds browser-native validation, and Formspree validates server-side.
+- **ResultsSection hardcoded Tailwind colors** — The `bg-red-50`, `bg-green-50`, `bg-orange-100`, `bg-blue-100` classes on lines 89/95/112/139 are semantic illustration colors (conflict diagram, insight card icons), not brand colors. Using design tokens here would couple illustration semantics to the brand theme.
+- **ResultsSection missing null check on getManualInsight()** — The function throws on missing slugs (fail-fast at build time). This is correct behavior per project conventions.
+- **Hero smooth scroll fails silently for missing targets** — When `document.querySelector(href)` returns null, `e.preventDefault()` is not called, so the browser falls back to default anchor behavior. Correct progressive enhancement.
+- **IndustryToggle data attributes could break on special chars** — Astro automatically escapes HTML attributes.
+- **Header mobile focus trap applied globally** — The handler checks `aria-expanded !== 'true'` before intercepting Tab, so it only activates when the mobile menu is open.

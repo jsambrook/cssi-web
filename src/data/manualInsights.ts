@@ -1,12 +1,4 @@
-export interface ManualInsight {
-  slug: string;
-  title: string;
-  description: string;
-  date: Date;
-  author: string;
-  tags: string[];
-  ogImage?: string;
-}
+import type { ManualInsight } from './types';
 
 export function getManualInsight(slug: string): ManualInsight {
   const insight = manualInsights.find((i) => i.slug === slug);

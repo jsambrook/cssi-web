@@ -41,6 +41,7 @@ const categoryLabels: Record<string, string> = {
             : 'text-muted-foreground hover:text-foreground',
         ]}
         data-industry="healthcare"
+        aria-pressed={defaultIndustry === 'healthcare'}
       >
         Healthcare
       </button>
@@ -53,6 +54,7 @@ const categoryLabels: Record<string, string> = {
             : 'text-muted-foreground hover:text-foreground',
         ]}
         data-industry="tech"
+        aria-pressed={defaultIndustry === 'tech'}
       >
         Tech
       </button>
@@ -132,6 +134,7 @@ const categoryLabels: Record<string, string> = {
         btn.classList.toggle('shadow-sm', isActive);
         btn.classList.toggle('text-muted-foreground', !isActive);
         btn.classList.toggle('hover:text-foreground', !isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
       });
 
       // Swap card content

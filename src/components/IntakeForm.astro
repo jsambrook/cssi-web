@@ -120,6 +120,7 @@ const formId = `intake-${crypto.randomUUID().slice(0, 8)}`;
           <div>
             <textarea
               name={`step-${step.id}`}
+              aria-label={step.question}
               placeholder={step.placeholder || ''}
               rows={3}
               class="intake-input w-full rounded-[var(--radius-sm)] border-2 border-border/30

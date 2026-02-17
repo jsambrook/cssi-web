@@ -115,7 +115,7 @@ export const intakeFormConfig: IntakeFormConfig = {
       question: 'Where should we send your insights?',
       subtitle: "We'll follow up with a personalized action plan",
       inputType: 'email',
-      placeholder: 'you@hospital.org',
+      placeholder: 'you@example.com',
       required: true,
     },
   ],

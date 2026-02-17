@@ -5,9 +5,13 @@ import Section from '../../../components/Section.astro';
 import PostCard from '../../../components/PostCard.astro';
 import { manualInsights } from '../../../data/manualInsights';
 import { slugifyTag } from '../../../utils/tags';
+import { isPublished } from '../../../utils/dates';
 
 export async function getStaticPaths() {
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+  const blogPosts = await getCollection(
+    'blog',
+    ({ data }) => !data.draft && isPublished(data.date)
+  );
   const manualPosts = manualInsights.map((insight) => ({
     id: insight.slug,
     data: {
@@ -19,7 +23,7 @@ export async function getStaticPaths() {
     },
   }));
 
-  const posts = [...blogPosts, ...manualPosts];
+  const posts = [...blogPosts, ...manualPosts.filter((p) => isPublished(p.data.date))];
 
   // Build a map of slugified-tag → { display name, posts[] }
   const tagMap = new Map<string, { display: string; posts: typeof posts }>();

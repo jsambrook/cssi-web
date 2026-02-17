@@ -29,6 +29,14 @@ export function toPacificIso(d: Date): string {
   ).toISOString();
 }
 
+/** True when the post's frontmatter date is today or earlier (UTC calendar day). */
+export function isPublished(d: Date): boolean {
+  const now = new Date();
+  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const postDay = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+  return postDay <= today;
+}
+
 /** Format a frontmatter date for human display (e.g. "February 16, 2026"). */
 export function formatDate(d: Date): string {
   return d.toLocaleDateString('en-US', {

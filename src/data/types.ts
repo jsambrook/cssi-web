@@ -94,3 +94,13 @@ export interface ServiceCardItem {
   color?: ColorVariant;
   variants: Record<Industry, IndustryVariant>;
 }
+
+export interface ManualInsight {
+  slug: string;
+  title: string;
+  description: string;
+  date: Date;
+  author: string;
+  tags: string[];
+  ogImage?: string;
+}
