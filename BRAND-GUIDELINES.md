@@ -200,7 +200,15 @@ End posts with a low-pressure invitation. The standard patterns are:
 - "If this resonates, I'd welcome the conversation."
 - Link to `/contact` for more formal engagement.
 
-Do not end posts with formatted marketing CTAs, consultation-booking widgets, or multiple competing calls to action. The tone of the ending should match the tone of the writing.
+The best closings connect the specific topic of the post to a concrete offer of help. Instead of a generic "let me know if you have questions," name the specific problem the reader might be stuck on and offer to think through it with them. This treats the reader as a peer, not a lead.
+
+Good example (from the "Not All Waste Is Waste" post):
+
+> "Distinguishing between true waste and protective capacity is rarely obvious. In fact, it is usually the hardest part of the analysis. If you are looking at a specific process in your system and aren't sure if it's waste or insurance, send me a note. I am happy to help you sanity-check your logic."
+
+This works because it names the specific difficulty (waste vs. protective capacity), acknowledges that it is genuinely hard, and offers a concrete thing (sanity-checking the logic) rather than a vague invitation. It sounds like a colleague, not a sales funnel.
+
+Do not end posts with formatted marketing CTAs, consultation-booking widgets, or multiple competing calls to action. Do not use styled boxes, colored backgrounds, or visual treatments that separate the closing from the rest of the prose. The tone and presentation of the ending should match the tone and presentation of the writing.
 
 ### Headlines
 

@@ -78,6 +78,8 @@ Both errors flow from the same source: evaluating parts of a system without refe
 
 I think being very precise about what we call waste — and being willing to defend things that look like waste but aren't — is one of the most practical disciplines an organization can develop. It is also one of the hardest, because it requires saying "that improvement project is not worth doing" to people who are proud of it.
 
-I could be wrong about the framing. I welcome the conversation.
+Distinguishing between true waste and protective capacity is rarely obvious. In fact, it is usually the hardest part of the analysis.
+
+If you are looking at a specific process in your system and aren't sure if it's waste or insurance, send me a note. I am happy to help you sanity-check your logic.
 
 You can reach me at [john@common-sense.com](mailto:john@common-sense.com).
