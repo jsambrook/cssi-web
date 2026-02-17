@@ -62,13 +62,13 @@ const {
       </div>
 
       <!-- Navigation Columns -->
-      <nav aria-label="Footer navigation">
+      <nav aria-label="Footer navigation" class="col-span-2 grid grid-cols-2 gap-12">
         {
-          columns.map((column, colIndex) => (
+          columns.map((column) => (
             <div class="space-y-4">
               <h4 class="font-medium text-white/75">{column.title}</h4>
               <ul class="space-y-3 text-sm">
-                {column.links.map((link, linkIndex) => (
+                {column.links.map((link) => (
                   <li>
                     {link.href ? (
                       <a href={link.href} class="text-white hover:text-primary transition-colors">
@@ -94,7 +94,7 @@ const {
               <li class="flex items-start gap-2">
                 <span aria-hidden="true">📞</span>
                 <div>
-                  {contact.phones.map((phone, index) => (
+                  {contact.phones.map((phone) => (
                     <div>{phone}</div>
                   ))}
                 </div>
@@ -129,10 +129,10 @@ const {
     <!-- Bottom Bar -->
     <div class="mt-12 pt-8 border-t border-white/50">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-white/65 text-sm">{copyright}</p>
+        <p class="text-white/65 text-sm">&copy; {new Date().getFullYear()} {copyright}</p>
         <div class="flex gap-8 text-sm">
           {
-            legalLinks.map((link, index) => (
+            legalLinks.map((link) => (
               <a href={link.href} class="text-white/75 hover:text-white transition-colors">
                 {link.label}
               </a>

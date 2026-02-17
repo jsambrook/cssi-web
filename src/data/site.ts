@@ -62,4 +62,4 @@ export const legalLinks = [
   { label: 'Terms of Service', href: '/legal/terms' },
 ];
 
-export const copyright = '© 2026 Common Sense Systems, Inc.';
+export const copyright = 'Common Sense Systems, Inc.';
