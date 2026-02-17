@@ -90,6 +90,20 @@ Specific qualities:
 - Consultant-speak that uses ten words where three would do
 - Breathless AI hype ("revolutionary," "game-changing," "unprecedented")
 
+### Avoiding AI-Generated Writing Tells
+
+Content produced with AI assistance must still read as if a specific person wrote it. AI-generated text has recognizable patterns, and readers (especially sophisticated ones) will notice. Anyone producing content for this brand, including AI tools, should actively avoid the following.
+
+**Overused AI vocabulary.** These words and phrases are so strongly associated with AI-generated text that they undermine credibility on contact: "delve," "dive into," "unpack," "navigate," "leverage," "harness," "foster," "empower," "elevate," "streamline," "cutting-edge," "game-changer," "paradigm shift." Also avoid the constructions "It's important to note that...," "It's worth noting that...," "In today's [X] landscape...," "At its core...," "This is where [X] comes in," and "Let's explore..." If any of these phrases appear in a draft, replace them with something a person would actually say.
+
+**Structural tells.** AI text gravitates toward excessive formatting: too many headers, too many bullet points, too much bold text for content that would read better as prose. Watch for the "X. Here's why:" or "X. Here's how:" construction, which is nearly diagnostic. Lists of exactly three or five items with suspiciously parallel structure are another signal. Every paragraph wrapping up with a neat takeaway, or sections opening with a broad sweeping statement before narrowing ("In the ever-evolving world of..."), both read as machine-produced.
+
+**Tone and rhythm problems.** AI writing tends toward relentless positivity without nuance, compulsive hedging that covers both sides of everything ("While X is important, Y is equally vital"), and formulaic transitions like "But here's the thing," "That said," and "The bottom line." It wraps up with inspirational calls to action that nobody asked for. Real writing has varied sentence rhythm, occasional roughness, and the willingness to land on one side of an argument.
+
+**Content patterns.** AI text often restates the question before answering it, provides unsolicited caveats and disclaimers, and treats every topic as equally fascinating. It tends toward generic examples rather than specific ones drawn from actual experience. The antidote is specificity: real dates, real places, real observations, real opinions that a machine would not volunteer.
+
+**The test.** Read the draft aloud. If it sounds like it could have been written about any company by any person for any audience, it fails. Our content should sound like John, or at minimum like someone who has done the specific work being described and has actual opinions about what they found.
+
 ### Engagement Posture
 
 We actively invite scrutiny. The voice should convey: "I've thought carefully about this, I've shown my work, and I want to know where I'm wrong."
@@ -208,6 +222,73 @@ Healthcare, AI, Strategy, Leadership, Operations, Theory of Constraints, Decisio
 
 Every blog post requires: `title`, `description`, `metaTitle`, `metaDescription`, `date`, `author`, `tags`. No other fields should be added without discussion. Drafts get `draft: true`. Published posts should not include the `draft` field.
 
+### Search, Social, and Structured Data
+
+We want search engines, AI systems, and social platforms to understand our content accurately. The goal is not to game rankings. It is to describe what we have written clearly enough that the right people find it. This means doing the basics well and being thorough about metadata.
+
+#### Meta Titles and Descriptions
+
+Every page has two title-related fields in its frontmatter: `title` and `metaTitle`. They serve different purposes.
+
+- **`title`** is the display headline the reader sees on the page. It can be conversational, punchy, or provocative. Example: "The Cath Lab Is Empty at 2 AM."
+- **`metaTitle`** is what appears in browser tabs, search result listings, and social cards. It should be clear and descriptive even out of context, and should include the brand name. Example: "The Cath Lab Is Empty at 2 AM | Common Sense Systems." Keep it under 60 characters when possible. Front-load the important words; search engines and users both prioritize what comes first.
+
+Similarly, `description` is the short summary shown on the blog listing page, while `metaDescription` is the snippet search engines may display in results.
+
+- **`metaDescription`** should be 140-160 characters, written as a plain sentence (not a keyword list), and should tell a searcher what they will get if they click. It should address the reader's intent: what question does this piece answer, or what will they learn?
+- Write each `metaDescription` individually. Never duplicate descriptions across posts. If you do not have time to write one, leave it blank; Google will pull a snippet from the page content, which is better than a generic placeholder.
+- Include relevant terms naturally, but do not stuff keywords. Google bolds matching query terms in descriptions, which helps with click-through, but only if the description reads like a real sentence.
+
+Good: `metaDescription: "Hospitals lose $25-40M annually on patients stuck in beds after being medically cleared. Here is how to find and fix the structural causes."`
+
+Bad: `metaDescription: "Healthcare consulting hospital efficiency patient flow optimization Theory of Constraints AI analysis."`
+
+#### Open Graph and Social Sharing
+
+Every page should include Open Graph meta tags (`og:title`, `og:description`, `og:image`, `og:url`, `og:type`) so that links shared on LinkedIn, Twitter/X, and other platforms render with a proper preview card. For blog posts, `og:type` should be `article`. For structural pages (About, Approach, Contact), use `website`.
+
+The `og:image` should be at least 1200x630 pixels for good rendering across platforms. Our build pipeline auto-generates OG images for blog posts; verify they render correctly when sharing.
+
+Also include Twitter card meta tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`). Use `summary_large_image` as the card type for posts with OG images.
+
+#### JSON-LD Structured Data
+
+We use JSON-LD (JavaScript Object Notation for Linked Data) to provide structured data to search engines and AI systems. Google recommends JSON-LD over Microdata or RDFa because it is easier to maintain and less error-prone. The markup lives in a `<script type="application/ld+json">` block in the page `<head>`, separate from the visible HTML.
+
+The following schema types are relevant to our site:
+
+- **`Organization`** (site-wide): Name, URL, logo, founding date, contact information, and `sameAs` links to official profiles (LinkedIn, GitHub, etc.). This establishes Common Sense Systems as a recognized entity.
+- **`Person`** (author pages or site-wide): John Sambrook as the principal author, with name, URL, job title, and affiliation to the Organization.
+- **`BlogPosting`** (every blog post): Headline, author (linked to the Person), datePublished, dateModified, description, image, publisher (linked to the Organization), and mainEntityOfPage. This is the schema type Google uses for blog content and can enable enhanced search result displays.
+- **`BreadcrumbList`** (site-wide): Helps search engines understand site hierarchy and can display breadcrumb trails in search results.
+
+Key rules for structured data:
+
+- The structured data must reflect what is actually on the page. Do not mark up content that the user cannot see.
+- Use the most specific schema type available. Blog posts should use `BlogPosting`, not the generic `Article`.
+- Include all required properties for each type. For `BlogPosting`, that means at minimum: `headline`, `author`, `datePublished`, and `image`.
+- Add recommended properties when the data is available: `dateModified`, `description`, `publisher`.
+- Validate structured data using Google's Rich Results Test (https://search.google.com/test/rich-results) after adding or changing markup.
+- Structured data is not "set and forget." When templates change or new page types are added, re-validate.
+
+#### Canonical URLs
+
+Every page should include a `<link rel="canonical">` tag pointing to its preferred URL. This prevents duplicate content issues if the same page is accessible at multiple URLs.
+
+#### Sitemap and Robots
+
+Maintain an up-to-date XML sitemap that includes all published pages and posts. The sitemap should be submitted to Google Search Console. The `robots.txt` file should allow crawling of all public content.
+
+#### What We Do Not Do
+
+- No keyword stuffing in any metadata field.
+- No hidden text, cloaked content, or structured data that does not match page content.
+- No doorway pages or thin content created for search ranking purposes.
+- No purchasing of links or participating in link schemes.
+- No obsessing over exact character counts. The length guidelines above are practical targets, not rigid rules. Clarity and accuracy matter more than hitting a number.
+
+Our SEO philosophy matches our editorial philosophy: produce strong, useful content, then describe it honestly to the systems that index it.
+
 ### Images
 
 Blog post OG images are auto-generated by the build pipeline. Custom images should match the existing style. No stock photography. No generic "business people shaking hands" imagery.
@@ -220,7 +301,7 @@ Blog post OG images are auto-generated by the build pipeline. Custom images shou
 
 The website should communicate that our methods work across industries. Healthcare is our deepest current vertical, but the intellectual framework is universal. Ways to reinforce this:
 
-- The About page and Approach page should reference multiple domains (healthcare, manufacturing, technology, embedded systems).
+- The About page and Approach page should reference multiple domains (healthcare, government, manufacturing, technology, embedded systems).
 - Blog posts from non-healthcare domains (MedTech, R&D, small business operations) demonstrate range.
 - TOC concepts should be explained in domain-neutral terms first, then applied to specific contexts.
 - Avoid language that implies we only work in healthcare ("our healthcare practice," "as a healthcare consulting firm"). Prefer: "we work with complex organizations" or "our current healthcare work."
@@ -248,3 +329,6 @@ Before publishing, check:
 - [ ] Are tags title-cased and consistent with existing tags?
 - [ ] Does the frontmatter have all required fields?
 - [ ] Has the piece been read aloud to check for natural flow?
+- [ ] Is the draft free of AI writing tells (see "Avoiding AI-Generated Writing Tells" above)?
+- [ ] Are `metaTitle` and `metaDescription` written individually for this post (not duplicated or left generic)?
+
