@@ -29,14 +29,14 @@ We are not a large firm. We do not pretend to be. The work is personal, direct, 
 
 ### Colors
 
-| Token | Hex | Usage |
-|-------|-----|-------|
+| Token            | Hex       | Usage                                             |
+| ---------------- | --------- | ------------------------------------------------- |
 | Primary (Orange) | `#fe811b` | Brand accent, buttons, links, selection highlight |
-| Secondary (Blue) | `#155dfc` | Supporting accent, charts, secondary actions |
-| Foreground | `#292929` | Body text, headings (light mode) |
-| Muted | `#666` | Secondary text, captions |
-| Background | `#fff` | Page background (light mode) |
-| Dark background | `#292929` | Page background (dark mode), footer |
+| Secondary (Blue) | `#155dfc` | Supporting accent, charts, secondary actions      |
+| Foreground       | `#292929` | Body text, headings (light mode)                  |
+| Muted            | `#666`    | Secondary text, captions                          |
+| Background       | `#fff`    | Page background (light mode)                      |
+| Dark background  | `#292929` | Page background (dark mode), footer               |
 
 Orange is the dominant brand color. It appears in CTAs, borders, the selection highlight, and any element that needs to feel like "us." Blue is a supporting color, not a competitor to orange. Use it for contrast and variety, not as a co-equal brand color.
 
@@ -392,4 +392,3 @@ What is not acceptable: a topic and a request to generate a post. A list of keyw
 If a post is substantially written by John from his own experience and refined with AI assistance, no special attribution is needed. This is the normal workflow and the reader can assume it.
 
 If a post is primarily analytical and the AI did most of the drafting (for example, summarizing a data set or synthesizing multiple sources), the post must include a clear statement of AI involvement. Place it naturally, not as a disclaimer buried in a footnote. Example: "This analysis was produced with significant AI assistance. The data sources and conclusions are mine; the prose was drafted collaboratively with Claude."
-

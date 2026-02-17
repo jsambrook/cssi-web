@@ -9,13 +9,13 @@
 
 ## Fixed Since Last Review
 
-| Finding                                | Fixed In                                         |
-| -------------------------------------- | ------------------------------------------------ |
-| Footer phone numbers not clickable     | `Footer.astro:98-103` — now `<a href="tel:...">` |
-| IntakeForm placeholder hospital-specific | `intakeForm.ts:118` — now `you@example.com`    |
-| Unused `--input` CSS variable          | Removed from `tokens.css`                        |
-| ManualInsight type not in types.ts     | `types.ts:98-106` — imported in manualInsights   |
-| Orphaned OG image (the-discharge-trap) | Deleted from `public/images/blog/`               |
+| Finding                                  | Fixed In                                         |
+| ---------------------------------------- | ------------------------------------------------ |
+| Footer phone numbers not clickable       | `Footer.astro:98-103` — now `<a href="tel:...">` |
+| IntakeForm placeholder hospital-specific | `intakeForm.ts:118` — now `you@example.com`      |
+| Unused `--input` CSS variable            | Removed from `tokens.css`                        |
+| ManualInsight type not in types.ts       | `types.ts:98-106` — imported in manualInsights   |
+| Orphaned OG image (the-discharge-trap)   | Deleted from `public/images/blog/`               |
 
 ---
 
@@ -109,7 +109,7 @@ BlogPostLayout correctly builds a 3-level breadcrumb (Home -> Insights -> Post t
 **File:** `src/components/IntakeForm.astro:226`
 
 ```javascript
-const stepEl = step;  // step is already the element
+const stepEl = step; // step is already the element
 ```
 
 `stepEl` is identical to `step`. Minor dead assignment.
@@ -117,6 +117,7 @@ const stepEl = step;  // step is already the element
 ### 9. Four draft posts have empty body content
 
 **Files:**
+
 - `decision-making-frameworks-for-hospital-leaders.md`
 - `community-benefit-measurement.md`
 - `financial-transparency-governance.md`
