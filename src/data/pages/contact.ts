@@ -1,4 +1,4 @@
-import type { PageHeader, CTAContent } from '../types';
+import type { PageHeader, CTAContent, ContactGrid } from '../types';
 
 export const pageTitle = 'Contact Us in Kirkland, WA';
 export const pageDescription =
@@ -11,7 +11,7 @@ export const header: PageHeader = {
     "Let's discuss your situation. No obligation, no sales pitch\u2014just a conversation about whether we can help.",
 };
 
-export const contactGrid = {
+export const contactGrid: ContactGrid = {
   discoveryCall: {
     heading: 'Schedule a Meeting',
     description:

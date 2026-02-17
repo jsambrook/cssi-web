@@ -14,10 +14,11 @@ import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDef
 import { buildArticleSchema, buildBreadcrumbSchema, buildWebPageSchema } from '../../data/schema';
 import { siteConfig } from '../../data/site';
 import { getManualInsight } from '../../data/manualInsights';
+import { toPacificIso } from '../../utils/dates';
 
 const insight = getManualInsight('nursing-conflict');
 const { title, description, author, tags } = insight;
-const publishedDate = insight.date.toISOString().slice(0, 10);
+const publishedDate = toPacificIso(insight.date);
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Home', href: '/' },

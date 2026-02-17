@@ -7,6 +7,10 @@ export function parseAddress(raw: string) {
     throw new Error(`parseAddress: expected "street\\ncity, ST ZIP", got ${JSON.stringify(raw)}`);
   }
   const [streetLine, cityLine] = parts;
+  const street = streetLine.trim();
+  if (!street) {
+    throw new Error(`parseAddress: street line is empty in ${JSON.stringify(raw)}`);
+  }
   const cityMatch = cityLine.match(/^(.+),\s*([A-Z]{2})\s+(\d{5})/);
   if (!cityMatch) {
     throw new Error(
@@ -14,7 +18,7 @@ export function parseAddress(raw: string) {
     );
   }
   return {
-    streetAddress: streetLine.trim(),
+    streetAddress: street,
     addressLocality: cityMatch[1],
     addressRegion: cityMatch[2],
     postalCode: cityMatch[3],

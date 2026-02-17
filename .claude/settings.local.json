@@ -7,7 +7,20 @@
       "Bash(git add:*)",
       "mcp__plugin_playwright_playwright__browser_click",
       "mcp__plugin_playwright_playwright__browser_snapshot",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(gh issue create:*)",
+      "Bash(npm run preview)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd og:site_name meta tag to BaseLayout\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "mcp__plugin_playwright_playwright__browser_press_key",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_type",
+      "Bash(git push:*)",
+      "Bash(git -C /Users/john/git/cssi-web mv:*)",
+      "Bash(git -C /Users/john/git/cssi-web add:*)",
+      "Bash(git -C:*)",
+      "Bash(git -C /Users/john/git/cssi-web push)",
+      "Bash(npx prettier:*)"
     ]
   }
 }

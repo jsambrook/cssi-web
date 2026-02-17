@@ -1,6 +1,4 @@
-import type { FeatureItem } from './types';
-
-type ColorVariant = NonNullable<FeatureItem['color']>;
+import type { ColorVariant } from './types';
 
 export const colorClasses: Record<ColorVariant, string> = {
   default: 'bg-accent/10 text-accent',

@@ -24,19 +24,7 @@ export interface ContentBlock {
   lead?: boolean;
 }
 
-export interface FeatureItem {
-  title: string;
-  description: string;
-  color?: 'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple';
-  href?: string;
-}
-
-export interface TestimonialItem {
-  quote: string;
-  author: string;
-  company?: string;
-  initials?: string;
-}
+export type ColorVariant = 'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple';
 
 export interface CTAContent {
   headline: string;
@@ -45,6 +33,15 @@ export interface CTAContent {
   secondaryCta?: CTA;
   footnote?: string;
 }
+
+export interface ContactGridItem {
+  heading: string;
+  description: string;
+  linkText?: string;
+  href?: string;
+}
+
+export type ContactGrid = Record<string, ContactGridItem>;
 
 export type LegalBlock =
   | { type: 'heading'; text: string; level: 2 | 3 }
@@ -94,6 +91,6 @@ export interface IndustryVariant {
 
 export interface ServiceCardItem {
   id: string;
-  color?: 'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple';
+  color?: ColorVariant;
   variants: Record<Industry, IndustryVariant>;
 }

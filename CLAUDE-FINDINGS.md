@@ -3,70 +3,91 @@
 **Date:** 2026-02-16
 **Reviewer:** Claude Opus 4.6
 **Scope:** Full codebase review of cssi-web (Astro 5 static site)
-**Build:** Passes (66 pages). Lint: clean. Formatting: clean. SEO checks: pass.
-
-> All 18 findings from the previous review have been fixed.
+**Previous reviews:** 2 prior rounds (18 findings fixed, 13 findings in last round)
 
 ---
 
 ## High
 
-### 1. `parseAddress` in schema.ts silently produces empty strings on malformed input
+### 1. Dead components: FeatureCard and TestimonialCard
+
+**Files:**
+- `src/components/FeatureCard.astro` (entire file, never rendered)
+- `src/components/TestimonialCard.astro` (entire file, never rendered)
+- `src/data/types.ts:27-39` (`FeatureItem`, `TestimonialItem` interfaces)
+
+Neither `<FeatureCard>` nor `<TestimonialCard>` is rendered anywhere in the codebase. `TestimonialItem` is never imported. `FeatureItem` is imported only in `src/data/colors.ts:1` solely to extract the `ColorVariant` type.
+
+**Fix:** Export `ColorVariant` as a standalone type in `types.ts`. Remove both unused components and their interfaces.
+
+### 2. ColorVariant type duplicated in three places
+
+**Files:**
+- `src/data/types.ts:30` (inside `FeatureItem.color`)
+- `src/data/types.ts:97` (inside `ServiceCardItem.color`)
+- `src/components/FeatureCard.astro:19` (inline in Props)
+
+The union `'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple'` appears three times. Adding or removing a color requires updating all three independently.
+
+**Fix:** Export `ColorVariant` from `types.ts` and reference it in `ServiceCardItem` and `colors.ts`. (Subsumes the FeatureCard fix from finding #1 since that component should be removed.)
+
+### 3. Inconsistent date handling in manual insight pages
+
+**Files:**
+- `src/pages/insights/pacp.astro:20`
+- `src/pages/insights/nursing-conflict.astro:20`
+
+Both use `insight.date.toISOString().slice(0, 10)` for schema.org `datePublished`, producing a bare date string (`"2026-02-16"`). The rest of the codebase uses `toPacificIso()` from `src/utils/dates.ts`, which produces a full Pacific-anchored ISO timestamp (`"2026-02-16T08:00:00.000Z"`). This means structured data has inconsistent date formats between markdown blog posts and manual insight pages.
+
+**Fix:** Import and use `toPacificIso` in both manual insight pages.
+
+### 4. Misleading CTA and duplicate destinations on PACP page
+
+**File:** `src/pages/insights/pacp.astro:245-257`
+
+Two issues:
+1. The secondary CTA reads "Download the Concept Paper" but links to `/contact`. There is no downloadable document. Users expect a PDF download.
+2. Both CTAs ("Discuss a Pilot Implementation" and "Download the Concept Paper") link to the same URL (`/contact`), making the two-button layout misleading.
+
+**Fix:** Either create an actual downloadable concept paper, change the button text to "Request the Concept Paper", or consolidate into a single CTA.
+
+---
+
+## Medium
+
+### 5. Missing type annotation on contactGrid
+
+**File:** `src/data/pages/contact.ts:14`
+
+`contactGrid` is an untyped export with a complex nested shape (four sections with varying optional properties). Every other page data export in the project has an explicit type annotation (`PageHeader`, `CTAContent`, `LegalBlock[]`, etc.). This is inconsistent and loses compile-time safety.
+
+**Fix:** Define a `ContactGridItem` interface and `ContactGrid` type in `types.ts`, then annotate the export.
+
+### 6. `parseAddress` in schema.ts silently produces empty strings on malformed input
 
 **File:** `src/data/schema.ts:3-12`
 
-If `footerContact.address` in `site.ts` is ever changed to a format that doesn't match `"street\ncity, ST ZIP"`, the regex fails silently and all address fields in JSON-LD (`addressLocality`, `addressRegion`, `postalCode`) become empty strings. This produces invalid structured data with no build error.
+If `footerContact.address` in `site.ts` doesn't match the expected `"street\ncity, ST ZIP"` format, the regex fails silently and all address fields in JSON-LD become empty strings. This produces invalid structured data with no build error.
 
-```typescript
-const cityMatch = cityLine?.match(/^(.+),\s*([A-Z]{2})\s+(\d{5})/);
-return {
-  addressLocality: cityMatch?.[1] ?? '',  // silently empty
-```
+**Fix:** Add assertions to fail loudly on malformed input.
 
-**Fix:** Add assertions:
+### 7. Schema.ts duplicates founder data arrays
 
-```typescript
-function parseAddress(raw: string) {
-  const parts = raw.split('\n');
-  assert(parts.length === 2, `Address must be "street\\ncity, ST ZIP", got: ${raw}`);
-  const [streetLine, cityLine] = parts;
-  const match = cityLine.match(/^(.+),\s*([A-Z]{2})\s+(\d{5})/);
-  assert(match, `City line must match "City, ST ZIP", got: ${cityLine}`);
-  return {
-    streetAddress: streetLine.trim(),
-    addressLocality: match[1],
-    addressRegion: match[2],
-    postalCode: match[3],
-  };
-}
-```
+**Files:** `src/data/schema.ts` (`buildProfessionalServiceSchema` and `buildFounderSchema`)
 
-### 2. Footer emoji icons lack `aria-hidden="true"`
+The `knowsAbout`, `hasCredential`, and `alumniOf` arrays are copy-pasted between these two functions. Updating one without the other creates inconsistent structured data.
 
-**File:** `src/components/Footer.astro:95, 107, 120`
+**Fix:** Extract to shared constants.
 
-The phone, email, and location emoji `<span>` elements are decorative but will be announced by screen readers as separate items (e.g., "telephone receiver", "envelope").
+### 8. ResultsSection hardcodes links to standalone insight pages
 
-```astro
-<span>📞</span>
-<!-- line 95 -->
-<span>✉️</span>
-<!-- line 107 -->
-<span>📍</span>
-<!-- line 120 -->
-```
+**File:** `src/components/ResultsSection.astro:122, 149`
 
-**Fix:** Add `aria-hidden="true"` to each span.
+URLs `/insights/pacp` and `/insights/nursing-conflict` are baked into the component markup, not imported from `manualInsights.ts`. If either page is renamed or removed, the links break silently.
 
-### 3. ResultsSection emoji icons lack `aria-hidden="true"`
+**Fix:** Import slugs from `manualInsights.ts` and construct URLs.
 
-**File:** `src/components/ResultsSection.astro:107-109, 133-135`
-
-The hospital (&#x1F3E5;) and scales (&#x2696;&#xFE0F;) emoji characters inside `<div>` elements are decorative but will be announced by screen readers.
-
-**Fix:** Add `aria-hidden="true"` to the parent div, or wrap the emoji in a `<span aria-hidden="true">`.
-
-### 4. IntakeForm email validation too lenient
+### 9. IntakeForm email validation too lenient
 
 **File:** `src/components/IntakeForm.astro:238`
 
@@ -74,75 +95,31 @@ The hospital (&#x1F3E5;) and scales (&#x2696;&#xFE0F;) emoji characters inside `
 return input.value.trim() !== '' && input.value.includes('@');
 ```
 
-This accepts strings like `"@"`, `"a@"`, `"@b"` as valid emails.
+Accepts `"@"`, `"a@"`, `"@b"` as valid emails. The browser's native `type="email"` validation catches some of these, but the custom JS validation runs first.
 
-**Fix:** Use a minimal regex:
-
-```javascript
-return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-```
-
-### 5. `colorClasses` typed as `Record<string, string>` -- no compile-time safety
-
-**File:** `src/data/colors.ts:1`
-
-```typescript
-export const colorClasses: Record<string, string> = { ... };
-```
-
-The color union type `'default' | 'red' | 'orange' | 'amber' | 'blue' | 'green' | 'purple'` is defined in `types.ts` (on `FeatureItem.color` and `ServiceCardItem.color`) but `colorClasses` uses `Record<string, string>`. If a new color variant is added to the type, TypeScript won't flag the missing entry in `colorClasses`.
-
-**Fix:**
-
-```typescript
-type ColorVariant = NonNullable<FeatureItem['color']>;
-export const colorClasses: Record<ColorVariant, string> = { ... };
-```
+**Fix:** Use `/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())`.
 
 ---
 
-## Medium
+## Low
 
-### 6. ResultsSection hardcodes links to standalone insight pages
+### 10. Footer emoji icons lack `aria-hidden="true"`
 
-**File:** `src/components/ResultsSection.astro:122, 149`
+**File:** `src/components/Footer.astro:95, 107, 120`
 
-```astro
-<a href="/insights/pacp" ...>Read the Concept Paper &rarr;</a>
-<a href="/insights/nursing-conflict" ...>View the Analysis &rarr;</a>
-```
+The phone, email, and location emoji spans are decorative but will be announced by screen readers.
 
-These URLs are baked into the component markup, not passed as props or imported from `manualInsights.ts`. If either page is renamed or removed, the links break silently with no build error.
+**Fix:** Add `aria-hidden="true"` to each span.
 
-**Fix:** Accept as props, or import slugs from `manualInsights.ts` and construct URLs.
+### 11. Contact page duplicates address parsing from schema.ts
 
-### 7. Schema.ts duplicates `knowsAbout` and `hasCredential` arrays
+**File:** `src/pages/contact.astro:11`
 
-**Files:** `src/data/schema.ts:140-198` (in `buildProfessionalServiceSchema`) and `src/data/schema.ts:276-334` (in `buildFounderSchema`)
+`footerContact.address.split('\n')` duplicates the same split done in `src/data/schema.ts:5`.
 
-The `knowsAbout` array (7 DefinedTerm items), `hasCredential`, and `alumniOf` arrays are copy-pasted between these two functions. Updating one without the other creates inconsistent structured data.
+**Fix:** Export parsed address from a shared location.
 
-**Fix:** Extract to shared constants:
-
-```typescript
-const founderKnowsAbout = [ ... ];
-const founderCredentials = [ ... ];
-const founderAlumni = [ ... ];
-```
-
-### 8. Unused `input` Tailwind color token
-
-**File:** `tailwind.config.mjs:37`
-
-```javascript
-input: 'var(--input)',
-```
-
-This token references `--input` from `tokens.css`, but no component uses `bg-input`, `text-input`, etc. The IntakeForm component uses `bg-[var(--input-background)]` directly instead. The token exists but serves no purpose.
-
-**Fix:** Remove the `input` token from `tailwind.config.mjs`, or use it in components instead of the raw CSS variable.
-
-### 9. `deploy.sh` hardcodes absolute path
+### 12. `deploy.sh` hardcodes absolute path
 
 **File:** `deploy.sh:12`
 
@@ -150,77 +127,43 @@ This token references `--input` from `tokens.css`, but no component uses `bg-inp
 REPO_DIR="/git/cssi-web"
 ```
 
-If the repo is cloned to a different location on a new server, this breaks.
+**Fix:** Derive from script location: `REPO_DIR="$(cd "$(dirname "$0")" && pwd)"`.
 
-**Fix:** Derive from script location:
-
-```bash
-REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
-```
-
-### 10. Standalone insight pages use BaseLayout directly, missing WebPage schema
-
-**Files:** `src/pages/insights/pacp.astro:46`, `src/pages/insights/nursing-conflict.astro`
-
-Both standalone insight pages use `BaseLayout` instead of `PageLayout`. They get article schema and breadcrumbs, but miss the `WebPage` schema that all other inner pages receive via `PageLayout`. This is a minor SEO inconsistency.
-
-**Fix:** Add `buildWebPageSchema(...)` to their `jsonLd` arrays, or switch to `PageLayout`.
-
----
-
-## Low
-
-### 11. Contact page duplicates address parsing from schema.ts
-
-**File:** `src/pages/contact.astro:11`
-
-```typescript
-const [addressStreet, addressCity] = footerContact.address.split('\n');
-```
-
-This is the same split done in `src/data/schema.ts:5`. Minor DRY issue -- if the address format changes, both locations need updating.
-
-**Fix:** Export the parsed address from `schema.ts` or add an `addressParts` helper.
-
-### 12. Blog OG image fallback path not validated at build time
+### 13. Blog OG image fallback path not validated at build time
 
 **File:** `src/pages/insights/[slug].astro:15`
 
-```typescript
-const ogImage = post.data.ogImage ?? `/images/blog/${post.id}.png`;
-```
+If a blog post lacks `ogImage` and the auto-generated PNG doesn't exist, the OG meta tag points to a 404.
 
-If a blog post lacks `ogImage` and the auto-generated PNG doesn't exist, the OG meta tag points to a 404. The `generate-og-images.js` script covers this case for markdown posts, but there's no build-time assertion that the fallback file actually exists.
+---
 
-### 13. IntakeForm Formspree error response handling is imprecise
+## Summary
 
-**File:** `src/components/IntakeForm.astro:307-309`
-
-```javascript
-const data = await res.json();
-if (data.ok) { ... }
-```
-
-If Formspree returns a non-JSON response (e.g., 500 with HTML body), `res.json()` throws, and the catch block shows "Network error" which is misleading. Consider checking `res.ok` first:
-
-```javascript
-if (!res.ok) {
-  showError('Submission failed. Please try again.');
-  return;
-}
-const data = await res.json();
-```
+| # | Finding | Severity | Effort |
+|---|---------|----------|--------|
+| 1 | Dead FeatureCard/TestimonialCard components | High | Small |
+| 2 | ColorVariant type duplication | High | Small |
+| 3 | Inconsistent date handling in manual insights | High | Small |
+| 4 | Misleading/duplicate PACP CTA | High | Small |
+| 5 | Missing contactGrid type annotation | Medium | Small |
+| 6 | parseAddress silent failure | Medium | Small |
+| 7 | Schema.ts duplicate founder data | Medium | Small |
+| 8 | ResultsSection hardcoded links | Medium | Small |
+| 9 | IntakeForm email validation | Medium | Small |
+| 10 | Footer emoji accessibility | Low | Small |
+| 11 | Contact page address parsing DRY | Low | Small |
+| 12 | deploy.sh hardcoded path | Low | Small |
+| 13 | Blog OG image fallback not validated | Low | Small |
 
 ---
 
 ## Positive Patterns
 
-- **All 18 previous findings fixed.** Standalone insight pages now import from `manualInsights.ts`, legal pages use `PageLayout`, `colorClasses` deduplicated to `src/data/colors.ts`, post listings use shared `PostCard` component, scripts are executable, Tailwind uses ESM imports, etc.
-- **Data-driven architecture** is well-executed. Content lives in TypeScript data files with shared types, and `.astro` files are pure templates.
-- **SEO infrastructure** is thorough: automated postbuild SEO checker, frontmatter SEO linter in prebuild, canonical URLs, Open Graph, Twitter cards, structured data (Organization, WebPage, BreadcrumbList, BlogPosting), robots.txt, sitemap, RSS feed.
-- **Accessibility** is solid: skip-to-content link, `aria-current="page"`, `aria-expanded` on mobile menu, `aria-hidden` on decorative SVGs, semantic heading hierarchy, dark mode toggle with dynamic `aria-label`, properly labeled footer nav landmark.
-- **Deploy script** is well-designed with file locking, atomic rollback on build failure, conditional `npm ci`, and syslog logging.
-- **CSS custom properties** for complete theming with dark mode support, including feature card colors and CTA gradients.
+- **Data-driven architecture** is well-executed. Content lives in TypeScript data files with shared types, `.astro` files are pure templates.
+- **SEO infrastructure** is thorough: automated postbuild SEO checker, frontmatter SEO linter in prebuild, canonical URLs, Open Graph, Twitter cards, structured data, robots.txt, sitemap, RSS feed.
+- **Accessibility** is solid: skip-to-content link, `aria-current="page"`, `aria-expanded` on mobile menu, `aria-hidden` on decorative SVGs, semantic heading hierarchy, dark mode toggle.
+- **CSS custom properties** provide complete theming with dark mode support.
 - **TypeScript strict mode** with Zod schema validation on blog frontmatter.
-- **OG image generation** pipeline with caching and design versioning.
-- **Shared utilities** (`src/utils/tags.ts`, `src/utils/dates.ts`, `src/utils/seo.ts`) keep logic DRY across pages.
+- **Shared utilities** (`dates.ts`, `tags.ts`, `seo.ts`) keep logic DRY across pages.
+- **Deploy script** has file locking, atomic rollback, conditional `npm ci`, and syslog logging.
+- **metaTitle/metaDescription** frontmatter fields are properly wired through `[slug].astro` to `BlogPostLayout.astro` for per-post SEO overrides.
