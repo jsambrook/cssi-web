@@ -209,6 +209,13 @@ p {
   line-height: 1.5;
 }
 
+/* ===== Prose (blog) reset ===== */
+/* The global p{} rule above sets 14px, which conflicts with prose-lg's
+   inherited 18px that <li> elements use.  Let prose own its own sizing. */
+.prose p {
+  font-size: inherit;
+}
+
 /* ===== Selection ===== */
 ::selection {
   background-color: var(--primary);
