@@ -42,7 +42,7 @@ const {
 const formattedDate = formatDate(date);
 const pacificDateIso = toPacificIso(date);
 const pacificModifiedIso = toPacificIso(updatedDate ?? date);
-const articleUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).href;
+const articleUrl = new URL(Astro.url.pathname, Astro.site).href;
 const imageUrl = ogImage ? `${siteConfig.siteUrl}${ogImage}` : undefined;
 const articleSchema = buildArticleSchema({
   title,
