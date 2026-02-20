@@ -1,0 +1,110 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Section from '../../components/Section.astro';
+import {
+  pageTitle,
+  pageDescription,
+  lastUpdated,
+  consentScript,
+  content,
+} from '../../data/pages/sms-consent';
+
+const consentWorkflowIdx = content.findIndex(
+  (b) => b.type === 'heading' && 'text' in b && b.text === 'Consent Workflow'
+);
+const preDiagram = content.slice(0, consentWorkflowIdx);
+const postDiagram = content.slice(consentWorkflowIdx);
+
+const verbalConsentIdx = preDiagram.findIndex(
+  (b) => b.type === 'heading' && 'text' in b && b.text === 'Verbal Consent'
+);
+const preScript = preDiagram.slice(0, verbalConsentIdx + 2);
+const postScript = preDiagram.slice(verbalConsentIdx + 2);
+---
+
+<PageLayout pageTitle={pageTitle} description={pageDescription}>
+  <Section>
+    <div class="max-w-3xl mx-auto space-y-6 text-sm text-muted-foreground">
+      <h1 class="text-4xl sm:text-5xl text-foreground">{pageTitle}</h1>
+      <p>{pageDescription}</p>
+      <p>Last updated: {lastUpdated}</p>
+
+      {
+        preScript.map((block) => {
+          if (block.type === 'heading' && block.level === 2)
+            return <h2 class="text-2xl text-foreground pt-4">{block.text}</h2>;
+          if (block.type === 'heading' && block.level === 3)
+            return <h3 class="text-lg font-medium text-foreground pt-2">{block.text}</h3>;
+          if (block.type === 'text') return <p set:html={block.html} />;
+          if (block.type === 'list')
+            return (
+              <ul class="list-disc pl-6 space-y-1">
+                {block.items.map((item) => (
+                  <li set:html={item} />
+                ))}
+              </ul>
+            );
+        })
+      }
+
+      <blockquote class="border-l-4 border-primary bg-muted/50 rounded-md px-4 py-3 italic">
+        {consentScript}
+      </blockquote>
+
+      {
+        postScript.map((block) => {
+          if (block.type === 'heading' && block.level === 2)
+            return <h2 class="text-2xl text-foreground pt-4">{block.text}</h2>;
+          if (block.type === 'heading' && block.level === 3)
+            return <h3 class="text-lg font-medium text-foreground pt-2">{block.text}</h3>;
+          if (block.type === 'text') return <p set:html={block.html} />;
+          if (block.type === 'list')
+            return (
+              <ul class="list-disc pl-6 space-y-1">
+                {block.items.map((item) => (
+                  <li set:html={item} />
+                ))}
+              </ul>
+            );
+        })
+      }
+
+      {
+        postDiagram.map((block) => {
+          if (block.type === 'heading' && 'text' in block && block.text === 'Consent Workflow') {
+            return (
+              <>
+                <h2 class="text-2xl text-foreground pt-4">{block.text}</h2>
+              </>
+            );
+          }
+          if (block.type === 'text' && 'html' in block && block.html.includes('diagram below')) {
+            return (
+              <>
+                <p set:html={block.html} />
+                <img
+                  src="/images/sms-consent-flow.png"
+                  alt="SMS consent workflow diagram showing how verbal and keyword consent is obtained, recorded, and managed"
+                  class="rounded-lg border border-border mt-2"
+                />
+              </>
+            );
+          }
+          if (block.type === 'heading' && block.level === 2)
+            return <h2 class="text-2xl text-foreground pt-4">{block.text}</h2>;
+          if (block.type === 'heading' && block.level === 3)
+            return <h3 class="text-lg font-medium text-foreground pt-2">{block.text}</h3>;
+          if (block.type === 'text') return <p set:html={block.html} />;
+          if (block.type === 'list')
+            return (
+              <ul class="list-disc pl-6 space-y-1">
+                {block.items.map((item) => (
+                  <li set:html={item} />
+                ))}
+              </ul>
+            );
+        })
+      }
+    </div>
+  </Section>
+</PageLayout>

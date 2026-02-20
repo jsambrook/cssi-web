@@ -35,6 +35,7 @@ export const footerColumns = [
       { label: 'Approach', href: '/approach' },
       { label: 'Insights', href: '/insights' },
       { label: 'Contact', href: '/contact' },
+      { label: 'SMS Consent', href: '/legal/sms-consent' },
     ],
   },
   {
