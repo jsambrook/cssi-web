@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Section from '../../components/Section.astro';
+import ServiceCards from '../../components/ServiceCards.astro';
+import CTASection from '../../components/CTASection.astro';
+import { industries } from '../../data/pages/industries';
+
+const { pageTitle, pageDescription, header, sectionHeading, serviceCards, cta } =
+  industries.healthcare;
+---
+
+<PageLayout pageTitle={pageTitle} description={pageDescription}>
+  <Section background="muted">
+    <div class="max-w-3xl mx-auto text-center space-y-4">
+      <p class="text-xs uppercase tracking-wider text-accent">{header.label}</p>
+      <h1 class="text-4xl sm:text-5xl">{header.heading}</h1>
+      <p class="text-muted-foreground">{header.subheading}</p>
+    </div>
+  </Section>
+
+  <Section heading={sectionHeading}>
+    <ServiceCards cards={serviceCards} />
+  </Section>
+
+  <CTASection
+    headline={cta.headline}
+    description={cta.description}
+    primaryCta={cta.primaryCta}
+    secondaryCta={cta.secondaryCta}
+    footnote={cta.footnote}
+  />
+</PageLayout>

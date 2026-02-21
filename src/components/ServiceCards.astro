@@ -1,0 +1,68 @@
+---
+/*
+ * ServiceCards.astro
+ *
+ * Static 3-column service card grid for industry landing pages.
+ * Pre-resolved cards with no toggle machinery — fully server-rendered.
+ *
+ * Props:
+ *   cards: IndustryServiceCard[] — flat cards with category, title, description, color
+ */
+
+import type { IndustryServiceCard } from '@data/pages/industries';
+import { colorClasses } from '@data/colors';
+
+interface Props {
+  cards: IndustryServiceCard[];
+}
+
+const { cards } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+  {
+    cards.map((card) => {
+      const color = card.color || 'default';
+      return (
+        <div
+          class="bg-card text-card-foreground flex flex-col gap-6 rounded-[var(--radius)]
+               border-2 border-border shadow-sm relative overflow-hidden
+               hover:shadow-xl transition-all duration-300 group"
+        >
+          <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+          <div class="p-6 space-y-4 relative">
+            <div
+              class:list={[
+                'inline-flex items-center justify-center w-14 h-14 rounded-xl',
+                colorClasses[color],
+              ]}
+            >
+              <svg
+                class="h-7 w-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+
+            <p class="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              {card.category}
+            </p>
+
+            <div class="space-y-3">
+              <h3 class="text-xl">{card.title}</h3>
+              <p class="text-sm text-muted-foreground leading-relaxed">{card.description}</p>
+            </div>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>

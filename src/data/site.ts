@@ -39,6 +39,13 @@ export const footerColumns = [
     ],
   },
   {
+    title: 'Industries',
+    links: [
+      { label: 'Healthcare', href: '/industries/healthcare' },
+      { label: 'Technology', href: '/industries/tech' },
+    ],
+  },
+  {
     title: 'Topics',
     links: [
       { label: 'Healthcare', href: '/insights/tag/healthcare' },
