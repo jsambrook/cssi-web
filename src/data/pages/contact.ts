@@ -2,7 +2,7 @@ import type { PageHeader, CTAContent, ContactGrid } from '../types';
 
 export const pageTitle = 'Contact Us in Kirkland, WA';
 export const pageDescription =
-  'Schedule a free consultation with John Sambrook at Common Sense Systems in Kirkland, Washington. Healthcare operations consulting for hospitals and health systems across the Puget Sound region and Washington State.';
+  'Schedule a free consultation with Common Sense Systems in Kirkland, WA. We help organizations find and break the constraint that blocks throughput.';
 
 export const header: PageHeader = {
   label: 'Contact',

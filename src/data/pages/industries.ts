@@ -20,7 +20,7 @@ export const industries: Record<string, IndustryPageData> = {
   healthcare: {
     pageTitle: 'Healthcare Consulting Services',
     pageDescription:
-      'Operational architecture and constraint analysis for hospitals and health systems. Accelerate patient flow, design direct-to-employer contracts, and unify clinical teams.',
+      'Constraint analysis for hospitals and health systems. Accelerate patient flow, slash length of stay, and unify clinical teams. Kirkland, WA.',
     header: {
       label: 'Healthcare',
       heading: 'Operational Architecture for Health Systems',
@@ -68,7 +68,7 @@ export const industries: Record<string, IndustryPageData> = {
   tech: {
     pageTitle: 'Technology Consulting Services',
     pageDescription:
-      'Operational architecture and constraint analysis for tech and product teams. Accelerate R&D, design risk-shared licensing models, and align product roadmaps with sales.',
+      'Constraint analysis for tech and product teams. Accelerate R&D, structure risk-shared licensing, and align product roadmaps with sales commitments.',
     header: {
       label: 'Technology',
       heading: 'Operational Architecture for Tech & Product Teams',

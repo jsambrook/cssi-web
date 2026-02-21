@@ -2,7 +2,7 @@ import type { PageHeader, GridItem, CTAContent } from '../types';
 
 export const pageTitle = 'Our Approach to Healthcare Consulting';
 export const pageDescription =
-  'A practical, fixed-fee consulting approach for healthcare organizations in Washington State. We use Theory of Constraints methodology to frame problems, build shared facts, and design decisions that resolve operational bottlenecks -- not reports that gather dust.';
+  'Fixed-fee, decision-ready consulting. We use Theory of Constraints to frame the problem, build shared facts, and design the intervention — not a report.';
 
 export const header: PageHeader = {
   label: 'Approach',
