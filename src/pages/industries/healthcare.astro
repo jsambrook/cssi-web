@@ -4,12 +4,23 @@ import Section from '../../components/Section.astro';
 import ServiceCards from '../../components/ServiceCards.astro';
 import CTASection from '../../components/CTASection.astro';
 import { industries } from '../../data/pages/industries';
+import { buildServiceSchema } from '../../data/schema';
+import { siteConfig } from '../../data/site';
 
 const { pageTitle, pageDescription, header, sectionHeading, serviceCards, cta } =
   industries.healthcare;
+
+const serviceSchemas = serviceCards.map((card) =>
+  buildServiceSchema({
+    name: card.title,
+    description: card.description,
+    url: `${siteConfig.siteUrl}/industries/healthcare`,
+    serviceType: card.category,
+  })
+);
 ---
 
-<PageLayout pageTitle={pageTitle} description={pageDescription}>
+<PageLayout pageTitle={pageTitle} description={pageDescription} jsonLd={serviceSchemas}>
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">
       <p class="text-xs uppercase tracking-wider text-accent">{header.label}</p>

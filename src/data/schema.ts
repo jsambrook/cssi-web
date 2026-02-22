@@ -29,6 +29,8 @@ const address = parseAddress(footerContact.address);
 const organizationSameAs = [
   'https://www.linkedin.com/company/common-sense-systems',
   siteConfig.xProfileUrl,
+  siteConfig.youtubeUrl,
+  'https://www.bbb.org/us/wa/bothell/profile/computer-hardware/common-sense-systems-inc-1296-22175271',
 ];
 
 const founderKnowsAbout = [
@@ -114,25 +116,27 @@ export function buildOrganizationSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${siteConfig.siteUrl}/#organization`,
     name: siteConfig.name,
+    description: siteConfig.defaultDescription,
     url: siteConfig.siteUrl,
     telephone: footerContact.phones[0],
     email: footerContact.email,
+    foundingDate: '1996',
     address: {
       '@type': 'PostalAddress',
       ...address,
       addressCountry: 'US',
     },
     founder: {
-      '@type': 'Person',
-      name: 'John Sambrook',
+      '@id': `${siteConfig.siteUrl}/#founder`,
     },
     logo: {
       '@type': 'ImageObject',
       url: `${siteConfig.siteUrl}/images/logo.png`,
     },
     image: `${siteConfig.siteUrl}/images/logo.png`,
-    sameAs: [...organizationSameAs, 'https://www.linkedin.com/in/johnsambrook'],
+    sameAs: organizationSameAs,
   };
 }
 
@@ -140,6 +144,7 @@ export function buildWebSiteSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${siteConfig.siteUrl}/#website`,
     name: siteConfig.name,
     url: siteConfig.siteUrl,
   };
@@ -156,7 +161,7 @@ export function buildWebPageSchema(options: {
     name: options.name,
     description: options.description,
     url: options.url,
-    isPartOf: { '@type': 'WebSite', name: siteConfig.name, url: siteConfig.siteUrl },
+    isPartOf: { '@id': `${siteConfig.siteUrl}/#website` },
   };
 }
 
@@ -164,6 +169,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
+    '@id': `${siteConfig.siteUrl}/#professional-service`,
     name: siteConfig.name,
     url: siteConfig.siteUrl,
     telephone: footerContact.phones[0],
@@ -227,6 +233,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     },
     founder: {
       '@type': 'Person',
+      '@id': `${siteConfig.siteUrl}/#founder`,
       name: 'John Sambrook',
       jobTitle: 'Systems Architect & Constraint Analyst',
       knowsAbout: founderKnowsAbout,
@@ -274,12 +281,11 @@ export function buildFounderSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': `${siteConfig.siteUrl}/#founder`,
     name: 'John Sambrook',
     jobTitle: 'Systems Architect & Constraint Analyst',
     worksFor: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.siteUrl,
+      '@id': `${siteConfig.siteUrl}/#organization`,
     },
     address: {
       '@type': 'PostalAddress',
@@ -290,7 +296,11 @@ export function buildFounderSchema(): Record<string, unknown> {
     hasCredential: founderCredentials,
     alumniOf: founderAlumni,
     url: `${siteConfig.siteUrl}/about`,
-    sameAs: ['https://www.linkedin.com/in/johnsambrook'],
+    sameAs: [
+      'https://www.linkedin.com/in/johnsambrook',
+      siteConfig.xProfileUrl,
+      siteConfig.youtubeUrl,
+    ],
   };
 }
 
@@ -380,10 +390,12 @@ export function buildArticleSchema(options: {
   url: string;
   image?: string;
   tags?: string[];
+  wordCount?: number;
 }): Record<string, unknown> {
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': options.url,
     headline: options.title,
     description: options.description,
     inLanguage: 'en-US',
@@ -396,24 +408,19 @@ export function buildArticleSchema(options: {
       '@id': options.url,
     },
     author: {
-      '@type': 'Person',
-      name: options.author,
-      jobTitle: 'Founder & President',
-      url: `${siteConfig.siteUrl}/about`,
+      '@id': `${siteConfig.siteUrl}/#founder`,
     },
     publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.siteUrl,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteConfig.siteUrl}/images/logo.png`,
-      },
+      '@id': `${siteConfig.siteUrl}/#organization`,
     },
     isPartOf: {
       '@type': 'Blog',
       name: `${siteConfig.name} Insights`,
       url: `${siteConfig.siteUrl}/insights`,
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['article h1', 'article > header > p'],
     },
   };
   if (options.tags && options.tags.length > 0) {
@@ -423,7 +430,29 @@ export function buildArticleSchema(options: {
   if (options.image) {
     schema.image = options.image;
   }
+  if (options.wordCount) {
+    schema.wordCount = options.wordCount;
+  }
   return schema;
+}
+
+export function buildServiceSchema(options: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType: string;
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: options.name,
+    description: options.description,
+    url: options.url,
+    serviceType: options.serviceType,
+    provider: {
+      '@id': `${siteConfig.siteUrl}/#organization`,
+    },
+  };
 }
 
 export function buildBreadcrumbSchema(
@@ -449,10 +478,7 @@ export function buildContactPageSchema(description: string): Record<string, unkn
     description,
     url: `${siteConfig.siteUrl}/contact`,
     mainEntity: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      telephone: footerContact.phones[0],
-      email: footerContact.email,
+      '@id': `${siteConfig.siteUrl}/#organization`,
     },
   };
 }

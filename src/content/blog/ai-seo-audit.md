@@ -107,7 +107,7 @@ With Claude Code, the gap is minutes. We went from "your meta descriptions are t
 
 Here's what that actually looks like. This is Claude Code editing my meta description, rebuilding the site, verifying the fix, and summarizing the changes -- all in one continuous flow:
 
-![Claude Code editing a meta description, rebuilding the site, and verifying the fix in a single workflow](/images/content/ai-seo-audit-meta-fix.png)
+<img src="/images/content/ai-seo-audit-meta-fix.png" alt="Claude Code editing a meta description, rebuilding the site, and verifying the fix in a single workflow" width="2044" height="1372" loading="lazy" decoding="async" />
 
 The sitemap fix was more interesting. The static pages needed `<lastmod>` dates, but I didn't want to hardcode them -- that's one more thing to remember to update. Claude Code wrote a solution that reads the git commit history at build time. Every page's `<lastmod>` now reflects the most recent commit that touched its source files. When I edit a page and push, the sitemap date updates automatically. Zero maintenance.
 

@@ -21,6 +21,7 @@ interface Props {
       date: Date;
       tags: string[];
       ogImage?: string;
+      author?: string;
     };
   };
   isLast?: boolean;
@@ -50,6 +51,8 @@ const thumb = post.data.ogImage ?? `/images/blog/${post.id}.png`;
       </a>
       <p class="text-sm text-muted-foreground">{post.data.description}</p>
       <div class="flex items-center gap-3 text-xs text-muted-foreground">
+        {post.data.author && <span>{post.data.author}</span>}
+        {post.data.author && <span>&middot;</span>}
         <time datetime={toPacificIso(post.data.date)}>
           {formatDate(post.data.date)}
         </time>

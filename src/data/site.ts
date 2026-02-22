@@ -16,6 +16,7 @@ export const siteConfig = {
   },
   xHandle: '@SenseSyste86813',
   xProfileUrl: 'https://x.com/SenseSyste86813',
+  youtubeUrl: 'https://www.youtube.com/@commonsensesystemsinc.7658',
 };
 
 export const navItems = [

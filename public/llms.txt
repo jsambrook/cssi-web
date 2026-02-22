@@ -1,0 +1,40 @@
+# Common Sense Systems, Inc.
+
+> Operational architecture and constraint analysis for complex systems. Serving Healthcare, MedTech, and Embedded Software leaders in the Pacific Northwest since 1996.
+
+## Organization
+
+Common Sense Systems, Inc. is a consulting firm based in Kirkland, WA, founded in 1996. We apply Theory of Constraints (TOC) methodology to help organizations identify and exploit their primary constraint, accelerating throughput and eliminating operational bottlenecks.
+
+## Founder
+
+John Sambrook is a TOC Jonah Certified systems architect and constraint analyst. He holds credentials from TOCICO and a degree from Washington State University. He has deep expertise in healthcare patient flow, medical device software (IEC 62304, IEC 60601), embedded systems engineering, and throughput accounting.
+
+## Services
+
+- Flow Dynamics & Throughput: Rapid intervention for gridlocked systems (patient flow or R&D pipelines)
+- Market Offer Architecture: Designing "Mafia Offers" that competitors cannot replicate
+- Cross-Functional Synchronization: Aligning Sales, Ops, and Engineering to a single constraint
+
+## Industries
+
+- Healthcare: Hospital operations, patient flow optimization, complex discharge analysis, direct-to-employer contracting
+- Technology: R&D acceleration, risk-shared licensing, product roadmap alignment
+
+## Key Pages
+
+- Approach: https://common-sense.com/approach
+- Healthcare Services: https://common-sense.com/industries/healthcare
+- Technology Services: https://common-sense.com/industries/tech
+- Insights (Blog): https://common-sense.com/insights
+- About: https://common-sense.com/about
+- Contact: https://common-sense.com/contact
+
+## Contact
+
+- Phone: (425) 979-2282
+- Email: contact@common-sense.com
+- Address: 11227 NE 128 ST, Unit I-102, Kirkland, WA 98034
+- LinkedIn: https://www.linkedin.com/company/common-sense-systems
+- X/Twitter: https://x.com/SenseSyste86813
+- YouTube: https://www.youtube.com/@commonsensesystemsinc.7658
