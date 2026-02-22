@@ -105,6 +105,10 @@ A conventional SEO audit is a _deliverable_. You receive it, read it, put it in 
 
 With Claude Code, the gap is minutes. We went from "your meta descriptions are truncated" to "here are five rewritten descriptions, all under 155 characters, all ending with complete sentences" in a single conversation turn. I reviewed them, gave feedback (I wanted industry-neutral language on the homepage instead of listing specific verticals), and Claude Code revised them. Then it edited the source files, ran the build, and verified that no description in the built HTML contained an ellipsis.
 
+Here's what that actually looks like. This is Claude Code editing my meta description, rebuilding the site, verifying the fix, and summarizing the changes -- all in one continuous flow:
+
+![Claude Code editing a meta description, rebuilding the site, and verifying the fix in a single workflow](/images/content/ai-seo-audit-meta-fix.png)
+
 The sitemap fix was more interesting. The static pages needed `<lastmod>` dates, but I didn't want to hardcode them -- that's one more thing to remember to update. Claude Code wrote a solution that reads the git commit history at build time. Every page's `<lastmod>` now reflects the most recent commit that touched its source files. When I edit a page and push, the sitemap date updates automatically. Zero maintenance.
 
 That's not an SEO recommendation. That's a working implementation, tested, committed, and deployed in the time it would take most agencies to schedule a kickoff call.
