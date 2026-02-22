@@ -63,7 +63,7 @@ export const footerColumns = [
 export const footerContact = {
   phones: ['(425) 979-2282'],
   email: 'contact@common-sense.com',
-  address: '11227 NE 128 ST, Unit I-102\nKirkland, WA 98034',
+  address: '11227 NE 128th St Unit I-102\nKirkland, WA 98034',
 };
 
 export const legalLinks = [

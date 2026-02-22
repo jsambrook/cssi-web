@@ -1,7 +1,7 @@
 import { siteConfig, footerContact } from './site';
 
 export function parseAddress(raw: string) {
-  // "11227 NE 128 ST, Unit I-102\nKirkland, WA 98034"
+  // "11227 NE 128th St Unit I-102\nKirkland, WA 98034"
   const parts = raw.split('\n');
   if (parts.length !== 2) {
     throw new Error(`parseAddress: expected "street\\ncity, ST ZIP", got ${JSON.stringify(raw)}`);
