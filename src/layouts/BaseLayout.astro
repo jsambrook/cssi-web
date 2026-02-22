@@ -113,6 +113,15 @@ const articleTags = articleMeta?.tags?.filter(Boolean) ?? [];
     <meta name="geo.position" content="47.6769;-122.2060" />
     <meta name="ICBM" content="47.6769, -122.2060" />
 
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWXX5J9NWB"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MWXX5J9NWB');
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
