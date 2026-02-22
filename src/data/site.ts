@@ -49,6 +49,7 @@ export const footerColumns = [
   {
     title: 'Topics',
     links: [
+      { label: 'Case Studies', href: '/insights/tag/case-study' },
       { label: 'Healthcare', href: '/insights/tag/healthcare' },
       { label: 'AI', href: '/insights/tag/ai' },
       { label: 'Voice Agents', href: '/insights/tag/voice-agents' },
