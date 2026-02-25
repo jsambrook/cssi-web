@@ -95,6 +95,13 @@ export interface ServiceCardItem {
   variants: Record<Industry, IndustryVariant>;
 }
 
+export interface Testimonial {
+  quote: string;
+  name: string;
+  title?: string;
+  company: string;
+}
+
 export interface ManualInsight {
   slug: string;
   title: string;

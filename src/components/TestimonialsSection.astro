@@ -1,0 +1,43 @@
+---
+/*
+ * TestimonialsSection.astro
+ *
+ * Client testimonials section. Self-contained — imports testimonial data directly.
+ * Used on the Home and About pages.
+ */
+
+import { testimonials } from '../data/testimonials';
+---
+
+<section class="py-16 lg:py-20 bg-accent/10">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-4 mb-12 max-w-3xl mx-auto">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs uppercase tracking-wider"
+      >
+        What Clients Say
+      </div>
+      <h2 class="text-3xl sm:text-4xl">In their own words</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {
+        testimonials.map((t) => (
+          <figure class="rounded-[var(--radius)] border border-border bg-background p-8 flex flex-col shadow-sm">
+            <div class="text-5xl text-primary/30 font-serif leading-none mb-4" aria-hidden="true">
+              &ldquo;
+            </div>
+            <blockquote class="text-sm text-muted-foreground leading-relaxed flex-1">
+              {t.quote}
+            </blockquote>
+            <figcaption class="mt-6 pt-6 border-t border-border">
+              <div class="font-semibold text-foreground">{t.name}</div>
+              {t.title && <div class="text-xs text-muted-foreground mt-0.5">{t.title}</div>}
+              <div class="text-xs text-primary mt-0.5">{t.company}</div>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>

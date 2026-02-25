@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Section from '../components/Section.astro';
 import CTASection from '../components/CTASection.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
 import { pageTitle, pageDescription, header, content, cta } from '../data/pages/about';
 import { buildFounderSchema } from '../data/schema';
 ---
@@ -24,6 +25,8 @@ import { buildFounderSchema } from '../data/schema';
       }
     </div>
   </Section>
+
+  <TestimonialsSection />
 
   <CTASection
     headline={cta.headline}
