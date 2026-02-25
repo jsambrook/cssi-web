@@ -14,6 +14,8 @@ imageAlt: 'Scope creep diagram showing how unlimited stakeholder requirements ca
 
 A dominant medical device company spent three years building a platform that satisfied every internal stakeholder. A competitor shipped a simpler product that solved one clinical problem and took the market. The same pattern repeats in hospital strategic planning. When organizations optimize for feature completeness instead of identifying their actual constraint, they optimize for nothing.
 
+---
+
 It was 199X. I was working with a medical device company that held a dominant market share. They were the "safe choice" for hospitals, the gold standard.
 
 Then leadership decided it was time to build the "Next Generation" platform.

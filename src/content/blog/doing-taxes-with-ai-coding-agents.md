@@ -14,6 +14,8 @@ imageAlt: 'AI coding agents processing tax forms and financial schedules for sma
 
 I prepared my S-Corp tax filings using two AI coding agents — Claude Code writing Python scripts to compute the forms, Codex reviewing the code for errors. They caught real mistakes, including an incorrect Schedule L field mapping. The broader pattern: when building custom tools takes minutes, the skills that matter shift from operating software to understanding the domain.
 
+---
+
 I'm doing my business taxes this year with AI coding agents. Not conceptually. Not as an experiment. I mean the actual tax forms, schedules, and filings for my S-Corp.
 
 Here's what the setup looks like: financial data from QuickBooks and bank statements goes into a private Git repo. Claude Code writes Python scripts that parse that data and compute the tax forms. Codex reviews the scripts with a high-reasoning model. I direct the process, check the results, and make the decisions. Between the three of us, the taxes are getting done.
