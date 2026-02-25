@@ -31,7 +31,7 @@ const organizationSameAs = [
   siteConfig.xProfileUrl,
   siteConfig.youtubeUrl,
   'https://www.bbb.org/us/wa/bothell/profile/computer-hardware/common-sense-systems-inc-1296-22175271',
-  'https://share.google/UxQEOSgDnHeY1n9hJ', // Google Business Profile
+  'https://maps.google.com/?cid=14125900726605051430', // Google Business Profile
 ];
 
 const founderKnowsAbout = [
