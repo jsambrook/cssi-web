@@ -4,9 +4,16 @@ description: 'Why moving fast is an undervalued strategic advantage for communit
 metaTitle: 'Speed as a Strategy'
 metaDescription: 'Why moving fast is an undervalued strategic advantage for community hospitals.'
 date: 2025-09-09
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Strategy', 'Leadership']
 imageAlt: 'OODA Loop framework diagram applied to hospital operations and community healthcare competitive strategy'
+---
+
+## TL;DR
+
+Strategic advantage in healthcare belongs to organizations that complete their decision cycle fastest. Applying Colonel John Boyd's OODA Loop framework to complex discharges, a high-tempo system with aligned data and pre-negotiated partnerships completes the cycle 6-12x faster than traditional phone-and-fax processes. The slower competitor's responses become irrelevant before they are implemented.
+
 ---
 
 In competitive healthcare markets, strategic advantage increasingly belongs to organizations that can observe, decide, and act faster than their rivals. This article examines how Col. John Boyd's OODA Loop framework--developed for aerial combat--applies to healthcare operations, particularly complex patient discharges.

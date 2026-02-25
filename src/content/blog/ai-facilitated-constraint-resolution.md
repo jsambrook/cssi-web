@@ -4,9 +4,16 @@ description: 'How AI can dissolve complex multi-stakeholder conflicts by surfaci
 metaTitle: 'AI-Facilitated Constraint Resolution for Healthcare Systems'
 metaDescription: 'How AI can dissolve complex multi-stakeholder conflicts by surfacing hidden assumptions, not by replacing human judgment.'
 date: 2026-02-09
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['AI', 'Healthcare', 'Constraint Resolution', 'Strategy']
 imageAlt: 'AI and multi-stakeholder conflict diagram illustrating constraint resolution for healthcare systems'
+---
+
+## TL;DR
+
+When multiple hospital stakeholders hit an impasse over competing needs, the real barriers are hidden assumptions no one has examined. AI can map dozens of interacting requirements simultaneously, surface the assumptions creating each conflict, and generate solutions that dissolve the dilemma rather than split the difference. The humans still make the decisions.
+
 ---
 
 ## The Familiar Impasse

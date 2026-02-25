@@ -4,9 +4,16 @@ description: 'Give me any healthcare policy document and I will show you embedde
 metaTitle: 'Hidden Conflicts in Healthcare'
 metaDescription: 'A Theory of Constraints analysis of a hospital financial assistance policy reveals three structural conflicts and practical paths to resolution.'
 date: 2025-08-31
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Leadership', 'Strategy']
 imageAlt: 'Evaporating Cloud diagram revealing hidden structural conflicts inside a hospital financial assistance policy'
+---
+
+## TL;DR
+
+Every healthcare policy contains structural conflicts that force staff into impossible choices. A Theory of Constraints analysis of one hospital's financial assistance policy revealed three critical dilemmas -- around documentation requirements, independent provider billing, and presumptive eligibility -- each created by unexamined assumptions that, once surfaced, point directly to resolution.
+
 ---
 
 ## The Challenge

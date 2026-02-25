@@ -4,9 +4,16 @@ description: 'Why blame cultures destroy healthcare organizations and how to bui
 metaTitle: 'Stop Blaming People'
 metaDescription: 'Why blame cultures destroy healthcare organizations and how to build accountability instead.'
 date: 2025-08-21
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Leadership', 'Culture']
 imageAlt: 'Systems diagram replacing blame cycle with accountability structure in healthcare organizational culture'
+---
+
+## TL;DR
+
+The friction in healthcare -- delays, waste, burnout -- is not caused by bad people. It is caused by structural conflicts in how the system is designed, where two valid goals are placed in direct opposition. Blame cultures attack the people caught in the trap instead of dismantling the trap itself.
+
 ---
 
 We've all felt it. You're in a hospital, watching dedicated, brilliant, and caring professionals work themselves to exhaustion. Yet, the process is agonizingly slow. The cost is astronomical. Patients are stuck in beds waiting for discharge. Clinicians are burning out at record rates.

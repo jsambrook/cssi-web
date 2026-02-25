@@ -4,9 +4,16 @@ description: "A reflection on Lean's definition of value, arguing that no work i
 metaTitle: 'Rethinking Value in Lean: No Work Is Neutral'
 metaDescription: 'A practical argument that work is never neutral in Lean: it either creates value, enables value through required conditions, or subtracts value as waste.'
 date: 2025-10-01
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Lean', 'Systems']
 imageAlt: 'Lean value stream map categorizing activities as value-creating, necessary conditions, or waste in regulated industries'
+---
+
+## TL;DR
+
+Lean classifies work as either value-added or non-value-added. In regulated industries like healthcare and medical devices, that binary breaks down. Regulatory compliance and safety checks create no direct customer value, but without them the product cannot ship. A three-category model -- value-creating, enabling, and waste -- is more practical.
+
 ---
 
 A reflection on Lean's definition of value, arguing that no work is neutral—activities either create value, enable it through necessary conditions, or subtract it as waste.

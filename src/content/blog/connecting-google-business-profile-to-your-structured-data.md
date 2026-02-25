@@ -4,9 +4,16 @@ description: 'How connecting your Google Business Profile to your website struct
 metaTitle: 'Connect Google Business Profile to Structured Data'
 metaDescription: 'Step-by-step account of linking Google Business Profile to JSON-LD structured data for better visibility in both AI search and traditional Google results.'
 date: 2026-02-25
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business']
 imageAlt: 'Structured data connecting a Google Business Profile to a website schema graph for search visibility'
+---
+
+## TL;DR
+
+Your Google Business Profile is one of the strongest verification signals Google controls about your physical existence. If your website's structured data doesn't reference it, AI systems and search engines have to guess whether your site and your profile describe the same entity. Connecting them takes about two hours and strengthens both AI visibility and traditional local SEO.
+
 ---
 
 Most small business websites and their Google Business Profiles exist as unconnected islands. By linking them through structured data -- adding your profile to the `sameAs` array, matching your address exactly, and building an entity graph with `@id` references -- you give both AI search engines and traditional Google the corroboration they need to confidently identify and recommend your business.

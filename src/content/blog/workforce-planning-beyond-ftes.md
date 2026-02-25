@@ -4,9 +4,16 @@ description: "Why 'FTE Headcount' is a vanity metric that hides the real constra
 metaTitle: 'Stop Hiring Your Way Out of a Process Problem'
 metaDescription: "Healthcare leaders obsess over FTE counts while ignoring the 'Capacity Leaks' that consume 30% of their workforce."
 date: 2026-02-17
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Workforce', 'Strategy', 'Theory of Constraints']
 imageAlt: 'Hospital capacity leak diagram showing how process waste consumes nursing minutes and defeats hiring campaigns'
+---
+
+## TL;DR
+
+Hospitals measure staffing in FTEs, but FTE is a payroll metric, not a capacity metric. A 12-hour nursing shift yields roughly five hours of actual clinical work after documentation, handoffs, and supply hunts. Reducing non-clinical burden by one hour per shift effectively "hires" 20% more nurses without recruiting anyone.
+
 ---
 
 Every hospital board meeting I attend eventually turns to one slide: The Vacancy Rate.

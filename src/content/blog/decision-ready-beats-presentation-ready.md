@@ -4,9 +4,16 @@ description: 'A framework for turning complex inputs into choices stakeholders c
 metaTitle: 'Decision-Ready Beats Presentation-Ready'
 metaDescription: 'A framework for turning complex inputs into choices stakeholders can act on.'
 date: 2026-01-15
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Decision-Making', 'Frameworks']
 imageAlt: 'One-page decision brief replacing a thick presentation deck showing a decision-ready framework'
+---
+
+## TL;DR
+
+Most consulting deliverables are built to impress, not to decide. A decision-ready artifact names the specific fork in the road, limits options to two or three viable choices, states the trade-offs, and assigns ownership. The shift requires courage to present a clear recommendation instead of hiding behind comprehensiveness.
+
 ---
 
 Most consulting deliverables are built to impress, not to decide. They're comprehensive, polished, and structurally designed to delay commitment. The deck gets longer. The options multiply. The audience nods, then schedules another meeting.

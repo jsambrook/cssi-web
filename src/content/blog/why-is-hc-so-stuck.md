@@ -4,9 +4,16 @@ description: 'Six chronic healthcare frustrations — long wait times, expensive
 metaTitle: 'Why Healthcare Is So Stuck'
 metaDescription: 'Six chronic healthcare frustrations can be traced to one systemic conflict, using a Theory of Constraints lens to map root cause and leverage points.'
 date: 2025-09-17
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Healthcare', 'Analysis']
 imageAlt: 'Healthcare root cause diagram tracing six chronic system frustrations to a single systemic conflict using Theory of Constraints'
+---
+
+## TL;DR
+
+Long wait times, expensive insurance, claim denials, hiring difficulties, tax levies, and burnout are not six separate problems. They are six symptoms of a single systemic conflict: a healthcare architecture that forces providers and payers into an adversarial, high-friction relationship focused on administrative defense rather than patient throughput.
+
 ---
 
 Exploring structural reasons behind stagnation in hospital systems.

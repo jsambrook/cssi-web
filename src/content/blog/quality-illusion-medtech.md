@@ -4,9 +4,16 @@ description: "When Regulatory departments prioritize 'documentation stability' o
 metaTitle: 'The Quality Illusion: Compliance vs Safety in Medical Devices'
 metaDescription: "How the fear of re-submission prevents engineers from fixing bugs, and how to resolve the conflict between 'Frozen' and 'Safe'."
 date: 2026-02-17
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['MedTech', 'Quality', 'Regulatory', 'Theory of Constraints']
 imageAlt: 'FDA compliance versus patient safety conflict diagram for medical device quality and regulatory strategy'
+---
+
+## TL;DR
+
+In medical devices, "quality" and "compliance" are treated as synonyms. They are not. When the cost of documenting a three-line bug fix exceeds the perceived cost of leaving the bug, the bug stays -- sometimes for years. The fix is applying Theory of Constraints to the regulatory pipeline itself: automate testing and generate compliance documentation from code changes.
+
 ---
 
 In the world of Medical Devices, "Quality" and "Compliance" are often used interchangeably. This is a dangerous category error.

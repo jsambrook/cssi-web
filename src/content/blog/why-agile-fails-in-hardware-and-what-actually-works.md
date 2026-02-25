@@ -4,9 +4,16 @@ description: "You cannot 'sprint' a circuit board design. A systems architect's 
 metaTitle: 'Why Agile Fails in Medical Device Hardware Development'
 metaDescription: "Software methodologies break when applied to physics and FDA regulations. A systems architect's view on Critical Chain Project Management for MedTech."
 date: 2026-02-17
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering']
 imageAlt: 'Medical device PCB fabrication timeline showing why two-week Agile sprints fail in hardware development'
+---
+
+## TL;DR
+
+Agile was designed for environments where the cost of change is low. In hardware development -- PCB fabrication, signal integrity testing, FDA validation -- one mistake costs a month. Forcing two-week sprints on hardware teams produces ticket-closing theater, not working products. Critical Chain Project Management, which buffers the project instead of the tasks, solves for the actual constraint: integration latency.
+
 ---
 
 I have sat in countless engineering reviews where a well-meaning management consultant tries to force a hardware team to work in two-week "Sprints."

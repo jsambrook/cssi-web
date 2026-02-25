@@ -4,9 +4,16 @@ description: "Why an outsider's perspective is a healthcare system architect's g
 metaTitle: 'Architecting Hospital Care'
 metaDescription: 'An outsider healthcare systems architect explains how embedded systems experience, TOC thinking, and AI reveal practical fixes for hospital operations.'
 date: 2025-08-09
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Healthcare', 'Architecture']
 imageAlt: 'Healthcare system architecture blueprint viewed through a systems engineer and outsider perspective'
+---
+
+## TL;DR
+
+I spent decades building medical devices -- defibrillators, ultrasound systems -- and studying Theory of Constraints under Goldratt. That background is not a liability in healthcare consulting. The outsider's lens, trained on embedded systems where 1% failure is catastrophic, sees structural problems that insiders have been conditioned to accept.
+
 ---
 
 A deep dive into designing effective hospital systems.

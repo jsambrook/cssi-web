@@ -4,9 +4,16 @@ description: "A small business owner's account of running a complete SEO audit w
 metaTitle: 'I Fired My SEO Expert (And Hired Claude Code Instead)'
 metaDescription: 'How a small business owner ran a full SEO audit with Claude Code, fixed every issue the same day, and cut a $1,000/month expense to zero.'
 date: 2026-02-21
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business', 'Cost Reduction']
 imageAlt: 'Claude Code AI agent running a full website SEO audit in a terminal session for a small business'
+---
+
+## TL;DR
+
+I ran a full SEO audit of my business website with Claude Code in one afternoon -- every meta tag, JSON-LD block, and sitemap entry across 36 pages. It found eight specific failings. I fixed all of them in the same session. A comparable agency engagement would cost $2,000-$5,000 and take weeks.
+
 ---
 
 This afternoon I ran a full Googlebot-perspective SEO audit of my business website. Not a summary. Not a surface-level checklist. A line-by-line review of every meta tag, every JSON-LD block, every sitemap entry, and every RSS field across all 36 pages and 25 blog articles.

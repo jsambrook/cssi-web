@@ -4,9 +4,16 @@ description: 'Trying to plan a complex discharge at the moment of exit violates 
 metaTitle: "The Physics of Patient Flow: Why 'Discharge Planning' Fails"
 metaDescription: 'Trying to plan a complex discharge at the moment of exit violates the basic physics of flow. Here is why the process must move upstream.'
 date: 2025-09-04
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations']
 imageAlt: 'Patient flow diagram showing hospital discharge bottleneck and the physics case for upstream discharge planning'
+---
+
+## TL;DR
+
+Hospital discharge planning fails because it bundles two different events -- a clinical decision and a complex logistics problem -- into a single crisis moment. The Post-Acute Care Directive proposes moving the logistics upstream to routine primary care visits, turning case managers from desperate investigators into calm coordinators with a pre-vetted plan.
+
 ---
 
 Why hospital discharge processes fail and how to fix them.

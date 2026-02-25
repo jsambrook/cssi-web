@@ -4,9 +4,16 @@ description: 'Healthcare protects staff from radiation but expects unlimited psy
 metaTitle: 'Why Burnout Persists'
 metaDescription: 'Healthcare rigorously controls radiation exposure but ignores psychological trauma load. This series maps the structural conflict driving burnout.'
 date: 2025-09-14
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Healthcare', 'Wellbeing']
 imageAlt: 'Theory of Constraints diagram tracing the structural conflict driving chronic clinician burnout in healthcare'
+---
+
+## TL;DR
+
+Healthcare organizations rigorously protect staff from physical hazards like radiation but expect unlimited psychological trauma absorption. This asymmetry is a system design failure, not a personal one. The evidence shows individual resilience training does not work. Organizational interventions -- restructuring workloads, schedules, and job control -- significantly reduce exhaustion. The system must change, not the people.
+
 ---
 
 Analyzing why healthcare teams remain chronically burned out.

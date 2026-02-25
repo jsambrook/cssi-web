@@ -4,9 +4,16 @@ description: 'How standardizing a communication protocol on a smartphone-powered
 metaTitle: 'Case Study: Unblocking a Medical Device Project'
 metaDescription: "How identifying the communication constraint on Defibrio's smartphone AED saved two months on an 18-month project."
 date: 2026-02-22
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering', 'Case Study']
 imageAlt: 'Defibrio smartphone-powered AED with communication protocol architecture diagram for medical device development'
+---
+
+## TL;DR
+
+On an 18-month smartphone AED project, the communication interface between device and host software had become the constraint. Engineers waited for bench time and tribal knowledge instead of working independently. I designed a standardized binary protocol with AI-assisted implementation, and the project manager estimated it saved two months of development time.
+
 ---
 
 In 2024, I joined an Andrews Cooper engineering team building Defibrio's smartphone-powered AED -- the first defibrillator that draws its energy from a phone's USB-C port. Andrews Cooper is a premier product development and engineering services firm with over 100 engineers across multiple offices in Oregon and Washington. They have been doing sophisticated hardware and software development for MedTech, consumer electronics, and industrial clients since 2000, and they are consistently recognized as a top workplace in the Pacific Northwest. When you need serious engineering talent for a complex product, they are the kind of firm you call.

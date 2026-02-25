@@ -4,9 +4,16 @@ description: 'When you can build a custom import tool in fifteen minutes, the ca
 metaTitle: 'Cancel SaaS and Keep Your Data with AI Agents'
 metaDescription: 'When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically.'
 date: 2026-02-12
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Cost Reduction']
 imageAlt: 'AI coding agent converting SaaS data exports so a small business can cancel unnecessary software subscriptions'
+---
+
+## TL;DR
+
+AI coding agents have broken the cost-benefit calculus of SaaS subscriptions. When you can build a custom data migration tool in fifteen minutes, the switching cost that kept you locked in drops to near zero. I have canceled at least ten tools in recent months, replacing each with capabilities I own and that run themselves.
+
 ---
 
 My business costs are going down. My workload is going down. And my capabilities are going up. All at the same time.

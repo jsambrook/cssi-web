@@ -4,9 +4,16 @@ description: 'Most dashboards measure local efficiency at the expense of global 
 metaTitle: 'The Metrics Trap: Moving from Local Optima to System Throughput'
 metaDescription: "Why 'more data' often leads to worse decisions in complex systems, and how to define the few metrics that actually matter."
 date: 2026-02-16
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Strategy', 'Theory of Constraints', 'Decision-Making']
 imageAlt: 'Hospital dashboard overflowing with metrics illustrating the data trap in healthcare decision-making'
+---
+
+## TL;DR
+
+Most organizational arguments are about facts, not strategy -- two leaders looking at different dashboards, drawing different conclusions. The fix is not more data. It is identifying the system's constraint and defining the minimum dataset that tells you whether that constraint is healthy. Everything else is noise.
+
 ---
 
 Most organizational arguments aren't about strategy. They're about facts. Two leaders in the same room, looking at different dashboards, drawing different conclusions, and talking past each other.

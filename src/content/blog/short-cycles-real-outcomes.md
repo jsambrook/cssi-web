@@ -4,9 +4,16 @@ description: 'Why small, measurable releases outperform big-bang delivery.'
 metaTitle: 'Short Cycles, Real Outcomes'
 metaDescription: 'Why small, measurable releases outperform big-bang delivery.'
 date: 2025-12-20
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Delivery', 'Agile', 'Outcomes']
 imageAlt: 'Short delivery cycle diagram compared to a long waterfall timeline showing continuous feedback loop benefits'
+---
+
+## TL;DR
+
+Large programs fail because they defer learning. Two-to-four-week cycles ending in something measurable compress the feedback loop so problems surface early, when they are still fixable. This applies to strategy and operations, not just engineering. Define a two-week outcome, execute, review, adjust, repeat.
+
 ---
 
 The biggest risk in any initiative isn't building the wrong thing. It's building the right thing too slowly to matter.
