@@ -11,7 +11,7 @@ imageAlt: 'Structured data connecting a Google Business Profile to a website sch
 
 Most small business websites and their Google Business Profiles exist as unconnected islands. By linking them through structured data -- adding your profile to the `sameAs` array, matching your address exactly, and building an entity graph with `@id` references -- you give both AI search engines and traditional Google the corroboration they need to confidently identify and recommend your business.
 
----
+<img src="/images/content/connect-website-to-your-gbp.png" alt="Infographic showing the 6-step process for connecting your Google Business Profile to your website structured data: find your CID, add GBP link to footer, add GBP URL to sameAs in JSON-LD, add geo coordinates and hasMap, match address exactly for NAP consistency, and add profile URL to llms.txt" width="2816" height="1536" loading="lazy" decoding="async" />
 
 Last week I ran a GEO audit on my business website. GEO stands for Generative Engine Optimization -- it's the emerging discipline of making your site legible to AI search engines like ChatGPT, Perplexity, and Google's AI Overviews. The audit turned up a problem I hadn't thought about: my Google Business Profile existed, and my website existed, but nothing connected the two. They were floating independently, like two documents in different filing cabinets that happened to describe the same company.
 
