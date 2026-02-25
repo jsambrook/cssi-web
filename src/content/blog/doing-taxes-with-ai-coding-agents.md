@@ -4,6 +4,7 @@ description: "A small business owner's account of automating tax preparation wit
 metaTitle: 'Doing My Taxes with Claude Code and Codex'
 metaDescription: "A small business owner's account of automating tax preparation with AI coding agents, and what it suggests about the near future of knowledge work."
 date: 2026-02-15
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business']
 imageAlt: 'AI coding agents processing tax forms and financial schedules for small business S-Corp tax preparation'

@@ -4,6 +4,7 @@ description: 'A concept for addressing the complex discharge problem at its sour
 metaTitle: 'Post-Acute Care Planning Before Hospitalization'
 metaDescription: 'The Post-Acute Care Plan concept captures discharge-critical data in primary care so patients and hospitals can avoid crisis-driven discharge delays.'
 date: 2025-12-15
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations', 'Strategy']
 imageAlt: 'Post-Acute Care Plan workflow showing proactive discharge data collection before hospitalization occurs'

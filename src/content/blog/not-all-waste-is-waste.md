@@ -4,6 +4,7 @@ description: 'The word "waste" smuggles in a verdict before the analysis begins.
 metaTitle: 'Not All Waste Is Waste: Why Eliminating Waste Can Hurt a System'
 metaDescription: 'Lean says eliminate waste. TOC asks: waste relative to what? The distinction matters more than most improvement programs acknowledge.'
 date: 2026-02-17
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Lean', 'Strategy']
 imageAlt: 'Theory of Constraints buffer diagram showing why eliminating apparent waste can reduce overall system throughput'

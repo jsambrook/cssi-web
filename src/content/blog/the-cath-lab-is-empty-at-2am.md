@@ -4,6 +4,7 @@ description: 'Why smart, well-run organizations reliably get stuck on solvable p
 metaTitle: 'The Cath Lab Is Empty at 2 AM'
 metaDescription: 'Why smart, well-run organizations reliably get stuck on solvable problems, and what tribal dynamics and cognitive limits have to do with it.'
 date: 2026-02-15
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Healthcare', 'Strategy', 'Theory of Constraints']
 imageAlt: 'Empty cardiac catheterization lab at night revealing unused hospital capacity hidden behind a space constraint'

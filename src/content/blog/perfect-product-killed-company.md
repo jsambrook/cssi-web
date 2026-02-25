@@ -4,6 +4,7 @@ description: "Why 'Scope Creep' is usually a symptom of a deeper strategic failu
 metaTitle: "The 'Perfect' Product That Killed the Company: A Warning for R&D"
 metaDescription: "When organizations try to optimize for everything, they optimize for nothing. A systems architect's view on why great teams fail."
 date: 2026-02-16
+updatedDate: 2026-02-25
 author: 'John Sambrook'
 tags: ['Strategy', 'MedTech', 'Theory of Constraints', 'R&D']
 imageAlt: 'Scope creep diagram showing how unlimited stakeholder requirements caused a medical device product launch to fail'

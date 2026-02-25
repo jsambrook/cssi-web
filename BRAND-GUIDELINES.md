@@ -235,6 +235,8 @@ Healthcare, AI, Strategy, Leadership, Operations, Theory of Constraints, Decisio
 
 Every blog post requires: `title`, `description`, `metaTitle`, `metaDescription`, `date`, `author`, `tags`. No other fields should be added without discussion. Drafts get `draft: true`. Published posts should not include the `draft` field.
 
+**`updatedDate`:** When a published post receives a meaningful content change — new sections, revised arguments, added TL;DR summaries, updated data — add or update `updatedDate` in the frontmatter with the date of the change. The build uses this for `dateModified` in JSON-LD structured data and `modifiedTime` in Open Graph tags, both of which signal freshness to search engines and AI systems. Do not bump `updatedDate` for typo fixes, formatting tweaks, or metadata-only changes.
+
 ### Search, Social, and Structured Data
 
 We want search engines, AI systems, and social platforms to understand our content accurately. The goal is not to game rankings. It is to describe what we have written clearly enough that the right people find it. This means doing the basics well and being thorough about metadata.
