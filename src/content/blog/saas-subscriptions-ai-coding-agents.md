@@ -6,6 +6,7 @@ metaDescription: 'When you can build a custom import tool in fifteen minutes, th
 date: 2026-02-12
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Cost Reduction']
+imageAlt: 'AI coding agent converting SaaS data exports so a small business can cancel unnecessary software subscriptions'
 ---
 
 My business costs are going down. My workload is going down. And my capabilities are going up. All at the same time.

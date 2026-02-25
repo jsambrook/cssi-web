@@ -6,6 +6,7 @@ metaDescription: 'Voice agents reduce friction in claims, billing, and admin cal
 date: 2025-08-17
 author: 'John Sambrook'
 tags: ['Voice Agents', 'Healthcare']
+imageAlt: 'Voice agent interface handling healthcare insurance calls to reduce staff burnout in clinical settings'
 ---
 
 Discover how voice agents transform healthcare's most painful conversations by removing emotional friction from insurance claims, patient billing, and administrative battles that burn out staff and traumatize patients.

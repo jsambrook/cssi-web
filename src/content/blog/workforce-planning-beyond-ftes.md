@@ -6,6 +6,7 @@ metaDescription: "Healthcare leaders obsess over FTE counts while ignoring the '
 date: 2026-02-17
 author: 'John Sambrook'
 tags: ['Workforce', 'Strategy', 'Theory of Constraints']
+imageAlt: 'Hospital capacity leak diagram showing how process waste consumes nursing minutes and defeats hiring campaigns'
 ---
 
 Every hospital board meeting I attend eventually turns to one slide: The Vacancy Rate.

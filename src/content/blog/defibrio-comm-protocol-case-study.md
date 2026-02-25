@@ -6,6 +6,7 @@ metaDescription: "How identifying the communication constraint on Defibrio's sma
 date: 2026-02-22
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering', 'Case Study']
+imageAlt: 'Defibrio smartphone-powered AED with communication protocol architecture diagram for medical device development'
 ---
 
 In 2024, I joined an Andrews Cooper engineering team building Defibrio's smartphone-powered AED -- the first defibrillator that draws its energy from a phone's USB-C port. Andrews Cooper is a premier product development and engineering services firm with over 100 engineers across multiple offices in Oregon and Washington. They have been doing sophisticated hardware and software development for MedTech, consumer electronics, and industrial clients since 2000, and they are consistently recognized as a top workplace in the Pacific Northwest. When you need serious engineering talent for a complex product, they are the kind of firm you call.

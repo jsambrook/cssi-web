@@ -6,6 +6,7 @@ metaDescription: 'A practical argument that work is never neutral in Lean: it ei
 date: 2025-10-01
 author: 'John Sambrook'
 tags: ['Lean', 'Systems']
+imageAlt: 'Lean value stream map categorizing activities as value-creating, necessary conditions, or waste in regulated industries'
 ---
 
 A reflection on Lean's definition of value, arguing that no work is neutral—activities either create value, enable it through necessary conditions, or subtract it as waste.

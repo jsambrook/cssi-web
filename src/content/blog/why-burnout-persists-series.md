@@ -6,6 +6,7 @@ metaDescription: 'Healthcare rigorously controls radiation exposure but ignores 
 date: 2025-09-14
 author: 'John Sambrook'
 tags: ['Healthcare', 'Wellbeing']
+imageAlt: 'Theory of Constraints diagram tracing the structural conflict driving chronic clinician burnout in healthcare'
 ---
 
 Analyzing why healthcare teams remain chronically burned out.

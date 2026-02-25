@@ -6,6 +6,7 @@ metaDescription: 'An outsider healthcare systems architect explains how embedded
 date: 2025-08-09
 author: 'John Sambrook'
 tags: ['Healthcare', 'Architecture']
+imageAlt: 'Healthcare system architecture blueprint viewed through a systems engineer and outsider perspective'
 ---
 
 A deep dive into designing effective hospital systems.

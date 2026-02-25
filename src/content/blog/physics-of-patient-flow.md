@@ -6,6 +6,7 @@ metaDescription: 'Trying to plan a complex discharge at the moment of exit viola
 date: 2025-09-04
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations']
+imageAlt: 'Patient flow diagram showing hospital discharge bottleneck and the physics case for upstream discharge planning'
 ---
 
 Why hospital discharge processes fail and how to fix them.

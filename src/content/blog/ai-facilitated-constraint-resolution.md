@@ -6,6 +6,7 @@ metaDescription: 'How AI can dissolve complex multi-stakeholder conflicts by sur
 date: 2026-02-09
 author: 'John Sambrook'
 tags: ['AI', 'Healthcare', 'Constraint Resolution', 'Strategy']
+imageAlt: 'AI and multi-stakeholder conflict diagram illustrating constraint resolution for healthcare systems'
 ---
 
 ## The Familiar Impasse

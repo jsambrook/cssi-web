@@ -6,6 +6,7 @@ metaDescription: "A small business owner's account of automating tax preparation
 date: 2026-02-15
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business']
+imageAlt: 'AI coding agents processing tax forms and financial schedules for small business S-Corp tax preparation'
 ---
 
 I'm doing my business taxes this year with AI coding agents. Not conceptually. Not as an experiment. I mean the actual tax forms, schedules, and filings for my S-Corp.

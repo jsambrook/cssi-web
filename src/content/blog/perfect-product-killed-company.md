@@ -6,6 +6,7 @@ metaDescription: "When organizations try to optimize for everything, they optimi
 date: 2026-02-16
 author: 'John Sambrook'
 tags: ['Strategy', 'MedTech', 'Theory of Constraints', 'R&D']
+imageAlt: 'Scope creep diagram showing how unlimited stakeholder requirements caused a medical device product launch to fail'
 ---
 
 It was 199X. I was working with a medical device company that held a dominant market share. They were the "safe choice" for hospitals, the gold standard.

@@ -6,6 +6,7 @@ metaDescription: "Why 'more data' often leads to worse decisions in complex syst
 date: 2026-02-16
 author: 'John Sambrook'
 tags: ['Strategy', 'Theory of Constraints', 'Decision-Making']
+imageAlt: 'Hospital dashboard overflowing with metrics illustrating the data trap in healthcare decision-making'
 ---
 
 Most organizational arguments aren't about strategy. They're about facts. Two leaders in the same room, looking at different dashboards, drawing different conclusions, and talking past each other.

@@ -6,6 +6,7 @@ metaDescription: 'Why small, measurable releases outperform big-bang delivery.'
 date: 2025-12-20
 author: 'John Sambrook'
 tags: ['Delivery', 'Agile', 'Outcomes']
+imageAlt: 'Short delivery cycle diagram compared to a long waterfall timeline showing continuous feedback loop benefits'
 ---
 
 The biggest risk in any initiative isn't building the wrong thing. It's building the right thing too slowly to matter.

@@ -6,6 +6,7 @@ metaDescription: 'Why smart, well-run organizations reliably get stuck on solvab
 date: 2026-02-15
 author: 'John Sambrook'
 tags: ['Healthcare', 'Strategy', 'Theory of Constraints']
+imageAlt: 'Empty cardiac catheterization lab at night revealing unused hospital capacity hidden behind a space constraint'
 ---
 
 Last Friday at 7 AM, I sat in on an educational meeting at a community health system in the Pacific Northwest. Three clinical service lines presented to the governing board: cardiology, musculoskeletal, and gastroenterology. Each brought data. Each brought sharp leadership. Each delivered the same message.

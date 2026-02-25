@@ -6,6 +6,7 @@ metaDescription: 'How a small business owner ran a full SEO audit with Claude Co
 date: 2026-02-21
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business', 'Cost Reduction']
+imageAlt: 'Claude Code AI agent running a full website SEO audit in a terminal session for a small business'
 ---
 
 This afternoon I ran a full Googlebot-perspective SEO audit of my business website. Not a summary. Not a surface-level checklist. A line-by-line review of every meta tag, every JSON-LD block, every sitemap entry, and every RSS field across all 36 pages and 25 blog articles.

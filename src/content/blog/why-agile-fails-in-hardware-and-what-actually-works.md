@@ -6,6 +6,7 @@ metaDescription: "Software methodologies break when applied to physics and FDA r
 date: 2026-02-17
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering']
+imageAlt: 'Medical device PCB fabrication timeline showing why two-week Agile sprints fail in hardware development'
 ---
 
 I have sat in countless engineering reviews where a well-meaning management consultant tries to force a hardware team to work in two-week "Sprints."

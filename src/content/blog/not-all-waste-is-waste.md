@@ -6,6 +6,7 @@ metaDescription: 'Lean says eliminate waste. TOC asks: waste relative to what? T
 date: 2026-02-17
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Lean', 'Strategy']
+imageAlt: 'Theory of Constraints buffer diagram showing why eliminating apparent waste can reduce overall system throughput'
 ---
 
 Someone posted a question on LinkedIn recently that stopped me mid-scroll. It was in response to one of Rami Goldratt's "TOC Slaps" cartoons — Rami is Eli Goldratt's son and, along with his sister Efrat, continues the TOC work Eli began. The cartoons riff on the Batman-slapping-Robin meme to poke at ideas that sound obvious but aren't. The question was:

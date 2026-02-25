@@ -103,4 +103,5 @@ export interface ManualInsight {
   author: string;
   tags: string[];
   ogImage?: string;
+  imageAlt?: string;
 }

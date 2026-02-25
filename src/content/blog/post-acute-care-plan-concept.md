@@ -6,6 +6,7 @@ metaDescription: 'The Post-Acute Care Plan concept captures discharge-critical d
 date: 2025-12-15
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations', 'Strategy']
+imageAlt: 'Post-Acute Care Plan workflow showing proactive discharge data collection before hospitalization occurs'
 ---
 
 Every day across the United States, thousands of patients occupy acute care hospital beds despite being medically ready for discharge. They remain hospitalized not because they need hospital-level care, but because the information and arrangements required for safe discharge were never gathered in advance. Legal documents are missing. Family support networks are unknown. Preferences for post-acute care facilities have never been discussed. Insurance coverage for rehabilitation has not been verified.

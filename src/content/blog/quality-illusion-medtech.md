@@ -6,6 +6,7 @@ metaDescription: "How the fear of re-submission prevents engineers from fixing b
 date: 2026-02-17
 author: 'John Sambrook'
 tags: ['MedTech', 'Quality', 'Regulatory', 'Theory of Constraints']
+imageAlt: 'FDA compliance versus patient safety conflict diagram for medical device quality and regulatory strategy'
 ---
 
 In the world of Medical Devices, "Quality" and "Compliance" are often used interchangeably. This is a dangerous category error.

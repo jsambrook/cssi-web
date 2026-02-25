@@ -16,6 +16,8 @@ export const manualInsights: ManualInsight[] = [
     author: 'John Sambrook',
     tags: ['Healthcare', 'Patient Flow', 'Theory of Constraints'],
     ogImage: '/images/og-default.png',
+    imageAlt:
+      'Post-Acute Care Plan diagram showing proactive discharge data collection in primary care',
   },
   {
     slug: 'nursing-conflict',
@@ -26,5 +28,7 @@ export const manualInsights: ManualInsight[] = [
     author: 'John Sambrook',
     tags: ['Labor Relations', 'Healthcare', 'Theory of Constraints'],
     ogImage: '/images/og-default.png',
+    imageAlt:
+      'Washington State nursing contract analysis diagram showing structural conflicts in collective bargaining agreements',
   },
 ];

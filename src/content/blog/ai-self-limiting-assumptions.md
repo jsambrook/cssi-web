@@ -6,6 +6,7 @@ metaDescription: "AI's biggest disruption is not job loss. It is exposing self-i
 date: 2026-02-12
 author: 'John Sambrook'
 tags: ['AI', 'Agency', 'Strategy']
+imageAlt: 'Abstract visualization of AI breaking through self-imposed limits in knowledge work and strategy'
 ---
 
 Matt Shumer recently published an article called [Something big is happening in AI -- and most people will be blindsided](https://fortune.com/2026/02/11/something-big-is-happening-ai-february-2020-moment-matt-shumer/). If you haven't read it, you should. He's a startup founder and investor, and his description of what current AI models can do is accurate. When he says the ground is shifting under knowledge work, he's not exaggerating.

@@ -6,6 +6,7 @@ metaDescription: 'Why blame cultures destroy healthcare organizations and how to
 date: 2025-08-21
 author: 'John Sambrook'
 tags: ['Leadership', 'Culture']
+imageAlt: 'Systems diagram replacing blame cycle with accountability structure in healthcare organizational culture'
 ---
 
 We've all felt it. You're in a hospital, watching dedicated, brilliant, and caring professionals work themselves to exhaustion. Yet, the process is agonizingly slow. The cost is astronomical. Patients are stuck in beds waiting for discharge. Clinicians are burning out at record rates.

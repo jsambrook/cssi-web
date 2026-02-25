@@ -4,6 +4,7 @@ description: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connecti
 date: 2026-02-16
 author: 'John Sambrook'
 tags: ['Networking', 'Sales', 'Small Business', 'Practical Tips']
+imageAlt: 'Three-way email introduction diagram comparing warm referral conversion rates versus cold LinkedIn outreach'
 metaTitle: 'Three-Way Email Intros Beat Cold Outreach'
 metaDescription: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert.'
 ---

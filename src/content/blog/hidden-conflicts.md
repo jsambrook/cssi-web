@@ -6,6 +6,7 @@ metaDescription: 'A Theory of Constraints analysis of a hospital financial assis
 date: 2025-08-31
 author: 'John Sambrook'
 tags: ['Leadership', 'Strategy']
+imageAlt: 'Evaporating Cloud diagram revealing hidden structural conflicts inside a hospital financial assistance policy'
 ---
 
 ## The Challenge

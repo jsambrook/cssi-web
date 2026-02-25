@@ -6,6 +6,7 @@ metaDescription: 'Six chronic healthcare frustrations can be traced to one syste
 date: 2025-09-17
 author: 'John Sambrook'
 tags: ['Healthcare', 'Analysis']
+imageAlt: 'Healthcare root cause diagram tracing six chronic system frustrations to a single systemic conflict using Theory of Constraints'
 ---
 
 Exploring structural reasons behind stagnation in hospital systems.
