@@ -37,7 +37,7 @@ export const footerColumns = [
       { label: 'Insights', href: '/insights' },
       { label: 'Contact', href: '/contact' },
       { label: 'SMS Consent', href: '/legal/sms-consent' },
-      { label: 'Google Business Profile', href: 'https://maps.app.goo.gl/JdcbAveGktDz6foS6' },
+      { label: 'Google Business Profile', href: 'https://share.google/UxQEOSgDnHeY1n9hJ' },
     ],
   },
   {
