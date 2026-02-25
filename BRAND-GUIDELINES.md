@@ -178,6 +178,7 @@ When making claims from personal experience, be explicit: "In my experience..." 
 
 There is no mandatory template. Different pieces call for different structures. But some patterns work well:
 
+- **Start with a TL;DR.** Every blog post should open with a `## TL;DR` section immediately after the title — a 40–60 word plain-language summary of the post's core argument or finding. This is a Generative Engine Optimization practice: AI systems (ChatGPT, Perplexity, Google AI Overviews) preferentially cite content that provides a clear, self-contained answer near the top of the page. Write it as a direct statement, not a teaser. It should make sense to someone who reads nothing else. Keep the tone consistent with the rest of the post — no marketing language, no hype.
 - **Open with a specific scene or observation.** The cath lab piece opens in a board meeting. The tax piece opens with "I'm doing my business taxes this year with AI coding agents. Not conceptually. Not as an experiment." Ground the reader immediately. The opening paragraph must contain a concrete noun: a person, a place, a specific report, a date, a number. If the first paragraph is all abstract concepts, rewrite it.
 - **Earn your abstractions.** If you're going to introduce a framework or concept, establish the concrete problem first. The reader should be thinking "yes, I recognize this" before you name the pattern.
 - **End with an open hand.** Invite engagement. Provide contact information. Don't end with a hard sell.
@@ -332,6 +333,7 @@ John is not a healthcare insider and should not pretend to be. The value proposi
 
 Before publishing, check:
 
+- [ ] Does the post have a TL;DR section (40–60 words) immediately after the title?
 - [ ] Does the opening ground the reader in something concrete?
 - [ ] Are TOC terms introduced with enough context for a newcomer?
 - [ ] Is the length earned by the substance?

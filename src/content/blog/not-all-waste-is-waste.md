@@ -9,6 +9,10 @@ tags: ['Theory of Constraints', 'Lean', 'Strategy']
 imageAlt: 'Theory of Constraints buffer diagram showing why eliminating apparent waste can reduce overall system throughput'
 ---
 
+## TL;DR
+
+Lean says eliminate waste. Theory of Constraints asks: waste relative to what? Removing idle capacity at a non-bottleneck can make a system fragile, not efficient. Optimizing a process that is not the constraint produces local gains with zero global impact. Both errors flow from evaluating parts of a system without reference to the whole.
+
 Someone posted a question on LinkedIn recently that stopped me mid-scroll. It was in response to one of Rami Goldratt's "TOC Slaps" cartoons — Rami is Eli Goldratt's son and, along with his sister Efrat, continues the TOC work Eli began. The cartoons riff on the Batman-slapping-Robin meme to poke at ideas that sound obvious but aren't. The question was:
 
 "How can removing waste in a system be a bad thing?"

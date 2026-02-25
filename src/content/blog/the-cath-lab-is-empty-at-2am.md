@@ -9,6 +9,10 @@ tags: ['Healthcare', 'Strategy', 'Theory of Constraints']
 imageAlt: 'Empty cardiac catheterization lab at night revealing unused hospital capacity hidden behind a space constraint'
 ---
 
+## TL;DR
+
+Three hospital departments asked their board for tens of millions in new construction. But their procedural spaces — cath labs, endoscopy suites, OR rooms — sit empty roughly 75% of every week. The real constraint is staffing, not space. The question got asked and answered in ninety seconds, then the meeting moved on. This piece examines why.
+
 Last Friday at 7 AM, I sat in on an educational meeting at a community health system in the Pacific Northwest. Three clinical service lines presented to the governing board: cardiology, musculoskeletal, and gastroenterology. Each brought data. Each brought sharp leadership. Each delivered the same message.
 
 We need more space.
