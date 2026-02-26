@@ -179,6 +179,7 @@ When making claims from personal experience, be explicit: "In my experience..." 
 There is no mandatory template. Different pieces call for different structures. But some patterns work well:
 
 - **Start with a TL;DR.** Every blog post should open with a `## TL;DR` section immediately after the title — a 40–60 word plain-language summary of the post's core argument or finding, followed by a horizontal rule (`---`) to visually separate it from the body. This is a Generative Engine Optimization practice: AI systems (ChatGPT, Perplexity, Google AI Overviews) preferentially cite content that provides a clear, self-contained answer near the top of the page. Write it as a direct statement, not a teaser. It should make sense to someone who reads nothing else. Keep the tone consistent with the rest of the post — no marketing language, no hype.
+- **Include an infographic for complex posts.** Any blog post with a moderately complex argument — multiple steps, a cycle, a system dynamic, a process, or a multi-part framework — should include a generated infographic placed immediately after the TL;DR section (after the horizontal rule). The infographic should visually summarize the post's core structure or argument, not decorate it. Use the brand orange (`#fe811b`) as the primary accent color with dark charcoal (`#292929`) text on a white background. Style should be clean, minimalist, and analytical — no stock imagery, no clip art, no marketing gloss. Store infographics in `public/images/content/` and reference them with an `<img>` tag including descriptive `alt` text, explicit `width` and `height` attributes, `loading="lazy"`, and `decoding="async"`. Simple opinion pieces, short tips, and posts that are primarily narrative without structural complexity do not need infographics.
 - **Open with a specific scene or observation.** The cath lab piece opens in a board meeting. The tax piece opens with "I'm doing my business taxes this year with AI coding agents. Not conceptually. Not as an experiment." Ground the reader immediately. The opening paragraph must contain a concrete noun: a person, a place, a specific report, a date, a number. If the first paragraph is all abstract concepts, rewrite it.
 - **Earn your abstractions.** If you're going to introduce a framework or concept, establish the concrete problem first. The reader should be thinking "yes, I recognize this" before you name the pattern.
 - **End with an open hand.** Invite engagement. Provide contact information. Don't end with a hard sell.
@@ -348,6 +349,7 @@ Before publishing, check:
 - [ ] Is the draft free of AI writing tells (see "Avoiding AI-Generated Writing Tells" above)?
 - [ ] Are `metaTitle` and `metaDescription` written individually for this post (not duplicated or left generic)?
 - [ ] Does the opening paragraph contain at least one concrete noun (person, place, report, date, number)?
+- [ ] If the post has a complex argument or multi-step structure, does it include an infographic after the TL;DR?
 
 ---
 
