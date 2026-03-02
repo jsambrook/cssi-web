@@ -83,7 +83,7 @@ The governance dynamics are documented. Co-optation — the process by which ove
 
 The utilization pattern — high-cost procedure spaces sitting idle outside business hours while departments request new construction — is not unusual. The analytical capability Sam demonstrates in the script largely exists today.
 
-The harder question, which the drama deliberately leaves open, is whether the people who run our institutions are willing to invite this kind of participant to the table. A persistent voice with no career to protect, no relationships to manage, no interest in smooth governance. The political and social obstacles are real, and they are harder than the technical ones. I have no tidy answer to that.
+The harder question, which the drama deliberately leaves open, is whether the people who run our institutions are willing to invite this kind of participant to the table. A persistent voice with no career to protect, no turf to defend, and no reason to pull its punches. The political and social obstacles are real, and they are harder than the technical ones. I have no tidy answer to that.
 
 ## How this was made
 
