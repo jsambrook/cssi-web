@@ -39,7 +39,7 @@ Working with Claude, I wrote a 40-minute audio drama. The setting is a fictional
   ></iframe>
 </div>
 
-The episode follows a full board meeting, gavel to adjournment. Three departments present their cases. A commissioner asks the utilization question. And at the end of the dais, in the position where a retired commissioner used to sit, a small amber light clicks on for the first time.
+The episode follows a full board meeting, from call to order to adjournment. Three departments present their cases. A commissioner asks the utilization question. And at the end of the dais, in the position where a retired commissioner used to sit, a small amber light clicks on for the first time.
 
 ## The meeting
 
