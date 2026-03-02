@@ -12,7 +12,7 @@ imageAlt: 'A hospital board meeting room at evening session — commissioners at
 
 ## TL;DR
 
-Last week I argued that a community hospital board meeting I attended could not have gone differently — that the outcome was structurally determined before anyone sat down. Readers asked the obvious follow-up. This is my answer: a 40-minute audio drama showing what the meeting looks like when something new enters the room.
+Last week I argued that a community hospital board meeting I attended could not have gone differently — that the outcome was structurally determined before anyone sat down. Readers asked the obvious follow-up. This is my answer: a 56-minute audio drama showing what the meeting looks like when something new enters the room.
 
 ---
 
@@ -26,7 +26,7 @@ Several readers pushed on exactly that. It is a fair challenge. I had described 
 
 ## The dramatization
 
-Working with Claude, I wrote a 40-minute audio drama. The setting is a fictional community hospital district in Washington State — Cascade Valley Health System. The board is fictional. The staff is fictional. The dynamics are real.
+Working with Claude, I wrote a 56-minute audio drama. The setting is a fictional community hospital district in Washington State — Cascade Valley Health System. The board is fictional. The staff is fictional. The dynamics are real.
 
 <div class="aspect-video my-8">
   <iframe
