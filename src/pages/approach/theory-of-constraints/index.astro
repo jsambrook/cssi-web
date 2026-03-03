@@ -1,0 +1,505 @@
+---
+/*
+ * theory-of-constraints/index.astro
+ *
+ * Standalone evergreen reference page: Theory of Constraints.
+ * Explains the method, the thinking tools, and how we apply them.
+ */
+
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import Section from '../../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../../data/pageDefaults';
+import { buildBreadcrumbSchema, buildWebPageSchema } from '../../../data/schema';
+import { siteConfig } from '../../../data/site';
+
+const title = 'Theory of Constraints: A Practical Guide';
+const description =
+  'How TOC identifies the one constraint limiting your system and resolves it. The method, the thinking tools, and how we apply them.';
+
+const pageUrl = `${siteConfig.siteUrl}/approach/theory-of-constraints`;
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Approach', href: '/approach' },
+  { name: 'Theory of Constraints', href: '/approach/theory-of-constraints' },
+]);
+
+const webPage = buildWebPageSchema({
+  name: title,
+  description,
+  url: pageUrl,
+});
+---
+
+<BaseLayout
+  title={getPageTitle(title)}
+  description={description}
+  ogType="website"
+  jsonLd={[webPage, breadcrumb]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/approach/theory-of-constraints" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-12 space-y-4">
+        <nav class="text-sm text-muted-foreground" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-1.5">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li class="text-muted-foreground/60">/</li>
+            <li><a href="/approach" class="hover:text-primary">Approach</a></li>
+            <li class="text-muted-foreground/60">/</li>
+            <li class="text-foreground">Theory of Constraints</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl sm:text-5xl">Theory of Constraints</h1>
+        <p class="text-xl text-muted-foreground">
+          The method behind the work. How we find the one thing that matters most, and what we do
+          about it.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <p>
+          Eliyahu Goldratt was a physicist, not a business professor. He looked at organizations the
+          way a physicist looks at a system: find the constraint, understand the forces acting on
+          it, and change the right thing. Not everything. The right thing.
+        </p>
+        <p>
+          He called this the Theory of Constraints. I was trained in it directly by Goldratt and his
+          team, and I have been applying it for over twenty-five years. It is the foundation of
+          everything we do at Common Sense Systems.
+        </p>
+        <p>
+          This page is a reference. It explains the core idea, the main tools, and how I use them in
+          practice. If you want to see one of these tools applied to a real problem, the
+          <a href="/insights/hidden-conflicts">hidden conflicts in healthcare</a> post is a good starting
+          point.
+        </p>
+
+        <!-- The Core Idea -->
+        <h2 id="core-idea">The Core Idea</h2>
+        <p>
+          Every system has a constraint. One thing, at any given time, limits how much the system
+          can produce. Improve that one thing and the whole system improves. Improve anything else
+          and nothing changes.
+        </p>
+        <p>
+          Think about a kitchen in a busy restaurant. Orders come in. Prep cooks chop vegetables.
+          Line cooks assemble plates. The dishwasher cycles through racks. But only one oven fits in
+          the space. Every dish that needs the oven waits its turn. The oven is the constraint.
+        </p>
+        <p>
+          You could hire a faster prep cook. You could buy an industrial dishwasher. You could
+          remodel the dining room and seat fifty more people. None of it changes how many meals come
+          out per hour, because every meal waits for that oven.
+        </p>
+        <p>
+          This is obvious in a kitchen. It is far less obvious in a hospital, a software company, or
+          a supply chain, where the constraint hides behind departmental walls, reporting
+          structures, and decades of accumulated assumptions. But the principle is the same. Find
+          the constraint first. Everything else is noise until you do.
+        </p>
+        <p>
+          Goldratt put it simply: "Tell me how you measure me, and I will tell you how I will
+          behave." Organizations routinely optimize departments in isolation, measuring each one
+          against its own targets. This creates the illusion of progress while the system as a whole
+          stays stuck. TOC starts from the opposite direction: what does the system need, and which
+          single point is preventing it from getting there?
+        </p>
+
+        <!-- The Five Focusing Steps -->
+        <h2 id="five-focusing-steps">The Five Focusing Steps</h2>
+        <p>
+          TOC gives you a simple process for working with the constraint. Goldratt called them the <a
+            href="https://en.wikipedia.org/wiki/Theory_of_constraints#The_five_focusing_steps"
+            target="_blank"
+            rel="noopener">Five Focusing Steps</a
+          >:
+        </p>
+        <ol>
+          <li>
+            <strong>Identify</strong> the constraint. What is the one thing limiting the system right
+            now?
+          </li>
+          <li>
+            <strong>Exploit</strong> it. Get everything you can out of the constraint as it exists today,
+            before spending a dollar.
+          </li>
+          <li>
+            <strong>Subordinate</strong> everything else to it. Align the rest of the system to support
+            the constraint, not to optimize locally.
+          </li>
+          <li>
+            <strong>Elevate</strong> the constraint. If exploiting and subordinating are not enough, invest
+            to increase its capacity.
+          </li>
+          <li>
+            <strong>Repeat.</strong> When you break one constraint, another becomes the new limit. Go
+            back to step one.
+          </li>
+        </ol>
+        <p>
+          The order matters. Most organizations jump straight to step four: buy more, build more,
+          hire more. But if you have not first exploited what you already have and subordinated the
+          rest of the system, the new capacity often goes to waste.
+        </p>
+        <p>
+          I saw this clearly at a community hospital in the Pacific Northwest. The cardiology
+          service line told the governing board they needed to build a new cath lab. Demand was
+          growing. Procedure time was booked solid during the day. The request was for tens of
+          millions in construction.
+        </p>
+        <p>Then a commissioner asked: what happens in the lab after hours?</p>
+        <p>
+          The honest answer: the cath lab sits empty roughly 75% of every week. Evenings, nights,
+          weekends. The constraint was not physical space. It was staffing and scheduling patterns
+          that no one had questioned because "that's how cath labs operate." Step one, identify the
+          constraint, changed the entire conversation. (That story is told in full in
+          <a href="/insights/the-cath-lab-is-empty-at-2am">The Cath Lab Is Empty at 2 AM</a>.)
+        </p>
+
+        <!-- The Thinking Processes -->
+        <h2 id="thinking-processes">The Thinking Processes</h2>
+        <p>
+          The Five Focusing Steps tell you what to do with a constraint once you have found it. But
+          finding it, understanding it, and designing a solution that actually works requires a
+          different set of tools. Goldratt called these the
+          <a
+            href="https://en.wikipedia.org/wiki/Thinking_processes_(theory_of_constraints)"
+            target="_blank"
+            rel="noopener">Thinking Processes</a
+          >.
+        </p>
+        <p>
+          There are five main tools. Three of them do the heavy lifting in most engagements: the
+          Evaporating Cloud, the Current Reality Tree, and the Future Reality Tree. The other two,
+          the Prerequisite Tree and the Transition Tree, help with implementation planning. I will
+          spend the most time on the Evaporating Cloud because it is where I start almost every
+          engagement, and because it is the tool most people find immediately useful.
+        </p>
+
+        <!-- Evaporating Cloud -->
+        <h3 id="evaporating-cloud">The Evaporating Cloud</h3>
+        <p>
+          The <a
+            href="https://en.wikipedia.org/wiki/Evaporating_Cloud"
+            target="_blank"
+            rel="noopener">Evaporating Cloud</a
+          > is TOC's conflict resolution tool. Its premise is simple: behind every chronic problem is
+          an unresolved conflict, and behind every unresolved conflict is at least one hidden assumption
+          that, once surfaced, opens a path forward.
+        </p>
+        <p>
+          Most conflicts in organizations are not between people. They are between legitimate needs.
+          Two things that both matter, pulling in opposite directions. People get stuck because both
+          sides are right, and the usual response is to compromise, argue, or avoid the issue
+          entirely. The Evaporating Cloud makes the conflict visible so you can work on it directly.
+        </p>
+        <p>The structure is straightforward. Five boxes connected by arrows:</p>
+        <ul>
+          <li><strong>A</strong> is the common objective. What everyone actually wants.</li>
+          <li>
+            <strong>B</strong> and <strong>C</strong> are two needs, both necessary for achieving A.
+          </li>
+          <li>
+            <strong>D</strong> and <strong>D'</strong> are two actions or conditions. D satisfies B, and
+            D' satisfies C. But D and D' conflict with each other.
+          </li>
+        </ul>
+        <p>
+          The power of the tool is not in drawing the diagram. It is in what happens next: you
+          examine the assumptions behind each arrow. Why does B require D? Is that always true?
+          Under what conditions might it not be? The conflict "evaporates" when you find an
+          assumption that does not hold, because that opens a way to satisfy both needs without the
+          conflict.
+        </p>
+
+        <h4>An Example: Rachel's Bakery</h4>
+        <p>
+          Rachel runs a bakery. Business is good, but costs are rising and she is trying to decide
+          what to do about pricing. She feels stuck between two choices that both seem necessary and
+          both seem impossible to do at the same time.
+        </p>
+        <p>The cloud looks like this:</p>
+        <ul>
+          <li><strong>A:</strong> Run a thriving bakery.</li>
+          <li>
+            <strong>B:</strong> Maintain healthy margins. (You cannot run a thriving bakery without covering
+            your costs and making a profit.)
+          </li>
+          <li>
+            <strong>C:</strong> Keep loyal customers. (You cannot run a thriving bakery if your customers
+            leave.)
+          </li>
+          <li>
+            <strong>D:</strong> Raise prices. (To maintain healthy margins, she needs to raise prices
+            to cover rising costs.)
+          </li>
+          <li>
+            <strong>D':</strong> Hold prices steady. (To keep loyal customers, she needs to keep prices
+            where they are, because customers are price-sensitive.)
+          </li>
+        </ul>
+        <p>
+          D and D' conflict. She cannot raise prices and hold them steady at the same time. This is
+          where most people stop: it feels like an impossible choice, so they either agonize,
+          compromise (raise prices a little and hope nobody notices), or avoid the decision
+          entirely.
+        </p>
+        <p>
+          But look at the assumptions. The arrow from C to D' carries a critical assumption: "my
+          customers will leave if I raise prices because they choose me primarily on price." Is that
+          true? Rachel talks to her regulars. She finds that most of them come for the sourdough,
+          which they cannot get anywhere else nearby. They come for the quality and the consistency.
+          Price is a factor, but it is not the reason they walk through the door.
+        </p>
+        <p>
+          That assumption, once surfaced, changes the situation entirely. Rachel can raise prices on
+          her commodity items (muffins, cookies) while keeping her signature sourdough competitively
+          priced. She protects the relationship that actually drives loyalty while improving her
+          margins. The conflict evaporates. Not through compromise, but through finding and
+          challenging the assumption that made the conflict seem unresolvable.
+        </p>
+        <p>
+          Every Evaporating Cloud I have built in twenty-five years works the same way. The conflict
+          feels real until you find the assumption that is not true. In healthcare, these hidden
+          assumptions live inside policies, staffing models, and compliance procedures that nobody
+          has questioned in years. They create chronic frustration for everyone involved, and they
+          are almost always solvable once you can see them clearly.
+        </p>
+        <p>
+          For a deeper example of the Evaporating Cloud applied to a real healthcare policy, see
+          <a href="/insights/hidden-conflicts">Hidden Conflicts in Healthcare</a>. I have also
+          recorded a video walkthrough of the tool at
+          <a href="/insights/resolving-a-sweet-dilemma">Resolving a Sweet Dilemma</a>, using
+          Rachel's bakery as the worked example.
+        </p>
+
+        <!-- Current Reality Tree -->
+        <h3 id="current-reality-tree">The Current Reality Tree</h3>
+        <p>
+          The <a
+            href="https://en.wikipedia.org/wiki/Current_reality_tree_(theory_of_constraints)"
+            target="_blank"
+            rel="noopener">Current Reality Tree</a
+          > (CRT) is a cause-and-effect diagram. It answers the question: why is the system behaving the
+          way it is?
+        </p>
+        <p>
+          You start with the symptoms, the chronic problems that people complain about. In TOC these
+          are called Undesirable Effects, or UDEs. Staff burnout. Long wait times. Missed deadlines.
+          Customer complaints. Then you trace backward: what causes each symptom? And what causes
+          those causes?
+        </p>
+        <p>
+          The CRT is a logical map, not a flowchart. Each connection requires a "because" statement
+          that you can examine and challenge. "Staff are burning out <em>because</em> they are asked to
+          resolve problems that require information they do not have." "They do not have the information
+          <em>because</em> it is captured during the acute stay instead of before admission." You keep
+          tracing until you find the root causes, usually two or three, that drive most of the symptoms.
+        </p>
+        <p>
+          The CRT is especially useful when an organization is dealing with many problems at once
+          and does not know where to start. Rather than treating each symptom independently, the
+          tree reveals which root causes, if addressed, would relieve multiple symptoms
+          simultaneously. It turns an overwhelming situation into a focused one.
+        </p>
+
+        <!-- Future Reality Tree -->
+        <h3 id="future-reality-tree">The Future Reality Tree</h3>
+        <p>
+          The <a
+            href="https://en.wikipedia.org/wiki/Future_reality_tree"
+            target="_blank"
+            rel="noopener">Future Reality Tree</a
+          > (FRT) is the CRT's counterpart. Where the CRT maps the current system, the FRT maps the proposed
+          solution. If we make this change, what effects will it produce? Will it actually resolve the
+          UDEs we care about? Will it create new problems?
+        </p>
+        <p>
+          This is where most improvement efforts skip a step. People identify a solution and
+          implement it without rigorously testing whether it will work. The FRT forces you to think
+          through the cause-and-effect chain of your proposed change before you commit resources. It
+          surfaces negative side effects early, when they are cheap to address, rather than after
+          implementation, when they are expensive and demoralizing.
+        </p>
+
+        <!-- Brief mention of PRT and TT -->
+        <h4>Implementation Tools: Prerequisite Tree and Transition Tree</h4>
+        <p>
+          Two additional Thinking Process tools help with implementation. The
+          <a
+            href="https://en.wikipedia.org/wiki/Prerequisite_tree_(theory_of_constraints)"
+            target="_blank"
+            rel="noopener">Prerequisite Tree</a
+          > identifies the obstacles between where you are and where you want to be, then sequences the
+          intermediate objectives needed to overcome them. The
+          <a
+            href="https://en.wikipedia.org/wiki/Transition_tree_(theory_of_constraints)"
+            target="_blank"
+            rel="noopener">Transition Tree</a
+          > breaks each intermediate objective into specific actions with expected effects. Together they
+          turn a strategic insight into an executable plan.
+        </p>
+
+        <!-- TOC vs. Lean -->
+        <h2 id="toc-and-lean">TOC and Lean</h2>
+        <p>
+          People often ask how TOC relates to <a
+            href="https://en.wikipedia.org/wiki/Lean_manufacturing"
+            target="_blank"
+            rel="noopener">Lean</a
+          >. They are complementary, but they start from different places and they are strong in
+          different situations.
+        </p>
+        <p>
+          Lean is powerful at eliminating waste in known processes. It maps value streams,
+          identifies non-value-added steps, and systematically removes them. In a stable
+          manufacturing environment with well-understood processes, Lean produces real and
+          measurable results.
+        </p>
+        <p>
+          TOC starts with a different question: which process should you fix first? In a system with
+          many problems, Lean gives you excellent tools for improving any one of them. TOC tells you
+          which one matters. If you apply Lean to a non-constraint, you will improve that process
+          beautifully and the system will not change at all.
+        </p>
+        <p>
+          There is also a philosophical difference in how the two frameworks define "value." Lean
+          draws a clean line between value-added work (what the customer pays for) and waste
+          (everything else). In practice, especially in regulated environments like healthcare, this
+          binary breaks down. Compliance documentation is not something a patient would choose to
+          pay for, but it is not optional. Safety checks do not add value in the Lean sense, but
+          removing them would be catastrophic. TOC does not require you to classify every activity
+          as value or waste. It asks a simpler question: is this activity supporting the constraint
+          or not?
+        </p>
+        <p>
+          The honest observation is that most organizations undercommit to both Lean and TOC. They
+          adopt the vocabulary without the discipline. They do a Lean project here, a TOC analysis
+          there, and neither one gets the sustained attention needed to produce lasting results. The
+          frameworks are not the problem. The commitment is.
+        </p>
+
+        <!-- How I Use TOC -->
+        <h2 id="how-i-use-toc">How I Use TOC in Practice</h2>
+        <p>
+          Most of my engagements start with a conversation, not a diagram. I ask people what is
+          frustrating them. What they have tried. What keeps not working despite their best efforts.
+          The chronic problems, the ones that survive every reorganization and every improvement
+          initiative, are the ones worth mapping.
+        </p>
+        <p>
+          From there I usually build an Evaporating Cloud. Not because it is always the right first
+          step, but because it forces clarity about the conflict. If I can name the conflict, I can
+          find the assumptions. If I can find the assumptions, I can test them. And testing
+          assumptions is where breakthroughs happen.
+        </p>
+        <p>
+          Sometimes the work stays at the cloud level. A single conflict, clearly resolved, can
+          unblock years of organizational paralysis. Other times the cloud reveals a deeper system
+          problem that needs a Current Reality Tree to map fully. The tools are flexible. What
+          matters is following the logic wherever it leads.
+        </p>
+        <p>
+          I also use TOC in combination with other methods. AI-assisted analysis helps me process
+          large amounts of policy documents, financial data, and operational metrics to build more
+          complete reality trees than I could construct manually. The
+          <a href="/insights/pacp">Post-Acute Care Plan</a> concept is a direct application of TOC's input-quality
+          principle to hospital discharge. The constraint is never just one thing in isolation. It lives
+          inside a system, and understanding the system is the work.
+        </p>
+
+        <!-- Recommended Reading -->
+        <h2 id="reading">Recommended Reading</h2>
+        <p>
+          If you want to learn TOC from the source, Goldratt wrote for practitioners, not academics.
+          His books are short, opinionated, and practical.
+        </p>
+        <ul>
+          <li>
+            <strong
+              ><a
+                href="https://en.wikipedia.org/wiki/The_Goal_(novel)"
+                target="_blank"
+                rel="noopener">The Goal</a
+              ></strong
+            > (1984). The one to start with. A novel about a plant manager who discovers the constraint
+            in his factory. It is fiction, and it teaches more about operations management than most textbooks.
+          </li>
+          <li>
+            <strong
+              ><a
+                href="https://en.wikipedia.org/wiki/It%27s_Not_Luck"
+                target="_blank"
+                rel="noopener">It's Not Luck</a
+              ></strong
+            > (1994). The sequel to The Goal. Introduces the Thinking Processes through a story about
+            a manager applying them to strategic business problems.
+          </li>
+          <li>
+            <strong
+              ><a
+                href="https://en.wikipedia.org/wiki/Critical_Chain_(novel)"
+                target="_blank"
+                rel="noopener">Critical Chain</a
+              ></strong
+            > (1997). TOC applied to project management. If you have ever wondered why projects consistently
+            run late and over budget, this book explains the structural reasons and what to do about them.
+          </li>
+          <li>
+            <strong
+              ><a
+                href="https://en.wikipedia.org/wiki/Necessary_but_Not_Sufficient"
+                target="_blank"
+                rel="noopener">Necessary but Not Sufficient</a
+              ></strong
+            > (2000). About technology implementation. Why buying a system does not solve problems unless
+            the rules and policies change too. Relevant to anyone involved in EHR deployments, ERP projects,
+            or any large technology adoption.
+          </li>
+          <li>
+            <strong
+              ><a
+                href="https://en.wikipedia.org/wiki/The_Choice_(Goldratt_book)"
+                target="_blank"
+                rel="noopener">The Choice</a
+              ></strong
+            > (2008). Goldratt's most personal book. A conversation with his daughter about thinking clearly,
+            challenging assumptions, and the belief that "every situation, no matter how complex, can
+            be substantially improved."
+          </li>
+        </ul>
+        <p>
+          For a more structured academic treatment,
+          <strong>Theory of Constraints Handbook</strong> (edited by James Cox III and John Schleier,
+          McGraw-Hill, 2010) covers every major TOC application area with contributions from practitioners
+          and researchers.
+        </p>
+
+        <!-- Closing -->
+        <h2 class="sr-only">Get in Touch</h2>
+        <p>
+          TOC is not a magic formula. It is a discipline. It requires honest answers about what is
+          actually going on, and the willingness to challenge assumptions that have been operating
+          unchecked for years. That is uncomfortable work, and it does not produce overnight
+          results.
+        </p>
+        <p>
+          But in my experience, it produces the right results. When you find the real constraint and
+          address it directly, the system moves. Not incrementally, but meaningfully. Problems that
+          resisted years of effort resolve in weeks once you are working on the right thing.
+        </p>
+        <p>
+          If you are dealing with a system that feels stuck, despite smart people and genuine
+          effort, I am happy to think through it with you. Reach me at
+          <a href="mailto:john@common-sense.com">john@common-sense.com</a>.
+        </p>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

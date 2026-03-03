@@ -34,6 +34,7 @@ export const footerColumns = [
     links: [
       { label: 'About', href: '/about' },
       { label: 'Approach', href: '/approach' },
+      { label: 'Theory of Constraints', href: '/approach/theory-of-constraints' },
       { label: 'Insights', href: '/insights' },
       { label: 'Contact', href: '/contact' },
       { label: 'SMS Consent', href: '/legal/sms-consent' },
