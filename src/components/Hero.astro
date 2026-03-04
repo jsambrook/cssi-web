@@ -56,9 +56,7 @@ const hasTwoColumns = !!intakeForm;
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div
       class:list={[
-        hasTwoColumns
-          ? 'lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start'
-          : 'max-w-4xl mx-auto',
+        hasTwoColumns ? 'lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start' : 'max-w-4xl mx-auto',
       ]}
     >
       <!-- Hero content (left column when 2-col) -->
