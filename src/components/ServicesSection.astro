@@ -1,0 +1,56 @@
+---
+/*
+ * ServicesSection.astro
+ *
+ * Displays the two service offers (Constraint Analysis, Offer Analysis)
+ * as side-by-side cards. Each card shows the problem, the solution,
+ * the deliverable, timeline, and fee.
+ */
+
+import type { ServiceOffer } from '../data/types';
+
+interface Props {
+  offers: ServiceOffer[];
+}
+
+const { offers } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+  {
+    offers.map((offer) => (
+      <div
+        id={`service-${offer.id}`}
+        class="rounded-[var(--radius)] border-2 border-border bg-card p-8 lg:p-10 space-y-6 transition-all hover:border-primary/40 hover:shadow-lg"
+      >
+        <h3 class="text-2xl font-bold text-foreground">{offer.title}</h3>
+
+        <div class="space-y-2">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary">The Problem</p>
+          <p class="text-sm text-muted-foreground leading-relaxed">{offer.problem}</p>
+        </div>
+
+        <div class="space-y-2">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary">What We Do</p>
+          <p class="text-sm text-muted-foreground leading-relaxed">{offer.what}</p>
+        </div>
+
+        <div class="space-y-2">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary">You Get</p>
+          <p class="text-sm text-muted-foreground leading-relaxed">{offer.deliverable}</p>
+        </div>
+
+        <div class="border-t border-border pt-6 grid grid-cols-2 gap-4">
+          <div>
+            <p class="text-xs text-muted-foreground uppercase tracking-wider">Timeline</p>
+            <p class="text-sm font-semibold text-foreground mt-1">{offer.timeline}</p>
+          </div>
+          <div>
+            <p class="text-xs text-muted-foreground uppercase tracking-wider">Investment</p>
+            <p class="text-sm font-semibold text-foreground mt-1">{offer.fee}</p>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

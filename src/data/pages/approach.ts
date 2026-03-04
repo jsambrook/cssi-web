@@ -1,14 +1,14 @@
 import type { PageHeader, GridItem, CTAContent } from '../types';
 
-export const pageTitle = 'Our Approach to Healthcare Consulting';
+export const pageTitle = 'Our Approach';
 export const pageDescription =
-  'Fixed-fee, decision-ready consulting. We use Theory of Constraints to frame the problem, build shared facts, and design the intervention — not a report.';
+  'Fixed-fee, decision-ready consulting. We use the Theory of Constraints to find what is actually limiting your system, then fix it. You only pay if we deliver.';
 
 export const header: PageHeader = {
   label: 'Approach',
   heading: 'A Different Way to Work Together',
   subheading:
-    'A practical, low-risk approach designed around what actually creates progress in healthcare organizations -- not what maximizes billable hours.',
+    'A practical, low-risk approach designed around what actually creates progress -- not what maximizes billable hours.',
 };
 
 export const steps: GridItem[] = [
@@ -38,8 +38,11 @@ export const cta: CTAContent = {
   headline: 'Ready to move forward?',
   description:
     "Start with a focused discovery call. No pitch, just clarity about what's actually blocking progress.",
-  primaryCta: { text: 'Schedule a Meeting', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
+  primaryCta: {
+    text: 'Book a Conversation',
+    href: 'https://calendar.app.google/wgWnth98gdaNvN5aA',
+  },
   secondaryCta: { text: 'About Us', href: '/about' },
   footnote:
-    'Serving hospitals, health systems, and healthcare organizations across Washington State',
+    'Common Sense Systems, Inc. | Kirkland, WA | Constraint analysis and offer strategy since 1996',
 };

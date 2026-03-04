@@ -3,12 +3,12 @@ export const siteConfig = {
   tagline: 'Leading with value since 1996',
   siteUrl: 'https://common-sense.com',
   defaultDescription:
-    "Break bottlenecks and accelerate throughput in Healthcare, MedTech, and Embedded Systems. We design 'Mafia Offers' and operational interventions for ambitious leaders. Based in Kirkland, WA.",
+    'We find the one thing limiting your organization and fix it. Constraint analysis and offer strategy with a satisfaction guarantee. You only pay if we deliver. Based in Kirkland, WA.',
   defaultOgImage: '/images/og-default.png',
-  headerCta: { text: 'Book a Consultation', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
+  headerCta: { text: 'Book a Conversation', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
   footerContactHeading: 'Contact Us',
   footerTagline:
-    'Operational architecture and constraint analysis for complex systems. Serving Healthcare, MedTech, and Embedded Software leaders in the Pacific Northwest since 1996.',
+    'Constraint analysis and offer strategy for organizations that are ready to stop guessing and start moving. Kirkland, WA. Since 1996.',
   font: {
     family: 'Instrument Sans',
     googleFontsUrl:
@@ -22,7 +22,7 @@ export const siteConfig = {
 export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Approach', href: '/approach' },
-  { label: 'Results', href: '/#impact' },
+  { label: 'Services', href: '/#services' },
   { label: 'Insights', href: '/insights' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

@@ -196,38 +196,31 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     knowsAbout: [
       'Theory of Constraints',
       'Throughput Accounting',
-      'Healthcare Patient Flow',
-      'Medical Device Commercialization',
+      'Constraint Analysis',
+      'Offer Strategy',
+      'Healthcare Operations',
       'Embedded Systems Engineering',
-      'Mafia Offers (Strategy)',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Operational Interventions',
+      name: 'Consulting Services',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Flow Dynamics & Throughput',
+            name: 'Constraint Analysis',
             description:
-              'Rapid intervention for gridlocked systems (Patient Flow or R&D Pipelines).',
+              'Identify the single constraint limiting your organization and fix it. Fixed fee, 2-4 weeks, satisfaction guarantee.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Market Offer Architecture',
-            description: "Designing 'Mafia Offers' that competitors cannot replicate.",
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Cross-Functional Synchronization',
-            description: 'Aligning Sales, Ops, and Engineering to a single constraint.',
+            name: 'Offer Analysis',
+            description:
+              'Diagnose why your market offer is not differentiating and build one your ideal client cannot refuse. Fixed fee, 2-4 weeks, satisfaction guarantee.',
           },
         },
       ],
@@ -264,15 +257,12 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       },
     ],
     serviceType: [
-      'Healthcare Systems Consulting',
-      'Hospital Operations Consulting',
       'Theory of Constraints Consulting',
-      'Healthcare AI Consulting',
-      'Complex Discharge Analysis',
-      'Operational Constraint Analysis',
-      'Sales Process Engineering',
+      'Constraint Analysis',
+      'Offer Strategy',
+      'Operational Improvement',
       'Business Process Improvement',
-      'Organizational Constraint Analysis',
+      'Healthcare Operations Consulting',
     ],
     sameAs: organizationSameAs,
   };
@@ -310,73 +300,28 @@ export function buildOfferCatalogSchema(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@type': 'OfferCatalog',
     name: `${siteConfig.name} Services`,
-    description: 'Constraint-based consulting for healthcare and technology leaders.',
+    description:
+      'Constraint analysis and offer strategy for organizations. Fixed fee, fixed timeline, satisfaction guarantee.',
     itemListElement: [
       {
-        '@type': 'OfferCatalog',
-        name: 'Healthcare Leadership Services',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Flow Dynamics & Throughput',
-              description:
-                'Accelerate patient flow, slash length of stay, and eliminate ED boarding without adding staff.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Market Offer Architecture',
-              description:
-                'Direct-to-employer contracting and network integrity strategies that bypass insurance friction.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Synchronization & Alignment',
-              description:
-                'Unify ED, inpatient, and discharge teams so the entire hospital moves as one synchronized system.',
-            },
-          },
-        ],
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Constraint Analysis',
+          description:
+            'Identify the single constraint limiting your organization and fix it. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
+          url: `${siteConfig.siteUrl}/#service-constraint-analysis`,
+        },
       },
       {
-        '@type': 'OfferCatalog',
-        name: 'Tech & Product Leadership Services',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Flow Dynamics & Throughput',
-              description:
-                'Accelerate R&D and slash time-to-market by identifying the bottleneck in your dev cycle.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Market Offer Architecture',
-              description:
-                'Risk-shared licensing and recurring revenue models that align with customer utility.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Synchronization & Alignment',
-              description:
-                'Align product roadmaps with sales promises through operational handshakes.',
-            },
-          },
-        ],
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Offer Analysis',
+          description:
+            'Diagnose why your market offer is not differentiating and build one your ideal client cannot refuse. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
+          url: `${siteConfig.siteUrl}/#service-offer-analysis`,
+        },
       },
     ],
   };

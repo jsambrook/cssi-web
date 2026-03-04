@@ -1,0 +1,50 @@
+---
+/*
+ * GuaranteeSection.astro
+ *
+ * Prominent guarantee statement with supporting reasons.
+ * Designed to stop the scroll and answer "why would I not try this?"
+ */
+
+import type { HeroBullet } from '../data/types';
+
+interface Props {
+  heading: string;
+  statement: string;
+  explanation: string;
+  reasons: HeroBullet[];
+}
+
+const { heading, statement, explanation, reasons } = Astro.props;
+---
+
+<section class="py-16 lg:py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center space-y-8">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs uppercase tracking-wider font-semibold"
+      >
+        {heading}
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+        {statement}
+      </h2>
+
+      <p class="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+        {explanation}
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-6 pt-4 text-left">
+        {
+          reasons.map((reason) => (
+            <div class="space-y-2">
+              <p class="text-sm font-semibold text-foreground">{reason.bold}</p>
+              <p class="text-sm text-muted-foreground leading-relaxed">{reason.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
