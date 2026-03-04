@@ -1,9 +1,9 @@
 import type { HeroBullet, CTAContent, AmbitionCard, ServiceOffer } from '../types';
 
 export const hero = {
-  headline: 'We Find the One Thing Holding You Back. You Only Pay If We Deliver.',
+  headline: 'Find it. Fix it. Or don\'t pay.',
   subheadline:
-    'We identify the one constraint limiting your performance and fix it. Thirty-year track record. If you do not agree we delivered, there is no charge.',
+    'Every business has one constraint holding it back. We identify yours in weeks, not months. You only pay if we deliver.',
   bullets: [
     { bold: 'Fixed fee, fixed timeline.', text: 'Two to four weeks for a clear diagnosis.' },
     {
