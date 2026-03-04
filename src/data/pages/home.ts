@@ -1,7 +1,7 @@
 import type { HeroBullet, CTAContent, AmbitionCard, ServiceOffer } from '../types';
 
 export const hero = {
-  headline: 'Find it. Fix it. Or don\'t pay.',
+  headline: "Find it. Fix it. Or don't pay.",
   subheadline:
     'Every business has one constraint holding it back. We identify yours in weeks, not months. You only pay if we deliver.',
   bullets: [
