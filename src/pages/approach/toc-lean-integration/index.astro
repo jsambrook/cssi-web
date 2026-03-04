@@ -1,0 +1,374 @@
+---
+/*
+ * toc-lean-integration/index.astro
+ *
+ * Standalone evergreen reference page: Integrating TOC and Lean.
+ * The compass-and-toolkit framework for using both methodologies together.
+ * Linked from blog posts; designed as a practitioner reference.
+ */
+
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import Section from '../../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../../data/pageDefaults';
+import { buildBreadcrumbSchema, buildWebPageSchema } from '../../../data/schema';
+import { siteConfig } from '../../../data/site';
+
+const title = 'Integrating TOC and Lean: The Compass and the Toolkit';
+const description =
+  'A practitioner reference for using the Theory of Constraints as strategic compass and Lean as tactical toolkit. Decision heuristics, integration sequence, and source literature.';
+
+const pageUrl = `${siteConfig.siteUrl}/approach/toc-lean-integration`;
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Approach', href: '/approach' },
+  { name: 'TOC and Lean Integration', href: '/approach/toc-lean-integration' },
+]);
+
+const webPage = buildWebPageSchema({
+  name: title,
+  description,
+  url: pageUrl,
+});
+---
+
+<BaseLayout
+  title={getPageTitle(title)}
+  description={description}
+  ogType="website"
+  jsonLd={[webPage, breadcrumb]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/approach/toc-lean-integration" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-12 space-y-4">
+        <nav class="text-sm text-muted-foreground" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-1.5">
+            <li><a href="/" class="hover:text-primary">Home</a></li>
+            <li class="text-muted-foreground/60">/</li>
+            <li><a href="/approach" class="hover:text-primary">Approach</a></li>
+            <li class="text-muted-foreground/60">/</li>
+            <li class="text-foreground">TOC and Lean Integration</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl sm:text-5xl">Integrating TOC and Lean</h1>
+        <p class="text-xl text-muted-foreground">
+          The compass tells you where to go. The toolkit helps you get there. This page is a
+          practitioner reference for using both together.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <!-- The Core Insight -->
+        <h2 id="core-insight">The Core Insight</h2>
+        <p>The Theory of Constraints and Lean are not rivals. They answer different questions.</p>
+        <p>
+          Lean asks: <em>Where is waste?</em> It provides disciplined tools for finding and eliminating
+          non-value-adding steps in a process. Value Stream Mapping, 5S, standardized work, kaizen events,
+          A3 problem solving.
+        </p>
+        <p>
+          TOC asks: <em>What is limiting throughput?</em> It identifies the single point in a system that
+          governs overall performance and focuses all effort there.
+        </p>
+        <p>
+          The problem most organizations face is not that they chose the wrong methodology. It is
+          that they are using one without the other. Lean without TOC improves processes that may
+          not matter to system performance. TOC without Lean identifies the constraint but may lack
+          the detailed process improvement tools to address it efficiently. Together, they are
+          substantially more powerful than either alone.
+        </p>
+        <p>
+          We call this the compass-and-toolkit model. TOC is the compass: it identifies the
+          constraint, determines the direction of improvement, and prevents you from expending
+          effort in places that will not move the needle. Lean is the toolkit: it gives you the
+          means to make improvements once you know where to apply them.
+        </p>
+        <p>
+          For the full argument, including the evidence base and healthcare-specific context, see
+          <a href="/insights/compass-and-toolkit-toc-lean-healthcare"
+            >The Compass and the Toolkit: Why Healthcare Needs Both TOC and Lean</a
+          >.
+        </p>
+
+        <!-- The Integration Sequence -->
+        <h2 id="integration-sequence">The Integration Sequence</h2>
+        <p>The order matters. This is a sequence, not a menu.</p>
+
+        <h3>Step 1: Identify the constraint (TOC)</h3>
+        <p>
+          Before any improvement work begins, answer the question: what is currently limiting system
+          throughput? Not what seems inefficient. Not what generates the most complaints. What
+          actually governs how much the system can produce.
+        </p>
+        <p>
+          This step often reveals that the constraint is not where people assume. In healthcare,
+          departments routinely cite space as their constraint when the real limitation is staffing
+          patterns or policy. In manufacturing, the bottleneck machine is often obvious, but the
+          real constraint may be a scheduling rule upstream. In a small service business, the
+          constraint is frequently the owner's personal capacity to make decisions.
+        </p>
+        <p>
+          TOC's <a href="/approach/theory-of-constraints#five-focusing-steps">Five Focusing Steps</a
+          >
+          provide the discipline for this identification. The
+          <a href="/approach/theory-of-constraints#current-reality-tree">Current Reality Tree</a>
+          can help when the constraint is not obvious, by tracing symptoms back to root causes.
+        </p>
+
+        <h3>Step 2: Exploit the constraint (TOC + Lean)</h3>
+        <p>
+          Get everything you can out of the constraint as it exists today, before spending money.
+          This is where Lean tools become powerful.
+        </p>
+        <p>
+          Map the value stream at the constraint. Where is waste in the constraint's process? What
+          non-value-adding steps are consuming the constraint's limited capacity? Eliminate them.
+          Standardize the work at the constraint so that output is consistent and predictable. Apply
+          5S to the constraint's workspace so that nothing slows it down.
+        </p>
+        <p>
+          The key insight: Lean tools applied at the constraint have maximum impact. The same tools
+          applied at a non-constraint produce local improvement that does not change system
+          throughput.
+        </p>
+
+        <h3>Step 3: Subordinate everything else (TOC)</h3>
+        <p>
+          Align the rest of the system to support the constraint. This is the step most
+          organizations struggle with, because it means some departments may need to operate below
+          their local maximum efficiency.
+        </p>
+        <p>
+          If the constraint is a surgical suite, subordination means the pre-op process, the
+          sterilization team, and the scheduling system all operate on the constraint's rhythm, not
+          their own. If the constraint is a single specialist in a small firm, subordination means
+          the sales team does not book work faster than that specialist can deliver.
+        </p>
+        <p>
+          Lean's concept of pull systems is relevant here. A pull system naturally subordinates
+          upstream processes to downstream capacity. But TOC adds specificity: you are not pulling
+          to a generic downstream station. You are pulling to the identified constraint.
+        </p>
+
+        <h3>Step 4: Elevate the constraint (invest)</h3>
+        <p>
+          If Steps 2 and 3 are not sufficient, invest to increase the constraint's capacity. Hire
+          more staff for the bottleneck. Buy additional equipment. Extend operating hours. This is
+          where most organizations start, which is why they overspend. Elevating before exploiting
+          and subordinating means you are adding capacity to a process that is still full of waste,
+          in a system that is still not aligned around it.
+        </p>
+
+        <h3>Step 5: Repeat (do not let inertia become the constraint)</h3>
+        <p>
+          When you successfully elevate a constraint, the system's bottleneck moves somewhere else.
+          Go back to Step 1 and find the new constraint. Goldratt's warning: do not let inertia
+          become the constraint. The policies, procedures, and organizational habits you built
+          around the old constraint may now be limiting the system in a new way.
+        </p>
+
+        <!-- The Decision Heuristic -->
+        <h2 id="decision-heuristic">Which Tool, When: A Decision Heuristic</h2>
+        <p>
+          Not every situation requires the full integration sequence. Here is a simple decision
+          framework for practitioners.
+        </p>
+
+        <p>
+          <strong>If you do not know what is limiting throughput</strong>, you have a TOC problem.
+          Use the Five Focusing Steps or build a Current Reality Tree before picking up any Lean
+          tools. Improving a process you have not verified as the constraint is activity without
+          impact.
+        </p>
+        <p>
+          <strong>If you know the constraint but it is full of waste</strong>, you have a Lean
+          problem at the constraint. Map the value stream there. Apply waste elimination, 5S, and
+          standardized work. This is where Lean produces its highest return per hour of effort.
+        </p>
+        <p>
+          <strong>If you know the constraint and it is already efficient</strong>, you are ready to
+          elevate. Invest in additional capacity at the constraint. Then verify that the rest of the
+          system is subordinated to the new capacity level.
+        </p>
+        <p>
+          <strong>If you have a chronic conflict blocking improvement</strong>, use TOC's
+          <a href="/approach/theory-of-constraints#evaporating-cloud">Evaporating Cloud</a>. Lean
+          has root cause analysis tools (5 Whys, fishbone diagrams), but these assume a single
+          causal chain. Chronic organizational conflicts involve competing legitimate needs and
+          require assumption-surfacing, which Lean does not provide.
+        </p>
+        <p>
+          <strong>If departments are locally efficient but system performance is flat</strong>, you
+          have a subordination problem. TOC's system-level thinking will identify where local
+          optimization is undermining global throughput. This is one of the most common patterns in
+          healthcare, where every department can show improvement metrics while patient experience
+          and flow remain unchanged.
+        </p>
+
+        <!-- What Each Framework Does Well -->
+        <h2 id="strengths">What Each Framework Does Well</h2>
+
+        <h3>Lean's strengths</h3>
+        <ul>
+          <li>
+            Process-level waste identification and elimination (Value Stream Mapping, 5S, kaizen)
+          </li>
+          <li>Standardized work and visual management</li>
+          <li>Continuous improvement culture and frontline engagement</li>
+          <li>Pull systems and flow management within a process</li>
+          <li>Well-established training infrastructure and practitioner community</li>
+        </ul>
+
+        <h3>TOC's strengths</h3>
+        <ul>
+          <li>System-level constraint identification (Five Focusing Steps)</li>
+          <li>Conflict resolution and assumption-surfacing (Evaporating Cloud)</li>
+          <li>Cause-and-effect analysis across organizational boundaries (Current Reality Tree)</li>
+          <li>Solution validation before implementation (Future Reality Tree)</li>
+          <li>Throughput-based measurement that prevents local optimization traps</li>
+        </ul>
+
+        <h3>The gap each fills for the other</h3>
+        <p>
+          TOC tells you <em>where</em> to improve. Lean tells you <em>how</em> to improve once you are
+          there. TOC prevents wasted improvement effort. Lean provides the detailed process tools that
+          TOC does not include.
+        </p>
+        <p>
+          Lean lacks a built-in mechanism for asking "Should we even be working on this process?"
+          TOC lacks the granular waste elimination tools that make process improvement efficient.
+          Neither gap is a flaw. It is a design boundary, and the other framework fills it.
+        </p>
+
+        <!-- The Evidence -->
+        <h2 id="evidence">The Evidence</h2>
+        <p>
+          The case for integration is not purely theoretical. Here are the key data points from the
+          published literature.
+        </p>
+        <p>
+          <strong>The 21-plant study.</strong> A
+          <a
+            href="https://www.synchronix.com/comparing-toc-and-lean/comparing-lean-and-six-sigma-and-the-impact-of-theory-of-constraints/"
+            target="_blank"
+            rel="noopener">published practitioner case study</a
+          >
+          documents a two-year experiment at a California corporation. Eleven plants used Six Sigma alone,
+          four used Lean alone, and six used TOC as the strategic framework with Lean and Six Sigma applied
+          within it. The six TOC-led plants generated 89% of total cost savings. The Lean-only plants
+          generated 4%. This is a practitioner report, not a peer-reviewed academic study, but the scale
+          and duration are notable.
+        </p>
+        <p>
+          <strong>TOC in healthcare: systematic review.</strong> A
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/" target="_blank" rel="noopener"
+            >peer-reviewed systematic review</a
+          >
+          of 42 TOC implementations in healthcare found all reported positive outcomes, with mean results
+          of 50% reductions in patient waiting time, 38% reductions in length of stay, 43% increases in
+          OR productivity, and 34% increases in throughput.
+        </p>
+        <p>
+          <strong>Lean failure rates.</strong> A
+          <a
+            href="https://onlinelibrary.wiley.com/doi/10.1155/2020/8875902"
+            target="_blank"
+            rel="noopener">review in the Journal of Healthcare Engineering</a
+          >
+          reports that researchers have estimated 70% of Lean projects fail in healthcare, with full deployment
+          reported in as few as 4% of U.S. hospitals. An
+          <a
+            href="https://www.industryweek.com/operations/continuous-improvement/article/21144299/why-do-so-many-lean-efforts-fail"
+            target="_blank"
+            rel="noopener">Industry Week survey</a
+          >
+          found similar patterns across manufacturing. A
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4833201/" target="_blank" rel="noopener"
+            >systematic review of Lean in healthcare</a
+          >
+          found no high-quality experimental studies and no significant impact on health outcomes like
+          mortality, though process improvements were documented.
+        </p>
+        <p>
+          <strong>Meta-analysis of TOC implementations.</strong> A
+          <a
+            href="https://www.tocinstitute.org/theory-of-constraints-examples.html"
+            target="_blank"
+            rel="noopener">review of over 100 companies</a
+          >
+          that implemented TOC (Balderstone and Mabin, Victoria University of Wellington) found no failures
+          or disappointing results among the sample, with significant mean improvements in both operational
+          and financial performance.
+        </p>
+        <p>
+          These data points do not prove that TOC is universally superior to Lean. They suggest that
+          Lean applied without strategic constraint identification produces inconsistent results,
+          and that adding TOC's focusing discipline dramatically improves outcomes. The evidence for
+          the combination is stronger than for either methodology alone.
+        </p>
+
+        <!-- Common Objections -->
+        <h2 id="common-objections">Common Objections</h2>
+
+        <p>
+          <strong>"We are already a Lean organization."</strong> Good. You have the toolkit. The question
+          is whether your Lean projects are aimed at the constraint or distributed across the organization.
+          If your process improvement team cannot name the system constraint with confidence, your Lean
+          tools are navigating without a compass. Adding TOC's focusing discipline does not replace your
+          Lean work. It directs it.
+        </p>
+        <p>
+          <strong>"TOC is just about manufacturing."</strong> TOC originated in manufacturing, but its
+          thinking tools (Evaporating Cloud, Current Reality Tree, Future Reality Tree) apply to any system
+          with a goal, interdependent parts, and variability. Healthcare, professional services, software
+          development, construction, and government agencies have all applied TOC successfully. The systematic
+          review cited above covers healthcare specifically.
+        </p>
+        <p>
+          <strong>"We tried TOC and it did not stick."</strong> This is common, and honest. The Portuguese
+          ophthalmology practice that improved throughput by 64% lost those gains when the champion left.
+          Sustainability requires internalizing the thinking, not just applying the tools. TOC's focusing
+          question, "What is currently limiting our throughput?", needs to become an organizational reflex.
+          This is equally true for Lean: the 70% failure rate in healthcare reflects the same sustainability
+          challenge.
+        </p>
+        <p>
+          <strong>"Our problems are too political for a methodology to solve."</strong>
+          Possibly. But TOC's Evaporating Cloud was specifically designed for situations where competing
+          legitimate needs create paralysis. Naming the conflict explicitly, in a logical structure rather
+          than a negotiation, often depersonalizes issues that have been stuck for years. The tool does
+          not eliminate politics. It gives people a neutral structure for working through political conflicts
+          without it becoming personal.
+        </p>
+
+        <!-- Getting Started -->
+        <h2 id="getting-started">Getting Started</h2>
+        <p>
+          If you are considering this integration, the first step is not to learn new tools. It is
+          to answer one question: <em>What is currently limiting our system's throughput?</em>
+        </p>
+        <p>
+          If you can answer that question with confidence, you are ready to apply Lean tools at the
+          constraint. If you cannot, start there.
+        </p>
+        <p>
+          For background on TOC's core method and thinking tools, see our
+          <a href="/approach/theory-of-constraints">Theory of Constraints reference page</a>. For
+          the argument that healthcare specifically needs this integration, see
+          <a href="/insights/compass-and-toolkit-toc-lean-healthcare">The Compass and the Toolkit</a
+          >.
+        </p>
+        <p>
+          If you want to think through how this applies to your organization, reach me at
+          <a href="mailto:john@common-sense.com">john@common-sense.com</a>.
+        </p>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>
