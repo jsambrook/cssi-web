@@ -19,6 +19,14 @@ function toSiteUrl(href: string): string {
   return toTrailingSlashUrl(new URL(href, `${siteConfig.siteUrl}/`).toString());
 }
 
+function toAbsoluteUrl(rawUrl: string): string {
+  try {
+    return new URL(rawUrl, `${siteConfig.siteUrl}/`).toString();
+  } catch {
+    return rawUrl;
+  }
+}
+
 function toIdFragment(value: string): string {
   const normalized = value
     .toLowerCase()
@@ -139,6 +147,39 @@ const founderAlumni = [
   },
 ];
 
+const aboutTermSameAs: Record<string, string[]> = {
+  'Theory of Constraints': [
+    'https://en.wikipedia.org/wiki/Theory_of_constraints',
+    'https://www.tocico.org/',
+  ],
+  'Five Focusing Steps': [
+    'https://en.wikipedia.org/wiki/Theory_of_constraints#The_five_focusing_steps',
+  ],
+  'Evaporating Cloud': ['https://en.wikipedia.org/wiki/Evaporating_Cloud'],
+  'Current Reality Tree': [
+    'https://en.wikipedia.org/wiki/Current_reality_tree_(theory_of_constraints)',
+  ],
+  'Future Reality Tree': ['https://en.wikipedia.org/wiki/Future_reality_tree'],
+  'Critical Chain Project Management': [
+    'https://en.wikipedia.org/wiki/Critical_chain_project_management',
+  ],
+  'Lean manufacturing': ['https://en.wikipedia.org/wiki/Lean_manufacturing'],
+  'Value stream mapping': ['https://en.wikipedia.org/wiki/Value-stream_mapping'],
+  'Healthcare operations': ['https://en.wikipedia.org/wiki/Health_system'],
+};
+
+function toAboutThing(term: string): Record<string, unknown> {
+  const thing: Record<string, unknown> = {
+    '@type': 'Thing',
+    name: term,
+  };
+  const sameAs = aboutTermSameAs[term];
+  if (sameAs && sameAs.length > 0) {
+    thing.sameAs = sameAs;
+  }
+  return thing;
+}
+
 export function buildOrganizationSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
@@ -181,17 +222,46 @@ export function buildWebPageSchema(options: {
   name: string;
   description: string;
   url: string;
+  inLanguage?: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+  about?: string[];
+  hasBreadcrumb?: boolean;
 }): Record<string, unknown> {
   const pageUrl = toTrailingSlashUrl(options.url);
-  return {
+  const imageUrl = toAbsoluteUrl(options.image ?? siteConfig.defaultOgImage);
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': pageUrl,
     name: options.name,
     description: options.description,
     url: pageUrl,
+    inLanguage: options.inLanguage ?? 'en-US',
     isPartOf: { '@id': `${siteConfig.siteUrl}/#website` },
+    publisher: { '@id': `${siteConfig.siteUrl}/#organization` },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: imageUrl,
+    },
+    image: imageUrl,
   };
+
+  if (options.datePublished) {
+    schema.datePublished = options.datePublished;
+  }
+  if (options.dateModified ?? options.datePublished) {
+    schema.dateModified = options.dateModified ?? options.datePublished;
+  }
+  if (options.about && options.about.length > 0) {
+    schema.about = options.about.map((term) => toAboutThing(term));
+  }
+  if (options.hasBreadcrumb) {
+    schema.breadcrumb = { '@id': `${pageUrl}#breadcrumb` };
+  }
+
+  return schema;
 }
 
 export function buildProfessionalServiceSchema(): Record<string, unknown> {
@@ -438,9 +508,13 @@ export function buildServiceSchema(options: {
 export function buildBreadcrumbSchema(
   items: { name: string; href: string }[]
 ): Record<string, unknown> {
+  const lastItemHref = items.length > 0 ? items[items.length - 1].href : '/';
+  const breadcrumbId = `${toSiteUrl(lastItemHref)}#breadcrumb`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': breadcrumbId,
     itemListElement: items.map((item, i) => ({
       '@type': 'ListItem',
       position: i + 1,
