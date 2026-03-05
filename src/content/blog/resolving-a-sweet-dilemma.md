@@ -2,7 +2,7 @@
 title: 'When the Dilemma Itself Is the Lie'
 description: 'A baker named Rachel thinks she has two bad options: raise prices and lose customers, or hold prices and lose her business. She has neither. This is how the Evaporating Cloud works.'
 metaTitle: 'When the Dilemma Itself Is the Lie'
-metaDescription: 'Most business dilemmas feel like a choice between two bad options. Theory of Constraints offers a third path: find the hidden assumption that makes them look like the only options.'
+metaDescription: 'Most business dilemmas are false choices. Theory of Constraints finds the hidden assumption holding the trap in place — and dissolves it.'
 date: 2026-03-04
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Strategy', 'Small Business']
@@ -33,7 +33,7 @@ There is a better path, but it requires asking a different question.
 
 ## The Question Jonah Asks
 
-In the drama, a mentor figure named Jonah -- borrowed from Eli Goldratt's business novel *The Goal* -- walks Rachel through the problem. Jonah does not offer solutions. He asks questions.
+In the drama, a mentor figure named Jonah -- borrowed from Eli Goldratt's business novel _The Goal_ -- walks Rachel through the problem. Jonah does not offer solutions. He asks questions.
 
 The one that breaks the dilemma open is this: why do you believe that raising your prices will cause you to lose customers?
 
@@ -45,7 +45,7 @@ The answer Rachel gives is what changes everything. Her sourdough is something y
 
 Jonah's observation is quiet: your customers are not choosing you because of your prices.
 
-Rachel hears it. A long pause in the recording. Then: *huh.*
+Rachel hears it. A long pause in the recording. Then: _huh._
 
 ## The Hidden Assumption
 
@@ -73,7 +73,7 @@ Most of the time, the assumption that holds the dilemma in place is something th
 
 This post accompanies Episode 03 of the Common Sense Systems YouTube series, "Resolving a Sweet Dilemma." The episode is a short audio drama -- about seven minutes -- featuring Jonah and Rachel working through the problem in real time. The script and audio were produced using the same AI-assisted pipeline I have described in earlier posts. If you want to hear the method in action rather than read about it, [that is the place to start](https://youtu.be/_tkm6_B3VOs).
 
-Goldratt's novel *The Goal*, where the character of Jonah first appears, is one of the best-selling business books of all time. If you have not read it, I recommend it without reservation.
+Goldratt's novel _The Goal_, where the character of Jonah first appears, is one of the best-selling business books of all time. If you have not read it, I recommend it without reservation.
 
 ---
 

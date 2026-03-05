@@ -60,6 +60,7 @@ export const footerColumns = [
       { label: 'Voice Agents', href: '/insights/tag/voice-agents' },
       { label: 'Strategy', href: '/insights/tag/strategy' },
       { label: 'Leadership', href: '/insights/tag/leadership' },
+      { label: 'Small Business', href: '/insights/tag/small-business' },
       { label: 'Operations', href: '/insights/tag/operations' },
       { label: 'Decision-Making', href: '/insights/tag/decision-making' },
     ],
