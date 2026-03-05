@@ -28,10 +28,17 @@ Both services carry a satisfaction guarantee: unless you agree that what was pro
 - Healthcare Services: https://common-sense.com/industries/healthcare
 - Technology Services: https://common-sense.com/industries/tech
 - Insights (Blog): https://common-sense.com/insights
+- Research (Papers): https://common-sense.com/research
 - Theory of Constraints: https://common-sense.com/approach/theory-of-constraints
 - TOC-Lean Integration: https://common-sense.com/approach/toc-lean-integration
 - About: https://common-sense.com/about
 - Contact: https://common-sense.com/contact
+
+## Research Papers
+
+- The Post-Acute Care Plan (PACP): A Concept Paper: https://common-sense.com/research/pacp-concept-paper
+- Why Burnout Persists (Systems Thinking Paper): https://common-sense.com/research/burnout-systems-thinking
+- Surfing the AI Tidal Wave (Discussion Paper): https://common-sense.com/research/surfing-ai-tidal-wave
 
 ## Contact
 

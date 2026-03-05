@@ -35,7 +35,7 @@ src/
 │   ├── site.ts            # Brand config (name, nav, contact, font, URLs)
 │   ├── types.ts           # Shared interfaces
 │   ├── pageDefaults.ts    # Header/Footer prop helpers
-│   └── pages/             # Per-page content (home, about, approach, etc.)
+│   └── pages/             # Per-page content (home, about, approach, research, etc.)
 ├── assets/css/
 │   └── tokens.css         # Design tokens (colors, typography, spacing)
 ├── components/            # Reusable Astro components
@@ -103,6 +103,11 @@ draft: false
 ```
 
 Posts appear on `/insights` sorted by date. Individual posts render at `/insights/{slug}`.
+
+## Research
+
+Long-form papers are published under `/research` with downloadable PDFs in `public/assets/files/research/`.
+Each research page includes structured data (`ScholarlyArticle`) for discovery and citation.
 
 ## License
 

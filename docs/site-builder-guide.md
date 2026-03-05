@@ -71,17 +71,18 @@ Replace these files with your own:
 
 Each page has a corresponding data file:
 
-| Page       | Data file                      |
-| ---------- | ------------------------------ |
-| Home       | `src/data/pages/home.ts`       |
-| About      | `src/data/pages/about.ts`      |
-| Approach   | `src/data/pages/approach.ts`   |
-| Consulting | `src/data/pages/consulting.ts` |
-| Advisory   | `src/data/pages/advisory.ts`   |
-| Insights   | `src/data/pages/insights.ts`   |
-| Contact    | `src/data/pages/contact.ts`    |
-| Privacy    | `src/data/pages/privacy.ts`    |
-| Terms      | `src/data/pages/terms.ts`      |
+| Page        | Data file                       |
+| ----------- | ------------------------------- |
+| Home        | `src/data/pages/home.ts`        |
+| About       | `src/data/pages/about.ts`       |
+| Approach    | `src/data/pages/approach.ts`    |
+| Industries  | `src/data/pages/industries.ts`  |
+| Insights    | `src/data/pages/insights.ts`    |
+| Research    | `src/data/pages/research.ts`    |
+| Contact     | `src/data/pages/contact.ts`     |
+| Privacy     | `src/data/pages/privacy.ts`     |
+| SMS Consent | `src/data/pages/sms-consent.ts` |
+| Terms       | `src/data/pages/terms.ts`       |
 
 Edit the data files to change page content. The `.astro` page files are layout templates and generally don't need editing.
 
@@ -103,6 +104,18 @@ Post content in markdown...
 
 Set `draft: true` in frontmatter to hide a post from the listing.
 
+## Step 6b: Research papers (`src/pages/research/`)
+
+Long-form canonical papers are published as page routes under `src/pages/research/` and their
+PDF artifacts are stored in `public/assets/files/research/`.
+
+For each paper:
+
+1. Create a page in `src/pages/research/`
+2. Add metadata and listing card in `src/data/pages/research.ts`
+3. Add `ScholarlyArticle` JSON-LD using `buildScholarlyArticleSchema`
+4. Place the source PDF in `public/assets/files/research/<topic>/`
+
 ## Step 7: Build and verify
 
 ```bash
@@ -122,6 +135,8 @@ npm run preview # Preview production build
 - [ ] `/robots.txt` contains correct sitemap URL
 - [ ] `/insights` lists blog posts sorted by date
 - [ ] Individual blog posts render with typography styles
+- [ ] `/research` lists published papers
+- [ ] Research paper pages include downloadable PDFs
 - [ ] `/404` page renders properly
 - [ ] OG meta tags have correct content (check with social sharing debugger)
 - [ ] Changing `--primary` in tokens.css re-themes the entire site
@@ -142,5 +157,6 @@ src/
 │   ├── BaseLayout.astro      # Root HTML layout
 │   └── BlogPostLayout.astro  # Blog post wrapper
 ├── pages/                    # Route templates
+│   └── research/             # Canonical long-form paper pages
 └── content.config.ts         # Blog collection schema
 ```
