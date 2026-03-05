@@ -4,6 +4,7 @@ description: 'A working workflow for small business owners who know they should 
 metaTitle: 'I Hired Claude As My Social Media Producer | CSSI Kirkland, WA'
 metaDescription: 'How I use Claude, Nano Banana Pro, and Blotato to go from idea to published blog post to LinkedIn and X in under an hour. And how I can help you do the same.'
 date: 2026-02-27
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Small Business', 'Practical Tips', 'Networking']
 imageAlt: 'Infographic showing the workflow from idea to published website content to social media posts using AI tools'
@@ -78,3 +79,11 @@ I want to see people succeed with this technology. It's too useful to remain the
 If this sounds like something that could work for you, or for someone you know, reach out. I'm happy to have the conversation.
 
 You can reach me at john@common-sense.com.
+
+## Sources
+
+- [blog.google/innovation-and-ai/products/nano-banana-pro/](https://blog.google/innovation-and-ai/products/nano-banana-pro/)
+- [blotato.com/](https://www.blotato.com/)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)

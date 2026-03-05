@@ -4,6 +4,7 @@ description: 'A dramatized community hospital board meeting — fictional health
 metaTitle: 'The Meeting That Went Differently | Common Sense Systems'
 metaDescription: 'Forty-minute audio drama of a fictional community hospital board meeting where an AI named Sam changes what gets asked — and what gets decided.'
 date: 2026-03-02
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'AI', 'Systems', 'Strategy', 'Leadership', 'Theory of Constraints']
 ogImage: '/images/content/the-meeting-that-went-differently.png'
@@ -90,3 +91,11 @@ The harder question, which the drama deliberately leaves open, is whether the pe
 The script was written collaboratively with Claude — I provided the scenario, the characters, the argument structure, and the specific dynamics I wanted to portray; Claude shaped it into dialogue. We went through several revisions. The image above and the audio production are similarly AI-assisted. I am not hiding that. This is what the work looks like now, and I think it is worth being transparent about it.
 
 If you work in hospital governance or healthcare operations, and this story resonated with you — or provoked you, or struck you as naive — I would welcome the conversation. You can reach me at john@common-sense.com.
+
+## Sources
+
+- [youtube.com/embed/h7vTTs2Hffo](https://www.youtube.com/embed/h7vTTs2Hffo)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

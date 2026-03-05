@@ -4,7 +4,7 @@ description: 'How standardizing a communication protocol on a smartphone-powered
 metaTitle: 'Case Study: Unblocking a Medical Device Project'
 metaDescription: "How identifying the communication constraint on Defibrio's smartphone AED saved two months on an 18-month project."
 date: 2026-02-22
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering', 'Case Study']
 imageAlt: 'Defibrio smartphone-powered AED with communication protocol architecture diagram for medical device development'
@@ -75,3 +75,11 @@ This is what I bring to a project. I have the technical depth to work as a peer 
 If your engineering project has capable people and the progress does not match the effort, the issue is almost certainly structural rather than personal. I am happy to talk through what you are seeing. Sometimes naming the constraint is the hardest part, and a fresh set of eyes is the fastest way to find it.
 
 You can reach me at john@common-sense.com.
+
+## Sources
+
+- [CDC: Cardiac arrest](https://www.cdc.gov/heart-disease/about/cardiac-arrest.html)
+- [FDA Quality System Regulation (21 CFR Part 820)](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820)
+- [FDA Good Machine Learning Practice guiding principles](https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles)
+- [IEC 62304 (overview)](https://en.wikipedia.org/wiki/IEC_62304)
+- [Theory of Constraints (overview)](https://en.wikipedia.org/wiki/Theory_of_constraints)

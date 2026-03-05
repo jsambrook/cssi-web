@@ -4,7 +4,7 @@ description: "You cannot 'sprint' a circuit board design. A systems architect's 
 metaTitle: 'Why Agile Fails in Medical Device Hardware Development'
 metaDescription: "Software methodologies break when applied to physics and FDA regulations. A systems architect's view on Critical Chain Project Management for MedTech."
 date: 2026-02-17
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering']
 imageAlt: 'Medical device PCB fabrication timeline showing why two-week Agile sprints fail in hardware development'
@@ -99,3 +99,11 @@ That is how you ship a physical product on time.
 ---
 
 _Is your R&D pipeline gridlocked by conflicting methodologies? We help MedTech organizations architect workflows that respect the physics of their industry. [Contact us](/contact) to discuss your constraints._
+
+## Sources
+
+- [Manifesto for Agile Software Development](https://agilemanifesto.org/)
+- [DORA research program](https://dora.dev/research/)
+- [Critical Chain project management (overview)](https://en.wikipedia.org/wiki/Critical_chain_project_management)
+- [FDA Quality System Regulation (21 CFR Part 820)](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820)
+- [INCOSE Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)

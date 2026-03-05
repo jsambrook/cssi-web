@@ -4,7 +4,7 @@ description: 'How connecting your Google Business Profile to your website struct
 metaTitle: 'Connect Google Business Profile to Structured Data'
 metaDescription: 'Step-by-step account of linking Google Business Profile to JSON-LD structured data for better visibility in both AI search and traditional Google results.'
 date: 2026-02-25
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business']
 imageAlt: 'Structured data connecting a Google Business Profile to a website schema graph for search visibility'
@@ -181,3 +181,11 @@ The total time for the steps above was about two hours, including the CID resear
 ---
 
 If you're running a small business and want to check whether your Google Business Profile is actually connected to your website in a way that machines can read, I'm happy to take a look. Send me your URL and I'll tell you what I find. You can reach me at [common-sense.com/contact](https://common-sense.com/contact).
+
+## Sources
+
+- [en.wikipedia.org/wiki/Entity_linking](https://en.wikipedia.org/wiki/Entity_linking)
+- [schema.org/](https://schema.org/)
+- [json-ld.org/](https://json-ld.org/)
+- [developers.google.com/search/docs/appearance/structured-data/intro-structured-data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+- [linkedin.com/company/common-sense-systems](https://www.linkedin.com/company/common-sense-systems)

@@ -4,7 +4,7 @@ description: 'Six chronic healthcare frustrations — long wait times, expensive
 metaTitle: 'Why Healthcare Is So Stuck'
 metaDescription: 'Six chronic healthcare frustrations can be traced to one systemic conflict, using a Theory of Constraints lens to map root cause and leverage points.'
 date: 2025-09-17
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Analysis']
 imageAlt: 'Healthcare root cause diagram tracing six chronic system frustrations to a single systemic conflict using Theory of Constraints'
@@ -161,3 +161,11 @@ American Hospital Association (AHA) (2020). _Fact Sheet: Uncompensated Hospital 
 National Institutes of Health (NIH) PMC (2021). _Health care administrative burdens: Centering patient experiences_. [https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/](https://pmc.ncbi.nlm.nih.gov/articles/PMC8522557/)
 
 AJMC (2025). _How Insurance Claim Denials Harm Patients' Health, Finances_. [https://www.ajmc.com/view/how-insurance-claim-denials-harm-patients-health-finances](https://www.ajmc.com/view/how-insurance-claim-denials-harm-patients-health-finances)
+
+## Sources
+
+- [commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going](https://www.commonwealthfund.org/publications/issue-briefs/2023/oct/high-us-health-care-spending-where-is-it-all-going)
+- [trillianthealth.com/market-research/studies/hospital-administrative-expenditures-exceed-direct-patient-care-by-nearly-2x](https://www.trillianthealth.com/market-research/studies/hospital-administrative-expenditures-exceed-direct-patient-care-by-nearly-2x)
+- [commonwealthfund.org/publications/issue-briefs/2025/oct/administrative-burden-primary-care-causes-potential-solutions](https://www.commonwealthfund.org/publications/issue-briefs/2025/oct/administrative-burden-primary-care-causes-potential-solutions)
+- [ghx.com/the-healthcare-hub/healthcare-burnout/](https://www.ghx.com/the-healthcare-hub/healthcare-burnout/)
+- [glenwoodsystems.com/post/impact-of-billing-denials](https://www.glenwoodsystems.com/post/impact-of-billing-denials)

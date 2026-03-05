@@ -4,7 +4,7 @@ description: 'When you can build a custom import tool in fifteen minutes, the ca
 metaTitle: 'Cancel SaaS and Keep Your Data with AI Agents'
 metaDescription: 'When you can build a custom import tool in fifteen minutes, the calculus on which subscriptions to keep changes dramatically.'
 date: 2026-02-12
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Cost Reduction']
 imageAlt: 'AI coding agent converting SaaS data exports so a small business can cancel unnecessary software subscriptions'
@@ -86,3 +86,9 @@ A lot of companies and organizations want to be AI-first. This is one concrete p
 ---
 
 If any of this resonates and you'd like to think through how these ideas apply to your situation, I'd welcome the conversation. You can reach me at [common-sense.com/contact](https://common-sense.com/contact).
+
+## Sources
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [OECD AI Principles](https://oecd.ai/en/ai-principles)
+- [Stanford AI Index Report](https://aiindex.stanford.edu/report/)

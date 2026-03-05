@@ -4,7 +4,7 @@ description: 'Healthcare protects staff from radiation but expects unlimited psy
 metaTitle: 'Why Burnout Persists'
 metaDescription: 'Healthcare rigorously controls radiation exposure but ignores psychological trauma load. This series maps the structural conflict driving burnout.'
 date: 2025-09-14
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Wellbeing']
 imageAlt: 'Theory of Constraints diagram tracing the structural conflict driving chronic clinician burnout in healthcare'
@@ -258,3 +258,11 @@ Individual resilience can't fix a systemic conflict. If you're a healthcare lead
 These tools--from conflict mapping to redesign--are built to solve exactly these kinds of chronic, "unsolvable" problems.
 
 **Contact me for a 30-minute consultation, and we can map your organization's core conflict together.**
+
+## Sources
+
+- [common-sense.com/burnout-whitepaper](https://www.common-sense.com/burnout-whitepaper)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

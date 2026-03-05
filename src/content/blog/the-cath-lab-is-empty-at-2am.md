@@ -4,7 +4,7 @@ description: 'Why smart, well-run organizations reliably get stuck on solvable p
 metaTitle: 'The Cath Lab Is Empty at 2 AM'
 metaDescription: 'Why smart, well-run organizations reliably get stuck on solvable problems, and what tribal dynamics and cognitive limits have to do with it.'
 date: 2026-02-15
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Strategy', 'Theory of Constraints']
 imageAlt: 'Empty cardiac catheterization lab at night revealing unused hospital capacity hidden behind a space constraint'
@@ -113,3 +113,11 @@ You can reach me at john@common-sense.com.
 [^5]: Yang et al., "A Patient Flow Analysis: Identification of Process Inefficiencies and Workflow Metrics at an Ambulatory Endoscopy Unit," _Endoscopy International Open_ (2016). [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4904661/)
 
 [^6]: Wong and Morra, "Excellent Hospital Care for All: Open and Operating 24/7," _Journal of General Internal Medicine_ (2011). [PubMed Central](https://pmc.ncbi.nlm.nih.gov/articles/PMC3157523/)
+
+## Sources
+
+- [ormanager.com/wp-content/uploads/2012/01/0112_ORM_5.Benchmark_r.pdf](https://www.ormanager.com/wp-content/uploads/2012/01/0112_ORM_5.Benchmark_r.pdf)
+- [plantemoran.com/explore-our-thinking/insight/2019/02/key-metrics-to-improve-your-operating-room-utilization](https://www.plantemoran.com/explore-our-thinking/insight/2019/02/key-metrics-to-improve-your-operating-room-utilization)
+- [consultqd.clevelandclinic.org/collaborative-alliance-with-cleveland-clinic-yields-cath-lab-efficiencies-for-a-new-jersey-hospital](https://consultqd.clevelandclinic.org/collaborative-alliance-with-cleveland-clinic-yields-cath-lab-efficiencies-for-a-new-jersey-hospital)
+- [ncbi.nlm.nih.gov/pmc/articles/PMC4904661/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4904661/)
+- [pmc.ncbi.nlm.nih.gov/articles/PMC3157523/](https://pmc.ncbi.nlm.nih.gov/articles/PMC3157523/)

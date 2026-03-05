@@ -4,7 +4,7 @@ description: 'Most dashboards measure local efficiency at the expense of global 
 metaTitle: 'The Metrics Trap: Moving from Local Optima to System Throughput'
 metaDescription: "Why 'more data' often leads to worse decisions in complex systems, and how to define the few metrics that actually matter."
 date: 2026-02-16
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Strategy', 'Theory of Constraints', 'Decision-Making']
 imageAlt: 'Hospital dashboard overflowing with metrics illustrating the data trap in healthcare decision-making'
@@ -51,3 +51,9 @@ To stop the dashboard wars, we stop asking "What can we measure?" and start aski
 3. **Kill the Vanity Metrics:** Any number that looks good but doesn't drive a decision is noise.
 
 The shift from "Presentation Ready" (looking thorough) to "Decision Ready" (looking clear) requires the courage to ignore 90% of the data. You don't need a better dashboard. You need a better theory.
+
+## Sources
+
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [Throughput accounting (Wikipedia)](https://en.wikipedia.org/wiki/Throughput_accounting)

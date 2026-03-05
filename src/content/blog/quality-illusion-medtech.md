@@ -4,7 +4,7 @@ description: "When Regulatory departments prioritize 'documentation stability' o
 metaTitle: 'The Quality Illusion: Compliance vs Safety in Medical Devices'
 metaDescription: "How the fear of re-submission prevents engineers from fixing bugs, and how to resolve the conflict between 'Frozen' and 'Safe'."
 date: 2026-02-17
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['MedTech', 'Quality', 'Regulatory', 'Theory of Constraints']
 imageAlt: 'FDA compliance versus patient safety conflict diagram for medical device quality and regulatory strategy'
@@ -55,3 +55,11 @@ If "Regression Testing" is the constraint that prevents bug fixes, then you must
 You cannot afford to have a system where it is "too expensive" to make the product safer.
 
 True Quality means building a system where the "Safe Path" (fixing the bug) is also the "Easy Path" (compliance). Until you do that, you are just performing "Compliance Theater" while the product degrades.
+
+## Sources
+
+- [FDA Quality System Regulation (21 CFR Part 820)](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820)
+- [ISO 13485 standard summary](https://www.iso.org/standard/59752.html)
+- [IEC 62304 (overview)](https://en.wikipedia.org/wiki/IEC_62304)
+- [To Err Is Human (IOM/NASEM report)](https://www.ncbi.nlm.nih.gov/books/NBK225182/)
+- [FDA Good Machine Learning Practice guiding principles](https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles)

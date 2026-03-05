@@ -4,6 +4,7 @@ description: 'A baker named Rachel thinks she has two bad options: raise prices 
 metaTitle: 'Resolving a Sweet Dilemma'
 metaDescription: 'Most business dilemmas are false choices. Theory of Constraints finds the hidden assumption holding the trap in place — and dissolves it.'
 date: 2026-03-04
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Strategy', 'Small Business']
 imageAlt: 'A baker standing at a fork in the road, one path labeled raise prices, the other hold prices, with a third path emerging where the hidden assumption dissolves'
@@ -80,3 +81,11 @@ Goldratt's novel _The Goal_, where the character of Jonah first appears, is one 
 If you find yourself caught in a dilemma that has been going nowhere for months, I am happy to take a look. Sometimes an outside pair of eyes is all it takes to see the assumption that has been holding the trap in place.
 
 You can reach me at john@common-sense.com.
+
+## Sources
+
+- [youtu.be/\_tkm6_B3VOs](https://youtu.be/_tkm6_B3VOs)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

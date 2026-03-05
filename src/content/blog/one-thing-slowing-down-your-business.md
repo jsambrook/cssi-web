@@ -4,6 +4,7 @@ description: 'Every business has one thing that limits how much it can get done.
 metaTitle: 'The One Thing Slowing Down Your Business | Common Sense Systems'
 metaDescription: 'Every business has one bottleneck that limits everything else. A practical guide for small business owners to find it, fix it, and grow without working harder.'
 date: 2026-03-04
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Small Business', 'Operations', 'Theory of Constraints']
 imageAlt: 'Small business owner reviewing workflow to find the one bottleneck limiting growth'
@@ -100,3 +101,11 @@ The idea behind this article comes from the Theory of Constraints, developed by 
 For a more detailed look at how this thinking integrates with other improvement methods (including Lean, which you may have encountered in a different context), see our [reference page on TOC and Lean integration](/approach/toc-lean-integration).
 
 If you are running a small business and something about this resonates, I am happy to think through your specific situation. Sometimes a thirty-minute conversation is enough to identify the constraint. Reach me at [john@common-sense.com](mailto:john@common-sense.com).
+
+## Sources
+
+- [en.wikipedia.org/wiki/The_Goal_(novel](https://en.wikipedia.org/wiki/The_Goal_(novel)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

@@ -4,7 +4,7 @@ description: 'Why moving fast is an undervalued strategic advantage for communit
 metaTitle: 'Speed as a Strategy'
 metaDescription: 'Why moving fast is an undervalued strategic advantage for community hospitals.'
 date: 2025-09-09
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Strategy', 'Leadership']
 imageAlt: 'OODA Loop framework diagram applied to hospital operations and community healthcare competitive strategy'
@@ -165,3 +165,11 @@ Common Sense Systems
 Email: [contact@common-sense.com](mailto:contact@common-sense.com)
 Phone: 425-979-2282
 Web: [common-sense.com](https://common-sense.com)
+
+## Sources
+
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [Throughput accounting (Wikipedia)](https://en.wikipedia.org/wiki/Throughput_accounting)
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)

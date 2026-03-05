@@ -4,7 +4,7 @@ description: "A reflection on Lean's definition of value, arguing that no work i
 metaTitle: 'Rethinking Value in Lean: No Work Is Neutral'
 metaDescription: 'A practical argument that work is never neutral in Lean: it either creates value, enables value through required conditions, or subtracts value as waste.'
 date: 2025-10-01
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Lean', 'Systems']
 imageAlt: 'Lean value stream map categorizing activities as value-creating, necessary conditions, or waste in regulated industries'
@@ -68,3 +68,11 @@ The challenge is to tell the difference—and to focus your energy accordingly.
 ---
 
 _Written by Common Sense Systems, Inc._
+
+## Sources
+
+- [Lean manufacturing (Wikipedia)](https://en.wikipedia.org/wiki/Lean_manufacturing)
+- [Lean in healthcare: systematic review (BMJ Open)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4833201/)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)
+- [INCOSE Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)
+- [Little's Law](https://en.wikipedia.org/wiki/Little%27s_law)

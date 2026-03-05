@@ -4,7 +4,7 @@ description: 'A concept for addressing the complex discharge problem at its sour
 metaTitle: 'Post-Acute Care Planning Before Hospitalization'
 metaDescription: 'The Post-Acute Care Plan concept captures discharge-critical data in primary care so patients and hospitals can avoid crisis-driven discharge delays.'
 date: 2025-12-15
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations', 'Strategy']
 imageAlt: 'Post-Acute Care Plan workflow showing proactive discharge data collection before hospitalization occurs'
@@ -531,3 +531,11 @@ The structural analysis in this article identified why the problem persists: dis
 [^10]: National Institute on Aging. "Advance Care Planning: Advance Directives for Health Care." [nia.nih.gov](https://www.nia.nih.gov/health/advance-care-planning/advance-care-planning-advance-directives-health-care). See also: [PREPARE for Your Care](https://prepareforyourcare.org), a model for patient-centered advance care planning.
 
 [^11]: Naylor MD, et al. "Care Transitions Between Hospitals and Skilled Nursing Facilities: Perspectives of Sending and Receiving Providers." _Journal of Hospital Medicine._ 2017. [PMC5693352](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5693352/)
+
+## Sources
+
+- [aha.org/press-releases/2022-12-06-new-aha-report-finds-delays-ability-discharge-patients-increase-strain-patients-and-hospitals](https://www.aha.org/press-releases/2022-12-06-new-aha-report-finds-delays-ability-discharge-patients-increase-strain-patients-and-hospitals)
+- [advisory.com/topics/post-acute-care/2019/12/identify-and-address-avoidable-hospital-days](https://www.advisory.com/topics/post-acute-care/2019/12/identify-and-address-avoidable-hospital-days)
+- [mnhospitals.org/2024/01/31/patient-discharge-delays-cost-minnesota-hospitals-nearly-half-a-billion-dollars-in-2023/](https://www.mnhospitals.org/2024/01/31/patient-discharge-delays-cost-minnesota-hospitals-nearly-half-a-billion-dollars-in-2023/)
+- [app.leg.wa.gov/ReportsToTheLegislature/](https://app.leg.wa.gov/ReportsToTheLegislature/)
+- [qualityhealth.org/bree/wp-content/uploads/sites/8/2024/01/Bree-Complex-Discharge-Recommendations-FINAL-0124.pdf](https://www.qualityhealth.org/bree/wp-content/uploads/sites/8/2024/01/Bree-Complex-Discharge-Recommendations-FINAL-0124.pdf)
