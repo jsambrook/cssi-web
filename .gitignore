@@ -14,3 +14,7 @@ public/images/blog/
 draft-post.md
 scenario.md
 service-offers-draft.md
+
+# Local tool state
+.claude/settings.local.json
+.playwright-mcp/
