@@ -1,7 +1,7 @@
 ---
-title: 'When the Dilemma Itself Is the Lie'
+title: 'Resolving a Sweet Dilemma'
 description: 'A baker named Rachel thinks she has two bad options: raise prices and lose customers, or hold prices and lose her business. She has neither. This is how the Evaporating Cloud works.'
-metaTitle: 'When the Dilemma Itself Is the Lie'
+metaTitle: 'Resolving a Sweet Dilemma'
 metaDescription: 'Most business dilemmas are false choices. Theory of Constraints finds the hidden assumption holding the trap in place — and dissolves it.'
 date: 2026-03-04
 author: 'John Sambrook'
