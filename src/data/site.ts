@@ -14,8 +14,8 @@ export const siteConfig = {
     googleFontsUrl:
       'https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
   },
-  xHandle: '@SenseSyste86813',
-  xProfileUrl: 'https://x.com/SenseSyste86813',
+  xHandle: '@CommonSenseTOC',
+  xProfileUrl: 'https://x.com/CommonSenseTOC',
   youtubeUrl: 'https://www.youtube.com/@commonsensesystemsinc.7658',
 };
 

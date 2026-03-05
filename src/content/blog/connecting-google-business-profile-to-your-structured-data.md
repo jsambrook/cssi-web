@@ -62,7 +62,7 @@ This is where JSON-LD comes in. My website already had an Organization schema bl
   "url": "https://common-sense.com",
   "sameAs": [
     "https://www.linkedin.com/company/common-sense-systems",
-    "https://x.com/SenseSyste86813",
+    "https://x.com/CommonSenseTOC",
     "https://www.youtube.com/@commonsensesystemsinc.7658",
     "https://www.bbb.org/us/wa/bothell/profile/..."
   ]
