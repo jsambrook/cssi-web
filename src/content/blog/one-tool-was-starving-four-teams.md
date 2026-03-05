@@ -1,21 +1,21 @@
 ---
 title: 'One Tool Was Starving Four Teams'
-description: 'At SonoSite, a clinical ultrasound project was six months behind schedule. The constraint was not the engineering — it was the register map tool that every team depended on and nobody had questioned.'
-metaTitle: 'Case Study: One Constraint Cost SonoSite Six Months'
-metaDescription: 'How identifying a register map bottleneck at SonoSite recovered six months of schedule slippage in eight weeks. A Theory of Constraints case study.'
+description: 'A clinical ultrasound project was six months behind schedule. The constraint was not the engineering — it was the register map tool that every team depended on and nobody had questioned.'
+metaTitle: 'Case Study: One Constraint Cost a MedTech Team Six Months'
+metaDescription: 'How identifying a register map bottleneck on a clinical ultrasound project recovered six months of schedule slippage in eight weeks.'
 date: 2026-03-05
 author: 'John Sambrook'
 tags: ['MedTech', 'R&D', 'Theory of Constraints', 'Systems Engineering', 'Case Study']
-imageAlt: 'Register map constraint blocking four engineering teams on a clinical ultrasound development project at SonoSite'
+imageAlt: 'Register map constraint blocking four engineering teams on a clinical ultrasound development project'
 ---
 
 ## TL;DR
 
-A clinical ultrasound project at SonoSite was six months behind schedule. The constraint was a web-based register map tool that forced every hardware change through four manual updates across four teams. Replacing it with a version-controlled Python framework recovered the schedule in eight weeks.
+A clinical ultrasound project was six months behind schedule. The constraint was a web-based register map tool that forced every hardware change through four manual updates across four teams. Replacing it with a version-controlled Python framework recovered the schedule in eight weeks.
 
 ---
 
-SonoSite was building a high-end clinical ultrasound system. The hardware architecture was serious: custom ASICs and a large FPGA the team called the System Nexus. Thousands of register definitions — bit-fields, DMA semantics, interrupt controls — described the boundary between hardware and everything else. Hardware engineers, firmware developers, software engineers, and verification teams all needed accurate, current register maps to do their work.
+A clinical ultrasound manufacturer in the Pacific Northwest was building a high-end imaging system. The hardware architecture was serious: custom ASICs and a large FPGA at the center of the design. Thousands of register definitions — bit-fields, DMA semantics, interrupt controls — described the boundary between hardware and everything else. Hardware engineers, firmware developers, software engineers, and verification teams all needed accurate, current register maps to do their work.
 
 The team was strong. The investment was real. The project was six months behind schedule.
 
