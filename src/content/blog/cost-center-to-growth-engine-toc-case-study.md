@@ -1,7 +1,7 @@
 ---
 title: "From 'Cost Center' to 'Growth Engine': A Theory of Constraints Success Story"
 description: 'How applying the Theory of Constraints 5 Focusing Steps transformed a reactive, email-only support model into a white-glove customer success engine for a high-value ultrasound research systems manufacturer.'
-metaTitle: "Case Study: Turning a Support Bottleneck into a Competitive Advantage"
+metaTitle: 'Case Study: Turning a Support Bottleneck into a Competitive Advantage'
 metaDescription: "How TOC's 5 Focusing Steps turned a passive email support model into a white-glove service engine for an ultrasound systems manufacturer."
 date: 2026-03-05
 author: 'John Sambrook'
@@ -51,13 +51,13 @@ The transformation was immediate.
 
 Customers who had been expecting days of email were instead working again within 30 minutes of a call. The white-glove experience became a genuine differentiator -- something the sales organization could point to, something customers talked about to colleagues at other institutions.
 
-| | The Old Way (Local Optimization) | The TOC Way (Global Throughput) |
-|---|---|---|
-| **Primary Goal** | Minimize internal support costs | Maximize customer system uptime |
-| **Communication** | Asynchronous email (passive) | Synchronous video and remote access (active) |
-| **Success Metric** | Tickets closed | System operational in under 30 minutes |
-| **Customer Experience** | Frustration; "Shouting into a void" | Relief; professional partnership |
-| **Sales Impact** | Negative (public complaints) | Positive (referrals and upgrades) |
+|                         | The Old Way (Local Optimization)    | The TOC Way (Global Throughput)              |
+| ----------------------- | ----------------------------------- | -------------------------------------------- |
+| **Primary Goal**        | Minimize internal support costs     | Maximize customer system uptime              |
+| **Communication**       | Asynchronous email (passive)        | Synchronous video and remote access (active) |
+| **Success Metric**      | Tickets closed                      | System operational in under 30 minutes       |
+| **Customer Experience** | Frustration; "Shouting into a void" | Relief; professional partnership             |
+| **Sales Impact**        | Negative (public complaints)        | Positive (referrals and upgrades)            |
 
 By breaking the policy constraint of minimizing support costs, the company unlocked a significant increase in market throughput. The sales organization now had a legitimate reason for regular customer contact. A once-resented service department became a proactive engine for customer retention and new revenue.
 
@@ -78,5 +78,5 @@ You can reach me at john@common-sense.com.
 ## Sources
 
 - [Theory of Constraints (overview)](https://en.wikipedia.org/wiki/Theory_of_constraints)
-- [Goldratt, E. M. (1984). *The Goal: A Process of Ongoing Improvement*.](https://en.wikipedia.org/wiki/The_Goal_(novel))
+- [Goldratt, E. M. (1984). _The Goal: A Process of Ongoing Improvement_.](<https://en.wikipedia.org/wiki/The_Goal_(novel)>)
 - [5 Focusing Steps](https://www.tocico.org/page/whatis)
