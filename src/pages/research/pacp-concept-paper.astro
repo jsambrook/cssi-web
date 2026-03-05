@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
+import {
+  buildBreadcrumbSchema,
+  buildScholarlyArticleSchema,
+  buildWebPageSchema,
+} from '../../data/schema';
+import { siteConfig } from '../../data/site';
+
+const title = 'The Post-Acute Care Plan (PACP): A Concept Paper';
+const description =
+  'A proactive discharge-readiness concept paper by John Sambrook. PACP moves legal, financial, preference, and support inputs upstream so complex discharges can execute instead of improvising in crisis.';
+const abstract =
+  'Complex discharges are delayed because discharge-critical inputs are collected during crisis rather than before admission. The Post-Acute Care Plan proposes capturing these inputs proactively in routine care so hospitals, patients, and downstream providers can execute with fewer avoidable inpatient days.';
+const pageUrl = `${siteConfig.siteUrl}/research/pacp-concept-paper`;
+const pdfPath = '/assets/files/research/pacp/pacp-concept-paper-v1-4.pdf';
+const pdfUrl = `${siteConfig.siteUrl}${pdfPath}`;
+
+const publishedTime = '2025-11-01T07:00:00.000Z';
+const modifiedTime = '2025-12-01T08:00:00.000Z';
+const tags = [
+  'Healthcare operations',
+  'Theory of Constraints',
+  'Patient flow',
+  'Discharge planning',
+  'Systems architecture',
+];
+
+const referenceLinks = [
+  {
+    label:
+      'American Hospital Association: Delays in discharge increase strain on patients and hospitals',
+    href: 'https://www.aha.org/press-releases/2022-12-06-new-aha-report-finds-delays-ability-discharge-patients-increase-strain-patients-and-hospitals',
+  },
+  {
+    label: 'AHA: The Cost of Caring (2025)',
+    href: 'https://www.aha.org/costsofcaring',
+  },
+  {
+    label: 'Advisory Board: Identify and Address Avoidable Hospital Days',
+    href: 'https://www.advisory.com/topics/post-acute-care/2019/12/identify-and-address-avoidable-hospital-days',
+  },
+  {
+    label: 'Minnesota Hospital Association: 2023 discharge delays cost analysis',
+    href: 'https://www.mnhospitals.org/2024/01/31/patient-discharge-delays-cost-minnesota-hospitals-nearly-half-a-billion-dollars-in-2023/',
+  },
+  {
+    label: 'Dr. Robert Bree Collaborative: Complex Patient Discharge Recommendations',
+    href: 'https://www.qualityhealth.org/bree/wp-content/uploads/sites/8/2024/01/Bree-Complex-Discharge-Recommendations-FINAL-0124.pdf',
+  },
+  {
+    label: 'Washington State Reports to the Legislature',
+    href: 'https://app.leg.wa.gov/ReportsToTheLegislature/',
+  },
+  {
+    label: 'National Institute on Aging: Advance care planning',
+    href: 'https://www.nia.nih.gov/health/advance-care-planning/advance-care-planning-advance-directives-health-care',
+  },
+];
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Research', href: '/research' },
+  { name: 'PACP Concept Paper', href: '/research/pacp-concept-paper' },
+]);
+
+const webPage = buildWebPageSchema({
+  name: title,
+  description,
+  url: pageUrl,
+  hasBreadcrumb: true,
+  about: ['Healthcare operations', 'Theory of Constraints', 'Patient flow'],
+});
+
+const scholarlyArticle = buildScholarlyArticleSchema({
+  title,
+  description,
+  abstract,
+  url: pageUrl,
+  datePublished: publishedTime,
+  dateModified: modifiedTime,
+  authorName: 'John Sambrook',
+  pdfUrl,
+  version: '1.4',
+  keywords: tags,
+  citations: referenceLinks.map((ref) => ref.href),
+});
+
+const articleMeta = {
+  publishedTime,
+  modifiedTime,
+  author: 'John Sambrook',
+  tags,
+};
+---
+
+<BaseLayout
+  title={getPageTitle(title)}
+  description={description}
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={[webPage, breadcrumb, scholarlyArticle]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/research" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-10 space-y-4">
+        <a href="/research" class="text-sm text-primary hover:text-primary/80"
+          >&larr; Back to Research</a
+        >
+        <h1 class="text-4xl sm:text-5xl">{title}</h1>
+        <p class="text-xl text-muted-foreground">
+          A proactive approach to discharge readiness and system-level flow improvement.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a
+            href={pdfPath}
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-button bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm h-[42px] px-5 py-2"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Full PDF (v1.4)
+          </a>
+          <a
+            href="/insights/pacp"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-button border border-border hover:bg-accent/20 h-[42px] px-5 py-2"
+          >
+            Read Executive Insight
+          </a>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>Abstract</h2>
+        <p>{abstract}</p>
+
+        <h2>What This Paper Contributes</h2>
+        <ul>
+          <li>
+            Frames complex discharge as an upstream input-quality problem, not a downstream heroics
+            problem.
+          </li>
+          <li>
+            Defines a PACP data model for legal authority, financial coverage, placement
+            preferences, and social support.
+          </li>
+          <li>
+            Shows how pre-admission capture converts discharge from crisis improvisation into
+            coordinated execution.
+          </li>
+          <li>
+            Connects discharge friction to broader district-level boundary constraints and community
+            infrastructure choices.
+          </li>
+        </ul>
+
+        <h2>Key Numbers Highlighted in the Paper</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+        <div class="rounded-[var(--radius)] border border-border p-5">
+          <p class="text-3xl font-semibold text-primary mb-1">25%</p>
+          <p class="text-sm text-muted-foreground">
+            Estimated avoidable hospital days in analyzed fee-for-service claims datasets.
+          </p>
+        </div>
+        <div class="rounded-[var(--radius)] border border-border p-5">
+          <p class="text-3xl font-semibold text-primary mb-1">10.8M</p>
+          <p class="text-sm text-muted-foreground">
+            Approximate annual avoidable inpatient days extrapolated in the concept argument.
+          </p>
+        </div>
+        <div class="rounded-[var(--radius)] border border-border p-5">
+          <p class="text-3xl font-semibold text-primary mb-1">29,590</p>
+          <p class="text-sm text-muted-foreground">
+            Equivalent beds occupied year-round by patients who no longer require acute-level care.
+          </p>
+        </div>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>PACP Data Domains</h2>
+        <ol>
+          <li>
+            <strong>Legal and decision-making:</strong> POA status, agent availability, guardianship risks.
+          </li>
+          <li>
+            <strong>Insurance and financial:</strong> payer constraints, authorization likelihood, known
+            coverage gaps.
+          </li>
+          <li>
+            <strong>Placement preferences:</strong> preferred facilities, geographic limits, explicit
+            exclusions.
+          </li>
+          <li>
+            <strong>Home environment and support:</strong> caregiver reality, safety constraints, practical
+            barriers.
+          </li>
+          <li>
+            <strong>Preferences and values:</strong> patient priorities for post-acute setting and tradeoffs.
+          </li>
+          <li>
+            <strong>Risk flags:</strong> constraints likely to trigger delay if discovered late.
+          </li>
+        </ol>
+
+        <h2>Implementation Position</h2>
+        <p>
+          The paper argues for phased implementation through primary care touchpoints, targeted
+          prioritization, and maintenance logic that updates plans as conditions change. It also
+          addresses interoperability and public-district implications where discharge performance
+          depends on community resources outside hospital control.
+        </p>
+
+        <h2>Publication Metadata</h2>
+        <ul>
+          <li><strong>Author:</strong> John Sambrook</li>
+          <li><strong>Document type:</strong> Concept paper</li>
+          <li><strong>Version:</strong> 1.4</li>
+          <li><strong>Initial release:</strong> November 2025</li>
+          <li><strong>Current revision:</strong> December 2025</li>
+        </ul>
+
+        <h2>References and Sources</h2>
+        <p>
+          The paper includes a full references section. Key external sources used in the current
+          revision are listed below.
+        </p>
+        <ul>
+          {
+            referenceLinks.map((ref) => (
+              <li>
+                <a href={ref.href} target="_blank" rel="noopener">
+                  {ref.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+
+        <h2>Request for Feedback</h2>
+        <p>
+          This paper is published as working intellectual output. Critical review is welcome,
+          especially on assumptions, implementation barriers, and falsification cases. If you have
+          field experience that challenges the model, I would value that input.
+        </p>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

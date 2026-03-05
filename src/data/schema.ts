@@ -484,6 +484,72 @@ export function buildArticleSchema(options: {
   return schema;
 }
 
+export function buildScholarlyArticleSchema(options: {
+  title: string;
+  description: string;
+  abstract: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  authorName?: string;
+  image?: string;
+  pdfUrl?: string;
+  version?: string;
+  keywords?: string[];
+  citations?: string[];
+}): Record<string, unknown> {
+  const articleUrl = toTrailingSlashUrl(options.url);
+  const imageUrl = toAbsoluteUrl(options.image ?? siteConfig.defaultOgImage);
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'ScholarlyArticle',
+    '@id': `${articleUrl}#scholarly-article`,
+    headline: options.title,
+    name: options.title,
+    description: options.description,
+    abstract: options.abstract,
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
+    datePublished: options.datePublished,
+    dateModified: options.dateModified ?? options.datePublished,
+    url: articleUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    author: {
+      '@id': `${siteConfig.siteUrl}/#founder`,
+      name: options.authorName ?? 'John Sambrook',
+    },
+    publisher: {
+      '@id': `${siteConfig.siteUrl}/#organization`,
+    },
+    image: imageUrl,
+  };
+
+  if (options.pdfUrl) {
+    schema.encoding = {
+      '@type': 'MediaObject',
+      encodingFormat: 'application/pdf',
+      contentUrl: toAbsoluteUrl(options.pdfUrl),
+    };
+  }
+  if (options.version) {
+    schema.version = options.version;
+  }
+  if (options.keywords && options.keywords.length > 0) {
+    schema.keywords = options.keywords;
+  }
+  if (options.citations && options.citations.length > 0) {
+    schema.citation = options.citations.map((url) => ({
+      '@type': 'CreativeWork',
+      url,
+    }));
+  }
+
+  return schema;
+}
+
 export function buildServiceSchema(options: {
   name: string;
   description: string;

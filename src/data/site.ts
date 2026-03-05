@@ -24,6 +24,7 @@ export const navItems = [
   { label: 'Approach', href: '/approach' },
   { label: 'Services', href: '/#services' },
   { label: 'Insights', href: '/insights' },
+  { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -36,6 +37,7 @@ export const footerColumns = [
       { label: 'Approach', href: '/approach' },
       { label: 'Theory of Constraints', href: '/approach/theory-of-constraints' },
       { label: 'Insights', href: '/insights' },
+      { label: 'Research', href: '/research' },
       { label: 'Contact', href: '/contact' },
       { label: 'SMS Consent', href: '/legal/sms-consent' },
       {

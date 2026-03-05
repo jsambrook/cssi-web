@@ -32,6 +32,7 @@ const webPage = buildWebPageSchema({
   name: pageTitle,
   description: description ?? siteConfig.defaultDescription,
   url: siteConfig.siteUrl + Astro.url.pathname,
+  hasBreadcrumb: true,
 });
 
 const allJsonLd = [breadcrumb, webPage, ...jsonLd];
