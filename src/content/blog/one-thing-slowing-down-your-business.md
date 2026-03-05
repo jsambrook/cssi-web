@@ -16,7 +16,7 @@ Every business has one thing that limits how much it can get done. Improving tha
 
 ---
 
-<img src="/images/content/one-thing-slowing-down-constraint-steps.jpg" alt="Infographic showing five steps to find and fix a business constraint: find it, get the most out of it, organize around it, invest if needed, repeat" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/one-thing-slowing-down-constraint-steps.webp" alt="Infographic showing five steps to find and fix a business constraint: find it, get the most out of it, organize around it, invest if needed, repeat" width="1408" height="768" loading="lazy" decoding="async" />
 
 Mike runs a residential remodeling company. Three crews. Good reputation. Steady referrals. He should be doing well, and in some ways he is. But he is working sixty-hour weeks, jobs routinely run two to three weeks late, and his margins are thinner than they should be for the volume he is doing.
 

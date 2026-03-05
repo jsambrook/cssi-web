@@ -16,7 +16,7 @@ Hospital governance suffers from a structural problem called co-optation: oversi
 
 ---
 
-<img src="/images/content/hospital-governance-cooptation-cycle.png" alt="Infographic showing the co-optation cycle in hospital governance: community elects part-time commissioners, commissioners depend on executives for information, departments advocate for more resources, board optimizes for smooth governance, and community interest loses its voice — with AI as the missing counterweight" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/hospital-governance-cooptation-cycle.webp" alt="Infographic showing the co-optation cycle in hospital governance: community elects part-time commissioners, commissioners depend on executives for information, departments advocate for more resources, board optimizes for smooth governance, and community interest loses its voice — with AI as the missing counterweight" width="1408" height="768" loading="lazy" decoding="async" />
 
 I sat in a community hospital board meeting recently and watched three clinical departments present their growth strategies to the commissioners. Cardiology. Musculoskeletal. Gastroenterology. Each department had done its homework. Each had data. Each had a clear message for the board: we need more space.
 

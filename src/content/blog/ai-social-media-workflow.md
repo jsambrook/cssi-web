@@ -16,7 +16,7 @@ I have a working process that takes me from a rough idea in the evening to a pub
 
 ---
 
-<img src="/images/content/blog-to-social-media-workflow.png" alt="Infographic showing the 5-step workflow from idea to social media: rough out the idea with Claude, write the post with Claude Code, generate an infographic with Nano Banana Pro, publish to website via git push, and share on social media with Blotato — all connected by MCP" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/blog-to-social-media-workflow.webp" alt="Infographic showing the 5-step workflow from idea to social media: rough out the idea with Claude, write the post with Claude Code, generate an infographic with Nano Banana Pro, publish to website via git push, and share on social media with Blotato — all connected by MCP" width="1408" height="768" loading="lazy" decoding="async" />
 
 Yesterday I published [a piece about hospital governance](/insights/the-meeting-that-could-not-have-gone-differently) on my website. It included an original infographic. Within minutes of the article going live, it was posted to my LinkedIn and X feeds. I did not open LinkedIn. I did not open X. I did not open a graphics editor. I did not manually copy and paste anything.
 

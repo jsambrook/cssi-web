@@ -42,6 +42,10 @@ const STATIC_PAGES: [string, string[]][] = [
   ['/approach', ['src/pages/approach.astro', 'src/data/pages/approach.ts']],
   ['/contact', ['src/pages/contact.astro', 'src/data/pages/contact.ts']],
   ['/insights', ['src/pages/insights.astro', 'src/data/pages/insights.ts']],
+  ['/research', ['src/pages/research.astro', 'src/data/pages/research.ts']],
+  ['/research/pacp-concept-paper', ['src/pages/research/pacp-concept-paper.astro']],
+  ['/research/burnout-systems-thinking', ['src/pages/research/burnout-systems-thinking.astro']],
+  ['/research/surfing-ai-tidal-wave', ['src/pages/research/surfing-ai-tidal-wave.astro']],
   [
     '/industries/healthcare',
     ['src/pages/industries/healthcare.astro', 'src/data/pages/industries.ts'],

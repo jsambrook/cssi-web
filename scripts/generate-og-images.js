@@ -15,11 +15,31 @@ import { dirname, join, relative, resolve } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const BLOG_DIR = join(ROOT, 'src/content/blog');
-const OUTPUT_DIR = join(ROOT, 'public/images/blog');
+const BLOG_OUTPUT_DIR = join(ROOT, 'public/images/blog');
+const RESEARCH_OUTPUT_DIR = join(ROOT, 'public/images/research');
 const LOGO_PATH = join(ROOT, 'public/favicon.svg');
+const VERSION_FILE = join(ROOT, 'public/images/.og-design-version');
 
 // Bump to force regeneration of all images (e.g. after design token changes)
-const DESIGN_VERSION = '2';
+const DESIGN_VERSION = '3';
+
+const RESEARCH_PAPERS = [
+  {
+    slug: 'pacp-concept-paper',
+    title: 'The Post-Acute Care Plan (PACP): A Concept Paper',
+    sourcePath: 'src/pages/research/pacp-concept-paper.astro',
+  },
+  {
+    slug: 'burnout-systems-thinking',
+    title: 'Why Burnout Persists: Systems Thinking in Healthcare',
+    sourcePath: 'src/pages/research/burnout-systems-thinking.astro',
+  },
+  {
+    slug: 'surfing-ai-tidal-wave',
+    title: 'Surfing the AI Tidal Wave: A Discussion Paper',
+    sourcePath: 'src/pages/research/surfing-ai-tidal-wave.astro',
+  },
+];
 
 // Design tokens (matching og-default.png)
 const WIDTH = 1200;
@@ -99,8 +119,66 @@ function walkMarkdownFiles(dir, files = []) {
   return files;
 }
 
+function renderOgImage({ title, outPath, logo }) {
+  const canvas = createCanvas(WIDTH, HEIGHT);
+  const ctx = canvas.getContext('2d');
+
+  // Background
+  ctx.fillStyle = BG_COLOR;
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+  // Top accent bar
+  ctx.fillStyle = ACCENT_COLOR;
+  ctx.fillRect(0, 0, WIDTH, ACCENT_BAR_HEIGHT);
+
+  // Title text (dark, bold, centered)
+  ctx.fillStyle = '#1a1a1a';
+  ctx.font = `bold ${TITLE_FONT_SIZE}px sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+
+  const lines = wrapText(ctx, title, TITLE_MAX_WIDTH);
+  const lineHeight = TITLE_FONT_SIZE * 1.3;
+  const totalTextHeight = lines.length * lineHeight;
+
+  // Vertical centering: account for accent bar at top and logo area at bottom (~100px)
+  const availableHeight = HEIGHT - ACCENT_BAR_HEIGHT - 100;
+  const textStartY = ACCENT_BAR_HEIGHT + (availableHeight - totalTextHeight) / 2;
+
+  for (let i = 0; i < lines.length; i++) {
+    ctx.fillText(lines[i], WIDTH / 2, textStartY + i * lineHeight);
+  }
+
+  // Logo + URL at bottom
+  const logoHeight = 40;
+  const logoWidth = (logo.width / logo.height) * logoHeight;
+  const bottomY = HEIGHT - 50 - logoHeight / 2;
+
+  // Draw logo and URL centered together
+  const urlMetrics = (() => {
+    ctx.font = `bold ${URL_FONT_SIZE}px sans-serif`;
+    return ctx.measureText(URL_TEXT);
+  })();
+  const gap = 12;
+  const totalWidth = logoWidth + gap + urlMetrics.width;
+  const startX = (WIDTH - totalWidth) / 2;
+
+  ctx.drawImage(logo, startX, bottomY - logoHeight / 2, logoWidth, logoHeight);
+
+  ctx.fillStyle = ACCENT_COLOR;
+  ctx.font = `bold ${URL_FONT_SIZE}px sans-serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(URL_TEXT, startX + logoWidth + gap, bottomY);
+
+  mkdirSync(dirname(outPath), { recursive: true });
+  const buffer = canvas.toBuffer('image/png');
+  writeFileSync(outPath, buffer);
+}
+
 async function main() {
-  mkdirSync(OUTPUT_DIR, { recursive: true });
+  mkdirSync(BLOG_OUTPUT_DIR, { recursive: true });
+  mkdirSync(RESEARCH_OUTPUT_DIR, { recursive: true });
 
   const mdFiles = walkMarkdownFiles(BLOG_DIR);
   assert(mdFiles.length > 0, `No markdown files found in ${BLOG_DIR}`);
@@ -108,10 +186,9 @@ async function main() {
   const logo = await loadImage(LOGO_PATH);
 
   // Check if design version changed — if so, regenerate everything
-  const versionFile = join(OUTPUT_DIR, '.design-version');
   let forceAll = false;
   try {
-    forceAll = readFileSync(versionFile, 'utf-8').trim() !== DESIGN_VERSION;
+    forceAll = readFileSync(VERSION_FILE, 'utf-8').trim() !== DESIGN_VERSION;
   } catch {
     forceAll = true;
   }
@@ -122,7 +199,7 @@ async function main() {
   for (const mdPath of mdFiles) {
     const relativePath = relative(BLOG_DIR, mdPath).replaceAll('\\', '/');
     const slug = relativePath.replace(/\.md$/, '');
-    const outPath = join(OUTPUT_DIR, `${slug}.png`);
+    const outPath = join(BLOG_OUTPUT_DIR, `${slug}.png`);
 
     // Parse frontmatter
     const content = readFileSync(mdPath, 'utf-8');
@@ -149,70 +226,34 @@ async function main() {
       }
     }
 
-    // -----------------------------------------------------------------------
-    // Render the OG image
-    // -----------------------------------------------------------------------
-
-    const canvas = createCanvas(WIDTH, HEIGHT);
-    const ctx = canvas.getContext('2d');
-
-    // Background
-    ctx.fillStyle = BG_COLOR;
-    ctx.fillRect(0, 0, WIDTH, HEIGHT);
-
-    // Top accent bar
-    ctx.fillStyle = ACCENT_COLOR;
-    ctx.fillRect(0, 0, WIDTH, ACCENT_BAR_HEIGHT);
-
-    // Title text (white, bold, centered)
-    ctx.fillStyle = '#1a1a1a';
-    ctx.font = `bold ${TITLE_FONT_SIZE}px sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
-
-    const lines = wrapText(ctx, title, TITLE_MAX_WIDTH);
-    const lineHeight = TITLE_FONT_SIZE * 1.3;
-    const totalTextHeight = lines.length * lineHeight;
-
-    // Vertical centering: account for accent bar at top and logo area at bottom (~100px)
-    const availableHeight = HEIGHT - ACCENT_BAR_HEIGHT - 100;
-    const textStartY = ACCENT_BAR_HEIGHT + (availableHeight - totalTextHeight) / 2;
-
-    for (let i = 0; i < lines.length; i++) {
-      ctx.fillText(lines[i], WIDTH / 2, textStartY + i * lineHeight);
-    }
-
-    // Logo + URL at bottom
-    const logoHeight = 40;
-    const logoWidth = (logo.width / logo.height) * logoHeight;
-    const bottomY = HEIGHT - 50 - logoHeight / 2;
-
-    // Draw logo and URL centered together
-    const urlMetrics = (() => {
-      ctx.font = `bold ${URL_FONT_SIZE}px sans-serif`;
-      return ctx.measureText(URL_TEXT);
-    })();
-    const gap = 12;
-    const totalWidth = logoWidth + gap + urlMetrics.width;
-    const startX = (WIDTH - totalWidth) / 2;
-
-    ctx.drawImage(logo, startX, bottomY - logoHeight / 2, logoWidth, logoHeight);
-
-    ctx.fillStyle = ACCENT_COLOR;
-    ctx.font = `bold ${URL_FONT_SIZE}px sans-serif`;
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(URL_TEXT, startX + logoWidth + gap, bottomY);
-
-    // Write PNG
-    mkdirSync(dirname(outPath), { recursive: true });
-    const buffer = canvas.toBuffer('image/png');
-    writeFileSync(outPath, buffer);
+    renderOgImage({ title, outPath, logo });
     generated++;
     console.log(`  ✓ ${slug}.png`);
   }
 
-  writeFileSync(versionFile, DESIGN_VERSION);
+  for (const paper of RESEARCH_PAPERS) {
+    const sourcePath = join(ROOT, paper.sourcePath);
+    const outPath = join(RESEARCH_OUTPUT_DIR, `${paper.slug}.png`);
+
+    if (!forceAll) {
+      try {
+        const sourceStat = statSync(sourcePath);
+        const pngStat = statSync(outPath);
+        if (pngStat.mtimeMs > sourceStat.mtimeMs) {
+          skipped++;
+          continue;
+        }
+      } catch {
+        // Output doesn't exist yet — generate it
+      }
+    }
+
+    renderOgImage({ title: paper.title, outPath, logo });
+    generated++;
+    console.log(`  ✓ research/${paper.slug}.png`);
+  }
+
+  writeFileSync(VERSION_FILE, DESIGN_VERSION);
   console.log(`\nDone. Generated: ${generated}, Skipped: ${skipped}`);
 }
 

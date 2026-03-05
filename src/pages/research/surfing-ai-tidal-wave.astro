@@ -12,13 +12,15 @@ import {
 import { siteConfig } from '../../data/site';
 
 const title = 'Surfing the AI Tidal Wave: A Discussion Paper for Health Systems';
+const seoTitle = getPageTitle('Surfing the AI Tidal Wave Paper');
 const description =
-  'A discussion paper on proactive AI adoption in healthcare systems, combining AI throughput gains with systems-thinking quality control.';
+  'Discussion paper for health systems on proactive AI adoption, pairing throughput gains with systems-thinking quality controls.';
 const abstract =
   'This paper argues that health systems are constrained by scarce high-quality cognitive capacity and that AI cost collapse is relaxing that constraint. It proposes pairing AI throughput with systems-thinking discipline to avoid scaling confusion and to improve operational outcomes.';
 const pageUrl = `${siteConfig.siteUrl}/research/surfing-ai-tidal-wave`;
 const pdfPath = '/assets/files/research/ai/surfing-ai-tidal-wave-v1-2.pdf';
 const pdfUrl = `${siteConfig.siteUrl}${pdfPath}`;
+const ogImage = '/images/research/surfing-ai-tidal-wave.png';
 
 const publishedTime = '2025-12-11T17:06:44.000Z';
 const modifiedTime = '2025-12-15T15:41:53.000Z';
@@ -71,6 +73,7 @@ const webPage = buildWebPageSchema({
   name: title,
   description,
   url: pageUrl,
+  image: ogImage,
   hasBreadcrumb: true,
   about: ['AI strategy', 'Healthcare operations', 'Theory of Constraints'],
 });
@@ -83,6 +86,7 @@ const scholarlyArticle = buildScholarlyArticleSchema({
   datePublished: publishedTime,
   dateModified: modifiedTime,
   authorName: 'John Sambrook',
+  image: ogImage,
   pdfUrl,
   version: '1.2',
   keywords: tags,
@@ -98,8 +102,10 @@ const articleMeta = {
 ---
 
 <BaseLayout
-  title={getPageTitle(title)}
+  title={seoTitle}
   description={description}
+  ogImage={ogImage}
+  ogImageAlt="Surfing the AI Tidal Wave discussion paper cover image"
   ogType="article"
   articleMeta={articleMeta}
   jsonLd={[webPage, breadcrumb, scholarlyArticle]}

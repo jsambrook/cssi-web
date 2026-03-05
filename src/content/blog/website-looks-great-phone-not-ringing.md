@@ -16,7 +16,7 @@ If your website gets traffic but does not generate calls, the problem is almost 
 
 ---
 
-<img src="/images/content/website-generic-to-real-offer.jpg" alt="Infographic showing how three identical attorney websites become indistinguishable to visitors, and the three-step fix: start with the client's situation, name what you do differently, let the website reflect the offer" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/website-generic-to-real-offer.webp" alt="Infographic showing how three identical attorney websites become indistinguishable to visitors, and the three-step fix: start with the client's situation, name what you do differently, let the website reflect the offer" width="1408" height="768" loading="lazy" decoding="async" />
 
 David is an attorney. He left a mid-size firm two years ago to start his own practice, focusing on business law for small companies. He is good at what he does. His clients like him. The ones who find him tend to stay.
 

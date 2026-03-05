@@ -12,13 +12,15 @@ import {
 import { siteConfig } from '../../data/site';
 
 const title = 'The Post-Acute Care Plan (PACP): A Concept Paper';
+const seoTitle = getPageTitle('PACP Concept Paper');
 const description =
-  'A proactive discharge-readiness concept paper by John Sambrook. PACP moves legal, financial, preference, and support inputs upstream so complex discharges can execute instead of improvising in crisis.';
+  'PACP concept paper: a proactive discharge-readiness model that captures legal, financial, preference, and support inputs before admission.';
 const abstract =
   'Complex discharges are delayed because discharge-critical inputs are collected during crisis rather than before admission. The Post-Acute Care Plan proposes capturing these inputs proactively in routine care so hospitals, patients, and downstream providers can execute with fewer avoidable inpatient days.';
 const pageUrl = `${siteConfig.siteUrl}/research/pacp-concept-paper`;
 const pdfPath = '/assets/files/research/pacp/pacp-concept-paper-v1-4.pdf';
 const pdfUrl = `${siteConfig.siteUrl}${pdfPath}`;
+const ogImage = '/images/research/pacp-concept-paper.png';
 
 const publishedTime = '2025-11-01T07:00:00.000Z';
 const modifiedTime = '2025-12-01T08:00:00.000Z';
@@ -72,6 +74,7 @@ const webPage = buildWebPageSchema({
   name: title,
   description,
   url: pageUrl,
+  image: ogImage,
   hasBreadcrumb: true,
   about: ['Healthcare operations', 'Theory of Constraints', 'Patient flow'],
 });
@@ -84,6 +87,7 @@ const scholarlyArticle = buildScholarlyArticleSchema({
   datePublished: publishedTime,
   dateModified: modifiedTime,
   authorName: 'John Sambrook',
+  image: ogImage,
   pdfUrl,
   version: '1.4',
   keywords: tags,
@@ -99,8 +103,10 @@ const articleMeta = {
 ---
 
 <BaseLayout
-  title={getPageTitle(title)}
+  title={seoTitle}
   description={description}
+  ogImage={ogImage}
+  ogImageAlt="PACP concept paper cover image"
   ogType="article"
   articleMeta={articleMeta}
   jsonLd={[webPage, breadcrumb, scholarlyArticle]}

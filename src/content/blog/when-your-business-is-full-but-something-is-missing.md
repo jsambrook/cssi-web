@@ -16,7 +16,7 @@ A full schedule is not the same as a thriving practice. When every hour is booke
 
 ---
 
-<img src="/images/content/full-schedule-wrong-mix.jpg" alt="Infographic showing the hidden conflict between revenue needs and meaning needs in a full practice, with the assumption that every hour must generate the same revenue, and a four-step path forward" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/full-schedule-wrong-mix.webp" alt="Infographic showing the hidden conflict between revenue needs and meaning needs in a full practice, with the assumption that every hour must generate the same revenue, and a four-step path forward" width="1408" height="768" loading="lazy" decoding="async" />
 
 Lori is a licensed massage therapist, three years into running her own practice. She is good at what she does. Her schedule is full. She has a waitlist. By most measures, the business is working.
 

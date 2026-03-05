@@ -8,7 +8,6 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      filter: (page) => !page.includes('/insights/tag/'),
       serialize: sitemapSerialize,
     }),
   ],

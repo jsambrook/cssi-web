@@ -17,7 +17,7 @@ Last week I argued that a community hospital board meeting I attended could not 
 
 ---
 
-<img src="/images/content/the-meeting-that-went-differently.png" alt="A hospital board meeting room at evening session — commissioners at a curved wooden dais, a full audience, and at the far end of the dais an empty position holding a sleek terminal and a slender amber indicator light" width="1376" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/the-meeting-that-went-differently.webp" alt="A hospital board meeting room at evening session — commissioners at a curved wooden dais, a full audience, and at the far end of the dais an empty position holding a sleek terminal and a slender amber indicator light" width="1376" height="768" loading="lazy" decoding="async" />
 
 Last week I published a piece called ["The Meeting That Could Not Have Gone Differently."](/insights/the-meeting-that-could-not-have-gone-differently) The argument, briefly: I sat in on a community hospital board meeting where three clinical departments each presented compelling cases for more physical space. A cath lab. More operating rooms. An endoscopy suite. Between nineteen and twenty-nine million dollars in combined capital requests. The board received the presentations, asked a few good questions, and the conversation stayed on space. Nobody was dishonest. Nobody had a hidden agenda. The outcome was baked into the structure of the meeting before anyone sat down.
 
