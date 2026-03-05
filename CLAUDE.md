@@ -67,6 +67,8 @@ These pages are intended for authoritative, citable artifacts (whitepapers/discu
 `public/llms.txt` provides an LLM-oriented site summary and should be kept aligned with major
 navigation/content additions (especially new canonical pages like `/research/*`).
 
+`robots.txt` is auto-generated at build time by `src/pages/robots.txt.ts` (not a static file in `public/`).
+
 ### Design Tokens
 
 All theming uses CSS custom properties in `src/assets/css/tokens.css`. Primary brand color is `--primary` (#fe811b orange). Buttons use 70px border-radius (pill shape), cards use 20px. Full token docs in `docs/design-system.md`.
