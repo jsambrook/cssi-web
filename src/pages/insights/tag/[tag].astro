@@ -58,6 +58,7 @@ const { tagName, posts } = Astro.props;
 <PageLayout
   pageTitle={`Posts tagged "${tagName}"`}
   description={`All insights tagged with "${tagName}" from Common Sense Systems.`}
+  noindex={true}
 >
   <Section background="muted">
     <div class="max-w-3xl mx-auto text-center space-y-4">
