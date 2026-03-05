@@ -11,7 +11,7 @@ imageAlt: 'Ultrasound research system with support workflow diagram illustrating
 
 ## TL;DR
 
-A leading manufacturer of programmable ultrasound research systems had a reputation problem. Their instruments were technically excellent, but a passive, email-only support model was creating frustrated customers and a growing perception that the systems were "hard to use." By applying the Theory of Constraints 5 Focusing Steps, we identified the real bottleneck -- a policy constraint, not a technology problem -- and transformed the support function from a cost center into a proactive growth engine.
+A leading manufacturer of programmable ultrasound research systems had a reputation problem. Their instruments were technically excellent, but a passive, email-only support model -- averaging 12 business days to close a setup call -- was creating frustrated customers and a growing perception that the systems were "hard to use." By applying the Theory of Constraints 5 Focusing Steps, we cut time-to-close to 2.5 days, drained the support backlog in 20 days, and transformed the support function from a cost center into a proactive growth engine.
 
 ---
 
@@ -25,9 +25,11 @@ Weekly internal meetings were plagued by reports of disgruntled customers. For a
 
 Upon investigation, we identified a classic Policy Constraint.
 
-The company's support model was built on local optimization. To minimize internal costs, they had built a passive, email-only ticketing system. Customers submitted a ticket. A support engineer responded when available. The back-and-forth could stretch across days. From the perspective of the support budget, this was "efficient." From the perspective of the customer's time-to-value, it was a complete bottleneck.
+The company's support model was built on local optimization. To minimize internal costs, they had built a passive, email-only ticketing system. Customers submitted a ticket. A support engineer responded when available. The back-and-forth stretched across days -- and often weeks. The average time to close a setup call was **12 business days**.
 
-The customer experience was what you would expect: shouting into a void. A $150,000 system sitting inert on a bench. A researcher with a grant deadline. Days of asynchronous emails. By the time the problem was resolved, the damage to the relationship was already done.
+The reasons were structural, not personal. Customers frequently omitted information the engineer needed to diagnose the problem, because they did not know what was relevant. The engineer, working blind from email text alone, could not see the customer's screen, could not observe the error in context, and had to request clarification in another round-trip message. Each exchange added a day or more of latency. A problem that might take 30 minutes to solve face-to-face became a two-week drip of incomplete emails.
+
+The customer experience was what you would expect: shouting into a void. A $150,000 system sitting inert on a bench. A researcher with a grant deadline. Twelve business days of asynchronous emails. By the time the problem was resolved, the damage to the relationship was already done.
 
 The company had unknowingly traded short-term support cost savings for long-term reputation damage. The policy that looked efficient from the inside was costing far more than it saved, measured in customer goodwill, public complaints, and lost referrals.
 
@@ -47,15 +49,19 @@ To turn the tide, we applied the Theory of Constraints to the service loop.
 
 ## The Results
 
-The transformation was immediate.
+The numbers moved fast.
 
-Customers who had been expecting days of email were instead working again within 30 minutes of a call. The white-glove experience became a genuine differentiator -- something the sales organization could point to, something customers talked about to colleagues at other institutions.
+Within two months of starting the new protocol, the average time to close a setup call dropped from **12 business days to 2.5 days**. The backlog of pending calls -- which had been a permanent fixture of the weekly meeting agenda -- drained completely within 20 days. From that point on, the queue hovered at one or two open calls on any given day. Management attention that had been consumed by customer escalations was freed up for product development and sales strategy.
+
+But the numbers only tell part of the story. At a well-known ultrasound research lab at Duke University, a graduate student had been struggling for weeks to get her new system running under the old email-based process. When we scheduled a call and connected with remote access, the problem was resolved in 30 minutes. She told us: _"Thank you! I was so embarrassed by being unable to get this fixed I was contemplating quitting this lab."_
+
+That is not a customer satisfaction metric. That is a person whose career trajectory changed because the support model changed.
 
 |                         | The Old Way (Local Optimization)    | The TOC Way (Global Throughput)              |
 | ----------------------- | ----------------------------------- | -------------------------------------------- |
 | **Primary Goal**        | Minimize internal support costs     | Maximize customer system uptime              |
 | **Communication**       | Asynchronous email (passive)        | Synchronous video and remote access (active) |
-| **Success Metric**      | Tickets closed                      | System operational in under 30 minutes       |
+| **Success Metric**      | 12 business days to close           | 2.5 days average; most resolved same-day     |
 | **Customer Experience** | Frustration; "Shouting into a void" | Relief; professional partnership             |
 | **Sales Impact**        | Negative (public complaints)        | Positive (referrals and upgrades)            |
 
