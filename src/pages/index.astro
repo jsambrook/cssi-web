@@ -22,6 +22,7 @@ import {
   buildProfessionalServiceSchema,
   buildWebPageSchema,
   buildOfferCatalogSchema,
+  buildFounderSchema,
 } from '../data/schema';
 import { siteConfig } from '../data/site';
 
@@ -35,7 +36,12 @@ const homeWebPage = buildWebPageSchema({
 <BaseLayout
   title={getPageTitle("Find it. Fix it. Or don't pay.")}
   description="We find the one thing limiting your organization and fix it. You only pay if we deliver. Fixed fee, fixed timeline, zero risk to you."
-  jsonLd={[homeWebPage, buildProfessionalServiceSchema(), buildOfferCatalogSchema()]}
+  jsonLd={[
+    homeWebPage,
+    buildProfessionalServiceSchema(),
+    buildOfferCatalogSchema(),
+    buildFounderSchema(),
+  ]}
 >
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
 
