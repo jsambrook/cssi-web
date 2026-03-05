@@ -30,7 +30,6 @@ const organizationSameAs = [
   'https://www.linkedin.com/company/common-sense-systems',
   siteConfig.xProfileUrl,
   siteConfig.youtubeUrl,
-  'https://www.bbb.org/us/wa/bothell/profile/computer-hardware/common-sense-systems-inc-1296-22175271',
   'https://maps.google.com/?cid=14125900726605051430', // Google Business Profile
 ];
 

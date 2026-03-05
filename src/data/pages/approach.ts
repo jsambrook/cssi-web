@@ -2,7 +2,7 @@ import type { PageHeader, GridItem, CTAContent } from '../types';
 
 export const pageTitle = 'Our Approach';
 export const pageDescription =
-  'Fixed-fee, decision-ready consulting. We use the Theory of Constraints to find what is actually limiting your system, then fix it. You only pay if we deliver.';
+  'Fixed-fee consulting using Theory of Constraints. We find what limits your system and fix it. You only pay if we deliver.';
 
 export const header: PageHeader = {
   label: 'Approach',

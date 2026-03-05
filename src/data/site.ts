@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: 'Leading with value since 1996',
   siteUrl: 'https://common-sense.com',
   defaultDescription:
-    'We find the one thing limiting your organization and fix it. Constraint analysis and offer strategy with a satisfaction guarantee. You only pay if we deliver. Based in Kirkland, WA.',
+    'Constraint analysis and offer strategy with a satisfaction guarantee. Fixed fee, fixed timeline. Based in Kirkland, WA.',
   defaultOgImage: '/images/og-default.png',
   headerCta: { text: 'Book a Conversation', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
   footerContactHeading: 'Contact Us',
@@ -63,6 +63,7 @@ export const footerColumns = [
       { label: 'Small Business', href: '/insights/tag/small-business' },
       { label: 'Operations', href: '/insights/tag/operations' },
       { label: 'Decision-Making', href: '/insights/tag/decision-making' },
+      { label: 'Theory of Constraints', href: '/insights/tag/theory-of-constraints' },
     ],
   },
 ];

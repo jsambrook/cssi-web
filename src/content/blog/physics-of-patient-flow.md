@@ -16,8 +16,6 @@ Hospital discharge planning fails because it bundles two different events -- a c
 
 ---
 
-Why hospital discharge processes fail and how to fix them.
-
 ## The Physics of Patient Flow: Why We Wait Until the Worst Possible Moment
 
 It's a scene that plays out in hospitals every day. A patient--let's call her Mary--is medically ready for discharge after a serious illness. The doctor has signed off. The bed is needed for another patient.

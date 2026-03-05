@@ -16,8 +16,6 @@ I spent decades building medical devices -- defibrillators, ultrasound systems -
 
 ---
 
-A deep dive into designing effective hospital systems.
-
 ### Architecting Healthcare from the Outside In: Why I Call Myself a Healthcare System Architect
 
 _How decades in tech, systems thinking, and a fresh perspective are my greatest assets for fixing a broken system._
