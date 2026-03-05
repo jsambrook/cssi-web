@@ -17,8 +17,9 @@ import { getManualInsight } from '../../data/manualInsights';
 import { toPacificIso } from '../../utils/dates';
 
 const insight = getManualInsight('pacp');
-const { title, description, author, tags } = insight;
+const { title, description, author, tags, ogImage, imageAlt } = insight;
 const publishedDate = toPacificIso(insight.date);
+const imageUrl = ogImage ? `${siteConfig.siteUrl}${ogImage}` : undefined;
 
 const breadcrumb = buildBreadcrumbSchema([
   { name: 'Home', href: '/' },
@@ -26,13 +27,14 @@ const breadcrumb = buildBreadcrumbSchema([
   { name: title, href: '/insights/pacp' },
 ]);
 
-const articleUrl = `${siteConfig.siteUrl}/insights/pacp`;
+const articleUrl = `${siteConfig.siteUrl}/insights/pacp/`;
 const articleSchema = buildArticleSchema({
   title,
   description,
   datePublished: publishedDate,
   author,
   url: articleUrl,
+  image: imageUrl,
   tags,
 });
 
@@ -53,6 +55,8 @@ const articleMeta = {
 <BaseLayout
   title={getPageTitle(title)}
   description={description}
+  ogImage={ogImage}
+  ogImageAlt={imageAlt ?? `Open Graph image for ${title}`}
   ogType="article"
   articleMeta={articleMeta}
   jsonLd={[articleSchema, breadcrumb, webPage]}

@@ -50,8 +50,8 @@ const STATIC_PAGES: [string, string[]][] = [
   ['/legal/privacy', ['src/pages/legal/privacy.astro', 'src/data/pages/privacy.ts']],
   ['/legal/terms', ['src/pages/legal/terms.astro', 'src/data/pages/terms.ts']],
   ['/legal/sms-consent', ['src/pages/legal/sms-consent.astro']],
-  ['/approach/theory-of-constraints', ['src/pages/approach/theory-of-constraints.astro']],
-  ['/approach/toc-lean-integration', ['src/pages/approach/toc-lean-integration.astro']],
+  ['/approach/theory-of-constraints', ['src/pages/approach/theory-of-constraints/index.astro']],
+  ['/approach/toc-lean-integration', ['src/pages/approach/toc-lean-integration/index.astro']],
 ];
 
 /** Get the most recent git commit date (YYYY-MM-DD) touching any of the given files. */

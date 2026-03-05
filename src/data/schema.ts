@@ -1,5 +1,32 @@
 import { siteConfig, footerContact } from './site';
 
+function toTrailingSlashUrl(rawUrl: string): string {
+  try {
+    const parsed = new URL(rawUrl);
+    if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+      return rawUrl;
+    }
+    if (!parsed.pathname.endsWith('/')) {
+      parsed.pathname = `${parsed.pathname}/`;
+    }
+    return parsed.toString();
+  } catch {
+    return rawUrl;
+  }
+}
+
+function toSiteUrl(href: string): string {
+  return toTrailingSlashUrl(new URL(href, `${siteConfig.siteUrl}/`).toString());
+}
+
+function toIdFragment(value: string): string {
+  const normalized = value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  return normalized || 'item';
+}
+
 export function parseAddress(raw: string) {
   // "11227 NE 128th St Unit I-102\nKirkland, WA 98034"
   const parts = raw.split('\n');
@@ -119,7 +146,7 @@ export function buildOrganizationSchema(): Record<string, unknown> {
     '@id': `${siteConfig.siteUrl}/#organization`,
     name: siteConfig.name,
     description: siteConfig.defaultDescription,
-    url: siteConfig.siteUrl,
+    url: toTrailingSlashUrl(siteConfig.siteUrl),
     telephone: footerContact.phones[0],
     email: footerContact.email,
     foundingDate: '1996',
@@ -146,7 +173,7 @@ export function buildWebSiteSchema(): Record<string, unknown> {
     '@type': 'WebSite',
     '@id': `${siteConfig.siteUrl}/#website`,
     name: siteConfig.name,
-    url: siteConfig.siteUrl,
+    url: toTrailingSlashUrl(siteConfig.siteUrl),
   };
 }
 
@@ -155,12 +182,14 @@ export function buildWebPageSchema(options: {
   description: string;
   url: string;
 }): Record<string, unknown> {
+  const pageUrl = toTrailingSlashUrl(options.url);
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': pageUrl,
     name: options.name,
     description: options.description,
-    url: options.url,
+    url: pageUrl,
     isPartOf: { '@id': `${siteConfig.siteUrl}/#website` },
   };
 }
@@ -171,7 +200,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     '@type': 'ProfessionalService',
     '@id': `${siteConfig.siteUrl}/#professional-service`,
     name: siteConfig.name,
-    url: siteConfig.siteUrl,
+    url: toTrailingSlashUrl(siteConfig.siteUrl),
     telephone: footerContact.phones[0],
     email: footerContact.email,
     address: {
@@ -274,6 +303,9 @@ export function buildFounderSchema(): Record<string, unknown> {
     '@id': `${siteConfig.siteUrl}/#founder`,
     name: 'John Sambrook',
     jobTitle: 'Systems Architect & Constraint Analyst',
+    description:
+      'TOC Jonah Certified systems architect and constraint analyst with deep expertise in healthcare operations, medical device software, and throughput-based improvement.',
+    image: `${siteConfig.siteUrl}/images/headshots/john-sambrook-headshot-1200.jpg`,
     worksFor: {
       '@id': `${siteConfig.siteUrl}/#organization`,
     },
@@ -285,7 +317,7 @@ export function buildFounderSchema(): Record<string, unknown> {
     knowsAbout: founderKnowsAbout,
     hasCredential: founderCredentials,
     alumniOf: founderAlumni,
-    url: `${siteConfig.siteUrl}/about`,
+    url: toSiteUrl('/about'),
     sameAs: [
       'https://www.linkedin.com/in/johnsambrook',
       siteConfig.xProfileUrl,
@@ -337,20 +369,21 @@ export function buildArticleSchema(options: {
   tags?: string[];
   wordCount?: number;
 }): Record<string, unknown> {
+  const articleUrl = toTrailingSlashUrl(options.url);
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    '@id': options.url,
+    '@id': articleUrl,
     headline: options.title,
     description: options.description,
     inLanguage: 'en-US',
     isAccessibleForFree: true,
     datePublished: options.datePublished,
     dateModified: options.dateModified ?? options.datePublished,
-    url: options.url,
+    url: articleUrl,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': options.url,
+      '@id': articleUrl,
     },
     author: {
       '@id': `${siteConfig.siteUrl}/#founder`,
@@ -361,7 +394,7 @@ export function buildArticleSchema(options: {
     isPartOf: {
       '@type': 'Blog',
       name: `${siteConfig.name} Insights`,
-      url: `${siteConfig.siteUrl}/insights`,
+      url: toSiteUrl('/insights'),
     },
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -387,12 +420,14 @@ export function buildServiceSchema(options: {
   url: string;
   serviceType: string;
 }): Record<string, unknown> {
+  const serviceUrl = toTrailingSlashUrl(options.url);
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${serviceUrl}#service-${toIdFragment(options.name)}`,
     name: options.name,
     description: options.description,
-    url: options.url,
+    url: serviceUrl,
     serviceType: options.serviceType,
     provider: {
       '@id': `${siteConfig.siteUrl}/#organization`,
@@ -410,7 +445,7 @@ export function buildBreadcrumbSchema(
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,
-      item: `${siteConfig.siteUrl}${item.href}`,
+      item: toSiteUrl(item.href),
     })),
   };
 }
@@ -421,7 +456,7 @@ export function buildContactPageSchema(description: string): Record<string, unkn
     '@type': 'ContactPage',
     name: `Contact ${siteConfig.name}`,
     description,
-    url: `${siteConfig.siteUrl}/contact`,
+    url: toSiteUrl('/contact'),
     mainEntity: {
       '@id': `${siteConfig.siteUrl}/#organization`,
     },
