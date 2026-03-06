@@ -12,5 +12,5 @@ export default defineConfig({
     }),
   ],
   site: siteConfig.siteUrl,
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
 });
