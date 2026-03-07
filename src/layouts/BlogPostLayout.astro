@@ -23,6 +23,7 @@ import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Section from '../components/Section.astro';
+import RelatedInsights from '../components/RelatedInsights.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../data/pageDefaults';
 import { buildArticleSchema, buildBreadcrumbSchema } from '../data/schema';
 import { siteConfig } from '../data/site';
@@ -69,6 +70,7 @@ const articleMeta = {
   author,
   tags,
 };
+const currentSlug = Astro.url.pathname.replace(/^\/insights\//, '').replace(/\/$/, '');
 ---
 
 <BaseLayout
@@ -113,6 +115,7 @@ const articleMeta = {
       <div class="prose prose-lg max-w-none">
         <slot />
       </div>
+      <RelatedInsights currentSlug={currentSlug} tags={tags} />
     </article>
   </Section>
 

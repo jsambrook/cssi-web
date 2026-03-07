@@ -1,0 +1,110 @@
+---
+/*
+ * RelatedInsights.astro
+ *
+ * Displays up to 3 related blog posts based on shared tags.
+ * Posts are ranked by number of overlapping tags, then by date (newest first).
+ *
+ * Props:
+ *   currentSlug: slug of the current post (to exclude it from results)
+ *   tags: tags of the current post (used for matching)
+ */
+
+import { getCollection } from 'astro:content';
+import { manualInsights } from '../data/manualInsights';
+import { isPublished } from '../utils/dates';
+import { slugifyTag, tagHref } from '../utils/tags';
+import { formatDate, toPacificIso } from '../utils/dates';
+
+interface Props {
+  currentSlug: string;
+  tags: string[];
+}
+
+const { currentSlug, tags } = Astro.props;
+const MAX_RELATED = 3;
+
+const blogPosts = await getCollection('blog', ({ data }) => !data.draft && isPublished(data.date));
+const manualPosts = manualInsights
+  .filter((i) => isPublished(i.date))
+  .map((i) => ({
+    id: i.slug,
+    data: {
+      title: i.title,
+      description: i.description,
+      date: i.date,
+      tags: i.tags,
+      ogImage: i.ogImage,
+      imageAlt: i.imageAlt,
+    },
+  }));
+
+const allPosts = [...blogPosts, ...manualPosts].filter((p) => p.id !== currentSlug);
+
+const currentTagSlugs = new Set(tags.map(slugifyTag));
+
+const scored = allPosts
+  .map((post) => {
+    const overlap = post.data.tags.filter((t) => currentTagSlugs.has(slugifyTag(t))).length;
+    return { post, overlap };
+  })
+  .filter((s) => s.overlap > 0)
+  .sort((a, b) => b.overlap - a.overlap || b.post.data.date.getTime() - a.post.data.date.getTime())
+  .slice(0, MAX_RELATED);
+
+const related = scored.map((s) => s.post);
+---
+
+{
+  related.length > 0 && (
+    <aside class="mt-12 pt-8 border-t border-border">
+      <h2 class="text-2xl mb-6">Related Insights</h2>
+      <div class="space-y-5">
+        {related.map((post) => {
+          const thumb = post.data.ogImage ?? `/images/blog/${post.id}.png`;
+          return (
+            <article class="group">
+              <div class="flex gap-4">
+                <a href={`/insights/${post.id}/`} class="shrink-0 hidden sm:block">
+                  <img
+                    src={thumb}
+                    alt={post.data.imageAlt ?? post.data.title}
+                    width="80"
+                    height="80"
+                    loading="lazy"
+                    class="w-20 h-20 rounded-lg object-contain"
+                  />
+                </a>
+                <div class="space-y-1">
+                  <a href={`/insights/${post.id}/`} class="block">
+                    <h3 class="text-lg group-hover:text-primary transition-colors">
+                      {post.data.title}
+                    </h3>
+                  </a>
+                  <p class="text-sm text-muted-foreground">{post.data.description}</p>
+                  <div class="flex items-center gap-3 text-xs text-muted-foreground">
+                    <time datetime={toPacificIso(post.data.date)}>
+                      {formatDate(post.data.date)}
+                    </time>
+                    {post.data.tags.length > 0 && (
+                      <span class="flex gap-1.5">
+                        {post.data.tags.map((t) => (
+                          <a
+                            href={tagHref(t)}
+                            class="text-primary/70 hover:text-primary transition-colors"
+                          >
+                            #{slugifyTag(t)}
+                          </a>
+                        ))}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </aside>
+  )
+}
