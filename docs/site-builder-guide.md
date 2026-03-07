@@ -104,6 +104,8 @@ Post content in markdown...
 
 Set `draft: true` in frontmatter to hide a post from the listing.
 
+The site automatically displays up to 3 related posts at the bottom of each blog post, matched by shared tags. For stronger internal linking, also add contextual links to related posts within the body text where natural.
+
 ## Step 6b: Research papers (`src/pages/research/`)
 
 Long-form canonical papers are published as page routes under `src/pages/research/` and their

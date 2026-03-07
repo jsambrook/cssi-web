@@ -183,6 +183,7 @@ There is no mandatory template. Different pieces call for different structures. 
 - **Open with a specific scene or observation.** The cath lab piece opens in a board meeting. The tax piece opens with "I'm doing my business taxes this year with AI coding agents. Not conceptually. Not as an experiment." Ground the reader immediately. The opening paragraph must contain a concrete noun: a person, a place, a specific report, a date, a number. If the first paragraph is all abstract concepts, rewrite it.
 - **Earn your abstractions.** If you're going to introduce a framework or concept, establish the concrete problem first. The reader should be thinking "yes, I recognize this" before you name the pattern.
 - **End with an open hand.** Invite engagement. Provide contact information. Don't end with a hard sell.
+- **Link to related posts within the body text where natural.** If you reference patient flow dynamics, link to the patient flow post. If you mention an Evaporating Cloud, link to a post that demonstrates one. These contextual cross-links help readers find related work and help search engines understand how your content connects. The site automatically shows 3 related posts at the bottom of every article (matched by tags), but in-body links to specific posts carry more weight because they're editorially chosen and contextually relevant.
 
 ### Post Length
 
@@ -350,6 +351,7 @@ Before publishing, check:
 - [ ] Are `metaTitle` and `metaDescription` written individually for this post (not duplicated or left generic)?
 - [ ] Does the opening paragraph contain at least one concrete noun (person, place, report, date, number)?
 - [ ] If the post has a complex argument or multi-step structure, does it include an infographic after the TL;DR?
+- [ ] Does the post include at least one internal link to a related insight or page?
 
 ---
 
