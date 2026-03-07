@@ -264,6 +264,35 @@ export function buildWebPageSchema(options: {
   return schema;
 }
 
+const serviceCatalog = [
+  {
+    name: 'Constraint Analysis',
+    description:
+      'Identify the single constraint limiting your organization and fix it. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
+    anchorId: 'service-constraint-analysis',
+  },
+  {
+    name: 'Offer Analysis',
+    description:
+      'Diagnose why your market offer is not differentiating and build one your ideal client cannot refuse. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
+    anchorId: 'service-offer-analysis',
+  },
+];
+
+function toOfferList(options?: { includeUrl: boolean }): Record<string, unknown>[] {
+  return serviceCatalog.map((svc) => {
+    const itemOffered: Record<string, unknown> = {
+      '@type': 'Service',
+      name: svc.name,
+      description: svc.description,
+    };
+    if (options?.includeUrl) {
+      itemOffered.url = `${siteConfig.siteUrl}/#${svc.anchorId}`;
+    }
+    return { '@type': 'Offer', itemOffered };
+  });
+}
+
 export function buildProfessionalServiceSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
@@ -302,26 +331,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Consulting Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Constraint Analysis',
-            description:
-              'Identify the single constraint limiting your organization and fix it. Fixed fee, 2-4 weeks, satisfaction guarantee.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Offer Analysis',
-            description:
-              'Diagnose why your market offer is not differentiating and build one your ideal client cannot refuse. Fixed fee, 2-4 weeks, satisfaction guarantee.',
-          },
-        },
-      ],
+      itemListElement: toOfferList(),
     },
     founder: {
       '@type': 'Person',
@@ -403,28 +413,7 @@ export function buildOfferCatalogSchema(): Record<string, unknown> {
     name: `${siteConfig.name} Services`,
     description:
       'Constraint analysis and offer strategy for organizations. Fixed fee, fixed timeline, satisfaction guarantee.',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Constraint Analysis',
-          description:
-            'Identify the single constraint limiting your organization and fix it. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
-          url: `${siteConfig.siteUrl}/#service-constraint-analysis`,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Offer Analysis',
-          description:
-            'Diagnose why your market offer is not differentiating and build one your ideal client cannot refuse. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
-          url: `${siteConfig.siteUrl}/#service-offer-analysis`,
-        },
-      },
-    ],
+    itemListElement: toOfferList({ includeUrl: true }),
   };
 }
 
