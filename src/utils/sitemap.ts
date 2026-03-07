@@ -6,7 +6,7 @@
  * Static pages: most recent git commit touching the page's source files.
  */
 import { execSync } from 'node:child_process';
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, basename } from 'node:path';
 import { manualInsights } from '../data/manualInsights';
@@ -73,6 +73,10 @@ function gitLastmod(files: string[]): string | undefined {
   return undefined;
 }
 
+function toIsoDate(d: Date): string {
+  return d.toISOString().split('T')[0];
+}
+
 /** Build a map from URL path (no trailing slash) to YYYY-MM-DD lastmod string. */
 function buildLastmodMap(): Map<string, string> {
   const map = new Map<string, string>();
@@ -84,12 +88,17 @@ function buildLastmodMap(): Map<string, string> {
     const { date, updatedDate } = parseFrontmatterDates(raw);
     const best = updatedDate ?? date;
     if (best) {
-      map.set(`/insights/${slug}`, best.toISOString().split('T')[0]);
+      map.set(`/insights/${slug}`, toIsoDate(best));
     }
   }
 
   for (const insight of manualInsights) {
-    map.set(`/insights/${insight.slug}`, insight.date.toISOString().split('T')[0]);
+    const insightPagePath = `src/pages/insights/${insight.slug}.astro`;
+    const gitDerivedLastmod = existsSync(join(PROJECT_ROOT, insightPagePath))
+      ? gitLastmod([insightPagePath])
+      : undefined;
+    const fallbackDate = insight.updatedDate ?? insight.date;
+    map.set(`/insights/${insight.slug}`, gitDerivedLastmod ?? toIsoDate(fallbackDate));
   }
 
   // Static pages — date from git history.

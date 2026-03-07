@@ -1,26 +1,84 @@
 import type { APIRoute } from 'astro';
-import { footerContact, siteConfig } from '../data/site';
+import { existsSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+import { footerContact, navItems, siteConfig } from '../data/site';
+import { industries } from '../data/pages/industries';
 import { papers } from '../data/pages/research';
 
 function toAbsoluteUrl(href: string): string {
   if (href.startsWith('http://') || href.startsWith('https://')) {
     return href;
   }
-  return `${siteConfig.siteUrl}${href}`;
+  const normalizedPath = new URL(href, `${siteConfig.siteUrl}/`).pathname.replace(/\/$/, '') || '/';
+  return `${siteConfig.siteUrl}${normalizedPath}`;
+}
+
+function titleCaseFromSlug(slug: string): string {
+  const uppercaseTokens = new Set(['ai', 'api', 'geo', 'llm', 'llms', 'seo', 'toc']);
+  const lowercaseConnectors = new Set(['a', 'an', 'and', 'for', 'in', 'of', 'on', 'the', 'to']);
+
+  return slug
+    .split('-')
+    .filter(Boolean)
+    .map((part, i) => {
+      if (uppercaseTokens.has(part)) {
+        return part.toUpperCase();
+      }
+      if (i > 0 && lowercaseConnectors.has(part)) {
+        return part;
+      }
+      return part[0].toUpperCase() + part.slice(1);
+    })
+    .join(' ');
+}
+
+function discoverApproachSubpages(): { label: string; href: string }[] {
+  const pagesDir = join(process.cwd(), 'src', 'pages', 'approach');
+  if (!existsSync(pagesDir)) {
+    return [];
+  }
+
+  return readdirSync(pagesDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .filter((entry) => existsSync(join(pagesDir, entry.name, 'index.astro')))
+    .map((entry) => ({
+      label: `Approach: ${titleCaseFromSlug(entry.name)}`,
+      href: `/approach/${entry.name}`,
+    }));
+}
+
+function uniqueByHref<T extends { href: string }>(items: T[]): T[] {
+  const seen = new Set<string>();
+  const result: T[] = [];
+
+  for (const item of items) {
+    const key = toAbsoluteUrl(item.href);
+    if (seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    result.push(item);
+  }
+
+  return result;
 }
 
 export const GET: APIRoute = () => {
-  const keyPages = [
-    { label: 'Approach', href: '/approach' },
-    { label: 'Healthcare Services', href: '/industries/healthcare' },
-    { label: 'Technology Services', href: '/industries/tech' },
+  const navKeyPages = navItems
+    .filter((item) => item.href.startsWith('/'))
+    .filter((item) => !item.href.includes('#'))
+    .map((item) => ({ label: item.label, href: item.href }));
+  const industryKeyPages = Object.entries(industries).map(([slug, page]) => ({
+    label: `${page.header.label} Services`,
+    href: `/industries/${slug}`,
+  }));
+  const keyPages = uniqueByHref([
+    ...navKeyPages,
+    ...industryKeyPages,
+    ...discoverApproachSubpages(),
     { label: 'Insights (Blog)', href: '/insights' },
     { label: 'Research (Papers)', href: '/research' },
-    { label: 'Theory of Constraints', href: '/approach/theory-of-constraints' },
-    { label: 'TOC-Lean Integration', href: '/approach/toc-lean-integration' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-  ];
+  ]);
 
   const researchLines = papers
     .filter((paper) => paper.href)

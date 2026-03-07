@@ -94,6 +94,7 @@ export interface ManualInsight {
   title: string;
   description: string;
   date: Date;
+  updatedDate?: Date;
   author: string;
   tags: string[];
   ogImage?: string;
