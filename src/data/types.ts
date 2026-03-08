@@ -101,6 +101,13 @@ export interface ManualInsight {
   imageAlt?: string;
 }
 
+export interface Credential {
+  name: string;
+  description: string;
+  dateEarned: string;
+  verifyUrl: string;
+}
+
 export interface ServiceOffer {
   id: string;
   title: string;

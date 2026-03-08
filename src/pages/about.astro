@@ -3,7 +3,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import Section from '../components/Section.astro';
 import CTASection from '../components/CTASection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
-import { pageTitle, pageDescription, header, content, cta } from '../data/pages/about';
+import { pageTitle, pageDescription, header, content, credentials, cta } from '../data/pages/about';
 import { buildFounderSchema } from '../data/schema';
 ---
 
@@ -37,6 +37,41 @@ import { buildFounderSchema } from '../data/schema';
           <p class:list={[block.lead && 'text-foreground text-base']}>{block.text}</p>
         ))
       }
+    </div>
+  </Section>
+
+  <Section background="muted">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl text-center mb-8">Professional Credentials</h2>
+      <p class="text-sm text-muted-foreground text-center mb-8">
+        Issued by <a
+          href="https://www.tocico.org/"
+          target="_blank"
+          rel="noopener"
+          class="text-accent hover:underline">TOCICO</a
+        >, the international certification body for Theory of Constraints.
+      </p>
+      <div class="space-y-6">
+        {
+          credentials.map((cred) => (
+            <div class="bg-background rounded-xl p-6 shadow-sm border border-border">
+              <h3 class="text-base font-semibold mb-1">{cred.name}</h3>
+              <p class="text-sm text-muted-foreground mb-3">{cred.description}</p>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 text-xs text-muted-foreground">
+                <span>Earned {cred.dateEarned}</span>
+                <a
+                  href={cred.verifyUrl}
+                  target="_blank"
+                  rel="noopener"
+                  class="text-accent hover:underline"
+                >
+                  Verify on TOCICO.org
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </Section>
 
