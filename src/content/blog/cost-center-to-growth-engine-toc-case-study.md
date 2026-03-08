@@ -35,7 +35,7 @@ The company had unknowingly traded short-term support cost savings for long-term
 
 ## Applying the 5 Focusing Steps
 
-To turn the tide, we applied the Theory of Constraints to the service loop.
+To turn the tide, we applied the [Theory of Constraints](/approach/theory-of-constraints#five-focusing-steps) to the service loop.
 
 **Step 1: Identify the Constraint.** The bottleneck was not the technology, the documentation, or the complexity of the setup process. It was the Customer Service Policy that prioritized company cost over customer uptime.
 

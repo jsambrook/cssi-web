@@ -56,7 +56,7 @@ Rachel believed that raising prices would cost her customers because she assumed
 
 The assumption that connected "raise prices" to "lose customers" was simply not true.
 
-This is the core move in what Goldratt called the Evaporating Cloud. The tool works like this: you state the dilemma clearly -- two needs that both serve a common goal, and two actions that directly conflict. Then you find the assumptions hiding underneath each side. You test whether those assumptions are actually true. When you find one that is not, the dilemma dissolves.
+This is the core move in what Goldratt called the [Evaporating Cloud](/approach/theory-of-constraints#evaporating-cloud). The tool works like this: you state the dilemma clearly -- two needs that both serve a common goal, and two actions that directly conflict. Then you find the assumptions hiding underneath each side. You test whether those assumptions are actually true. When you find one that is not, the dilemma dissolves.
 
 Not a compromise, where both sides lose something. A dissolution -- where you discover the conflict was never as real as it looked.
 

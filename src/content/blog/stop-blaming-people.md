@@ -82,7 +82,7 @@ The system has stakeholders working at cross-purposes. The hospital's metric is 
 
 Here's the good news: These conflicts are not permanent. They are not laws of nature. They are the result of _assumptions_ we've made about how the system _must_ work.
 
-And if you can identify those assumptions, you can challenge them---and make the conflict "evaporate."
+And if you can identify those assumptions, you can challenge them---and make the conflict "evaporate." This is the core move of the [Evaporating Cloud](/approach/theory-of-constraints#evaporating-cloud), one of the Thinking Processes in Theory of Constraints.
 
 This isn't just a theory. It's a proven, practical method.
 

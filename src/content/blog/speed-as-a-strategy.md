@@ -118,7 +118,7 @@ Each patient is unique, requiring customized care planning. But customization in
 
 Healthcare systems must compete aggressively for market share AND must collaborate extensively with post-acute facilities and other market participants.
 
-**A practical note:** Every system contains numerous conflicts. Theory of Constraints doesn't suggest resolving all of them--attempting to do so leads to analytical paralysis. Instead, identify the conflicts that most directly constrain your system's performance. In discharge operations, these four conflicts demonstrably slow the OODA Loop. Resolve these, and cycle time improves dramatically.
+**A practical note:** Every system contains numerous conflicts. [Theory of Constraints](/approach/theory-of-constraints) doesn't suggest resolving all of them--attempting to do so leads to analytical paralysis. Instead, identify the conflicts that most directly constrain your system's performance. In discharge operations, these four conflicts demonstrably slow the OODA Loop. Resolve these, and cycle time improves dramatically.
 
 ## Building High Operational Tempo: Practical Implications
 

@@ -28,7 +28,7 @@ The distinction matters, and it is easy to miss. These two calculations are not 
 
 Financial accounting, the framework hospitals use for reporting, tax filings, and regulatory compliance, asks: what does it cost to operate this room? When the room sits idle, it assigns a share of the overhead, the staff, the depreciation, to that idle time. This produces a real and auditable number. It is useful for understanding where money goes.
 
-Throughput Accounting, a framework developed by the physicist Eli Goldratt as an alternative to traditional cost accounting, asks a different question: what does this room produce when it runs? Revenue minus the costs that are only incurred because a specific patient is on the table. Everything else, the salaries, the overhead, the building, is already spent whether the room runs or not. When the room sits idle, that production simply does not happen.
+[Throughput Accounting](/approach/theory-of-constraints#throughput-accounting), a framework developed by the physicist Eli Goldratt as an alternative to traditional cost accounting, asks a different question: what does this room produce when it runs? Revenue minus the costs that are only incurred because a specific patient is on the table. Everything else, the salaries, the overhead, the building, is already spent whether the room runs or not. When the room sits idle, that production simply does not happen.
 
 Financial accounting tells you what idle time costs. Throughput Accounting tells you what idle time fails to produce. Both are correct. But when it comes to evaluating operational investments, only one of them measures the actual economic stakes.
 

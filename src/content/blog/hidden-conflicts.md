@@ -26,7 +26,7 @@ Recently, I had the opportunity to demonstrate this using a real hospital's Fina
 
 ## The Method: Theory of Constraints Thinking
 
-Theory of Constraints (TOC), developed by Eli Goldratt, provides powerful tools for identifying and resolving conflicts. The core tool is the Evaporating Cloud--a diagram that maps out dilemmas by showing:
+[Theory of Constraints](/approach/theory-of-constraints) (TOC), developed by Eli Goldratt, provides powerful tools for identifying and resolving conflicts. The core tool is the Evaporating Cloud--a diagram that maps out dilemmas by showing:
 
 - **(A)** A common objective both parties share
 - **(B)** and **(C)** Two legitimate needs required to achieve that objective

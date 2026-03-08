@@ -47,7 +47,7 @@ Post-mortems usually blame execution. "We didn't have enough engineers." "The pr
 
 This is rarely true. In my experience, the engineers usually build exactly what they are asked to build. The failure isn't in the hands; it's in the head.
 
-The failure was a refusal to acknowledge the **Theory of Constraints**.
+The failure was a refusal to acknowledge the **[Theory of Constraints](/approach/theory-of-constraints)**.
 
 In any complex system—whether it's a circuit board, a software stack, or a hospital—there is always _one_ constraint that limits the system's performance relative to its goal. Just one.
 

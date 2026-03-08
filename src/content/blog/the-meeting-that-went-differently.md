@@ -74,7 +74,7 @@ Sam: "Please do, Ms. Fleming."
 
 Commissioner Tanaka, the engineer on the board, is the one who cuts through the procedural debate near the end. Commissioner Marsh has raised the legitimate concern that a six-week analysis will delay capital planning already in motion. Tanaka's response is brief: "Sam is not asking us to stop. He is asking us to also look. Those are different things."
 
-The board votes seven to zero to commission a parallel constraint analysis. All existing capital planning activities continue on their current schedule. Sam will be an analytical participant in the working group — not as a courtesy, either.
+The board votes seven to zero to commission a parallel [constraint analysis](/approach/theory-of-constraints). All existing capital planning activities continue on their current schedule. Sam will be an analytical participant in the working group — not as a courtesy, either.
 
 ## The fiction and the fact
 

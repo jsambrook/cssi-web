@@ -32,7 +32,7 @@ That is exactly what happened here. The device's embedded firmware was controlle
 
 The symptoms were familiar. Lab sessions taking longer than they should, because setup time rivaled test time. Integration meetings spending half their agenda clarifying command behavior. Engineers waiting for bench time or for someone to walk them through an interface that was not documented.
 
-In Theory of Constraints terms, the communication interface had become the constraint. Everything downstream of it -- testing, integration, verification, documentation -- was limited by the rate at which people could interact with the device. The team had plenty of talent and plenty of motivation. What it needed was a way to make the device accessible to everyone, without depending on the availability of the few people who knew the serial interface by heart.
+In [Theory of Constraints](/approach/theory-of-constraints) terms, the communication interface had become the constraint. Everything downstream of it -- testing, integration, verification, documentation -- was limited by the rate at which people could interact with the device. The team had plenty of talent and plenty of motivation. What it needed was a way to make the device accessible to everyone, without depending on the availability of the few people who knew the serial interface by heart.
 
 ## What I Did
 

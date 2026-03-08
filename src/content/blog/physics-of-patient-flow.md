@@ -32,7 +32,7 @@ Our healthcare system is designed to _wait_ for this crisis. We treat post-acute
 
 We wait until a patient is sick, hospitalized, and under stress. Then, we ask them and their equally stressed family to make complex logistical, financial, and deeply emotional decisions on an impossibly tight deadline.
 
-This is a **system design failure**. It's a trap that benefits no one.
+This is a **system design failure**. In [Theory of Constraints terms](/approach/theory-of-constraints), the system is wasting its constraint — forcing the most time-critical decision into the worst possible conditions. It's a trap that benefits no one.
 
 Even when a patient _has_ expressed their wishes, our systems often fail them. Those preferences--perhaps discussed years ago with their doctor--are typically scanned into the EHR as a PDF. In the rush of a discharge, that document is "dead data." It's unfindable, unsearchable, and operationally useless.
 

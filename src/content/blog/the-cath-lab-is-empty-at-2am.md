@@ -86,7 +86,7 @@ I think this explains something that has puzzled me for years. I work with good 
 
 ## An Honest Question
 
-I am a systems consultant. I have spent thirty years working on problems like this, in medical devices, in embedded systems, in healthcare operations. I learned the Theory of Constraints from Eli Goldratt's conferences and his published works. That training gave me a way of seeing systems that I have never been able to unsee.
+I am a systems consultant. I have spent thirty years working on problems like this, in medical devices, in embedded systems, in healthcare operations. I learned the [Theory of Constraints](/approach/theory-of-constraints) from Eli Goldratt's conferences and his published works. That training gave me a way of seeing systems that I have never been able to unsee.
 
 But I am also aware that I could be wrong about this. One of Eli's final recommendations was to "Never say 'I know.'" So I don't. I am one person sitting in a meeting, watching a pattern, and trying to make sense of it.
 

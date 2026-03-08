@@ -96,7 +96,7 @@ The discipline is to find the constraint first, then improve only at the constra
 
 ## Going Deeper
 
-The idea behind this article comes from the Theory of Constraints, developed by Eli Goldratt. His book [_The Goal_](<https://en.wikipedia.org/wiki/The_Goal_(novel)>) tells the story through a manufacturing plant, but the thinking applies to any business. It is a novel, not a textbook, and it is a fast read.
+The idea behind this article comes from the [Theory of Constraints](/approach/theory-of-constraints), developed by Eli Goldratt. His book [_The Goal_](<https://en.wikipedia.org/wiki/The_Goal_(novel)>) tells the story through a manufacturing plant, but the thinking applies to any business. It is a novel, not a textbook, and it is a fast read.
 
 For a more detailed look at how this thinking integrates with other improvement methods (including Lean, which you may have encountered in a different context), see our [reference page on TOC and Lean integration](/approach/toc-lean-integration).
 

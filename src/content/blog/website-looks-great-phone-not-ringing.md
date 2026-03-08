@@ -116,7 +116,7 @@ The website is just the most visible surface where the offer problem shows up. F
 
 ## Going Deeper
 
-The idea behind this, building an offer so compelling that a customer would feel foolish saying no, comes from a concept Eli Goldratt called the "mafia offer." Not because it involves coercion, but because it is an offer so clearly aligned with the customer's real problem that refusing it would be irrational. The term is playful, but the method is rigorous: identify the customer's core frustration, find the hidden conflict that the industry has accepted as normal, and design a solution that resolves it.
+The idea behind this, building an offer so compelling that a customer would feel foolish saying no, comes from a concept Eli Goldratt called the "mafia offer" in his [Theory of Constraints](/approach/theory-of-constraints) methodology. Not because it involves coercion, but because it is an offer so clearly aligned with the customer's real problem that refusing it would be irrational. The term is playful, but the method is rigorous: identify the customer's core frustration, find the hidden conflict that the industry has accepted as normal, and design a solution that resolves it.
 
 At Common Sense Systems, we have built a structured process for helping businesses develop this kind of offer. It starts with understanding what your best clients actually value (which is rarely what your website currently says) and works through to an offer statement and a website that reflects it. If David's situation sounds familiar and you want to explore what a stronger offer looks like for your business, reach me at [john@common-sense.com](mailto:john@common-sense.com).
 
