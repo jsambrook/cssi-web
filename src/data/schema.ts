@@ -126,15 +126,60 @@ const founderCredentials = [
   {
     '@type': 'EducationalOccupationalCredential',
     name: 'TOC Jonah (Thinking Processes Implementer)',
+    educationalLevel: 'Graduate',
     recognizedBy: {
       '@type': 'Organization',
       name: 'TOCICO',
       url: 'https://www.tocico.org/',
     },
     about: {
-      '@type': 'DefinedTerm',
-      name: 'TOC Thinking Processes',
-      url: 'https://www.tocico.org/page/Jonah',
+      '@type': 'Course',
+      name: 'EM-526 — Theory of Constraints',
+      provider: {
+        '@type': 'CollegeOrUniversity',
+        name: 'Washington State University',
+        url: 'https://wsu.edu/',
+      },
+      instructor: {
+        '@type': 'Person',
+        name: 'Dr. James Holt',
+      },
+    },
+  },
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'TOC Fundamentals Certified (TOCFC)',
+    credentialCategory: 'Fundamentals',
+    dateIssued: '2005-10-22',
+    url: 'https://certification.tocico.org/c/471100d8a1bd4f7db67f460e44efbfd8',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
+    },
+  },
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Thinking Processes Practitioner (TOCPC)',
+    credentialCategory: 'Practitioner',
+    dateIssued: '2006-02-11',
+    url: 'https://certification.tocico.org/c/478880575b5f4b23add2965c17744b00',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
+    },
+  },
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Critical Chain Project Management Practitioner (TOCPC)',
+    credentialCategory: 'Practitioner',
+    dateIssued: '2006-11-08',
+    url: 'https://certification.tocico.org/c/3278f3d6305d4fc4b9fc6a06f4d79723',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
     },
   },
 ];

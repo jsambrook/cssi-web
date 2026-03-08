@@ -11,12 +11,16 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import Section from '../../../components/Section.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../../../data/pageDefaults';
-import { buildBreadcrumbSchema, buildWebPageSchema } from '../../../data/schema';
+import {
+  buildBreadcrumbSchema,
+  buildFounderSchema,
+  buildWebPageSchema,
+} from '../../../data/schema';
 import { siteConfig } from '../../../data/site';
 
-const title = 'Theory of Constraints: A Practical Guide';
+const title = 'Theory of Constraints: Method, Tools, and Real-World Examples';
 const description =
-  'How TOC identifies the one constraint limiting your system and resolves it. The method, the thinking tools, and how we apply them.';
+  "A practitioner's guide to TOC by a Goldratt-trained, TOCICO-certified consultant. The Five Focusing Steps, Evaporating Cloud, Current Reality Tree, and throughput thinking explained with real case studies across healthcare, manufacturing, and small business.";
 
 const pageUrl = `${siteConfig.siteUrl}/approach/theory-of-constraints`;
 
@@ -30,6 +34,8 @@ const webPage = buildWebPageSchema({
   name: title,
   description,
   url: pageUrl,
+  datePublished: '2026-03-08',
+  dateModified: '2026-03-08',
   hasBreadcrumb: true,
   about: [
     'Theory of Constraints',
@@ -37,7 +43,7 @@ const webPage = buildWebPageSchema({
     'Evaporating Cloud',
     'Current Reality Tree',
     'Future Reality Tree',
-    'Critical Chain Project Management',
+    'Lean manufacturing',
   ],
 });
 ---
@@ -46,7 +52,7 @@ const webPage = buildWebPageSchema({
   title={getPageTitle(title)}
   description={description}
   ogType="website"
-  jsonLd={[webPage, breadcrumb]}
+  jsonLd={[webPage, breadcrumb, buildFounderSchema()]}
 >
   <Header slot="header" {...headerDefaults} currentPath="/approach/theory-of-constraints" />
 
@@ -76,9 +82,13 @@ const webPage = buildWebPageSchema({
           it, and change the right thing. Not everything. The right thing.
         </p>
         <p>
-          He called this the Theory of Constraints. I was trained in it directly by Goldratt and his
-          team, and I have been applying it for over twenty-five years. It is the foundation of
-          everything we do at Common Sense Systems.
+          He called this the Theory of Constraints. I learned TOC over years of study: a graduate
+          program at Washington State University taught by Dr. James Holt, Goldratt Group workshops
+          and Satellite Programs, and nearly every TOC conference where Eli Goldratt spoke in the
+          United States and abroad. I hold TOCICO certifications in TOC Fundamentals, Thinking
+          Processes, and Critical Chain Project Management, earned in 2005 and 2006. I have been
+          applying TOC for thirty years across healthcare, manufacturing, technology, and small
+          business. It is the foundation of everything we do at Common Sense Systems.
         </p>
         <p>
           This page is a reference. It explains the core idea, the main tools, and how I use them in
