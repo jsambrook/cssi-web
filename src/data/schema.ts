@@ -125,8 +125,10 @@ const founderKnowsAbout = [
 const founderCredentials = [
   {
     '@type': 'EducationalOccupationalCredential',
-    name: 'TOC Jonah (Thinking Processes Implementer)',
-    educationalLevel: 'Graduate',
+    name: 'TOC Strategic Thinking Process Program "Jonah"',
+    credentialCategory: 'Jonah',
+    dateIssued: '2026-03-09',
+    url: 'https://certification.tocico.org/c/af19a4409f7c4932a4a001d1e502da74',
     recognizedBy: {
       '@type': 'Organization',
       name: 'TOCICO',
