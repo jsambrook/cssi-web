@@ -55,6 +55,13 @@ export const credentials: Credential[] = [
     dateEarned: 'November 8, 2006',
     verifyUrl: 'https://certification.tocico.org/c/3278f3d6305d4fc4b9fc6a06f4d79723',
   },
+  {
+    name: 'TOC Strategic Thinking Process Program "Jonah"',
+    description:
+      'Completion of the Jonah program — the flagship TOC education in strategic thinking, constraint identification, and the full suite of Thinking Process tools for driving organizational change.',
+    dateEarned: 'March 9, 2026',
+    verifyUrl: 'https://certification.tocico.org/c/af19a4409f7c4932a4a001d1e502da74',
+  },
 ];
 
 export const cta: CTAContent = {
