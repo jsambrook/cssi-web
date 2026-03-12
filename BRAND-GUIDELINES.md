@@ -235,7 +235,7 @@ Healthcare, AI, Strategy, Leadership, Operations, Theory of Constraints, Decisio
 
 ### Frontmatter
 
-Every blog post requires: `title`, `description`, `metaTitle`, `metaDescription`, `date`, `author`, `tags`. No other fields should be added without discussion. Drafts get `draft: true`. Published posts should not include the `draft` field.
+Every blog post requires: `title`, `description`, `metaTitle`, `metaDescription`, `date`, `author`, `tags`. No other fields should be added without discussion. Drafts get `draft: true`. Published posts should not include the `draft` field. The `date` field should be set to today's date unless otherwise specified — future dates may prevent the post from appearing in the build.
 
 **`updatedDate`:** When a published post receives a meaningful content change — new sections, revised arguments, added TL;DR summaries, updated data — add or update `updatedDate` in the frontmatter with the date of the change. The build uses this for `dateModified` in JSON-LD structured data and `modifiedTime` in Open Graph tags, both of which signal freshness to search engines and AI systems. Do not bump `updatedDate` for typo fixes, formatting tweaks, or metadata-only changes.
 
