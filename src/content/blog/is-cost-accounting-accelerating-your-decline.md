@@ -15,7 +15,7 @@ When a critical access hospital cuts a service line because it "loses money," th
 
 ---
 
-<img src="/images/content/cost-accounting-two-frameworks.webp" alt="A rural hospital balance sheet with two columns showing the same service line decision producing opposite conclusions depending on how costs are allocated" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/cost-accounting-two-frameworks.webp" alt="A rural hospital balance sheet with two columns showing the same service line decision producing opposite conclusions depending on how costs are allocated" width="1424" height="752" loading="lazy" decoding="async" />
 
 Washington State has a critical access hospital problem. Several CAHs are in financial distress, some facing closure. The conversations around this crisis tend to focus on declining volumes, deteriorating payer mix, and rising costs. Those are real pressures. I am not questioning them.
 
