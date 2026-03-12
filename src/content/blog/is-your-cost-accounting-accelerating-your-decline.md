@@ -3,7 +3,7 @@ title: 'Is Your Cost Accounting Accelerating Your Decline?'
 description: 'A question for CFOs at Washington State critical access hospitals: could standard cost allocation be distorting your service line decisions at exactly the wrong time?'
 metaTitle: 'Is Your Cost Accounting Accelerating Decline? | Common Sense Systems'
 metaDescription: 'Standard cost allocation may be distorting service line decisions at critical access hospitals. A worked example shows how the same cut looks different.'
-date: 2026-03-12
+date: 2026-03-11
 author: 'John Sambrook'
 tags: ['Healthcare', 'Strategy', 'Operations', 'Decision-Making']
 imageAlt: 'A rural hospital balance sheet with two columns showing the same service line decision producing opposite conclusions depending on how costs are allocated'
