@@ -7,7 +7,6 @@ date: 2026-03-13
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Strategy', 'Operations', 'Decision-Making']
 imageAlt: 'A diagram showing the cycle of cost allocation, apparent losses, service cuts, overhead redistribution, and new revenue measures in a public institution budget'
-draft: true
 ---
 
 ## TL;DR
@@ -15,6 +14,10 @@ draft: true
 King County's own budget documents reveal a textbook cost-allocation trap: massive fixed overhead gets spread across service lines, making some look like losers. Cutting the "losers" does not remove the overhead. New taxes close the gap. The cycle repeats. Nobody is doing this wrong. The accounting methodology itself produces this outcome.
 
 ---
+
+<img src="/images/content/budget-trap-cost-allocation-cycle.webp" alt="A diagram showing the cycle of cost allocation, apparent losses, service cuts, overhead redistribution, and new revenue measures in a public institution budget" width="1392" height="768" loading="lazy" decoding="async" />
+
+<img src="/images/content/budget-trap-two-measuring-sticks.webp" alt="Infographic comparing two ways to measure a public service line: the standard cost world allocates overhead and cuts apparent losers, creating a decline spiral, while the TOC throughput world measures contribution per unit of constraint, keeping high-contributors and strengthening the system — same data, different measuring stick, opposite conclusions" width="1392" height="768" loading="lazy" decoding="async" />
 
 I have been writing about how [standard cost accounting distorts service line decisions](/insights/is-cost-accounting-accelerating-your-decline/) in healthcare. The response surprised me. Several people asked: does this same dynamic show up in local government?
 
