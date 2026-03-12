@@ -4,7 +4,7 @@ description: "Why an outsider's perspective is a healthcare system architect's g
 metaTitle: 'Architecting Hospital Care'
 metaDescription: 'An outsider healthcare systems architect explains how embedded systems experience, TOC thinking, and AI reveal practical fixes for hospital operations.'
 date: 2025-08-09
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Architecture']
 imageAlt: 'Healthcare system architecture blueprint viewed through a systems engineer and outsider perspective'
@@ -15,8 +15,6 @@ imageAlt: 'Healthcare system architecture blueprint viewed through a systems eng
 I spent decades building medical devices -- defibrillators, ultrasound systems -- and studying Theory of Constraints under Goldratt. That background is not a liability in healthcare consulting. The outsider's lens, trained on embedded systems where 1% failure is catastrophic, sees structural problems that insiders have been conditioned to accept.
 
 ---
-
-A deep dive into designing effective hospital systems.
 
 ### Architecting Healthcare from the Outside In: Why I Call Myself a Healthcare System Architect
 
@@ -91,3 +89,11 @@ So, why do I call myself a healthcare system architect?
 Because an architect's job is to design the blueprint. They have to understand the materials (technology, AI), the physics (process, flow, TOC), and the needs of the inhabitants (patients and providers).
 
 My value isn't in knowing how things _have been_ done. It's in bringing the tools to design how things _could be_ done---and helping the brilliant people already inside the system build it.
+
+## Sources
+
+- [Theory of Constraints in healthcare: systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/)
+- [Lean in healthcare: systematic review (BMJ Open)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4833201/)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)
+- [INCOSE Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)
+- [Little's Law](https://en.wikipedia.org/wiki/Little%27s_law)

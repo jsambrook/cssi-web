@@ -6,7 +6,7 @@
  * Static pages: most recent git commit touching the page's source files.
  */
 import { execSync } from 'node:child_process';
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, basename } from 'node:path';
 import { manualInsights } from '../data/manualInsights';
@@ -42,6 +42,10 @@ const STATIC_PAGES: [string, string[]][] = [
   ['/approach', ['src/pages/approach.astro', 'src/data/pages/approach.ts']],
   ['/contact', ['src/pages/contact.astro', 'src/data/pages/contact.ts']],
   ['/insights', ['src/pages/insights.astro', 'src/data/pages/insights.ts']],
+  ['/research', ['src/pages/research.astro', 'src/data/pages/research.ts']],
+  ['/research/pacp-concept-paper', ['src/pages/research/pacp-concept-paper.astro']],
+  ['/research/burnout-systems-thinking', ['src/pages/research/burnout-systems-thinking.astro']],
+  ['/research/surfing-ai-tidal-wave', ['src/pages/research/surfing-ai-tidal-wave.astro']],
   [
     '/industries/healthcare',
     ['src/pages/industries/healthcare.astro', 'src/data/pages/industries.ts'],
@@ -50,6 +54,8 @@ const STATIC_PAGES: [string, string[]][] = [
   ['/legal/privacy', ['src/pages/legal/privacy.astro', 'src/data/pages/privacy.ts']],
   ['/legal/terms', ['src/pages/legal/terms.astro', 'src/data/pages/terms.ts']],
   ['/legal/sms-consent', ['src/pages/legal/sms-consent.astro']],
+  ['/approach/theory-of-constraints', ['src/pages/approach/theory-of-constraints/index.astro']],
+  ['/approach/toc-lean-integration', ['src/pages/approach/toc-lean-integration/index.astro']],
 ];
 
 /** Get the most recent git commit date (YYYY-MM-DD) touching any of the given files. */
@@ -67,6 +73,10 @@ function gitLastmod(files: string[]): string | undefined {
   return undefined;
 }
 
+function toIsoDate(d: Date): string {
+  return d.toISOString().split('T')[0];
+}
+
 /** Build a map from URL path (no trailing slash) to YYYY-MM-DD lastmod string. */
 function buildLastmodMap(): Map<string, string> {
   const map = new Map<string, string>();
@@ -78,12 +88,17 @@ function buildLastmodMap(): Map<string, string> {
     const { date, updatedDate } = parseFrontmatterDates(raw);
     const best = updatedDate ?? date;
     if (best) {
-      map.set(`/insights/${slug}`, best.toISOString().split('T')[0]);
+      map.set(`/insights/${slug}`, toIsoDate(best));
     }
   }
 
   for (const insight of manualInsights) {
-    map.set(`/insights/${insight.slug}`, insight.date.toISOString().split('T')[0]);
+    const insightPagePath = `src/pages/insights/${insight.slug}.astro`;
+    const gitDerivedLastmod = existsSync(join(PROJECT_ROOT, insightPagePath))
+      ? gitLastmod([insightPagePath])
+      : undefined;
+    const fallbackDate = insight.updatedDate ?? insight.date;
+    map.set(`/insights/${insight.slug}`, gitDerivedLastmod ?? toIsoDate(fallbackDate));
   }
 
   // Static pages — date from git history.

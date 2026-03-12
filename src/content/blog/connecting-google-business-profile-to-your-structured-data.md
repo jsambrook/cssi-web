@@ -4,7 +4,7 @@ description: 'How connecting your Google Business Profile to your website struct
 metaTitle: 'Connect Google Business Profile to Structured Data'
 metaDescription: 'Step-by-step account of linking Google Business Profile to JSON-LD structured data for better visibility in both AI search and traditional Google results.'
 date: 2026-02-25
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business']
 imageAlt: 'Structured data connecting a Google Business Profile to a website schema graph for search visibility'
@@ -18,7 +18,7 @@ Your Google Business Profile is one of the strongest verification signals Google
 
 Most small business websites and their Google Business Profiles exist as unconnected islands. By linking them through structured data -- adding your profile to the `sameAs` array, matching your address exactly, and building an entity graph with `@id` references -- you give both AI search engines and traditional Google the corroboration they need to confidently identify and recommend your business.
 
-<img src="/images/content/connect-website-to-your-gbp.png" alt="Infographic showing the 6-step process for connecting your Google Business Profile to your website structured data: find your CID, add GBP link to footer, add GBP URL to sameAs in JSON-LD, add geo coordinates and hasMap, match address exactly for NAP consistency, and add profile URL to llms.txt" width="2816" height="1536" loading="lazy" decoding="async" />
+<img src="/images/content/connect-website-to-your-gbp.webp" alt="Infographic showing the 6-step process for connecting your Google Business Profile to your website structured data: find your CID, add GBP link to footer, add GBP URL to sameAs in JSON-LD, add geo coordinates and hasMap, match address exactly for NAP consistency, and add profile URL to llms.txt" width="2816" height="1536" loading="lazy" decoding="async" />
 
 Last week I ran a GEO audit on my business website. GEO stands for Generative Engine Optimization -- it's the emerging discipline of making your site legible to AI search engines like ChatGPT, Perplexity, and Google's AI Overviews. The audit turned up a problem I hadn't thought about: my Google Business Profile existed, and my website existed, but nothing connected the two. They were floating independently, like two documents in different filing cabinets that happened to describe the same company.
 
@@ -62,7 +62,7 @@ This is where JSON-LD comes in. My website already had an Organization schema bl
   "url": "https://common-sense.com",
   "sameAs": [
     "https://www.linkedin.com/company/common-sense-systems",
-    "https://x.com/SenseSyste86813",
+    "https://x.com/CommonSenseTOC",
     "https://www.youtube.com/@commonsensesystemsinc.7658",
     "https://www.bbb.org/us/wa/bothell/profile/..."
   ]
@@ -181,3 +181,11 @@ The total time for the steps above was about two hours, including the CID resear
 ---
 
 If you're running a small business and want to check whether your Google Business Profile is actually connected to your website in a way that machines can read, I'm happy to take a look. Send me your URL and I'll tell you what I find. You can reach me at [common-sense.com/contact](https://common-sense.com/contact).
+
+## Sources
+
+- [en.wikipedia.org/wiki/Entity_linking](https://en.wikipedia.org/wiki/Entity_linking)
+- [schema.org/](https://schema.org/)
+- [json-ld.org/](https://json-ld.org/)
+- [developers.google.com/search/docs/appearance/structured-data/intro-structured-data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+- [linkedin.com/company/common-sense-systems](https://www.linkedin.com/company/common-sense-systems)

@@ -4,7 +4,7 @@ description: 'Why small, measurable releases outperform big-bang delivery.'
 metaTitle: 'Short Cycles, Real Outcomes'
 metaDescription: 'Why small, measurable releases outperform big-bang delivery.'
 date: 2025-12-20
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Delivery', 'Agile', 'Outcomes']
 imageAlt: 'Short delivery cycle diagram compared to a long waterfall timeline showing continuous feedback loop benefits'
@@ -46,3 +46,9 @@ That visibility is the point. Problems you see early are problems you can fix. P
 Pick one initiative. Define a two-week outcome. Execute. Review. Adjust. Repeat.
 
 You don't need a framework or a methodology. You need the discipline to ship something real every two weeks and the honesty to evaluate whether it mattered.
+
+## Sources
+
+- [Manifesto for Agile Software Development](https://agilemanifesto.org/)
+- [DORA research](https://dora.dev/research/)
+- [Critical Chain project management](https://en.wikipedia.org/wiki/Critical_chain_project_management)

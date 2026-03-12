@@ -82,19 +82,6 @@ export interface AmbitionCard {
   scrollTarget: string;
 }
 
-export type Industry = 'healthcare' | 'tech';
-
-export interface IndustryVariant {
-  title: string;
-  description: string;
-}
-
-export interface ServiceCardItem {
-  id: string;
-  color?: ColorVariant;
-  variants: Record<Industry, IndustryVariant>;
-}
-
 export interface Testimonial {
   quote: string;
   name: string;
@@ -107,8 +94,26 @@ export interface ManualInsight {
   title: string;
   description: string;
   date: Date;
+  updatedDate?: Date;
   author: string;
   tags: string[];
   ogImage?: string;
   imageAlt?: string;
+}
+
+export interface Credential {
+  name: string;
+  description: string;
+  dateEarned: string;
+  verifyUrl: string;
+}
+
+export interface ServiceOffer {
+  id: string;
+  title: string;
+  problem: string;
+  what: string;
+  deliverable: string;
+  timeline: string;
+  fee: string;
 }

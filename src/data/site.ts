@@ -3,27 +3,28 @@ export const siteConfig = {
   tagline: 'Leading with value since 1996',
   siteUrl: 'https://common-sense.com',
   defaultDescription:
-    "Break bottlenecks and accelerate throughput in Healthcare, MedTech, and Embedded Systems. We design 'Mafia Offers' and operational interventions for ambitious leaders. Based in Kirkland, WA.",
+    'Constraint analysis and offer strategy with a satisfaction guarantee. Fixed fee, fixed timeline. Based in Kirkland, WA.',
   defaultOgImage: '/images/og-default.png',
-  headerCta: { text: 'Book a Consultation', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
+  headerCta: { text: 'Book a Conversation', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
   footerContactHeading: 'Contact Us',
   footerTagline:
-    'Operational architecture and constraint analysis for complex systems. Serving Healthcare, MedTech, and Embedded Software leaders in the Pacific Northwest since 1996.',
+    'Constraint analysis and offer strategy for organizations that are ready to stop guessing and start moving. Kirkland, WA. Since 1996.',
   font: {
     family: 'Instrument Sans',
     googleFontsUrl:
       'https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
   },
-  xHandle: '@SenseSyste86813',
-  xProfileUrl: 'https://x.com/SenseSyste86813',
+  xHandle: '@CommonSenseTOC',
+  xProfileUrl: 'https://x.com/CommonSenseTOC',
   youtubeUrl: 'https://www.youtube.com/@commonsensesystemsinc.7658',
 };
 
 export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Approach', href: '/approach' },
-  { label: 'Results', href: '/#impact' },
+  { label: 'Services', href: '/#services' },
   { label: 'Insights', href: '/insights' },
+  { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -36,6 +37,7 @@ export const footerColumns = [
       { label: 'Approach', href: '/approach' },
       { label: 'Theory of Constraints', href: '/approach/theory-of-constraints' },
       { label: 'Insights', href: '/insights' },
+      { label: 'Research', href: '/research' },
       { label: 'Contact', href: '/contact' },
       { label: 'SMS Consent', href: '/legal/sms-consent' },
       {
@@ -60,8 +62,10 @@ export const footerColumns = [
       { label: 'Voice Agents', href: '/insights/tag/voice-agents' },
       { label: 'Strategy', href: '/insights/tag/strategy' },
       { label: 'Leadership', href: '/insights/tag/leadership' },
+      { label: 'Small Business', href: '/insights/tag/small-business' },
       { label: 'Operations', href: '/insights/tag/operations' },
       { label: 'Decision-Making', href: '/insights/tag/decision-making' },
+      { label: 'Theory of Constraints', href: '/insights/tag/theory-of-constraints' },
     ],
   },
 ];

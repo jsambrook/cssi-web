@@ -4,7 +4,7 @@ description: "Why 'FTE Headcount' is a vanity metric that hides the real constra
 metaTitle: 'Stop Hiring Your Way Out of a Process Problem'
 metaDescription: "Healthcare leaders obsess over FTE counts while ignoring the 'Capacity Leaks' that consume 30% of their workforce."
 date: 2026-02-17
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Workforce', 'Strategy', 'Theory of Constraints']
 imageAlt: 'Hospital capacity leak diagram showing how process waste consumes nursing minutes and defeats hiring campaigns'
@@ -61,3 +61,11 @@ Stop asking HR "How many nurses can we hire?"
 Start asking Operations "How many nursing minutes are we wasting?"
 
 The organizations that win the talent war won't be the ones with the biggest bonuses. They will be the ones that design a system where nurses get to be nurses, not data entry clerks.
+
+## Sources
+
+- [Nurse staffing and patient outcomes: longitudinal systematic review](https://pubmed.ncbi.nlm.nih.gov/35780608/)
+- [Nurse staffing and nurse outcomes: systematic review/meta-analysis](https://pubmed.ncbi.nlm.nih.gov/29685321/)
+- [Nurse staffing in LMIC acute care: systematic review](https://pubmed.ncbi.nlm.nih.gov/32881732/)
+- [The Future of Nursing 2020-2030](https://www.ncbi.nlm.nih.gov/books/NBK573902/)
+- [CMS National Health Expenditure Data](https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data)

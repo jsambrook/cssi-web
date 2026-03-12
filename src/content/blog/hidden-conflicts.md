@@ -4,7 +4,7 @@ description: 'Give me any healthcare policy document and I will show you embedde
 metaTitle: 'Hidden Conflicts in Healthcare'
 metaDescription: 'A Theory of Constraints analysis of a hospital financial assistance policy reveals three structural conflicts and practical paths to resolution.'
 date: 2025-08-31
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Leadership', 'Strategy']
 imageAlt: 'Evaporating Cloud diagram revealing hidden structural conflicts inside a hospital financial assistance policy'
@@ -26,7 +26,7 @@ Recently, I had the opportunity to demonstrate this using a real hospital's Fina
 
 ## The Method: Theory of Constraints Thinking
 
-Theory of Constraints (TOC), developed by Eli Goldratt, provides powerful tools for identifying and resolving conflicts. The core tool is the Evaporating Cloud--a diagram that maps out dilemmas by showing:
+[Theory of Constraints](/approach/theory-of-constraints) (TOC), developed by Eli Goldratt, provides powerful tools for identifying and resolving conflicts. The core tool is the Evaporating Cloud--a diagram that maps out dilemmas by showing:
 
 - **(A)** A common objective both parties share
 - **(B)** and **(C)** Two legitimate needs required to achieve that objective
@@ -199,3 +199,11 @@ Give me any healthcare policy document, and I'll show you the conflicts. More im
 ---
 
 **John Sambrook** is the founder of Common Sense Systems, a healthcare systems architecture consulting firm that helps hospital leadership identify and resolve hidden conflicts perpetuating systemic problems. With 30+ years of experience and personal mentorship from Eli Goldratt, he applies Theory of Constraints methodology to healthcare operational challenges.
+
+## Sources
+
+- [IRS: New requirements for 501(c)(3) hospitals under the ACA](https://www.irs.gov/charities-non-profits/charitable-organizations/new-requirements-for-501c3-hospitals-under-the-affordable-care-act)
+- [eCFR 26 CFR 1.501(r)-4 (Financial assistance policy)](<https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFR6cf246f7578f5eb/section-1.501(r)-4>)
+- [eCFR 26 CFR 1.501(r)-6 (Billing and collection requirements)](<https://www.ecfr.gov/current/title-26/chapter-I/subchapter-A/part-1/subject-group-ECFR6cf246f7578f5eb/section-1.501(r)-6>)
+- [Theory of Constraints (overview)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)

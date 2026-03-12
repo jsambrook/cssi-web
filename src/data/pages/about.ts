@@ -1,4 +1,4 @@
-import type { PageHeader, ContentBlock, CTAContent } from '../types';
+import type { PageHeader, ContentBlock, CTAContent, Credential } from '../types';
 
 export const pageTitle = 'About John Sambrook';
 export const pageDescription =
@@ -30,6 +30,37 @@ export const content: ContentBlock[] = [
   },
   {
     text: 'Common Sense Systems primarily serves organizations in Washington State, with additional work across the Pacific Northwest. Engagements range from focused constraint analyses and process automation projects to ongoing advisory relationships. Most run two to six weeks with fixed fees and explicit deliverables.',
+  },
+];
+
+export const credentials: Credential[] = [
+  {
+    name: 'TOC Fundamentals Certified (TOCFC)',
+    description:
+      'Mastery of the core TOC body of knowledge: the Five Focusing Steps, throughput accounting, and constraint identification.',
+    dateEarned: 'October 22, 2005',
+    verifyUrl: 'https://certification.tocico.org/c/471100d8a1bd4f7db67f460e44efbfd8',
+  },
+  {
+    name: 'Thinking Processes Practitioner (TOCPC)',
+    description:
+      'Practitioner-level proficiency in the TOC logical tools: Evaporating Cloud, Current Reality Tree, Future Reality Tree, and Prerequisite/Transition Trees.',
+    dateEarned: 'February 11, 2006',
+    verifyUrl: 'https://certification.tocico.org/c/478880575b5f4b23add2965c17744b00',
+  },
+  {
+    name: 'Critical Chain Project Management Practitioner (TOCPC)',
+    description:
+      'Practitioner-level proficiency in Critical Chain scheduling, buffer management, and multi-project resource contention.',
+    dateEarned: 'November 8, 2006',
+    verifyUrl: 'https://certification.tocico.org/c/3278f3d6305d4fc4b9fc6a06f4d79723',
+  },
+  {
+    name: 'TOC Strategic Thinking Process Program "Jonah"',
+    description:
+      'Completion of the Jonah program — the flagship TOC education in strategic thinking, constraint identification, and the full suite of Thinking Process tools for driving organizational change.',
+    dateEarned: 'March 9, 2026',
+    verifyUrl: 'https://certification.tocico.org/c/af19a4409f7c4932a4a001d1e502da74',
   },
 ];
 

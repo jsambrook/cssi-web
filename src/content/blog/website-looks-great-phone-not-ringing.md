@@ -4,6 +4,7 @@ description: 'You invested in a professional website. It gets traffic. It looks 
 metaTitle: 'Your Website Looks Great - Why No Calls? | Common Sense Systems'
 metaDescription: 'Your website gets traffic but no calls. The problem is not design or SEO. Your site says the same thing as every competitor. Here is how to fix that.'
 date: 2026-03-04
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Small Business', 'Strategy', 'Operations']
 imageAlt: 'Professional service website on a laptop screen with a silent phone beside it'
@@ -15,7 +16,7 @@ If your website gets traffic but does not generate calls, the problem is almost 
 
 ---
 
-<img src="/images/content/website-generic-to-real-offer.jpg" alt="Infographic showing how three identical attorney websites become indistinguishable to visitors, and the three-step fix: start with the client's situation, name what you do differently, let the website reflect the offer" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/website-generic-to-real-offer.webp" alt="Infographic showing how three identical attorney websites become indistinguishable to visitors, and the three-step fix: start with the client's situation, name what you do differently, let the website reflect the offer" width="1408" height="768" loading="lazy" decoding="async" />
 
 David is an attorney. He left a mid-size firm two years ago to start his own practice, focusing on business law for small companies. He is good at what he does. His clients like him. The ones who find him tend to stay.
 
@@ -115,6 +116,14 @@ The website is just the most visible surface where the offer problem shows up. F
 
 ## Going Deeper
 
-The idea behind this, building an offer so compelling that a customer would feel foolish saying no, comes from a concept Eli Goldratt called the "mafia offer." Not because it involves coercion, but because it is an offer so clearly aligned with the customer's real problem that refusing it would be irrational. The term is playful, but the method is rigorous: identify the customer's core frustration, find the hidden conflict that the industry has accepted as normal, and design a solution that resolves it.
+The idea behind this, building an offer so compelling that a customer would feel foolish saying no, comes from a concept Eli Goldratt called the "mafia offer" in his [Theory of Constraints](/approach/theory-of-constraints) methodology. Not because it involves coercion, but because it is an offer so clearly aligned with the customer's real problem that refusing it would be irrational. The term is playful, but the method is rigorous: identify the customer's core frustration, find the hidden conflict that the industry has accepted as normal, and design a solution that resolves it.
 
 At Common Sense Systems, we have built a structured process for helping businesses develop this kind of offer. It starts with understanding what your best clients actually value (which is rarely what your website currently says) and works through to an offer statement and a website that reflects it. If David's situation sounds familiar and you want to explore what a stronger offer looks like for your business, reach me at [john@common-sense.com](mailto:john@common-sense.com).
+
+## Sources
+
+- [en.wikipedia.org/wiki/Generative_engine_optimization](https://en.wikipedia.org/wiki/Generative_engine_optimization)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

@@ -4,7 +4,7 @@ description: "A small business owner's account of automating tax preparation wit
 metaTitle: 'Doing My Taxes with Claude Code and Codex'
 metaDescription: "A small business owner's account of automating tax preparation with AI coding agents, and what it suggests about the near future of knowledge work."
 date: 2026-02-15
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business']
 imageAlt: 'AI coding agents processing tax forms and financial schedules for small business S-Corp tax preparation'
@@ -75,3 +75,11 @@ That's not a threat. It's an on-ramp.
 ---
 
 If this resonates and you want to think through how it might apply to your situation, I'd welcome the conversation. You can reach me at [common-sense.com/contact](https://common-sense.com/contact).
+
+## Sources
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [OECD AI Principles](https://oecd.ai/en/ai-principles)
+- [Stanford AI Index Report](https://aiindex.stanford.edu/report/)
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)

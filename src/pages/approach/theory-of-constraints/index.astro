@@ -11,12 +11,16 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import Section from '../../../components/Section.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../../../data/pageDefaults';
-import { buildBreadcrumbSchema, buildWebPageSchema } from '../../../data/schema';
+import {
+  buildBreadcrumbSchema,
+  buildFounderSchema,
+  buildWebPageSchema,
+} from '../../../data/schema';
 import { siteConfig } from '../../../data/site';
 
-const title = 'Theory of Constraints: A Practical Guide';
+const title = 'Theory of Constraints: Method, Tools, and Real-World Examples';
 const description =
-  'How TOC identifies the one constraint limiting your system and resolves it. The method, the thinking tools, and how we apply them.';
+  "A practitioner's guide to TOC by a Goldratt-trained, TOCICO-certified consultant. The Five Focusing Steps, Evaporating Cloud, Current Reality Tree, and throughput thinking explained with real case studies across healthcare, manufacturing, and small business.";
 
 const pageUrl = `${siteConfig.siteUrl}/approach/theory-of-constraints`;
 
@@ -30,6 +34,17 @@ const webPage = buildWebPageSchema({
   name: title,
   description,
   url: pageUrl,
+  datePublished: '2026-03-08',
+  dateModified: '2026-03-08',
+  hasBreadcrumb: true,
+  about: [
+    'Theory of Constraints',
+    'Five Focusing Steps',
+    'Evaporating Cloud',
+    'Current Reality Tree',
+    'Future Reality Tree',
+    'Lean manufacturing',
+  ],
 });
 ---
 
@@ -37,7 +52,7 @@ const webPage = buildWebPageSchema({
   title={getPageTitle(title)}
   description={description}
   ogType="website"
-  jsonLd={[webPage, breadcrumb]}
+  jsonLd={[webPage, breadcrumb, buildFounderSchema()]}
 >
   <Header slot="header" {...headerDefaults} currentPath="/approach/theory-of-constraints" />
 
@@ -67,9 +82,13 @@ const webPage = buildWebPageSchema({
           it, and change the right thing. Not everything. The right thing.
         </p>
         <p>
-          He called this the Theory of Constraints. I was trained in it directly by Goldratt and his
-          team, and I have been applying it for over twenty-five years. It is the foundation of
-          everything we do at Common Sense Systems.
+          He called this the Theory of Constraints. I learned TOC over years of study: a graduate
+          program at Washington State University taught by Dr. James Holt, Goldratt Group workshops
+          and Satellite Programs, and nearly every TOC conference where Eli Goldratt spoke in the
+          United States and abroad. I hold TOCICO certifications in TOC Fundamentals, Thinking
+          Processes, and Critical Chain Project Management, earned in 2005 and 2006. I have been
+          applying TOC for thirty years across healthcare, manufacturing, technology, and small
+          business. It is the foundation of everything we do at Common Sense Systems.
         </p>
         <p>
           This page is a reference. It explains the core idea, the main tools, and how I use them in
@@ -383,6 +402,96 @@ const webPage = buildWebPageSchema({
           frameworks are not the problem. The commitment is.
         </p>
 
+        <!-- Throughput Accounting -->
+        <h2 id="throughput-accounting">Throughput Accounting</h2>
+        <p>
+          TOC rests on three pillars: the Five Focusing Steps, the Thinking Processes, and
+          Throughput Accounting. The first two are about finding and solving the right problem.
+          Throughput Accounting is about measuring whether you actually solved it.
+        </p>
+        <p>
+          The framework uses three measures. <strong>Throughput (T)</strong> is the rate at which the
+          system generates money through sales, minus truly variable costs (raw materials, commissions,
+          outsourced processing&mdash;things you only spend when you make a sale).
+          <strong>Investment (I)</strong>, which Goldratt also called Inventory, is the money tied
+          up in things the system intends to sell: raw materials, work-in-progress, finished goods,
+          equipment, buildings. <strong>Operating Expense (OE)</strong> is everything else: salaries,
+          rent, utilities, insurance&mdash;the money the system spends whether it sells anything or not.
+        </p>
+        <p>
+          This is a fundamentally different lens than cost accounting. Cost accounting asks "what
+          does this cost?" and tries to allocate every expense to a product or department.
+          Throughput Accounting asks "what does this produce?" and treats most costs as fixed in the
+          short term. The distinction matters because cost accounting leads to cost-world thinking:
+          cut expenses, improve local efficiencies, reduce headcount. Throughput Accounting leads to
+          throughput-world thinking: find the constraint, exploit it, and grow the system's output.
+          Cost-world thinking tries to cut its way to prosperity. Throughput-world thinking tries to
+          grow its way there. In my experience, the organizations that grow tend to outlast the ones
+          that cut.
+        </p>
+        <p>
+          Here is a concrete example. A hospital is deciding whether to staff its cardiac
+          catheterization lab on weekends. Cost accounting sees the labor expense: nurses, techs, an
+          interventionalist on call. It looks like a cost center. Throughput Accounting sees the
+          procedures that currently cannot be performed until Monday&mdash;the revenue from those
+          cases, minus truly variable costs (catheters, stents, contrast dye), is the throughput the
+          hospital is leaving on the table. When you frame the question as throughput rather than
+          cost, the decision often flips. I explored this exact scenario in
+          <a href="/insights/the-other-calculation">The Other Calculation</a>, a Cascade Valley
+          episode where a CFO and a department head arrive at different answers because they are
+          using different accounting frameworks.
+        </p>
+        <p>
+          Throughput Accounting also clarifies the philosophical difference between TOC and Lean
+          that I described in the <a href="#toc-and-lean">TOC and Lean</a> section above. Lean measures
+          value by asking what the customer would pay for. Throughput Accounting measures value by asking
+          what increases T, decreases I, or decreases OE&mdash;in that priority order. The priority order
+          matters: throughput has no theoretical upper limit, but you can only cut costs to zero. An organization
+          that focuses on T first and OE second will make structurally different decisions than one that
+          focuses on OE first.
+        </p>
+
+        <!-- What TOC Is Not -->
+        <h2 id="what-toc-is-not">What TOC Is Not</h2>
+        <p>
+          TOC is not a complete management system. It is strong at one specific thing: identifying
+          which problem to solve first. Once you have found the constraint, you usually need other
+          methods to fix it. Lean for process improvement. Six Sigma for variation reduction. Agile
+          for iterative delivery. TOC tells you where to aim. It does not always tell you how to
+          shoot.
+        </p>
+        <p>
+          It also does not replace domain expertise. Finding the constraint in a hospital requires
+          knowing how hospitals work&mdash;the regulatory environment, the clinical workflows, the
+          politics of medical staff governance. The Thinking Processes structure your reasoning, but
+          they do not supply knowledge of the system you are reasoning about. I have seen people
+          build technically correct Current Reality Trees that were useless because the inputs were
+          wrong. The tools do not protect you from your own blind spots. Bad data in,
+          confident-looking but wrong conclusions out.
+        </p>
+        <p>
+          The most common misapplication of TOC is treating it as a one-time exercise. An
+          organization identifies the constraint, fixes it, celebrates, and moves on. But the
+          <a href="#five-focusing-steps">Five Focusing Steps</a> are a cycle, not a checklist. When you
+          break one constraint, a new one emerges somewhere else in the system. Organizations that "do
+          TOC" once and then stop will watch the gains erode as the constraint shifts and nobody notices.
+        </p>
+        <p>
+          Goldratt himself acknowledged that TOC was incomplete and still evolving. One of his
+          principles was "Never say 'I know.'" That applies to the methodology itself. TOC has real
+          limitations. The Thinking Processes are powerful but demanding&mdash;building a sound
+          Current Reality Tree takes rigorous logic, honest data, and a willingness to be wrong in
+          front of other people. Not every organization has the appetite for that. And not every
+          problem is best framed as a constraint problem. Sometimes the system is just broken in
+          ordinary ways that do not require a formal methodology to fix.
+        </p>
+        <p>
+          I say all of this as someone who has used TOC for over thirty years and considers it the
+          most useful thinking framework I have encountered. It is precisely because I trust the
+          method that I can be honest about where it falls short. A practitioner who cannot name the
+          limitations of their own tools is selling something.
+        </p>
+
         <!-- How I Use TOC -->
         <h2 id="how-i-use-toc">How I Use TOC in Practice</h2>
         <p>
@@ -412,71 +521,291 @@ const webPage = buildWebPageSchema({
           inside a system, and understanding the system is the work.
         </p>
 
-        <!-- Recommended Reading -->
-        <h2 id="reading">Recommended Reading</h2>
+        <!-- TOC in Practice -->
+        <h2 id="toc-in-practice">TOC in Practice</h2>
         <p>
-          If you want to learn TOC from the source, Goldratt wrote for practitioners, not academics.
-          His books are short, opinionated, and practical.
+          The best way to understand TOC is to see it applied. These are case studies and analyses
+          from my own work, spanning healthcare, medical devices, engineering, and small business.
+          Each one demonstrates a different TOC concept in a different setting. The methodology does
+          not change. The context does.
+        </p>
+
+        <h3>Healthcare &amp; Organizations</h3>
+        <p>
+          The cath lab story above is a clear example of Step 1, identifying the real constraint.
+          The hospital assumed the constraint was physical space. It was actually staffing and
+          scheduling. The full analysis is in
+          <a href="/insights/the-cath-lab-is-empty-at-2am">The Cath Lab Is Empty at 2 AM</a>.
+        </p>
+        <p>
+          Healthcare burnout is rarely a people problem. It is a structural conflict between
+          legitimate organizational needs pulling in opposite directions. I mapped two of these
+          conflicts using the Evaporating Cloud in
+          <a href="/insights/stop-blaming-people">Stop Blaming People</a>, covering both burnout
+          dynamics and discharge delays.
+        </p>
+        <p>
+          Cycle time is a throughput problem. The faster an organization moves through its
+          decision-observe-act loop, the more adaptive capacity it has. I applied this thinking to
+          hospital operations in
+          <a href="/insights/speed-as-a-strategy">Speed as a Strategy</a>, using the OODA loop as a
+          throughput framework.
+        </p>
+        <p>
+          Some of the most persistent problems in healthcare are policy conflicts that nobody has
+          named. The Evaporating Cloud is built for exactly this. I worked through several examples
+          in <a href="/insights/hidden-conflicts">Hidden Conflicts in Healthcare</a>.
+        </p>
+        <p>
+          Patient flow through a hospital is a system dynamics problem. Beds are not the constraint;
+          the constraint is whatever prevents patients from moving through them. I mapped the
+          physics of this in
+          <a href="/insights/physics-of-patient-flow">The Physics of Patient Flow</a>.
+        </p>
+
+        <h3>MedTech &amp; Engineering</h3>
+        <p>
+          A medical imaging company's customer support department was treated as a cost center and
+          measured on cost reduction. The Five Focusing Steps revealed that support was actually the
+          constraint on customer retention and growth. Changing the policy constraint turned cost
+          into revenue. The full case study is
+          <a href="/insights/cost-center-to-growth-engine-toc-case-study"
+            >From Cost Center to Growth Engine</a
+          >.
+        </p>
+        <p>
+          On an 18-month defibrillator development program, the communication interface between two
+          subsystems became the constraint on the entire project timeline. Exploiting that single
+          constraint recovered two months of schedule. I wrote up how in
+          <a href="/insights/defibrio-comm-protocol-case-study"
+            >The Defibrio Communication Protocol Case Study</a
+          >.
+        </p>
+        <p>
+          What happens when every department optimizes locally and nobody asks what the system
+          constraint is? A product company with excellent engineering ships late, over budget, and
+          loses its market window. This is a subordination failure, and I traced the pattern in
+          <a href="/insights/perfect-product-killed-company"
+            >The Perfect Product That Killed a Company</a
+          >.
+        </p>
+
+        <h3>Small Business</h3>
+        <p>
+          A fine art printing shop in Kent, Washington had a graphic artist buried in rework because
+          orders arrived incomplete. Pre-flight checks, a work-in-progress limit, and an expedite
+          lane recovered 35% throughput in one week. This is drum-buffer-rope at its most basic. The
+          story is in
+          <a href="/insights/print-shop-found-capacity-in-a-week"
+            >How a Print Shop Found 35% More Capacity in a Week</a
+          >.
+        </p>
+        <p>
+          If you run a small business and want to understand the Five Focusing Steps without
+          academic language, I wrote a worked example using a remodeling contractor in
+          <a href="/insights/one-thing-slowing-down-your-business"
+            >The One Thing Slowing Down Your Business</a
+          >.
+        </p>
+        <p>
+          Sometimes the constraint is not operations at all. The website looks great, the service is
+          good, and the phone is not ringing. That is a market constraint, and the fix is not
+          working harder on operations. I wrote about this in
+          <a href="/insights/website-looks-great-phone-not-ringing"
+            >Your Website Looks Great. Why Isn't the Phone Ringing?</a
+          >
+        </p>
+
+        <h3>Teaching &amp; Audio Drama</h3>
+        <p>
+          The bakery pricing dilemma in the Evaporating Cloud section above has a video companion. I
+          walk through building the cloud step by step in
+          <a href="/insights/resolving-a-sweet-dilemma">Resolving a Sweet Dilemma</a>.
+        </p>
+        <p>
+          Throughput accounting changes how you make decisions. Cost accounting asks "what does this
+          cost?" Throughput accounting asks "what does this produce?" The difference matters, and I
+          explored it through the Cascade Valley Health System audio drama series in
+          <a href="/insights/the-other-calculation">The Other Calculation</a>.
+        </p>
+        <p>
+          The Cascade Valley series begins with a hospital board meeting where a new voice
+          introduces TOC thinking into a room full of conventional assumptions. That pilot episode
+          is
+          <a href="/insights/the-meeting-that-went-differently">The Meeting That Went Differently</a
+          >.
+        </p>
+
+        <!-- Learning Path -->
+        <h2 id="learning-path">TOC Learning Path (Books, Research, and Communities)</h2>
+        <p>
+          Most TOC reading lists are either too basic or too academic. This one is sequenced. Start
+          with the foundations, then pick a track based on the problems you solve most often.
+        </p>
+
+        <h3>Stage 1: Foundation (required before specialization)</h3>
+        <ol>
+          <li>
+            Read
+            <a href="https://en.wikipedia.org/wiki/The_Goal_(novel)" target="_blank" rel="noopener"
+              >The Goal</a
+            >
+            and
+            <a href="https://en.wikipedia.org/wiki/It%27s_Not_Luck" target="_blank" rel="noopener"
+              >It's Not Luck</a
+            >. This gives you the baseline language of constraints, throughput, and conflicts.
+          </li>
+          <li>
+            Use the
+            <a
+              href="https://www.toc-goldratt.com/en/product/toc-self-learning-package/toc-self-learning-program"
+              target="_blank"
+              rel="noopener">TOC Self Learning Program</a
+            >
+            to fill gaps systematically.
+          </li>
+          <li>
+            Map your study plan to the
+            <a href="https://www.tocico.org/toc-body-of-knowledge" target="_blank" rel="noopener"
+              >TOCICO Body of Knowledge</a
+            >
+            so your progression follows recognized domains.
+          </li>
+        </ol>
+
+        <h3>Track A: Thinking Processes (Cloud, CRT, FRT)</h3>
+        <p>
+          Use this track if your constraints are structural conflicts, policy contradictions, or
+          cross-functional misalignment.
         </p>
         <ul>
           <li>
-            <strong
-              ><a
-                href="https://en.wikipedia.org/wiki/The_Goal_(novel)"
-                target="_blank"
-                rel="noopener">The Goal</a
-              ></strong
-            > (1984). The one to start with. A novel about a plant manager who discovers the constraint
-            in his factory. It is fiction, and it teaches more about operations management than most textbooks.
+            Core narrative source:
+            <a href="https://en.wikipedia.org/wiki/It%27s_Not_Luck" target="_blank" rel="noopener"
+              >It's Not Luck</a
+            >.
           </li>
           <li>
-            <strong
-              ><a
-                href="https://en.wikipedia.org/wiki/It%27s_Not_Luck"
-                target="_blank"
-                rel="noopener">It's Not Luck</a
-              ></strong
-            > (1994). The sequel to The Goal. Introduces the Thinking Processes through a story about
-            a manager applying them to strategic business problems.
+            Structured study and workshops:
+            <a href="https://learningcenter.tocico.org/collections" target="_blank" rel="noopener"
+              >TOCICO Learning Center</a
+            >.
           </li>
           <li>
-            <strong
-              ><a
-                href="https://en.wikipedia.org/wiki/Critical_Chain_(novel)"
-                target="_blank"
-                rel="noopener">Critical Chain</a
-              ></strong
-            > (1997). TOC applied to project management. If you have ever wondered why projects consistently
-            run late and over budget, this book explains the structural reasons and what to do about them.
-          </li>
-          <li>
-            <strong
-              ><a
-                href="https://en.wikipedia.org/wiki/Necessary_but_Not_Sufficient"
-                target="_blank"
-                rel="noopener">Necessary but Not Sufficient</a
-              ></strong
-            > (2000). About technology implementation. Why buying a system does not solve problems unless
-            the rules and policies change too. Relevant to anyone involved in EHR deployments, ERP projects,
-            or any large technology adoption.
-          </li>
-          <li>
-            <strong
-              ><a
-                href="https://en.wikipedia.org/wiki/The_Choice_(Goldratt_book)"
-                target="_blank"
-                rel="noopener">The Choice</a
-              ></strong
-            > (2008). Goldratt's most personal book. A conversation with his daughter about thinking clearly,
-            challenging assumptions, and the belief that "every situation, no matter how complex, can
-            be substantially improved."
+            Expert deep dives:
+            <a href="https://www.tocico.org/page/PortalWebinarPg" target="_blank" rel="noopener"
+              >TOCICO webinar archive</a
+            >.
           </li>
         </ul>
+
+        <h3>Track B: Operations and Throughput</h3>
         <p>
-          For a more structured academic treatment,
-          <strong>Theory of Constraints Handbook</strong> (edited by James Cox III and John Schleier,
-          McGraw-Hill, 2010) covers every major TOC application area with contributions from practitioners
-          and researchers.
+          Use this track for flow, scheduling, capacity, and system-level operational performance.
+        </p>
+        <ul>
+          <li>
+            Watson KJ, Blackstone JH, Gardiner SC (2007), Journal of Operations Management:
+            <a href="https://doi.org/10.1016/j.jom.2006.04.004" target="_blank" rel="noopener"
+              >The evolution of a management philosophy</a
+            >.
+          </li>
+          <li>
+            Mabin VJ, Balderstone SJ (2003), International Journal of Operations & Production
+            Management:
+            <a href="https://doi.org/10.1108/01443570310476636" target="_blank" rel="noopener"
+              >The performance of TOC and what it says about implementation quality</a
+            >.
+          </li>
+          <li>
+            Davies J, Mabin VJ, Balderstone SJ (2005), Omega:
+            <a href="https://doi.org/10.1016/j.omega.2004.07.015" target="_blank" rel="noopener"
+              >TOC in UK manufacturing and service organizations</a
+            >.
+          </li>
+        </ul>
+
+        <h3>Track C: Project Environments (Critical Chain)</h3>
+        <p>Use this track for R&D, product development, and multi-project pipeline management.</p>
+        <ul>
+          <li>
+            Foundational text:
+            <a
+              href="https://en.wikipedia.org/wiki/Critical_Chain_(novel)"
+              target="_blank"
+              rel="noopener">Critical Chain</a
+            >.
+          </li>
+          <li>
+            Recent synthesis:
+            <a href="https://doi.org/10.1108/IJMPB-03-2018-0061" target="_blank" rel="noopener"
+              >Bibliometric review of Critical Chain Project Management literature</a
+            >.
+          </li>
+          <li>
+            Current research direction:
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41231875/" target="_blank" rel="noopener"
+              >Open model innovation and CCPM planning (2025)</a
+            >.
+          </li>
+        </ul>
+
+        <h3>Track D: Healthcare Systems</h3>
+        <p>
+          Use this track for flow, length of stay, wait times, and cross-continuum coordination.
+        </p>
+        <ul>
+          <li>
+            Foundational evidence:
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35127055/" target="_blank" rel="noopener"
+              >Systematic review of TOC in healthcare</a
+            >.
+          </li>
+          <li>
+            Method in practice:
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38370321/" target="_blank" rel="noopener"
+              >Action research application in a healthcare context</a
+            >.
+          </li>
+          <li>
+            Integration context with Lean:
+            <a
+              href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4833201/"
+              target="_blank"
+              rel="noopener">Systematic review of Lean in healthcare</a
+            >.
+          </li>
+        </ul>
+
+        <h3>TOCICO resources that are easy to miss</h3>
+        <ul>
+          <li>
+            <a href="https://www.tocico.org/resources-references" target="_blank" rel="noopener"
+              >Resources and references portal</a
+            >
+            for dictionaries, reference links, and curated pointers.
+          </li>
+          <li>
+            <a href="https://learningcenter.tocico.org/collections" target="_blank" rel="noopener"
+              >Learning Center collections</a
+            >
+            with filters for academic papers, case studies, and webinars.
+          </li>
+          <li>
+            <a
+              href="https://www.tocico.org/tocico-award-hall-of-honor"
+              target="_blank"
+              rel="noopener">Award Hall of Honor</a
+            >
+            to find organizations and practitioners with demonstrated results.
+          </li>
+        </ul>
+
+        <h3>Suggested cadence</h3>
+        <p>
+          Keep one conceptual source, one empirical source, and one implementation source active at
+          all times. In practice, that means one Goldratt text, one paper, and one case study or
+          webinar each month. This keeps your TOC understanding both rigorous and executable.
         </p>
 
         <!-- Closing -->

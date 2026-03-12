@@ -4,7 +4,7 @@ description: 'Why blame cultures destroy healthcare organizations and how to bui
 metaTitle: 'Stop Blaming People'
 metaDescription: 'Why blame cultures destroy healthcare organizations and how to build accountability instead.'
 date: 2025-08-21
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Leadership', 'Culture']
 imageAlt: 'Systems diagram replacing blame cycle with accountability structure in healthcare organizational culture'
@@ -82,7 +82,7 @@ The system has stakeholders working at cross-purposes. The hospital's metric is 
 
 Here's the good news: These conflicts are not permanent. They are not laws of nature. They are the result of _assumptions_ we've made about how the system _must_ work.
 
-And if you can identify those assumptions, you can challenge them---and make the conflict "evaporate."
+And if you can identify those assumptions, you can challenge them---and make the conflict "evaporate." This is the core move of the [Evaporating Cloud](/approach/theory-of-constraints#evaporating-cloud), one of the Thinking Processes in Theory of Constraints.
 
 This isn't just a theory. It's a proven, practical method.
 
@@ -99,3 +99,11 @@ We'll show you how they used this systems-thinking approach to identify their co
 ### Don't Miss Part 2
 
 Subscribe to our newsletter to get the full case study delivered to your inbox, plus practical insights on systems thinking in healthcare.
+
+## Sources
+
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [Throughput accounting (Wikipedia)](https://en.wikipedia.org/wiki/Throughput_accounting)
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)

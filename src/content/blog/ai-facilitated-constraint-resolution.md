@@ -4,7 +4,7 @@ description: 'How AI can dissolve complex multi-stakeholder conflicts by surfaci
 metaTitle: 'AI-Facilitated Constraint Resolution for Healthcare Systems'
 metaDescription: 'How AI can dissolve complex multi-stakeholder conflicts by surfacing hidden assumptions, not by replacing human judgment.'
 date: 2026-02-09
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Healthcare', 'Constraint Resolution', 'Strategy']
 imageAlt: 'AI and multi-stakeholder conflict diagram illustrating constraint resolution for healthcare systems'
@@ -168,3 +168,11 @@ This is not a theoretical possibility. The Theory of Constraints has been produc
 If your organization is facing a complex operational challenge with competing stakeholder needs, AI-facilitated constraint resolution may offer a path forward. We would welcome a conversation about whether this approach fits your situation.
 
 [Get in touch](/contact)
+
+## Sources
+
+- [w3.org/2000/svg](http://www.w3.org/2000/svg)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

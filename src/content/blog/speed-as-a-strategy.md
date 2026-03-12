@@ -4,7 +4,7 @@ description: 'Why moving fast is an undervalued strategic advantage for communit
 metaTitle: 'Speed as a Strategy'
 metaDescription: 'Why moving fast is an undervalued strategic advantage for community hospitals.'
 date: 2025-09-09
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Strategy', 'Leadership']
 imageAlt: 'OODA Loop framework diagram applied to hospital operations and community healthcare competitive strategy'
@@ -118,7 +118,7 @@ Each patient is unique, requiring customized care planning. But customization in
 
 Healthcare systems must compete aggressively for market share AND must collaborate extensively with post-acute facilities and other market participants.
 
-**A practical note:** Every system contains numerous conflicts. Theory of Constraints doesn't suggest resolving all of them--attempting to do so leads to analytical paralysis. Instead, identify the conflicts that most directly constrain your system's performance. In discharge operations, these four conflicts demonstrably slow the OODA Loop. Resolve these, and cycle time improves dramatically.
+**A practical note:** Every system contains numerous conflicts. [Theory of Constraints](/approach/theory-of-constraints) doesn't suggest resolving all of them--attempting to do so leads to analytical paralysis. Instead, identify the conflicts that most directly constrain your system's performance. In discharge operations, these four conflicts demonstrably slow the OODA Loop. Resolve these, and cycle time improves dramatically.
 
 ## Building High Operational Tempo: Practical Implications
 
@@ -165,3 +165,11 @@ Common Sense Systems
 Email: [contact@common-sense.com](mailto:contact@common-sense.com)
 Phone: 425-979-2282
 Web: [common-sense.com](https://common-sense.com)
+
+## Sources
+
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [Throughput accounting (Wikipedia)](https://en.wikipedia.org/wiki/Throughput_accounting)
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)

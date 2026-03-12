@@ -8,5 +8,5 @@ export const header: PageHeader = {
   label: 'Insights',
   heading: 'Latest Insights',
   subheading:
-    'Thoughtful essays and practical guidance for hospital leaders navigating complex decisions.',
+    'Thoughtful essays and practical guidance for leaders navigating operational constraints and complex decisions.',
 };

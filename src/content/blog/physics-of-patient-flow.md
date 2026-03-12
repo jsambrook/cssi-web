@@ -4,7 +4,7 @@ description: 'Trying to plan a complex discharge at the moment of exit violates 
 metaTitle: "The Physics of Patient Flow: Why 'Discharge Planning' Fails"
 metaDescription: 'Trying to plan a complex discharge at the moment of exit violates the basic physics of flow. Here is why the process must move upstream.'
 date: 2025-09-04
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Operations']
 imageAlt: 'Patient flow diagram showing hospital discharge bottleneck and the physics case for upstream discharge planning'
@@ -15,8 +15,6 @@ imageAlt: 'Patient flow diagram showing hospital discharge bottleneck and the ph
 Hospital discharge planning fails because it bundles two different events -- a clinical decision and a complex logistics problem -- into a single crisis moment. The Post-Acute Care Directive proposes moving the logistics upstream to routine primary care visits, turning case managers from desperate investigators into calm coordinators with a pre-vetted plan.
 
 ---
-
-Why hospital discharge processes fail and how to fix them.
 
 ## The Physics of Patient Flow: Why We Wait Until the Worst Possible Moment
 
@@ -34,7 +32,7 @@ Our healthcare system is designed to _wait_ for this crisis. We treat post-acute
 
 We wait until a patient is sick, hospitalized, and under stress. Then, we ask them and their equally stressed family to make complex logistical, financial, and deeply emotional decisions on an impossibly tight deadline.
 
-This is a **system design failure**. It's a trap that benefits no one.
+This is a **system design failure**. In [Theory of Constraints terms](/approach/theory-of-constraints), the system is wasting its constraint — forcing the most time-critical decision into the worst possible conditions. It's a trap that benefits no one.
 
 Even when a patient _has_ expressed their wishes, our systems often fail them. Those preferences--perhaps discussed years ago with their doctor--are typically scanned into the EHR as a PDF. In the rush of a discharge, that document is "dead data." It's unfindable, unsearchable, and operationally useless.
 
@@ -170,3 +168,11 @@ This is the difference between buying a simple "module" and designing a true **s
 The PAC-D is a systems architecture problem that blends clinical workflow, patient engagement, and data design. If your organization is ready to move discharge planning from a reactive crisis to a proactive, intelligent asset, let's talk.
 
 **Contact me for a 30-minute consultation, and we can discuss the blueprint for your organization.**
+
+## Sources
+
+- [Delayed hospital discharges of older patients: systematic review](https://pubmed.ncbi.nlm.nih.gov/28535285/)
+- [Discharge planning and readmissions: systematic review of reviews](https://pubmed.ncbi.nlm.nih.gov/34216502/)
+- [Delayed discharge and downstream rehab LOS: cohort study](https://pubmed.ncbi.nlm.nih.gov/35760110/)
+- [Little's Law (queueing principle)](https://en.wikipedia.org/wiki/Little%27s_law)
+- [Theory of Constraints in healthcare: systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/)

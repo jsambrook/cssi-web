@@ -1,105 +1,104 @@
-import type { HeroBullet, CTAContent, ServiceCardItem, Industry, AmbitionCard } from '../types';
+import type { HeroBullet, CTAContent, AmbitionCard, ServiceOffer } from '../types';
 
 export const hero = {
-  headline: 'Break the Constraint. Scale the Flow.',
+  headline: "Find it. Fix it. Or don't pay.",
   subheadline:
-    'We architect Unrefusable Offers and operational velocity for organizations that are tired of incremental growth. Serving Healthcare, MedTech, and Embedded Systems.',
+    'Every business has one constraint holding it back. We identify yours in weeks, not months. You only pay if we deliver.',
   bullets: [
-    { bold: 'No comprehensive decks.', text: 'Decision-ready artifacts instead of reports.' },
-    { bold: 'No scope creep.', text: 'Fixed fees, clear deliverables, explicit timelines.' },
-    { bold: 'No dependency.', text: 'Building your capability, not ours.' },
+    { bold: 'Fixed fee, fixed timeline.', text: 'Two to four weeks for a clear diagnosis.' },
+    {
+      bold: 'You carry zero risk.',
+      text: 'Pay only when you agree the work was delivered as promised.',
+    },
+    { bold: 'No dependency.', text: 'We build your capability, not a recurring consulting bill.' },
   ] satisfies HeroBullet[],
   primaryCta: {
-    text: 'Book a Consultation',
+    text: 'Book a Conversation',
     href: 'https://calendar.app.google/wgWnth98gdaNvN5aA',
   },
-  secondaryCta: { text: 'Learn More', href: '/approach' },
+  secondaryCta: { text: 'See How It Works', href: '/approach' },
 };
 
 export const ambitionCards: AmbitionCard[] = [
   {
-    label: 'ACCELERATE',
-    text: 'We need to move 2x faster in R&D and Ops (The Drum-Buffer-Rope).',
-    scrollTarget: 'service-flow-dynamics',
+    label: 'STUCK',
+    text: 'We have tried everything and nothing moves the needle.',
+    scrollTarget: 'service-constraint-analysis',
   },
   {
-    label: 'DOMINATE',
-    text: 'We need to change the rules of our market (The Mafia Offer).',
-    scrollTarget: 'service-market-offer',
+    label: 'INVISIBLE',
+    text: 'Our website gets traffic but the phone never rings.',
+    scrollTarget: 'service-offer-analysis',
   },
   {
-    label: 'UNIFY',
-    text: 'We need Sales, Ops, and R&D to stop fighting (The Thinking Processes).',
-    scrollTarget: 'service-synchronization',
+    label: 'GROWING',
+    text: 'We are busy but not profitable, and we cannot figure out why.',
+    scrollTarget: 'service-constraint-analysis',
   },
 ];
 
 export const featuresSection = {
-  label: 'Our Approach',
-  heading: 'A Different Way Forward',
+  label: 'Two Services',
+  heading: 'Find It. Fix It.',
   subheading:
-    'We focus on decision-making processes and organizational capability\u2014not comprehensive reports that gather dust.',
+    'Both services follow the same structure: a fixed-fee diagnostic phase, then implementation priced at a fraction of the value it creates. You only pay if we deliver.',
 };
 
-export const defaultIndustry: Industry = 'healthcare';
-
-export const serviceCards: ServiceCardItem[] = [
+export const serviceOffers: ServiceOffer[] = [
   {
-    id: 'flow-dynamics',
-    color: 'orange',
-    variants: {
-      healthcare: {
-        title: 'Accelerate Patient Flow & Slash Length of Stay',
-        description:
-          'Identify the hidden constraints in your patient pathway. We help you unlock inpatient capacity and eliminate ED boarding without adding staff.',
-      },
-      tech: {
-        title: 'Accelerate R&D & Slash Time-to-Market',
-        description:
-          "Stop managing the backlog; eliminate it. We identify the bottleneck in your dev cycle to shrink the time from 'commit' to 'cash'.",
-      },
-    },
+    id: 'constraint-analysis',
+    title: 'Constraint Analysis',
+    problem:
+      'Your organization is stuck. You have invested in improvement projects, hired consultants, reorganized teams. Nothing sticks. The system is not performing and you cannot pinpoint why.',
+    what: 'We identify the single constraint limiting your system, the one thing that, once addressed, moves everything else. Then we help you fix it.',
+    deliverable:
+      'A focused report identifying the constraint, the evidence, the estimated impact of addressing it, and a recommended direction. Delivered in a working session.',
+    timeline: '2 to 4 weeks',
+    fee: '$15,000 fixed for the diagnosis. Implementation priced at 10-15% of the estimated value of the fix.',
   },
   {
-    id: 'market-offer',
-    color: 'blue',
-    variants: {
-      healthcare: {
-        title: 'Direct-to-Employer Contracting & Network Integrity',
-        description:
-          "Stop competing on commoditized rates. We design 'Unrefusable Offers' for local employers that bypass insurance friction and secure volume.",
-      },
-      tech: {
-        title: 'Risk-Shared Licensing & Recurring Revenue Models',
-        description:
-          'Move beyond feature wars. We structure licensing and pricing models that align perfectly with customer utility, making your product the obvious financial choice.',
-      },
-    },
-  },
-  {
-    id: 'synchronization',
-    color: 'green',
-    variants: {
-      healthcare: {
-        title: 'Unify ED, Inpatient, and Discharge Teams',
-        description:
-          'Eliminate the friction between departments. We align clinical and operational incentives so the entire hospital moves as one synchronized system.',
-      },
-      tech: {
-        title: 'Align Product Roadmaps with Sales Promises',
-        description:
-          'End the war between Sales and Engineering. We implement the operational handshake that ensures you can actually deliver what you sell, every time.',
-      },
-    },
+    id: 'offer-analysis',
+    title: 'Offer Analysis',
+    problem:
+      'Your website gets traffic but the phone does not ring. Your marketing looks right. Your service is good. But prospects cannot tell you apart from three other firms, so they choose on price or convenience.',
+    what: 'We diagnose why your offer is invisible and build one that makes the right client feel foolish saying no. Then we help you deploy it across your website, sales process, and referral language.',
+    deliverable:
+      'An analysis identifying the core customer frustration your industry has accepted as normal, the hidden conflict in the market, and a proposed offer that resolves it.',
+    timeline: '2 to 4 weeks',
+    fee: '$15,000 fixed for the diagnosis. Implementation priced at 10-15% of estimated revenue impact.',
   },
 ];
 
+export const guaranteeSection = {
+  heading: 'The Guarantee',
+  statement: 'Unless you agree that what was promised was what was delivered, there is no charge.',
+  explanation:
+    'Most consultants hedge their bets and shift risk to the customer. We invert that. Before work begins, we agree in writing on what "delivered" means. If we do not meet that standard, you owe nothing.',
+  reasons: [
+    {
+      bold: 'We qualify carefully.',
+      text: 'We analyze your business before the first meeting. If it is not a fit, we say so.',
+    },
+    {
+      bold: 'The methodology works.',
+      text: 'Thirty years of constraint analysis with the Theory of Constraints. Defensible logic, not opinions.',
+    },
+    {
+      bold: 'AI-assisted analysis.',
+      text: 'We compress timelines with tools we have built, so the economics work even if a prospect occasionally declines to pay.',
+    },
+  ],
+};
+
 export const cta: CTAContent = {
-  headline: 'Ready to Move Forward?',
+  headline: 'Start with a Conversation',
   description:
-    "Start with a conversation. No pitch, no obligation. Just a practical discussion about what's actually blocking progress.",
-  primaryCta: { text: 'Schedule a Meeting', href: 'https://calendar.app.google/wgWnth98gdaNvN5aA' },
-  secondaryCta: { text: 'Learn More', href: '/approach' },
+    'No pitch, no obligation. A practical thirty-minute discussion about what is actually blocking progress in your organization. If it is not a fit, we will tell you.',
+  primaryCta: {
+    text: 'Book a Conversation',
+    href: 'https://calendar.app.google/wgWnth98gdaNvN5aA',
+  },
+  secondaryCta: { text: 'Email Instead', href: 'mailto:john@common-sense.com' },
   footnote:
-    'Serving hospitals, health systems, and healthcare organizations across Washington State',
+    'Common Sense Systems, Inc. | Kirkland, WA | Serving organizations of all sizes across industries',
 };

@@ -4,6 +4,7 @@ description: 'Healthcare has adopted Lean almost exclusively for process improve
 metaTitle: 'Why Healthcare Needs Both TOC and Lean | Common Sense Systems'
 metaDescription: 'Healthcare adopted Lean but missed TOC. Using TOC to find constraints and Lean to fix them produces results roughly 10x better than either alone.'
 date: 2026-03-04
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Lean', 'Theory of Constraints', 'Operations']
 imageAlt: 'Diagram showing Theory of Constraints as strategic compass directing Lean tools to the system constraint in a healthcare setting'
@@ -15,7 +16,7 @@ Healthcare relies almost exclusively on Lean for process improvement, but Lean a
 
 ---
 
-<img src="/images/content/compass-and-toolkit-toc-lean.jpg" alt="Infographic showing TOC as the compass (five focusing steps: identify, exploit, subordinate, elevate, repeat) directing Lean tools (Value Stream Mapping, waste elimination, standardized work, kaizen) to the system constraint, producing roughly 10x improvement when combined versus either alone" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/compass-and-toolkit-toc-lean.webp" alt="Infographic showing TOC as the compass (five focusing steps: identify, exploit, subordinate, elevate, repeat) directing Lean tools (Value Stream Mapping, waste elimination, standardized work, kaizen) to the system constraint, producing roughly 10x improvement when combined versus either alone" width="1408" height="768" loading="lazy" decoding="async" />
 
 An ophthalmologist in Portugal had a problem familiar to anyone who has worked in healthcare: too many patients waiting, not enough throughput, and a growing sense that the system was working against everyone in it. He did not hire a consulting firm. He did not launch a multi-year transformation initiative. He applied the Theory of Constraints' five focusing steps, identified the actual bottleneck in his imaging practice, reorganized the workflow around it, and [improved patient throughput by 64%](https://pmc.ncbi.nlm.nih.gov/articles/PMC10868449/) in a matter of weeks. The cost was essentially nothing. (A candid footnote: the improvement was not sustained after the doctor who championed it left the organization. That fact is itself instructive, and we will return to it.)
 
@@ -106,3 +107,11 @@ An ophthalmologist in Portugal asked the question, followed the answer, and [imp
 The question is available to every health system. The tools exist. The evidence is there. What remains is the decision to look.
 
 If your organization is trying to figure out where to aim its next improvement effort, I am happy to think through it with you. Reach me at john@common-sense.com.
+
+## Sources
+
+- [pmc.ncbi.nlm.nih.gov/articles/PMC10868449/](https://pmc.ncbi.nlm.nih.gov/articles/PMC10868449/)
+- [pmc.ncbi.nlm.nih.gov/articles/PMC8812771/](https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/)
+- [onlinelibrary.wiley.com/doi/10.1155/2020/8875902](https://onlinelibrary.wiley.com/doi/10.1155/2020/8875902)
+- [industryweek.com/operations/continuous-improvement/article/21144299/why-do-so-many-lean-efforts-fail](https://www.industryweek.com/operations/continuous-improvement/article/21144299/why-do-so-many-lean-efforts-fail)
+- [pmc.ncbi.nlm.nih.gov/articles/PMC4833201/](https://pmc.ncbi.nlm.nih.gov/articles/PMC4833201/)

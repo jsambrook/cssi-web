@@ -56,20 +56,23 @@ const hasTwoColumns = !!intakeForm;
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div
       class:list={[
-        hasTwoColumns
-          ? 'lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start'
-          : 'max-w-4xl mx-auto lg:mx-0',
+        hasTwoColumns ? 'lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-start' : 'max-w-4xl mx-auto',
       ]}
     >
       <!-- Hero content (left column when 2-col) -->
-      <div class="space-y-5 lg:pt-4">
+      <div class:list={['space-y-5 lg:pt-4', !hasTwoColumns && 'text-center']}>
         <!-- Headline -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl leading-tight">
           {headline}
         </h1>
 
         <!-- Subheadline -->
-        <p class="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+        <p
+          class:list={[
+            'text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl',
+            !hasTwoColumns && 'mx-auto',
+          ]}
+        >
           {subheadline}
         </p>
 
@@ -102,7 +105,7 @@ const hasTwoColumns = !!intakeForm;
         <!-- Bullet Points -->
         {
           bullets.length > 0 && (
-            <div class="space-y-2 pt-2">
+            <div class:list={['space-y-2 pt-2', !hasTwoColumns && 'inline-block text-left']}>
               {bullets.map((bullet) => (
                 <div class="flex items-start gap-2">
                   <svg
@@ -127,7 +130,12 @@ const hasTwoColumns = !!intakeForm;
         <!-- CTAs -->
         {
           (primaryCta || secondaryCta) && (
-            <div class="flex flex-col sm:flex-row gap-3 pt-4">
+            <div
+              class:list={[
+                'flex flex-col sm:flex-row gap-3 pt-4',
+                !hasTwoColumns && 'justify-center',
+              ]}
+            >
               {primaryCta && (
                 <a
                   href={primaryCta.href}

@@ -9,3 +9,12 @@ dist/
 /*.png
 public/images/blog/
 .deploy.lock
+
+# Working drafts and notes in repo root
+draft-post.md
+scenario.md
+service-offers-draft.md
+
+# Local tool state
+.claude/settings.local.json
+.playwright-mcp/

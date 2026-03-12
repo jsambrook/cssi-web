@@ -4,7 +4,7 @@ description: 'The word "waste" smuggles in a verdict before the analysis begins.
 metaTitle: 'Not All Waste Is Waste: Why Eliminating Waste Can Hurt a System'
 metaDescription: 'Lean says eliminate waste. TOC asks: waste relative to what? The distinction matters more than most improvement programs acknowledge.'
 date: 2026-02-17
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Lean', 'Strategy']
 imageAlt: 'Theory of Constraints buffer diagram showing why eliminating apparent waste can reduce overall system throughput'
@@ -91,3 +91,11 @@ Distinguishing between true waste and protective capacity is rarely obvious. In 
 If you are looking at a specific process in your system and aren't sure if it's waste or insurance, send me a note. I am happy to help you sanity-check your logic.
 
 You can reach me at [john@common-sense.com](mailto:john@common-sense.com).
+
+## Sources
+
+- [Lean manufacturing (overview)](https://en.wikipedia.org/wiki/Lean_manufacturing)
+- [Lean in healthcare: systematic review (BMJ Open)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4833201/)
+- [Theory of Constraints (overview)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [Throughput accounting (overview)](https://en.wikipedia.org/wiki/Throughput_accounting)
+- [FDA Quality System Regulation (21 CFR Part 820)](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820)

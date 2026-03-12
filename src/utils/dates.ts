@@ -10,6 +10,29 @@
 
 const PACIFIC = 'America/Los_Angeles';
 
+function toIsoDateFromUtc(d: Date): string {
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function pacificTodayIso(now: Date): string {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: PACIFIC,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(now);
+  const year = parts.find((part) => part.type === 'year')?.value;
+  const month = parts.find((part) => part.type === 'month')?.value;
+  const day = parts.find((part) => part.type === 'day')?.value;
+  if (!year || !month || !day) {
+    throw new Error('Unable to compute Pacific date');
+  }
+  return `${year}-${month}-${day}`;
+}
+
 /**
  * Return an ISO-8601 string representing midnight Pacific for the given date.
  * Example: 2026-02-16 (PST) → "2026-02-16T08:00:00.000Z"
@@ -29,12 +52,11 @@ export function toPacificIso(d: Date): string {
   ).toISOString();
 }
 
-/** True when the post's frontmatter date is today or earlier (UTC calendar day). */
+/** True when the post's frontmatter date is today or earlier (Pacific calendar day). */
 export function isPublished(d: Date): boolean {
-  const now = new Date();
-  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
-  const postDay = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
-  return postDay <= today;
+  const postDate = toIsoDateFromUtc(d);
+  const pacificToday = pacificTodayIso(new Date());
+  return postDate <= pacificToday;
 }
 
 /** Format a frontmatter date for human display (e.g. "February 16, 2026"). */

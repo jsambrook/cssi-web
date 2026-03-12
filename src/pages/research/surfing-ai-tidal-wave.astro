@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
+import {
+  buildBreadcrumbSchema,
+  buildScholarlyArticleSchema,
+  buildWebPageSchema,
+} from '../../data/schema';
+import { siteConfig } from '../../data/site';
+
+const title = 'Surfing the AI Tidal Wave: A Discussion Paper for Health Systems';
+const seoTitle = getPageTitle('Surfing the AI Tidal Wave Paper');
+const description =
+  'Discussion paper for health systems on proactive AI adoption, pairing throughput gains with systems-thinking quality controls.';
+const abstract =
+  'This paper argues that health systems are constrained by scarce high-quality cognitive capacity and that AI cost collapse is relaxing that constraint. It proposes pairing AI throughput with systems-thinking discipline to avoid scaling confusion and to improve operational outcomes.';
+const pageUrl = `${siteConfig.siteUrl}/research/surfing-ai-tidal-wave`;
+const pdfPath = '/assets/files/research/ai/surfing-ai-tidal-wave-v1-2.pdf';
+const pdfUrl = `${siteConfig.siteUrl}${pdfPath}`;
+const ogImage = '/images/research/surfing-ai-tidal-wave.png';
+
+const publishedTime = '2025-12-11T17:06:44.000Z';
+const modifiedTime = '2025-12-15T15:41:53.000Z';
+const tags = [
+  'AI strategy',
+  'Healthcare operations',
+  'Systems thinking',
+  'Constraint analysis',
+  'Knowledge work',
+];
+
+const referenceLinks = [
+  {
+    label: 'AI Index Report (Stanford HAI)',
+    href: 'https://aiindex.stanford.edu/report/',
+  },
+  {
+    label: 'Epoch AI: inference price trends',
+    href: 'https://epoch.ai/data-insights/llm-inference-price-trends',
+  },
+  {
+    label: 'Andreessen Horowitz: LLMflation',
+    href: 'https://a16z.com/llmflation-llm-inference-cost/',
+  },
+  {
+    label: 'PubMed: administrative costs in U.S. and Canada',
+    href: 'https://pubmed.ncbi.nlm.nih.gov/31905376/',
+  },
+  {
+    label: 'PubMed: allocation of physician time in ambulatory practice',
+    href: 'https://pubmed.ncbi.nlm.nih.gov/27595430/',
+  },
+  {
+    label: 'AHA: Costs of Caring',
+    href: 'https://www.aha.org/costsofcaring',
+  },
+  {
+    label: 'The Register: AI-generated code discussion',
+    href: 'https://www.theregister.com/2025/04/30/microsoft_meta_autocoding/',
+  },
+];
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Research', href: '/research' },
+  { name: 'Surfing the AI Tidal Wave', href: '/research/surfing-ai-tidal-wave' },
+]);
+
+const webPage = buildWebPageSchema({
+  name: title,
+  description,
+  url: pageUrl,
+  image: ogImage,
+  hasBreadcrumb: true,
+  about: ['AI strategy', 'Healthcare operations', 'Theory of Constraints'],
+});
+
+const scholarlyArticle = buildScholarlyArticleSchema({
+  title,
+  description,
+  abstract,
+  url: pageUrl,
+  datePublished: publishedTime,
+  dateModified: modifiedTime,
+  authorName: 'John Sambrook',
+  image: ogImage,
+  pdfUrl,
+  version: '1.2',
+  keywords: tags,
+  citations: referenceLinks.map((ref) => ref.href),
+});
+
+const articleMeta = {
+  publishedTime,
+  modifiedTime,
+  author: 'John Sambrook',
+  tags,
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={description}
+  ogImage={ogImage}
+  ogImageAlt="Surfing the AI Tidal Wave discussion paper cover image"
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={[webPage, breadcrumb, scholarlyArticle]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/research" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-10 space-y-4">
+        <a href="/research" class="text-sm text-primary hover:text-primary/80"
+          >&larr; Back to Research</a
+        >
+        <h1 class="text-4xl sm:text-5xl">Surfing the AI Tidal Wave</h1>
+        <p class="text-xl text-muted-foreground">
+          A discussion paper for health systems facing rapid AI-driven cost and capability shifts.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a
+            href={pdfPath}
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-button bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm h-[42px] px-5 py-2"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Full PDF (v1.2)
+          </a>
+          <a
+            href="/insights/ai-facilitated-constraint-resolution"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-button border border-border hover:bg-accent/20 h-[42px] px-5 py-2"
+          >
+            Read Related Insight
+          </a>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>Abstract</h2>
+        <p>{abstract}</p>
+
+        <h2>Core Argument</h2>
+        <p>
+          The paper frames health systems as knowledge-work organizations where performance is
+          bounded by thinking quality multiplied by thinking throughput. AI changes the throughput
+          term rapidly. Systems thinking protects the quality term from degradation.
+        </p>
+
+        <h2>Highlights</h2>
+        <ul>
+          <li>Positions AI adoption as a strategic constraint decision, not a tooling decision.</li>
+          <li>
+            Describes the integration tax and why data liberation is often the real bottleneck.
+          </li>
+          <li>
+            Adds governance logic for trust, including human verification and explicit control
+            boundaries.
+          </li>
+          <li>
+            Uses concrete healthcare-adjacent examples: documentation, conflict detection, discharge
+            planning, and voice agents.
+          </li>
+        </ul>
+
+        <h2>Recommended Reading Mode</h2>
+        <p>
+          Read this as a strategy paper, not a product pitch. It is intended to pressure-test
+          assumptions and guide sequencing decisions for leadership teams deciding where AI belongs
+          in the operating model.
+        </p>
+
+        <h2>Publication Metadata</h2>
+        <ul>
+          <li><strong>Author:</strong> John Sambrook</li>
+          <li><strong>Document type:</strong> Discussion paper</li>
+          <li><strong>Version:</strong> 1.2</li>
+          <li><strong>Initial release:</strong> December 2025</li>
+          <li><strong>Current revision:</strong> December 2025</li>
+        </ul>
+
+        <h2>References and Sources</h2>
+        <ul>
+          {
+            referenceLinks.map((ref) => (
+              <li>
+                <a href={ref.href} target="_blank" rel="noopener">
+                  {ref.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

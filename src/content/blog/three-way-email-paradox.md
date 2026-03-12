@@ -2,7 +2,7 @@
 title: 'The Three-Way Email Paradox: Why Warm Introductions Beat Your Entire LinkedIn Network'
 description: 'The math is clear: 12 genuine advocates beat 500 LinkedIn connections. A Kirkland business owner explains why three-way email intros actually convert.'
 date: 2026-02-16
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Networking', 'Sales', 'Small Business', 'Practical Tips']
 imageAlt: 'Three-way email introduction diagram comparing warm referral conversion rates versus cold LinkedIn outreach'
@@ -109,3 +109,9 @@ A three-way email takes four minutes to write and carries more weight than a yea
 Stop chasing connections. Start building advocates.
 
 Common Sense Systems helps business owners identify what's actually constraining their growth---whether that's operations, strategy, or the way they're trying to generate new business. If you're working harder than ever but not seeing the results, [book a free consultation](/contact) and let's figure out what's really going on.
+
+## Sources
+
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)
+- [U.S. Census: Statistics of U.S. Businesses](https://www.census.gov/programs-surveys/susb.html)

@@ -4,7 +4,7 @@ description: 'A framework for turning complex inputs into choices stakeholders c
 metaTitle: 'Decision-Ready Beats Presentation-Ready'
 metaDescription: 'A framework for turning complex inputs into choices stakeholders can act on.'
 date: 2026-01-15
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Decision-Making', 'Frameworks']
 imageAlt: 'One-page decision brief replacing a thick presentation deck showing a decision-ready framework'
@@ -40,3 +40,11 @@ Start by asking: "What decision does this work need to support?" If you can't an
 Then work backwards. What does the decision-maker need to see to choose confidently? That's your scope. Everything else is noise.
 
 The shift from presentation-ready to decision-ready isn't about doing less work. It's about doing the right work—and having the courage to present a clear recommendation instead of hiding behind comprehensiveness.
+
+## Sources
+
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [Throughput accounting (Wikipedia)](https://en.wikipedia.org/wiki/Throughput_accounting)
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)

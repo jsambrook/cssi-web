@@ -4,6 +4,7 @@ description: 'You built a practice around work you love. Now it is full, and som
 metaTitle: 'Business Is Full But Something Is Missing | Common Sense Systems'
 metaDescription: 'Your practice is full but something feels off. A guide for wellness practitioners to find what is limiting their satisfaction and fix it.'
 date: 2026-03-04
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Small Business', 'Operations']
 imageAlt: 'Wellness practitioner reviewing her schedule, looking for what to change'
@@ -15,7 +16,7 @@ A full schedule is not the same as a thriving practice. When every hour is booke
 
 ---
 
-<img src="/images/content/full-schedule-wrong-mix.jpg" alt="Infographic showing the hidden conflict between revenue needs and meaning needs in a full practice, with the assumption that every hour must generate the same revenue, and a four-step path forward" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/full-schedule-wrong-mix.webp" alt="Infographic showing the hidden conflict between revenue needs and meaning needs in a full practice, with the assumption that every hour must generate the same revenue, and a four-step path forward" width="1408" height="768" loading="lazy" decoding="async" />
 
 Lori is a licensed massage therapist, three years into running her own practice. She is good at what she does. Her schedule is full. She has a waitlist. By most measures, the business is working.
 
@@ -94,3 +95,11 @@ When the vehicle starts consuming all the fuel, something has gone wrong structu
 That might be the client mix. It might be the pricing model. It might be the way administrative work eats into recovery time. It might be a policy or habit that made sense two years ago and does not anymore. Whatever it is, it is almost always one thing, and finding it changes more than you expect.
 
 If something in this resonated and you want to think through what it looks like for your specific practice, I am happy to have that conversation. Reach me at [john@common-sense.com](mailto:john@common-sense.com).
+
+## Sources
+
+- [INCOSE Systems Engineering Handbook](https://www.incose.org/products-and-publications/se-handbook)
+- [Little's Law](https://en.wikipedia.org/wiki/Little%27s_law)
+- [Critical Chain project management](https://en.wikipedia.org/wiki/Critical_chain_project_management)
+- [SBA business guide](https://www.sba.gov/business-guide)
+- [IRS small business and self-employed resources](https://www.irs.gov/businesses/small-businesses-self-employed)

@@ -4,6 +4,7 @@ description: 'Why good people in well-run hospitals still end up in the wrong co
 metaTitle: 'The Meeting Could Not Have Gone Differently | CSSI, Kirkland, WA'
 metaDescription: 'Hospital boards drift toward institutional consensus over community advocacy. The cause is structural, not personal. AI might offer a new kind of counterweight.'
 date: 2026-02-26
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'Systems', 'AI', 'Strategy', 'Leadership']
 imageAlt: 'Infographic showing the co-optation cycle in hospital governance and how AI could serve as a structural counterweight for community interests'
@@ -15,7 +16,7 @@ Hospital governance suffers from a structural problem called co-optation: oversi
 
 ---
 
-<img src="/images/content/hospital-governance-cooptation-cycle.png" alt="Infographic showing the co-optation cycle in hospital governance: community elects part-time commissioners, commissioners depend on executives for information, departments advocate for more resources, board optimizes for smooth governance, and community interest loses its voice — with AI as the missing counterweight" width="1408" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/hospital-governance-cooptation-cycle.webp" alt="Infographic showing the co-optation cycle in hospital governance: community elects part-time commissioners, commissioners depend on executives for information, departments advocate for more resources, board optimizes for smooth governance, and community interest loses its voice — with AI as the missing counterweight" width="1408" height="768" loading="lazy" decoding="async" />
 
 I sat in a community hospital board meeting recently and watched three clinical departments present their growth strategies to the commissioners. Cardiology. Musculoskeletal. Gastroenterology. Each department had done its homework. Each had data. Each had a clear message for the board: we need more space.
 
@@ -78,3 +79,11 @@ I could be wrong about this. I welcome the pushback as much as the agreement. If
 [^3]: For principal-agent dynamics in healthcare governance specifically, see Derick Brinkerhoff and Thomas Bossert, "Health Governance: Principal-Agent Linkages and Health System Strengthening," _Health Policy and Planning_ 29, no. 6 (2014): 685-93.
 
 [^4]: Eliyahu M. Goldratt, _It's Not Luck_ (Great Barrington, MA: North River Press, 1994). The principle recurs throughout Goldratt's body of work, particularly in his framing of Evaporating Clouds as tools for resolving system conflicts without compromise.
+
+## Sources
+
+- [Selznick (1949): TVA and the Grass Roots](https://www.jstor.org/stable/2086756)
+- [Principal-agent problem (overview)](https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem)
+- [Theory of Constraints in healthcare: systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC8812771/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [OECD AI Principles](https://oecd.ai/en/ai-principles)

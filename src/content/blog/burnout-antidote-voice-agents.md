@@ -4,7 +4,7 @@ description: "Discover how voice agents transform healthcare's most painful conv
 metaTitle: 'Voice Agents as a Burnout Antidote in Healthcare'
 metaDescription: 'Voice agents reduce friction in claims, billing, and admin calls, helping healthcare teams protect staff well-being while improving patient interactions.'
 date: 2025-08-17
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Voice Agents', 'Healthcare']
 imageAlt: 'Voice agent interface handling healthcare insurance calls to reduce staff burnout in clinical settings'
@@ -139,3 +139,11 @@ Sarah Martinez deserves to go home feeling like she helped people, not fought ba
 **Call us: (425) 501-9074**
 
 Let's discuss how voice agents can become the burnout antidote your organization needs.
+
+## Sources
+
+- [Allocation of physician time (time-and-motion study)](https://pubmed.ncbi.nlm.nih.gov/27595430/)
+- [National Academy of Medicine: Taking Action Against Clinician Burnout](https://www.ncbi.nlm.nih.gov/books/NBK552618/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [OECD AI Principles](https://oecd.ai/en/ai-principles)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

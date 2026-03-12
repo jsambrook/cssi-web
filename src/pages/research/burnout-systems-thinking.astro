@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Section from '../../components/Section.astro';
+import { getPageTitle, headerDefaults, footerDefaults } from '../../data/pageDefaults';
+import {
+  buildBreadcrumbSchema,
+  buildScholarlyArticleSchema,
+  buildWebPageSchema,
+} from '../../data/schema';
+import { siteConfig } from '../../data/site';
+
+const title =
+  'Why Burnout Persists: Applying Systems Thinking to Structural Conflicts and Unexamined Assumptions in Healthcare';
+const seoTitle = getPageTitle('Why Burnout Persists Paper');
+const description =
+  'Systems-thinking whitepaper showing why clinician burnout persists when organizations apply individual coping interventions to structural conflicts.';
+const abstract =
+  'This paper reframes burnout as a structural systems problem, not an individual resilience problem. It applies Theory of Constraints conflict logic to show how healthcare organizations can simultaneously demand maximum throughput and workforce protection without redesigning the governing assumptions.';
+const pageUrl = `${siteConfig.siteUrl}/research/burnout-systems-thinking`;
+const pdfPath = '/assets/files/research/burnout/healthcare-burnout-systems-thinking.pdf';
+const pdfUrl = `${siteConfig.siteUrl}${pdfPath}`;
+const ogImage = '/images/research/burnout-systems-thinking.png';
+
+const publishedTime = '2025-11-10T20:06:10.000Z';
+const modifiedTime = '2025-11-10T20:06:18.000Z';
+const tags = [
+  'Healthcare workforce',
+  'Burnout',
+  'Moral injury',
+  'Theory of Constraints',
+  'Systems thinking',
+];
+
+const referenceLinks = [
+  {
+    label: 'National Academy of Medicine: Taking Action Against Clinician Burnout',
+    href: 'https://www.ncbi.nlm.nih.gov/books/NBK552618/',
+  },
+  {
+    label: 'Allocation of physician time in ambulatory practice',
+    href: 'https://pubmed.ncbi.nlm.nih.gov/27595430/',
+  },
+  {
+    label: 'Occupational Safety: Ionizing radiation requirements (29 CFR 1910.1096)',
+    href: 'https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910/section-1910.1096',
+  },
+  {
+    label: 'Occupational Safety: Bloodborne pathogens standard (29 CFR 1910.1030)',
+    href: 'https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910/section-1910.1030',
+  },
+  {
+    label: 'Occupational dose limits for general employees (10 CFR 835.202)',
+    href: 'https://www.ecfr.gov/current/title-10/chapter-III/part-835/section-835.202',
+  },
+  {
+    label: 'NIST AI Risk Management Framework',
+    href: 'https://www.nist.gov/itl/ai-risk-management-framework',
+  },
+  {
+    label: 'AHRQ patient safety culture resources',
+    href: 'https://www.ahrq.gov/sops/index.html',
+  },
+];
+
+const breadcrumb = buildBreadcrumbSchema([
+  { name: 'Home', href: '/' },
+  { name: 'Research', href: '/research' },
+  { name: 'Burnout Systems Thinking Paper', href: '/research/burnout-systems-thinking' },
+]);
+
+const webPage = buildWebPageSchema({
+  name: title,
+  description,
+  url: pageUrl,
+  image: ogImage,
+  hasBreadcrumb: true,
+  about: ['Healthcare operations', 'Theory of Constraints', 'Burnout'],
+});
+
+const scholarlyArticle = buildScholarlyArticleSchema({
+  title,
+  description,
+  abstract,
+  url: pageUrl,
+  datePublished: publishedTime,
+  dateModified: modifiedTime,
+  authorName: 'John Sambrook',
+  image: ogImage,
+  pdfUrl,
+  keywords: tags,
+  citations: referenceLinks.map((ref) => ref.href),
+});
+
+const articleMeta = {
+  publishedTime,
+  modifiedTime,
+  author: 'John Sambrook',
+  tags,
+};
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={description}
+  ogImage={ogImage}
+  ogImageAlt="Why Burnout Persists whitepaper cover image"
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={[webPage, breadcrumb, scholarlyArticle]}
+>
+  <Header slot="header" {...headerDefaults} currentPath="/research" />
+
+  <Section>
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-10 space-y-4">
+        <a href="/research" class="text-sm text-primary hover:text-primary/80"
+          >&larr; Back to Research</a
+        >
+        <h1 class="text-4xl sm:text-5xl">Why Burnout Persists</h1>
+        <p class="text-xl text-muted-foreground">
+          Applying systems thinking to structural conflicts and unexamined assumptions in
+          healthcare.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a
+            href={pdfPath}
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-button bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm h-[42px] px-5 py-2"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Full PDF
+          </a>
+          <a
+            href="/insights/why-burnout-persists-series"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-button border border-border hover:bg-accent/20 h-[42px] px-5 py-2"
+          >
+            Read Related Insights
+          </a>
+        </div>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        <h2>Abstract</h2>
+        <p>{abstract}</p>
+
+        <h2>Core Thesis</h2>
+        <p>
+          Burnout persists because organizations attempt to solve structural conflicts with
+          individual-level interventions. The paper argues that this is logically equivalent to
+          treating recurrent system defects as personal performance failures.
+        </p>
+
+        <h2>What This Paper Adds</h2>
+        <ul>
+          <li>
+            Reframes psychological trauma exposure as an occupational hazard category that deserves
+            systems-level safeguards.
+          </li>
+          <li>
+            Uses TOC conflict logic to expose the contradiction between workforce protection and
+            unchanged throughput assumptions.
+          </li>
+          <li>
+            Distinguishes symptom management from root-cause resolution and proposes an
+            implementation posture for leaders.
+          </li>
+        </ul>
+
+        <h2>Practical Implications for Leadership</h2>
+        <ol>
+          <li>Treat burnout as a design signal, not a motivation signal.</li>
+          <li>Map unresolved conflicts explicitly before selecting interventions.</li>
+          <li>Prioritize policy and workflow redesign over additional resilience programming.</li>
+          <li>
+            Install operating metrics that capture exposure, recoverability, and staffing pressure
+            at system level.
+          </li>
+        </ol>
+
+        <h2>Publication Metadata</h2>
+        <ul>
+          <li><strong>Author:</strong> John Sambrook</li>
+          <li><strong>Document type:</strong> Whitepaper</li>
+          <li><strong>Initial release:</strong> November 2025</li>
+        </ul>
+
+        <h2>References and Sources</h2>
+        <ul>
+          {
+            referenceLinks.map((ref) => (
+              <li>
+                <a href={ref.href} target="_blank" rel="noopener">
+                  {ref.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </Section>
+
+  <Footer slot="footer" {...footerDefaults} />
+</BaseLayout>

@@ -1,13 +1,13 @@
 ---
 title: 'After the Meeting'
-description: 'A Chief Nursing Officer processes what happened at the board meeting — and discovers that the structural conflicts she has been managing for years have a name. Episode 02 of the Cascade Valley audio drama series.'
-metaTitle: 'After the Meeting — What the CNO Found When She Looked | Common Sense Systems'
-metaDescription: 'After an AI disrupts a hospital board meeting, the Chief Nursing Officer pulls on a thread and discovers structural conflicts embedded in every nursing contract in the state.'
+description: 'A Chief Nursing Officer processes what happened at the board meeting -- and discovers that the structural conflicts she has been managing for years have a name. Episode 02 of the Cascade Valley audio drama series.'
+metaTitle: 'After the Meeting -- What the CNO Found | Common Sense Systems'
+metaDescription: 'After an AI disrupts a hospital board meeting, the Chief Nursing Officer discovers structural conflicts embedded in every nursing contract in the state.'
 date: 2026-03-07
 author: 'John Sambrook'
 tags: ['Healthcare', 'AI', 'Workforce', 'Labor Relations', 'Theory of Constraints', 'Systems']
 imageAlt: 'A woman sitting alone at a kitchen table late at night, laptop open, reading an article that names something she has been living inside for years'
-draft: true
+draft: false
 ---
 
 ## TL;DR
@@ -30,7 +30,7 @@ But something about the evening will not leave her alone. Not Sam's 23% utilizat
 
 ## What she finds
 
-On the Common Sense Systems website, Fleming finds an article titled "Structural Conflicts in WA State Nursing Agreements." It describes an analysis of ten collective bargaining agreements across Washington State hospitals. The analysis identified 134 structural conflicts, places where two provisions in the same contract contradict each other. Four of those conflicts appear in every single agreement examined.
+On the Common Sense Systems website, Fleming finds an article titled ["Structural Conflicts in WA State Nursing Agreements."](/insights/nursing-conflict) It describes an analysis of ten collective bargaining agreements across Washington State hospitals. The analysis identified 134 structural conflicts, places where two provisions in the same contract contradict each other. Four of those conflicts appear in every single agreement examined.
 
 Meal and rest breaks versus continuous patient monitoring. Low census staffing reductions versus income security. Floating to understaffed units versus competency protections. Schedule stability versus operational flexibility.
 
@@ -56,17 +56,16 @@ The most obvious: Article 7 guarantees uninterrupted 30-minute meal breaks. Arti
 
 Jess found this in one evening with her phone. Fleming has been filing grievance responses about it for six years.
 
-<!-- TODO: Embed YouTube video here once published -->
-<!-- <div class="aspect-video my-8">
+<div class="aspect-video my-8">
   <iframe
-    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-    title="After the Meeting — Cascade Valley Health System, Episode 02"
+    src="https://www.youtube.com/embed/qwDgqm8r6K8"
+    title="After the Meeting -- Cascade Valley Health System, Episode 02"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
     class="w-full h-full"
   ></iframe>
-</div> -->
+</div>
 
 ## What is real here
 
@@ -95,3 +94,11 @@ This is Episode 02 of the Cascade Valley series. [Episode 01](/insights/the-meet
 If you work in hospital administration, nursing leadership, or labor relations, and the structural conflicts described in this episode match what you see in your own contracts, I would welcome the conversation. The analysis covered ten Washington State CBAs, but the patterns are not unique to Washington. Every state with unionized nursing staff has some version of these contradictions.
 
 The question is not whether the conflicts exist. It is whether anyone is working on resolving them structurally rather than managing them grievance by grievance. If you are interested in that question, reach out. john@common-sense.com.
+
+---
+
+## Sources
+
+- [Structural Conflicts in WA State Nursing Agreements](/insights/nursing-conflict) — the analysis Fleming discovers, covering 10 CBAs and 134 structural conflicts.
+- [Hidden Conflicts in Healthcare](/insights/hidden-conflicts) — a related Theory of Constraints analysis of structural conflicts embedded in a hospital financial assistance policy.
+- [Why Burnout Persists](/insights/why-burnout-persists-series) — a four-part series on the structural drivers of clinician burnout, including workload and schedule design.

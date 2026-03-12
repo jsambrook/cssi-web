@@ -1,5 +1,40 @@
 import { siteConfig, footerContact } from './site';
 
+function toTrailingSlashUrl(rawUrl: string): string {
+  try {
+    const parsed = new URL(rawUrl);
+    if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+      return rawUrl;
+    }
+    if (!parsed.pathname.endsWith('/')) {
+      parsed.pathname = `${parsed.pathname}/`;
+    }
+    return parsed.toString();
+  } catch {
+    return rawUrl;
+  }
+}
+
+function toSiteUrl(href: string): string {
+  return toTrailingSlashUrl(new URL(href, `${siteConfig.siteUrl}/`).toString());
+}
+
+function toAbsoluteUrl(rawUrl: string): string {
+  try {
+    return new URL(rawUrl, `${siteConfig.siteUrl}/`).toString();
+  } catch {
+    return rawUrl;
+  }
+}
+
+function toIdFragment(value: string): string {
+  const normalized = value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  return normalized || 'item';
+}
+
 export function parseAddress(raw: string) {
   // "11227 NE 128th St Unit I-102\nKirkland, WA 98034"
   const parts = raw.split('\n');
@@ -30,7 +65,6 @@ const organizationSameAs = [
   'https://www.linkedin.com/company/common-sense-systems',
   siteConfig.xProfileUrl,
   siteConfig.youtubeUrl,
-  'https://www.bbb.org/us/wa/bothell/profile/computer-hardware/common-sense-systems-inc-1296-22175271',
   'https://maps.google.com/?cid=14125900726605051430', // Google Business Profile
 ];
 
@@ -91,16 +125,63 @@ const founderKnowsAbout = [
 const founderCredentials = [
   {
     '@type': 'EducationalOccupationalCredential',
-    name: 'TOC Jonah (Thinking Processes Implementer)',
+    name: 'TOC Strategic Thinking Process Program "Jonah"',
+    credentialCategory: 'Jonah',
+    dateIssued: '2026-03-09',
+    url: 'https://certification.tocico.org/c/af19a4409f7c4932a4a001d1e502da74',
     recognizedBy: {
       '@type': 'Organization',
       name: 'TOCICO',
       url: 'https://www.tocico.org/',
     },
     about: {
-      '@type': 'DefinedTerm',
-      name: 'TOC Thinking Processes',
-      url: 'https://www.tocico.org/page/Jonah',
+      '@type': 'Course',
+      name: 'EM-526 — Theory of Constraints',
+      provider: {
+        '@type': 'CollegeOrUniversity',
+        name: 'Washington State University',
+        url: 'https://wsu.edu/',
+      },
+      instructor: {
+        '@type': 'Person',
+        name: 'Dr. James Holt',
+      },
+    },
+  },
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'TOC Fundamentals Certified (TOCFC)',
+    credentialCategory: 'Fundamentals',
+    dateIssued: '2005-10-22',
+    url: 'https://certification.tocico.org/c/471100d8a1bd4f7db67f460e44efbfd8',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
+    },
+  },
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Thinking Processes Practitioner (TOCPC)',
+    credentialCategory: 'Practitioner',
+    dateIssued: '2006-02-11',
+    url: 'https://certification.tocico.org/c/478880575b5f4b23add2965c17744b00',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
+    },
+  },
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Critical Chain Project Management Practitioner (TOCPC)',
+    credentialCategory: 'Practitioner',
+    dateIssued: '2006-11-08',
+    url: 'https://certification.tocico.org/c/3278f3d6305d4fc4b9fc6a06f4d79723',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'TOCICO',
+      url: 'https://www.tocico.org/',
     },
   },
 ];
@@ -113,6 +194,39 @@ const founderAlumni = [
   },
 ];
 
+const aboutTermSameAs: Record<string, string[]> = {
+  'Theory of Constraints': [
+    'https://en.wikipedia.org/wiki/Theory_of_constraints',
+    'https://www.tocico.org/',
+  ],
+  'Five Focusing Steps': [
+    'https://en.wikipedia.org/wiki/Theory_of_constraints#The_five_focusing_steps',
+  ],
+  'Evaporating Cloud': ['https://en.wikipedia.org/wiki/Evaporating_Cloud'],
+  'Current Reality Tree': [
+    'https://en.wikipedia.org/wiki/Current_reality_tree_(theory_of_constraints)',
+  ],
+  'Future Reality Tree': ['https://en.wikipedia.org/wiki/Future_reality_tree'],
+  'Critical Chain Project Management': [
+    'https://en.wikipedia.org/wiki/Critical_chain_project_management',
+  ],
+  'Lean manufacturing': ['https://en.wikipedia.org/wiki/Lean_manufacturing'],
+  'Value stream mapping': ['https://en.wikipedia.org/wiki/Value-stream_mapping'],
+  'Healthcare operations': ['https://en.wikipedia.org/wiki/Health_system'],
+};
+
+function toAboutThing(term: string): Record<string, unknown> {
+  const thing: Record<string, unknown> = {
+    '@type': 'Thing',
+    name: term,
+  };
+  const sameAs = aboutTermSameAs[term];
+  if (sameAs && sameAs.length > 0) {
+    thing.sameAs = sameAs;
+  }
+  return thing;
+}
+
 export function buildOrganizationSchema(): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
@@ -120,7 +234,7 @@ export function buildOrganizationSchema(): Record<string, unknown> {
     '@id': `${siteConfig.siteUrl}/#organization`,
     name: siteConfig.name,
     description: siteConfig.defaultDescription,
-    url: siteConfig.siteUrl,
+    url: toTrailingSlashUrl(siteConfig.siteUrl),
     telephone: footerContact.phones[0],
     email: footerContact.email,
     foundingDate: '1996',
@@ -147,7 +261,7 @@ export function buildWebSiteSchema(): Record<string, unknown> {
     '@type': 'WebSite',
     '@id': `${siteConfig.siteUrl}/#website`,
     name: siteConfig.name,
-    url: siteConfig.siteUrl,
+    url: toTrailingSlashUrl(siteConfig.siteUrl),
   };
 }
 
@@ -155,15 +269,75 @@ export function buildWebPageSchema(options: {
   name: string;
   description: string;
   url: string;
+  inLanguage?: string;
+  image?: string;
+  datePublished?: string;
+  dateModified?: string;
+  about?: string[];
+  hasBreadcrumb?: boolean;
 }): Record<string, unknown> {
-  return {
+  const pageUrl = toTrailingSlashUrl(options.url);
+  const imageUrl = toAbsoluteUrl(options.image ?? siteConfig.defaultOgImage);
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': pageUrl,
     name: options.name,
     description: options.description,
-    url: options.url,
+    url: pageUrl,
+    inLanguage: options.inLanguage ?? 'en-US',
     isPartOf: { '@id': `${siteConfig.siteUrl}/#website` },
+    publisher: { '@id': `${siteConfig.siteUrl}/#organization` },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: imageUrl,
+    },
+    image: imageUrl,
   };
+
+  if (options.datePublished) {
+    schema.datePublished = options.datePublished;
+  }
+  if (options.dateModified ?? options.datePublished) {
+    schema.dateModified = options.dateModified ?? options.datePublished;
+  }
+  if (options.about && options.about.length > 0) {
+    schema.about = options.about.map((term) => toAboutThing(term));
+  }
+  if (options.hasBreadcrumb) {
+    schema.breadcrumb = { '@id': `${pageUrl}#breadcrumb` };
+  }
+
+  return schema;
+}
+
+const serviceCatalog = [
+  {
+    name: 'Constraint Analysis',
+    description:
+      'Identify the single constraint limiting your organization and fix it. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
+    anchorId: 'service-constraint-analysis',
+  },
+  {
+    name: 'Offer Analysis',
+    description:
+      'Diagnose why your market offer is not differentiating and build one your ideal client cannot refuse. Two to four weeks, $15,000 fixed fee, satisfaction guarantee.',
+    anchorId: 'service-offer-analysis',
+  },
+];
+
+function toOfferList(options?: { includeUrl: boolean }): Record<string, unknown>[] {
+  return serviceCatalog.map((svc) => {
+    const itemOffered: Record<string, unknown> = {
+      '@type': 'Service',
+      name: svc.name,
+      description: svc.description,
+    };
+    if (options?.includeUrl) {
+      itemOffered.url = `${siteConfig.siteUrl}/#${svc.anchorId}`;
+    }
+    return { '@type': 'Offer', itemOffered };
+  });
 }
 
 export function buildProfessionalServiceSchema(): Record<string, unknown> {
@@ -172,7 +346,7 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     '@type': 'ProfessionalService',
     '@id': `${siteConfig.siteUrl}/#professional-service`,
     name: siteConfig.name,
-    url: siteConfig.siteUrl,
+    url: toTrailingSlashUrl(siteConfig.siteUrl),
     telephone: footerContact.phones[0],
     email: footerContact.email,
     address: {
@@ -196,41 +370,15 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
     knowsAbout: [
       'Theory of Constraints',
       'Throughput Accounting',
-      'Healthcare Patient Flow',
-      'Medical Device Commercialization',
+      'Constraint Analysis',
+      'Offer Strategy',
+      'Healthcare Operations',
       'Embedded Systems Engineering',
-      'Mafia Offers (Strategy)',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Operational Interventions',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Flow Dynamics & Throughput',
-            description:
-              'Rapid intervention for gridlocked systems (Patient Flow or R&D Pipelines).',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Market Offer Architecture',
-            description: "Designing 'Mafia Offers' that competitors cannot replicate.",
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Cross-Functional Synchronization',
-            description: 'Aligning Sales, Ops, and Engineering to a single constraint.',
-          },
-        },
-      ],
+      name: 'Consulting Services',
+      itemListElement: toOfferList(),
     },
     founder: {
       '@type': 'Person',
@@ -264,15 +412,12 @@ export function buildProfessionalServiceSchema(): Record<string, unknown> {
       },
     ],
     serviceType: [
-      'Healthcare Systems Consulting',
-      'Hospital Operations Consulting',
       'Theory of Constraints Consulting',
-      'Healthcare AI Consulting',
-      'Complex Discharge Analysis',
-      'Operational Constraint Analysis',
-      'Sales Process Engineering',
+      'Constraint Analysis',
+      'Offer Strategy',
+      'Operational Improvement',
       'Business Process Improvement',
-      'Organizational Constraint Analysis',
+      'Healthcare Operations Consulting',
     ],
     sameAs: organizationSameAs,
   };
@@ -285,6 +430,9 @@ export function buildFounderSchema(): Record<string, unknown> {
     '@id': `${siteConfig.siteUrl}/#founder`,
     name: 'John Sambrook',
     jobTitle: 'Systems Architect & Constraint Analyst',
+    description:
+      'TOC Jonah Certified systems architect and constraint analyst with deep expertise in healthcare operations, medical device software, and throughput-based improvement.',
+    image: `${siteConfig.siteUrl}/images/headshots/john-sambrook-headshot-1200.jpg`,
     worksFor: {
       '@id': `${siteConfig.siteUrl}/#organization`,
     },
@@ -296,7 +444,7 @@ export function buildFounderSchema(): Record<string, unknown> {
     knowsAbout: founderKnowsAbout,
     hasCredential: founderCredentials,
     alumniOf: founderAlumni,
-    url: `${siteConfig.siteUrl}/about`,
+    url: toSiteUrl('/about'),
     sameAs: [
       'https://www.linkedin.com/in/johnsambrook',
       siteConfig.xProfileUrl,
@@ -310,75 +458,9 @@ export function buildOfferCatalogSchema(): Record<string, unknown> {
     '@context': 'https://schema.org',
     '@type': 'OfferCatalog',
     name: `${siteConfig.name} Services`,
-    description: 'Constraint-based consulting for healthcare and technology leaders.',
-    itemListElement: [
-      {
-        '@type': 'OfferCatalog',
-        name: 'Healthcare Leadership Services',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Flow Dynamics & Throughput',
-              description:
-                'Accelerate patient flow, slash length of stay, and eliminate ED boarding without adding staff.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Market Offer Architecture',
-              description:
-                'Direct-to-employer contracting and network integrity strategies that bypass insurance friction.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Synchronization & Alignment',
-              description:
-                'Unify ED, inpatient, and discharge teams so the entire hospital moves as one synchronized system.',
-            },
-          },
-        ],
-      },
-      {
-        '@type': 'OfferCatalog',
-        name: 'Tech & Product Leadership Services',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Flow Dynamics & Throughput',
-              description:
-                'Accelerate R&D and slash time-to-market by identifying the bottleneck in your dev cycle.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Market Offer Architecture',
-              description:
-                'Risk-shared licensing and recurring revenue models that align with customer utility.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Synchronization & Alignment',
-              description:
-                'Align product roadmaps with sales promises through operational handshakes.',
-            },
-          },
-        ],
-      },
-    ],
+    description:
+      'Constraint analysis and offer strategy for organizations. Fixed fee, fixed timeline, satisfaction guarantee.',
+    itemListElement: toOfferList({ includeUrl: true }),
   };
 }
 
@@ -393,20 +475,21 @@ export function buildArticleSchema(options: {
   tags?: string[];
   wordCount?: number;
 }): Record<string, unknown> {
+  const articleUrl = toTrailingSlashUrl(options.url);
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    '@id': options.url,
+    '@id': articleUrl,
     headline: options.title,
     description: options.description,
     inLanguage: 'en-US',
     isAccessibleForFree: true,
     datePublished: options.datePublished,
     dateModified: options.dateModified ?? options.datePublished,
-    url: options.url,
+    url: articleUrl,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': options.url,
+      '@id': articleUrl,
     },
     author: {
       '@id': `${siteConfig.siteUrl}/#founder`,
@@ -417,7 +500,7 @@ export function buildArticleSchema(options: {
     isPartOf: {
       '@type': 'Blog',
       name: `${siteConfig.name} Insights`,
-      url: `${siteConfig.siteUrl}/insights`,
+      url: toSiteUrl('/insights'),
     },
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -437,18 +520,86 @@ export function buildArticleSchema(options: {
   return schema;
 }
 
+export function buildScholarlyArticleSchema(options: {
+  title: string;
+  description: string;
+  abstract: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  authorName?: string;
+  image?: string;
+  pdfUrl?: string;
+  version?: string;
+  keywords?: string[];
+  citations?: string[];
+}): Record<string, unknown> {
+  const articleUrl = toTrailingSlashUrl(options.url);
+  const imageUrl = toAbsoluteUrl(options.image ?? siteConfig.defaultOgImage);
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'ScholarlyArticle',
+    '@id': `${articleUrl}#scholarly-article`,
+    headline: options.title,
+    name: options.title,
+    description: options.description,
+    abstract: options.abstract,
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
+    datePublished: options.datePublished,
+    dateModified: options.dateModified ?? options.datePublished,
+    url: articleUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    author: {
+      '@id': `${siteConfig.siteUrl}/#founder`,
+      name: options.authorName ?? 'John Sambrook',
+    },
+    publisher: {
+      '@id': `${siteConfig.siteUrl}/#organization`,
+    },
+    image: imageUrl,
+  };
+
+  if (options.pdfUrl) {
+    schema.encoding = {
+      '@type': 'MediaObject',
+      encodingFormat: 'application/pdf',
+      contentUrl: toAbsoluteUrl(options.pdfUrl),
+    };
+  }
+  if (options.version) {
+    schema.version = options.version;
+  }
+  if (options.keywords && options.keywords.length > 0) {
+    schema.keywords = options.keywords;
+  }
+  if (options.citations && options.citations.length > 0) {
+    schema.citation = options.citations.map((url) => ({
+      '@type': 'CreativeWork',
+      url,
+    }));
+  }
+
+  return schema;
+}
+
 export function buildServiceSchema(options: {
   name: string;
   description: string;
   url: string;
   serviceType: string;
 }): Record<string, unknown> {
+  const serviceUrl = toTrailingSlashUrl(options.url);
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${serviceUrl}#service-${toIdFragment(options.name)}`,
     name: options.name,
     description: options.description,
-    url: options.url,
+    url: serviceUrl,
     serviceType: options.serviceType,
     provider: {
       '@id': `${siteConfig.siteUrl}/#organization`,
@@ -459,14 +610,18 @@ export function buildServiceSchema(options: {
 export function buildBreadcrumbSchema(
   items: { name: string; href: string }[]
 ): Record<string, unknown> {
+  const lastItemHref = items.length > 0 ? items[items.length - 1].href : '/';
+  const breadcrumbId = `${toSiteUrl(lastItemHref)}#breadcrumb`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': breadcrumbId,
     itemListElement: items.map((item, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,
-      item: `${siteConfig.siteUrl}${item.href}`,
+      item: toSiteUrl(item.href),
     })),
   };
 }
@@ -477,7 +632,7 @@ export function buildContactPageSchema(description: string): Record<string, unkn
     '@type': 'ContactPage',
     name: `Contact ${siteConfig.name}`,
     description,
-    url: `${siteConfig.siteUrl}/contact`,
+    url: toSiteUrl('/contact'),
     mainEntity: {
       '@id': `${siteConfig.siteUrl}/#organization`,
     },

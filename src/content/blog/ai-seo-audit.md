@@ -4,7 +4,7 @@ description: "A small business owner's account of running a complete SEO audit w
 metaTitle: 'I Fired My SEO Expert (And Hired Claude Code Instead)'
 metaDescription: 'How a small business owner ran a full SEO audit with Claude Code, fixed every issue the same day, and cut a $1,000/month expense to zero.'
 date: 2026-02-21
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Practical Tips', 'Small Business', 'Cost Reduction']
 imageAlt: 'Claude Code AI agent running a full website SEO audit in a terminal session for a small business'
@@ -115,7 +115,7 @@ With Claude Code, the gap is minutes. We went from "your meta descriptions are t
 
 Here's what that actually looks like. This is Claude Code editing my meta description, rebuilding the site, verifying the fix, and summarizing the changes -- all in one continuous flow:
 
-<img src="/images/content/ai-seo-audit-meta-fix.png" alt="Claude Code editing a meta description, rebuilding the site, and verifying the fix in a single workflow" width="2044" height="1372" loading="lazy" decoding="async" />
+<img src="/images/content/ai-seo-audit-meta-fix.webp" alt="Claude Code editing a meta description, rebuilding the site, and verifying the fix in a single workflow" width="2044" height="1372" loading="lazy" decoding="async" />
 
 The sitemap fix was more interesting. The static pages needed `<lastmod>` dates, but I didn't want to hardcode them -- that's one more thing to remember to update. Claude Code wrote a solution that reads the git commit history at build time. Every page's `<lastmod>` now reflects the most recent commit that touched its source files. When I edit a page and push, the sitemap date updates automatically. Zero maintenance.
 
@@ -171,3 +171,11 @@ Every month you keep paying for expertise that's available on demand through AI 
 ---
 
 If this interests you and you'd like to talk about it, I'd welcome the conversation. Or send me your website address -- I'll run a free review and show you what Googlebot actually sees when it crawls your site. No pitch, no obligation. You can reach me at [common-sense.com/contact](https://common-sense.com/contact).
+
+## Sources
+
+- [Google Search Essentials](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+- [Google canonicalization guidance](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)
+- [Google structured data guidance](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+- [Open Graph protocol](https://ogp.me/)
+- [X card: summary with large image](https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image)

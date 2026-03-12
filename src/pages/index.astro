@@ -4,8 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
-import IndustryToggle from '../components/IndustryToggle.astro';
-import ResultsSection from '../components/ResultsSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import GuaranteeSection from '../components/GuaranteeSection.astro';
 import CTASection from '../components/CTASection.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import { getPageTitle, headerDefaults, footerDefaults } from '../data/pageDefaults';
@@ -13,16 +13,16 @@ import {
   hero,
   ambitionCards,
   featuresSection,
-  serviceCards,
-  defaultIndustry,
+  serviceOffers,
+  guaranteeSection,
   cta,
 } from '../data/pages/home';
-import { intakeFormConfig } from '../data/intakeForm';
+
 import {
-  buildWebSiteSchema,
   buildProfessionalServiceSchema,
   buildWebPageSchema,
   buildOfferCatalogSchema,
+  buildFounderSchema,
 } from '../data/schema';
 import { siteConfig } from '../data/site';
 
@@ -34,13 +34,13 @@ const homeWebPage = buildWebPageSchema({
 ---
 
 <BaseLayout
-  title={getPageTitle('Operational Improvement & Constraint Analysis')}
-  description="Theory of Constraints consulting that breaks organizational bottlenecks. We find the constraint, design the fix, and scale the flow. Kirkland, WA."
+  title={getPageTitle("Find it. Fix it. Or don't pay.")}
+  description="We find the one thing limiting your organization and fix it. You only pay if we deliver. Fixed fee, fixed timeline, zero risk to you."
   jsonLd={[
-    buildWebSiteSchema(),
     homeWebPage,
     buildProfessionalServiceSchema(),
     buildOfferCatalogSchema(),
+    buildFounderSchema(),
   ]}
 >
   <Header slot="header" {...headerDefaults} currentPath={Astro.url.pathname} />
@@ -51,19 +51,27 @@ const homeWebPage = buildWebPageSchema({
     bullets={hero.bullets}
     primaryCta={hero.primaryCta}
     secondaryCta={hero.secondaryCta}
-    intakeForm={intakeFormConfig}
     ambitionCards={ambitionCards}
   />
 
-  <ResultsSection />
+  <!-- Legacy anchor: old nav linked to /#impact, scroll lands on guarantee -->
+  <div id="impact" class="scroll-mt-24"></div>
+
+  <GuaranteeSection
+    heading={guaranteeSection.heading}
+    statement={guaranteeSection.statement}
+    explanation={guaranteeSection.explanation}
+    reasons={guaranteeSection.reasons}
+  />
 
   <Section
+    id="services"
     background="muted"
     label={featuresSection.label}
     heading={featuresSection.heading}
     subheading={featuresSection.subheading}
   >
-    <IndustryToggle cards={serviceCards} defaultIndustry={defaultIndustry} />
+    <ServicesSection offers={serviceOffers} />
   </Section>
 
   <TestimonialsSection />

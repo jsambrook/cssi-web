@@ -4,6 +4,7 @@ description: 'A dramatized community hospital board meeting — fictional health
 metaTitle: 'The Meeting That Went Differently | Common Sense Systems'
 metaDescription: 'Forty-minute audio drama of a fictional community hospital board meeting where an AI named Sam changes what gets asked — and what gets decided.'
 date: 2026-03-02
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Healthcare', 'AI', 'Systems', 'Strategy', 'Leadership', 'Theory of Constraints']
 ogImage: '/images/content/the-meeting-that-went-differently.png'
@@ -16,7 +17,7 @@ Last week I argued that a community hospital board meeting I attended could not 
 
 ---
 
-<img src="/images/content/the-meeting-that-went-differently.png" alt="A hospital board meeting room at evening session — commissioners at a curved wooden dais, a full audience, and at the far end of the dais an empty position holding a sleek terminal and a slender amber indicator light" width="1376" height="768" loading="lazy" decoding="async" />
+<img src="/images/content/the-meeting-that-went-differently.webp" alt="A hospital board meeting room at evening session — commissioners at a curved wooden dais, a full audience, and at the far end of the dais an empty position holding a sleek terminal and a slender amber indicator light" width="1376" height="768" loading="lazy" decoding="async" />
 
 Last week I published a piece called ["The Meeting That Could Not Have Gone Differently."](/insights/the-meeting-that-could-not-have-gone-differently) The argument, briefly: I sat in on a community hospital board meeting where three clinical departments each presented compelling cases for more physical space. A cath lab. More operating rooms. An endoscopy suite. Between nineteen and twenty-nine million dollars in combined capital requests. The board received the presentations, asked a few good questions, and the conversation stayed on space. Nobody was dishonest. Nobody had a hidden agenda. The outcome was baked into the structure of the meeting before anyone sat down.
 
@@ -73,7 +74,7 @@ Sam: "Please do, Ms. Fleming."
 
 Commissioner Tanaka, the engineer on the board, is the one who cuts through the procedural debate near the end. Commissioner Marsh has raised the legitimate concern that a six-week analysis will delay capital planning already in motion. Tanaka's response is brief: "Sam is not asking us to stop. He is asking us to also look. Those are different things."
 
-The board votes seven to zero to commission a parallel constraint analysis. All existing capital planning activities continue on their current schedule. Sam will be an analytical participant in the working group — not as a courtesy, either.
+The board votes seven to zero to commission a parallel [constraint analysis](/approach/theory-of-constraints). All existing capital planning activities continue on their current schedule. Sam will be an analytical participant in the working group — not as a courtesy, either.
 
 ## The fiction and the fact
 
@@ -90,3 +91,11 @@ The harder question, which the drama deliberately leaves open, is whether the pe
 The script was written collaboratively with Claude — I provided the scenario, the characters, the argument structure, and the specific dynamics I wanted to portray; Claude shaped it into dialogue. We went through several revisions. The image above and the audio production are similarly AI-assisted. I am not hiding that. This is what the work looks like now, and I think it is worth being transparent about it.
 
 If you work in hospital governance or healthcare operations, and this story resonated with you — or provoked you, or struck you as naive — I would welcome the conversation. You can reach me at john@common-sense.com.
+
+## Sources
+
+- [youtube.com/embed/h7vTTs2Hffo](https://www.youtube.com/embed/h7vTTs2Hffo)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

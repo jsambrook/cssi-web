@@ -10,8 +10,9 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Common Sense Systems delivered exactly what my business needed — clarity, efficiency and some real traction. Their AI-powered tools did so much more than just 'optimize' my workflow — they turned the whole way I operate on its head and gave me a completely new rhythm to day-to-day ops. Lead management got a whole lot tighter, a load of time-wasting tasks vanished overnight and for the first time decision making was actually backed up by data rather than just guesswork. What really stood out was how down-to-earth their approach was — none of that fluff, or over-selling — just a sensible system that actually works and a team that can really make AI count for real business. Within a couple of weeks I saved hours on admin and got a constant flow of genuine quality leads coming through the door. If you're serious about taking your business to the next level, sorting out your operations or just getting some of your time back, Common Sense Systems is certainly worth a look. They actually do what they say they will, which is a lot more than most AI companies can say.",
-    name: 'Eric Frank',
-    company: 'OnPar Bookkeeping',
+      "I've run enough companies to know the difference between \"competitive\" and unfair. At Applied Microsystems, we had an unfair advantage—and one of the clearest examples came from John Sambrook and the outstanding engineers he assembled and led.\n\nJohn's group built our symbolic debugger and intelligent trace disassembler. Other tools could show you pieces—addresses, disassembly, maybe a shaky stack trace. John's team built a reconstruction engine that turned raw trace data into a coherent, source-correlated story of what the target processor actually did, even with interrupts, optimized code, and messy control flow.\n\nHewlett-Packard was a giant competitor—great people, huge resources—but that kind of deep, reality-faithful tooling is hard for big organizations to justify and harder to execute. HP could sell tools. We could deliver the truth. And customers felt that immediately when they hit the hard bugs.",
+    name: 'Bob Deinhammer',
+    title: 'CEO',
+    company: 'Applied Microsystems',
   },
 ];

@@ -4,7 +4,7 @@ description: "Matt Shumer is right that AI is about to change everything. But th
 metaTitle: "The Biggest Satisficing Trap AI Breaks Isn't What You Think"
 metaDescription: "AI's biggest disruption is not job loss. It is exposing self-imposed limits and enabling people to build capabilities they once assumed required larger teams."
 date: 2026-02-12
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['AI', 'Agency', 'Strategy']
 imageAlt: 'Abstract visualization of AI breaking through self-imposed limits in knowledge work and strategy'
@@ -87,3 +87,11 @@ But the single most important thing AI does is not replace human work. It reveal
 I'd like to know: does this match your experience? Am I seeing something real, or am I too close to my own situation to see clearly? If you have a reaction -- agreement, disagreement, a story of your own -- I'd welcome the conversation.
 
 You can reach me at [common-sense.com/contact](https://common-sense.com/contact).
+
+## Sources
+
+- [fortune.com/2026/02/11/something-big-is-happening-ai-february-2020-moment-matt-shumer/](https://fortune.com/2026/02/11/something-big-is-happening-ai-february-2020-moment-matt-shumer/)
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [AHRQ patient safety culture resources](https://www.ahrq.gov/sops/index.html)

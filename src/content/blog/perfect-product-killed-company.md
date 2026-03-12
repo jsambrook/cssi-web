@@ -4,7 +4,7 @@ description: "Why 'Scope Creep' is usually a symptom of a deeper strategic failu
 metaTitle: "The 'Perfect' Product That Killed the Company: A Warning for R&D"
 metaDescription: "When organizations try to optimize for everything, they optimize for nothing. A systems architect's view on why great teams fail."
 date: 2026-02-16
-updatedDate: 2026-02-25
+updatedDate: 2026-03-05
 author: 'John Sambrook'
 tags: ['Strategy', 'MedTech', 'Theory of Constraints', 'R&D']
 imageAlt: 'Scope creep diagram showing how unlimited stakeholder requirements caused a medical device product launch to fail'
@@ -47,7 +47,7 @@ Post-mortems usually blame execution. "We didn't have enough engineers." "The pr
 
 This is rarely true. In my experience, the engineers usually build exactly what they are asked to build. The failure isn't in the hands; it's in the head.
 
-The failure was a refusal to acknowledge the **Theory of Constraints**.
+The failure was a refusal to acknowledge the **[Theory of Constraints](/approach/theory-of-constraints)**.
 
 In any complex system—whether it's a circuit board, a software stack, or a hospital—there is always _one_ constraint that limits the system's performance relative to its goal. Just one.
 
@@ -94,3 +94,11 @@ Whether you are building a defibrillator, designing a software platform, or runn
 - Making non-bottleneck surgeons operate faster just creates a pile of patients (waiting for beds).
 
 You don't need more resources. You don't need a bigger budget. You need the strategic discipline to identify your constraint and subordinate everything else—including your ego and your "perfect" vision—to breaking it.
+
+## Sources
+
+- [Theory of Constraints (Wikipedia)](https://en.wikipedia.org/wiki/Theory_of_constraints)
+- [TOCICO](https://www.tocico.org/)
+- [Throughput accounting (Wikipedia)](https://en.wikipedia.org/wiki/Throughput_accounting)
+- [FDA Quality System Regulation (21 CFR Part 820)](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820)
+- [FDA: Software as a Medical Device (SaMD)](https://www.fda.gov/medical-devices/software-medical-device-samd)
