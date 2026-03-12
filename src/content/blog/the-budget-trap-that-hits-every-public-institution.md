@@ -1,8 +1,8 @@
 ---
 title: 'The Budget Trap That Hits Every Public Institution'
 description: 'King County faces a familiar cycle: deficits, targeted cuts, new taxes, repeat. A Theory of Constraints lens on their own public data suggests the measuring stick itself may be the problem.'
-metaTitle: 'The Budget Trap That Hits Every Public Institution | Common Sense Systems'
-metaDescription: 'King County has closed $150M+ deficits with new taxes three times in a decade. TOC analysis of their public budget data reveals a cost-allocation pattern that may be accelerating decline.'
+metaTitle: 'The Budget Trap Hitting Every Public Institution'
+metaDescription: 'King County has closed $150M+ deficits with new taxes three times in a decade. TOC analysis reveals a cost-allocation pattern accelerating decline.'
 date: 2026-03-13
 author: 'John Sambrook'
 tags: ['Theory of Constraints', 'Strategy', 'Operations', 'Decision-Making']
