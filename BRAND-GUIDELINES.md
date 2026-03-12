@@ -231,7 +231,7 @@ Use title case for all tags: `Healthcare`, `Strategy`, `Theory of Constraints`, 
 
 Current active tags (add new ones sparingly):
 
-Healthcare, AI, Strategy, Leadership, Operations, Theory of Constraints, Decision-Making, Wellbeing, Analysis, Culture, Lean, Systems, MedTech, R&D, Systems Engineering, Quality, Regulatory, Workforce, Patient Flow, Labor Relations, Agency, Constraint Resolution, Frameworks, Practical Tips, Small Business, Cost Reduction, Delivery, Agile, Outcomes, Architecture, Networking, Sales
+Healthcare, AI, Strategy, Leadership, Operations, Theory of Constraints, Decision-Making, Wellbeing, Analysis, Culture, Lean, Systems, MedTech, R&D, Systems Engineering, Quality, Regulatory, Workforce, Patient Flow, Labor Relations, Agency, Constraint Resolution, Frameworks, Practical Tips, Small Business, Cost Reduction, Delivery, Agile, Outcomes, Architecture, Networking, Sales, Government
 
 ### Frontmatter
 

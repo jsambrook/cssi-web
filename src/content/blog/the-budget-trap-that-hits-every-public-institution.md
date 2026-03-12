@@ -5,7 +5,7 @@ metaTitle: 'The Budget Trap Hitting Every Public Institution'
 metaDescription: 'King County has closed $150M+ deficits with new taxes three times in a decade. TOC analysis reveals a cost-allocation pattern accelerating decline.'
 date: 2026-03-12
 author: 'John Sambrook'
-tags: ['Theory of Constraints', 'Strategy', 'Operations', 'Decision-Making']
+tags: ['Theory of Constraints', 'Strategy', 'Operations', 'Decision-Making', 'Government']
 imageAlt: 'A diagram showing the cycle of cost allocation, apparent losses, service cuts, overhead redistribution, and new revenue measures in a public institution budget'
 ---
 

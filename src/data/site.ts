@@ -64,6 +64,7 @@ export const footerColumns = [
       { label: 'Leadership', href: '/insights/tag/leadership' },
       { label: 'Small Business', href: '/insights/tag/small-business' },
       { label: 'Operations', href: '/insights/tag/operations' },
+      { label: 'Government', href: '/insights/tag/government' },
       { label: 'Decision-Making', href: '/insights/tag/decision-making' },
       { label: 'Theory of Constraints', href: '/insights/tag/theory-of-constraints' },
     ],
