@@ -7,6 +7,7 @@ date: 2026-03-07
 author: 'John Sambrook'
 tags: ['Healthcare', 'AI', 'Workforce', 'Labor Relations', 'Theory of Constraints', 'Systems']
 imageAlt: 'A woman sitting alone at a kitchen table late at night, laptop open, reading an article that names something she has been living inside for years'
+updatedDate: 2026-03-18
 draft: false
 ---
 
@@ -87,7 +88,7 @@ Third, that the people closest to the problem are often the last to get the anal
 
 ## The series
 
-This is Episode 02 of the Cascade Valley series. [Episode 01](/insights/the-meeting-that-went-differently) is the board meeting. [Episode 03](/insights/resolving-a-sweet-dilemma) is a standalone teaching episode on the Evaporating Cloud. [Episode 04, "The Other Calculation,"](/insights/the-other-calculation) follows CFO Steven Park through a parallel discovery about cost accounting. The working group episode is in development.
+This is Episode 02 of the Cascade Valley series. [Episode 01](/insights/the-meeting-that-went-differently) is the board meeting. [Episode 03](/insights/resolving-a-sweet-dilemma) is a standalone teaching episode on the Evaporating Cloud. [Episode 04: The Other Calculation](/insights/the-other-calculation) follows CFO Steven Park through a parallel discovery about cost accounting. [Episode 05: The First Session](/insights/the-first-session) is the ensemble working group episode. [Episode 06: After the First Session](/insights/after-the-first-session) is the quiet conversation afterward about why it worked.
 
 ## The structural conflicts research
 

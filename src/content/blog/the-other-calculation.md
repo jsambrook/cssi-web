@@ -7,6 +7,7 @@ date: 2026-03-07
 author: 'John Sambrook'
 tags: ['Healthcare', 'Theory of Constraints', 'Operations', 'Strategy', 'AI', 'Systems']
 imageAlt: 'A hospital CFO at his desk early in the morning, spreadsheet open, two tabs visible -- one labeled Cost Analysis, the other Alternative Analysis -- the numbers on each tab telling a different story about the same empty rooms'
+updatedDate: 2026-03-18
 draft: false
 ---
 
@@ -89,7 +90,11 @@ If you are new to the Cascade Valley series:
 
 [Episode 03: Resolving a Sweet Dilemma](/insights/resolving-a-sweet-dilemma) is a standalone teaching episode that walks through the Evaporating Cloud tool using a bakery pricing dilemma.
 
-Episode 04, this one, follows the CFO. Episode 05, the working group episode, is in development.
+Episode 04, this one, follows the CFO.
+
+[Episode 05: The First Session](/insights/the-first-session) is the ensemble working group episode where the private discoveries from earlier episodes enter a room and converge.
+
+[Episode 06: After the First Session](/insights/after-the-first-session) is the quiet conversation afterward — Commissioner Tanaka stays behind and asks Sam why the session went differently than any meeting he has seen in six years.
 
 ## The question underneath the question
 
