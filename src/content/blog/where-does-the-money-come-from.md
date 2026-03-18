@@ -1,12 +1,11 @@
 ---
 title: 'Where Does the Money Come From?'
-description: 'A public hospital loses tens of millions a year. Taxpayers cover the gap. But where does the taxpayers' money come from? Following that thread leads to a reframe that might change the conversation.'
+description: "A public hospital loses tens of millions a year. Taxpayers cover the gap. But where does the taxpayers' money come from? Following that thread leads to a reframe that might change the conversation."
 metaTitle: 'Where Does the Money Come From? | Common Sense Systems'
-metaDescription: 'Non-profit hospitals run on taxpayer surplus. That surplus is profit by another name. The real question is not whether profit is acceptable but whether the system generates enough for everyone it serves.'
+metaDescription: 'Non-profit hospitals run on taxpayer surplus — profit by another name. The real question is whether the system generates enough for everyone it serves.'
 date: 2026-03-18
 author: 'John Sambrook'
 tags: ['Healthcare', 'Strategy', 'Systems']
-draft: true
 imageAlt: 'A simple flow diagram showing household surplus flowing through tax levy into public hospital operations, connecting profit to mission'
 ---
 
@@ -15,6 +14,8 @@ imageAlt: 'A simple flow diagram showing household surplus flowing through tax l
 A public hospital's operating loss is covered by taxpayer levies. But taxpayers can only pay from their own surplus, the gap between what they earn and what they spend. That gap is profit. The institution runs on it. The real question is not whether profit is acceptable but whether the system generates enough surplus for everyone it serves, and whether that surplus gets allocated without creating losers.
 
 ---
+
+<img src="/images/content/where-does-the-money-come-from.webp" alt="A simple flow diagram showing household surplus flowing through tax levy into public hospital operations, connecting profit to mission" width="1408" height="768" loading="lazy" decoding="async" />
 
 Last night I sat in the back row of a public hospital board meeting in the Pacific Northwest. A group of union members had come to speak during public comment. This is not unusual. Groups with something to say show up, say it, and the board listens. It's how public governance is supposed to work, and everyone in the room handled it well. The union members were respectful and clear. The board and executive staff listened carefully. That part was not the problem.
 
