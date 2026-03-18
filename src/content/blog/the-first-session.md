@@ -18,17 +18,16 @@ Three department heads walk into a working group prepared to defend competing ca
 
 <img src="/images/content/the-first-session.webp" alt="A hospital conference room with twelve chairs around a long table, whiteboards marked with blue handwriting, coffee cups left behind, and at the far end of the table a terminal with a steady amber light" width="1408" height="768" loading="lazy" decoding="async" />
 
-<!-- TODO: Embed YouTube video here once published -->
-<!-- <div class="aspect-video my-8">
+<div class="aspect-video my-8">
   <iframe
-    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+    src="https://www.youtube.com/embed/_FbAngKi7FY"
     title="The First Session -- Cascade Valley Health System, Episode 05"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
     class="w-full h-full"
   ></iframe>
-</div> -->
+</div>
 
 ## What happens in this episode
 
