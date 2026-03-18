@@ -17,17 +17,16 @@ After the working group disperses, Commissioner Tanaka stays behind and talks wi
 
 <img src="/images/content/after-the-first-session.webp" alt="An empty hospital conference room after a meeting, whiteboards still marked up, coffee cups left behind, one person sitting at the table looking at a terminal with a steady amber light at the far end" width="1408" height="768" loading="lazy" decoding="async" />
 
-<!-- TODO: Embed YouTube video here once published -->
-<!-- <div class="aspect-video my-8">
+<div class="aspect-video my-8">
   <iframe
-    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+    src="https://www.youtube.com/embed/PYjj3xfv3V0"
     title="After the First Session -- Cascade Valley Health System, Episode 06"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
     class="w-full h-full"
   ></iframe>
-</div> -->
+</div>
 
 ## What happens in this episode
 
