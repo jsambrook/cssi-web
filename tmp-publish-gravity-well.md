@@ -8,7 +8,7 @@ Publish the blog post at src/content/blog/the-gravity-well-in-the-conference-roo
    - /insights/the-meeting-that-went-differently/ (the board meeting where Sam first appeared)
    - /insights/the-other-calculation/ (Park's throughput discovery)
    - /insights/where-does-the-money-come-from/ (the surplus/profit reframe)
-   Place internal links where they are contextually natural within the body text.
+     Place internal links where they are contextually natural within the body text.
 
 4. Remove `draft: true` from the frontmatter to mark the post as published.
 
