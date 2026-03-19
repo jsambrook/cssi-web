@@ -103,7 +103,7 @@ The full tool — every reference file, the scoring rubric, the move selection h
 
 **[github.com/jsambrook/cssi-plan-generator](https://github.com/jsambrook/cssi-plan-generator)**
 
-Start with the [iteration log](https://github.com/jsambrook/cssi-plan-generator/blob/main/runs/self-improvement/iteration-log.md) to see the full progression, or the [report](https://github.com/jsambrook/cssi-plan-generator/blob/main/runs/self-improvement/report.md) for the summary. The [TOC Thinking Processes reference](https://github.com/jsambrook/cssi-plan-generator/blob/main/references/toc-thinking-processes.md) that the agent uses covers the full TP toolkit: Current Reality Tree, Evaporating Cloud, Magic Druids, Future Reality Tree, Negative Branch Reservation, Prerequisite Tree, and Transition Tree.
+Start with the [iteration log](https://github.com/jsambrook/cssi-plan-generator/blob/master/runs/self-improvement/iteration-log.md) to see the full progression, or the [report](https://github.com/jsambrook/cssi-plan-generator/blob/master/runs/self-improvement/report.md) for the summary. The [TOC Thinking Processes reference](https://github.com/jsambrook/cssi-plan-generator/blob/master/references/toc-thinking-processes.md) that the agent uses covers the full TP toolkit: Current Reality Tree, Evaporating Cloud, Magic Druids, Future Reality Tree, Negative Branch Reservation, Prerequisite Tree, and Transition Tree.
 
 I am particularly interested in hearing from people who work with the Thinking Processes professionally. Does what the agent produces match your experience of how these tools work? Where does it fall short? What would you do differently?
 
