@@ -9,6 +9,8 @@ tags: ['AI', 'Theory of Constraints', 'Constraint Resolution', 'Strategy']
 imageAlt: 'Score progression chart showing 10 iterations of AI-driven idea improvement using TOC Thinking Processes'
 ---
 
+<img src="/images/content/ai-evaporating-clouds-iteration-loop.webp" alt="Infographic showing an AI-driven iteration loop using Theory of Constraints: a circular 10-step process with Evaporating Cloud breakthroughs highlighted at iterations 5 and 10, alongside a score progression chart showing Testability, Value, Difficulty, and Failure Modes improving across iterations" width="1408" height="768" loading="lazy" decoding="async" />
+
 ## TL;DR
 
 I built an AI agent that improves business ideas using TOC Thinking Processes, including Evaporating Clouds. Pointed at itself, it ran 10 iterations and resolved two genuine tensions — thoroughness vs. adoption friction, and speed vs. depth of output. The full tool and iteration log are open source.

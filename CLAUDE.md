@@ -93,6 +93,19 @@ Configured in `tsconfig.json`:
 - ESLint with Astro and TypeScript plugins
 - TypeScript strict mode (extends `astro/tsconfigs/strict`)
 
+## Writing Content
+
+**Before writing or editing any blog post, article, or page copy, read `BRAND-GUIDELINES.md` in the project root.** It defines editorial voice, tone, banned vocabulary, post structure requirements (TL;DR, infographic placement, concrete openings), TOC terminology usage, the AI content production protocol, and the pre-publish writing checklist. All content must conform to those guidelines.
+
+Key points agents must internalize before drafting:
+
+- Blog posts are written in first person (John's voice), not corporate voice
+- Never generate a post from a topic alone — raw material with specific observations is required
+- Avoid the banned AI vocabulary list (see "Avoiding AI-Generated Writing Tells")
+- Every post needs a TL;DR, concrete opening, and open-handed closing
+- Complex posts need an infographic after the TL;DR (stored in `public/images/content/`)
+- TOC terms must be introduced with plain-language context on first use
+
 ## Environment
 
 The site URL is hardcoded in `src/data/site.ts` as the single source of truth.
