@@ -1,0 +1,42 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Section from '../components/Section.astro';
+import { pageTitle, pageDescription } from '../data/pages/technical';
+import { buildWebPageSchema } from '../data/schema';
+---
+
+<PageLayout
+  pageTitle={pageTitle}
+  description={pageDescription}
+  jsonLd={[buildWebPageSchema({ name: pageTitle })]}
+>
+  <Section>
+    <div class="max-w-3xl mx-auto prose dark:prose-invert">
+      <h1>{pageTitle}</h1>
+
+      <p>I have been writing embedded software since the late 1980s. Most of the last 15 years have been in medical devices and other safety-critical or real-time systems. I know how to ship code that must not fail, that must pass regulatory review, and that must be understandable six years later when someone else inherits it.</p>
+
+      <p><strong>cssi-pulse-guard</strong> is a recent example. It is a small but representative project that shows the kind of work I actually do: deterministic behavior, careful state management, safety-oriented architecture, and the ability to bring modern AI techniques into environments that normally reject them.</p>
+
+      <h2>What I Deliver</h2>
+      <ul>
+        <li><strong>Embedded systems</strong> — bare-metal, RTOS, or Linux. Hard real-time, safety-critical, or high-reliability.</li>
+        <li><strong>Medical device software</strong> — IEC 62304 compliant architecture, risk-driven development, documentation that auditors actually accept.</li>
+        <li><strong>AI under constraints</strong> — autonomous agents, diagnostic systems, monitoring, or decision-support tools that run reliably on embedded hardware or in regulated environments.</li>
+        <li><strong>Fractional technical leadership</strong> — I can act as your interim embedded lead, architect, or regulatory-savvy technical advisor.</li>
+      </ul>
+
+      <p>I am not looking for full-time employment. I am looking for embedded gigs, contract delivery work, or fractional roles where my combination of deep embedded discipline and current AI capability is useful.</p>
+
+      <h2>Selected Work</h2>
+      <p><a href="https://github.com/jsambrook/cssi-pulse-guard" class="text-accent">cssi-pulse-guard</a> — Real-time patient monitoring and pulse generation system with safety interlocks.</p>
+
+      <h2>How to Work With Me</h2>
+      <p>The easiest way to start is a short conversation. Tell me about the problem you are actually trying to solve. I will tell you quickly whether I am the right person and what the next reasonable step would be.</p>
+
+      <p><a href="/contact" class="text-primary font-medium hover:text-primary/80">Book a Conversation</a></p>
+
+      <p class="text-sm text-muted-foreground mt-8">Or email me directly at john@common-sense.com with the subject line “Technical work”.</p>
+    </div>
+  </Section>
+</PageLayout>

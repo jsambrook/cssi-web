@@ -23,6 +23,7 @@ export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Approach', href: '/approach' },
   { label: 'Services', href: '/#services' },
+  { label: 'Technical Work', href: '/technical' },
   { label: 'Insights', href: '/insights' },
   { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
