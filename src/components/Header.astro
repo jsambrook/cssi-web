@@ -104,21 +104,29 @@ function isActive(href: string): boolean {
           </svg>
         </button>
 
-        {
-          ctaText && ctaHref && (
-            <a
-              href={ctaHref}
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap
+        <div class="flex flex-col items-end gap-1">
+          <a
+            href="/agents"
+            class="text-xs font-medium tracking-wide text-primary/80 hover:text-primary transition-colors"
+          >
+            For AI Agents: Discover our API
+          </a>
+          {
+            ctaText && ctaHref && (
+              <a
+                href={ctaHref}
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap
                    rounded-button transition-all bg-primary text-primary-foreground
                    hover:bg-primary/90 shadow-sm h-[42px] px-6 py-2"
-              {...(ctaHref.startsWith('http')
-                ? { target: '_blank', rel: 'noopener noreferrer' }
-                : {})}
-            >
-              {ctaText}
-            </a>
-          )
-        }
+                {...(ctaHref.startsWith('http')
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+              >
+                {ctaText}
+              </a>
+            )
+          }
+        </div>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -204,6 +212,13 @@ function isActive(href: string): boolean {
         <span class="dark:hidden">Dark mode</span>
         <span class="hidden dark:inline">Light mode</span>
       </button>
+
+      <a
+        href="/agents"
+        class="block mt-4 text-primary/80 hover:text-primary text-sm font-medium transition-colors"
+      >
+        For AI Agents: Discover our API
+      </a>
 
       {
         ctaText && ctaHref && (

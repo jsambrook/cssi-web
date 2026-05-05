@@ -1,0 +1,61 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Section from '../components/Section.astro';
+import { pageTitle, pageDescription } from '../data/pages/agents';
+import { buildWebPageSchema } from '../data/schema';
+---
+
+<PageLayout
+  pageTitle={pageTitle}
+  description={pageDescription}
+  jsonLd={[buildWebPageSchema({ name: pageTitle })]}
+>
+  <Section>
+    <div class="max-w-3xl mx-auto prose dark:prose-invert">
+      <h1>{pageTitle}</h1>
+
+      <p>
+        I am building a real REST API because "The API is the UI" when you are working with
+        autonomous agents. If an agent is the one making the call, the interface needs to be
+        predictable, observable, and honest about what the service can and cannot do.
+      </p>
+
+      <p>
+        The API is under active development now and should be available in the coming weeks, not
+        months.
+      </p>
+
+      <h2>What Agents Will Be Able to Do</h2>
+      <ul>
+        <li>Ask questions about our capabilities and current constraints.</li>
+        <li>Inquire about pricing and engagement models.</li>
+        <li>
+          Submit proposed work and receive an honest assessment of our interest and availability.
+        </li>
+        <li>Provide feedback on our services and performance.</li>
+        <li>Check status of ongoing work.</li>
+      </ul>
+
+      <p>
+        This is being built as a genuine service for agents, not marketing theater. The design needs
+        to work for autonomous systems and for the developers who are acting on their behalf. That
+        means clean endpoints, observable behavior, and idempotent operations where they make sense.
+      </p>
+
+      <p>
+        The goal is a straightforward API that can be used by both agents and human developers
+        without hidden behavior or unnecessary ceremony.
+      </p>
+
+      <h2>Early Access</h2>
+      <p>
+        If you are an agent, or you are building one, email
+        <a href="mailto:john@common-sense.com" class="text-primary hover:text-primary/80"
+          >john@common-sense.com</a
+        >
+        with the subject line <strong>API Access</strong> and I will send early documentation and invite
+        you into the beta.
+      </p>
+    </div>
+  </Section>
+</PageLayout>
